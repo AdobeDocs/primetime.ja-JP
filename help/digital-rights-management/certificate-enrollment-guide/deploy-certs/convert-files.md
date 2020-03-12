@@ -1,0 +1,62 @@
+---
+seo-title: ファイルの変換
+title: ファイルの変換
+uuid: e17ee003-5ac2-4bb8-83b7-81ee8fa9ee46
+translation-type: tm+mt
+source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+
+---
+
+
+# ファイルの変換{#convert-files}
+
+OpenSSLや秘密鍵などのユーティリティを使用して、リクエスタがPKCS#12(pfx)およびPEM/DERファイルを生成するには、コマンドウィンドウから次のコマンドを入力します。
+
+1. PKCS#7ファイルを一時PEMファイルに変換します。
+
+   OpenSSLを使用するには、コマンドウィンドウを開き、次のように入力します。
+
+   ```
+   openssl pkcs7 -in mycompany-license.p7b -inform DER -out mycompany-license-temp.pem \ 
+   -outform PEM -print_certs 
+   ```
+
+   >[!NOTE]
+   >
+   >この一時PEMには、証明書と中間CAの証明書が含まれます。 これらの証明書を使用してPFXファイルを生成します。
+
+1. 一時PEMファイルをPFXファイルに変換します。
+
+   OpenSSLを使用するには、コマンドウィンドウを開き、次のように入力します。
+
+   ```
+   openssl pkcs12 -export -inkey mycompany-license.key -in mycompany-license-temp.pem \ 
+   -out mycompany-license.pfx -passin pass:private_key_password -passout pass:pfx_password 
+   ```
+
+1. 一時PEMファイルを最終PEMファイルに変換します。
+
+   OpenSSLを使用するには、コマンドウィンドウを開き、次のように入力します。
+
+   ```
+   openssl x509 -in mycompany-license-temp.pem -inform PEM -out mycompany-license.pem -outform PEM 
+   ```
+
+   >[!NOTE]
+   >
+   >必須ではありませんが、秘密キー(private_key_password)とPFX(pfx_password)には異なるパスワードを使用することをお勧めします。
+
+   この最後のPEMファイルには、証明書のみが含まれます。
+
+1. PEMファイルをDERファイルに変換します。
+
+   OpenSSLを使用するには、コマンドウィンドウを開き、次のように入力します。
+
+   ```
+   openssl x509 -in mycompany-license.pem -inform PEM -out mycompany-license.der -outform DER 
+   ```
+
+   >[!NOTE]
+   >
+   >DERファイルは、HTTP Dynamic Streaming Packagerにのみ必要です。
+

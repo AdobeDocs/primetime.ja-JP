@@ -1,0 +1,86 @@
+---
+description: OpportunityGeneratorインターフェイスを拡張することで、独自のオポチュニティジェネレーターを実装できます。
+seo-description: OpportunityGeneratorインターフェイスを拡張することで、独自のオポチュニティジェネレーターを実装できます。
+seo-title: カスタムオポチュニティジェネレーターの実装
+title: カスタムオポチュニティジェネレーターの実装
+uuid: b80da2da-32d5-41f7-86ca-936d6f25b015
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# カスタムオポチュニティジェネレーターの実装{#implement-a-custom-opportunity-generator}
+
+OpportunityGeneratorインターフェイスを拡張することで、独自のオポチュニティジェネレーターを実装できます。
+
+1. カスタムオポチュニティジェネレーターを作成します。
+
+   例：
+
+   ```js
+   /** 
+   * Class implementing AdobePSDK.OpportunityGenerator interface 
+   */ 
+   CustomOpportunityGenerator = function () { 
+   }; 
+   
+   CustomOpportunityGenerator.prototype = { 
+       constructor: CustomOpportunityGenerator, 
+       configureCallbackFunc: function (item, client, mode, playhead, playbackRange) {  
+           // the playhead represents the initial playback position 
+           // the playback range represents the initial playback range 
+   
+           // the item property indicates the current AdobePSDK.MediaPlayerItem associated with this generator 
+           // the initial set of timed metadata can be obtain through the item property 
+           var timedMetadatas = item.timedMetadata; 
+       }, 
+       updateCallbackFunc: function (playhead, playbackRange) { 
+           // when an opportunity is created by this generator 
+           // we need to notify the TVSDK through the client property 
+           client.resolve (opportunity); 
+       }, 
+       … 
+   }; 
+   ```
+
+1. カスタムオポチュニティジェネレーターを使用する、カスタムコンテンツファクトリを作成します。
+
+   例：
+
+   ```js
+   /** 
+     * Class implementing AdobePSDK.ContentFactory interface 
+   */ 
+   CustomContentFactory = function () { 
+   }; 
+   
+   CustomContentFactory.prototype = { 
+          constructor: CustomContentFactory, 
+          retrieveOpportunityGeneratorsCallbackFunc: function (item) { 
+               var result = []; 
+               result.push (new CustomOpportunityGenerator()); 
+               return result; 
+       }, 
+       … 
+   }; 
+   ```
+
+1. 再生するメディアストリームのカスタムコンテンツファクトリを登録します。
+
+   UIフレームワークプレーヤーでは、次のようにカスタムコンテンツファクトリを指定できます。
+
+   ```js
+   var advertisingFactory = new CustomContentFactory(); 
+   var playerWrapper = ptp.videoPlayer('.videoDiv', { 
+    player: { 
+           mediaPlayerItemConfig: { 
+                   advertisingFactory: advertisingFactory 
+           }, 
+               mediaResource: { 
+                   resourceUrl:'Specify Resource Url' 
+          } 
+     } 
+   }); 
+   ```
+

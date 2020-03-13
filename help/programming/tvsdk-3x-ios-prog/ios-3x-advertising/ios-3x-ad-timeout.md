@@ -1,0 +1,62 @@
+---
+description: Adobe Primetime ad decisioningインターフェイスを使用して、VODおよびライブ/リニアコンテンツに広告を挿入できます。
+seo-description: Adobe Primetime ad decisioningインターフェイスを使用して、VODおよびライブ/リニアコンテンツに広告を挿入できます。
+seo-title: 広告の要件
+title: 広告の要件
+uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
+translation-type: tm+mt
+source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+
+---
+
+
+# 広告のタイムアウト {#ad-timeout}
+
+## AV Foundationの要件 {#av-foundation-requirements}
+
+VODコンテンツの場合、メインコンテンツマニフェストの読み込み、広告の解決、広告マニフェストの読み込みを含むプレイリストのステッチは、35秒以内に完了する必要があります。
+
+ライブコンテンツの場合、プレイリストが更新されるたびに、20秒以内にプレイリストのステッチが完了する必要があります
+
+**AdResolutionのタイムアウトに関連するAPI**
+
+```
+/** @name Properties */
+/** The default timeout value (in seconds) for resolution of ad requests is 15 seconds.
+*
+*/
+*
+@property (notatomic, assign) double adResolutionTimeout;
+```
+
+広告メタデータを設定する際に、PTAdMetadata::adResolutionTimeoutを設定することで、adResolutionTimeoutを設定できます。
+
+```
+// Create an instance of PTAuditudeMetadata and set its property
+PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];;
+adMetadata.adResolutionTimeout = 15 seconds
+```
+
+その後、次の節に従います。Primetime広告サ [ーバーのメタデータ](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)。
+
+**AdManifestのタイムアウトに関連するAPI**
+
+```
+/** @name Properties */
+ /** The default timeout value (in seconds) for loading of ad manifests is 5 seconds.
+ *
+ */
+ *
+ @property (notatomic, assign) double adManifestTimeout; 
+```
+
+adManifestTimeoutを設定するには、広告メタデータを設定する際にPTAdMetadata::adManifestTimeoutを設定します。
+
+
+```
+// Create an instance of PTAuditudeMetadata and set its property
+PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];;
+adMetadata.adManifestTimeout = 5 seconds
+```
+
+その後、次の節に従います。Primetime広告サ [ーバーのメタデータ](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)。

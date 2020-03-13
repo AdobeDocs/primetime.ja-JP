@@ -1,0 +1,49 @@
+---
+description: プレイリスト全体が見つからない場合（例えば、最上位のマニフェストファイルで指定されたM3U8ファイルがダウンロードされない場合）、TVSDKは回復を試みます。 回復できない場合は、次の手順をアプリケーションが決定します。
+seo-description: プレイリスト全体が見つからない場合（例えば、最上位のマニフェストファイルで指定されたM3U8ファイルがダウンロードされない場合）、TVSDKは回復を試みます。 回復できない場合は、次の手順をアプリケーションが決定します。
+seo-title: プレイリストのフェイルオーバーが見つかりません
+title: プレイリストのフェイルオーバーが見つかりません
+uuid: 91a537f3-3e69-4669-8f84-0292c19ac209
+translation-type: tm+mt
+source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+
+---
+
+
+# プレイリストのフェイルオーバーが見つかりません{#missing-playlist-failover}
+
+プレイリスト全体が見つからない場合（例えば、最上位のマニフェストファイルで指定されたM3U8ファイルがダウンロードされない場合）、TVSDKは回復を試みます。 回復できない場合は、次の手順をアプリケーションが決定します。
+
+中解像度のビットレートに関連付けられているプレイリストがない場合、TVSDKは同じ解像度のバリアントプレイリストを検索します。 同じ解像度が見つかると、バリアントプレイリストとセグメントを一致する位置からダウンロードし始めます。 TVSDKが同じ解像度プレイリストを見つけない場合、他のビットレートプレイリストとそのバリエーションを順に切り替えようとします。 すぐに低いビットレートが最初の選択肢で、その次にそのバリエーションなどがあります。 有効なプレイリストを見つけようとして、下位ビットレートの再生リストとそのバリエーションがすべて使い果たされた場合、TVSDKは最上位ビットレートに移動し、そこからカウントダウンします。 有効なプレイリストが見つからない場合、プロセスは失敗し、プレイヤーはERROR状態に移行します。
+
+この状況の処理方法は、アプリケーションで決定できます。 例えば、プレイヤーアクティビティを閉じて、ユーザーをカタログアクティビティに誘導することができます。 関心のあるイベントはイベント `STATE_CHANGED` で、対応するコールバックがメソッド `onStateChanged` です。 以下のコードは、プレーヤーが内部状態をERRORに変更したかどうかを監視するコードです。
+
+```java
+case ERROR: 
+    getActivity().finish(); // this is where we close the current activity (the Player activity) 
+    break;
+```
+
+詳しくは、SDK内のファイル [!DNL PlayerFragment.java] を参照してください。
+
+```
+[…]/samples/PrimetimeReference/src/PrimetimeReference/src/com/adobe/primetime/reference/ui/player/
+```
+
+クライアント側のネットワークがダウンしている場合は、このコードを使用して検証できます。
+
+```
+psdkutils::PSDKString 
+getNetworkDownVerificationUrl() const { return 
+_networkDownVerificationUrl; }
+```
+
+APIは、クライアント側のネットワークがダウンしているかどうかを確認するために使用されるURLを提供します。 これは、http要求時にhttp応答コード200を返す有効なURLである必要があります。
+
+```
+psdkutils::PSDKErrorCode 
+ setNetworkDownVerificationUrl(psdkutils::PSDKString value) {  
+_networkDownVerificationUrl = value; return psdkutils::kECSuccess; }
+```
+
+setNetworkDownVerificationUrlが設定されていない場合、TVSDKは、デフォルトでMainManifest urlを使用して、ネットワークがダウンしているかどうかを示します。

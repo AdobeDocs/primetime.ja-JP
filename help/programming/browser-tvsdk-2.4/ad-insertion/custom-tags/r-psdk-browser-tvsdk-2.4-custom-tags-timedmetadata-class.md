@@ -1,0 +1,64 @@
+---
+description: Browser TVSDKがプレイリスト/マニフェスト内でサブスクライブされたタグを検出すると、プレイヤーは自動的にタグを処理し、TimedMetadataオブジェクトとして公開しようとします。
+seo-description: Browser TVSDKがプレイリスト/マニフェスト内でサブスクライブされたタグを検出すると、プレイヤーは自動的にタグを処理し、TimedMetadataオブジェクトとして公開しようとします。
+seo-title: 時間指定メタデータクラス
+title: 時間指定メタデータクラス
+uuid: 3f276618-5f61-4b41-bd2d-78e7f32178d9
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# 時間指定メタデータクラス{#timed-metadata-class}
+
+Browser TVSDKがプレイリスト/マニフェスト内でサブスクライブされたタグを検出すると、プレイヤーは自動的にタグを処理し、TimedMetadataオブジェクトとして公開しようとします。
+
+このク `TimedMetadata` ラスは次の要素を提供します。
+
+<table id="table_5827A0626EDC45F68DC3E7644F3EFF69"> 
+ <thead> 
+  <tr> 
+   <th colname="col1" class="entry"> プロパティ </th> 
+   <th colname="col02" class="entry"> タイプ </th> 
+   <th colname="col2" class="entry"> 説明 </th> 
+  </tr>
+ </thead>
+ <tbody> 
+  <tr> 
+   <td colname="col1"> <p>type </p> </td> 
+   <td colname="col02"> <p><span class="codeph"> TimedMetadataType</span> </p> </td> 
+   <td colname="col2"> <p>時間指定メタデータのタイプを次に示します。 
+     <ul id="ul_E79C375A54C64BF09A927EE8983E98E3"> 
+      <li id="li_F1907521CDBE47E282A87AF0A7A1477A">TAG — 時間指定メタデータがプレイリスト/マニフェスト内のタグから作成されました。 </li> 
+      <li id="li_5B0C0B0F247144709F86E6654A5AB500">ID3 — 時間指定メタデータがメディアストリームのID3タグから作成されました。 </li> 
+     </ul> </p> </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> <p>time </p> </td> 
+   <td colname="col02"> <p>数値 </p> </td> 
+   <td colname="col2"> <p>この時間指定メタデータがストリーム内に存在する、メインコンテンツの開始を基準としたローカル時間位置（ミリ秒）。 </p> </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> <p>id </p> </td> 
+   <td colname="col02"> <p>文字列 </p> </td> 
+   <td colname="col2"> <p>時間指定メタデータの一意の識別子。 </p> <p>通常、キュー/タグID属性（存在する場合）から抽出されます。 それ以外の場合は、一意のランダム値です。 </p> </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> <p>name </p> </td> 
+   <td colname="col02"> <p>数値 </p> </td> 
+   <td colname="col2"> <p>時間指定メタデータの名前。 </p> <p>タイプがTAGの場合、値はキュー/タグ名を表します。 typeがID3の場合、値はnullです。 </p> </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> <p>コンテンツ </p> </td> 
+   <td colname="col02"> <p>文字列 </p> </td> 
+   <td colname="col2"> <p>時間指定メタデータの生のコンテンツ。 </p> <p>タイプがTAGの場合、値はキュー/タグの属性リスト全体を表します。 タイプid ID3の場合、値はnullです。 </p> </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> <p>メタデータ </p> </td> 
+   <td colname="col02"> <p><span class="codeph"> メタデータ</span> </p> </td> 
+   <td colname="col2"> <p>プレイリスト/マニフェストのカスタムタグから処理/抽出された情報。 </p> </td> 
+  </tr> 
+ </tbody> 
+</table>
+

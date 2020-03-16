@@ -4,7 +4,7 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: c6036a6777e9158861850b60dd1e0749c30fa280
+source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
 
 ---
 
@@ -13,9 +13,9 @@ source-git-commit: c6036a6777e9158861850b60dd1e0749c30fa280
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに示すドキュメントは、リリース固有の情報、必要システム構成、制限、修正された問題、および既知の問題を示しています。
 
-## TVSDK 3.10 iOSリリースノートの機能強化および修正点
+## TVSDK 3.11 iOSリリースノートの機能強化および修正点
 
-このリリースでは、顧客の問題を解決し、個別化転送証明書を更新することに重点を置いています。
+このリリースでは、お客様の主な問題の解決に重点を置いています。
 
 iOSの最新のリリースバージョンの詳細については、こちらを参照し [てください](../release-notes/tvsdk-3x-ios.md)。
 

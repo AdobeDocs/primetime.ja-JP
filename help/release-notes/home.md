@@ -4,7 +4,7 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
+source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
 
 ---
 
@@ -25,9 +25,9 @@ iOSの最新のリリースバージョンの詳細については、こちら�
 
 [Androidの現在のリリースバージョンについて詳しくは、こちらを参照してください](../release-notes/tvsdk-3x-android.md)。
 
-## PTAI 19.11.1の機能強化および修正点
+## PTAI 20.3.3の機能強化と修正点
 
-メンテナンスの更新に重点を置いています。
+お客様の問題の修正に重点を置いています。
 
 Dynamic Ad Insertionの現在のリリースバージョンについて詳しくは、 [PTAIリリースノートを参照してください](ptai-19x-release-notes.md)。
 

@@ -2,7 +2,7 @@
 title: PTAI 19.11.1リリースノート
 description: PTAI 19.11.1のリリースノートでは、新機能や変更点、2019年のPrimetime Dynamic Ad Insertionで解決され、既知の問題について説明します。
 translation-type: tm+mt
-source-git-commit: 8c1aa935c3ca75c41de82d52908054c109d1160b
+source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
 
 ---
 
@@ -75,7 +75,7 @@ Dynamic Ad Insertion 19.11.1リリースノートでは、2019年のPrimetime Dy
 
 ### バージョン19.6.1
 
-**タイミング：** 2019年6月12日水曜日午後11:30 PST ～ Thursday, 2019年6月13日12:30 AM PST
+**タイミング：** 2019年6月12日水曜日午後11時半（太平洋標準時）～木曜日2019年6月13日午前12時30分（太平洋標準時）
 
 * CRS:RevJetのクリエイティブの正規化ルール
    * CRSおよびSSAIで使用される、RevJetのクリエイティブURL正規化ルールを追加しました。
@@ -200,4 +200,3 @@ ZD#37503 - CRSルールのJSON応答は、要求の重複を避けるために�
 **PTAI 19.7.1**
 
 新しい制限は追加されませんでした。
-

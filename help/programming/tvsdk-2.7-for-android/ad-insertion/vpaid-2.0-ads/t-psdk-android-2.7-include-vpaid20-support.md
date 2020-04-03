@@ -43,26 +43,20 @@ VPAID 2.0サポートを追加するには：
    >さらに、プレイヤーがPREPARED状態の場合にのみ、カスタム広告ビューを作成します。
    >
    >
-   >リセットが呼び出された場合にのみ、カスタム広告ビューを破棄します。 例：   >
+   >リセットが呼び出された場合にのみ、カスタム広告ビューを破棄します。 例：
    >
-   >
-   ```>
+   >```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
    >       ... 
    >} 
    >
+   >```
    >
-   ```   >
+   >最後に、カスタム広告ビューを破棄する前に、カスタム広告ビューをから削除する必要がありま `FrameLayout`す。 例：
    >
-
-
-
-   >最後に、カスタム広告ビューを破棄する前に、カスタム広告ビューをから削除する必要がありま `FrameLayout`す。 例：   >
-   >
-   >
-   ```>
-   if (_playerFrame != null) 
-      _playerFrame.removeAllViews(); 
-   ```
+   >```
+   >if (_playerFrame != null) 
+   >   _playerFrame.removeAllViews(); 
+   >```

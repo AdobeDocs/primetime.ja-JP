@@ -5,7 +5,7 @@ seo-title: 再生前のDRM認証
 title: 再生前のDRM認証
 uuid: 6b4fbcfb-95fd-4591-bbb2-a17afd783383
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 16b88f07468811f2c84decb1324b0c5bd2372131
 
 ---
 
@@ -48,26 +48,25 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 1. でコールバックを実装しま `DRMLoadMetadataListener`す。
 
-       &#39;loadDRMMetadata&#39;は、これらのイベントハンドラーを呼び出します。
-       
- &quot;     java
-     public interface DRMLoadMetadataListener {
-     
-    public void onLoadMetadataUrlStart();
-      
- /**     * @param authNeeded
- *     
-    DRM認証が必要かどうか。
-       * @param drmMetadata
-    *解析済みのDRMMetadataを取得。    */
-    public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata);
-  public void     onLoadMetadataUrlError();
-      }
-    
- 「     
- 」ハンド     
-    ラーの詳細を示します。
+   は、これらの `loadDRMMetadata` イベントハンドラーを呼び出します。
+
+   ```java
+   public interface DRMLoadMetadataListener { 
    
+       public void onLoadMetadataUrlStart(); 
+   
+       /** 
+       * @param authNeeded 
+       * whether DRM authentication is needed. 
+       * @param drmMetadata 
+       * the parsed DRMMetadata obtained.    */ 
+       public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
+       public void onLoadMetadataUrlError(); 
+   } 
+   ```
+
+   ハンドラーの詳細を次に示します。
+
    * `onLoadMetadataUrlStart` メタデータのURLの読み込みが開始されたことを検出します。
    * `onLoadMetadataUrlComplete` メタデータURLの読み込みが完了したことを検出します。
    * `onLoadMetadataUrlError` メタデータの読み込みに失敗したことを示します。
@@ -94,7 +93,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
    } 
    ```
 
-1. 次のいずれかのタスクを実行します。
+1. 次のいずれかのタスクを行います。
 
    * 認証が必要でない場合は、再生を開始します。
    * 認証が必要な場合は、ライセンスを取得して認証を完了します。
@@ -153,7 +152,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
       }); 
       ```
 
-1. イベントリスナーを使用して、認証ステータスを確認します。
+1. 認証ステータスを確認するには、イベントリスナーを使用します。
 
    このプロセスはネットワーク通信を意味するので、これも非同期操作です。
 

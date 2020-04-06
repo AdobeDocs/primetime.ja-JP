@@ -48,26 +48,26 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 1. でコールバックを実装しま `DRMLoadMetadataListener`す。
 
-       &#39;loadDRMMetadata&#39;は、これらのイベントハンドラーを呼び出します。
-       
- &quot;     java
-     public interface DRMLoadMetadataListener {
-     
-    public void onLoadMetadataUrlStart();
-      
- /**     * @param authNeeded
- *     
-    DRM認証が必要かどうか。
-       * @param drmMetadata
-    *解析済みのDRMMetadataを取得。    */
-    public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata);
-  public void     onLoadMetadataUrlError();
-      }
+   `loadDRMMetadata`は、これらのイベントハンドラーを呼び出します。
+
+   ```java
+   public interface DRMLoadMetadataListener { 
     
- 「     
- 」ハンド     
-    ラーの詳細を示します。
+       public void onLoadMetadataUrlStart(); 
+    
+       /** 
+       * @param authNeeded 
+       * whether DRM authentication is needed. 
+       * @param drmMetadata 
+       * the parsed DRMMetadata obtained.    */ 
+       public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
+       public void onLoadMetadataUrlError(); 
+   } 
    
+   ```
+
+   」ハンドラーの詳細を示します。
+
    * `onLoadMetadataUrlStart` メタデータのURLの読み込みが開始されたことを検出します。
    * `onLoadMetadataUrlComplete` メタデータURLの読み込みが完了したことを検出します。
    * `onLoadMetadataUrlError` メタデータの読み込みに失敗したことを示します。

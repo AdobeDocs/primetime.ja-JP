@@ -5,7 +5,7 @@ seo-title: Cookieの使用
 title: Cookieの使用
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
-source-git-commit: ad58732842eb651514a47dd565e31e3d98a84c46
+source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
 
 ---
 
@@ -16,7 +16,7 @@ TVSDKを使用して、セッション管理、ゲートアクセスなどのた
 
 何らかの認証を持つキーサーバーへのリクエストの例を次に示します。
 
-1. 顧客がブラウザーでWebサイトにログインすると、その顧客のログインに、その顧客がコンテンツを表示できることが示されます。
+1. 顧客がブラウザーでWebサイトにログインすると、その顧客のログイン情報により、この顧客がコンテンツの表示を許可されます。
 1. ライセンスサーバーの期待に基づいて、アプリケーションが認証トークンを生成します。
 
    この値はTVSDKに渡されます。
@@ -45,7 +45,7 @@ Cookieを使用するには：
    >
    >302リダイレクトが有効な場合、Cookieが属するドメインとは異なるドメインに広告リクエストがリダイレクトされる可能性があります。
 
-   TVSDKは、実行時にこ `cookieManager` のクエリを実行し、URLに関連付けられているcookieがあるかどうかを確認し、それらのcookieを自動的に使用します。
+   TVSDKは、実行時にこ `cookieManager` れをクエリし、URLに関連付けられているcookieがあるかどうかを確認し、それらのcookieを自動的に使用します。
 
    再生中にアプリケーションでcookieを更新する必要がある場合は、JAVA cookieストアで更新が発生するので、 `networkConfiguration.setCookieHeaders` APIを使用しないでください。
 
@@ -64,8 +64,9 @@ Cookieを使用するには：
    `config.setNetworkConfiguration(networkConfiguration)`
 
    >[!NOTE]
-   この「setReadSetCookieHeader」をfalseに設定した後、JAVA cookieマネージャーを使用してキーリクエストのcookieを設定します。
    >
+   >この「setReadSetCookieHeader」をfalseに設定した後、JAVA cookieマネージャーを使用してキーリクエストのcookieを設定します。
+
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
 このコールバックAPIは、C++ cookieの更新（http応答からのcookie）がある場合は常に呼び出されます。 アプリケーションは、このコールバックをリッスンし、それに応じてJAVA CookieStoreを更新して、JAVAでのネットワーク呼び出しで次のようにcookieを利用できるようにします。
 

@@ -5,7 +5,7 @@ seo-title: タイムラインへのカスタム広告マーカーの配置
 title: タイムラインへのカスタム広告マーカーの配置
 uuid: ee74d1f3-7186-44b8-bad7-55af579842e8
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 9f1f27bc6c23994338775a32f978a2e768a0f3aa
 
 ---
 
@@ -15,15 +15,15 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 この例は、再生タイムラインにカスタム広告マーカーを含める推奨方法を示しています。
 
 1. 帯域外の広告配置情報をクラスのリスト/配列に変換し `RepaceTimeRange` ます。
-1. クラスのインスタンス `CustomRangeMetadata` を作成し、そのメソ `setTimeRangeList` ッドを引数としてlist/arrayと共に使用して、時間範囲リストを設定します。
+1. クラスのインスタンス `CustomRangeMetadata` を作成し、そのメソッ `setTimeRangeList` ドを引数としてリスト/配列と共に使用して、時間範囲のリストを設定します。
 1. このメソッド `setType` を使用して、タイプをに設定しま `MARK_RANGE`す。
 1. このメソッドを `MediaPlayerItemConfig.setCustomRangeMetadata` 引数としてイ `CustomRangeMetadata` ンスタンスと共に使用し、カスタム範囲のメタデータを設定します。
 1. 新しいリソー `MediaPlayer.replaceCurrentResource` スを現在のリソ `MediaPlayerItemConfig` ースに設定するには、インスタンスを引数としてメソッドを使用します。
-1. プレイヤーが `STATE_CHANGED` 状態にあることを報告するイベントを待 `PREPARED` ちます。
-1. を呼び出して、ビデオ再生を開始しま `MediaPlayer.play`す。
+1. プレイヤーが `STATE_CHANGED` イベント中であることが報告されるまで待 `PREPARED` ちます。
+1. 開始ビデオの再生を呼び出しま `MediaPlayer.play`す。
 
 次に、この例のタスクを完了した結果を示します。>
-* 例えば、 `ReplaceTimeRange` 再生タイムライン上で別のオーバーラップがある場合、aの開始位置が既に配置されている終了位置よりも前にあると、TVSDKは競合を避けるために、問題の開始位置を何も示さず `ReplaceTimeRange``ReplaceTimeRange` に調整します。
+* 例えば、 `ReplaceTimeRange` aの開始位置が既に配置されている終了位置よりも前にある場合、TVSDKは競合を避けるために、問題の開始を何も示さずに調 `ReplaceTimeRange``ReplaceTimeRange` 整します。
 
    これにより、調整後の画像が元々指定 `ReplaceTimeRange` されていた画像より短くなります。 調整の結果期間がゼロになった場合、TVSDKは問題を黙ってドロップしま `ReplaceTimeRange`す。
 
@@ -37,50 +37,43 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 次のコードスニペットでは、3つの時間範囲をカスタム広告マーカーとしてタイムラインに配置します。
 
->```java>
->// Assume that the 3 time ranges are obtained through external means 
->// Use them to populate the ReplaceTimeRange instance 
->List<ReplaceTimeRange> timeRanges = new ArrayList<ReplaceTimeRange>(); 
->timeRanges.add(new ReplaceTimeRange(0,10000, 0)); 
->timeRanges.add(new ReplaceTimeRange(15000,20000, 0)); 
->timeRanges.add(new ReplaceTimeRange(25000,30000, 0)); 
-> 
->
+```java
+// Assume that the 3 time ranges are obtained through external means 
+// Use them to populate the ReplaceTimeRange instance 
+List<ReplaceTimeRange> timeRanges = new ArrayList<ReplaceTimeRange>(); 
+timeRanges.add(new ReplaceTimeRange(0,10000, 0)); 
+timeRanges.add(new ReplaceTimeRange(15000,20000, 0)); 
+timeRanges.add(new ReplaceTimeRange(25000,30000, 0)); 
+ 
 CustomRangeMetadata customRangeMetadata = new CustomRangeMetadata(); 
->customRangeMetadata.setTimeRangeList(timeRanges); 
->customRangeMetadata.setType(CustomRangeMetadata.CustomRangeType.MARK_RANGE); 
-> 
->
+customRangeMetadata.setTimeRangeList(timeRanges); 
+customRangeMetadata.setType(CustomRangeMetadata.CustomRangeType.MARK_RANGE); 
+ 
 //Create a MediaResource instance 
->MediaResource mediaResource = MediaResource.createFromUrl( 
->               "www.example.com/video/test_video.m3u8", timeRanges.toMedatada(null)); 
-> 
->
+MediaResource mediaResource = MediaResource.createFromUrl( 
+        "www.example.com/video/test_video.m3u8", timeRanges.toMedatada(null)); 
+ 
 // Create a MediaPlayerItemConfig instance 
->MediaPlayerItemConfig config =  
->   new MediaPlayerItemConfig(getActivity().getApplicationContext()); 
-> 
->
+MediaPlayerItemConfig config =  
+  new MediaPlayerItemConfig(getActivity().getApplicationContext()); 
+ 
 // Set customRangeMetadata 
->config.setCustomRangeMetadata(customRangeMetadata); 
-> 
->
+config.setCustomRangeMetadata(customRangeMetadata); 
+ 
 // Prepare the content for playback by calling replaceCurrentResource 
->// NOTE: mediaPlayer is an instance of a properly configured MediaPlayer  
->mediaPlayer.replaceCurrentResource(mediaResource, config); 
-> 
->
+// NOTE: mediaPlayer is an instance of a properly configured MediaPlayer  
+mediaPlayer.replaceCurrentResource(mediaResource, config); 
+ 
 // wait for TVSDK to reach the PREPARED state 
->mediaPlayer.addEventListener(MediaPlayerEvent.STATE_CHANGED,  
->   new StatusChangeEventListener() { 
->       @Override 
->       public void onStatusChanged(MediaPlayerStatusChangeEvent event) { 
-> 
->    
-   if( event.getStatus() == MediaPlayerStatus.PREPARED ) { 
->               // TVSDK is in the PREPARED state, so start the playback  
->               mediaPlayer.play(); 
->       } 
->       ... 
->}
->```
+mediaPlayer.addEventListener(MediaPlayerEvent.STATE_CHANGED,  
+  new StatusChangeEventListener() { 
+    @Override 
+    public void onStatusChanged(MediaPlayerStatusChangeEvent event) { 
+ 
+    if( event.getStatus() == MediaPlayerStatus.PREPARED ) { 
+        // TVSDK is in the PREPARED state, so start the playback  
+        mediaPlayer.play(); 
+    } 
+    ... 
+}
+```

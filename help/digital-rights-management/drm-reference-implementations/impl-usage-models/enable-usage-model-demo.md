@@ -3,7 +3,7 @@ seo-title: 使用モデルのデモを有効にする
 title: 使用モデルのデモを有効にする
 uuid: 43930ebb-e936-4f48-990d-7ad19992e326
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 6e949c2f88deef88f0d0ac95b18c006da1c89d2f
 
 ---
 
@@ -15,12 +15,10 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
    Media Packagerコマンドラインツールを使用してコンテンツをパッケージ化する場合は、次のように入力します。
 
    ```
-   java -jar AdobeMediaPackager.jar [
-   
-<i>source_file</i>] [<i>dest_file</i>] -k RI_UsageModelDemo=true
+   java -jar AdobeMediaPackager.jar [<i>source_file</i>] [<i>dest_file</i>] -k RI_UsageModelDemo=true
+   ```
 
-```
->[!NOTE] {class="- topic/note "}
+>[!NOTE] {class=&quot;- topic/note &quot;}
 >
->If you do not activate the optional demo mode at packaging time, the license server issues a license based on the first valid DRM policy it processes.
+>パッケージ化時にオプションのデモモードをアクティブ化しない場合、ライセンスサーバーは、処理する最初の有効なDRMポリシーに基づいてライセンスを発行します。
 

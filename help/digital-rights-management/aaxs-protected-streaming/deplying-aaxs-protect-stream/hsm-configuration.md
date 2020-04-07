@@ -3,7 +3,7 @@ seo-title: HSMの設定
 title: HSMの設定
 uuid: da4d7118-65a8-460d-a796-b7bf5c28b208
 translation-type: tm+mt
-source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
 
 ---
 
@@ -19,8 +19,8 @@ keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunP
   -providerArg pkcs11.cfg -list
 ```
 
-リストに自分の秘密鍵証明書が表示される場合、HSMが正しく設定され、ライセンスサーバーがその秘密鍵証明書にアクセスできるようになります。
+秘密鍵証明書がリストに表示される場合は、HSMが適切に設定され、ライセンスサーバーが秘密鍵証明書にアクセスできるようになります。
 
-> [!NOTE]
-> Adobe Access Server for Protected Streamingは、現在、64ビットWindows OS上のHSMをサポートしていません。
-
+>[!NOTE]
+>
+>Adobe Access Server for Protected Streamingは、現在、64ビットWindows OS上のHSMをサポートしていません。

@@ -5,7 +5,7 @@ seo-title: メディアリソースの作成
 title: メディアリソースの作成
 uuid: f34a11a3-dac2-405e-8632-1d9617cc019d
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 1b7ec3759561159c55018b4b81f896ecc99a25e8
 
 ---
 
@@ -20,32 +20,32 @@ MediaResourceクラスは、MediaPlayerインスタンスによって読み込�
 
    コンストラ `MediaResource` クターには次のパラメーターが必要です。
 
-   <table id="table_22886D6770FB45E99D35D0B90E6CC302"> 
-      <thead> 
-      <tr> 
-      <th colname="col1" class="entry"> コンストラクターパラメーター </th> 
-      <th colname="col2" class="entry"> 説明 </th> 
-      </tr> 
+   <table id="table_22886D6770FB45E99D35D0B90E6CC302">
+      <thead>
+      <tr>
+      <th colname="col1" class="entry"> コンストラクターパラメーター </th>
+      <th colname="col2" class="entry"> 説明 </th>
+      </tr>
       </thead>
-      <tbody> 
-      <tr> 
-      <td colname="col1"> <span class="codeph"> url </span> </td> 
-      <td colname="col2"> メディアのマニフェスト/プレイリストのURLを表す文字列。 </td> 
-      </tr> 
-      <tr> 
-      <td colname="col1"> <span class="codeph"> type </span> </td> 
-      <td colname="col2"> 指定されたファイルの種類に対応する、 <span class="codeph"> MediaResource.Type </span> enumの次のいずれかのメンバーです。 
-      <ul id="ul_C286ED3C31364B858A1C9AF3356E9282"> 
-      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li> 
-      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - ISOベースのメディアファイル形式(MP4) </li> 
-      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - MPEG-DASHメディアプレゼンテーション説明(MPD) </li> 
-      </ul> </td> 
-      </tr> 
-      <tr> 
-      <td colname="col1"> <span class="codeph"> メタデータ </span> </td> 
-      <td colname="col2"> メインコンテンツ内に配置する代替コンテンツや広告コンテンツなど、読み込まれるコンテンツに関する追加情報を含む <span class="codeph"> Metadata </span> クラスのインスタンス（ディクショナリに似た構造）。 広告を使用する場合は、このコンストラク <span class="codeph"> ターを使 </span> 用する前にAuditudeSettingsを設定します(を参照し <a keyref="ad-insertion-metadata"></a>てください)。 </td> 
-      </tr> 
-      </tbody> 
+      <tbody>
+      <tr>
+      <td colname="col1"> <span class="codeph"> url </span> </td>
+      <td colname="col2"> メディアのマニフェスト/プレイリストのURLを表す文字列。 </td>
+      </tr>
+      <tr>
+      <td colname="col1"> <span class="codeph"> type </span> </td>
+      <td colname="col2"> 指定されたファイルの種類に対応する、 <span class="codeph"> MediaResource.Type </span> enumの次のいずれかのメンバーです。
+      <ul id="ul_C286ED3C31364B858A1C9AF3356E9282">
+      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li>
+      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - ISOベースのメディアファイル形式(MP4) </li>
+      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - MPEG-DASHメディアプレゼンテーション説明(MPD) </li>
+      </ul> </td>
+      </tr>
+      <tr>
+      <td colname="col1"> <span class="codeph"> メタデータ </span> </td>
+      <td colname="col2"> メインコンテンツ内に配置する代替コンテンツや広告コンテンツなど、読み込まれるコンテンツに関する追加情報を含む <span class="codeph"> Metadata </span> クラスのインスタンス（ディクショナリに似た構造）。 広告を使用する場合は、このコンストラクターを使 <span class="codeph"> 用する前 </span> にAuditudeSettingsを設定してください。 </td>
+      </tr>
+      </tbody>
    </table>
 
    >[!IMPORTANT]
@@ -57,11 +57,11 @@ MediaResourceクラスは、MediaPlayerインスタンスによって読み込�
    次のコードでは、インスタンスを作成 `MediaResource` します。
 
    ```java
-   // To do: Create metadata here 
-   MediaResource res = new MediaResource( 
-     "https://www.example.com/video/some-video.m3u8",  
-     MediaResource.Type.HLS, 
-     metadata); 
+   // To do: Create metadata here
+   MediaResource res = new MediaResource(
+     "https://www.example.com/video/some-video.m3u8",
+     MediaResource.Type.HLS,
+     metadata);
    ```
 
    この手順の後は、アクセサ(getter)を使用して、リ `MediaResource` ソースのタイプ、URL、およびメタデータをいつでも確認できます。

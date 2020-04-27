@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e41213acf027e4dc4d016ef31c2d3d1665f54dfc
+source-git-commit: 3e5078c25a1426c3991669809426eefab0386ac9
 
 ---
 
@@ -290,20 +290,13 @@ TVSDKは、接続を開くと、キープアライブ接続をサー *バーに�
 
 * **SizeAvailableEventListener**
 
-   * SizeAvailableEventのgetHeight()メソッドとgetWidth()メソッドは、それぞれ高さと幅で出力を返すようになりました。 表示縦横比は、次のように計算できます。
+   * `getHeight()` とのメ `getWidth()` ソッドは、 `SizeAvailableEvent` それぞれ高さと幅で出力を返すようになりました。 表示縦横比は、次のように計算できます。
 
-   ```java
-   SizeAvailableEvent e;
-   DAR = e.getWidth()/ e.getHeight();
-   ```
+      SizeAvailableEvent e;DAR = e.getWidth()/ e.getHeight();
 
-   ストレージの幅とSarの高さに関する縦横比は、フレームの幅とフレームの高さの計算にも使用できます。
+      ストレージの幅とSarの高さに関する縦横比は、フレームの幅とフレームの高さの計算にも使用できます。
 
-   ```java
-   SAR = e.getSarWidth()/e.getSarHeight();
-   frameHeight = e.getHeight();
-   frameWidth = e.getWidth()/SAR;
-   ```
+      SAR = e.getSarWidth()/e.getSarHeight();frameHeight = e.getHeight();frameWidth = e.getWidth()/SAR;
 
 * **Cookie**
 
@@ -616,7 +609,7 @@ WebViewDebugingは、デフォルトでFalseに設定されています。 デ�
 * Zendesk #30809 SEEK_ENDイベントが見つからない場合、アプリは再生状態に移行しません。
 * Zendesk #30415クローズドキャプションの「シアン」の色が、以前のPrimetime TVSDKリリースと比較して、濃い青色（青色）になりました。
 
-   色が濃いシアンからシアンに変更されます。
+   色がダークシアンからシアンに変更されます。
 
 * Zendesk #30727 VOD広告がダウンロード/解決されない。
 

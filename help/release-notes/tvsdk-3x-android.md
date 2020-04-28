@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e84c50037557e157a044b1cec1fdea84cb156ea0
+source-git-commit: b71ac860652f53b171926b570c004db2351d3d3a
 
 ---
 
@@ -23,7 +23,7 @@ Androidリファレンスプレイヤーは、配布物のsamples/ディレク�
 >
 >リファレンスプレーヤーを正常に構築するには、リリースと共に配布されているREADME.mdで説明されているように、次の手順を実行します。
 >
->1. https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releasesからVideoHeartbeat.jarをダ [ウンロード](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) （Android v2.0.0用のVideoHeartbeatライブラリ）
+>1. https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releasesからVideoHeartbeat.jar [をダウンロード](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) （Android v2.0.0用のVideoHeartbeatライブラリ）
 >1. VideoHeartbeat.jarをlibs/フォルダーに抽出します。
 >
 
@@ -136,8 +136,9 @@ TVSDKで、現在読み込まれているメディアリソースに関連付け
 
    詳しくは、APIとイベントの変更に関するAndroid向けTVSDK 3.0プログラマーガイドを参照してください。
 
-* **最新バージ `targetSdkVersion` ョンに更新\
-   **スムーズに機 `targetSdkVersion` 能するために、19から27に更新します。
+* **最新バージ`targetSdkVersion`ョンに更新する**
+
+   スムーズに機 `targetSdkVersion` 能するために、19から27に更新します。
 
 * **Placement.Type getPlacementType()は、インターフェイスのTimelineMarkerのメソッドになりました**
 

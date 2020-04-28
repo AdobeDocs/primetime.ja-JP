@@ -4,7 +4,7 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
+source-git-commit: b986cdcb772c692cf71361d7c04b92130b3e0eea
 
 ---
 
@@ -13,11 +13,9 @@ source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 
 Adobe Primetimeリリースノートへようこそ。 左側のドキュメントに、リリース固有の情報、必要システム構成、制限、修正された問題および既知の問題を示します。
 
-## TVSDK 3.11 Androidの修正点
-
-このリリースでは、Widevine DRMのサポートが強化され、お客様の最も問題が解決されました。
-
-[Androidの現在のリリースバージョンについて詳しくは、こちらを参照してください](../release-notes/tvsdk-3x-android.md)。
+<!-- ## Fixes in TVSDK 3.11 Android
+The release enhanced support for Widevine DRM and resolved top customer issues.
+Check out for more information about the current released version for [Android](../release-notes/tvsdk-3x-android.md). -->
 
 ## TVSDK 3.11 iOSリリースノートの機能強化および修正点
 

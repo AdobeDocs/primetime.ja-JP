@@ -5,7 +5,7 @@ description: APIを使用すると、機能的なアプリケーションや統�
 seo-description: APIを使用すると、機能的なアプリケーションや統合を迅速かつ容易に作成できます。
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
+source-git-commit: b063235ed1eb27f537d4b311f2f07d7f5750206b
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 # Adobe Primetime APIリファレンス {#api-references}
 
 + TVSDK 3.11 {#tvsdk-311}
-   + [Android向けTVSDK 3.11](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_311/index.html)
+   + [Android向けTVSDK 3.11](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html)
 
 + TVSDK 3.5 {#tvsdk-35}
    + [TVSDK 3.5 for iOS](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v35/index.html)

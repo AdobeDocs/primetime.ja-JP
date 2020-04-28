@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 34ec714ec190e77a70bf4e966d6df02ec0c99cb3
+source-git-commit: 1f03dd8975fed27836a34159a403ba4aeec199c1
 
 ---
 
@@ -23,7 +23,7 @@ Androidリファレンスプレイヤーは、配布物のsamples/ディレク�
 >
 >リファレンスプレーヤーを正常に構築するには、リリースと共に配布されているREADME.mdで説明されているように、次の手順を実行します。
 >
->1. https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releasesからVideoHeartbeat.jarをダ [ウンロード](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) （Android v2.0.0用のVideoHeartbeatライブラリ）
+>1. https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releasesからVideoHeartbeat.jar [をダウンロード](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) （Android v2.0.0用のVideoHeartbeatライブラリ）
 >1. VideoHeartbeat.jarをlibs/フォルダーに抽出します。
 >
 
@@ -46,7 +46,7 @@ TVSDK now allows fetching of Protection System Specific Header Box associated wi
 For more information, see [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
 Top customer issues fixed in the current release are mentioned in [resolved issues](#resolved-issues) section. -->
 
-### 以前のリリースの新機能と機能強化
+## 以前のリリースの新機能と機能強化
 
 **Android TVSDK 3.9**
 
@@ -606,7 +606,7 @@ WebViewDebugingは、デフォルトでFalseに設定されています。 デ�
 * Zendesk #30809 SEEK_ENDイベントが見つからない場合、アプリは再生状態に移行しません。
 * Zendesk #30415クローズドキャプションの「シアン」の色が、以前のPrimetime TVSDKリリースと比較して、濃い青色（青色）になりました。
 
-   色がダークシアンからシアンに変更されます。
+   色が濃いシアンからシアンに変更されます。
 
 * Zendesk #30727 VOD広告がダウンロード/解決されない。
 

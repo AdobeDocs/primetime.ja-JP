@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 3e5078c25a1426c3991669809426eefab0386ac9
+source-git-commit: 5cf340119147799cd7b2c40a2a312595eebaa737
 
 ---
 
@@ -23,7 +23,7 @@ Androidリファレンスプレイヤーは、配布物のsamples/ディレク�
 >
 >リファレンスプレーヤーを正常に構築するには、リリースと共に配布されているREADME.mdで説明されているように、次の手順を実行します。
 >
->1. https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releasesからVideoHeartbeat.jar [をダウンロード](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) （Android v2.0.0用のVideoHeartbeatライブラリ）
+>1. https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releasesからVideoHeartbeat.jarをダ [ウンロード](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) （Android v2.0.0用のVideoHeartbeatライブラリ）
 >1. VideoHeartbeat.jarをlibs/フォルダーに抽出します。
 >
 
@@ -393,7 +393,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 
 この節では、TVSDK 3.11 Androidリリースで解決された問題の概要を示します。
 
-* ZD# - Android TVSDK参照アプリで、WebVTTを使用したHLSマニフェストのグリフ記号が見つからない場合に、韓国語の文字が表示されます。
+* Android TVSDK参照アプリで、WebVTTを使用したHLSマニフェストで、韓国語の文字が見つからないグリフ記号として表示される。
 
 ### 以前のリリースで解決された問題
 

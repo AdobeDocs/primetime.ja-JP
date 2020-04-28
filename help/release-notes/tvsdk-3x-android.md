@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 5cf340119147799cd7b2c40a2a312595eebaa737
+source-git-commit: e84c50037557e157a044b1cec1fdea84cb156ea0
 
 ---
 
@@ -198,7 +198,7 @@ Android TVSDK v2.5.4では、次の更新とAPIの変更がオファーされま
 
 **バージョン2.5.3**
 
-Android TVSDK v2.5.3では、次の更新とAPIの変更がオファーされています。
+Android TVSDK v2.5.3では、次の更新とAPIの変更がオファーされました。
 
 * CRSを使用するすべてのTVSDKユーザーは、Android上のTVSDK 2.5.3.85または最新のバージョンを使用して、アプリをアップグレードすることをお勧めします。 これは、既存のアプリの実装に代わるドロップインです。 TVSDKのアップグレード後、プロキシツールでCRSクリエイティブURLリクエストを確認します(例：Charles)を参照し、パス内のホスト名とバージョンが、以下のサンプルURL構造と同じように反映されていることを確認します。
 
@@ -393,7 +393,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 
 この節では、TVSDK 3.11 Androidリリースで解決された問題の概要を示します。
 
-* Android TVSDK参照アプリで、WebVTTを使用したHLSマニフェストで、韓国語の文字が見つからないグリフ記号として表示される。
+* ZD#41252 - Android TVSDK参照アプリで、WebVTTを使用したHLSマニフェストのグリフ記号が見つからない場合に、韓国語の文字が表示されます。
 
 ### 以前のリリースで解決された問題
 
@@ -609,7 +609,7 @@ WebViewDebugingは、デフォルトでFalseに設定されています。 デ�
 * Zendesk #30809 SEEK_ENDイベントが見つからない場合、アプリは再生状態に移行しません。
 * Zendesk #30415クローズドキャプションの「シアン」の色が、以前のPrimetime TVSDKリリースと比較して、濃い青色（青色）になりました。
 
-   色がダークシアンからシアンに変更されます。
+   色が濃いシアンからシアンに変更されます。
 
 * Zendesk #30727 VOD広告がダウンロード/解決されない。
 

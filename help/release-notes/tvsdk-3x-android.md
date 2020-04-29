@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: dbb4aceaea1f3db2fcc5a2aa2168ee8a1cd4c785
+source-git-commit: fdb4e4eb741dd066017d96205cea8cbd15dcbc7b
 
 ---
 
@@ -210,7 +210,7 @@ Android TVSDK v2.5.4では、次の更新とAPIの変更がオファーされま
 
 **バージョン2.5.3**
 
-Android TVSDK v2.5.3では、次の更新とAPIの変更がオファーされています。
+Android TVSDK v2.5.3では、次の更新とAPIの変更がオファーされました。
 
 * CRSを使用するすべてのTVSDKユーザーは、Android上のTVSDK 2.5.3.85または最新のバージョンを使用して、アプリをアップグレードすることをお勧めします。 これは、既存のアプリの実装に代わるドロップインです。 TVSDKのアップグレード後、プロキシツールでCRSクリエイティブURLリクエストを確認します(例：Charles)を参照し、パス内のホスト名とバージョンが、以下のサンプルURL構造と同じように反映されていることを確認します。
 
@@ -333,7 +333,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 |---|---|---|
 | 一般再生（再生、一時停止、シーク） | VOD + Live | Y |
 | FER — 一般再生（再生、一時停止、シーク） | FER VOD | Y |
-| 広告の再生中のシーク | ライブ | 未サポート |
+| 広告の再生中のシーク | VOD + Live | 未サポート |
 | AC3 | VOD + Live | 未サポート |
 | MP3 | VOD | 未サポート |
 | MP4コンテンツ再生 | VOD | Y |
@@ -399,7 +399,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 | DRM | VOD + Live | Primetime DRMのみ(将来：Widevine) |
 | 外部再生(RBOP) | VOD + Live | Primetime DRMのみ |
 | ライセンスローテーション | VOD + Live | Primetime DRMのみ |
-| キーの回転 | VOD + Live | Primetime DRMおよびWidevine DRM |
+| キーの回転 | VOD + Live | Primetime DRMのみ |
 
 | 機能 | コンテンツタイプ | HLS |
 |---|---|---|
@@ -414,7 +414,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 
 この節では、TVSDK 3.11 Androidリリースで解決された問題の概要を示します。
 
-* ZD#41252 - Android TVSDK参照アプリで、WebVTTを使用したHLSマニフェストのグリフ記号が見つからない場合に、韓国語の文字が表示されます。
+* ZD#41252 - WebVTTの韓国語文字が、Android 7.1以降で切れている。
 
 ### 以前のリリースで解決された問題
 

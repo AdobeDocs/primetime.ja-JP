@@ -1,10 +1,10 @@
 ---
-title: PTAI 20.3.3リリースノート
+title: PTAI 20.5.1リリースノート
 description: PTAI 20.5.1のリリースノートでは、2020年のPrimetime Dynamic Ad Insertionで解決され、既知の問題である、新機能や変更点について説明します。
 translation-type: tm+mt
-source-git-commit: 2a5866be64895ba13994720bf943dc676c2595bf
+source-git-commit: 266b884707e9160d539a06fd089732ef8ade21ba
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -48,11 +48,13 @@ Dynamic Ad Insertion 20.5.1のリリースノートでは、2020年のPrimetime 
 
 **日時：** 2020年1月28日火曜日午前2時から東部午前3時まで
 
-* **&quot;nbc&quot; CueFormat** Convert cues from FER streamをFWタイムラインオーバーライドパラメーターに変換できるVMAP。ptcueformat=nbcが使用され、ストリームがマニフェスト内キューとベイクイン広告を含むVODストリームの場合。
+* **FERでnbc CueFormatをサポートするVMAP**
+
+   FERストリームのキューをFWタイムラインオーバーライドパラメーターに変換します。このパラメーターは、が使用さ `ptcueformat=nbc` れ、ストリームがマニフェスト内キューとベイクイン広告を含むVODストリームの場合に使用されます。
 
 * サードパーティの広告プロバイダー/CDNに転送する前に、HTTPヘッダーのuser-agentフィールドの内容を変更します。
 
-* Auditudeや他の広告プロバイダーCDNに送信する前に、「user-agent」HTTPヘッダーから制御/印刷不可文字（asciiコード&lt; 32）をフィルターで除外します。 Auditude Ad-Callが、このような無効なヘッダーで失敗するために使用されます。
+* Auditudeや他の広告プロバイダーCDNに送信する前に、ユーザーエージェントのHTTPヘッダーから制御文字や印刷不可文字（ASCIIコード&lt; 32）をフィルターで除外します。 Auditude Ad-Callが、このような無効なヘッダーで失敗するために使用されます。
 
 * 古いV1オブジェクトをNetStorageグループから削除して、Akamaiの安全な範囲内にオブジェクト数を維持します。
 

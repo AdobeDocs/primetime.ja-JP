@@ -2,9 +2,9 @@
 title: PTAI 20.5.1リリースノート
 description: PTAI 20.5.1のリリースノートでは、2020年のPrimetime Dynamic Ad Insertionで解決され、既知の問題である、新機能や変更点について説明します。
 translation-type: tm+mt
-source-git-commit: 75f95c1ddbca6fc9aa2a722635b1bfb6f097f8cc
+source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Dynamic Ad Insertion 20.5.1のリリースノートでは、2020年のPrimetime 
 
 **日時：** 2020年3月26日木曜日午前03:00 ～午前04:00東部時間
 
-* SSAI 4XXおよび5XX応答は、CORS関連のヘッダーを正しく供給するようになり、クロスドメインjavascript/webviewクライアントがエラー応答を正常に読み取れるようになりました。
+* SSAI 4XXおよび5XX応答は、CORS関連のヘッダーを正しく供給するようになり、クロスドメインjavascript webviewクライアントがエラー応答を正常に読み取れるようになりました。
 
 * X-Forwarded-Forヘッダーの問題を修正しました。広告サーバーに渡されると、IPv6アドレスが正しくURLエンコードされませんでした。
 
@@ -85,7 +85,7 @@ Dynamic Ad Insertion 20.5.1のリリースノートでは、2020年のPrimetime 
 
 * 古いV1オブジェクトをNetStorageグループから削除して、Akamaiの安全な範囲内にオブジェクト数を維持します。
 
-### バージョン20.1.2の [修正プログラム]
+### バージョン20.1.2（修正プログラム）
 
 **日時：** 2020年1月20日（月）午前02:00 ～午前03:00（東部標準時）
 
@@ -103,7 +103,7 @@ Dynamic Ad Insertion 20.5.1のリリースノートでは、2020年のPrimetime 
 
 ## 解決された問題
 
-レポートされた問題に解決が関連付けられている場合は、Zendesk参照が表示されます。 例えば、ZD#xxxxx。
+レポートされた問題に解決が関連付けられている場合は、Zendesk参照が表示されます。 例：`ZD#xxxxx`
 
 **PTAI 20.5.1**
 

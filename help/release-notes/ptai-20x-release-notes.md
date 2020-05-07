@@ -2,9 +2,9 @@
 title: PTAI 20.5.1リリースノート
 description: PTAI 20.5.1のリリースノートでは、2020年のPrimetime Dynamic Ad Insertionで解決され、既知の問題である、新機能や変更点について説明します。
 translation-type: tm+mt
-source-git-commit: 4f97591b819d705891a053961eccd50a3cd05aa2
+source-git-commit: 9c117678a049e34bfcf960e992a4ce7361968f3e
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,16 @@ Dynamic Ad Insertion 20.5.1のリリースノートでは、2020年のPrimetime 
 ## 解決された問題
 
 レポートされた問題に解決が関連付けられている場合は、Zendesk参照が表示されます。 例えば、ZD#xxxxx。
+
+**PTAI 20.5.1**
+
+* If-Modified-Sinceヘッダーが送信される場合のCORSヘッダーの問題です。
+
+* CRSダッシュボードの問題。
+
+**PTAI 20.3.4**
+
+* VOD/WebVTTでの広告挿入後にサブタイトルが同期されない問題を修正しました。
 
 **PTAI 20.3.3**
 

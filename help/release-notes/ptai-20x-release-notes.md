@@ -2,7 +2,7 @@
 title: PTAI 20.5.1リリースノート
 description: PTAI 20.5.1のリリースノートでは、2020年のPrimetime Dynamic Ad Insertionで解決され、既知の問題である、新機能や変更点について説明します。
 translation-type: tm+mt
-source-git-commit: 7c6acf4b310a7df4ea79a5974f66f7f4b615b21c
+source-git-commit: 75f95c1ddbca6fc9aa2a722635b1bfb6f097f8cc
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%

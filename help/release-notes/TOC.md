@@ -4,7 +4,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetimeリリースノート
 translation-type: tm+mt
-source-git-commit: 7dd4dced32253a3d94e753a49a4b52a60bbba4b1
+source-git-commit: 1ec9411ac897ac6e7328aef9a6ddd614f533f1d0
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
    + [PTAI 20.5.1リリースノート](ptai-20x-release-notes.md)
    + [PTAI 19.11.1リリースノート](ptai-19x-release-notes.md)
 + TVSDK for iOS {#tvsdk-ios}
-   + [TVSDK 3.11 for iOSリリースノート](tvsdk-3x-ios.md)
+   + [TVSDK 3.12 iOS向けリリースノート](tvsdk-3x-ios.md)
    + [TVSDK 1.4 iOS向けリリースノート](tvsdk-1-4-ios.md)
 + Android向けTVSDK {#tvsdk-android}
    + [TVSDK 3.11 for Androidリリースノート](tvsdk-3x-android.md)

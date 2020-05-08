@@ -306,7 +306,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 
 ### TRACE_WEBVTT_RESPONSEレコード {#trace-webvtt-response-records}
 
-このログ ``of ``をサー ``type ``バー ``responses ``のキャプシ ``manifest ``ョンのキ ``sends ``ャプシ ``clients ```` `answer` ````requests ```for```WEBVTT ``ョンに記録します。 TRACE_WEBVTT_RESPONSEを超えるフィールドは、表に示されるタブで区切られた順序で表示され `by`ます。
+Records of this type log responses the manifest server sends to clients in answer to requests for WEBVTT captions. Fields beyond TRACE_WEBVTT_RESPONSE appear in the order shown in the table, separated by tabs.
 
 | フィールド | タイプ | 説明 |
 |--- |--- |--- |

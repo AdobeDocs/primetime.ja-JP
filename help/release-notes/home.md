@@ -4,7 +4,7 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 8e19c638caf2f9ea37dbf2ec7373ae9f470b93fe
+source-git-commit: bc9f03647d0b6114b6030ded058eb452e2b80887
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
@@ -14,24 +14,25 @@ ht-degree: 0%
 
 # Primetimeリリースノート
 
-Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントは、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を提供します。
+Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントは、リリース固有の情報、システム要件、制限、修正された問題、既知の問題を提供します
 
-## PTAI 20.5.1の機能強化および修正点
-
-お客様の主な問題の解決に重点を置いています。
-
-## TVSDK 3.11 Androidの修正点
-
-このリリースでは、Widevine DRMのサポートが強化され、お客様の最も問題が解決されました。
-Androidの現在のリリースバージョンについて詳しくは、 [Android](../release-notes/tvsdk-3x-android.md).を参照してください。
-
-## TVSDK 3.11 iOSリリースノートの機能強化および修正点
+## TVSDK 3.12 iOSリリースノートの機能強化および修正点
 
 このリリースでは、お客様の主な問題の解決に重点を置いています。
 
 iOSの現在のリリースバージョンについて詳しくは、 [ご覧ください](../release-notes/tvsdk-3x-ios.md)。
 
-Dynamic Ad Insertionの現在のリリースバージョンについて詳しくは、 [PTAIリリースノートを参照してください](ptai-19x-release-notes.md)。
+## PTAI 20.5.1の機能強化および修正点
+
+お客様の主な問題の解決に重点を置いています。
+
+Dynamic Ad Insertionの現在のリリースバージョンについて詳しくは、 [PTAIリリースノートを参照してください](ptai-20x-release-notes.md)。
+
+## TVSDK 3.11 Androidの修正点
+
+このリリースでは、Widevine DRMのサポートが強化され、お客様の最も問題が解決されました。
+
+Androidの現在のリリースバージョンについて詳しくは、 [Android](../release-notes/tvsdk-3x-android.md).を参照してください。
 
 ## 関連項目
 

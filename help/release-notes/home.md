@@ -4,9 +4,9 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: bc9f03647d0b6114b6030ded058eb452e2b80887
+source-git-commit: 4060de986dbf3d1ee57a415a4af302b1631db6a3
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 0%
 
 # Primetimeリリースノート
 
-Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントは、リリース固有の情報、システム要件、制限、修正された問題、既知の問題を提供します
+Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントは、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を提供します。
+
+## PTAI 20.6.1の機能強化および修正点
+
+このリリースでは、マニフェスト操作や、長い形式のVODアセットを使用してセッションキープアライブを維持するためのAPIの改善などの機能に焦点を当てています。 このリリースには、お客様の主な問題に対する修正が組み込まれています。
+
+Dynamic Ad Insertionの現在のリリースバージョンについて詳しくは、 [PTAIリリースノートを参照してください](ptai-20x-release-notes.md)。
 
 ## TVSDK 3.12 iOSリリースノートの機能強化および修正点
 
 このリリースでは、お客様の主な問題の解決に重点を置いています。
 
 iOSの現在のリリースバージョンについて詳しくは、 [ご覧ください](../release-notes/tvsdk-3x-ios.md)。
-
-## PTAI 20.5.1の機能強化および修正点
-
-お客様の主な問題の解決に重点を置いています。
-
-Dynamic Ad Insertionの現在のリリースバージョンについて詳しくは、 [PTAIリリースノートを参照してください](ptai-20x-release-notes.md)。
 
 ## TVSDK 3.11 Androidの修正点
 

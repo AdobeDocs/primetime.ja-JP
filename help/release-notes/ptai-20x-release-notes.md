@@ -2,9 +2,9 @@
 title: PTAI 20.6.1リリースノート
 description: PTAI 20.6.1のリリースノートでは、2020年のPrimetime Dynamic Ad Insertionで解決され、既知の問題である、新機能や変更点について説明します。
 translation-type: tm+mt
-source-git-commit: fc09f185489ff7e3decb7c77b495825e4c9c7c09
+source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,6 @@ Dynamic Ad Insertion 20.6.1のリリースノートでは、2020年のPrimetime 
 * WebVTTフラグメントが、要求された元のプロトコルに関係なく、httpプロトコルで常に要求される問題を修正しました。
 
 * 広告からコンテンツに切り替える際に、プレイリストの上部からEXT-X-DISCONTINUITYタグが削除される問題を修正しました。 この修正を有効にするには、アドビサポートにお問い合わせください。
-
-## 以前のリリースでの変更点
 
 ### バージョン20.5.1
 

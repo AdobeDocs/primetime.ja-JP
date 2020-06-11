@@ -4,7 +4,7 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 4060de986dbf3d1ee57a415a4af302b1631db6a3
+source-git-commit: 8f8b9d167d7456968879edac847c51e6c9e1da3c
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -15,6 +15,12 @@ ht-degree: 0%
 # Primetimeリリースノート
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントは、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を提供します。
+
+## TVSDK 3.12 Androidの修正点
+
+このリリースでは、Primetime Referenceアプリケーションのグレード版をバージョン5.6.4に更新することに重点を置いています。
+
+Androidの現在のリリースバージョンについて詳しくは、 [Android](../release-notes/tvsdk-3x-android.md).を参照してください。
 
 ## PTAI 20.6.1の機能強化および修正点
 
@@ -27,12 +33,6 @@ Dynamic Ad Insertionの現在のリリースバージョンについて詳しく
 このリリースでは、お客様の主な問題の解決に重点を置いています。
 
 iOSの現在のリリースバージョンについて詳しくは、 [ご覧ください](../release-notes/tvsdk-3x-ios.md)。
-
-## TVSDK 3.11 Androidの修正点
-
-このリリースでは、Widevine DRMのサポートが強化され、お客様の最も問題が解決されました。
-
-Androidの現在のリリースバージョンについて詳しくは、 [Android](../release-notes/tvsdk-3x-android.md).を参照してください。
 
 ## 関連項目
 

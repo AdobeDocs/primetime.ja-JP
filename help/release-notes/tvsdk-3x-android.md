@@ -1,24 +1,24 @@
 ---
-title: TVSDK 3.11 for Androidリリースノート
-seo-title: TVSDK 3.11 for Androidリリースノート
-description: Android向けTVSDK 3.11リリースノートでは、TVSDK Android 3.11の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
-seo-description: Android向けTVSDK 3.11リリースノートでは、TVSDK Android 3.11の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
+title: TVSDK 3.12 for Androidリリースノート
+seo-title: TVSDK 3.12 for Androidリリースノート
+description: Android向けTVSDK 3.12リリースノートでは、TVSDK Android 3.12の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
+seo-description: Android向けTVSDK 3.12リリースノートでは、TVSDK Android 3.12の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+source-git-commit: db3f488e29468fc29ea8bf033877124a9abdecd0
 workflow-type: tm+mt
-source-wordcount: '5490'
+source-wordcount: '5531'
 ht-degree: 0%
 
 ---
 
 
-# TVSDK 3.11 for Androidリリースノート {#tvsdk-for-android-release-notes}
+# TVSDK 3.12 for Androidリリースノート {#tvsdk-for-android-release-notes}
 
-Android向けTVSDK 3.11リリースノートでは、TVSDK Android 3.11の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
+Android向けTVSDK 3.12リリースノートでは、TVSDK Android 3.12の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
 
 Androidリファレンスプレイヤーは、Android TVSDKと共に、配布物のsamples/ディレクトリに含まれています。 付属のREADME.mdファイルでは、リファレンスプレイヤーの構築方法が説明されています。
 
@@ -36,26 +36,31 @@ Android向けTVSDKは、以前のバージョンと比べて多くのパフォ�
 
 サポートされる機能とサポートされない機能の包括的なセットは、リリースノートの [機能マトリクス](#feature-matrix) セクションに表示されます。
 
-## Android TVSDK 3.11
+## Android TVSDK 3.12
 
-**保護システム固有のヘッダー(PSSH)ボックスのフェッチが許可されています**
+Primetime Referenceアプリケーションのグレードバージョンがバージョン5.6.4に更新されました。
 
-TVSDKで、現在読み込まれているメディアリソースに関連付けられた保護システム固有のヘッダーボックスを取得できるようになりました。 新しいAPI `getPSSH()` がに追加され `com.adobe.mediacore.drm.DRMManager`ました。
-詳しくは、Widevine DRM [を参照してください](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md)。
+Android Studioを使用してReference Appをセットアップして実行するには、TVSDKのzipファイル()に記載されているReadMeファイルの指示に従ってく `TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md`ださい。
 
 現在のリリースで修正されたトップのお客様の問題は、 [解決された問題の節で説明しています](#resolved-issues) 。
 
 ### 以前のリリースの新機能および機能強化
 
+**Android TVSDK 3.11**
+
+* **保護システム固有のヘッダー(PSSH)ボックスのフェッチが許可されました** - TVSDKは、現在読み込まれているメディアリソースに関連付けられた保護システム固有のヘッダーボックスを取得できます。 に新しいAPI `getPSSH()` が追加され `com.adobe.mediacore.drm.DRMManager`ました。
+
+詳しくは、Widevine DRM [を参照してください](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md)。
+
 **Android TVSDK 3.10**
 
-このリリースでは、「 [解決された問題](#resolved-issues) 」セクションで説明されている、お客様の主な問題の修正に焦点を当てています。
+このリリースでは、「 [解決された問題](#resolved-issues) 」セクションで説明されている、お客様の主な問題の修正に重点を置いています。
 
 **Android TVSDK 3.9**
 
-* **HTTPSを介した安全な配信** - Android TVSDK 3.9では、HTTPSを介した安全な配信機能が導入され、比類のない拡張性とパフォーマンスでコンテンツを安全に配信できます。
+* **HTTPSを介した安全な配信** - Android TVSDK 3.9では、HTTPSを介した安全な配信機能を導入し、比類のない拡張性とパフォーマンスで安全にコンテンツを配信します。
 
-   HTTPS経由の安全な配信を有効にするために、クラスに新しいAPIが導入され `NetworkConfiguration` ました。
+   HTTPS経由の安全な配信を有効にするため、クラスで新しいAPIが導入され `NetworkConfiguration` ました。
 
    `public void setForceHTTPS (boolean value)`
 
@@ -65,7 +70,7 @@ TVSDKで、現在読み込まれているメディアリソースに関連付け
 
 * **部分的な広告ブレーク機能を伴うプリロールのサポート** — この機能強化により、TVSDK 3.8は、部分的な広告ブレーク機能(PABI)を伴うプリロール広告をサポートします。
 
-   プリロール広告がある場合は、その広告が再生され、ライブポイントからコンテンツが再生され、ライブテレビのエクスペリエンスがエミュレートされます。
+プリロール広告がある場合は、その広告が再生され、ライブポイントからコンテンツが再生され、ライブテレビのエクスペリエンスがエミュレートされます。
 
 **Android TVSDK 3.7**
 
@@ -82,6 +87,7 @@ TVSDKで、現在読み込まれているメディアリソースに関連付け
 **バージョン3.5**
 
 * **Just In Time Ad Resolution** - TVSDK 3.5は、再生された広告のサポートをタイムラインから削除します。
+
 * **オフライン再生のサポートを有効にしました** — オフライン再生を使用すると、ビデオコンテンツをデバイスにダウンロードして、接続されていないときに視聴できるようになりました。 詳しくは、「[Androidでの](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_3.5.pdf)オフライン再生」を参照してください。
 
 **バージョン3.4**
@@ -137,7 +143,7 @@ TVSDKで、現在読み込まれているメディアリソースに関連付け
 
 * **TVSDK 3.0は、High Efficiency Video Coding(HEVC)ストリームをサポートしています。**
 
-* **ジャストインタイム — 広告マーカーに近い広告を解決する遅延広告**&#x200B;解決は、各広告の時間を個別に解決するようになりました。 以前は、広告の解決は2段階のアプローチでした。 プリロールは、再生開始の前に解決され、再生開始後に組み合わされたすべてのミッド/ポストロールスロットが解決されました。 この強化された機能を使用すると、広告キューポイントの前の特定の時間に各広告の時間が解決されるようになりました。
+* **ジャストインタイム — 広告マーカーに近い広告を解決する遅延広告**&#x200B;解決が、各広告の時間を個別に解決するようになりました。 以前は、広告の解決は2段階のアプローチでした。 プリロールは、再生開始の前に解決され、再生開始後に組み合わされたすべてのミッド/ポストロールスロットが解決されました。 この強化された機能を使用すると、広告キューポイントの前の特定の時間に各広告の時間が解決されるようになりました。
 
 > [!NOTE]
 >
@@ -437,13 +443,17 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 
 解決が報告された問題に関連付けられている場合、Zendesk参照（ZD#xxxxなど）が表示されます。
 
-**Android TVSDK 3.11**
+**Android TVSDK 3.12**
 
-この節では、TVSDK 3.11 Androidリリースで解決された問題の概要を示します。
+この節では、TVSDK 3.12 Androidリリースで解決された問題の概要を示します。
 
-* ZD#41252 - WebVTT内の韓国語文字が、Android 7.1の後で機能しなくなりました。
+* ZD#40584 - Primetime Referenceアプリケーションは、最新バージョンではビルドされません。
 
 ### 以前のリリースで解決された問題
+
+**Android TVSDK 3.11**
+
+* ZD#41252 - WebVTT内の韓国語文字が、Android 7.1の後で機能しなくなりました。
 
 **Android TVSDK 3.10**
 

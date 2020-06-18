@@ -5,7 +5,10 @@ seo-title: キャプション
 title: キャプション
 uuid: 4dedcedc-50e5-4983-bb09-3f316337117e
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '64'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 ビデオコンテンツの再生時にキャプションを表示できます。
 
-キャプションを処理するには、イベントリスナーを追加する必 `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` 要があります。
+キャプションを処理するには、 `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` イベントリスナーを追加する必要があります。
 
 ```js
 ... 
@@ -34,7 +37,7 @@ function onCaptionsUpdateEvent (event) {
 </ph>
 ```
 
-UIフレームワークには、変更可能なデフォルトのキャプション動作実装が用意されています。 クローズドキャプションの動作は、デフォルトのクローズドキャプションの動作を拡張することで変更することもできます。 例：
+UIフレームワークには、デフォルトのキャプション動作実装が用意されており、これは変更できます。 クローズドキャプションの動作は、デフォルトのクローズドキャプションの動作を拡張することでも変更できます。 例：
 
 ```js
 // Using UI Framework 
@@ -56,4 +59,3 @@ player:{
  
 }); 
 ```
-

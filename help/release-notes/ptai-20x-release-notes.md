@@ -2,9 +2,9 @@
 title: PTAI 20.6.1リリースノート
 description: PTAI 20.6.1のリリースノートでは、2020年のPrimetime Dynamic Ad Insertionで解決され、既知の問題である、新機能や変更点について説明します。
 translation-type: tm+mt
-source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Dynamic Ad Insertion 20.6.1のリリースノートでは、2020年のPrimetime 
 
 **日時：** 2020年1月15日水曜日午前04:00 ～午前05:00東部標準時
 
-* Creative Repackaging Serviceは、正しくない形式のクリエイティブを自動的にブラックリストに含めることで、広告の挿入時間を短縮します。
+* Creative Repackaging Serviceは、正しくない形式のクリエイティブを自動的にブロックすることで、より迅速な広告挿入を実現します。
 
 * サーバー側の広告挿入で新しいSCTE 35キュー形式に対するフェーズ1のサポートを追加しました。
 

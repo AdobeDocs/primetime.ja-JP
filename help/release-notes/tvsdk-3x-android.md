@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
-source-wordcount: '5417'
+source-wordcount: '5418'
 ht-degree: 0%
 
 ---
@@ -313,7 +313,7 @@ TVSDKは、接続を開くと、サーバーに *キープアライブ接続を�
 
 * **SizeAvalableEventListener**
 
-   * `getHeight()` の `getWidth()` メソッド `SizeAvailableEvent` は、それぞれ高さと幅で出力を返すようになりました。 表示縦横比は次のように計算できます。
+   * `getHeight()` の `getWidth()``SizeAvailableEvent` メソッドは、それぞれ高さと幅で出力を返すようになりました。 表示縦横比は次のように計算できます。
 
       ```java
       SizeAvailableEvent e;
@@ -435,7 +435,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 
 **Android TVSDK 3.10**
 
-* ZD#40340 — すべてのTS(TypeScript)ファイルをブラックリストに含めた後に再生を試みると、「App Not Responding」エラーが発生してアプリケーションがクラッシュする。
+* ZD#40340 — すべてのTS(TypeScript)ファイルをブロックリストした後に再生を試みると、「App Not Respond」エラーが発生してアプリケーションがクラッシュする。
 
 **Android TVSDK 3.8**
 

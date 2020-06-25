@@ -2,9 +2,9 @@
 title: PTAI 19.11.1リリースノート
 description: PTAI 19.11.1のリリースノートでは、2019年のPrimetime Dynamic Ad Insertionでの新機能や変更点、解決済みおよび既知の問題について説明します。
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 369dc8d987f5d49467ec376d4df5ffc46ea6d36c
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1974'
 ht-degree: 0%
 
 ---

@@ -1,16 +1,22 @@
 ---
 title: Adobe Primetime APIリファレンス
 seo-title: Adobe Primetime APIリファレンス
-description: APIを使用すると、機能的なアプリケーションや統合を迅速かつ容易に作成できます。
-seo-description: APIを使用すると、機能的なアプリケーションや統合を迅速かつ容易に作成できます。
+description: APIを使用すると、機能的なアプリケーションや統合をすばやく簡単に作成できます。
+seo-description: APIを使用すると、機能的なアプリケーションや統合をすばやく簡単に作成できます。
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: b063235ed1eb27f537d4b311f2f07d7f5750206b
+source-git-commit: 1841f64e6f7a839f997b0710661898fda0d69bd6
+workflow-type: tm+mt
+source-wordcount: '345'
+ht-degree: 0%
 
 ---
 
 
 # Adobe Primetime APIリファレンス {#api-references}
+
++ TVSDK 3.12 {#tvsdk-312}
+   + [Android向けTVSDK 3.12](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)
 
 + TVSDK 3.11 {#tvsdk-311}
    + [Android向けTVSDK 3.11](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html)
@@ -49,5 +55,5 @@ source-git-commit: b063235ed1eb27f537d4b311f2f07d7f5750206b
 + その他 {#miscellaneous}
    + [ビデオハートビートライブラリ](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/index.html)
    + [DHPK 2.0 C++](https://help.adobe.com/en_US/primetime/api/psdk/psdk_doxygen/index.html)
-   + [2.4 Browser TVSDKのUIフレームワーク](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
-   + [PSDK FlashRuntime Public API](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls/)
+   + [2.4 Browser TVSDK用UIフレームワーク](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
+   + [PSDK FlashRuntimeパブリックAPI](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls/)

@@ -3,7 +3,7 @@ seo-title: 非SWFアプリケーションの許可リスト
 title: 非SWFアプリケーションの許可リスト
 uuid: d4f93b15-e556-4749-95ab-f7f58b1061d7
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 非SWFアプリケーションの許可リスト {#non-swf-application-allowlisting}
+# 非SWFアプリケーションの許可リスト {#non-swf-application-isting}
 
 AIRは、アプリケーションのリスト表示を特集した最初のプラットフォームで、SWF以外のアプリケーション（Adobe AIR、iOS、Androidなど）の許可リストに使用するプロパティの名前も は、元の名前を保持します。 `policy.allowedAIRApplication.n`. これにより、公開前に署名の証明書で署名されたFlash以外のすべてのアプリケーションでコンテンツを再生できます。 これを *アプリケーション IDと呼びます*。 アプリケーション IDは、この [!DNL AdobePublisherIDUtility.jar] ツールを使用して抽出できます。 これにより、Primetime DRMをサポートする任意のクライアントに対してリストが許可されます。
 

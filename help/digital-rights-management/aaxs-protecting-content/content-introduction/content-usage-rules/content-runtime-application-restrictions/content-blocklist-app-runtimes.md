@@ -3,7 +3,7 @@ seo-title: 保護されたコンテンツへのアクセスが制限されたア
 title: 保護されたコンテンツへのアクセスが制限されたアプリケーションの実行時のブロックリスト
 uuid: 462a2c09-b335-4768-bd0e-1359db169d69
 translation-type: tm+mt
-source-git-commit: fbc175f383c850a7286b1e6e89daa027e00b29ef
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -22,4 +22,3 @@ ht-degree: 0%
 | **属性** | **サポートされる値** | **一致条件** | **説明** |
 |---|---|---|---|
 | 申し込み | &quot;FlashPlayer&quot;、&quot;AIR&quot;、&quot;DRM_Library&quot;、&quot;AVE&quot; | 完全一致 | アプリケーションランタイムの名前を指定します。 |
-

@@ -5,15 +5,15 @@ seo-title: 信頼できるコンテンツパッケージャーの許可リスト
 title: 信頼できるコンテンツパッケージャーの許可リストの管理
 uuid: 9a132ef9-eb56-408a-939e-1acd32d83a33
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---
 
 
-# 信頼できるコンテンツパッケージャーの許可リストの管理{#maintain-a-allowlist-of-trusted-content-packagers}
+# 信頼できるコンテンツパッケージャーの許可リストの管理 {#maintain-a-allowlist-of-trusted-content-packagers}
 
 許可リストとは、信頼されたエンティティのリストです。
 

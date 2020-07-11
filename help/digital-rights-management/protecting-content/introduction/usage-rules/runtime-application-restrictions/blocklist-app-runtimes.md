@@ -5,7 +5,7 @@ seo-title: アプリケーションの実行時のブロックリスト
 title: アプリケーションの実行時のブロックリスト
 uuid: fc3c9bd6-b1e6-4534-b29c-cd9a35b80928
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# アプリケーションの実行時のブロックリスト{#blocklist-of-application-runtimes}
+# アプリケーションの実行時のブロックリスト {#blocklist-of-application-runtimes}
 
 アプリケーションランタイムのブロックリストは、コンテンツにアクセスできないPrimetimeクライアントまたはFlash Runtimeのバージョンを指定します。 制限付きランタイム（Flash Player、AIRまたはiOS）、プラットフォームおよびバージョンを指定します。
 

@@ -3,9 +3,9 @@ seo-title: カスタムDRMポリシーの作成（オプション）
 title: カスタムDRMポリシーの作成（オプション）
 uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # カスタムDRMポリシーの作成（オプション）{#create-custom-drm-policies-optional}
 
-Primetime Cloud DRM保護キットには、パッケージ化の際に使用できる事前設定済みのポリシーがいくつか付属しています。 特定のSWF許可リスト権限など、追加のポリシー設定が必要な場合は、含まれているPrimetime DRM Policy Managerを使用してカスタムポリシーを生成できます。
+Primetime Cloud DRM保護キットには、パッケージ化の際に使用できる事前設定済みのポリシーがいくつか付属しています。 特定のSWF許可リスト権限など、追加のポリシー設定が必要な場合は、含まれているPrimetime DRM Policy Managerを使用して、カスタムポリシーを生成できます。
 
 >[!NOTE]
 >

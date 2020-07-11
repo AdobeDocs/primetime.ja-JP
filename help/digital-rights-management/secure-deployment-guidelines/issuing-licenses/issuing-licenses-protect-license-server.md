@@ -5,9 +5,9 @@ seo-title: ライセンスサーバの保護
 title: ライセンスサーバの保護
 uuid: 7b5de17d-d0a7-41df-9651-4ff51c9965c6
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1200'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ DoS攻撃とは、攻撃者がサービスの正当なユーザーがそのサ�
 
 リプレイ保護の詳細については、AbstractRequestMessage.getMessageId()を参照してくだ [ さい](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId())。
 
-## 信頼できるコンテンツパッケージャーの許可リストの管理{#maintain-a-allowlist-of-trusted-content-packagers}
+## 信頼できるコンテンツパッケージャーの許可リストの管理 {#maintain-a-allowlist-of-trusted-content-packagers}
 
 許可リストとは、信頼されたエンティティのリストです。
 

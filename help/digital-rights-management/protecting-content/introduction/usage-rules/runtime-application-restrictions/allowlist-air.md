@@ -5,15 +5,15 @@ seo-title: 保護されたコンテンツの再生が許可されたPrimetime DR
 title: 保護されたコンテンツの再生が許可されたPrimetime DRMアプリケーションの許可リスト
 uuid: 23dd4faf-7992-4ee9-97ce-c6004ee995c2
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
 
 
-# 保護されたコンテンツの再生が許可されたPrimetime DRMアプリケーションの許可リスト{#allowlist-for-primetime-drm-applications-allowed-to-play-protected-content}
+# 保護されたコンテンツの再生が許可されたPrimetime DRMアプリケーションの許可リスト {#allowlist-for-primetime-drm-applications-allowed-to-play-protected-content}
 
 許可リストは、コンテンツの再生が許可されるAIR、iOS、Androidアプリケーションを指定します。 また、AIRおよびiOSアプリケーションID、最小バージョン、最大バージョン、発行者IDも指定します。
 
@@ -22,4 +22,3 @@ ht-degree: 0%
 >[!NOTE] {class=&quot;- topic/note &quot;
 >
 >Adobe Flash Builderを使用して保護されたアプリケーションを構築する場合は、アプリケーションをデバッグモードでデプロイしないようにする必要があります。 アプリケーションをデバッグモードでデプロイすると、Flash BuilderはAIRアプリケーション ID `.debug` に追加され、その後Primetime DRMの許可リスト機能が予期せず動作する原因となります。
-

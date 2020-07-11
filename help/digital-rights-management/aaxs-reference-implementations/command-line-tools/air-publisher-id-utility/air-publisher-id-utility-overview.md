@@ -3,9 +3,9 @@ seo-title: AIR Publisher IDユーティリティの概要
 title: AIR Publisher IDユーティリティの概要
 uuid: 31aecc0e-ad9b-43ad-ba58-77d2c999f4a4
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '146'
 ht-degree: 0%
 
 ---
@@ -18,4 +18,3 @@ AIRファイルの構築プロセスの一環として、AIR Developer Tool(ADT)
 >[!NOTE] {class=&quot;- topic/note &quot;
 >
 >AIR許可リストの適用に使用される発行者IDは、アプリケーションの [!DNL application.xml] ファイル内のアプリケーションの発行者が指定する発行者IDとは異なります。
-

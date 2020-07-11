@@ -5,7 +5,7 @@ seo-title: 概要
 title: 概要
 uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -43,4 +43,4 @@ SDKは、これらのタスクを達成するJava APIを提供し、ライセン
 
 カスタム使用ルールを指定します。 カスタムデータは、License Serverが発行するライセンスに含めることができます。 このデータの解釈/処理は、クライアントアプリケーションとライセンスサーバーの実装に完全に依存します。
 
-使用例： 使用ルールの拡張機能を有効にします。そのため、他のビジネスルールをポリシーおよび/またはコンテンツのライセンスの一部として安全に伝達できます。 セキュリティ上の理由から、これらの使用ルールはカスタムクライアントアプリケーションコードで適用されるので、この許可リストは、AIRアプリケーションまたはFlash Player SWFアプリケーションオプションと組み合わせて使用する必要があります。 詳しくは、「[ランタイムとアプリケーションの制限](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)」を参照してください。
+使用例： 使用ルールの拡張機能を有効にします。そのため、他のビジネスルールをポリシーおよび/またはコンテンツのライセンスの一部として安全に伝達できます。 セキュリティ上の理由から、これらの使用ルールはカスタムクライアントアプリケーションコードで適用されるので、この許可リストは、AIRアプリケーションまたはFlash Player SWFアプリケーションオプションと組み合わせて使用する必要があります。 詳しくは、「 [ランタイムとアプリケーションの制限](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)」を参照してください。

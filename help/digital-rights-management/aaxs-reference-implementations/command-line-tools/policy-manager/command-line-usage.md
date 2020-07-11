@@ -3,9 +3,9 @@ seo-title: コマンドラインの使用
 title: コマンドラインの使用
 uuid: e549a98e-b027-4472-8860-6aa1d56d4a8b
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -ldate日 </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">ライセンスキャッシュの終了日（サーバーがライセンスを発行した後、クライアントのLicense Storeにライセンスをキャッシュできない場合がある日付）。 yyyy-mm-dd <span class="+ topic/ph pr-d/codeph codeph"> または </span><i class="+ topic/ph hi-d/i "></i>yyyy-mm-dd-h24:min:secと指定しま<i class="+ topic/ph hi-d/i "></i><span class="+ topic/ph pr-d/codeph codeph"></span>す。 例えば、2008年12月1日の午前0時は、2008-12-1または2008-12-1-00:00:00と指定します。 無制限のライセンスキャッシュを行う場合は、 <span class="codeph"> -l </span> を使用し、分数を指定しません。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">ライセンスキャッシュの終了日（サーバーがライセンスを発行した後、クライアントのLicense Storeにライセンスをキャッシュできない場合がある日付）。 yyyy-mm-dd <span class="+ topic/ph pr-d/codeph codeph"> または </span><i class="+ topic/ph hi-d/i "></i><i class="+ topic/ph hi-d/i "> yyyy-mm-dd-h24:min:secと指定し </i><span class="+ topic/ph pr-d/codeph codeph"></span>ます。 例えば、2008年12月1日の午前0時は、2008-12-1または2008-12-1-00:00:00と指定します。 無制限のライセンスキャッシュを行う場合は、 <span class="codeph"> -l </span> を使用し、分数を指定しません。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -authNS </span> </td> 
@@ -92,7 +92,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">保護されたコンテンツの再生が許可されるAIRアプリケーションの許可リストです。 このポリシーで保護されたコンテンツにアクセスできる発行者、アプリケーションおよびバージョンを制限する場合に使用します。 </p> <p class="- topic/p ">appId <i class="+ topic/ph hi-d/i ">を指定しない場合</i> 、publisher <i class="+ topic/ph hi-d/i ">pubId</i> のすべてのアプリケーションが許可されます。 </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">最小</i> と <i class="+ topic/ph hi-d/i "></i> 最大のバージョン番号は省略可能です。 </p> <p class="- topic/p ">複数の <span class="codeph"> -air </span> オプションを指定して、複数のアプリケーションを使用できます。 AIRまたはSWFアプリケーションを指定しない場合、すべてのアプリケーションがこのコンテンツにアクセスする可能性があります。 更新時に、-airを残りの引数なしで使用し、リストからすべてのエントリを削除します。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">保護されたコンテンツの再生が許可されるAIRアプリケーションの許可リスト。 このポリシーで保護されたコンテンツにアクセスできる発行者、アプリケーションおよびバージョンを制限する場合に使用します。 </p> <p class="- topic/p ">appId <i class="+ topic/ph hi-d/i ">を指定しない場合</i> 、publisher <i class="+ topic/ph hi-d/i ">pubId</i> のすべてのアプリケーションが許可されます。 </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">最小</i> と <i class="+ topic/ph hi-d/i "></i> 最大のバージョン番号は省略可能です。 </p> <p class="- topic/p ">複数の <span class="codeph"> -air </span> オプションを指定して、複数のアプリケーションを使用できます。 AIRまたはSWFアプリケーションを指定しない場合、すべてのアプリケーションがこのコンテンツにアクセスする可能性があります。 更新時に、-airを残りの引数なしで使用し、リストからすべてのエントリを削除します。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmブラックリスト名 </span> /値 <i class="+ topic/ph hi-d/i ">のペア</i><span class="+ topic/ph pr-d/codeph codeph"> / </span><i class="+ topic/ph hi-d/i "></i><span class="+ topic/ph pr-d/codeph codeph"> 値 </span> </td> 

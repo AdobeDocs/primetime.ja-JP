@@ -1,9 +1,9 @@
 ---
-seo-title: SWFアプリケーションの許可リスト
-title: SWFアプリケーションの許可リスト
+seo-title: SWFアプリケーションでのリスト表示
+title: SWFアプリケーションでのリスト表示
 uuid: e3021ae9-54f4-4bcf-a274-515ae765f74b
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# SWFアプリケーションの許可リスト{#swf-application-allowlisting}
+# SWFアプリケーションでのリスト表示 {#swf-application-allowlisting}
 
 SWFアプリケーションを許可リストするには、次の2つの方法のいずれかに従います。
 

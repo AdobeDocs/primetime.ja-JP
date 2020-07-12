@@ -4,9 +4,9 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 8f8b9d167d7456968879edac847c51e6c9e1da3c
+source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Adobe Primetimeリリースノートへようこそ。 左側のナビゲーシ�
 
 Androidの現在のリリースバージョンについて詳しくは、 [Android](../release-notes/tvsdk-3x-android.md).を参照してください。
 
-## PTAI 20.6.1の機能強化および修正点
+## PTAI 20.7.1の機能強化および修正点
 
-このリリースでは、マニフェスト操作や、長い形式のVODアセットを使用してセッションキープアライブを維持するためのAPIの改善などの機能に焦点を当てています。 このリリースには、お客様の主な問題に対する修正が組み込まれています。
+このリリースでは、SCTE35の機能強化に焦点を当てており、X-ADBE-AI-X1 HTTP応答ヘッダーに情報が追加され、指標の集計が改善され、「セッション統計」パネルが改善されました。
 
 Dynamic Ad Insertionの現在のリリースバージョンについて詳しくは、 [PTAIリリースノートを参照してください](ptai-20x-release-notes.md)。
 

@@ -4,7 +4,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetimeリリースノート
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -15,8 +15,8 @@ ht-degree: 0%
 # Primetimeリリースノート {#release-notes}
 
 + [リリースノートの概要](home.md)
-+ Primetime動的広告の挿入 {#ptai}
-   + [PTAI 20.7.1リリースノート](ptai-20x-release-notes.md)
++ Primetime動的Ad Insertion {#ptai}
+   + [PTAI 20.8.1リリースノート](ptai-20x-release-notes.md)
    + [PTAI 19.11.1リリースノート](ptai-19x-release-notes.md)
 + TVSDK for iOS {#tvsdk-ios}
    + [TVSDK 3.12 iOS向けリリースノート](tvsdk-3x-ios.md)
@@ -36,5 +36,5 @@ ht-degree: 0%
    + [Primetime Streaming Serverバージョン1リリース](primetime-streaming-server-1x.md)
 + TVSDK for Playstation 4 {#tvsdk-playstation}
    + [TVSDK 2.1 PlayStation 4リリースノート](tvsdk-21-ps4.md)
-+ デジタル著作権管理 {#drm}
++ Digital Rights Management {#drm}
    + [DRM 5.3.1リリースノート](drm-531-release-notes.md)

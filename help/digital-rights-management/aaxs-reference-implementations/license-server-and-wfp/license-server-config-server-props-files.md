@@ -1,24 +1,27 @@
 ---
-seo-title: サーバープロパティファイル
-title: サーバープロパティファイル
+seo-title: サーバーのプロパティファイル
+title: サーバーのプロパティファイル
 uuid: 3d3a0ee3-009f-4d62-9587-7e487ecdcafd
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
-# サーバープロパティファイル {#server-properties-files}
+# サーバーのプロパティファイル {#server-properties-files}
 
-サーバーには、ライセンスサーバー用とパッケージャー用の2つの設定ファイルが必要です。 両方のファイルをクラスパスに配置する必要があります。 プロパティファイルには、アドビが発行した秘密鍵証明書の場所が含まれます。 これらの秘密鍵証明書は、.pfxファイルとパスワードとして指定するか、HSMに保存されている秘密鍵証明書のエイリアスとパスワードを指定します。
+サーバーには、ライセンスサーバー用とパッケージャー用の2つの設定ファイルが必要です。 両方のファイルをクラスパスに配置する必要があります。 プロパティファイルには、Adobeが発行する秘密鍵証明書の場所が含まれます。 これらの秘密鍵証明書は、.pfxファイルとパスワードとして指定するか、HSMに保存されている秘密鍵証明書のエイリアスとパスワードを指定して指定できます。
 
-各パラメーターの具体的な値と使用方法の詳細については、プロパティファイルを参照してください。 サンプルのプロパティファイルは、リファレンス実装の「resources」ディレクトリ(Reference Implementation\Server\resources)にあります。
+各パラメーターの具体的な値と使用方法の詳細については、プロパティファイルを参照してください。 サンプルのプロパティファイルは、リファレンス実装の「resources」ディレクトリ(リファレンスImplementation\Server\resources)にあります。
 
-秘密鍵証明書のパスワードを確実にセキュリティで保護するために、flashaccess-refimpl.propertiesまたはflashaccess-refimpl-packager.propertiesファイルにパスワードを入力する前に、パスワードを暗号化するツール(ScrambleUtil.class)が提供されます。
+秘密鍵証明書のパスワードをセキュリティで保護するために、flashaccess-refimpl.propertiesファイルまたはflashaccess-refimpl-packager.propertiesファイルに入力する前に、パスワードを暗号化するツール(ScrambleUtil.class)が提供されます。
 
 秘密鍵証明書のパスワードを適切に準備するには：
 
-1. に移動しま [!DNL Reference Implementation\Server\refimpl\scrambler]す。
+1. に移動し [!DNL Reference Implementation\Server\refimpl\scrambler]ます。
 1. コマンドプロンプトで、次のコマンドを入力します。
 
    ```
@@ -32,8 +35,8 @@ source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
    </i class="+ topic>
    ```
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->前述の例では、セミコロン(;)を区切り文字として使用しています。 Microsoft Windows以外のプラットフォームでは、コロン(:)を区切り文字として使用します。
+>前の例では、セミコロン(;)を区切り文字として使用しています。 Microsoft Windows以外のプラットフォームでは、区切り文字にコロン(:)を使用します。
 
-このユーティリティは、暗号化されたパスワードを出力します。このパスワードはファイルにコピーする必要が [!DNL .properties] あります。
+このユーティリティは、暗号化されたパスワードを出力します。このパスワードを [!DNL .properties] ファイルにコピーする必要があります。

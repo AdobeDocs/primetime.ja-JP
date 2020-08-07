@@ -1,24 +1,27 @@
 ---
-description: TVSDKアプリにFairPlay Streamingを実装するには、Resource Loaderを作成し、FairPlay Streamingサーバにライセンス取得要求を送信する必要があります。
-seo-description: TVSDKアプリにFairPlay Streamingを実装するには、Resource Loaderを作成し、FairPlay Streamingサーバにライセンス取得要求を送信する必要があります。
+description: TVSDKアプリにFairPlay Streamingを実装するには、Resource Loaderを作成する必要があります。このResource Loaderは、FairPlay Streamingサーバーにライセンス取得要求を送信します。
+seo-description: TVSDKアプリにFairPlay Streamingを実装するには、Resource Loaderを作成する必要があります。このResource Loaderは、FairPlay Streamingサーバーにライセンス取得要求を送信します。
 seo-title: TVSDKアプリケーションでのApple FairPlay
 title: TVSDKアプリケーションでのApple FairPlay
 uuid: 4384d379-37cd-46c5-8c25-0cda16bdebb8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
 
-# TVSDKアプリケーションでのApple FairPlay {#apple-fairplay-in-tvsdk-applications}
+# TVSDKアプリケーションでのApple FairPlay  {#apple-fairplay-in-tvsdk-applications}
 
-TVSDKアプリにFairPlay Streamingを実装するには、Resource Loaderを作成し、FairPlay Streamingサーバにライセンス取得要求を送信する必要があります。
+TVSDKアプリにFairPlay Streamingを実装するには、Resource Loaderを作成する必要があります。このResource Loaderは、FairPlay Streamingサーバーにライセンス取得要求を送信します。
 
-リソースローダーコードは、次のタスクを実行します。
+リソースローダーコードは、次のタスクを行います。
 
-1. ライセンス取得要求の送信先を指定します。
+1. ライセンス取得要求の送信先を決定します。
 1. リクエストをフォーマットします。
-1. サーバーに必要な情報を提供し、サーバーが要求を許可するかどうかを決定できるようにします。
+1. サーバーに必要な情報を提供して、サーバーが要求を許可するかどうかを決定できるようにします。
 
 例えば、ExpressPlayを利用したAdobeのPrimetime Cloud DRMを使用している場合、リソースローダーは次の宛先にリクエストを送信します。
 
@@ -26,19 +29,19 @@ TVSDKアプリにFairPlay Streamingを実装するには、Resource Loaderを作
 https://fp-gen.service.expressplay.com
 ```
 
-リソースローダーは、リクエストをフォーマットし、再生を許可するExpressPlayトークンをURLに添付します。 ExpressPlayトークンを取得する際には、考慮すべきオプションがいくつかあります。 これらのオプションは、コンテンツのパッケージ化方法によって決まります。
+リソースローダーはリクエストをフォーマットし、再生を許可するExpressPlayトークンをURLに添付します。 ExpressPlayトークンを取得する際には、考慮する必要のあるオプションがいくつかあります。 これらのオプションは、コンテンツのパッケージ化方法によって決まります。
 
-コンテンツをパッケージ化すると、M3U8マ `skd:` ニフェストにURLが挿入されます。 エントリ `skd:` の後に、任意のデータをマニフェストに含めることができます。 このデータをアプリケーションコードで使用して、上記のタスクを完了できます。 例えば、再生中のコンテ `skd:{content_id}` ンツのIDをアプリが特定できるように、を使用して、そのコンテンツの特定の部分のトークンをリクエストできます。 また、例えば、を使用して、エンタイトルメ `skd:{entitlement_server_url}?cid={content_id}`ントサーバーのURLをハードコードする必要がないようにすることもできます。
+コンテンツをパッケージ化すると、M3U8マニフェストに `skd:` URLが挿入されます。 エントリの後に、任意のデータをマニフェストに含めることがで `skd:` きます。 このデータをアプリケーションコードで使用して、上記のタスクを完了できます。 例えば、再生中のコンテンツのID `skd:{content_id}` をアプリが特定できるようにして、そのコンテンツの特定の部分のトークンをリクエストできます。 また、例えばを使用して、エンタイトルメントサーバーのURLをハードコードする必要がな `skd:{entitlement_server_url}?cid={content_id}`いようにすることもできます。
 
-再生が始まるときに、他のチャネルを通じてコンテンツIDが既にわかっている場合は、 `skd:` URLに情報が必要ないことがあります。 2つ目の例は、設定をテストする理想的なソリューションですが、実稼働環境でも使用できます。
+再生開始が他のチャネルで既にコンテンツIDを知っている場合は、 `skd:` URLに情報を必要としないことがあります。 2つ目の例は、設定をテストする理想的なソリューションですが、実稼働環境でも使用できます。
 
 >[!TIP]
 >
->の形式はユーザが決めま `skd:`す。
+>の形式はユーザが決定し `skd:`ます。
 
-コンテンツはプロトコルを使用して取得されま `skd:` すが、ライセンス要求ではが使用されま `https:`す。 これらのプロトコルを処理する最も一般的なオプションは、次のとおりです。
+コンテンツはプロトコルを使用して取得されますが、ライセンスリクエストには `skd:` が使用され `https:`ます。 これらのプロトコルを処理する最も一般的なオプションは次のとおりです。
 
-* **エンドツーエンド再生の初期テスト** ：コンテンツをパッケージ化する際に、 `skd:` URLを選択します。 アプリケーションをテストする場合は、ExpressPlayからライセンスを手動で取得し、ローダーのライセンス( `https:` URL)とコンテンツURLをハードコードします。
+* **エンドツーエンド再生の初期テスト** コンテンツをパッケージ化する場合は、 `skd:` URLを選択します。 アプリケーションをテストする場合は、ExpressPlayからライセンスを手動で取得し、ローダでライセンス( `https:` URL)とコンテンツURLをハードコードします。
 
    例：
 
@@ -50,7 +53,7 @@ https://fp-gen.service.expressplay.com
        ExpressPlayToken={copy_your_token_to_here}";
    ```
 
-* **その他のほとんどの場合** 、コンテンツをパッケージ化する場合は、コン `skd:` テンツのIDを一意に表すURLを選択します。 ローダで、URLを解析し、 `skd:` サーバに送信してトークンを取得し、結果のトークンをURLとして使用します。
+* **その他のほとんどの場合** 。コンテンツをパッケージ化する場合は、コンテンツのIDを一意に表す `skd:` URLを選択します。 ローダでURLを解析し、サーバに送信してトークンを取得し、生成されたトークンをURLとして使用します。 `skd:`
 
    例：
 
@@ -152,21 +155,21 @@ https://fp-gen.service.expressplay.com
 
 AppleのDRMソリューションであるApple FairPlay StreamingをTVSDKアプリケーションに実装できます。
 
-1. FairPlayカスタマーリソースローダーを作成するには、を実装しま `PTAVAssetResourceLoaderDelegate`す。
+1. FairPlay用のCustomer Resource Loaderは、を実装して作成し `PTAVAssetResourceLoaderDelegate`ます。
 
    詳しくは、TVSDKアプリケーションでの [Apple FairPlayを参照してください](../../../tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)。
 
    >[!NOTE]
    >
-   >『 *FairPlay Streaming Program Guide* ( *FairPlayStreaming_PG.pdf*)』(FPS対応アプリの開発用の [FairPlay Server SDKに含まれている)の手順に従ってください](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)。
+   >『 *FairPlay Streamingプログラムガイド* 』(FairPlayStreaming_PG.pdf *)の手順に従っていることを確認してください。この手順は、* FPS対応アプリケーション開発用の [](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)FairPlay Server SDKに含まれています。
 
-   この方 `resourceLoader:shouldWaitForLoadingOfRequestedResource` 法は、のと同じです `AVAssetResourceLoaderDelegate`。
+   この `resourceLoader:shouldWaitForLoadingOfRequestedResource` メソッドは、のメソッドと同じで `AVAssetResourceLoaderDelegate`す。
 
-   >[!IMPORTANT] {importance=&quot;high&quot;}
+   >[!IMPORTANT]
    >
-   >ExpressPlayライセンスサーバーシナリオでは、コンテンツを再生するには、ExpressPlay FairPlayサーバーライセンスリクエストURLのURLスキームをからに変 `skd://` 更(また `https://` は `https://`)します。
+   >ExpressPlayライセンスサーバーシナリオでは、コンテンツを再生するには、ExpressPlay FairPlayサーバーライセンスリクエストURLをからに変更し `skd://` ます(または `https://``https://`)。
 
-1. FairPlay Customer Resource Loader *をに登録します*`registerPTAVAssetResourceLoader`。
+1. FairPlay *Customer* Resource Loaderをに登録 `registerPTAVAssetResourceLoader`します。
 
    ```
    PTFairPlayResourceLoader *resourceLoader =  
@@ -175,4 +178,4 @@ AppleのDRMソリューションであるApple FairPlay StreamingをTVSDKアプ�
      registerPTAVAssetResourceLoader:resourceLoader];
    ```
 
-独自のFairPlayライセンスサーバーを作成した場合、またはサードパーティのFairPlayライセンスサーバーを使用している場合は、ライセンスサーバーのベンダーに問い合わせて、ライセンスサーバーのURL、形式、その他の要件を確認してください。
+独自のFairPlayライセンスサーバーを作成した場合、またはサードパーティのFairPlayライセンスサーバーを使用している場合は、ライセンスサーバーのURL、形式、その他の要件を判断するために、ライセンスサーバーのベンダーに問い合わせてください。

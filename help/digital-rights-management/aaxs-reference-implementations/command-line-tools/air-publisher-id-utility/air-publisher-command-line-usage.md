@@ -3,7 +3,10 @@ seo-title: コマンドラインの使用
 title: コマンドラインの使用
 uuid: 54b1e867-c6cc-4355-b8e6-a7ec910bd33d
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 0%
 
 ---
 
@@ -26,11 +29,11 @@ java -jar AdobePublisherIDUtility.jar
 ```
 
 * 
-   * `signaturefile`*は、アプリケーションディレクトリ内にあるAIRアプリケーションのsignatures.xmlファイルへのパスを指定しま [!DNL META-INF] す。
+   * `signaturefile`*は、applications [!DNL META-INF] ディレクトリ内にあるAIRアプリケーションのsignatures.xmlファイルへのパスを指定します。
 
-* `signingcert` airアプリケーションへの署名に使用する証明書を指定します
+* `signingcert` は、AIRアプリケーションへの署名に使用する証明書を指定します
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->iOSアプリケーションの発行者IDを特定するには、このオプションを使 `-s` 用し、iOSアプリケーションの署名に使用する証明書を指定します。 ***Adobe Primetimeは、アクセス保護されたコンテンツを再生できるiOSアプリケーションを構築するために必要です***。
+>iOSアプリケーションの発行者IDを特定するには、 `-s` オプションを使用し、iOSアプリケーションの署名に使用する証明書を指定します。 ***Adobe Primetimeは、アクセスで保護されたコンテンツを再生できるiOSアプリケーションを構築する必要があります***。
 

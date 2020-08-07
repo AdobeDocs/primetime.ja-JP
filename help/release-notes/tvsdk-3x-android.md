@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -28,8 +28,6 @@ Androidリファレンスプレイヤーは、Android TVSDKと共に、配布物
 >
 >1. https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases [からVideoHeartbeat.jarをダウンロードします](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) （Android v2.0.0用のVideoHeartbeatライブラリ）
 >1. libs/フォルダーにVideoHeartbeat.jarを抽出します。
->
-
 
 
 Android向けTVSDKは、以前のバージョンと比べて多くのパフォーマンスが向上しています。 高品質な視聴環境を提供し、マルチCDNのサポートを除き、バージョン1.4のすべての機能を搭載しています。
@@ -143,11 +141,11 @@ Android Studioを使用してReference Appをセットアップして実行す�
 
 * **TVSDK 3.0は、High Efficiency Video Coding(HEVC)ストリームをサポートしています。**
 
-* **ジャストインタイム — 広告マーカーに近い広告を解決する遅延広告**&#x200B;解決が、各広告の時間を個別に解決するようになりました。 以前は、広告の解決は2段階のアプローチでした。 プリロールは、再生開始の前に解決され、再生開始後に組み合わされたすべてのミッド/ポストロールスロットが解決されました。 この強化された機能を使用すると、広告キューポイントの前の特定の時間に各広告の時間が解決されるようになりました。
+* **ジャストインタイム — 広告マーカーに近い広告を解決する遅延広告**&#x200B;解決が、各広告の時間を個別に解決するようになりました。 以前は、広告の解決は2段階のアプローチでした。プリロールは、再生開始の前に解決され、再生開始後に組み合わされたすべてのミッド/ポストロールスロットが解決されました。 この強化された機能を使用すると、広告キューポイントの前の特定の時間に各広告の時間が解決されるようになりました。
 
-> [!NOTE]
+>[!NOTE]
 >
-> 遅延広告の解決は、デフォルトでオフになるように変更され、明示的に有効にする必要があります。
+>遅延広告の解決は、デフォルトでオフになるように変更され、明示的に有効にする必要があります。
 
 この広告メタデータに関連付けられ `AdvertisingMetadata::setDelayAdLoadingTolerance` ている遅延広告読み込みの許容値を取得するための新しいAPIが追加されました。\
 PREPARATIONの直後にシークが可能になり、広告の時間をシークすると、シークが完了する直前に解決されます。\
@@ -185,7 +183,7 @@ TVSDKは、必要に応じて、継続中のセグメントのダウンロード
 * **部分的な広告ブレークの挿入**
 
    部分的に視聴された広告のトラッキングを実行せずに、広告の途中に参加するTVのようなエクスペリエンス。\
-   例： 30秒の広告を3つ含む90秒の広告の時間の途中（40秒）にユーザーが参加します。 時間の2番目の広告から10秒経過します。
+   例：30秒の広告を3つ含む90秒の広告の時間の途中（40秒）にユーザーが参加します。 時間の2番目の広告から10秒経過します。
 
    * 2番目の広告は残りの時間（20秒）再生され、次に3番目の広告が続きます。
 
@@ -193,7 +191,7 @@ TVSDKは、必要に応じて、継続中のセグメントのダウンロード
 
 * **HTTPS経由のセキュアな広告読み込み**
 
-   Adobe Primetimeには、Primetime広告サーバーおよびCRS over httpsへの最初の呼び出しをリクエストするオプションが用意されています。
+   Adobe Primetimeには、https経由でPrimetime広告サーバーとCRSへの最初の呼び出しをリクエストするオプションが用意されています。
 
 * **CRSリクエストに追加されたAdSystemおよびCreative ID**
 
@@ -221,16 +219,16 @@ Android TVSDK v2.5.4オファーには、次の更新とAPIの変更が含まれ
 
 Android TVSDK v2.5.3オファーには、次の更新とAPIの変更が含まれています。
 
-* CRSを使用するTVSDKユーザーは、すべて、AndroidのTVSDK 2.5.3.85または最新のバージョンを使用して、アプリをアップグレードすることをお勧めします。 これは、既存のアプリの実装に対するドロップインの置き換えとなります。 TVSDKのアップグレード後、プロキシツールでCRSクリエイティブURLリクエストを確認します(例： Charlesを参照)、パス内のホスト名とバージョンが、以下のサンプルURL構造のように反映されていることを確認します。
+* CRSを使用するTVSDKユーザーは、すべて、AndroidのTVSDK 2.5.3.85または最新のバージョンを使用して、アプリをアップグレードすることをお勧めします。 これは、既存のアプリの実装に対するドロップインの置き換えとなります。 TVSDKのアップグレード後、プロキシツールでCRSクリエイティブURLリクエストを確認します(例：Charlesを参照)、パス内のホスト名とバージョンが、以下のサンプルURL構造のように反映されていることを確認します。
 
    `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
 
-* TVSDKのユーザーエージェントのカスタマイズ可能： ユーザーエージェントをカスタマイズする新しいAPIが追加されました。
+* TVSDKのユーザーエージェントのカスタマイズ可能：ユーザーエージェントをカスタマイズする新しいAPIが追加されました。
 
    * `setCustomUserAgent(String value)`
    * `getCustomUserAgent()`
 
-* AndroidアプリケーションとTVSDK間でCookieを共有する： Android TVSDKは、（AndroidアプリケーションのCookieStoreに保存される）JAVAレイヤーとC++ TVSDKレイヤーの間のcookieへのアクセスをサポートするようになりました。 これで、ネイティブC++レイヤーのcookieがJava Cookie Storeに公開されるので、cookieの設定や変更が可能になりました。
+* AndroidアプリケーションとTVSDK間でCookieを共有する：Android TVSDKは、（AndroidアプリケーションのCookieStoreに保存される）JAVAレイヤーとC++ TVSDKレイヤーの間のcookieへのアクセスをサポートするようになりました。 これで、ネイティブC++レイヤーのcookieがJava Cookie Storeに公開されるので、cookieの設定や変更が可能になりました。
 
 * APIの変更：
 
@@ -246,7 +244,7 @@ Android TVSDK v2.5.3オファーには、次の更新とAPIの変更が含まれ
 
 * 変更点 `SizeAvailableEvent`。 以前は、2.5.2の `getHeight()` および `getWidth()``SizeAvailableEvent` メソッドは、メディア形式で返されたフレームの高さとフレームの幅を返すのに使用されていました。 現在は、デコーダーが返す出力の高さと出力の幅を返します。
 
-* バッファリング動作の変更： バッファリング動作が変更されました。 バッファーが空の場合の処理をアプリケーション開発者に任せます。 2.5.3は、バッファーが空の場合に再生バッファーサイズを使用します。
+* バッファリング動作の変更：バッファリング動作が変更されました。 バッファーが空の場合の処理をアプリケーション開発者に任せます。 2.5.3は、バッファーが空の場合に再生バッファーサイズを使用します。
 
 **バージョン2.5.2**
 
@@ -277,9 +275,9 @@ TVSDKは、接続を開くと、サーバーに *キープアライブ接続を�
 
 * **MP4コンテンツ再生 —** MP4短いクリップは、TVSDK内で再生するために再トランスコードする必要はありません。
 
-   > [!NOTE]
+   >[!NOTE]
    >
-   > ABRの切り替え、トリック再生、広告挿入、遅延オーディオバインディングおよびサブセグメントは、MP4再生ではサポートされません。
+   >ABRの切り替え、トリック再生、広告挿入、遅延オーディオバインディングおよびサブセグメントは、MP4再生ではサポートされません。
 
 * **可変ビットレート(ABR)を使用したトリック再生 —** この機能を使用すると、トリック再生モード中にTVSDKがiFrameストリームを切り替えることができます。 iFrame以外のプロファイルを使用して、低速でトリック再生を行うことができます。
 
@@ -295,8 +293,9 @@ TVSDKは、接続を開くと、サーバーに *キープアライブ接続を�
 
 * **ワークフローのサポート**
 
-   * **ダイレクト請求の統合 —** これは、請求指標をAdobeAnalyticsバックエンドに送信します。バックエンドは、Adobe Primetimeによって、お客様が使用するストリームに対して認証されています。
-   TVSDKは、顧客の販売契約に従って自動的に指標を収集し、課金の目的で必要な定期的な使用状況レポートを生成します。 TVSDKは、すべてのストリーム開始イベントで、AdobeAnalyticsデータ挿入APIを使用して、請求対象ストリームの長さに基づくコンテンツタイプ、広告挿入有効フラグ、drm有効フラグなどの請求指標をAdobeAnalytics Primetimeが所有するレポートスイートに送信します。 これは、お客様が所有するAdobeAnalyticsレポートスイートやサーバーコールに影響を与えたり、含めたりすることはありません。 リクエストに応じて、この請求の使用状況レポートが定期的に顧客に送信されます。 これは、利用状況の請求のみをサポートする請求機能の最初のフェーズです。 ドキュメントで説明されているAPIを使用して、販売契約に基づいて設定できます。 この機能はデフォルトで有効になっています。 この機能をオフにするには、リファレンスプレイヤーのサンプルを参照してください。
+   * **直接請求の統合 —** これは、請求指標をAdobe Analyticsバックエンドに送信します。バックエンドは、Adobe Primetimeによって、お客様が使用するストリームに関して認定されています。
+
+   TVSDKは、顧客の販売契約に従って自動的に指標を収集し、課金の目的で必要な定期的な使用状況レポートを生成します。 TVSDKは、すべてのストリーム開始イベントで、Adobe Analyticsデータ挿入APIを使用して、コンテンツタイプ、広告挿入有効フラグ、drm有効フラグなどの請求指標（請求対象ストリームの長さに基づく）をAdobe AnalyticsPrimetimeが所有するレポートスイートに送信します。 これは、お客様独自のAdobe Analyticsレポートスイートやサーバーコールに影響を与えたり、含めたりすることはありません。 リクエストに応じて、この請求の使用状況レポートが定期的に顧客に送信されます。 これは、利用状況の請求のみをサポートする請求機能の最初のフェーズです。 ドキュメントで説明されているAPIを使用して、販売契約に基づいて設定できます。 この機能はデフォルトで有効になっています。 この機能をオフにするには、リファレンスプレイヤーのサンプルを参照してください。
 
    * **フェイルオーバーのサポートの強化 —** ホストサーバー、プレイリストファイル、セグメントに障害が発生した場合でも中断されない再生を継続するために実装された追加の戦略。
 
@@ -307,9 +306,9 @@ TVSDKは、接続を開くと、サーバーに *キープアライブ接続を�
 
    * **コンパニオンバナー —** Companion Bannerはリニア広告と共に表示され、多くの場合、広告が終了しても表示に引き続き表示されます。 これらのバナーは、html（HTMLスニペット）またはiframe（iframeページのURL）のタイプにすることができます。
 
-* **Analytics**
+* **解析**
 
-   * **VHL 2.0 -** これは、AdobeAnalytics用の使用データの自動収集のための、最新の最適化されたビデオハートビートライブラリ(VHL)統合です。 APIの複雑さが減少し、導入が容易になりました。 Android用VHLライブラリ [v2.0.0をダウンロードし](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) 、libsフォルダーにJARファイルを抽出します。
+   * **VHL 2.0 -** これは、Adobe Analyticsの使用データの自動収集のための、最新の最適化されたビデオハートビートライブラリ(VHL)統合です。 APIの複雑さが減少し、導入が容易になりました。 Android用VHLライブラリ [v2.0.0をダウンロードし](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) 、libsフォルダーにJARファイルを抽出します。
 
 * **SizeAvalableEventListener**
 
@@ -414,7 +413,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 
 | 機能 | コンテンツタイプ | HLS |
 |---|---|---|
-| AdobeAnalyticsVHL統合 | VOD + Live | Y |
+| Adobe AnalyticsVHL統合 | VOD + Live | Y |
 | 請求 | VOD + Live | Y |
 
 ## 解決された問題 {#resolved-issues}
@@ -527,7 +526,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 
    * &lt;VAST version =&quot;2.0&quot;>のように「等号」記号の前に「スペース」がある場合に問題が再現される、XML解析での問題の処理により、以前の修正を強化しました。
 
-* ZD #29296 - Android: CRS追加リクエストに対するAdSystemおよびクリエイティブID。
+* ZD #29296 - Android:CRS追加リクエストに対するAdSystemおよびクリエイティブID。
 
    * 1401および1403のリクエストに、新しいパラメーターとして「AdSystem」および「CreativeId」が追加されました。
 
@@ -543,7 +542,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 
    * クラッシュが発生しないようにシナリオを修正しました。
 
-* ZD #32256 — ライセンスのローテーションとキーのローテーションに関する問題 — Adobe Access
+* ZD #32256 — ライセンスのローテーションとキーのローテーションに関する問題 —Adobeアクセス
 
    * SampleAESコンテンツのDRMメタデータを使用したセグメントの初期化を修正しました。 AES128コンテンツで正常に機能します。
 
@@ -604,7 +603,7 @@ WebViewDebuggingはデフォルトでFalseに設定されています。 デバ�
 * Zendesk#32369 — クローズドキャプションに、異なる色のガベージまたは加工品が表示されます。
 
    最新のビルドで、CCの問題が修正されました
-* Zendesk#25590 - Enhance: TVSDKのCookieストア（C++からJAVA）
+* Zendesk#25590 - Enhance:TVSDKのCookieストア（C++からJAVA）
 
    Android TVSDKは、（AndroidアプリケーションのCookieStoreに保存される）JAVAレイヤーとC++ TVSDKレイヤーの間のcookieへのアクセスをサポートするようになりました。
 * Zendesk#32252 - TVSDK_Android_2.5.2.12には、PTPLAY-20269の修正がないようです。
@@ -622,7 +621,7 @@ WebViewDebuggingはデフォルトでFalseに設定されています。 デバ�
 * Zendesk#32794- 1080P解像度ストリームがAndroidで再生されない
 
    2.5では、SizeAvailableEventメソッドとPreviouslyメソッドが変更され、フレームの高さとフレームの幅を返すために使用されるSizeAvailableEventのgetHeight()メソッドとgetWidth()メソッドが変更されました。これはメディア形式で返されます。 デコーダーが返す出力の高さと出力の幅を返すようになりました。
-* Zendesk #19359セットレベルマニフェスト内の#EXT-X-FAXS-CM属性の位置が原因で、Flash Playerがクラッシュする。
+* 設定レベルのマニフェストでの#EXT-X-FAXS-CM属性の位置が原因で、Zendesk #19359Flash Playerがクラッシュする。
 
    #EXT-X-FAXS-CMタグは、個々のビットレートまたはセグメントがプレイリストに表示される前に、常に最上位のプレイリストに表示される必要があります。
 
@@ -640,7 +639,7 @@ WebViewDebuggingはデフォルトでFalseに設定されています。 デバ�
 
    ユーザーエージェント文字列は、128文字以降で切り捨てられなくなります。
 
-   Adobe Primetimeバージョン文字列がシステムユーザーエージェントに追加されます。
+   Adobe Primetime版の文字列がシステムユーザーエージェントに追加されます。
 
 * Zendesk #30809 SEEK_ENDイベントが見つからないため、アプリは再生中の状態に移行できません。
 * Zendesk #30415クローズドキャプションの「シアン」カラーが、以前のPrimetime TVSDKリリースと比較して、より濃い青（青緑色）になりました。
@@ -653,7 +652,7 @@ WebViewDebuggingはデフォルトでFalseに設定されています。 デバ�
 
 **Android TVSDK 2.5.1**
 
-* デバイス固有(Samsung Galaxy Tab 4)のクラッシュ。 AuditudeのVOD DRM LBAを使用し、広告をクリックします。
+* デバイス固有(Samsung Galaxy Tab 4)のクラッシュ。AuditudeのVOD DRM LBAを使用し、広告をクリックします。
 * VHL — オフセットからコンテンツを開始する際に、正しくないハートビート呼び出しが送信されます。
 * VPAID広告が再生されるとき、イベント:type:play広告に対するVHLハートビート呼び出しが見つかりません。
 * プレイヤーは、完了ステータスになった後、ポストロール広告に対してはSKIP adBreakPolicyを使用してPLAYINGステータスに戻ります。
@@ -759,4 +758,4 @@ WebViewDebuggingはデフォルトでFalseに設定されています。 デバ�
 * [TVSDK Android C++ APIドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) — 各Javaクラスには対応するC++クラスがあり、C++ドキュメントにはJavadocsよりも詳しい説明が記載されています。Java APIについて詳しくは、C++のドキュメントを参照してください。
 * [Android向けTVSDK 1.4から2.5(Java)への移行ガイド](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
 * 画面のオン/オフシナリオの処理については、ビルドに含まれる `Application_Changes_for_Screen_On_Off.pdf` ファイルを参照してください。
-* Adobe Primetimeのラーニングとサポートの [ページで、完全なヘルプドキュメントを参照してください](https://helpx.adobe.com/support/primetime.html) 。
+* 「 [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html) 」ページのヘルプドキュメントを参照してください。

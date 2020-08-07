@@ -1,26 +1,29 @@
 ---
-description: Adobe Primetime DRM Serverで保護されたストリーミングアプリケーション用に生成されたログファイルは、LicenseServer.LogRootで指定されたディレクトリにあります。
-seo-description: Adobe Primetime DRM Serverで保護されたストリーミングアプリケーション用に生成されたログファイルは、LicenseServer.LogRootで指定されたディレクトリにあります。
+description: 保護されたストリーミングアプリケーション用のAdobe PrimetimeDRMサーバーによって生成されるログファイルは、LicenseServer.LogRootで指定されたディレクトリにあります。
+seo-description: 保護されたストリーミングアプリケーション用のAdobe PrimetimeDRMサーバーによって生成されるログファイルは、LicenseServer.LogRootで指定されたディレクトリにあります。
 seo-title: ログファイル
 title: ログファイル
 uuid: 4498fe60-65af-4f99-8f9b-e85013d0c9e9
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '213'
+ht-degree: 0%
 
 ---
 
 
 # ログファイル{#log-files}
 
-Adobe Primetime DRM Serverで保護されたストリーミングアプリケーション用に生成されたログファイルは、LicenseServer.LogRootで指定されたディレクトリにあります。
+保護されたストリーミングアプリケーション用のAdobe PrimetimeDRMサーバーによって生成されるログファイルは、LicenseServer.LogRootで指定されたディレクトリにあります。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->サーバーの実行中に現在のログファイルが削除または移動された場合、ログファイルは再作成できない場合があります。 そのため、一部のログ情報は削除される場合があります。
+>サーバーの実行中に現在のログファイルを削除または移動した場合、ログファイルは再作成できない場合があります。 したがって、一部のログ情報は削除される場合があります。
 
-## ログディレクトリの構造 {#section_F490A483D60145ADBC21038914C39203}
+## ログディレクトリ構造 {#section_F490A483D60145ADBC21038914C39203}
 
-ログディレクトリは、使いやすさを考慮した構造になっています。 ログディレクトリの構造は次のとおりです。
+ログディレクトリは使いやすいように構造化されています。 ログディレクトリの構造は次のとおりです。
 
 ```
 <i class="+ topic ph hi-d="" i "="">
@@ -39,12 +42,12 @@ Adobe Primetime DRM Serverで保護されたストリーミングアプリケー
 
 ## グローバルログファイル {#section_1CFA90748142439C9F3BE380969539DA}
 
-グローバルログファイル [!DNL flashaccess-global.log]は、 *LicenseServer.LogRootにあります*。 ログには、Adobe Primetime DRM Java SDKを使用したログメッセージや、サーバーの初期化時に生成されたログメッセージが含まれる場合があります。
+グローバルログファイル [!DNL flashaccess-global.log]は、LicenseServer.LogRootにあり *ます*。 ログには、サーバーが初期化された際に、Adobe PrimetimeDRM Java SDKまたはログメッセージで生成されたログメッセージが含まれる場合があります。
 
 ## パーティションログファイル {#section_5660137CD6AA40519E72A4315534846B}
 
-パーティション・ログ・ファ [!DNL flashaccess-partition.log]イルは、ディレクトリ内にあ [!DNL <LicenseServer.LogRoot>/flashaccesserver] ります。 ライセンス要求の処理中に生成されたログメッセージが含まれます。
+パーティションログファイル [!DNL flashaccess-partition.log]は、 [!DNL <LicenseServer.LogRoot>/flashaccesserver] ディレクトリ内にあります。 これには、ライセンス要求の処理中に生成されたログメッセージが含まれます。
 
 ## テナントログファイル {#section_F0257CC0831647F18A746B4F02E3E910}
 
-各テナントのテナントログフ [!DNL flashaccess-tenant.log]ァイルは、 [!DNL &lt;LicenseServer.LogRoot>/flashaccesserver/tenants/にあります。<tenantname>]. テナントログには、このテナントに対して生成された各ライセンスを説明する監査情報が含まれます。
+各テナントのテナントログファイル [!DNL flashaccess-tenant.log]は、 [!DNL &lt;LicenseServer.LogRoot>/flashaccessserver/tenants/にあります。<tenantname>]. テナントログには、このテナント用に生成された各ライセンスを説明する監査情報が含まれます。

@@ -3,16 +3,19 @@ seo-title: ファイアウォール規則
 title: ファイアウォール規則
 uuid: a5667030-c4d0-42e3-b56e-20a12c903954
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
 
 
 # ファイアウォール規則 {#firewall-rules}
 
-## 受信URL {#section-F111526A9DB844CBBF21A3CAE5F50880}
+## 着信URL {#section-F111526A9DB844CBBF21A3CAE5F50880}
 
-エンドユーザーに提供するアプリケーション機能のURLのみを公開するように、外側のファイアウォールを設定します。 外部ユーザーが外部ファイアウォールを介してアクセスできるように、次の表に示すURLのみを許可します。
+エンドユーザーに提供するアプリケーション機能のURLのみを公開するように、外側のファイアウォールを設定します。 外部ユーザーが外部ファイアウォールを経由して次の表に示すURLのみにアクセスできるようにします。
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-bqs-whz-n4"> 
  <thead class="- topic/thead "> 
@@ -34,7 +37,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
      <li id="li-ED3C15EB4D194FFE99954BDB7D5C1E41"><span class="filepath"> /flashaccess/authn/v4/*</span> </li> 
      <li id="li-4DD6CBBE939F4E6EABA474E3DCCBD893"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">ユーザー認証のURL。 このURLは、Adobe Access Client APIを使用してユーザー認証を実行する場合にのみアクセス可能である必要があります。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">ユーザー認証用のURL。 このURLは、AdobeアクセスクライアントAPIを使用してユーザー認証を実行する場合にのみアクセスできます。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -53,7 +56,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
      <li id="li-B333B85FFE8A46DD884595B0A620B4EE"><span class="filepath"> /flashaccess/sync/v4</span> </li> 
      <li id="li-E4771D3C5AA5454CA1EDCFAA3E027CC1"><span class="filepath"> /flashaccess/sync/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">同期要求のURL。 このURLは、ライセンスで同期要件を指定した場合にのみアクセスできる必要があります。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">同期要求のURL。 このURLは、ライセンスで同期要件を指定した場合にのみアクセスできます。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -62,7 +65,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
      <li id="li-40F0952F09674CA3B9AAFB5A62F9D02E"><span class="filepath"> /flashaccess/domain/v4</span> </li> 
      <li id="li-3ADE44B959B548F8A31A6FF08537AF46"><span class="filepath"> /flashaccess/domain/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">ドメイン登録用のURL。 このURLは、ドメインサポートを実装している場合にのみアクセス可能である必要があります。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">ドメイン登録用のURL。 このURLは、ドメインのサポートを実装している場合にのみアクセス可能である必要があります。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -75,28 +78,28 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">FMRMS 1.x DRMメタデータをAdobe Access DRMメタデータに変換するためにクライアントが使用するURL。 </p> <p class="- topic/p ">注意：このURL <i class="+ topic/ph hi-d/i ">はSSL(HTTPS)を使用する必要があります</i>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">クライアントがFMRMS 1.x DRMメタデータをAdobeアクセスDRMメタデータに変換するために使用するURL。 </p> <p class="- topic/p ">注意： <i class="+ topic/ph hi-d/i ">このURLはSSL(HTTPS)を使用する必要があります</i>。 </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES WebサービスのURL。 コンテンツが以前のバージョンのFMRMSを使用して公開された場合、このURLを使用すると、古いクライアントがサーバーに接続し、Adobe Accessにアップグレードするように求められます。 </p> <p class="- topic/p ">注意：このURL <i class="+ topic/ph hi-d/i ">はSSL(HTTPS)を使用する必要があります</i>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ESWebサービスのURL。 コンテンツが以前のバージョンのFMRMSを使用して公開された場合、このURLを使用すると、古いクライアントがAdobeに接続でき、サーバーアクセスにアップグレードするように求められます。 </p> <p class="- topic/p ">注意： <i class="+ topic/ph hi-d/i ">このURLはSSL(HTTPS)を使用する必要があります</i>。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>ライセンスの返却URL。 URLは、ライセンス返却サポートを実装している場合にのみアクセス可能である必要があります。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>ライセンス返却用のURL。 URLは、ライセンスリターンサポートを実装している場合にのみアクセス可能にする必要があります。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->内部ファイアウォールでは、リバースプロキシ経由で、上記のURLに対してのみAdobe Accessライセンスサーバーへの接続を許可する必要があります。 スケーラビリティを向上させるために、リバースプロキシとAdobe Accessの間の接続はHTTP経由で行われます。
+>内部ファイアウォールでは、リバースプロキシ経由でのAdobeアクセスライセンスサーバーへの接続と、上記のURLへの接続のみを許可する必要があります。 スケーラビリティを向上させるために、リバースプロキシとAdobeアクセス間の接続はHTTP経由で行われます。
 
 ## 送信URL {#section-FFF9F7BB353149F4A27F8788E9934A48}
 
-ライセンスサーバーは、次のCRLをアドビからダウンロードするために、ファイアウォールを介したアクセスを必要とします。
+ライセンスサーバーは、Adobeから次のCRLをダウンロードするために、ファイアウォール経由でのアクセスを必要とします。
 
-* https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl<span></span>
-* https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl<span></span>
-* https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl<span></span>
-* https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl<span></span>
+* <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
+* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
+* <span></span>https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
+* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl

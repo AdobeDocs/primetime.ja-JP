@@ -1,18 +1,21 @@
 ---
-description: Password Scramblerユーティリティは、保護されたストリーミング設定ファイル用のAdobe Primetime DRMサーバーのパスワードを暗号化します。
-seo-description: Password Scramblerユーティリティは、保護されたストリーミング設定ファイル用のAdobe Primetime DRMサーバーのパスワードを暗号化します。
+description: Password Scramblerユーティリティは、保護されたストリーミング設定ファイル用のAdobe PrimetimeDRMサーバのパスワードを暗号化します。
+seo-description: Password Scramblerユーティリティは、保護されたストリーミング設定ファイル用のAdobe PrimetimeDRMサーバのパスワードを暗号化します。
 seo-title: パスワードスクランブラ
 title: パスワードスクランブラ
 uuid: 56df0f49-f3fd-464d-b4ba-25e1b497158a
 translation-type: tm+mt
-source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 0%
 
 ---
 
 
 # パスワードスクランブラ {#password-scrambler}
 
-Password Scramblerユーティリティは、保護されたストリーミング設定ファイル用のAdobe Primetime DRMサーバーのパスワードを暗号化します。
+Password Scramblerユーティリティは、保護されたストリーミング設定ファイル用のAdobe PrimetimeDRMサーバのパスワードを暗号化します。
 
 スクランブラを実行するには、次のように入力します。
 
@@ -41,8 +44,8 @@ Encrypted password:
 </i class="+ topic>
 ```
 
-とファイルで指定したすべてのパスワード [!DNL flashaccess-global.xml] は暗号 [!DNL flashaccess-tenant.xml] 化する必要があります。
+とファイルで指定したパスワードはすべて暗号化 [!DNL flashaccess-global.xml] する必要があり [!DNL flashaccess-tenant.xml] ます。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->Primetime DRM ServerのPassword Scramblerユーティリティ（Protected Streaming用）は、リファレンス実装ライセンスサーバに付属のスクランブラと交換できません。
+>Primetime DRM Server for Protected StreamingのPassword Scramblerユーティリティは、リファレンス実装ライセンスサーバーに付属のスクランブラと交換できません。

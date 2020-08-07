@@ -5,7 +5,10 @@ seo-title: WARNING通知コード
 title: WARNING通知コード
 uuid: da1a561d-3b9a-468a-a24a-7b6fa62aa2e8
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 <!--<a id="section_F25366B6703040E3ADA993C113618F01"></a>-->
 
-ほとんどの警告には、ダウンロードに失敗したリソースのURLなど、関連するメタデータが含まれます。 一部の通知には、問題が発生したのがメインビデオコンテンツ、代替オーディオコンテンツ、広告のどちらであったかを指定するメタデータが含まれています。
+ほとんどの警告には、関連するメタデータ（ダウンロードに失敗したリソースのURLなど）が含まれています。 一部の通知には、問題が発生したのがメインビデオコンテンツ、代替オーディオコンテンツ、広告のどちらであるかを指定するメタデータが含まれています。
 
 <table frame="all" colsep="1" rowsep="1" id="table_C24772DF203B4DB2ACE6B475698C4C58"> 
  <thead> 
@@ -61,8 +64,8 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
    <td colname="1"><span class="codeph"> 204000 </span> </td> 
    <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_WARNING</span> </td> 
    <td colname="3"> <p>なし </p> </td> 
-   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_ERROR</span> <span class="codeph"> BACKGROUND_MANIFEST_WARNING_NAME</span><span class="codeph"> DESCRIPTION</span> </td> 
-   <td colname="5"> <p> バックグラウンドマニフェストのダウンロード中にエラーが発生しました。 バックグラウンドマニフェストの更新に関する問題は、TVSDKの警告としてディスパッチされ、再生が停止することはありません。 </p> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_ERROR</span><span class="codeph"> BACKGROUND_MANIFEST_WARNING_NAME</span><span class="codeph"> DESCRIPTION</span> </td> 
+   <td colname="5"> <p> バックグラウンドマニフェストのダウンロードでエラーが発生しました。 バックグラウンドマニフェストの更新に関する問題は、TVSDKの警告としてディスパッチされ、再生が停止することはありません。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 204001 </span> </td> 
@@ -83,7 +86,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
    <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES </span> </td> 
    <td colname="3"> <p>なし </p> </td> 
    <td colname="4"> なし </td> 
-   <td colname="5"> 広告シグナリングモードは、カスタム範囲として定義されていますが、定義された範囲はありません。 </td> 
+   <td colname="5"> 広告シグナリングモードは、カスタム範囲として定義されますが、範囲が定義されていません。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 210001 </span> </td> 
@@ -118,7 +121,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
    <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING </span> </td> 
    <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
    <td colname="4"> <p>なし </p> </td> 
-   <td colname="5"> <p>広告にオーディオ専用ストリームが含まれていない </p> </td> 
+   <td colname="5"> <p>広告にオーディオ専用ストリームが含まれていません </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270003 </span> </td> 
@@ -136,23 +139,23 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270006 </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_WARNING </span> </td> 
+   <td colname="2"><span class="codeph"> SITECATALYST_警告 </span> </td> 
    <td colname="3"> <p>なし </p> </td> 
    <td colname="4"><span class="codeph"> 説明 </span> </td> 
-   <td colname="5"> <p>警告：sitecatalystの警告の説明を参照してください。 </p> </td> 
+   <td colname="5"> <p>警告：sitecatalyst警告の説明を参照してください。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270007 </span> </td> 
    <td colname="2"><span class="codeph"> NETWORK_ERROR </span> </td> 
    <td colname="3"> <p>なし </p> </td> 
    <td colname="4"><span class="codeph"> URL </span> </td> 
-   <td colname="5"> <p>ネットワークからデータを取得中にエラーが発生しました。 </p> </td> 
+   <td colname="5"> <p>ネットワークからのデータ取得中にエラーが発生しました。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->adIDとソース(URL)は、キーを持つ通知メタデータのPTAdAssetを通じて取得でき `AD_ASSET` ます。
+>adIDとソース(URL)は、 `AD_ASSET` キーを持つ通知メタデータのPTAdAssetを介して取得できます。
 >
->属性は、 [] 通知用のオプションのキーを指定します。
+>この [] 属性は、通知のオプションのキーを指定します。

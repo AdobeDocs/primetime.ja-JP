@@ -1,22 +1,25 @@
 ---
-description: 'ファイアウォール規則を決定する際には、次の種類のURLを考慮してください '
-seo-description: 'ファイアウォール規則を決定する際には、次の種類のURLを考慮してください '
+description: 'ファイアウォールの規則を決定する際には、次の種類のURLを考慮してください '
+seo-description: 'ファイアウォールの規則を決定する際には、次の種類のURLを考慮してください '
 seo-title: ファイアウォール規則
 title: ファイアウォール規則
 uuid: 309b35b5-8c0a-4cd7-9289-b6b035955697
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '383'
+ht-degree: 0%
 
 ---
 
 
 # ファイアウォール規則 {#firewall-rules}
 
-ファイアウォール規則を決定する際には、次の種類のURLを考慮してください。
+ファイアウォールの規則を決定する際には、次の種類のURLを考慮してください。
 
-## 受信URL {#section_F111526A9DB844CBBF21A3CAE5F50880}
+## 着信URL {#section_F111526A9DB844CBBF21A3CAE5F50880}
 
-外側のファイアウォールを設定して、エンドユーザーに提供するアプリケーション機能のURLのみを公開するようにできます。
+外側のファイアウォールは、エンドユーザーに提供するアプリケーション機能のURLのみを公開するように設定できます。
 
 外部ユーザーは、外部ファイアウォールを使用して次のURLにアクセスできます。
 
@@ -41,7 +44,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
      <li id="li_01B2E17BF4DB456383FD6E18E9DE28F5"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
      <li id="li_096D349CCD7945B387CB80C3E99063C7"><span class="filepath"> /flashaccess/authn/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">ユーザーを認証する場合。 </p> <p>Adobe Primetime DRM Client APIを使用してユーザー認証を行う場合は、このURLにアクセスできる必要があります。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">ユーザを認証する。 </p> <p>ユーザー認証にAdobe PrimetimeDRMクライアントAPIを使用する場合は、このURLにアクセスできる必要があります。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -72,7 +75,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
      <li id="li_CF7590FDAF694EDF9685434BE8EE10CA"><span class="filepath"> /flashaccess/domain/v5</span> </li> 
      <li id="li_CA73424FDFAA4BD8BBE2C1AD165D2C31"><span class="filepath"> /flashaccess/domain/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">ドメインを登録する場合。 </p> <p>ドメインサポートを実装する場合は、このURLにアクセスできる必要があります。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">ドメインを登録する場合。 </p> <p>ドメインのサポートを実装している場合は、このURLにアクセスできる必要があります。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -82,7 +85,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
      <li id="li_C761F14F3C97479CBA5C255739E01A28"><span class="filepath"> /flashaccess/dereg/v5</span> </li> 
      <li id="li_23A8AABE7499488EB61B7ED27CC65098"><span class="filepath"> /flashaccess/dereg/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">ドメインの登録を解除する場合。 </p> <p>ドメインサポートを実装する場合は、このURLにアクセスできる必要があります。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">ドメインの登録を解除する場合。 </p> <p>ドメインのサポートを実装している場合は、このURLにアクセスできる必要があります。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
@@ -90,7 +93,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES WebサービスのURL。 コンテンツが以前のバージョンのFMRMSを使用して公開されている場合、このURLを使用すると、古いクライアントがサーバーに接続できます。 これらのクライアントは、Adobe Primetime DRMにアップグレードするように求められます。 </p> <p class="- topic/p ">注意：このURLはSSL(HTTPS)を使用する必要があります。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ESWebサービスのURL。 コンテンツが以前のバージョンのFMRMSを使用して公開されている場合、このURLを使用すると、古いクライアントがサーバーに接続できます。 これらのクライアントは、Adobe PrimetimeDRMにアップグレードするように求められます。 </p> <p class="- topic/p ">注意：このURLはSSL(HTTPS)を使用する必要があります。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> 
@@ -98,20 +101,20 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
      <li id="li_24B4D42BECF8405281C73B782F8E7310"><span class="filepath"> /flashaccess/lreturn/v5</span> </li> 
      <li id="li_6B79563205D1421F89131E650D71E83B"><span class="filepath"> /flashaccess/lreturn/v6</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p>ライセンスを返却する場合。 </p> <p> ライセンス返却サポートを実装する場合は、URLにアクセスできる必要があります。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>ライセンスを返却する。 </p> <p> ライセンスの返却サポートを実装している場合は、URLにアクセスできる必要があります。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->内部ファイアウォールは、リバースプロキシ経由でのPrimetime DRMライセンスサーバーへの接続のみを許可し、テーブル内のURLへの接続のみを許可する必要があります。 スケーラビリティを向上させるには、HTTPを使用して、リバースプロキシとPrimetime DRMの間の接続を行います。
+>内部ファイアウォールでは、リバースプロキシ経由でのPrimetime DRMライセンスサーバーへの接続のみを許可し、テーブル内のURLへの接続のみを許可する必要があります。 スケーラビリティを向上させるには、リバースプロキシとPrimetime DRMの間の接続にHTTPを使用します。
 
 ## 送信URL {#section_FFF9F7BB353149F4A27F8788E9934A48}
 
-送信URLを使用すると、ライセンスサーバーはアドビからCRLをダウンロードできます。
+送信URLを使用すると、ライセンスサーバーはAdobeからCRLをダウンロードできます。
 
-使用できる送信URLの一覧を次に示します。
+使用できる送信URLのリストを次に示します。
 
 * `https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl`
 * `https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl`

@@ -3,9 +3,9 @@ seo-title: 概要
 title: 概要
 uuid: f45c6b58-53c5-41e0-be3d-590231dd214a
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ AIRファイルを構築すると、AIR Developer Tool(ADT)によって自動的
 
 発行者IDは、AIRファイルの作成に使用する証明書に固有です。 同じ証明書を複数のAIRアプリケーションに再利用する場合、すべてのAIRアプリケーションで同じPublisher IDが使用されます。 リリース1.5.2に成功したAIRリリースでは、生成された発行者IDはファイルに追加されません。 したがって、AIRアプリケーション許可リストを使用する場合は、このツールを使用して発行者IDを決定します。
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >AIR許可リストの適用に使用される発行者IDは、アプリケーションの発行者がアプリケーションの [!DNL application.xml] ファイルで指定する発行者IDとは異なります。
 

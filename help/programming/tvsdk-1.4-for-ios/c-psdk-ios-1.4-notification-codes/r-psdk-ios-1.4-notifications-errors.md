@@ -1,29 +1,32 @@
 ---
-description: 次の表に、ERRORタイプ通知の詳細を示します。
-seo-description: 次の表に、ERRORタイプ通知の詳細を示します。
+description: 次の表に、ERRORタイプ通知に関する詳細情報を示します。
+seo-description: 次の表に、ERRORタイプ通知に関する詳細情報を示します。
 seo-title: ERROR通知コード
 title: ERROR通知コード
 uuid: cea75277-7747-4f9b-ad59-98f9f1a5ac2f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 5%
 
 ---
 
 
 # ERROR通知コード{#error-notification-codes}
 
-次の表に、ERRORタイプ通知の詳細を示します。
+次の表に、ERRORタイプ通知に関する詳細情報を示します。
 
 <!--<a id="section_D29404228F5E4B818642CBA6A0D39546"></a>-->
 
-ほとんどのエラーには、ダウンロードに失敗したリソースのURLなど、関連するメタデータが含まれます。 一部の通知には、問題が発生したのがメインビデオコンテンツ、代替オーディオコンテンツ、広告のどちらであったかを指定するメタデータが含まれています。
+ほとんどのエラーには、関連するメタデータ（ダウンロードに失敗したリソースのURLなど）が含まれます。 一部の通知には、問題が発生したのがメインビデオコンテンツ、代替オーディオコンテンツ、広告のどちらであるかを指定するメタデータが含まれています。
 
 <table frame="all" colsep="1" rowsep="1" id="table_8B61210A406A45ACBE37FC29729DDE22"> 
  <thead> 
   <tr rowsep="1"> 
    <th colname="1" class="entry"> コード </th> 
    <th colname="2" class="entry"> 名前 </th> 
-   <th colname="3" class="entry"> InnerNotification </th> 
+   <th colname="3" class="entry"> 内部通知 </th> 
    <th colname="4" class="entry"> メタデータキー </th> 
    <th colname="5" class="entry"> コメント </th> 
   </tr> 
@@ -119,11 +122,11 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="2"><span class="codeph"> AD_INSERTION_FAIL </span> </td> 
    <td colname="3"> <span class="codeph"> AD_NOT_INSERTED </span> </td> 
    <td colname="4"> <p>なし </p> </td> 
-   <td colname="5"> <p>広告解決フェーズが失敗しました。 </p> </td> 
+   <td colname="5"> <p>広告解決フェーズに失敗しました。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 104006 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_UNREACHABLE </span> </td> 
+   <td colname="2"><span class="codeph"> AD_未到達 </span> </td> 
    <td colname="3"> なし </td> 
    <td colname="4"> なし </td> 
    <td colname="5"> </td> 
@@ -140,7 +143,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="2"><span class="codeph"> NATIVE_ERROR </span> </td> 
    <td colname="3"> なし </td> 
    <td colname="4"> <span class="codeph"> INTERNAL_ERROR </span> </td> 
-   <td colname="5"> <p>低レベルのiOSエラーが発生しました。 </p> </td> 
+   <td colname="5"> <p>低レベルiOSエラーが発生しました。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>設定</b> </td> 
@@ -175,7 +178,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="2"><span class="codeph"> AD_HLS_VERSION_INCOMPATIBLE </span> </td> 
    <td colname="3"> なし </td> 
    <td colname="4"> <span class="codeph"> AD_ASSET</span> </td> 
-   <td colname="5"> <p>広告のHLSバージョンは、コンテンツのHLSバージョンよりも高くなります。 </p> </td> 
+   <td colname="5"> <p>広告のHLSバージョンが、コンテンツのHLSバージョンより高くなっています。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170001 </span> </td> 
@@ -203,21 +206,21 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="2"><span class="codeph"> HLS_SEGMENT_ERROR </span> </td> 
    <td colname="3"> なし </td> 
    <td colname="4"><span class="codeph"> 説明 </span><span class="codeph"> URL </span><span class="codeph"> INTERNAL_ERROR </span> </td> 
-   <td colname="5"> <p>セグメントがバリアントの指定された帯域幅を超えています。 </p> </td> 
+   <td colname="5"> <p>セグメントが、バリアントの指定された帯域幅を超えています。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170005 </span> </td> 
    <td colname="2"><span class="codeph"> MBR_MEDIASEQUENCE_OFFSYNC </span> </td> 
    <td colname="3"> なし </td> 
    <td colname="4"> なし </td> 
-   <td colname="5"> <p>このMBRのすべてのHLSストリームでメディアシーケンス番号が同期されていません。 </p> </td> 
+   <td colname="5"> <p>メディアシーケンス番号が、このMBRのすべてのHLSストリームで同期されていません。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170006 </span> </td> 
    <td colname="2"><span class="codeph"> MISSING_FILE_ERROR </span> </td> 
    <td colname="3"> なし </td> 
    <td colname="4"><span class="codeph"> 説明 </span><span class="codeph"> URL </span><span class="codeph"> INTERNAL_ERROR </span> </td> 
-   <td colname="5"> <p>ファイルが見つからないか、応答がありません。 </p> <p>HTTP 404:ファイルが見つかりません。 </p> </td> 
+   <td colname="5"> <p>ファイルがないか、応答がありません。 </p> <p>HTTP 404:ファイルが見つかりません。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170007 </span> </td> 
@@ -242,19 +245,21 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170010 </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_ERROR </span> </td> 
+   <td colname="2"><span class="codeph"> SITECATALYST_エラー </span> </td> 
    <td colname="3"> なし </td> 
    <td colname="4"><span class="codeph"> 説明 </span> </td> 
-   <td colname="5"> <p>SiteCatalystエラー。 説明を参照してください。 </p> </td> 
+   <td colname="5"> <p>SiteCatalystエラー。 「説明」を参照してください。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170011 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_TARGET_DURATION_INCOMPATIBLE </span> </td> 
+   <td colname="2"><span class="codeph"> AD_ターゲット_DURATION_INCOMPATIBLE </span> </td> 
    <td colname="3"> なし </td> 
    <td colname="4"> <span class="codeph"> AD_ASSET</span> </td> 
-   <td colname="5"> <p>広告のTARGET DURATIONが、コンテンツのTARGET DURATIONよりも高くなっています。 </p> </td> 
+   <td colname="5"> <p>広告のターゲットDURATIONが、コンテンツのターゲットDURATIONよりも高くなっています。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
->[!NOTE] adIDとソース(URL)は、キーを使用して通知メタデ `PTAdAsset` ータ内のを通じて取得で `AD_ASSET` きます。
+>[!NOTE]
+>
+>adIDとソース(URL)は、通知メタデータ `PTAdAsset` 内のを通じて、 `AD_ASSET` キーと共に取得できます。

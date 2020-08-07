@@ -3,9 +3,9 @@ seo-title: 保護されたストリーミング用のDRMサーバーの実行
 title: 保護されたストリーミング用のDRMサーバーの実行
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 保護されたストリーミング用のDRMサーバーの実行 {#running-the-drm-server-for-protected-streaming}
 
-保護されたストリーミング用のAdobe Primetime DRMサーバーを開始する前に、設定ファイルの設定の有効性を確認することをお勧めします。
+保護ストリーミング用のAdobe PrimetimeDRMサーバーを開始する前に、設定ファイルの設定の有効性を確認することをお勧めします。
 
 ライセンスサーバーに付属のユーティリティを使用して、設定の有効性を確認できます。 (このガイドの *設定バリデーター* を参照してください。
 
@@ -23,9 +23,9 @@ Tomcatとライセンスサーバを開始する場合は、を実行する [!DN
 
 ## ログファイル {#log-files}
 
-Adobe Primetime DRM Serverで保護されたストリーミングアプリケーション用に生成されるログファイルは、LicenseServer.LogRootで指定されたディレクトリにあります。
+保護されたストリーミングアプリケーション用のAdobe PrimetimeDRMサーバーによって生成されるログファイルは、LicenseServer.LogRootで指定されたディレクトリにあります。
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >サーバーの実行中に現在のログファイルを削除または移動した場合、ログファイルは再作成できない場合があります。 したがって、一部のログ情報は削除される場合があります。
 
@@ -50,7 +50,7 @@ Adobe Primetime DRM Serverで保護されたストリーミングアプリケー
 
 ### グローバルログファイル {#section_1CFA90748142439C9F3BE380969539DA}
 
-グローバルログファイル [!DNL flashaccess-global.log]は、LicenseServer.LogRootにあり *ます*。 ログには、Adobe Primetime DRM Java SDKやログメッセージが生成されたログメッセージが含まれる場合があります。ログメッセージは、サーバーが初期化された時間に生成されたものです。
+グローバルログファイル [!DNL flashaccess-global.log]は、LicenseServer.LogRootにあり *ます*。 ログには、サーバーが初期化された際に、Adobe PrimetimeDRM Java SDKまたはログメッセージで生成されたログメッセージが含まれる場合があります。
 
 ### パーティションログファイル {#section_5660137CD6AA40519E72A4315534846B}
 

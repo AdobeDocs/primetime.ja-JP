@@ -5,21 +5,24 @@ seo-title: サーバープロパティファイルのパスワードの準備
 title: サーバープロパティファイルのパスワードの準備
 uuid: 3e00ba9b-b692-4713-8306-5ab896461f2a
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 
 # サーバープロパティファイルのパスワードの準備{#prepare-passwords-for-the-server-properties-files}
 
-参照実装は、秘密鍵 `ScrambleUtil.class`証明書のパスワードをセキュリティで保護するクラスを提供します。
+参照実装は、秘密鍵証明書 `ScrambleUtil.class`のパスワードをセキュリティで保証するクラスを提供します。
 
-このツールを使用して、パスワードを暗号化してからファイルに含め [!DNL flashaccess-refimpl.properties] ます。
+このツールを使用して、パスワードを [!DNL flashaccess-refimpl.properties] ファイルに含める前に暗号化します。
 
-ツールを実行するには、AntスクリプトまたはJavaを使用できます。
+ツールを実行するには、AntスクリプトまたはJavaスクリプトを使用できます。
 
-このユーティリティは、暗号化されたパスワードを生成します。このパスワードはファイルにコピーする必要が [!DNL flashaccess-refimpl.properties] あります。
+暗号化されたパスワードはユーティリティによって生成され、 [!DNL flashaccess-refimpl.properties] ファイルにコピーする必要があります。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->参照実装で提供されたを使用してエ `ScrambleUtil.class` ンコードされたパスワードは、保護されたストリーミング用のPrimetime DRMサーバーでは機能しません。
+>参照実装で指定されたパスワードを使用 `ScrambleUtil.class` してエンコードされたパスワードは、保護されたストリーミング用のPrimetime DRMサーバーでは機能しません。

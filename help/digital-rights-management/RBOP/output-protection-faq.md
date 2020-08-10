@@ -5,9 +5,9 @@ seo-title: RBOP FAQ
 title: RBOP FAQ
 uuid: 7dcd337c-369a-474c-8768-409c48b5cee5
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: fa9e89dd63c8b4c9d6eee78258957cfd30c29088
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 解像度ベースの出力保護の使用に関するよくある質問(FAQ)です。
 
-* **Q.** ピクセル制約のデジタル出力要件を定義する *とき、HDCPバージョンを残しても、HDCP要件がないと解析/フォーマットエラーが発生します。 この場合、デジタル出力要件はどのように設定する必要がありますか。* **A.** HDCPバージョンチェックは現在クライアントではサポートされていないので、HDCPバージョンをに設定することをお勧めし `1.0`ます。 これにより、HDCPのバージョンチェックがサポートされる場合、設定が正しくフォーマットされ、セマンティック上の一貫性が確保されます。 次のスニペットは、このHDCP値の設定を示しています。
+* **Q.** ピクセル制約のデジタル出力要件を定義する *とき、HDCPバージョンを残しても、HDCP要件がないと解析/フォーマットエラーが発生します。 この場合、デジタル出力要件はどのように設定する必要がありますか。* **A.** HDCPバージョンチェックは現在クライアントではサポートされていないので、AdobeではHDCPバージョンをに設定することをお勧めし `1.0`ます。 これにより、HDCPのバージョンチェックがサポートされる場合、設定が正しくフォーマットされ、セマンティック上の一貫性が確保されます。 次のスニペットは、このHDCP値の設定を示しています。
 
    ```
    { "pixelConstraints":  
@@ -41,13 +41,14 @@ ht-degree: 0%
 
    * 720P - HDCPが必要
    * 480P - OPなし
+
    次のルールが各バリアントに適用されます。
 
    **ストリーム：**
 
-   * 240、480: どちらも&lt;= 480; OPは不要で、HDCPが存在するかどうかにかかわらず、ストリームが読み込まれます。
-   * 600, 720: どちらも&lt;= 720; 再生にはHDCPが必要です
-   * 1080: > 720; ストリームが上記のルールに見つからないので、ブロックリスト（エラーが返されます）に表示されます。
+   * 240、480:どちらも&lt;= 480;OPは不要で、HDCPが存在するかどうかにかかわらず、ストリームが読み込まれます。
+   * 600, 720:どちらも&lt;= 720;再生にはHDCPが必要です
+   * 1080:> 720;ストリームが上記のルールに見つからないので、ブロックリスト（エラーが返されます）に表示されます。
 
 
 * **Q.** Androidデバイスの一部で、定義したピクセル数制限が、定義したとおりに適用されていません。 何が起きてる？
@@ -56,18 +57,27 @@ ht-degree: 0%
 
    ```
    { 
-       "maxPixel":  
-   
-<b>800</b>,&quot;pixelConstraints&quot;: [{ &quot;pixelCount&quot;:\
-<b>532</b>,&quot;digital&quot;: [{&quot;output&quot;: &quot;必須&quot;, &quot;hdcp&quot;:{&quot;major&quot;: 1,&quot;minor&quot;: 0}}],&quot;analog&quot;: {&quot;output&quot;: &quot;必須&quot;}},...
+       "maxPixel": 800, 
+       "pixelConstraints": [ 
+           { "pixelCount": 532, 
+             "digital": [{"output": "REQUIRED", "hdcp":{"major": 1,"minor": 0}}], 
+             "analog": {"output": "REQUIRED"} 
+           }, 
+   ... 
+   ```
 
-```
-to: 
-```
-{&quot;maxPixel&quot;:\
-<b>820</b>,&quot;pixelConstraints&quot;: [{ &quot;pixelCount&quot;:\
-<b>552</b>,&quot;digital&quot;: [{&quot;output&quot;: &quot;必須&quot;, &quot;hdcp&quot;:{&quot;major&quot;: 1,&quot;minor&quot;: 0}}],&quot;analog&quot;: {&quot;output&quot;: &quot;必須&quot;}},...
+   終了：
 
-```
-throughout, for all instances of `maxPixel` and `pixelCount`.
+   ```
+   { 
+       "maxPixel": 820, 
+       "pixelConstraints": [ 
+           { "pixelCount": 552, 
+             "digital": [{"output": "REQUIRED", "hdcp":{"major": 1,"minor": 0}}], 
+             "analog": {"output": "REQUIRED"} 
+           }, 
+   ... 
+   ```
+
+   全体、およ `maxPixel` びのすべてのインスタンス `pixelCount`に対して
 

@@ -9,9 +9,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: f1ebc1a8-185a-493a-9c00-a6102dffb128
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
 workflow-type: tm+mt
-source-wordcount: '7913'
+source-wordcount: '7830'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Android向けTVSDK 1.4リリースノートでは、TVSDK Android 1.4の新機�
 
 **HTTPS経由のセキュアな広告読み込み**
 
-Adobe Primetimeには、Primetime広告サーバーおよびCRS over HTTPSへの最初の呼び出しをリクエストするオプションが用意されています。
+Adobe Primetimeには、Primetime広告サーバーとCRS over HTTPSへの最初の呼び出しをリクエストするオプションが用意されています。
 
 **alwaysUseAudioOutputLatency(boolean val) in MediaPlayerクラス**
 
@@ -37,9 +37,8 @@ Adobe Primetimeには、Primetime広告サーバーおよびCRS over HTTPSへの
 
 **バージョン1.4.42**
 
-**Partial Ad-Break Insertion:**
-部分的に視聴された広告のトラッキングを実行せずに、広告の途中に参加するTVのようなエクスペリエンス。
-例： 30秒の広告を3つ含む90秒の広告の時間の途中（40秒）にユーザーが参加します。 時間の2番目の広告から10秒経過します。
+**Partial Ad-Break Insertion:**部分的に視聴された広告のトラッキングを実行せずに、広告の途中に参加するTVのようなエクスペリエンス。
+例：30秒の広告を3つ含む90秒の広告の時間の途中（40秒）にユーザーが参加します。 時間の2番目の広告から10秒経過します。
 * 2番目の広告は残りの時間（20秒）再生され、次に3番目の広告が続きます。
 * 部分的な広告再生（2番目の広告）用の広告トラッカーは起動されません。 3番目の広告のみのトラッカーが起動されます。
 
@@ -92,19 +91,19 @@ AndroidでのContent Skipのバグ修正。
 
 * **ネットワーク広告情報**
 
-   TVSDK APIは、サードパーティのVAST応答に関する追加情報を提供するようになりました。 広告ID、Ad SystemおよびVAST広告拡張は、広告アセットのnetworkAdInfoプロパティを通じてアクセスできるNetworkAdInfoクラスで提供されます。 この情報は、 **堀Analyticsなど、他の広告Analyticsプラットフォームとの統合に利用できる**。
+   TVSDK APIは、サードパーティのVAST応答に関する追加情報を提供するようになりました。 広告ID、Ad SystemおよびVAST広告拡張は、広告アセットのnetworkAdInfoプロパティを通じてアクセスできるNetworkAdInfoクラスで提供されます。 この情報は、 **Mort Analyticsなどの他のAd Analyticsプラットフォームとの統合に使用できます**。
 
 **バージョン1.4.31**
 
 **CRS広告のマルチCDNのサポート**
-* デフォルトでは、すべてのトランスコードされたアセットは、Akamaiのアドビ所有のCDNでホストされます。 最新のリリースのAdobe Creative Repackaging Service(CRS)では、トランスコードされたクリエイティブを、お客様が指定する複数のCDNにアップロードできます。
+* デフォルトでは、すべてのトランスコードされたアセットは、AkamaiのAdobe所有のCDNでホストされます。 最新のリリースでは、AdobeCreative Repackaging Service(CRS)を使用して、トランスコードされたクリエイティブを、お客様の指定に従って複数のCDNにアップロードできます。
 * 新しいAPIがTVSDKに追加され、デフォルトURLが使用されない場合に、最終的なCRSクリエイティブURLを指定できるようになりました。 これらの新しいAPIの使用方法については、ドキュメントを参照してください。
 
 **バージョン1.4.18** Primetime Android TVSDKでは、VPAID 2.0 Javascriptクリエイティブがサポートされ、リッチインタラクティブなインストリーム広告エクスペリエンスが有効になりました。 VPAID 2.0について詳しくは、VPAID広告のサポートを参照して [ください](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-vpaid-ads.md)。
 
 **バージョン1.4.17**
 
-AC-3 5.1はAmazon FireTVでのみサポートされます。
+AC-3 5.1は、AmazonFireTVでのみサポートされています。
 
 **バージョン1.4.11**
 
@@ -118,17 +117,17 @@ AC-3 5.1はAmazon FireTVでのみサポートされます。
 
 **バージョン1.4.7**
 
-* **オンプレミス個別化の**&#x200B;サポートAdobe Indivalization Serverのオンプレミスインストールのサポートを追加しました。クライアントの個別化リクエストをカスタマイズして、別のエンドポイントに移動します。
+* **オンプレミス個別化の**&#x200B;サポートAdobe個別化サーバーのオンプレミスインストールのサポートを追加しました。クライアントの個別化要求をカスタマイズして、別のエンドポイントに移動します。
 
 **バージョン1.4.6**
 
-* **サンプルのAES暗号化（Flash Playerバージョン17.0.0.134が必要）**サンプルベースのAES暗号化がサポートされるようになりました。
+* **AES暗号化のサンプル(Flash Playerバージョン17.0.0.134が必要)**サンプルベースのAES暗号化がサポートされるようになりました。
 
 **バージョン1.4.2**
 
 * **バージョン1.4.0.1へのビデオハートビートライブラリ(VHL)の更新**
 
-   * 他のSDKやプレーヤーから、様々な解析使用例をAdobe Video Essentialsにバンドルする機能が追加されました。
+   * 他のSDKやプレーヤーから、Adobe Analyticsビデオエッセンシャルに様々な解析使用例をバンドルする機能が追加されました。
    * 広告トラッキングは、trackAdBreakStartおよびtrackAdBreakCompleteメソッドを削除することで最適化されました。 広告の時間は、trackAdStartメソッド呼び出しとtrackAdCompleteメソッド呼び出しから推論されます。
    * 広告を追跡する際に、再生ヘッドのプロパティは不要になりました。
 
@@ -143,24 +142,26 @@ AC-3 5.1はAmazon FireTVでのみサポートされます。
 * インターフェイスPlaybackEventListenerには、onReplaceMediaPlayerItemという新しいイベントがあり、これを使用して新しいメソッドをリッスンでき `ITEM_REPLACED`ます。 このイベントは、MediaPlayeritemインスタンスがMediaPlayerで置き換えられるたびにディスパッチされます。 このPlaybackEventListenerを実装するクライアントアプリケーションは、この新しいメソッドを実装するか、上書きする必要があります。
 * AdClientFactoryには、複数のオポチュニティディテクターに登録するための新しい関数がクラスに追加されています。
 
-   publicリスト&lt;PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem item);
-
-   例えば、初期の広告出口機能の場合、2つのオポチュニティディテクター（広告挿入用と早期終了用）が必要 `ad`です。
-
-   この新しい関数を上書きするには、Opportunity Detectorを1つ作成し、配列に配置して返します。
-
+   ```
+   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem item);
+   
+   For example for early ad exit feature, you need two Opportunity Detectors - one for ad insertion and another for  early  exit from  `ad`.
+   
+   To override this new function create a single Opportunity Detector, and put into an array and return:
+   
    @Override
-
-   publicリスト&lt;PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
-
-   リスト&lt;PlacementOpportunityDetector> opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector>();
-
+   
+   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
+   
+   List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();
+   
    opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
-
+   
    return opportunityDetectors;
-}
-
    }
+   
+   }
+   ```
 
 ## TVSDK 1.4の変更点 {#tvsdk-changes}
 
@@ -168,17 +169,20 @@ AC-3 5.1はAmazon FireTVでのみサポートされます。
 
 * AdClientFactoryには、複数のオポチュニティディテクターに登録するための新しい関数がクラスに追加されています。
 
-publicリスト`<PlacementOpportunityDetector>` createOpportunityDetectors(MediaPlayerItem item);
+```
+public List`<PlacementOpportunityDetector>` createOpportunityDetectors(MediaPlayerItem item);
+```
 
 例えば、初期の広告出口機能の場合、2つのオポチュニティディテクターが必要です。1つは広告挿入用、もう1つは広告から早期に出口するためです。
 
 この新しい関数を上書きするには、Opportunity Detectorを1つ作成し、配列に配置して返します。
 
+```
 @Override
 
-publicリスト`<PlacementOpportunityDetector>` createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
+public List`<PlacementOpportunityDetector>` createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
 
-リスト`<PlacementOpportunityDetector>` opportunityDetectors = new ArrayList`<PlacementOpportunityDetector>`();
+List`<PlacementOpportunityDetector>` opportunityDetectors = new ArrayList`<PlacementOpportunityDetector>`();
 
 opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
 
@@ -187,6 +191,7 @@ return opportunityDetectors;
 }
 
 }
+```
 
 ## 1.4でのデバイス認定とサポート {#device-certification-and-support-in}
 
@@ -208,7 +213,7 @@ TVSDK 1.4.43は、Android 6.0.1/7.0および8.1(Oreo)を搭載したAndroidデ�
 
 * **バージョン1.4.18:**
 
-   * PrimetimeはAmazon Fire TVの認定を受けています。
+   * PrimetimeはAmazonファイアテレビの認定を受けている。
    * VPAID 2.0は、Android 4.0以降を搭載したデバイスでのみサポートされます。
 
 ## 1.4で解決された問題 {#resolved-issues-in}
@@ -227,7 +232,7 @@ TVSDK 1.4.43は、Android 6.0.1/7.0および8.1(Oreo)を搭載したAndroidデ�
 
 * チケット#33902 - HTTPSを介したセキュア広告配信
 
-   * Adobe Primetimeには、Primetime広告サーバーおよびCRS over httpsへの最初の呼び出しをリクエストするオプションが用意されています。
+   * Adobe Primetimeには、https経由でPrimetime広告サーバーとCRSへの最初の呼び出しをリクエストするオプションが用意されています。
 
 * チケット#34493 - Bluetoothオーディオ遅延
 
@@ -237,25 +242,25 @@ TVSDK 1.4.43は、Android 6.0.1/7.0および8.1(Oreo)を搭載したAndroidデ�
 
 **バージョン1.4.42 (1791)**
 
-* ゼンデスク#33719: FireTV 4kアダプティブビットレートのスケールが遅くなります。 FireTV 4Kデバイス用のABRサポートを追加しました。
-* ゼンデスク#33338:  resetDRMは、アプリケーションのすべてのデータをクリアします。  非TVSDKスレッドで例外が発生し、TVSDK操作キューがいっぱいになるという追加のケースを処理しました。
+* ゼンデスク#33719:FireTV 4kアダプティブビットレートのスケールが遅くなります。 FireTV 4Kデバイス用のABRサポートを追加しました。
+* ゼンデスク#33338: resetDRMは、アプリケーションのすべてのデータをクリアします。  非TVSDKスレッドで例外が発生し、TVSDK操作キューがいっぱいになるという追加のケースを処理しました。
 
 **バージョン1.4.41 (1776)**
 
 * Zendesk #33002 - Fire TVのTVSDKのコンパニオンアセットデータ。 コンパニオンデータをリスト&lt;AdBannerAsset>として返す新しいクラスAdBannerAssetを実装し、AdAsset::idは、現在はlongではなくStringです。
 * Zendesk #32821 - WWEのプレゼンテーションタイムスタンプ(PTS)が検出されると、Android Primetimeプレイヤーがフリーズします。 この問題は、このリリースで修正されました。
 * Zendesk #33572 - VideoAnalyticsProvider広告開始のクラッシュ。 VideoHeartbeat.jarのVHLとNielsenの適切な組み合わせを使用して、この問題を修正しました。
-* Zendesk #33355 - Fire TV: 15秒後に戻す。 TVSDK側およびお客様が、エンドパーティおよびサードパーティでこのことを検証しているわけではありません。
+* Zendesk #33355 - Fire TV:15秒後に戻す。 TVSDK側およびお客様が、エンドパーティおよびサードパーティでこのことを検証しているわけではありません。
 
 **バージョン1.4.40 (1764)**
 
-* Zendesk #33068 — 新しいデバイスでのAmazonのリップ同期の問題。 リップ同期の問題は、このリリースで修正されました。
+* Zendesk #33068 — 新しいデバイスでのAmazonのリップシンクの問題。 リップ同期の問題は、このリリースで修正されました。
 * Zendesk #32215 - Android TVSDK 1.4.38セキュリティに関する問題 `[Hotlist]`。 最新のOpenSSL-1.1.0およびcurl-7.55.1に更新されました。
-* Zendesk #32920 — 広告の時間内に空白の画面。広告の時間は完了しません。 VPAIDコンテナがハング状態になり、Facebook VPAID広告が1つの\&amp;lt;AdParameters\&amp;gt；で複数のCDATAブロックを返すことが多い問題を修正しました。 VASTノード。
+* Zendesk #32920 — 広告の時間内に空白の画面。広告の時間は完了しません。 VPAIDコンテナがハング状態になり、Facebook VPAID広告が1つの\&amp;lt;AdParameters\&amp;gt；で複数のCDATAブロックを返すことが多い問題を修正しました。VASTノード。
 
 **バージョン1.4.39 (1744)**
 
-* Zendesk #28976 — ライセンス要求に1秒以上かかります。 POSTを使用するDRMライセンス要求の呼び出しが実行中、Curlは余分な「Expect: 100-continue」ヘッダーに追加しました。 TVSDKの「Expect:」ヘッダーを削除しました。
+* Zendesk #28976 — ライセンス要求に1秒以上かかります。 POSTを使用するDRMライセンス要求の呼び出しが実行中に、Curlは余分な「Expect:100-continue」ヘッダーに追加しました。 TVSDKの「Expect:」ヘッダーを削除しました。
 * Zendesk #27707 - CSAI環境は、早い段階でコンテンツを返したり戻したりする際に、CUE INマーカーを保持しません。 複数のオポチュニティジェネレーターをサポート。
 
 **バージョン1.4.38 (1722)**
@@ -291,10 +296,10 @@ OpenSSLライブラリがOpenSSLバージョン1.0.2jで更新されました。
 * Zendesk #21701 — 正規化されたURLの代わりに、1401 CRSリクエスト用の元のクリエイティブURLを送信します。
 この問題は、元のクリエイティブURLを送信することで解決されます。
 
-* Zendesk #25023 — ビデオの長時間再生： ビデオのフリーズ、画面のちらつきこの問題は、CenturyLinkのセットトップボックスデバイスのビデオ形式の最大サイズを設定することで解決されました。
+* Zendesk #25023 — ビデオの長時間再生：ビデオのフリーズ、画面のちらつきこの問題は、CenturyLinkのセットトップボックスデバイスのビデオ形式の最大サイズを設定することで解決されました。
 
-* Zendesk #27460 — 新しいAkamaiアカウントは、POST cdn要求を処理できません。
-コードが更新され、広告リクエストがPOSTではなくGETになるようになりました。 `cdn.auditude.com`
+* Zendesk #27460 — 新しいAkamaiアカウントは、POSTcdn要求を処理できません。
+コードが更新され、 `cdn.auditude.com` 広告リクエストがPOSTではなくGETになるようになりました。
 
 * Zendesk #28245 — アプリがバックグラウンドからフォアグラウンドに切り替わった場合、再生状態は正しく通知されません。この問題は、アプリケーションがフォアグラウンドに戻ったときに再生状態を正しく復元または一時停止することで解決されました。
 
@@ -302,7 +307,7 @@ OpenSSLライブラリがOpenSSLバージョン1.0.2jで更新されました。
 
 * Zendesk #25779 - WebViewでJavaScriptが有効になっている場合、TVSDKAndroid 4.2以降で見つかったセキュリティ脆弱性には、セキュリティ脆弱性が存在します。 OS 4.2以前を実行しているデバイスでは、TVSDKによるWebViewの使用が無効になっています。 これにより、これらのデバイスでのTVSDKでのVPAID広告の使用が無効になります。
 
-* Zendesk #26890 — 参照を処理するSCREEN状態（オン/オフ）の問題 PlayerAdobe Video Engine(AVE)がSUSPENDED状態から再開された場合、DefaultMediaPlayerはそのステータスを更新しません。 その結果、AVEがPLAYING状態にある場合でも、DefaultMediaPlayerはSUSPENDED状態のままです。 この問題は、DefaultMediaPlayerの現在のステータスがSUSPENDEDであっても、AVEからPLAYステータスを受け取るときに、DefaultMediaPlayerの状態をPLAYINGに設定することで解決されました。
+* Zendesk #26890 — 参照を処理するSCREEN状態（オン/オフ）の問題 PlayerAdobeビデオエンジン(AVE)がSUSPENDED状態から再開された場合、DefaultMediaPlayerはそのステータスを更新しません。 その結果、AVEがPLAYING状態にある場合でも、DefaultMediaPlayerはSUSPENDED状態のままです。 この問題は、DefaultMediaPlayerの現在のステータスがSUSPENDEDであっても、AVEからPLAYステータスを受け取るときに、DefaultMediaPlayerの状態をPLAYINGに設定することで解決されました。
 
 **バージョン1.4.31 (1675)**
 
@@ -316,7 +321,7 @@ OpenSSLライブラリがOpenSSLバージョン1.0.2jで更新されました。
    * AVデコーダースレッドの処理を改善して修正。 特に、入力フレームキューまたは出力フレームキューが変更されるたびに、フレームのコンテンツタイプに固有のデコーダースレッドが実行されます。
 
 * Zendesk #26551 - CRSエラーの修正
-   * リクエストがHEAD(http head)の場合、空なので、コンテンツを読み取る必要はありません。 読み取りを試みても、read()を呼び出すと古いAndroid(4.0.x)がハングし、read()を呼び出すと新しいAndroidが正しい値(-1)を返します。 これに基づいて、「head」の内容を読み取らないようにコードを変更しました。
+   * リクエストがHEAD(http head)の場合、コンテンツは空なので、コンテンツを読み取る必要はありません。 読み取りを試みても、read()を呼び出すと古いAndroid(4.0.x)がハングし、read()を呼び出すと新しいAndroidが正しい値(-1)を返します。 これに基づいて、「head」の内容を読み取らないようにコードを変更しました。
 
 * Zendesk #26696 TrickPlayManagerへのアクセス時にヌルポインタ例外が発生する
    * 使用する前にTrickPlayManagerオブジェクトがnullでないかどうかを確認していた問題を修正しました。
@@ -360,14 +365,14 @@ OpenSSLライブラリがOpenSSLバージョン1.0.2jで更新されました。
 
 **バージョン1.4.25 (1620)**
 
-* Zendesk #22900 — ライブAdobe Primetime DRMストリームがAndroid参照プレーヤーで再生されない。メモリ割り当ての問題が修正されました。
+* Zendesk #22900 — ライブAdobe PrimetimeDRMストリームがAndroid参照プレイヤーで再生されない。メモリ割り当ての問題が修正されました。
 * Zendesk #23176 - VPAID広告を再生しようとするとアプリケーションがクラッシュします。このクラッシュは、アプリケーションがVPAID広告をレンダリングするカスタム広告表示を作成しないために発生しました。 この問題は、カスタム広告表示がない場合に、広告サーバーの応答内のVPAID広告を無視することで解決されました。
 
 * Zendesk #23153 - SampleAES DRMストリーム — TVSDKリファレンスプレイヤーでの再生停止この問題はZendesk #22900と同じです。
 
 **バージョン1.4.24 (1612)**
 
-* ゼンデスク#20784 -Analytics: ライブビデオトランジションのコンテンツ完了をトリガーするこの問題は、ライブ/リニアビデオトラッキングセッション中にAPI(trackVideoComplete)を追加して、コンテンツの完了を手動でトリガーすることで解決されました。
+* Zendesk #20784 — 解析：ライブビデオトランジションのコンテンツ完了をトリガーするこの問題は、ライブ/リニアビデオトラッキングセッション中にAPI(trackVideoComplete)を追加して、コンテンツの完了を手動でトリガーすることで解決されました。
 
 * Zendesk #21977 VideoEngineTimelineのplaceAdBreak/acceptAd操作中のクラッシュ
    * この問題では、次のライブラリが更新されました。
@@ -420,7 +425,7 @@ NVidiaシールドOPのサポートによって発生したロジックエラー
 
 * Zendesk #17781 - ADBスクリーンキャプチャが機能しなくなりました。この問題は、画面キャプチャを可能にするDefaultMediaPlayer.create(Context, boolean secureSurface) APIを追加することで解決されました。
 画面のキャプチャを許可するには、secureSurfaceに対してfalseを渡します。
-重要： 実稼働環境では、この画面キャプチャ機能を有効にしないことを強くお勧めします。
+重要：実稼働環境では、この画面キャプチャ機能を有効にしないことを強くお勧めします。
 
 * Zendesk #19074 - FFWDおよびREWトリック再生中にビデオがフリーズする再生バックでtrickPlayがフリーズする可能性がある場合に発生していた次の問題が解決されました。
 
@@ -431,7 +436,7 @@ NVidiaシールドOPのサポートによって発生したロジックエラー
 この問題は、WebVTTキューの順序を逆にして、重なり合う複数のキューが「上にスクロール」して表示されるように解決されました。
 
 * Zendesk #19574 - TVSDKは、PTMediaPlayerItem.prepareToPlay内のマニフェストファイルの初期読み込みで、DRMまたはDRM以外のコンテンツに対するM3U8応答データを返しません。読み込みが失敗した場合、TVSDKは、失敗した応答の本文をアプリケーションに報告しません。
-この問題は、TVSDKが失敗応答をエラーとしてアプリケーションに報告できるようにすることで解決されました。
+この問題は、TVSDKがエラー応答をエラーとしてアプリケーションに報告できるようにすることで解決されました。
 
 * Zendesk #19701 - SAP/Discontinuityでの再生のフリーズ不連続時にオーディオとビデオが不連続時にアラインされないと、プレイヤがフリーズする問題が解決されました。
 
@@ -439,11 +444,11 @@ NVidiaシールドOPのサポートによって発生したロジックエラー
 
 **バージョン1.4.20 (1546)**
 
-* Zendesk #17384 — 機能要求： AACメディアでのID3タグのAAC再生のID3メタデータのサポートAACメディアでのID3タグのサポートは、バージョン1.4.20以降のAndroid向けTVSDKで提供されています。
+* Zendesk #17384 — 機能要求：AACメディアでのID3タグのAAC再生のID3メタデータのサポートAACメディアでのID3タグのサポートは、バージョン1.4.20以降のAndroid向けTVSDKで提供されています。
 
 * Zendesk #18358 — 非同期の切り替えで、ビットレートスイッチでプレーヤーがフリーズするこの問題は、ABRで切り替えエッジのケースを適切に処理することで解決されました。
 
-* Zendesk #19232 - TVSDK 1.4.18を使用するアプリは、古いAmazon OSバージョン4で動作が異常です。Android WebViewをサポートしないデバイスとの競合を回避するため、TVSDKプレイヤーの初期化プロセスで非表示のWeb表示の作成を削除しました。
+* Zendesk #19232 - TVSDK 1.4.18を使用するアプリが古いAmazonOSバージョン4で正常に動作していません。この問題は、Android WebViewをサポートしないデバイスとの競合を回避するため、TVSDKプレイヤーの初期化プロセスで非表示のWeb表示の作成を削除することで解決しました。
 
 * Zendesk #19585 — アダプティブビットレートのトランジションが発生した場合のスローモーション再生。
 ABR切り替え中に、新しいプロファイルのオーディオサンプルレートが現在のプロファイルと異なる場合、再生は高速または遅延になります。 これは、ビデオプレゼンターにオーディオ形式が変更されたことが通知されないためです。
@@ -486,9 +491,9 @@ HDCPステータスを動的に追跡するには、Nvidia Shieldに正しく実
 * Zendesk #3324 - VMAPに広告メディアがない場合、Primetime広告レポートは広告の時間を追跡しません。
 広告の時間が空の場合、広告の時間の開始と完全なトラッキングイベントはpingされませんでした。 この問題は、VMAP AdBreakなどの空の広告の時間に対して広告の時間の開始pingを送信し、有効なAdSourceノードを使用することで解決されました。
 
-* Zendesk #18229 - MediaPlayer.reset()呼び出し後、SetCCVisibility(VISIBLE)は無視されます。この問題は、setCCVisibility(Visibility.INVISIBLE); をMediaPlayerクラスのreset()関数に追加します。
+* Zendesk #18229 - MediaPlayer.reset()呼び出し後、SetCCVisibility(VISIBLE)は無視されます。この問題は、setCCVisibility(Visibility.INVISIBLE);をMediaPlayerクラスのreset()関数に追加します。
 
-* Zendesk #18328 - 60FPSTのコンテンツ用のAmazon Fire TV第2世代デバイスでのフレームの問題が解決されました。スリープ時間の決定用にエンコードされたFPSを適用し、エンコードされたFPS予測ロジックを改善しました。
+* Zendesk #18328 - 60FPSTのコンテンツ用のAmazonFire TV第2世代デバイスでのフレームの問題が解消されました。この問題は、スリープ時間の決定用にエンコードされたFPSを適用し、よりエンコードされたFPS予測ロジックを使用することで解決されました。
 
 **バージョン1.4.17 (1472)**
 
@@ -511,7 +516,7 @@ HDCPステータスを動的に追跡するには、Nvidia Shieldに正しく実
 
 * Zendesk #17919 - Android — コンテンツシークは、ハートビートエラーを引き起こします。チャプター内のシークがある場合、ハートビートがエラー状態にある場合の問題が解決されました。
 
-* Zendesk #18053 - Adobe PrimetimeがMarshmallowでクラッシュするTVSDKライブラリがYUV -> RGBカラー変換を行うネオンコードを使用していた場合、TVSDKがAndroid M OSでクラッシュする問題を修正しました。 この問題は、ネオンでないバージョンのコードを使用して、この問題の原因となっている関数を更新することで解決しました。
+* Zendesk #18053 - MarshmallowでのAdobe PrimetimeクラッシュTVSDKライブラリがYUV -> RGBカラー変換を行うネオンコードを使用していた場合、Android M OSでTVSDKがクラッシュしていました。 この問題は、ネオンでないバージョンのコードを使用して、この問題の原因となっている関数を更新することで解決しました。
 
 * Zendesk #18072 - Android M - Application Crashプロファイルとレベルがサポートされているかどうかを確認すると、MediaCodecListおよびMediaCodecInfo APIの呼び出し時にクラッシュが発生します。 この問題は、コーデック情報が必要な場合にのみこれらのAPIを呼び出すのを避けるために、すべてのコーデック情報を事前に読み込むことで、一時的な対処を行うことで解決されました。
 
@@ -564,7 +569,7 @@ prepareToPlayをビデオオンデマンド(VOD)コンテンツで実行する�
 
 **バージョン1.4.12 (1388)**
 
-* Zendesk #2751 - CSAIとCRS | Enhance: 特定のメディアファイルURLの動的要素を処理します。
+* Zendesk #2751 - CSAIとCRS | Enhance:特定のメディアファイルURLの動的要素を処理します。
 Creative Repackaging Serviceが更新され、動的なクリエイティブURLを含む広告が適切に処理されるようになりました。
 
 * Zendesk #3965 — トリック再生から通常再生に切り替えると、再生を開始する前に少し進みます。
@@ -578,7 +583,7 @@ Creative Repackaging Serviceが更新され、動的なクリエイティブURL�
    * トリック再生中にターゲットの長さに達した後もバッファーが長くなり続ける問題を修正しました。
 
 * Zendesk #3992 — 追加のトリック再生速度。
-TrickPlayは16倍を超える料金を受け入れるように更新されました。 +/- 32、+/-64および+/-128も使用できるようになりました。
+TrickPlayは16倍を超える料金を受け入れるように更新されました。+/- 32、+/-64および+/-128も使用できるようになりました。
 
 * Zendesk #4007 - GEOBオブジェクトをタイムラインメタデータの一部として解釈します（AndroidおよびWeb）。
 setByteArrayおよびgetByteArray APIの追加。
@@ -600,13 +605,13 @@ setByteArrayおよびgetByteArray APIの追加。
 
 * Zendesk #2941 — ライブアセットがシーク可能な範囲に「0」を持っていません。以前は、ライブストリームの開始(最初のセグメントの開始)をシークする際に、3つのセグメントバッファーがありました。
 
-* Zendesk #3169 - Update reference player with AdobeAnalytics統合リファレンスプレイヤーは、AdobeAnalyticsライブラリを使用して実装例として更新されました。
+* Zendesk #3169 — リファレンスプレイヤとAdobe Analytics統合の更新リファレンスプレイヤは、Adobe Analyticsライブラリを使用して実装例として更新されました。
 * Zendesk #3299 — 説明できないトリック再生動作
    * トリック再生の停止後に再生状態に戻るには、数秒（場合によっては25秒以上）かかる問題を修正しました。
    * 同じメディアでトリック再生を2回呼び出すと、現在の時間でストリームがフリーズする原因となるバグを修正しました。
 * Zendesk #3433 - AndroidとFlash — サブタイトルの問題
 
-WebVTT用のGetLineは、パケットの&lt;CR>&lt;LF>調整された長さに従っていませんでした。 最後のキャプションには、前のキャプションの文字を含めることができます。
+WebVTT用のGetLineは、パケットの&lt;CR>&lt;LF>調整された長さに従っていませんでした。最後のキャプションには、前のキャプションの文字を含めることができます。
 
 * PTPLAY-6243 — 参照プレイヤーを拡張してデバッグ情報を取り込みます。
 
@@ -618,13 +623,13 @@ Androidサンプルリファレンスプレーヤーが強化され、デバッ�
 
 シーク後、ビデオエンジンがビデオプレゼンターの再生準備が整う前に状態をPLAYINGに設定している場合が考えられます。 バッファー状態がシーク前に高いときに発生します。 ビデオエンジンに低バッファー状態を通知することで修正。 ビデオエンジンの低バッファー状態の場合、Playを呼び出すと、状態がPLAYINGではなくBUFFERINGに変更されます。 状態がPLAYINGに変わると再生が再開されます。
 
-* Zendesk #2846 — 機能強化のリクエスト： Auditudeライブラリが実行した呼び出しに対して異なるユーザーエージェント文字列を設定する機能を提供する
+* Zendesk #2846 — 機能強化のリクエスト：Auditudeライブラリが実行した呼び出しに対して異なるユーザーエージェント文字列を設定する機能を提供する
 
-広告関連の呼び出しのユーザーエージェントを設定する新しいAPI、auditudeSettings.setUserAgent(&quot;user/agent&quot;)が追加されました。 ユーザーエージェントが設定されていない場合は、デフォルトが使用されます。 これは広告関連の呼び出しのユーザーエージェントにのみ影響し、メディア呼び出しのユーザーエージェントは変更されず、「Adobe Primetime」+&lt;default useragent>です。
+広告関連の呼び出しのユーザーエージェントを設定する新しいAPI、auditudeSettings.setUserAgent(&quot;user/agent&quot;)が追加されました。 ユーザーエージェントが設定されていない場合は、デフォルトが使用されます。 これは広告関連の呼び出しのユーザーエージェントにのみ影響し、メディア呼び出しのユーザーエージェントは変更されません(「Adobe Primetime」+&lt;デフォルトのユーザーエージェント>)。
 
 **バージョン1.4.8 (1324)**
 
-* Zendesk #1218 - 106000.33エラー（ローカル）... FragmentedHTTPStreamer::ThreadParseManifest()でマニフェストを読み込めない場合、URLドメインがlocalhostであるかどうかを確認し、その場合はドメインを127.0.0.1に変更してThreadParseManifestを呼び出します。
+* Zendesk #1218 - 106000.33エラー（ローカル）...FragmentedHTTPStreamer::ThreadParseManifest()でマニフェストを読み込めない場合、URLドメインがlocalhostであるかどうかを確認し、その場合はドメインを127.0.0.1に変更してThreadParseManifestを呼び出します。
 * Zendesk #3072 — 低ビットレートへの自動切り替え。 ゼロPTSペイロードをスキップするようにバッファー長の計算を変更しました。
 * Zendesk #3168 - WebVTTのサブタイトルが最初の10秒間のみ表示されていました。
 * Zendesk #3193 - TVSDKでのプロファイル変更APIのリクエスト、PlaybackEventListener.onProfileChanged()が追加されました。
@@ -637,7 +642,7 @@ Androidサンプルリファレンスプレーヤーが強化され、デバッ�
 * Zendesk #2760 - TrickPlayモード中、DISCONTINUITYタグは無視されました。
 * Zendesk #2805 - Zendesk #2719と同じ修正で、再生開始時のプレイヤークラッシュ
 * Zendesk #2817 - Androidプレーヤー — デコードバッファーを2.0秒から3.0秒に拡張すると、プレーヤーがハングしたり停止したりする場合があります。
-* Zendesk #2839 - Adobe Primetime PSDKはARMv8チップセットをサポートしますか？に加え、Galaxy S6で見つかったクラッシュに対する修正を追加しました。
+* Zendesk #2839 -Adobe PrimetimePSDKはARMv8チップセットをサポートしていますか？というメッセージが表示され、Galaxy S6でクラッシュの修正が行われました。
 * Zendesk #2885 - Auditudeのクラッシュ再生、Zendesk #2719と同じ修正
 * Zendesk #2895 - 10分間の再生後、常にライブHLSのエラーが発生する
 * Zendesk #2925 — パケットを入力キューにキューに入れると、Android開発ビルド(1.4.5)に関するフィードバック(1.4.5)。PTSが負の場合、デコーダーは異常な状態になり、今後のパケットでは常に負の出力PTSが返されます。 この問題を回避するために、負の値の場合は、入力PTSが0に設定されます。
@@ -646,7 +651,7 @@ Androidサンプルリファレンスプレーヤーが強化され、デバッ�
 **バージョン1.4.6 (1282)**
 
 * Zendesk #2192 — 高速スイッチの実装を取り除くことで、ネットワーク環境の悪い場合にビットレートが常に低くなるとは限りません。
-* Zendesk #2631 - Androidでのアラビア語のサブタイトル： 複数行のテキストは切り取り表示され、アラビア語フォントのフォントサイズを調整して固定します。
+* Zendesk #2631 - Androidでのアラビア語のサブタイトル：複数行のテキストは切り取り表示され、アラビア語フォントのフォントサイズを調整して固定します。
 * Zendesk #2844 — 注4でのバッファリングとフラグメントのダウンロード時間が正確ではありません。
 
 この問題は、ビデオセグメントのダウンロード間に待ち時間が追加されて帯域幅の計算に反映され、ダウンロード時間の計算ロジックに完全なリクエストサイクル時間が使用されることで修正されました。
@@ -667,14 +672,14 @@ Androidサンプルリファレンスプレーヤーが強化され、デバッ�
 * Zendesk #2451 — クローズドキャプションの「下の差込枠」で、キャプションコードに「bottomInset」パラメーターが追加されました。
 * Zendesk #2480 - HTTP 302リダイレクトの最適化を無効にする、useRedirectedUrlプロパティの設定のサポートを追加
 * Zendesk #2486 — サードパーティビーコン
-* Zendesk #2547 — アラビア語のサブタイトル： テキストは右揃えで配置する必要があります。
+* Zendesk #2547 — アラビア語のサブタイトル：テキストは右揃えで配置する必要があります。
 
 **バージョン1.4.4 (1195)**
 
 * Zendesk #1158 - Huawei Valiantでの再生が失敗する(Y301A1)
 * Zendesk #1709 — メディアサイズが正しくなく、ビデオが伸ばされました
 * Zendesk #1757 — 同一のspa/ppsデータを持つストリーム間でプロファイルが切り替わった後に再生されるオーディオのみ
-* Zendesk #2095 - HTTP 307のステータス（リダイレクト）により、Adobe Playerが再生を停止します。
+* Zendesk #2095 - HTTP 307ステータス（リダイレクト）により、Adobeプレイヤーが再生を停止します。
 * Zendesk #2126 — 最後のADEVENTのTimedMetaDataイベントが見つかりません。最後のセグメントの後に存在するサブスクライブ済みタグは、AVEからPSDKにレポートされませんでした。
 * Zendesk #2227 - VideoEngine nativeResetとnativePauseのロックアップ
 * バグ#3921755 - OpenSSLライブラリのバージョン1.0.1Lへの更新
@@ -698,7 +703,7 @@ Androidサンプルリファレンスプレーヤーが強化され、デバッ�
 
 * Zendesk #1951 - 4.0.xデバイスのVideoEngine.nativeReset()でのロックアップ
 * Zendesk #2064 — 特定のIntelベースのAndroidデバイスでのネイティブ・クラッシュSIGSEGV
-* Zendesk #2075 - 4.0.xデバイスでのVideoEngine.nativeReleaseGPUResourceのロックアップ注： このビルドは、Android 5.0(Lollipop)をサポートするために***必要**です
+* Zendesk #2075 - 4.0.xデバイスでのVideoEngine.nativeReleaseGPUResourceのロックアップ注：このビルドは、Android 5.0(Lollipop)をサポートするために***必要**です
 * Zendesk #1513 - Android Lollipopのサポート
 * Zendesk #1709 — メディアサイズが正しくなく、ビデオが伸ばされました
 * Zendesk #1871 - WebVTTキャプションを使用してライブストリームを表示すると、WebVTTキャプションが消え、再び表示されることがあります。
@@ -777,7 +782,7 @@ minSdkVersionを更新する場合：
 * PTPLAY-2541：ブラックアウトで代替ストリームに切り替えた後、COMPONENT_CREATION_FAILUREが発生する場合があります。
 * バグ#3726865 — オーディオ専用ストリームからのMultiBitrate LBAストリーム開始の場合、オーディオ/ビデオストリームに切り替えてもビデオは表示されません。 オーディオ/ビデオストリームから開始すると、この問題は表示されず、オーディオストリームとオーディオ/ビデオストリームを正常に切り替えることができます
 * バグ#3760144 - Kindle Fire 7やSamsung Galaxy Nexusなどの一部のデバイスでストリームが一時停止されると、解像度が変化したりパルス状に表示されたりする場合があります。 厳重な検査下でのみ監視可能
-* バグ#3761170 — 広告を含むライブのseekToLocalは、広告コンテンツをシークして戻すことができません。 ライブストリームにはcurrentTime APIを使用するのが最適です
+* バグ#3761170 — 広告を含むライブのseekToLocalは、広告コンテンツをシークして戻すことができません。ライブストリームにはcurrentTime APIを使用するのが最適です
 * バグ#3763370：広告を含むライブストリームで、広告が1つしかない場合に、2つの広告マーカーが近くに表示されることがあります。 これらの広告マーカーは同じ広告を表し、1つの広告のみが再生されます
 * バグ#3763373:VODストリーム内で広告をシークすると、広告マーカーが短い間消える場合があります。 広告マーカーが復元され、タイムラインに影響が及ぶことはありません
 * 一部のデバイスでは、既知の再生の問題があります。 詳しくは、1.4での [既知のデバイスの問題を参照してください](https://helpx.adobe.com/primetime/release-notes/tvsdk-1-4-android.html#Knownissuesin14)。
@@ -797,11 +802,11 @@ minSdkVersionを更新する場合：
 | Nexus 7（第2世代） | S4Pro APQ8064(Qualcomm) | ムービーが30分以上一時停止された場合に、デバイスがハングします。 | Googleに報告されたデバイスの問題。 | 一時停止が長くならないように、アプリはタイムアウトする必要があります。 |
 | Nexus S (GB) | ハミングバード | HWデコーダーを使用してビデオを再生することはできません。 | Nexus SにはStagefrightベースのHWデコーダーがないので、Android 2.3ではSWデコーダーを使用しています。 | ICSにアップグレードします。 |
 | Nexus S (ICS) | ハミングバード | ビデオがちらつくことがある。 | 不正なデータは、デコーダーを不正な状態にする原因となる場合があります。 | デバイスを再起動します。 |
-| nook tabletAndroid OS: 2.3 | TI OMAP 4 | ビデオが再生されず、アプリがハングします。 | アプリを数回実行すると、Stagefrightが不安定な状態になります。 mediaplayer::QueryCodecsへの呼び出しがハングします。 | デバイスを再起動して状態をリセットします。 |
+| nook tabletAndroid OS:2.3 | TI OMAP 4 | ビデオが再生されず、アプリがハングします。 | アプリを数回実行すると、Stagefrightが不安定な状態になります。 mediaplayer::QueryCodecsへの呼び出しがハングします。 | デバイスを再起動して状態をリセットします。 |
 | Samsung Galaxy ACE | Qualcomm MSM7227 | SampleMediaPlayerアプリをインストールできません。 | 一般的なARM v7チップセットの代わりにARM v6を使用します。 FP/AIRはこのデバイスをサポートしていません。 |  |
-| Samsung Galaxy ACE2Android OS: 2.3.6 | ノバトールU8500 | ビデオを再生できません。 | このチップセットは、AVEのAndroid pre-ICS用の不明なデコーダーです。 |  |
+| Samsung Galaxy ACE2Android OS:2.3.6 | ノバトールU8500 | ビデオを再生できません。 | このチップセットは、AVEのAndroid pre-ICS用の不明なデコーダーです。 |  |
 | Samsung Galaxy S2(GT-I9100) | エキノス | ビデオのパフォーマンスがこのデバイスに対して平均していません。 | HWデコーダが、誤ったPTSを含むデコード済みフレームを返している。 デコーダーがプレゼンテーション時間の代わりにデコード時間を使用しているようです。 |  |
-| Samsung Galaxy S2 GAndroid OS: 2.3.6 | TI OMAP4 | ビデオの開始時にクラッシュします。 |  | Android 2.3.7または4.xにアップグレードします。 |
+| Samsung Galaxy S2 GAndroid OS:2.3.6 | TI OMAP4 | ビデオの開始時にクラッシュします。 |  | Android 2.3.7または4.xにアップグレードします。 |
 | Samsung Galaxy S3 (I747) | Qualcomm MSM8960 | 断続的にビデオがフリーズし、オーディオのみが再生された後、応答しなくなります。 |  |  |
 | Samsung Galaxy S3 I747M | SAMSUNG_M2ATT | ビデオがフリーズします。 | 調査中。 |  |
 | Samsung Galaxy Tab 1 v10.1 | テグラ2 | MBRトランジションは最大3秒かかる場合があります。 | MBRがクラッシュする問題を修正したので、すべてのストリームスイッチでデコーダーを再起動します。これには最大3秒かかります。 |  |
@@ -810,4 +815,4 @@ minSdkVersionを更新する場合：
 
 ## 役立つリソース {#helpful-resources}
 
-* Adobe Primetimeのラーニングとサポートの [ページで、完全なヘルプドキュメントを参照してください](https://helpx.adobe.com/support/primetime.html) 。
+* 「 [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html) 」ページのヘルプドキュメントを参照してください。

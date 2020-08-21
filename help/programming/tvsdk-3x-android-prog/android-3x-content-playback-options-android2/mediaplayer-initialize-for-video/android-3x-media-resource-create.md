@@ -5,7 +5,10 @@ seo-title: メディアリソースの作成
 title: メディアリソースの作成
 uuid: 9ae86c04-7bbe-43fb-9f57-1d9fa2fa73d0
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: bdeab54aeb083f1fc8d27db1fd94bf89d74429da
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 0%
 
 ---
 
@@ -16,14 +19,14 @@ source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
 
 MediaResourceクラスは、MediaPlayerインスタンスによって読み込まれるコンテンツを表します。
 
-1. メディアに関す `MediaResource` る情報をコンストラクターに渡して、を作成 `MediaResource` します。
+1. メディアに関する情報 `MediaResource` をコンストラクタに渡して、を作成し `MediaResource` ます。
 
-   コンストラ `MediaResource` クターには次のパラメーターが必要です。
+   コンストラクターには、次のパラメーターが必要です。 `MediaResource`
 
    <table id="table_22886D6770FB45E99D35D0B90E6CC302"> 
    <thead> 
    <tr> 
-      <th colname="col1" class="entry"> コンストラクターパラメーター </th> 
+      <th colname="col1" class="entry"> コンストラクタパラメータ </th> 
       <th colname="col2" class="entry"> 説明 </th> 
    </tr> 
    </thead>
@@ -34,7 +37,7 @@ MediaResourceクラスは、MediaPlayerインスタンスによって読み込�
    </tr> 
    <tr> 
       <td colname="col1"> <span class="codeph"> type </span> </td> 
-      <td colname="col2"> 指定されたファイルの種類に対応する、 <span class="codeph"> MediaResource.Type </span> enumの次のいずれかのメンバーです。 
+      <td colname="col2"> 指定されたファイルの種類に対応する、MediaResource.Type <span class="codeph"></span> enumの次のメンバの1つ： 
       <ul id="ul_C286ED3C31364B858A1C9AF3356E9282"> 
       <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li> 
       <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - ISOベースのメディアファイル形式(MP4) </li> 
@@ -42,8 +45,8 @@ MediaResourceクラスは、MediaPlayerインスタンスによって読み込�
       </ul> </td> 
    </tr> 
    <tr> 
-      <td colname="col1"> <span class="codeph"> メタデータ </span> </td> 
-      <td colname="col2"> メインコンテンツ内に配置する代替コンテンツや広告コンテンツなど、読み込まれるコンテンツに関する追加情報を含む <span class="codeph"> Metadata </span> クラスのインスタンス（ディクショナリに似た構造）。 広告を使用する場合は、このコンストラクターを使用する前に <span class="codeph"></span> AuditudeSettingsを設定します(href=Ad insertion metadata]（.././android-3.5-advertising/ad-insertion/ad-insertion-metadata/android-3.5-ad-insertion-metadata.mdを参照）。 </td> 
+      <td colname="col1"> <span class="codeph"> metadata </span> </td> 
+      <td colname="col2"> Metadata <span class="codeph"></span> クラスのインスタンス（ディクショナリに似た構造体）。メインコンテンツ内に配置する代替コンテンツや広告コンテンツなど、読み込まれるコンテンツに関する追加情報を含む場合があります。 広告を使用する場合、このコンストラクターの <span class="codeph"> Ad insertionメタデータを使用する前に、AuditudeSettingsを設定 </span><a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"></a>します。 </td> 
    </tr> 
    </tbody> 
    </table>
@@ -54,7 +57,7 @@ MediaResourceクラスは、MediaPlayerインスタンスによって読み込�
    >
    >MP4ビデオオンデマンド(VOD)コンテンツの場合、TVSDKは、トリック再生、可変ビットレート(ABR)ストリーミング、広告挿入、クローズドキャプションまたはDRMをサポートしません。
 
-   次のコードでは、インスタンスを作成 `MediaResource` します。       >
+   次のコードは、インスタンスを作成し `MediaResource` ます。       >
 
    ```java
    // To do: Create metadata here 
@@ -64,12 +67,13 @@ MediaResourceクラスは、MediaPlayerインスタンスによって読み込�
      metadata); 
    ```
 
-   この手順の後は、アクセサ(getter)を使用して、リ `MediaResource` ソースのタイプ、URL、およびメタデータをいつでも確認できます。
+   この手順の後はいつでも、アク `MediaResource` セサ(getter)を使用して、リソースの種類、URL、およびメタデータを調べることができます。
 
 1. 次のいずれかのオプションを使用して、メディアリソースを読み込みます。
 
    * MediaPlayerインスタンス。
-   * `MediaPlayerItemLoader` 詳しくは、MediaPlayerItemLoaderを使用したメデ [ィアリソースの読み込みを参照してください](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md)。
+   * `MediaPlayerItemLoader` 詳しくは、MediaPlayerItemLoaderを使用したメディアリソースの [読み込みを参照してください](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md)。
+
    >[!IMPORTANT]
    >
    >メディアリソースをバックグラウンドスレッドに読み込まないでください。 ほとんどのTVSDK操作は、メインスレッドで実行する必要があり、バックグラウンドスレッドで実行すると、操作がエラーをスローして終了する可能性があります。

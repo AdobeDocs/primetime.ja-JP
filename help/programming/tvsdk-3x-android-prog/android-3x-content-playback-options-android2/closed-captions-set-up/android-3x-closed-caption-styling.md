@@ -1,31 +1,34 @@
 ---
 description: クローズドキャプショントラックのスタイル情報は、TextFormatクラスを使用して指定できます。このクラスは、プレイヤーが表示するクローズドキャプションのスタイルを設定します。
 seo-description: クローズドキャプショントラックのスタイル情報は、TextFormatクラスを使用して指定できます。このクラスは、プレイヤーが表示するクローズドキャプションのスタイルを設定します。
-seo-title: クローズドキャプションのスタイル設定の制御
-title: クローズドキャプションのスタイル設定の制御
+seo-title: クローズドキャプションのスタイル設定を制御する
+title: クローズドキャプションのスタイル設定を制御する
 uuid: b5d9c783-755f-47a2-acb1-966df9d6116e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '871'
+ht-degree: 0%
 
 ---
 
 
-# クローズドキャプションのスタイル設定の制御 {#control-closed-caption-styling}
+# クローズドキャプションのスタイル設定を制御する {#control-closed-caption-styling}
 
 クローズドキャプショントラックのスタイル情報は、TextFormatクラスを使用して指定できます。このクラスは、プレイヤーが表示するクローズドキャプションのスタイルを設定します。
 
-このクラスは、フォントタイプ、サイズ、色、背景の不透明度などのクローズドキャプションのスタイル情報をカプセル化します。
+このクラスには、フォントの種類、サイズ、色、背景の不透明度などのクローズドキャプションのスタイル設定情報がカプセル化されます。
 
 ## クローズドキャプションのスタイルの設定 {#section_C9B5E75C70DD42E59DC4DD0F308C8216}
 
 TVSDKのメソッドを使用して、クローズドキャプションテキストのスタイルを設定できます。
 
-1. メディアプレイヤーが少なくともステータスになるまで待 `PREPARED` ちます。
-1. インスタンスを作 `TextFormatBuilder` 成します。
+1. メディアプレイヤーが少なくともステータスになるまで待ち `PREPARED` ます。
+1. インスタンスを作成し `TextFormatBuilder` ます。
 
    すべてのクローズドキャプションのスタイル設定パラメーターを指定するか、後で設定することができます。
 
-   TVSDKは、クローズドキャプションのスタイル情報をインターフェイスにカプセル `TextFormat` 化します。 このインタ `TextFormatBuilder` ーフェイスを実装するオブジェクトを作成します。
+   TVSDKは、クローズドキャプションスタイル情報をインター `TextFormat` フェイスにカプセル化します。 この `TextFormatBuilder` クラスは、このインターフェイスを実装するオブジェクトを作成します。
 
    ```java
    public TextFormatBuilder( 
@@ -43,16 +46,16 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
       java.lang.String safeArea)
    ```
 
-1. インターフェイスを実装するオブジェクトへの参照を取得す `TextFormat` るには、パブリックメソッドを `TextFormatBuilder.toTextFormat` 呼び出します。
+1. インター `TextFormat` フェイスを実装するオブジェクトへの参照を取得するには、パブリックメソッドを呼び出し `TextFormatBuilder.toTextFormat` ます。
 
-   メディアプレ `TextFormat` イヤーに適用できるオブジェクトを返します。
+   メディアプレイヤーに適用できる `TextFormat` オブジェクトを返します。
 
    `public TextFormat toTextFormat()`
 
 
-1. 必要に応じて、次のいずれかの操作を行って、現在のクローズドキャプションのスタイル設定を取得します。
+1. 必要に応じて、次のいずれかの操作を行って、現在のクローズドキャプションスタイル設定を取得します。
 
-   * すべてのスタイル設定を取得します。戻り値 `MediaPlayer.getCCStyle` はインターフェイスのインスタンス `TextFormat` です。
+   * すべてのスタイル設定を取得します。戻り値 `MediaPlayer.getCCStyle` はインター `TextFormat` フェイスのインスタンスです。
 
       ```java
       /** 
@@ -64,7 +67,7 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
       public TextFormat getCCStyle() throws MediaPlayerException;
       ```
 
-   * インターフェイスのgetterメソッドを使用して、設定を一度に1 `TextFormat` つずつ取得します。
+   * インター `TextFormat` フェイスgetterメソッドを使用して、設定を一度に1つずつ取得します。
 
       ```java
       public java.lang.String getFontColor(); 
@@ -82,7 +85,7 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
 
 1. スタイル設定を変更するには、次のいずれかの操作を行います。
 
-   * setterメソッドを使用し、イ `MediaPlayer.setCCStyle`ンターフェイスのインスタンスを渡 `TextFormat` します。
+   * setterメソッドを使用し `MediaPlayer.setCCStyle`て、インター `TextFormat` フェイスのインスタンスを渡します。
 
       ```java
       /** 
@@ -98,9 +101,9 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
       public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
       ```
 
-   * 個々のsetterメソ `TextFormatBuilder` ッドを定義するクラスを使用します。
+   * 個々のsetterメソッドを定義する `TextFormatBuilder` クラスを使用します。
 
-      インターフ `TextFormat` ェイスは、getterメソッドのみでsetterメソッドがないように不変オブジェクトを定義します。 クローズドキャプションのスタイル設定パラメーターは、次のクラスでのみ設定で `TextFormatBuilder` きます。
+      インター `TextFormat` フェイスは、getterメソッドのみとsetterメソッドを持たないように不変オブジェクトを定義します。 クローズドキャプションのスタイル設定パラメーターは、次の `TextFormatBuilder` クラスでのみ設定できます。
 
       ```java
       // set font type 
@@ -123,27 +126,29 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
       public void setTreatSpaceAsAlphaNum(bool)
       ```
 
-      [!IMPORTANT]
+      >[!IMPORTANT]
+      >
+      >**カラー設定：** Android TVSDK 2.Xでは、クローズドキャプションのカラースタイルが強化されました。 この機能強化により、RGBカラー値を表す16進文字列を使用してクローズドキャプションの色を設定できるようになりました。 RGB 16進数カラー表現は、Photoshopなどのアプリケーションで使用する、使い慣れた6バイトの文字列です。
+      >
+      >* FFFFFF =黒
+      >* 000000 =白
+      >* FF0000 =赤
+      >* 00FF00 =緑
+      >* 0000FF =青
+         >など。
 
-      **カラー設定：** Android TVSDK 2.Xでは、クローズドキャプションのカラースタイルが強化されました。 この機能強化により、RGBカラー値を表す16進文字列を使用してクローズドキャプションの色を設定できます。 RGB 16進カラー表現は、Photoshopなどのアプリケーションで使い慣れた6バイトの文字列です。
+      >
+      >アプリケーションでは、に色スタイル情報を渡すときは常に `TextFormatBuilder`、 `Color` 定義済みリストを以前と同じように使用しますが、ここで、値を文字列として取得す `getValue()` るには、色に追加する必要があります。 例：
+      >
+      >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
-          * FFFFFF = Black
-          * 00000 = White
-          * FF0000 = Red
-          * 00FF00 = Green
-          * 0000FF = Blue
-      など。
-
-      アプリケーションでは、に色のスタイル情報を渡すたびに、 `TextFormatBuilder`以前と同じように列挙を使用しますが、値を文字列として取得するには、色に `Color``getValue()` 追加する必要があります。 例：
-
-      `tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
 
 クローズドキャプションスタイルの設定は非同期的な操作なので、変更が画面に表示されるまでに最大で数秒かかる場合があります。
 
 ## クローズドキャプションのスタイル設定オプション {#section_6D685EC2D58C42A2BDDD574EDFCCC2A0}
 
-複数のキャプションのスタイル設定オプションを指定できます。これらのオプションは、元のキャプションのスタイルオプションより優先されます。
+複数のキャプションのスタイル設定オプションを指定できます。これらのオプションは、元のキャプションのスタイル設定オプションよりも優先されます。
 
 ```java
 public TextFormatBuilder( 
@@ -163,40 +168,40 @@ public TextFormatBuilder(
 
 >[!TIP]
 >
->デフォルト値(例えば、 `DEFAULT`)を定義するオプションで、その値はキャプションが最初に指定された時の設定を示します。
+>デフォルト値(例えば `DEFAULT`)を定義するオプションで、その値はキャプションが最初に指定されたときの設定を示します。
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
   <tr rowsep="1"> 
-   <th colname="1" class="entry"><b> 書式 </b></th> 
+   <th colname="1" class="entry"><b> 形式 </b></th> 
    <th colname="2" class="entry"> <b>説明</b> </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> フォント </td> 
-   <td colname="2"> <p>フォントタイプ。 </p> <p>TextFormat.Font列挙で定義され、例えば、シリーフの有無に関わらず等 <span class="codeph"> 幅 </span> のモノスペースを表す値にのみ設定できます。 </p> <p>ヒント： デバイスで使用できる実際のフォントは異なる場合があり、必要に応じて置換が使用されます。 serifsを持つ等幅スペースは、通常、システム固有の置き換えですが、代わりに使用されます。 </p> </td> 
+   <td colname="2"> <p>フォントタイプ。 </p> <p>TextFormat.Font <span class="codeph"></span> 定義済みリストで定義され、例えば、シリフトのある（またはない）等幅のモノスペースを表す値にのみ設定できます。 </p> <p>ヒント： デバイスで使用できる実際のフォントは異なる場合があり、必要に応じて代替フォントが使用されます。 serifsを持つ等幅スペースは、通常、代替として使用されますが、システムに固有の置き換えである場合もあります。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> サイズ </td> 
-   <td colname="2"> <p>キャプションのサイズ。 </p> <p> TextFormat.Size列挙で定義された値にのみ設定 <span class="codeph"> できま </span> す。 
+   <td colname="2"> <p>キャプションのサイズ。 </p> <p> TextFormat.Size <span class="codeph"></span> 定義済みリストで定義された値にのみ設定できます。 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM </span> — 標準サイズ </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> LARGE </span> — 中より約30%大きい </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL </span> — 中より約30%小さい </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> LARGE </span> — 標準サイズより約30%大きい </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL </span> — 標準サイズより約30 %小さい </li> 
       <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT </span> — キャプションのデフォルトサイズ。媒体と同じ </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> フォントエッジ </td> 
-   <td colname="2"> <p>浮き出しやなしなど、フォントエッジに使用する効果。 </p> <p>TextFormat.FontEdge列挙で定義された値にのみ設定で <span class="codeph"> きま </span> す。 </p> </td> 
+   <td colname="2"> <p>浮き出し、なしなど、フォントエッジに使用する効果。 </p> <p>TextFormat.FontEdge <span class="codeph"></span> 定義済みリストで定義された値にのみ設定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> フォントカラー </td> 
-   <td colname="2"> <p>フォントの色。 </p> <p>TextFormat.Color列挙で定義された値にのみ設定で <span class="codeph"> きま </span> す。 </p> </td> 
+   <td colname="2"> <p>フォントの色。 </p> <p>TextFormat.Color <span class="codeph"></span> 定義済みリストで定義された値にのみ設定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> エッジの色 </td> 
+   <td colname="1"> エッジカラー </td> 
    <td colname="2"> <p>エッジ効果のカラー。 </p> <p>フォントカラーに使用できる任意の値に設定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -204,35 +209,35 @@ public TextFormatBuilder(
    <td colname="2"> <p>背景文字のセルの色。 </p> <p>フォントカラーに使用できる値にのみ設定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> 塗りつぶしの色 </td> 
+   <td colname="1"> 塗りのカラー </td> 
    <td colname="2"> <p>テキストが配置されているウィンドウの背景の色。 </p> <p>フォントカラーに使用できる任意の値に設定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> フォントの不透明度 </td> 
-   <td colname="2"> <p>テキストの不透明度。 </p> <p>0（完全に透明）～ 100（完全に不透明）のパーセンテージで表します。 <span class="codeph"> フォントのDEFAULT_OPACITY </span> は100です。 </p> </td> 
+   <td colname="2"> <p>テキストの不透明度。 </p> <p>0（完全に透明）～ 100（完全に不透明）のパーセンテージで表します。 <span class="codeph"> フォント </span> のDEFAULT_OPACITYは100です。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 背景の不透明度 </td> 
-   <td colname="2"> <p>背景文字セルの不透明度。 </p> <p>0（完全に透明）～ 100（完全に不透明）のパーセンテージで表します。 <span class="codeph"> 背景のDEFAULT_OPACITY </span> は100です。 </p> </td> 
+   <td colname="2"> <p>背景文字セルの不透明度。 </p> <p>0（完全に透明）～ 100（完全に不透明）のパーセンテージで表します。 <span class="codeph"> 背景 </span> のDEFAULT_OPACITYは100です。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 塗りの不透明度 </td> 
    <td colname="2"> <p>キャプションウィンドウの背景の不透明度。 </p> <p>0（完全に透明）～ 100（完全に不透明）のパーセンテージで表します。 <span class="codeph"> 塗りのDEFAULT_OPACITY </span> は0です。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> 下余白 </td> 
-   <td colname="2"> <p>キャプションを避けるためのキャプションウィンドウの下端からの垂直方向の距離。 </p> <p>キャプションウィンドウの高さ（例：「20%」）またはピクセル数（例：「20」）の割合で表します。 </p> </td> 
+   <td colname="1"> 下の差込枠 </td> 
+   <td colname="2"> <p>キャプションが表示されないようにする、キャプションウィンドウの下端からの垂直方向の距離。 </p> <p>キャプションウィンドウの高さに対する割合（「20%」など）またはピクセル数（「20」など）で表します。 </p> </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> セーフエリア </td> 
-   <td colname="2"> <p>キャプションが表示されない、画面の端の周りの0 ～ 25 %の領域です。 </p> <p>デフォルトでは、WebVTTのセーフエリアは0%です。 この設定を使用すると、アプリケーションがデフォルトを上書きできます。 例えば、2つの値を指定する場合、文字列「10%,20%」は、最初の値が水平セーフ領域、2番目の値が垂直セーフ領域です。 1つの値（例えば「15%」という文字列）を指定した場合、垂直軸と水平軸の両方で、指定したセーフ領域が使用されます。 </p> </td> 
+   <td colname="2"> <p>画面の端の周囲の0 ～ 25 %の領域で、キャプションが表示されません。 </p> <p>デフォルトでは、WebVTTの安全領域は0 %です。 この設定を使用すると、アプリケーションがそのデフォルト設定を上書きできます。 例えば、文字列「10%,20%」のように2つの値を指定した場合、1つ目の値は水平方向のセーフ領域、2つ目の値は垂直方向のセーフ領域になります。 1つの値を指定する場合（例えば文字列「15%」）、垂直軸と水平軸の両方で、指定したセーフ領域が使用されます。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## キャプションの形式設定の例 {#section_58E8E82494EC4683B010FFDE67485CF9}
+## キャプションの書式設定の例 {#section_58E8E82494EC4683B010FFDE67485CF9}
 
-クローズドキャプションの形式設定を指定する方法の例を次に示します。
+クローズドキャプションの形式設定を指定する方法の例を以下に示します。
 
 ```java
 private final MediaPlayer.PlaybackEventListener _playbackEventListener = 

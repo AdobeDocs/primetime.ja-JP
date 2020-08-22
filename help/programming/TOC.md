@@ -3,8 +3,9 @@ cloud: experience-cloud
 product: adobe primetime
 audience: end-user
 user-guide-title: Primetimeプログラミングヘルプ
+user-guide-description: Allows you to learn to develop applications and video players using Java on Android devices and Objective-C on iOS devices.
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
 source-wordcount: '4307'
 ht-degree: 0%
@@ -28,7 +29,7 @@ ht-degree: 0%
          + [MediaPlayerオブジェクトのライフサイクルとステータス](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayer-object-lifecycle-states.md)
          + [MediaResource情報にアクセスするためのMediaPlayerItemメソッド](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayeritem-accessing-mediaresource.md)
          + [MediaPlayerインスタンスの再利用または削除](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayer-reuse-or-remove.md)
-         + [再生タイムラインの確認](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-timeline-inspect-playback.md)
+         + [再生タイムラインのInspect](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-timeline-inspect-playback.md)
          + [MediaPlayerの中断と復元](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-suspend-and-restore.md)
       + Primetime Playerイベントのリッスン {#listen-primetime-player-events}
          + [概要](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/events-listen-for/android-3x-events-listen-for.md)
@@ -116,7 +117,7 @@ ht-degree: 0%
          + [広告のクリックに対するレスポンス](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-respond-to-ad-clicks.md)
          + [クリック可能な広告プロセスの分離](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-separate-clickable-ad-process.md)
          + [再生の一時停止と再開](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md)
-      + [Adobe CRSの概要を使用した、互換性のない広告の再パッケージ化](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-transcoding/android-3x-ad-transcoding.md)
+      + [AdobeCRSの概要を使用した、互換性のない広告の再パッケージ化](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-transcoding/android-3x-ad-transcoding.md)
       + VASTおよびVMAP広告に対する広告のフォールバック {#ad-fallback}
          + [概要](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback.md)
          + [VMAPインライン広告のフォールバック広告動作の定義](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback-set-up.md)
@@ -169,7 +170,7 @@ ht-degree: 0%
       + [再生前のDRM認証](tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-auth-before-playback.md)
       + [再生中のDRM認証](tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-auth-during-playback.md)
    + ビデオ分析 {#video-analytics}
-      + [TVSDKとAdobeAnalyticsの統合](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-integration-overview.md)
+      + [TVSDKとAdobe Analyticsの統合](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-integration-overview.md)
       + [ビデオ分析の初期化と設定](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-integrate-heartbeats.md)
       + [カスタムメタデータサポートの実装](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-custom-metadata.md)
       + [チャプターサポートの実装](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-chapter-support.md)
@@ -219,7 +220,7 @@ ht-degree: 0%
       + [広告シグナリングモード](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-ad-signaling-mode.md)
    + [コンパニオンバナー広告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-companion-banner-ads/ios-3x-companion-banner-ads.md)
    + [クリック可能な広告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-clickable-ads.md)
-   + [Adobe Creative Repackaging Serviceを使用して、互換性のない広告を再パッケージ化する](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-transcoding.md)
+   + [Adobeクリエイティブの再パッケージングサービスを使用して、互換性のない広告を再パッケージ化する](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-transcoding.md)
    + [堀からの広告測定](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-measurements-from-moat.md)
    + [VPAID 2.0広告のサポート](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-vpaid-2.0-ads.md)
    + [VASTおよびVMAP広告に対する広告のフォールバック](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-fallback.md)
@@ -283,7 +284,7 @@ ht-degree: 0%
       + [Timelineクラス](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-timeline.md)
       + [Timeline advertisingクラス](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-timeline-advertising.md)
       + [Digital Rights Managementクラス](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-digital-rights-management-ios.md)
-      + [ビデオAnalyticsクラス](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-video-analytics.md)
+      + [Video Analyticsクラス](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-video-analytics.md)
    + 通知コード {#notification-codes}
       + [TVSDK通知システム](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/c-ios-notification-codes.md)
       + [ERROR通知コード](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-notifications-errors.md)
@@ -303,7 +304,7 @@ ht-degree: 0%
          + [MediaPlayerオブジェクトのライフサイクルとステータス](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-object-lifecycle-states.md)
          + [MediaResource情報にアクセスするためのMediaPlayerItemメソッド](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/r-psdk-android-2.7-mediaplayeritem-methods-for-accessing-mediaresource.md)
          + [MediaPlayerインスタンスの再利用または削除](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-reuse-or-remove.md)
-         + [再生タイムラインの確認](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/t-psdk-android-2.7-timeline-inspect-playback.md)
+         + [再生タイムラインのInspect](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/t-psdk-android-2.7-timeline-inspect-playback.md)
          + [MediaPlayerの中断と復元](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-suspend-and-restore.md)
       + Primetime Playerイベントのリッスン   {#listen-primetime-player-events}
          + [概要](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-events-listen-for.md)
@@ -318,7 +319,7 @@ ht-degree: 0%
          + [シークスクラブバーに現在の再生位置を表示](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md)
          + [DVR用に拡張されたコントロールバーの作成](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-ctrl-bar-for-dvr-construct.md)
          + [特定の時間にストリームを開始](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-stream-entry-control.md)
-      + 特定のビデオ用にメディアプレイヤーを初期化する {#initialize-specific-video}
+      + 特定のビデオ用にメディアプレイヤーを初期化します {#initialize-specific-video}
          + [メディアリソースの作成](tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-create.md)
          + [メディアリソースをメディアプレイヤーに読み込む](tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md)
          + [MediaPlayerItemLoaderを使用したメディアリソースの読み込み](tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md)
@@ -389,7 +390,7 @@ ht-degree: 0%
          + [広告のクリックに対するレスポンス](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-respond-to-ad-clicks.md)
          + [クリック可能な広告プロセスの分離](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-separate-clickable-ad-process.md)
          + [再生の一時停止と再開](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-pausing-resuming-playback.md)
-      + [Adobe Creative Repackaging Service(CRS)を使用して、互換性のない広告を再パッケージ化する](tvsdk-2.7-for-android/ad-insertion/ad-transcoding/c-psdk-android-2.7-ad-transcoding.md)
+      + [Adobeクリエイティブ再パッケージ化サービス(CRS)を使用して、互換性のない広告を再パッケージ化する](tvsdk-2.7-for-android/ad-insertion/ad-transcoding/c-psdk-android-2.7-ad-transcoding.md)
       + VASTおよびVMAP広告に対する広告のフォールバック {#ad-fallback}
          + [概要](tvsdk-2.7-for-android/ad-insertion/ad-fallback/c-psdk-android-2.7-ad-fallback.md)
          + [VMAPインライン広告のフォールバック広告動作の定義](tvsdk-2.7-for-android/ad-insertion/ad-fallback/t-psdk-android-2.7-ad-fallback-set-up.md)
@@ -502,7 +503,7 @@ ht-degree: 0%
          + [MediaPlayerオブジェクトのライフサイクル](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-mediaplayer-object-lifecycle-states.md)
          + [MediaResource情報にアクセスするためのMediaPlayerメソッド](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-mediaplayer-mediaresource.md)
          + [MediaPlayerインスタンスのリセット、再利用または削除](tvsdk-1.4-for-android/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/android-1.4-mediaplayer-reset-reuse-instance.md)
-         + [再生タイムラインの確認](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-timeline-inspect-playback.md)
+         + [再生タイムラインのInspect](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-timeline-inspect-playback.md)
       + [ID3タグ](tvsdk-1.4-for-android/notification-system/android-1.4-id3-metadata-retrieve.md)
       + [バッファリング](tvsdk-1.4-for-android/buffering-configuration/android-1.4-buffering-times-set.md)
       + [即時オン](tvsdk-1.4-for-android/buffering-configuration/instant-on/android-1.4-instant-on.md)
@@ -537,7 +538,7 @@ ht-degree: 0%
          + [広告のクリックに対するレスポンス](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-respond-to-ad-clicks.md)
          + [クリック可能な広告プロセスの分離](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-separate-clickable-ad-process.md)
          + [再生の一時停止と再開](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md)
-      + [Adobe Creative Repackaging Serviceを使用して、互換性のない広告を再パッケージ化する](tvsdk-1.4-for-android/ad-insertion/ad-transcoding/android-1.4-ad-transcoding.md)
+      + [Adobeクリエイティブの再パッケージングサービスを使用して、互換性のない広告を再パッケージ化する](tvsdk-1.4-for-android/ad-insertion/ad-transcoding/android-1.4-ad-transcoding.md)
       + [VASTおよびVMAP広告に対する広告のフォールバック](tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md)
       + [堀からの広告測定](tvsdk-1.4-for-android/ad-insertion/android-1.4-ad-measurements-from-moat.md)
       + [VPAID 2.0広告のサポート](tvsdk-1.4-for-android/ad-insertion/vpaid-2.0-ads/android-1.4-vpaid-2.0-ads.md)
@@ -593,7 +594,7 @@ ht-degree: 0%
          + [代替オーディオ](tvsdk-1.4-for-android/android-1.4-implementing-alternate-audio/alternate-audio/android-1.4-alternate-audio.md)
          + [プレイリスト内の代替オーディオトラック](tvsdk-1.4-for-android/android-1.4-implementing-alternate-audio/alternate-audio/android-1.4-alternate-audio-in-playlist.md)
          + [代替オーディオトラックへのアクセス](tvsdk-1.4-for-android/android-1.4-implementing-alternate-audio/alternate-audio/android-1.4-alternate-audio-implement.md)
-      + アドビのAnalyticsとTVSDKの統合 {#integrating-adobe-analytics}
+      + Adobe AnalyticsとTVSDKの統合 {#integrating-adobe-analytics}
          + [ビデオ分析](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-integration-overview.md)
          + [ビデオ分析の初期化と設定](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-integrate-heartbeats.md)
          + [カスタムメタデータサポートの実装](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-custom-metadata.md)
@@ -640,8 +641,8 @@ ht-degree: 0%
          + [WARNING通知コード](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/android-1.4-notification-warnings.md)
          + [INFO通知コード](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/android-1.4-notification-info.md)
          + [NATIVE_ERROR通知の詳細](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md)
-         + [NATIVE_ERROR: ビデオ再生値](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-notifications-video-playback.md)
-         + [NATIVE_ERROR: 暗号化値](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-notifications-crypto-errors.md)
+         + [NATIVE_ERROR:ビデオ再生値](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-notifications-video-playback.md)
+         + [NATIVE_ERROR:暗号化値](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-notifications-crypto-errors.md)
 + TVSDK 1.4 for iOS {#tvsdk-1-4-for-ios}
    + はじめに {#introduction}
       + [概要](tvsdk-1.4-for-ios/c-psdk-ios-1.4-overview/c-psdk-ios-1.4-overview.md)
@@ -673,7 +674,7 @@ ht-degree: 0%
       + [広告シグナリングモード](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-primetime-ad-serving-metadata/r-psdk-ios-1.4-ad-signaling-mode.md)
    + [コンパニオンバナー広告](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-companion-banner-ads/c-psdk-ios-1.4-companion-banner-ads.md)
    + [クリック可能な広告](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-clickable-ads.md)
-   + [Adobe Creative Repackaging Serviceを使用して、互換性のない広告を再パッケージ化する](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-transcoding.md)
+   + [Adobeクリエイティブの再パッケージングサービスを使用して、互換性のない広告を再パッケージ化する](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-transcoding.md)
    + [堀からの広告測定](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-measurements-from-moat.md)
    + [VPAID 2.0広告のサポート](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-vpaid-2.0-ads.md)
    + [VASTおよびVMAP広告に対する広告のフォールバック](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md)
@@ -737,7 +738,7 @@ ht-degree: 0%
       + [Timelineクラス](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-timeline.md)
       + [Timeline advertisingクラス](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-timeline-advertising.md)
       + [Digital Rights Managementクラス](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-digital-rights-management-ios.md)
-      + [ビデオAnalyticsクラス](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-video-analytics.md)
+      + [Video Analyticsクラス](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-video-analytics.md)
    + 通知コード {#notification-codes}
       + [TVSDK通知システム](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/c-psdk-ios-1.4-notification-codes.md)
       + [ERROR通知コード](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/r-psdk-ios-1.4-notifications-errors.md)
@@ -755,7 +756,7 @@ ht-degree: 0%
          + StageVideoの機能と制限事項 {#stagevideo}
             + [概要](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stagevideo-capabilities.md)
             + [StageVideoが使用可能かどうかを確認します。](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/t-psdk-dhls-1.4-stage-video-available.md)
-            + [Flash 15でのStageVideoのサポート](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stage-video-flash15-support.md)
+            + [StageVideoのFlash15のサポート](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stage-video-flash15-support.md)
             + [StageVideoの最小要件](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/r-psdk-dhls-1.4-requirements-stage-video.md)
             + [StageVideoとHTMLオーバーレイ](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stage-video-and-overlays.md)
    + コンテンツ再生オプション {#content-playback-options}
@@ -798,7 +799,7 @@ ht-degree: 0%
       + MediaPlayerインスタンスの再利用または削除 {#reuse-or-remove-mediaplayer}
          + [MediaPlayerインスタンスのリセットまたは再利用](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/t-psdk-dhls-1.4-mediaplayer-reset-reuse-instance.md)
          + [MediaPlayerインスタンスとリソースの解放](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/t-psdk-dhls-1.4-mediaplayer-release-instance.md)
-      + [再生タイムラインの確認](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/t-psdk-dhls-1.4-timeline-inspect-playback.md)
+      + [再生タイムラインのInspect](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/t-psdk-dhls-1.4-timeline-inspect-playback.md)
    + バッファリング {#buffering}
       + [バッファリング時間ポリシー](tvsdk-1.4-for-desktop-hls/buffering-configuration/buffering-policies/c-psdk-dhls-1.4-buffering-policies.md)
       + [バッファリング時間の設定](tvsdk-1.4-for-desktop-hls/buffering-configuration/buffering-policies/t-psdk-dhls-1.4-buffering-times-set.md)
@@ -831,7 +832,7 @@ ht-degree: 0%
          + [マニフェストタグに関する通知](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/c-psdk-dhls-1.4-custom-tags-notifications.md)
          + [カスタムタグのサブスクライブ](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/t-psdk-dhls-1.4-custom-tags-subscribe.md)
          + [時間指定メタデータ追加通知のリスナー](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/t-psdk-dhls-1.4-custom-tags-receive-notifications.md)
-      + [Adobe Creative Repackaging Serviceを使用して、互換性のない広告を再パッケージ化する](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-transcoding/c-psdk-dhls-1.4-ad-transcoding.md)
+      + [Adobeクリエイティブの再パッケージングサービスを使用して、互換性のない広告を再パッケージ化する](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-transcoding/c-psdk-dhls-1.4-ad-transcoding.md)
       + [VASTおよびVMAP広告に対する広告のフォールバック](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-fallback/c-psdk-dhls-1.4-ad-fallback.md)
       + カスタム広告 {#custom-ads}
          + [カスタム広告要件](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/c-psdk-dhls-1.4-custom-ads-req.md)
@@ -863,7 +864,7 @@ ht-degree: 0%
          + [シグナリングモードと時間範囲](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/custom-time-range-ops/c-psdk-dhls-1.4-signalmode-timerange-combos.md)
       + 広告の削除と置換の使用例 {#use-cases}
          + [範囲をマーク](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-mark-ranges.md)
-         + [Adobe Primetime Ad Decisioning広告の時間範囲の置き換え](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-replace-ranges-with-aud-ad.md)
+         + [時間範囲をAdobe Primetimead decisioning広告に置き換える](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-replace-ranges-with-aud-ad.md)
          + [Primetime Ad Decisioning広告の範囲の削除](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-delete-ranges-with-aud-ad.md)
          + [特殊な使用例](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-special-use-cases.md)
       + [広告の削除と置換のエラー処理](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-error-handling/c-psdk-dhls-1.4-ad-delete-replace-error-handling.md)
@@ -880,7 +881,7 @@ ht-degree: 0%
       + [代替オーディオ](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-alternate-tracks/alternate-audio/c-psdk-dhls-1.4-alternate-audio.md)
       + [プレイリスト内の代替オーディオトラック](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-alternate-tracks/alternate-audio/c-psdk-dhls-1.4-alternate-audio-in-playlist.md)
       + [代替オーディオトラックへのアクセス](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-alternate-tracks/alternate-audio/t-psdk-dhls-1.4-alternate-audio-implement.md)
-   + TVSDKとAdobeAnalyticsの統合 {#integrating-tvsdk-analytics}
+   + TVSDKとAdobe Analyticsの統合 {#integrating-tvsdk-analytics}
       + [ビデオ分析](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/c-psdk-dhls-1.4-va-integration-overview.md)
       + [ビデオ分析の初期化と設定](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-va-integrate-heartbeats.md)
       + [カスタムメタデータサポートの実装](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-va-custom-metadata.md)
@@ -933,7 +934,7 @@ ht-degree: 0%
       + [Timeline operationsクラス](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-timeline-operations.md)
       + [Timeline resolversクラス](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-timeline-resolvers.md)
       + [ユーティリティクラス](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-utility.md)
-      + [ビデオAnalyticsクラス](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-video-analytics.md)
+      + [Video Analyticsクラス](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-video-analytics.md)
    + 通知コード {#notification-codes}
       + [概要](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-notification-codes.md)
       + [ERROR通知コード](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-errors.md)
@@ -941,8 +942,8 @@ ht-degree: 0%
       + [INFO通知コード](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notification-info.md)
    + NATIVE_ERROR通知 {#native-error-notification}
       + [NATIVE_ERROR通知の詳細](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md)
-      + [NATIVE_ERROR: ビデオ再生値](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-video-playback-errors.md)
-      + [NATIVE_ERROR: 暗号化値](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-crypto-errors.md)
+      + [NATIVE_ERROR:ビデオ再生値](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-video-playback-errors.md)
+      + [NATIVE_ERROR:暗号化値](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-crypto-errors.md)
 + Browser-TVSDK-2.4 {#browser-tvsdk-2-4}
    + はじめに {#introduction}
       + [製品の概要とオーディエンス](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/c-psdk-browser-tvsdk-2.4-overview-prod-audience-guide.md)
@@ -952,7 +953,7 @@ ht-degree: 0%
          + [サポートされるDASH機能](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/new-features/c-psdk-browser-tvsdk-2.4-new-features-c-dash.md)
       + 要件 {#requirements}
          + [概要](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/requirements-overview/c-psdk-browser-tvsdk-2.4-requirements.md)
-         + [Flash Playerの要件](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/requirements-overview/r-psdk-browser-tvsdk-2.4-flash-fallback-req.md)
+         + [Flash Player要件](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/requirements-overview/r-psdk-browser-tvsdk-2.4-flash-fallback-req.md)
          + [セキュリティに関する考慮事項](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/requirements-overview/c-psdk-browser-tvsdk-2.4-sec-req.md)
          + [コンテンツとマニフェストの要件](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/requirements-overview/r-psdk-browser-tvsdk-2.4-requirements-content.md)
          + [#EXT-X-VERSIONの要件](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/requirements-overview/r-psdk-browser-tvsdk-2.4-requirements-ext-x-version.md)
@@ -970,7 +971,7 @@ ht-degree: 0%
       + 広告 {#ads}
          + [広告の概要](browser-tvsdk-2.4/getting-started/about-ads/c-psdk-browser-tvsdk-2.4-ads.md)
          + [追加広告](browser-tvsdk-2.4/getting-started/about-ads/t-psdk-browser-tvsdk-2.4-add-adverts.md)
-      + [デジタル著作権管理](browser-tvsdk-2.4/getting-started/about-drm/c-psdk-browser-tvsdk-2.4-drm.md)
+      + [Digital Rights Management](browser-tvsdk-2.4/getting-started/about-drm/c-psdk-browser-tvsdk-2.4-drm.md)
       + [バッファリング](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-buffering.md)
       + [指標](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-metrics.md)
       + [メディアソースリストを使用したFlashフォールバックの強制](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-force-flash-fallback.md)
@@ -979,7 +980,7 @@ ht-degree: 0%
       + [UIフレームワーク](browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-ui-framework.md)
       + [プレイヤーのスキン表示](browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md)
    + コンテンツ再生オプション {#content-playback-options}
-      + [Flashのフェイルオーバー](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-flash-failover.md)
+      + [Flashフェイルオーバー](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-flash-failover.md)
       + [MediaPlayerの設定](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/t-psdk-browser-tvsdk-2.4-mediaplayer-set-up.md)
       + 特定のビデオ用にメディアプレイヤーを初期化する {#initialize-specific-video}
          + [メディアリソースの作成](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-create.md)
@@ -1018,7 +1019,7 @@ ht-degree: 0%
          + [MediaPlayerオブジェクトのライフサイクルと状態](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayer-object-lifecycle-states.md)
          + [MediaResource情報にアクセスするMediaPlayer属性](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/r-psdk-browser-tvsdk-2.4-mediaplayer-methods-for-accessing-mediaresource.md)
          + [MediaPlayerインスタンスの再利用または削除](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayer-reuse-or-remove.md)
-         + [再生タイムラインの確認](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-inspect-playback.md)
+         + [再生タイムラインのInspect](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-inspect-playback.md)
          + [TimelineUpdatedEvent追加のリスナー](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-update-add-listener.md)
       + クローズドキャプションの操作 {#closed-captions}
          + [概要](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/c-psdk-browser-tvsdk-2.4-closed-captions-set-up.md)
@@ -1028,7 +1029,7 @@ ht-degree: 0%
             + [概要](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/c-psdk-browser-tvsdk-2.4-closed-caption-styling-control.md)
             + [クローズドキャプションのスタイルの設定](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/t-psdk-browser-tvsdk-2.4-closed-caption-styles-set.md)
             + [クローズドキャプションのスタイル設定オプション](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/r-psdk-browser-tvsdk-2.4-closed-caption-styling-options.md)
-            + [例： キャプションの形式設定](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/r-psdk-browser-tvsdk-2.4-closed-caption-formatting-samples.md)
+            + [例：キャプションの形式設定](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/r-psdk-browser-tvsdk-2.4-closed-caption-formatting-samples.md)
       + [メディアの再生](browser-tvsdk-2.4/drm-content-security/android-dhls-failover-for-playback/c-psdk-browser-tvsdk-2.4-failover-media-playback.md)
       + [ID3タグ](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/t-psdk-browser-tvsdk-2.4-id3-metadata-retrieve.md)
       + [iOSでの自動再生](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-autoplay-ios.md)
@@ -1071,7 +1072,7 @@ ht-degree: 0%
       + クリック可能な広告 {#clickable-ads}
          + [概要](browser-tvsdk-2.4/ad-insertion/clickable-ads/c-psdk-browser-tvsdk-2.4-clickable-ads.md)
          + [クリック可能な広告の処理](browser-tvsdk-2.4/ad-insertion/clickable-ads/t-psdk-browser-tvsdk-2.4-handle-clickable-ads.md)
-   + ブラウザーTVSDKとAdobeAnalyticsの統合 {#integrating-browser}
+   + ブラウザーTVSDKとAdobe Analyticsの統合 {#integrating-browser}
       + [ビデオ分析](browser-tvsdk-2.4/c-psdk-browser-2.4-integration/c-psdk-browser-tvsdk-2.4-va-integration-overview.md)
       + [ビデオ分析の初期化と設定](browser-tvsdk-2.4/c-psdk-browser-2.4-integration/t-psdk-browser-tvsdk-2.4-va-integrate-heartbeats.md)
       + [カスタムメタデータサポートの実装](browser-tvsdk-2.4/c-psdk-browser-2.4-integration/t-psdk-browser-tvsdk-2.4-va-custom-metadata.md)
@@ -1094,5 +1095,5 @@ ht-degree: 0%
       + [概要](browser-tvsdk-2.4/billing/c-psdk-browser-tvsdk-2.4-billing.md)
       + [請求指標の設定](browser-tvsdk-2.4/billing/t-psdk-browser-tvsdk-2.4-billing-config.md)
       + [請求指標の送信](browser-tvsdk-2.4/billing/r-psdk-browser-tvsdk-2.4-billing-data-format.md)
-   + [Adobe Flash Player用便利なAPI](browser-tvsdk-2.4/r-psdk-browser-tvsdk-2.4-helpful-apis.md)
+   + [AdobeFlash Playerに役立つAPI](browser-tvsdk-2.4/r-psdk-browser-tvsdk-2.4-helpful-apis.md)
    + [Primetime Playerクラスの概要](browser-tvsdk-2.4/c-psdk-browser-tvsdk-2.4-class-summary.md)

@@ -2,9 +2,10 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Digital Rights Managementヘルプ
+user-guide-title: PrimetimeDigital Rights Managementヘルプ
+user-guide-description: Helps you learn more about various user scenarios in Digital Rights Management (DRM).
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
 source-wordcount: '2202'
 ht-degree: 0%
@@ -33,41 +34,41 @@ ht-degree: 0%
       + [証明書の展開](certificate-enrollment-guide/deploy-certs/deploying-certs.md)
    + [ストアキー](certificate-enrollment-guide/storing-keys.md)
    + [証明書の更新](certificate-enrollment-guide/renewing-certs.md)
-+ Adobe Primetime DRM SDK 5.3.1 {#drm-sdk-5-3-1}
-   + [Adobe Primetime DRM SDK — 概要](drm-sdk-overview/overview.md)
-   + [Adobe Primetime DRMについて](drm-sdk-overview/about-adobe-access.md)
++ Adobe PrimetimeDRM SDK 5.3.1 {#drm-sdk-5-3-1}
+   + [Adobe PrimetimeDRM SDK — 概要](drm-sdk-overview/overview.md)
+   + [Adobe PrimetimeDRMについて](drm-sdk-overview/about-adobe-access.md)
    + [主な機能](drm-sdk-overview/key-features.md)
    + [用語とコアコンセプト](drm-sdk-overview/terminology-and-core-concepts.md)
    + コンテンツ配信ワークフロー {#content-distribution-workflow}
       + [コンテンツの準備](drm-sdk-overview/content-distribution-workflow/content-preparation.md)
       + [コンテンツの取得](drm-sdk-overview/content-distribution-workflow/content-acquisition.md)
-   + Adobe Primetime DRMコンポーネント {#adobe-access-components}
+   + Adobe PrimetimeDRMコンポーネント {#adobe-access-components}
       + [概要](drm-sdk-overview/adobe-access-components/adobe-access-sdk.md)
-      + [Adobe Primetime DRM SDK](drm-sdk-overview/adobe-access-components/drm-sdk.md)
-      + [保護されたストリーミング用のAdobe Primetime DRM Server](drm-sdk-overview/adobe-access-components/protected-streaming.md)
-      + [Adobe Flash Player](drm-sdk-overview/adobe-access-components/adobe-flash-player.md)
+      + [Adobe PrimetimeDRM SDK](drm-sdk-overview/adobe-access-components/drm-sdk.md)
+      + [保護されたストリーミング用のAdobe PrimetimeDRMサーバ](drm-sdk-overview/adobe-access-components/protected-streaming.md)
+      + [AdobeFlash Player](drm-sdk-overview/adobe-access-components/adobe-flash-player.md)
       + [Adobe AIR](drm-sdk-overview/adobe-access-components/adobe-air.md)
       + [ネイティブiOSおよびAndroidアプリケーション](drm-sdk-overview/adobe-access-components/native-ios-and-android-apps.md)
-   + [Adobe Primetime DRMのデプロイ](drm-sdk-overview/adobe-access-components/deploy-adobe-access/configure-adobe-access.md)
+   + [Adobe PrimetimeDRMの導入](drm-sdk-overview/adobe-access-components/deploy-adobe-access/configure-adobe-access.md)
    + その他の導入シナリオ {#additional-deployment-scenarios}
-      + [UltraVioletメディアおよびAdobe Primetime DRM](drm-sdk-overview/adobe-access-components/additional-deployment-scenarios/ultra-violet-media-adobe-access.md)
-      + [Adobe Primetime認証とAdobe Primetime DRM](drm-sdk-overview/adobe-access-components/additional-deployment-scenarios/adobe-pass-and-adobe-access.md)
+      + [UltraVioletメディアおよびAdobe PrimetimeDRM](drm-sdk-overview/adobe-access-components/additional-deployment-scenarios/ultra-violet-media-adobe-access.md)
+      + [Adobe Primetime認証とAdobe PrimetimeDRM](drm-sdk-overview/adobe-access-components/additional-deployment-scenarios/adobe-pass-and-adobe-access.md)
 + DRMクイック開始ガイド {#drm-quick-start}
    + [はじめに](quick-start/getting-started.md)
    + [Tomcatのインストール](quick-start/install-tomcat.md)
    + [保護されたストリーミング用のサーバーの設定と展開](quick-start/setup-deploy-drm-server-ps.md)
    + [暗号化されたコンテンツのパッケージ化](quick-start/package-content.md)
-   + [Flash Playerと再生テストコンテンツのインストール](quick-start/install-fp-playback-test.md)
+   + [Flash Playerおよび再生テスト用コンテンツのインストール](quick-start/install-fp-playback-test.md)
    + [ローカルにパッケージ化されたビデオの再生](quick-start/playback-locally-pkgd-video.md)
    + [次の手順](quick-start/next-steps.md)
-+ Adobe Primetime Cloud DRMクイック開始ガイド {#cloud-drm-quickstart}
++ Adobe PrimetimeCloud DRMクイック開始ガイド {#cloud-drm-quickstart}
    + [Primetime Cloud DRMに含まれるもの](cloud-quick-start/whats-included.md)
    + [Primetime Cloud DRMでサポートされないもの](cloud-quick-start/not-supported.md)
    + [前提条件](cloud-quick-start/prerequisites.md)
    + パッケージオプション {#packaging-options}
       + [付属のPrimetime Offline Packagerの使用](cloud-quick-start/packaging-options/use-offline-packager.md)
       + [サードパーティ製エンコーダーの使用](cloud-quick-start/packaging-options/use-third-party-encoder.md)
-      + [Adobe Media Serverを使用する](cloud-quick-start/packaging-options/use-adobe-media-server.md)
+      + [Adobeメディアサーバを使用](cloud-quick-start/packaging-options/use-adobe-media-server.md)
    + [パッケージ化されたコンテンツのテスト](cloud-quick-start/test-packaged-content.md)
    + [エラーのトリエイジング](cloud-quick-start/triaging-errors/client-error-triaging.md)
    + カスタム認証/エンタイトルメント {#custom-auth-ent}
@@ -82,22 +83,22 @@ ht-degree: 0%
    + [カスタムDRMポリシーの作成（オプション）](cloud-quick-start/creating-custom-drm-policies/creating-custom-drm-policies.md)
    + [既存のDRMコンテンツを更新してCloud DRMを使用する（オプション）](cloud-quick-start/update-existing-drm-to-cloud.md)
    + [Xbox360へのストリーミング（オプション）](cloud-quick-start/streaming-to-xbox360.md)
-+ Adobe Primetime DRMキーサーバーの使用 {#using-key-server}
++ Adobe PrimetimeDRMキーサーバーの使用 {#using-key-server}
    + [Primetime DRMキーサーバーの使用に関する要件](using-the-drm-key-server/requirements.md)
    + [Primetime DRMキーサーバーのデプロイ](using-the-drm-key-server/deployment-overview.md)
    + [コンテンツのパッケージ化](using-the-drm-key-server/packaging-content.md)
-+ Adobe Primetime DRMセキュアデプロイメントガイドライン {#guidelines}
++ Adobe PrimetimeDRMセキュアデプロイメントガイドライン {#guidelines}
    + ネットワークトポロジの概要 {#introduction}
       + [概要](secure-deployment-guidelines/overview/network-topology.md)
       + [ネットワーク層セキュリティ](secure-deployment-guidelines/overview/network-topology-network-layer-sec.md)
       + [ファイアウォール規則](secure-deployment-guidelines/overview/network-topology-firewall-rules.md)
-      + [Adobe Primetime DRMネットワークプロトコル](secure-deployment-guidelines/overview/network-topology-nw-protocols.md)
+      + [Adobe PrimetimeDRMネットワークプロトコル](secure-deployment-guidelines/overview/network-topology-nw-protocols.md)
       + [アプリケーションサーバーのポート](secure-deployment-guidelines/overview/network-topology-ports-for-app-srvs.md)
       + [SSLの設定](secure-deployment-guidelines/overview/network-topology-configuring-ssl.md)
    + [ベンダー固有のセキュリティ情報](secure-deployment-guidelines/vendor-specific-sec-info.md)
    + [物理的なセキュリティとアクセス](secure-deployment-guidelines/physical-sec-and-access.md)
    + [コンテンツのパッケージ化と保護](secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content.md)
-   + [Flash Media Rights Management Server 1.xとの互換性の確保](secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-fmrms.md)
+   + [FlashメディアRights Managementサーバー1.xとの互換性の確保](secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-fmrms.md)
    + License Serverの発行と保護 {#issuing-licenses}
       + [ライセンスサーバの保護](secure-deployment-guidelines/issuing-licenses/issuing-licenses-protect-license-server.md)
       + [事前生成ライセンス](secure-deployment-guidelines/issuing-licenses/issuing-licenses-pre-gen.md)
@@ -113,11 +114,11 @@ ht-degree: 0%
       + [ライセンス](multi-drm-workflows/quick-start/handle-the-licensing.md)
       + [保護されているコンテンツの再生](multi-drm-workflows/quick-start/playback-protected-content.md)
       + [クイック開始のトラブルシューティング](multi-drm-workflows/quick-start/troubleshoot-quickstart.md)
-   + ワークフロー: パッケージ化、ライセンス、再生 {#package-license-play}
+   + ワークフロー:パッケージ化、ライセンス、再生 {#package-license-play}
       + [FairPlay用のMulti-DRMワークフロー](multi-drm-workflows/p-l-and-p/fairplay-workflow.md)
       + [WidevineおよびPlayReady用のMulti-DRMワークフロー](multi-drm-workflows/p-l-and-p/widevine-workflow.md)
       + [Bento4でコンテンツをパッケージ化する](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-bento.md)
-      + [Adobe Offline Packagerでコンテンツをパッケージ化する](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-aop.md)
+      + [AdobeのOffline Packagerでコンテンツをパッケージ化する](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-aop.md)
       + [Output Protectionポリシーの使用](multi-drm-workflows/p-l-and-p/setting-policies-widevine.md)
       + [クライアントキーリクエストワークフローの概要](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-overview.md)
       + [Expressplayトークン](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-expressplay-tokens.md)
@@ -128,9 +129,9 @@ ht-degree: 0%
       + [Primetime Packager/Cloud DRM/TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/plp-1.md)
       + [ExpressPlay Packager/Cloud DRM/TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/package-and-play.md)
    + 機能トピック {#feature-topics}
-      + [参照サーバー： ExpressPlay Entitlement Server(SEE)のサンプル](multi-drm-workflows/feature-topics/sees-reference-server.md)
-      + [リファレンスサービス： 時間ベースの権利付与](multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
-      + [リファレンスサービス： デバイスバインディングのエンタイトルメント](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
+      + [参照サーバー：ExpressPlay権利付与サーバーのサンプル(SEE)](multi-drm-workflows/feature-topics/sees-reference-server.md)
+      + [リファレンスサービス：時間ベースの権利付与](multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
+      + [リファレンスサービス：デバイスバインディングのエンタイトルメント](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
       + [パブリックAPIを参照](multi-drm-workflows/feature-topics/sees-reference-server-public-api.md)
    + ExpressPlayライセンストークンリクエスト/レスポンスのリファレンス {#license-token-req-resp-ref}
       + [概要](multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md)
@@ -139,7 +140,7 @@ ht-degree: 0%
       + [Widevineライセンストークンリクエスト/レスポンス](multi-drm-workflows/license-token-req-resp-ref/widevine-license-token-request.md)
    + [AccessからMulti-DRMへの移行](multi-drm-workflows/access-vs-multi.md)
    + [用語集](multi-drm-workflows/glossary/glossary-cek.md)
-+ Adobe Primetime DRM On Premises個別化サーバーガイド {#individualization-server}
++ Adobe PrimetimeDRMオンプレミス個別化サーバーガイド {#individualization-server}
    + [ソフトウェア要件](on-premises-i15n-server/title-page/sw-requirements.md)
    + サーバー設定プロパティ {#configuration-properties}
       + [サーバー環境へのプロパティの適用](on-premises-i15n-server/server-configuration-section/server-properties/apply-props-to-envs.md)
@@ -159,13 +160,13 @@ ht-degree: 0%
    + [クライアントリクエストの例](on-premises-i15n-server/server-configuration-section/sample-client-requests.md)
    + [FAQ](on-premises-i15n-server/server-configuration-section/faq.md)
 + Primetime DRM Server for Protected Streaming 5.3.1 {#server-for-protected-streaming}
-   + [保護されたストリーミング用のAdobe Primetime DRM Serverについて](protected-streaming/about-drm-for-protected-streaming.md)
+   + [保護されたストリーミング用のAdobe PrimetimeDRMサーバーについて](protected-streaming/about-drm-for-protected-streaming.md)
    + [使用ルールについて](protected-streaming/usage-rules.md)
    + [要件](protected-streaming/requirements.md)
    + 導入について {#understanding-deployment}
-      + [保護されたストリーミング用のAdobe Primetime DRM Serverのデプロイ](protected-streaming/understanding-deployment/deplying-drm-for-protected-streaming.md)
+      + [保護されたストリーミング用のAdobe PrimetimeDRMサーバーのデプロイ](protected-streaming/understanding-deployment/deplying-drm-for-protected-streaming.md)
       + [Javaシステムのプロパティ](protected-streaming/understanding-deployment/java-system-properties.md)
-      + [Adobe Primetime DRM秘密鍵証明書について](protected-streaming/understanding-deployment/drm-credentials.md)
+      + [Adobe PrimetimeDRM秘密鍵証明書について](protected-streaming/understanding-deployment/drm-credentials.md)
       + [HSMの設定](protected-streaming/understanding-deployment/hsm-configuration.md)
       + ライセンスサーバー構成ファイルの設定 {#configuration-files}
          + [ライセンスサーバー構成ファイル](protected-streaming/understanding-deployment/set-drm-license-server-config/drm-license-server-config-files.md)
@@ -175,27 +176,27 @@ ht-degree: 0%
       + [Crossdomain DRMポリシーファイル](protected-streaming/understanding-deployment/drm-crossdomain-policy-file.md)
       + [カスタム認証拡張](protected-streaming/understanding-deployment/custom-authorization-extensions.md)
       + [パフォーマンスの調整](protected-streaming/understanding-deployment/performance-tuning/global-configuration-file.md)
-      + [保護されたストリーミング用のAdobe Primetime DRMサーバーのアップグレード](protected-streaming/understanding-deployment/upgrading-the-license-server.md)
+      + [保護されたストリーミング用のAdobe PrimetimeDRMサーバーのアップグレード](protected-streaming/understanding-deployment/upgrading-the-license-server.md)
       + [保護されたストリーミング用のDRMサーバーの実行](protected-streaming/understanding-deployment/setting-the-license-server/running-the-license-server.md)
       + [コンテンツのパッケージ化](protected-streaming/understanding-deployment/packaging-content.md)
       + 保護されたストリーミングユーティリティ用DRMサーバー {#drm-for-protected-streaming-utilities}
          + [設定バリデーター](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/configuration-validator.md)
          + [パスワードスクランブラ](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)
          + [SWFハッシュ計算ツール](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/swf-hash-calculator.md)
-+ Adobe Primetime DRM SDKを使用したコンテンツ保護 — 5.3.1 {#using-drm-sdk}
-   + [Adobe Primetime DRMの新機能](protecting-content/introduction/whats-new.md)
++ Adobe PrimetimeDRM SDKを使用したコンテンツ保護 — 5.3.1 {#using-drm-sdk}
+   + [Adobe PrimetimeDRMの新機能](protecting-content/introduction/whats-new.md)
    + 使用ルールと認証 {#usage-rules-authentication}
       + [使用ルールと認証](protecting-content/introduction/usage-rules/authentication/user-authentication.md)
       + [時間型ルール](protecting-content/introduction/usage-rules/authentication/time-based-rules.md)
       + [同期の要件](protecting-content/introduction/usage-rules/authentication/synchronization.md)
    + ランタイムとアプリケーションの制限 {#runtime-application-restrictions}
       + [保護されたコンテンツを再生できるPrimetime DRMアプリケーションの許可リスト...](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
-      + [Adobe® Flash® Player SWFの許可リスト](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
+      + [Adobe®Flash®プレーヤSWFの許可リスト](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
       + [保護されたコンテンツへのアクセスが制限されたDRMクライアントのブロックリスト](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
       + [アプリケーションの実行時のブロックリスト](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
       + [DRMおよび実行時の最小セキュリティレベル](protecting-content/introduction/usage-rules/runtime-application-restrictions/min-sec-level-for-drm.md)
       + [保護されたコンテンツの再生に必要なデバイス機能](protecting-content/introduction/usage-rules/runtime-application-restrictions/device-capabilities.md)
-      + [Jailbreakの強制（Adobe Primetime DRMが必要）](protecting-content/introduction/usage-rules/runtime-application-restrictions/jailbreak-enforcement.md)
+      + [Jailbreakの強制(Adobe PrimetimeDRMが必要)](protecting-content/introduction/usage-rules/runtime-application-restrictions/jailbreak-enforcement.md)
    + その他のDRMポリシーオプション {#other-policy-options}
       + [カスタム使用ルール](protecting-content/introduction/usage-rules/other-policy-options/custom-usage-rules.md)
       + [強化されたライセンスチェーン](protecting-content/introduction/usage-rules/other-policy-options/enhanced-license-chaining.md)
@@ -214,7 +215,7 @@ ht-degree: 0%
       + [複数のDRMポリシー](protecting-content/introduction/packaging-options/multiple-policies.md)
    + SDKの設定 {#setting-up-the-sdk}
       + [開発環境のセットアップ](protecting-content/setting-up-the-sdk/setup-dev-env.md)
-      + [Adobe Primetime DRM秘密鍵証明書](protecting-content/setting-up-the-sdk/drm-credentials.md)
+      + [Adobe PrimetimeDRM秘密鍵証明書](protecting-content/setting-up-the-sdk/drm-credentials.md)
       + [証明書の要求](protecting-content/setting-up-the-sdk/requesting-certs.md)
       + [秘密鍵証明書の保存](protecting-content/setting-up-the-sdk/storing-credentials.md)
    + DRMポリシーの使用 {#working-policies}
@@ -234,7 +235,7 @@ ht-degree: 0%
    + ライセンスサーバの実装 {#implementing-the-license-server}
       + [概要](protecting-content/implementing-the-license-server/implementing-license-overview.md)
       + [License Server展開オプション](protecting-content/implementing-the-license-server/license-server-deployment-options.md)
-      + [Adobe Primetime DRMリクエストの処理](protecting-content/implementing-the-license-server/processing-drm-requests.md)
+      + [Adobe PrimetimeDRM要求の処理](protecting-content/implementing-the-license-server/processing-drm-requests.md)
       + [Get Server Version要求の処理](protecting-content/implementing-the-license-server/handling-get-server-version-reqs.md)
       + [ドメイン登録要求の処理](protecting-content/implementing-the-license-server/handling-domain-registration-reqs.md)
       + [ドメイン登録解除要求の処理](protecting-content/implementing-the-license-server/handling-domain-de-registration-reqs.md)
@@ -245,7 +246,7 @@ ht-degree: 0%
          + [ライセンス要求エラー処理](protecting-content/implementing-the-license-server/handling-license-reqs/license-request-errors.md)
          + [ライセンスの生成](protecting-content/implementing-the-license-server/handling-license-reqs/generating-licenses.md)
          + [ドメインバウンドライセンスの発行](protecting-content/implementing-the-license-server/handling-license-reqs/domian-bound-licenses.md)
-         + [リモートキー配信のライセンスをiOSクライアントに発行する（Adobe Primetimeが必要）](protecting-content/implementing-the-license-server/handling-license-reqs/issuing-licenses-remote-ios.md)
+         + [iOSクライアントへのリモートキー配信のライセンスの発行(Adobe Primetimeが必要)](protecting-content/implementing-the-license-server/handling-license-reqs/issuing-licenses-remote-ios.md)
          + [最小クライアントバージョン](protecting-content/implementing-the-license-server/handling-license-reqs/minimum-client-version.md)
          + [ライセンスプレビュー](protecting-content/implementing-the-license-server/handling-license-reqs/license-preview.md)
          + [IDベースのライセンス](protecting-content/implementing-the-license-server/handling-license-reqs/identity-based-licenses.md)
@@ -254,7 +255,7 @@ ht-degree: 0%
          + [拡張ライセンスチェーン](protecting-content/implementing-the-license-server/license-chaining/gen-enhanced-license-chaining.md)
       + [同期要求の処理](protecting-content/implementing-the-license-server/handling-synch-reqs.md)
       + [FMRMSの互換性の処理](protecting-content/implementing-the-license-server/handling-fmrms-compatibility.md)
-      + [アドビが発行した証明書の有効期限が切れた場合の証明書の更新の処理](protecting-content/implementing-the-license-server/handling-cert-updates.md)
+      + [Adobe発行の証明書の有効期限が切れた場合の証明書の更新の処理](protecting-content/implementing-the-license-server/handling-cert-updates.md)
       + [パフォーマンスの調整](protecting-content/implementing-the-license-server/performance-tuning.md)
    + クライアント資格情報の失効 {#revoking-client-creds}
       + [概要](protecting-content/revoking-client-creds/revoking-creds-overview.md)
@@ -268,7 +269,7 @@ ht-degree: 0%
    + [RBOP設定の例](RBOP/sample-output-protection-config.md)
    + [RBOP文法](RBOP/output-protection-grammar.md)
    + [RBOP FAQ](RBOP/output-protection-faq.md)
-+ Adobe Primetime DRMリファレンス実装5.3.1 {#drm-reference-implementation-5-3-1}
++ Adobe PrimetimeDRM参照実装5.3.1 {#drm-reference-implementation-5-3-1}
    + [参照の実装について](drm-reference-implementations/overview.md)
    + [一般的なワークフロー](drm-reference-implementations/typical-scenario.md)
    + コマンドラインツール {#command-line-tools}
@@ -316,11 +317,11 @@ ht-degree: 0%
       + [IDベースのドメイン登録ロジック](drm-reference-implementations/impl-domain-registration/impl-domain-registration-id-based-domains.md)
       + [匿名ドメイン登録の実装](drm-reference-implementations/impl-domain-registration/implement-anon-domain-reg.md)
       + [匿名ドメインロジック](drm-reference-implementations/impl-domain-registration/impl-domain-registration-anonymous-domains.md)
-   + [FMRMS 1.0または1.5からAdobe Primetime DRM 2.0以降への移行](drm-reference-implementations/migrating-fmrms-drm.md)
+   + [FMRMS 1.0または1.5からAdobe PrimetimeDRM 2.0以降への移行](drm-reference-implementations/migrating-fmrms-drm.md)
    + 既存の展開のアップグレード {#upgrade-existing-deploys}
       + [既存の展開のアップグレードの概要](drm-reference-implementations/upgrading-existing-deplys/upgrading-existing-deplys.md)
       + [ドメインサーバーのセットアップ](drm-reference-implementations/upgrading-existing-deplys/upgrading-existing-deplys-setup-ds.md)
-+ Adobe Primetime TVSDK-DRMワークフロー {#workflow}
++ Adobe PrimetimeTVSDK-DRMワークフロー {#workflow}
    + [TVSDK-DRMクライアント側ワークフローの概要](tvsdk-drm-workflow/overview.md)
    + [Primetime DRMコンテンツ保護オプション](tvsdk-drm-workflow/content-protection-options.md)
    + [Primetime DRM（クライアントでの使用）](tvsdk-drm-workflow/drm-on-client.md)
@@ -340,19 +341,19 @@ ht-degree: 0%
    + [ライセンスプレビュー](tvsdk-drm-workflow/license-preview.md)
    + [コンテンツの配信](tvsdk-drm-workflow/delivering-content.md)
 + [DRMクライアントエラーメッセージの参照](client-error-message-reference.md)
-+ Adobe Access DRMと外部キー管理システムの使用 {#external-cek}
-   + [Adobe Access DRM External CEKの概要](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)
++ 外部キー管理システムでのAdobeアクセスDRMの使用 {#external-cek}
+   + [AdobeアクセスDRM外部CEKの概要](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)
    + [標準AAXS DRMワークフロー](aaxs-drm-xkey-mgmt/aaxs-drm-standard-workflow.md)
    + [AAXS DRM外部CEKワークフロー](aaxs-drm-xkey-mgmt/aaxs-drm-external-cek-workflow.md)
    + [外部CEKを使用したライセンスの変更とパッケージ化](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek.md)
-+ Adobe Access Server for Protected Streamingの使用 {#adobe-access-server}
-   + [Adobe Access Server for Protected Streamingについて](aaxs-protected-streaming/about-aaxs-protect-stream.md)
++ 保護されたストリーミングにAdobe Access Serverを使用する {#adobe-access-server}
+   + [Protected StreamingのAdobe Access Serverについて](aaxs-protected-streaming/about-aaxs-protect-stream.md)
    + [使用ルール](aaxs-protected-streaming/usage-rules.md)
    + [要件](aaxs-protected-streaming/requirements.md)
    + 保護されたストリーミング用のAdobe Access Serverの導入 {#deploying-aaxs-protect-stream}
-      + [Adobe Access Server for Protected Streamingの導入の概要](aaxs-protected-streaming/deplying-aaxs-protect-stream/deplying-aaxs-protect-stream-overview.md)
+      + [保護ストリーミング用Adobe Access Serverの展開の概要](aaxs-protected-streaming/deplying-aaxs-protect-stream/deplying-aaxs-protect-stream-overview.md)
       + [Javaシステムのプロパティ](aaxs-protected-streaming/deplying-aaxs-protect-stream/java-system-properties.md)
-      + [Adobe Access資格情報](aaxs-protected-streaming/deplying-aaxs-protect-stream/aaxs-credentials.md)
+      + [Adobeアクセス資格情報](aaxs-protected-streaming/deplying-aaxs-protect-stream/aaxs-credentials.md)
       + [HSMの設定](aaxs-protected-streaming/deplying-aaxs-protect-stream/hsm-configuration.md)
    + ライセンスサーバー構成ファイル {#aaxs-license-server-config-files}
       + [設定ディレクトリの構造](aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-configuration-directory-structure.md)
@@ -363,7 +364,7 @@ ht-degree: 0%
    + パフォーマンスの調整 {#performance-tuning}
       + [グローバル設定ファイル](aaxs-protected-streaming/performance-tuning/global-configuration-file.md)
    + 保護されたストリーミング用のAdobe Access Serverのアップグレード {#upgrading-the-license-server}
-      + [Adobe Access Server for Protected Streamingの実行](aaxs-protected-streaming/upgrading-the-license-server/running-the-license-server.md)
+      + [保護されたストリーミング用にAdobe Access Serverを実行する](aaxs-protected-streaming/upgrading-the-license-server/running-the-license-server.md)
       + [ログファイル](aaxs-protected-streaming/upgrading-the-license-server/log-files.md)
       + [ログディレクトリ構造](aaxs-protected-streaming/upgrading-the-license-server/log-directory-structure.md)
       + [グローバルログファイル](aaxs-protected-streaming/upgrading-the-license-server/global-log-file.md)
@@ -374,16 +375,16 @@ ht-degree: 0%
       + [グローバル設定ファイルの更新](aaxs-protected-streaming/updating-configuration-files/updating-global-configuration.md)
       + [テナント構成ファイルの更新](aaxs-protected-streaming/updating-configuration-files/updating-tenant-configuration.md)
    + [コンテンツのパッケージ化](aaxs-protected-streaming/packaging-content.md)
-   + Adobe Access Server for Protected Streamingユーティリティ {#aaxs-protected-streaming-utilities}
+   + 保護されたストリーミングユーティリティ用Adobe Access Server {#aaxs-protected-streaming-utilities}
       + [構成バリデーター](aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)
       + [パスワードスクランブラ](aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)
       + [SWF Hash Calculator](aaxs-protected-streaming/aaxs-protected-streaming-utilities/swf-hash-calculator.md)
-+ Adobe Accessセキュアデプロイメントガイドライン {#adobe-access-secure-deployment-guidelines}
++ Adobeアクセスセキュア展開のガイドライン {#adobe-access-secure-deployment-guidelines}
    + ネットワークトポロジの概要 {#overview}
       + [ネットワークトポロジの概要](aaxs-secure-deployment-guidelines/overview/network-topology.md)
       + [ネットワーク層セキュリティ](aaxs-secure-deployment-guidelines/overview/network-topology-network-layer-sec.md)
       + [ファイアウォール規則](aaxs-secure-deployment-guidelines/overview/network-topology-firewall-rules.md)
-      + [Adobe Accessで使用されるネットワークプロトコル](aaxs-secure-deployment-guidelines/overview/network-topology-nw-protocols.md)
+      + [Adobeアクセスで使用されるネットワークプロトコル](aaxs-secure-deployment-guidelines/overview/network-topology-nw-protocols.md)
       + [アプリケーションサーバーのポート](aaxs-secure-deployment-guidelines/overview/network-topology-ports-for-app-srvs.md)
       + [SSLの設定](aaxs-secure-deployment-guidelines/overview/network-topology-configuring-ssl.md)
    + [ベンダー固有のセキュリティ情報](aaxs-secure-deployment-guidelines/vendor-specific-sec-info.md)
@@ -393,11 +394,11 @@ ht-degree: 0%
       + [コンテンツの安全なパッケージ化](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-secure-pkging.md)
       + [ポリシーの安全な保存](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-secure-storing-policies.md)
       + [非対称キーの暗号化](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-ake.md)
-      + [Flash Media Rights Management Server 1.xとの互換性の確保](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-ensure-compat-fmrms.md)
-   + ライセンスの保護と発行 {#issuing-licenses}
+      + [FlashメディアRights Managementサーバー1.xとの互換性の確保](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-ensure-compat-fmrms.md)
+   + Protectと発行ライセンス {#issuing-licenses}
       + [ローカルに生成されたCRLの使用](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-local-crls.md)
       + [Adobeが発行したCRLの使用](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-crls-by-adobe.md)
-      + [アドビが発行するCRLを補完するCRLの生成](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-gen-crls-to-supplement-adobe.md)
+      + [Adobeが発行したCRLを補うCRLの生成](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-gen-crls-to-supplement-adobe.md)
       + [ロールバックの検出](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection.md)
       + [ライセンス発行時のコンピュータ数](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
       + [再生保護](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-replay-detection.md)
@@ -406,31 +407,31 @@ ht-degree: 0%
       + [ポリシーオプションの上書き](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-override-policy-options.md)
       + [事前生成ライセンス](aaxs-secure-deployment-guidelines/issuing-licenses/pre-gen-licenses.md)
       + [ドメインの管理](aaxs-secure-deployment-guidelines/issuing-licenses/managing-domains.md)
-+ Adobe Access SDKの概要 {#overview}
-   + [Adobe Access SDKの概要](aaxs-sdk-overview/overview.md)
-   + [Adobe Accessについて](aaxs-sdk-overview/about-adobe-access.md)
++ AdobeアクセスSDKの概要 {#overview}
+   + [AdobeアクセスSDKの概要](aaxs-sdk-overview/overview.md)
+   + [Adobeアクセスについて](aaxs-sdk-overview/about-adobe-access.md)
    + [主な機能](aaxs-sdk-overview/key-features.md)
    + [用語とコアコンセプト](aaxs-sdk-overview/terminology-and-core-concepts.md)
    + コンテンツ配信ワークフロー {#content-distribution-workflow}
       + [コンテンツの準備](aaxs-sdk-overview/content-distribution-workflow/content-preparation.md)
       + [コンテンツの取得](aaxs-sdk-overview/content-distribution-workflow/content-acquisition.md)
-   + [Adobe Accessコンポーネント](aaxs-sdk-overview/adobe-access-components/adobe-access-sdk.md)
-   + [Adobe Accessの導入](aaxs-sdk-overview/deploying-adobe-access/configure-adobe-access.md)
+   + [Adobeアクセスコンポーネント](aaxs-sdk-overview/adobe-access-components/adobe-access-sdk.md)
+   + [Adobeアクセスの展開](aaxs-sdk-overview/deploying-adobe-access/configure-adobe-access.md)
    + その他の導入シナリオ {#additional-scenarios}
-      + [UltraVioletメディアとAdobe Access](aaxs-sdk-overview/deploying-adobe-access/additional-deployment-scenarios/ultra-violet-media-adobe-access.md)
-      + [Adobe PassとAdobe Access](aaxs-sdk-overview/deploying-adobe-access/additional-deployment-scenarios/adobe-pass-and-adobe-access.md)
-+ Adobe Access SDKを使用したコンテンツの保護 {#using-adobe-access-sdk}
+      + [UltraVioletメディアおよびAdobeアクセス](aaxs-sdk-overview/deploying-adobe-access/additional-deployment-scenarios/ultra-violet-media-adobe-access.md)
+      + [Adobe PassとAdobeへのアクセス](aaxs-sdk-overview/deploying-adobe-access/additional-deployment-scenarios/adobe-pass-and-adobe-access.md)
++ AdobeアクセスSDKを使用したコンテンツの保護 {#using-adobe-access-sdk}
    + [はじめに](aaxs-protecting-content/content-introduction/content-whats-new.md)
    + [ユーザー認証](aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md)
    + [時間型ルール](aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md)
    + ランタイムとアプリケーションの制限 {#runtime-and-application-restrictions}
-      + [保護されたコンテンツの再生が許可されるAdobe® Primetimeアプリケーションの許可リスト](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
-      + [保護されたコンテンツを再生できるAdobe® Flash® Player SWFの許可リスト](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
+      + [保護されたコンテンツの再生が許可されたAdobe® Primetimeアプリケーションの許可リスト](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
+      + [保護されたコンテンツの再生が許可されるAdobe®Flash®プレーヤーSWFの許可リスト](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
       + [保護されたコンテンツへのアクセスが制限されたDRMクライアントのブロックリスト](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md)
       + [保護されたコンテンツへのアクセスが制限されたアプリケーションの実行時のブロックリスト](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-app-runtimes.md)
       + [DRMおよび実行時の最小セキュリティレベル](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-min-sec-level-for-drm.md)
       + [保護されたコンテンツの再生に必要なデバイス機能](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)
-      + [Jailbreakの強制（Adobe Primetimeが必要）](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
+      + [Jailbreak Enforcation(Adobe Primetimeが必要)](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
    + その他のポリシーオプション {#content-other-policy-options}
       + [強化されたライセンスチェーン](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md)
       + [複数の再生権限](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-multiple-play-rights.md)
@@ -448,7 +449,7 @@ ht-degree: 0%
       + [複数のポリシー](aaxs-protecting-content/content-introduction/packaging-options/content-multiple-policies.md)
    + SDKの設定 {#setting-up-the-sdk}
       + [開発環境の設定](aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)
-      + [Adobe Access資格情報](aaxs-protecting-content/content-setting-up-the-sdk/content-aaxs-credentials.md)
+      + [Adobeアクセス資格情報](aaxs-protecting-content/content-setting-up-the-sdk/content-aaxs-credentials.md)
       + [証明書の要求](aaxs-protecting-content/content-setting-up-the-sdk/content-requesting-certs.md)
       + [秘密鍵証明書の保存](aaxs-protecting-content/content-setting-up-the-sdk/content-storing-credentials.md)
    + ポリシーの使用 {#working-with-policies}
@@ -469,8 +470,8 @@ ht-degree: 0%
    + License Serverの実装 {#implementing-license-server}
       + [License Serverの実装](aaxs-protecting-content/content-implementing-the-license-server/content-implementing-license-server-overview.md)
       + [License Server展開オプション](aaxs-protecting-content/content-implementing-the-license-server/content-license-server-deployment-options.md)
-   + Adobe Access要求の処理 {#processing-adobe-access-requests}
-      + [Adobe Access要求の処理](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-processing-aaxs-requests-overview.md)
+   + Adobeアクセス要求の処理 {#processing-adobe-access-requests}
+      + [Adobeアクセス要求の処理](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-processing-aaxs-requests-overview.md)
       + [マシン識別子の使用](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-using-machine-ids.md)
       + [ユーザー認証](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-licenses-user-authentication.md)
       + [再生保護](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-replay-protection.md)
@@ -488,7 +489,7 @@ ht-degree: 0%
       + [ライセンスチェーン](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-license-chaining.md)
       + [拡張ライセンスチェーン](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-gen-enhanced-license-chaining.md)
       + [ドメインバウンドライセンスの発行](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-domian-bound-licenses.md)
-      + [リモートキー配信のライセンスをiOSクライアントに発行する（Adobe Primetimeが必要）](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-issuing-licenses-remote-ios.md)
+      + [iOSクライアントへのリモートキー配信のライセンスの発行(Adobe Primetimeが必要)](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-issuing-licenses-remote-ios.md)
       + [最小クライアントバージョン](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)
       + [ライセンスプレビュー](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-license-preview.md)
       + IDベースのライセンス {#licenses}
@@ -499,7 +500,7 @@ ht-degree: 0%
             + [概要](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-handling-fmrms-compatibility-overview.md)
             + [クライアントのアップグレード](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-upgrading-clients.md)
             + [メタデータのアップグレード](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-upgrading-metadata.md)
-         + [アドビが発行した証明書の期限が切れた場合の証明書の更新の処理](aaxs-protecting-content/content-implementing-the-license-server/content-handling-cert-updates.md)
+         + [Adobeが発行した証明書の期限が切れた場合の証明書の更新処理](aaxs-protecting-content/content-implementing-the-license-server/content-handling-cert-updates.md)
          + [パフォーマンスの調整](aaxs-protecting-content/content-implementing-the-license-server/content-performance-tuning.md)
          + [乱数の生成](aaxs-protecting-content/content-implementing-the-license-server/content-generating-random-nos.md)
    + クライアント資格情報の失効 {#revoking-client-credentials}
@@ -507,7 +508,7 @@ ht-degree: 0%
       + [DRMクライアントとランタイム秘密鍵証明書の失効](aaxs-protecting-content/content-revoking-client-creds/content-revoking-drm-client-and-runtime-creds.md)
       + [コンピューター資格情報の失効](aaxs-protecting-content/content-revoking-client-creds/content-revoking-machine-creds.md)
    + [ビデオプレーヤーの作成](aaxs-protecting-content/content-creating-video-players.md)
-+ Adobe Accessリファレンスの実装 {#reference-implementation}
++ Adobeアクセス参照の実装 {#reference-implementation}
    + [概要 — リファレンス実装の使用](aaxs-reference-implementations/overview.md)
    + [コンテンツのパッケージ化と失効リストの作成を行うコマンドラインツール ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
    + Policy Manager {#policy-manager}
@@ -563,15 +564,15 @@ ht-degree: 0%
       + [ドメイン登録の実装の概要](aaxs-reference-implementations/impl-domain-registration/impl-domain-registration.md)
       + [IDベースのドメイン](aaxs-reference-implementations/impl-domain-registration/impl-domain-registration-id-based-domains.md)
       + [匿名ドメイン](aaxs-reference-implementations/impl-domain-registration/impl-domain-registration-anonymous-domains.md)
-   + [FMRMS 1.0または1.5からAdobe Access 2.0以降への移行](aaxs-reference-implementations/license-server-migrating-fmrms-aaxs.md)
+   + [FMRMS 1.0または1.5からAdobeアクセス2.0以降への移行](aaxs-reference-implementations/license-server-migrating-fmrms-aaxs.md)
    + [既存の配置のアップグレード](aaxs-reference-implementations/license-server-upgrading-existing-deplys.md)
    + [ドメインサーバーのセットアップ](aaxs-reference-implementations/license-server-upgrading-existing-deplys-setup-ds.md)
-   + Flash Access Manager AIRアプリケーションの使用 {#flash-access-manager-air-app-usage}
-      + Flash Access Managerコンポーネント {#flash-manager-components}
+   + Flash AccessマネージャーAIRアプリケーションの使用 {#flash-access-manager-air-app-usage}
+      + Flash Accessマネージャーコンポーネント {#flash-manager-components}
          + [PackagerサーバーおよびAIRアプリケーションの構築](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-overview.md)
          + [Packagerサーバーの構築](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-pkg-srv.md)
-         + [Flash Access Manager AIRアプリケーションの構築](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-fam-air-app.md)
-      + [Flash Access Managerの初期設定](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup.md)
+         + [Flash AccessマネージャーAIRアプリケーションの構築](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-fam-air-app.md)
+      + [Flash Accessマネージャの初期セットアップ](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup.md)
       + 環境設定の指定 {#setting-preferences}
          + [環境設定の概要](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-set-prefs-overview.md)
          + [Packagerの環境設定](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pkg-prefs.md)

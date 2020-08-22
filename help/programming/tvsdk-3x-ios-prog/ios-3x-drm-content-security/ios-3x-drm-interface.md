@@ -6,7 +6,7 @@ seo-title: Primetime DRMインターフェイスの概要
 title: Primetime DRMインターフェイスの概要
 uuid: 5e794147-cc58-448c-b8ec-065e80ef01fd
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 0%
@@ -46,9 +46,9 @@ DRMメタデータが変更されると、TVSDKは `PTMediaPlayerItemDRMMetadata
 
 DRM保護されたストリームがマルチビットレート(MBR)でエンコードされている場合、バリアントプレイリストに使用されるDRMメタデータは、すべてのビットレートストリームで使用されるメタデータと同じでなければなりません。
 
-[!TIP]
-
-DRM保護されたアセットのURLをiOSアプリで参照する場合、クエリ文字列パラメーターを(MBR)設定レベルM3U8 URLに追加する `?faxs=1` 必要があります。 例：
+>[!TIP]
+>
+>DRM保護されたアセットのURLをiOSアプリで参照する場合、クエリ文字列パラメーターを(MBR)設定レベルM3U8 URLに追加する `?faxs=1` 必要があります。 例：
 
 ```
 https://your.domain.com/hls/[...]/index.m3u8?faxs=1

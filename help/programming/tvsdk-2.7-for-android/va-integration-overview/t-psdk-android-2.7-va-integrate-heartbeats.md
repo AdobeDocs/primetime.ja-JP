@@ -5,34 +5,37 @@ seo-title: ビデオ分析の初期化と設定
 title: ビデオ分析の初期化と設定
 uuid: 98017a20-4997-42f7-9b03-fd9c4b6ccd92
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 0%
 
 ---
 
 
 # ビデオ分析の初期化と設定 {#initialize-and-configure-video-analytics}
 
-ビデオの使用を追跡および分析するようにプレーヤーを設定できます。
-ビデオ追跡（ビデオハートビート）をアクティブ化する前に、次の事項を確認します。
+ビデオの使用を追跡および分析するようにプレイヤーを設定できます。
+ビデオトラッキング（ビデオハートビート）をアクティブ化する前に、以下があることを確認します。
 
 * Android向けTVSDK 2.5。
-* 設定/初期化情報
+* 構成/初期化情報
 
-   特定のビデオトラッキングアカウント情報については、アドビの担当者にお問い合わせください。
+   特定のビデオトラッキングアカウント情報については、Adobeの担当者にお問い合わせください。
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
    <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>重要： このJSON設定ファイル名は、ADBMobileConfig.jsonのま <span class="filepath"> まにする必要がありま </span>す。 この構成ファイルの名前とパスは変更できません。 このファイルへのパスは、 <span class="filepath"> &lt;source root&gt;/assetsである必要があります </span>。 </p> </td> 
+   <td colname="col2"> <p>重要： このJSON設定ファイル名はADBMobileConfig.jsonのままにしておく必要があり <span class="filepath"> ま </span>す。 この構成ファイルの名前とパスは変更できません。 このファイルへのパスは、 <span class="filepath"> &lt;source root&gt;/assetsである必要があり </span>ます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> AppMeasurementトラッキングサーバーエンドポイント </td> 
-   <td colname="col2"> Adobe Analytics（旧称SiteCatalyst）のバックエンド収集エンドポイントのURL。 </td> 
+   <td colname="col2"> Adobe Analytics(旧称SiteCatalyst)のバックエンド収集エンドポイントのURLです。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> ビデオ分析トラッキングサーバーエンドポイント </td> 
-   <td colname="col2"> ビデオ分析のバックエンドコレクションエンドポイントのURLです。 これは、すべてのビデオハートビートトラッキング呼び出しが送信される場所です。 <p>ヒント： 訪問者トラッキングサーバーのURLは、AnalyticsトラッキングサーバーのURLと同じです。 訪問者IDサービスの実装について詳しくは、IDサービスの実装を <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> 参照してくださ </a>い。 </p> </td> 
+   <td colname="col2"> Video Analyticsのバックエンド収集エンドポイントのURL。 すべてのビデオハートビートトラッキング呼び出しが送信される場所です。 <p>ヒント： 訪問者トラッキングサーバーのURLは、AnalyticsトラッキングサーバーのURLと同じです。 訪問者IDサービスの実装について詳しくは、「IDサービスの <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> 実装」を参照してくだ </a>さい。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> アカウント名 </td> 
@@ -40,65 +43,66 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
   </tr> 
   <tr> 
    <td colname="col1"> Marketing Cloud組織ID </td> 
-   <td colname="col2"> 訪問者コンポーネントをインスタンス化するために必要なstring値。 </td> 
+   <td colname="col2"> 訪問者コンポーネントのインスタンス化に必要なstring値。 </td> 
   </tr> 
  </tbody> 
 </table>
 
 プレーヤーでビデオトラッキングを設定するには：
 
-1. リソースファイルの読み込み時のオプションが正しい `ADBMobileConfig.json` ことを確認します。
+1. リソースファイルの読み込み時間オプションが正しいことを確認 `ADBMobileConfig.json` します。
 
-       &quot;
-    {
-    &quot;version&quot; :&quot;1.1&quot;,
-     &quot;analytics&quot;:{
-    &quot;rsids&quot; :&quot;adobedevelopment&quot;,
-     &quot;server&quot; :&quot;10.131.129.149:3000&quot;,
- &quot;charset&quot;     :&quot;UTF-8&quot;,
- &quot;     ssl&quot; :false,
-     &quot;offlineEnabled&quot; :false,
-     &quot;lifecycleTimeout&quot; :5,
-     &quot;batchLimit&quot; :50,
-     &quot;privacyDefault&quot; :&quot;optedin&quot;,
-     &quot;poi&quot; :[]
- },     
-    &quot;marketingCloud&quot;:{
- &quot;     org&quot;:&quot;ADOBE PROVIDED VALUE&quot;
-    },
- &quot;     target&quot; :{
-    &quot;clientCode&quot; :&quot;&quot;,
-     &quot;timeout&quot; :5
- },     
-    &quot;audienceManager&quot; :{
-    &quot;server&quot; :&quot;&quot;
- }     
- &quot;     
- &quot;     
-    
-    JSON形式の設定ファイルは、TVSDKにリソースとしてバンドルされています。 プレイヤーは、読み込み時にのみこれらの値を読み取り、アプリケーションの実行中は値は一定のままです。
-   読み込     
-    み時間オプションを設定するには：
-   
-   1. ファイルに適切な `ADBMobileConfig.json` 値（アドビが提供する値）が含まれていることを確認します。
-   1. このファイルがフォルダー内にあることを確認 `assets/` します。
+   ```
+   { 
+       "version" : "1.1", 
+       "analytics" : { 
+           "rsids" : "adobedevelopment", 
+           "server" : "10.131.129.149:3000", 
+           "charset" : "UTF-8", 
+           "ssl" : false, 
+           "offlineEnabled" : false, 
+           "lifecycleTimeout" : 5, 
+           "batchLimit" : 50, 
+           "privacyDefault" : "optedin", 
+           "poi" : [] 
+       }, 
+       "marketingCloud": { 
+           "org": "ADOBE PROVIDED VALUE"  
+       }, 
+       "target" : { 
+           "clientCode" : "", 
+           "timeout" : 5 
+       }, 
+       "audienceManager" : { 
+           "server" : "" 
+       } 
+   }
+   ```
 
-      このフォルダーは、アプリケーションのソースツリーのルートに配置する必要があります。
+   このJSON形式の設定ファイルは、TVSDKにリソースとしてバンドルされています。 プレイヤーは、読み込み時にのみこれらの値を読み取り、アプリケーションの実行中、値は一定のままです。
+
+   読み込み時間オプションを設定するには：
+
+
+   1. 適切な値(Adobeが提供する値)が `ADBMobileConfig.json` ファイルに含まれていることを確認します。
+   1. このファイルがフ `assets/` ォルダー内にあることを確認します。
+
+      このフォルダーは、アプリケーションソースツリーのルートに存在する必要があります。
 
    1. アプリケーションをコンパイルしてビルドします。
    1. バンドルされたアプリケーションをデプロイして実行します。
 
-      これらのAppMeasurement設定について詳しくは、Adobe Analyticsでのビデオの測 [定を参照してください](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/)。
+      これらのAppMeasurement設定について詳しくは、「Adobe Analyticsでのビデオの [測定](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/)」を参照してください。
 
 1. ビデオハートビートトラッキングメタデータを初期化し、設定します。
 
    >[!IMPORTANT]
    >
-   >ビデオ分析モジュールのミッドストリームを停止し、必要に応じて再初期化することができます。 モジュールを再初期化する前に、ビデオ分析のメタデータも正しいコンテンツのメタデータに更新されていることを確認します。 メタデータを再作成するには、次の最初の2つの手順を繰り返し **ます(** aと **b**)。
+   >ビデオ分析モジュールのミッドストリームを停止し、必要に応じて再初期化できます。 モジュールを再初期化する前に、ビデオ分析メタデータも正しいコンテンツメタデータに更新されていることを確認します。 メタデータを再作成するには、次の最初の2つの手順(サブ手順 **a** と **b**)を繰り返します。
 
    1. ビデオ分析メタデータのインスタンスを作成します。
 
-      このインスタンスには、ビデオハートビートトラッキングを有効にするために必要なすべての設定情報が含まれています。 例：
+      このインスタンスは、ビデオハートビートトラッキングを有効にするために必要なすべての設定情報を含みます。 例：
 
       ```java
       private VideoAnalyticsMetadata getVideoAnalyticsTrackingMetadata() { 
@@ -121,23 +125,23 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
    1. ビデオ分析プロバイダーを初期化します。
 
-      メディアプレイヤーインスタンスを作成した後、Video Analyticsプロバイダーインスタンスを作成し、そのインスタンスにアプリケーションコンテキストを提供する必要があります。
+      メディアプレイヤーインスタンスを作成したら、ビデオ分析プロバイダーインスタンスを作成し、そのインスタンスにアプリケーションコンテキストを提供する必要があります。
 
       >[!TIP]
       >
-      >各コンテンツ再生セッションに対して必ず新しいプロバイダーインスタンスを作成し、メディアプレーヤーインスタンスを切り離した後で、以前の参照を削除します。
+      >コンテンツ再生セッションごとに必ず新しいプロバイダーインスタンスを作成し、メディアプレイヤーインスタンスを切り離した後で、以前の参照を削除してください。
 
       ```java
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
       ```
 
-   1. インスタンスに対してビデオ分析メタデータを設 `videoAnalyticsProvider` 定します。
+   1. インスタンスにVideo Analyticsメタデータを設定し `videoAnalyticsProvider` ます。
 
       ```java
       videoAnalyticsProvider.setVideoAnalyticsMetadata(vaMetadata);
       ```
 
-   1. メディアプレイヤーインスタンスをインスタンスにアタッチ `videoAnalyticsProvider` します。
+   1. メディアプレイヤーインスタンスを `videoAnalyticsProvider` インスタンスにアタッチします。
 
       ```java
       videoAnalyticsProvider.attachMediaPlayer(mediaPlayer); 
@@ -145,7 +149,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
    1. ビデオ分析プロバイダーを破棄します。
 
-      新しいコンテンツ再生セッションを開始する前に、ビデオプロバイダーの以前のインスタンスを破棄します。 コンテンツ完了イベント（または通知）を受け取ったら、数分待ってから、ビデオ分析プロバイダーインスタンスを破棄します。 インスタンスをすぐに破棄すると、ビデオ分析プロバイダーが「ビデオ完了」のpingを送信する機能を妨げる可能性があります。
+      新しいコンテンツ再生セッションを開始する前に、ビデオプロバイダーの以前のインスタンスを破棄します。 コンテンツ完了イベント（または通知）を受け取ったら、ビデオ分析プロバイダーインスタンスを破棄するまで数分待ちます。 インスタンスを直ちに破棄すると、Video Analyticsプロバイダーが「ビデオ完了」pingを送信する機能を妨げる可能性があります。
 
       ```java
       if (videoAnalyticsProvider) { 
@@ -156,11 +160,11 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
    1. 手動でライブ/リニアストリームを完了としてマークします。
 
-      1つのライブストリームに複数のエピソードがある場合、Complete APIを使用して、手動でエピソードを完了としてマークできます。 これにより、現在のビデオエピソードのビデオトラッキングセッションが終了し、次のエピソードの新しいトラッキングセッションを開始できます。
+      1つのライブストリームに様々なエピソードがある場合、完了APIを使用して、手動でエピソードを完了とマークできます。 これにより、現在のビデオエピソードのビデオトラッキングセッションが終了し、次のエピソードの新しいトラッキングセッションを開始できます。
 
       >[!TIP]
       >
-      >このAPIはオプションで、VODビデオ追跡には使用できません。
+      >このAPIはオプションで、VODビデオトラッキングでは機能しません。
 
       ```java
       if (videoAnalyticsProvider) { 

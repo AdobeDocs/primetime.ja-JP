@@ -2,7 +2,7 @@
 title: PTAI 20.9.1リリースノート
 description: PTAI 20.9.1のリリースノートでは、2020年のPrimetime DynamicAd Insertionの新しい問題や変更された問題、解決された問題、既知の問題について説明します。
 translation-type: tm+mt
-source-git-commit: f17a9fdf2a7c22d1d7b0833c7eac8f1202cebe87
+source-git-commit: c23b052f14c6673d4ba2aae6a317a55a2e611e8a
 workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 **修正点**
 
-・ HLS/CMAFを使用するお客様が、EXT-X-MAPにCDNトークンがない場合や、EXT-X-MAPタグがDVRウィンドウから誤ってロールアウトする場合がある問題を修正しました。
+* HLS/CMAFを使用するお客様が、EXT-X-MAPでCDNトークンが欠落したり、EXT-X-MAPタグがDVRウィンドウから誤ってロールアウトされたりする問題を修正しました。
 
 ### 以前のリリースバージョンでの機能強化および修正点
 

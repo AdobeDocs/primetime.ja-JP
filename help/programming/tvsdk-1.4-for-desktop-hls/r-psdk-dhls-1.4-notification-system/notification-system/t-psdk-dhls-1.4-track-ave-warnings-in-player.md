@@ -1,22 +1,25 @@
 ---
-description: NotificationEventを使用して、Adobe Video Engine(AVE)から渡された警告を追跡できます。
-seo-description: NotificationEventを使用して、Adobe Video Engine(AVE)から渡された警告を追跡できます。
-seo-title: プレイヤーでのAVE警告の追跡
-title: プレイヤーでのAVE警告の追跡
+description: NotificationEventを使用して、Adobeビデオエンジン(AVE)から渡された警告を追跡できます。
+seo-description: NotificationEventを使用して、Adobeビデオエンジン(AVE)から渡された警告を追跡できます。
+seo-title: プレイヤーでAVE警告を追跡する
+title: プレイヤーでAVE警告を追跡する
 uuid: 236aee5e-6b1a-4298-9d3b-f33b40416c19
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '187'
+ht-degree: 1%
 
 ---
 
 
-# プレイヤーでのAVE警告の追跡{#track-ave-warnings-in-your-player}
+# プレイヤーでAVE警告を追跡する{#track-ave-warnings-in-your-player}
 
-NotificationEventを使用して、Adobe Video Engine(AVE)から渡された警告を追跡できます。
+NotificationEventを使用して、Adobeビデオエンジン(AVE)から渡された警告を追跡できます。
 
-プレーヤーアプリは、再生を停止せず、必ずしもアプリによる何の操作も必要としないフェイルオーバーイベントやネットワークダウンイベントなど、AVEが生成する再生警告やエラーを追跡できます。 一部のAVEエラーはTVSDKで処理されますが、AVE警告の場合 `NotificationEvent` は、アプリケーションレイヤーへの一般的なパススルーメカニズムとして機能します。 AVE警告を受け取ったら、事前に再生を停止したり、コンティンジェンシープランをアクティブ化したり、メッセージを記録したりするなど、何らかのアクションを実行することを選択できます。
+プレイヤーアプリは、再生を停止しない、アプリが何も操作を必要としないフェイルオーバーやネットワークダウンイベントなど、AVEが生成する再生警告やエラーを追跡できます。 一部のAVEエラーはTVSDKで処理されますが、AVE警告の場合 `NotificationEvent` は、アプリケーションレイヤーへの一般的なパススルーメカニズムの役割を果たします。 AVE警告を受け取ったら、事前に再生を停止したり、コンティンジェンシープランをアクティブにしたり、メッセージを記録したりするなどの操作を行うことができます。
 
-次のAPIエレメントを使用して、プレイヤーのAVE警告を追跡します。
+以下のAPIエレメントを使用して、プレイヤーでAVE警告を追跡します。
 
 **NotificationCode**
 
@@ -76,7 +79,7 @@ public class NotificationEvent extends Event {
 }
 ```
 
-AVE警告をキャッチするために、イベントリスナーをプレイヤーに追加します。
+AVE追加警告を受け取るための、プレイヤーへのイベントリスナーです。
 
 例：
 
@@ -99,7 +102,7 @@ private function onWarningAvailable(event:NotificationEvent):void {
 
 <!--<a id="example_C35262605D394718B40C084B569A5052"></a>-->
 
-次に、を使用して追跡されたAVE警告の例を示しま `NotificationEvent`す。
+以下に、を使用して追跡されたAVE警告の例を示し `NotificationEvent`ます。
 
 ```
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [resourceType:HLS] 
@@ -108,10 +111,10 @@ private function onWarningAvailable(event:NotificationEvent):void {
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [runtimeCodeMessage:SEGMENT_SKIPPED_ON_FAILURE] 
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [eventType:Warning] 
  
-<ph>
+<pre>
   [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [description:url::= 
    https://xyz.corp.adobe.com/pmp/assets/abc/failover/tc.1.04/content/backup-01/ 
    low-res/main-stream4-4x3-info6.ts,periodIndex::=0, 
    sizeBytes::=0,downloadTime(ms)::=0,mediaDuration(ms)::=0] 
-</ph>
+</pre>
 ```

@@ -3,9 +3,9 @@ seo-title: Primetime DRMキーサーバーのデプロイの概要
 title: Primetime DRMキーサーバーのデプロイの概要
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -86,13 +86,13 @@ JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder”
 
 ## Primetime DRM秘密鍵証明書 {#primetime-drm-credentials}
 
-Primetime DRM iOSおよびXbox 360クライアントからのキー要求を処理するには、Primetime DRMキーサーバーにアドビが発行した一連の資格情報を設定する必要があります。 これらの秘密鍵証明書は、PKCS#12 ( [!DNL .pfx])ファイルに格納することも、HSMに格納することもできます。
+Primetime DRM iOSおよびXbox 360クライアントからのキー要求を処理するには、Primetime DRMキーサーバーにAdobeが発行した一連の資格情報を設定する必要があります。 これらの秘密鍵証明書は、PKCS#12 ( [!DNL .pfx])ファイルに格納することも、HSMに格納することもできます。
 
-ファイルはどこにでも配置できますが、設定を簡単にするために、テナントの設定ディレクトリに [!DNL .pfx][!DNL .pfx] ファイルを配置することをお勧めします。 詳しくは、「 [キーサーバー設定ファイル](#key-server-configuration-files)」を参照してください。
+ファイルはどこにでも配置できますが、設定を容易にするために、Adobeでは、テナントの構成ディレクトリに [!DNL .pfx][!DNL .pfx] ファイルを配置することを推奨します。 詳しくは、「 [キーサーバー設定ファイル](#key-server-configuration-files)」を参照してください。
 
 ### HSMの設定 {#section_13A19E3E32934C5FA00AEF621F369877}
 
-サーバー秘密鍵証明書の保存にHSMを使用する場合は、秘密鍵と証明書をHSMに読み込み、 *pkcs11.cfg* 設定ファイルを作成する必要があります。 このファイルは、KeyServer.ConfigRoot ** ディレクトリに存在する必要があります。 詳しくは、 [!DNL <Primetime DRM Key Server>/configs] ディレクトリ（PKCS 11構成ファイルの例）。 の形式について詳し [!DNL pkcs11.cfg]くは、Sun PKCS11プロバイダーのドキュメントを参照してください。
+サーバー秘密鍵証明書の保存にHSMを使用する場合は、秘密鍵と証明書をHSMに読み込み、 *pkcs11.cfg* 設定ファイルを作成する必要があります。 このファイルは、KeyServer.ConfigRoot ** ディレクトリに存在する必要があります。 PKCS 11設定ファイルの例については、 `<Primetime DRM Key Server>/configs` ディレクトリを参照してください。 の形式について詳し [!DNL pkcs11.cfg]くは、Sun PKCS11プロバイダーのドキュメントを参照してください。
 
 HSMおよびSun PKCS11の設定ファイルが正しく設定されていることを確認するには、ファイルが存在するディレクトリ（Java JREおよびJDKと共にインストールされている）から次のコマンド [!DNL pkcs11.cfg][!DNL keytool] を使用します。
 
@@ -112,7 +112,7 @@ Primetime DRMキーサーバーには、次の2種類の設定ファイルが必
 
 設定ファイルに変更が加えられた場合は、サーバーを再起動して、変更を有効にする必要があります。
 
-構成ファイル内のパスワードをクリアテキストで使用できないようにするには、グローバル構成ファイルとテナント構成ファイルで指定されているすべてのパスワードを暗号化する必要があります。 パスワードの暗号化について詳しくは、「保護されたストリーミング用のPrimetime DRMサーバーの [*使用&#x200B;*」の「*&#x200B;パスワードスクランブラ&#x200B;*](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)」を参照してください。
+構成ファイル内のパスワードをクリアテキストで使用できないようにするには、グローバル構成ファイルとテナント構成ファイルで指定されているすべてのパスワードを暗号化する必要があります。 パスワードの暗号化について詳しくは、「保護されたストリーミング用のPrimetime DRMサーバーの [*使用* 」の「 *パスワードスクランブラ*](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)」を参照してください。
 
 ## 設定ディレクトリの構造 {#configuration-directory-structure}
 
@@ -133,10 +133,10 @@ KeyServer.ConfigRoot/
 
 設定ファイルには、キーサーバーのすべてのテナントに適用される設定が含まれています。 [!DNL flashaccess-keyserver-global.xml] このファイルは、に配置する必要があり `KeyServer.ConfigRoot`ます。 グローバル設定ファイルの例については、 [!DNL configs] ディレクトリを参照してください。 グローバル設定ファイルには、次の情報が含まれます。
 
-* ログ：ログ・レベルと、ログ・ファイルをロールする頻度を指定します。
+* ログ：ログ・レベルと、ログ・ファイルがロールされる頻度を指定します。
 * HSMパスワード — サーバー秘密鍵証明書の保存にHSMが使用される場合にのみ必要です。
 
-詳しくは、 [!DNL <Primetime DRM Key Server>/configs] 」を参照してください。
+詳しくは、にあるグローバル設定ファイルの例のコメントを参照し `<Primetime DRM Key Server>/configs` てください。
 
 ## テナント構成ファイル {#tenant-configuration-files}
 
@@ -146,7 +146,7 @@ KeyServer.ConfigRoot/
 
 テナント構成ファイルには、次のものが含まれます。
 
-* キーサーバー資格情報 — アドビが発行する1つ以上のキーサーバー資格情報（証明書および秘密鍵）を指定します。 ファイルとパスワードへのパス、またはHSMに保存されている秘密鍵証明書のエイリアスとして指定でき [!DNL .pfx] ます。 ここでは、ファイルパス、キーエイリアス、またはその両方の資格情報を指定できます。
+* キーサーバー資格情報 —Adobeが発行する1つ以上のキーサーバー資格情報（証明書および秘密鍵）を指定します。 ファイルとパスワードへのパス、またはHSMに保存されている秘密鍵証明書のエイリアスとして指定でき [!DNL .pfx] ます。 ここでは、ファイルパス、キーエイリアス、またはその両方の資格情報を指定できます。
 
 iOS **** テナント設定ファイルには、次の設定が含まれます。
 

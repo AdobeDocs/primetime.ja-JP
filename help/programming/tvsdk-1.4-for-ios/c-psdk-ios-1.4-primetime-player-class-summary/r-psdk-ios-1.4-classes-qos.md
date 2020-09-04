@@ -1,18 +1,21 @@
 ---
-description: これらのクラスは、プレイヤーのパフォーマンスを判断するのに役立つ情報を提供します。
-seo-description: これらのクラスは、プレイヤーのパフォーマンスを判断するのに役立つ情報を提供します。
+description: プレイヤーのパフォーマンスを判断するのに役立つ情報を提供するクラスです。
+seo-description: プレイヤーのパフォーマンスを判断するのに役立つ情報を提供するクラスです。
 seo-title: QoSクラス
 title: QoSクラス
 uuid: fc175269-ec4a-415e-91f3-7fa036290fa6
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '197'
+ht-degree: 0%
 
 ---
 
 
 # QoSクラス{#qos-classes}
 
-これらのクラスは、プレイヤーのパフォーマンスを判断するのに役立つ情報を提供します。
+プレイヤーのパフォーマンスを判断するのに役立つ情報を提供するクラスです。
 
 <table frame="all" colsep="1" rowsep="1" id="table_2893EFF9755149159A4F94E781C76B6E"> 
  <thead> 
@@ -36,17 +39,17 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlaybackInformation.html" format="html" scope="external"> PTPlaybackInformation</a> </td> 
-   <td colname="2"> 再生の実行方法に関する情報を提供します。 これには、フレームレート、プロファイルビットレート、バッファリングに費やした合計時間、バッファリングの試行回数、最初のビデオフラグメントから最初のバイトを取得するのにかかった時間、最初のフレームのレンダリングにかかった時間、現在のバッファ長、バッファ時間が含まれます。 </td> 
+   <td colname="2"> 再生の実行方法に関する情報を提供します。 フレームレート、プロファイルビットレート、バッファリングに費やした合計時間、バッファリング試行回数、最初のビデオフラグメントからの最初のバイト取得に要した時間、最初のフレームのレンダリングに要した時間、現在のバッファ長、バッファ時間などが含まれます。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTQoSProvider.html" format="html" scope="external"> PTQoSProvider</a> </td> 
    <td colname="2">
-    <ph>
+    <pre>
       再生とデバイスの両方に不可欠なQoS指標を提供します。
-    </ph>
-    <ph>
+    </pre>
+    <pre>
       QOS情報プロバイダークラス。
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
  </tbody> 
 </table>

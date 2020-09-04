@@ -2,7 +2,7 @@
 title: TVSDK 3.12 iOS向けリリースノート
 description: TVSDK 3.12 for iOSリリースノートでは、TVSDK iOS 3.12の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -288,20 +288,17 @@ TVSDKは、1.4 TVSDKの更新の一環として、リニアコンテンツに対
 
 Comment Type: draft
 
-`<note type="note"> `
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-`</note>`
 
- -->
+-->
 
 <!--
 Comment Type: draft
 
-`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-`</note>`
- -->
+-->
+
 **iOS TVSDK 3.12**
 
 * TVSDK for iOS 3.10を使用している場合、ライブストリームは15分の再生後に失敗します。
@@ -854,7 +851,7 @@ AdobeアクセスDRMストリームでの再生を開始する際に101000エラ
 
 * (ZD #21119) — 広告の再生後、TVSDKが停止します。
 
-広告挿入を使用しているときに、シーケンスIVを使用してAES暗号化ストリームをサポートするようになりました。
+広告挿入を使用しているときに、シーケンスIVを使用してAES暗号化ストリームに対するサポートが追加されました。
 
 * (ZD #21125) — ライブ/リニア広告の時間から早い段階で戻る
 

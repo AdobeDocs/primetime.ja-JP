@@ -1,23 +1,26 @@
 ---
-description: AdBannerAssetのコンテンツは、コンパニオンバナーを表します。
-seo-description: AdBannerAssetのコンテンツは、コンパニオンバナーを表します。
+description: AdBannerAssetのコンテンツは、コンパニオンバナーを記述します。
+seo-description: AdBannerAssetのコンテンツは、コンパニオンバナーを記述します。
 seo-title: コンパニオンバナーデータ
 title: コンパニオンバナーデータ
 uuid: b2c709da-9d19-49d1-8116-9c947371b77c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '190'
+ht-degree: 0%
 
 ---
 
 
 # コンパニオンバナーデータ{#companion-banner-data}
 
-AdBannerAssetのコンテンツは、コンパニオンバナーを表します。
+AdBannerAssetのコンテンツは、コンパニオンバナーを記述します。
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-このイベ `AdobePSDK.PSDKEventType.AD_STARTED` ントは、プ `Ad` ロパティ( `companionAssets` )を含むインス `Array<AdBannerAsset>`タンスを返します。
-各レポートに `AdBannerAsset` は、アセットの表示に関する情報が表示されます。
+この `AdobePSDK.PSDKEventType.AD_STARTED` イベントは、 `Ad` プロパティ( `companionAssets``Array<AdBannerAsset>`)を含むインスタンスを返します。
+それぞれ `AdBannerAsset` に、アセットの表示に関する情報が提供されます。
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -39,21 +42,21 @@ AdBannerAssetのコンテンツは、コンパニオンバナーを表します�
    <td colname="col1"> リソースタイプ </td> 
    <td colname="col2">このコンパニオンバナーのリソースタイプ： 
     <ul id="ul_A067787FE49E4B6095BE0AC1D447DBB3"> 
-     <li id="li_02B7224C67004095B3F6E50FD21E507E">html:データはHTMLコードで表されます。 </li> 
+     <li id="li_02B7224C67004095B3F6E50FD21E507E">html:データはHTMLコードです。 </li> 
      <li id="li_5F37E14472424F808C6094F42009E676">iframe:データはiframe URL(src)です。 </li> 
      <li id="li_48E74AC5F00640EC8A4DE2CB31E106EC">static:データは静的な画像URL(src)です。 </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1">
-    <ph>
+    <pre>
       バナーデータ
-    </ph> </td> 
-   <td colname="col2"> このコンパニオンバナーのresourceTypeで指定され <span class="codeph"> るタイプ</span> のデータです。 </td> 
+    </pre> </td> 
+   <td colname="col2"> このコンパニオンバナーの <span class="codeph"> resourceType</span> で指定されるタイプのデータです。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 静的URL </td> 
-   <td colname="col2"> <p>コンパニオンバナーには、画像への直接URLであるstaticURLが含まれる場合もあります。 </p> <p>htmlやiframeを使用しない場合は、画像への直接URLを使用できます。 この場合、staticURLを使用してバナーを表示できます。 </p> <p>重要： 静的URLが有効な文字列であるかどうかを確認する必要があります。これは、このプロパティが常に使用可能とは限らない場合があるためです。 </p> </td> 
+   <td colname="col2"> <p>コンパニオンバナーには、画像への直接URLであるstaticURLが含まれる場合もあります。 </p> <p>htmlやiframeを使用したくない場合は、画像へのダイレクトURLを使用できます。 この場合、staticURLを使用してバナーを表示できます。 </p> <p>重要： 静的URLが有効な文字列であるかどうかを確認する必要があります。これは、このプロパティが常に使用できるとは限らないからです。 </p> </td> 
   </tr> 
  </tbody> 
 </table>

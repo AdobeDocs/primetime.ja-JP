@@ -5,9 +5,9 @@ seo-title: ログファイル
 title: ログファイル
 uuid: 4498fe60-65af-4f99-8f9b-e85013d0c9e9
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -42,12 +42,12 @@ ht-degree: 0%
 
 ## グローバルログファイル {#section_1CFA90748142439C9F3BE380969539DA}
 
-グローバルログファイル [!DNL flashaccess-global.log]は、LicenseServer.LogRootにあり *ます*。 ログには、サーバーが初期化された際に、Adobe PrimetimeDRM Java SDKまたはログメッセージで生成されたログメッセージが含まれる場合があります。
+グローバルログファイル `flashaccess-global.log`は、LicenseServer.LogRootにあり *ます*。 ログには、サーバーが初期化された際に、Adobe PrimetimeDRM Java SDKまたはログメッセージが生成したログメッセージが含まれる場合があります。
 
 ## パーティションログファイル {#section_5660137CD6AA40519E72A4315534846B}
 
-パーティションログファイル [!DNL flashaccess-partition.log]は、 [!DNL <LicenseServer.LogRoot>/flashaccesserver] ディレクトリ内にあります。 これには、ライセンス要求の処理中に生成されたログメッセージが含まれます。
+パーティションログファイル `flashaccess-partition.log`は、 `<LicenseServer.LogRoot>/flashaccesserver` ディレクトリ内にあります。 これには、ライセンス要求の処理中に生成されたログメッセージが含まれます。
 
 ## テナントログファイル {#section_F0257CC0831647F18A746B4F02E3E910}
 
-各テナントのテナントログファイル [!DNL flashaccess-tenant.log]は、 [!DNL &lt;LicenseServer.LogRoot>/flashaccessserver/tenants/にあります。<tenantname>]. テナントログには、このテナント用に生成された各ライセンスを説明する監査情報が含まれます。
+各テナントのテナントログファイル `flashaccess-tenant.log`は、にあり `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`ます。 テナントログには、このテナント用に生成された各ライセンスを説明する監査情報が含まれます。

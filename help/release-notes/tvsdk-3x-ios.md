@@ -2,7 +2,7 @@
 title: TVSDK 3.12 iOS向けリリースノート
 description: TVSDK 3.12 for iOSリリースノートでは、TVSDK iOS 3.12の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -288,19 +288,19 @@ TVSDKは、1.4 TVSDKの更新の一環として、リニアコンテンツに対
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
 <!--
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
  -->
 **iOS TVSDK 3.12**
 
@@ -478,7 +478,7 @@ Comment Type: draft
    ライセンスのローテーションの問題を修正しました。
 * (ZD #31951) — 広告の時間内の空白の画面。広告の時間は完了しません。
 
-   Facebook VPAID広告が1つの `<AdParameters>` VASTノードで複数のCDATAブロックを返すことが多い問題を扱いました。
+   Facebook VPAID広告が1つの `<AdParameters>` VASTノードで複数のCDATAブロックを返す場合が多い問題を扱いました。
 * (ZD #33336) - iOS TVSDK - Freewheelから返される広告が十分にあるにもかかわらず、広告ポッドが埋められません。
 
    シーケンス広告とフォールバック広告の間に親子関係を作成し、親シーケンスとインデックスに基づく並べ替えを行いました。
@@ -529,7 +529,7 @@ iOSでのプログラム型広告のサポートを追加しました。
 
 * (ZD #30782) - #EXT-X-プログラム — 日時通知
 
-Live DRMストリームを持つ# EXT-X-プログラム-DATE-TIMEタグに対して時間指定メタデータイベントが実行されません。
+# EXT-X-プログラム-DATE-TIMEタグに対して、Live DRMストリームで時間指定メタデータイベントが実行されません。
 
 **バージョン1.4.37 (1.4.37.842)**
 
@@ -1164,11 +1164,11 @@ PTPlaybackInformationが更新され、更新されたindicatedBitrateが公開�
 
 ## 既知の問題と制限事項 {#known-issues-and-limitations}
 
-* iOS UIWebViewクラスの非推奨のため、iOS TVSDK 3.6以降では次の処理が行われます。
+* iOS UIWebViewクラスの廃止により、iOS TVSDK 3.6以降では次の処理が行われません。
    * iPad 13では、VPAID広告は期待どおりに再生されません。
    * コンパニオン広告は期待どおりに再生されません。
 
-* iOS TVSDKでは、すべての広告がコンテンツマニフェストに繋ぎ合わされます。 広告動作は、コンテンツおよび広告セグメントの長さに基づいてシークすることで実装されます。 したがって、セグメントの継続時間が正確でない場合、シークは広告の時間の開始と終了の正確なフレームで終わるとは限りません。 フレームに継続時間が設定されている場合でも、プラットフォーム自体がシークに影響し、数フレーム、広告またはコンテンツが表示される場合があります。 これは、プラットフォームの制限事項であり、iOS上のTVSDKでの広告挿入の動作方法が異なります。
+* iOS TVSDKでは、すべての広告がコンテンツマニフェストに繋ぎ合わされます。 広告動作は、コンテンツおよび広告セグメントの長さに基づいてシークすることで実装されます。 したがって、セグメントの継続時間が正確でない場合、シークは広告の時間の開始と終了の正確なフレームで終わるとは限りません。 フレームに継続時間が設定されている場合でも、プラットフォーム自体がシークに影響し、数フレーム、広告またはコンテンツが表示される場合があります。 これは、プラットフォームの制限と、iOS上のTVSDKでの広告挿入の動作方法に関するものです。
 * スキップの決定は、この場合のシークイベントで発生します。 ただし、マニフェスト内の広告セグメントの継続時間が広告の実際の継続時間を正確に表していないので、シークはフレーム精度ではありません。 したがって、広告ポリシーが適用されると、広告のフレームが数フレーム表示されます。
 * iOS 11ではライセンスローテーションビデオは再生されず、iOS 9.xおよびiOS 10.xでは正常に再生されます。
 * VPAID 2.0サポートでは、AirPlay上で再生がアクティブな場合、VPAID広告はスキップされます。

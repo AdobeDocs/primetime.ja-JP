@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '6578'
 ht-degree: 0%
@@ -151,7 +151,7 @@ VPAID 2.0について詳しくは、VPAID広告のサポートを参照して [�
 
 * **解像度ベースの出力保護**
 
-DRMポリシーで、デバイスの出力保護機能に応じて、許可される最高の解像度を指定できるようになりました。 例えば、「HDCPが使用可能な場合、1080pまでの解像度のコンテンツの再生を許可し、HDCPが使用できない場合は、480pまでの解像度のコンテンツの再生を許可します」とします。
+DRMポリシーで、デバイスの出力保護機能に応じて、許可される最高の解像度を指定できるようになりました。 例えば、「HDCPが使用可能な場合、1080pまでの解像度のコンテンツを再生でき、HDCPが使用できない場合は、480pまでの解像度のコンテンツを再生できるようにします」といった具合に発生します。
 
 **バージョン1.4.4**
 
@@ -221,10 +221,10 @@ DRMポリシーで、デバイスの出力保護機能に応じて、許可さ�
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note">` 
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
@@ -232,9 +232,9 @@ Comment Type: draft
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
 
  -->
 
@@ -385,7 +385,7 @@ iOSでのプログラム型広告のサポートを追加しました。
 
 * (ZD #30782) - #EXT-X-プログラム — 日時通知
 
-Live DRMストリームを持つ# EXT-X-プログラム-DATE-TIMEタグに対して時間指定メタデータイベントが実行されません。
+# EXT-X-プログラム-DATE-TIMEタグに対して、Live DRMストリームで時間指定メタデータイベントが実行されません。
 
 **バージョン1.4.37 (1.4.37.842)**
 
@@ -473,7 +473,7 @@ CRSバックエンドの要件に従って、正規化されたURLではなく�
 
 * (ZD# 25246)広告の時間シグナルが正しくありません
 
-この問題は、バリアントマニフェスト間で不連続タグを調整することで解決されました。
+この問題は、バリアントマニフェスト間で不連続タグを配置することで解決されました。
 
 * (ZD# 26218)クライアントのアプリケーションフレームワークにPSDKLibrary.frameworkを含めようとすると、アプリケーション構築プロセスが複雑になります。
 
@@ -983,7 +983,7 @@ PTPlaybackInformationが更新され、更新されたindicatedBitrateが公開�
 
 ## 1.4の既知の問題 {#known-issues-in}
 
-* iOS TVSDKでは、すべての広告がコンテンツマニフェストに繋ぎ合わされます。 広告動作は、コンテンツおよび広告セグメントの長さに基づいてシークすることで実装されます。 したがって、セグメントの継続時間が正確でない場合、シークは広告の時間の開始または終了の正確なフレームで終わるとは限りません。 フレームに継続時間が設定されている場合でも、プラットフォーム自体がシークに影響し、数フレーム、広告またはコンテンツが表示される場合があります。 これは、プラットフォームの制限事項であり、iOS上のTVSDKでの広告挿入の動作方法が異なります。
+* iOS TVSDKでは、すべての広告がコンテンツマニフェストに繋ぎ合わされます。 広告動作は、コンテンツおよび広告セグメントの長さに基づいてシークすることで実装されます。 したがって、セグメントの継続時間が正確でない場合、シークは広告の時間の開始または終了の正確なフレームで終わるとは限りません。 フレームに継続時間が設定されている場合でも、プラットフォーム自体がシークに影響し、数フレーム、広告またはコンテンツが表示される場合があります。 これは、プラットフォームの制限と、iOS上のTVSDKでの広告挿入の動作方法に関するものです。
 * スキップの決定は、この場合のシークイベントで発生します。 ただし、マニフェスト内の広告セグメントの継続時間が広告の実際の継続時間を正確に表していないので、シークはフレーム精度ではありません。 したがって、広告ポリシーが適用されると、広告の数フレームが表示されます。
 * RECORDING_ERROR:画面の記録中にエラーが発生しました。
 * iOS 11ではライセンスローテーションビデオは再生されず、iOS 9.xおよびiOS 10.xでは正常に再生されます。

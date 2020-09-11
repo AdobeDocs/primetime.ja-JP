@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
+source-git-commit: 33509042e32c2167fab21788042bfb2bb877c0f4
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -265,7 +265,7 @@ Android 2.5.1でリリースされた重要な新機能。
 * **遅延広告の解決 —** TVSDKは、非プリロール広告の解決を待たずに再生を開始するので、起動時間が短くなります。 シークやトリック再生などのAPIは、すべての広告が解決されるまで許可されません。 これは、CSAIで使用されるVODストリームに適用されます。 シークや早送りなどの操作は、広告の解決が完了するまで許可されません。 ライブストリームの場合、ライブイベント中は、この機能を広告解決に対して有効にすることはできません。
 
 * **永続的なネットワーク接続 —** この機能を使用すると、TVSDKは永続的なネットワーク接続の内部リストを作成および保存できます。 これらの接続は、複数の要求に対して再利用され、各ネットワーク要求に対して新しい接続を開き、その後破棄するのではなくなります。 これにより、効率が向上し、ネットワークコードの遅延が減少し、再生パフォーマンスが向上します。
-TVSDKは、接続を開くと、サーバーに *キープアライブ接続を要求します* 。 一部のサーバーでは、このタイプの接続がサポートされない場合があります。サポートされない場合、TVSDKは、再度リクエストごとに接続を行うことにフォールバックします。 また、永続的な接続はデフォルトでオンになりますが、TVSDKには、アプリが必要に応じて永続的な接続をオフにできるように設定オプションが追加されました。
+TVSDKは、接続を開くと、サーバーに *キープアライブ接続を要求します* 。 一部のサーバーでは、このタイプの接続がサポートされていない場合があります。サポートされていない場合、TVSDKは、再度リクエストごとに接続を行うためにフォールバックされます。 また、永続的な接続はデフォルトでオンになりますが、TVSDKには、アプリが必要に応じて永続的な接続をオフにできるように設定オプションが追加されました。
 
 * **並行ダウンロード —** ビデオとオーディオをシリーズではなく並行してダウンロードすると、起動の遅延が減少します。 この機能を使用すると、HLS LiveファイルとVODファイルの再生、サーバーからの使用可能な帯域幅の使用の最適化、バッファーの実行不足状況に陥る確率の低下、ダウンロードと再生の間の遅延の最小化を行うことができます。
 
@@ -312,7 +312,7 @@ TVSDKは、接続を開くと、サーバーに *キープアライブ接続を�
 
 * **SizeAvalableEventListener**
 
-   * `getHeight()` の `getWidth()``SizeAvailableEvent` メソッドは、それぞれ高さと幅で出力を返すようになりました。 表示縦横比は次のように計算できます。
+   * `getHeight()` との `getWidth()``SizeAvailableEvent` メソッドは、それぞれ高さと幅で出力を返すようになりました。 表示縦横比は次のように計算できます。
 
       ```java
       SizeAvailableEvent e;
@@ -753,7 +753,7 @@ WebViewDebuggingはデフォルトでFalseに設定されています。 デバ�
 ## 役立つリソース {#helpful-resources}
 
 * [必要システム構成](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-requirements.html)
-* [Android向けTVSDK 3.10プログラマーガイド](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-overview-prod-audience-guide.html)
+* [TVSDK 3.10 for Androidプログラマーガイド](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-overview-prod-audience-guide.html)
 * [APIリファレンス用のTVSDK Android Javadoc](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html)
 * [TVSDK Android C++ APIドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) — 各Javaクラスには対応するC++クラスがあり、C++ドキュメントにはJavadocsよりも詳しい説明が記載されています。Java APIについて詳しくは、C++のドキュメントを参照してください。
 * [Android向けTVSDK 1.4から2.5(Java)への移行ガイド](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)

@@ -1,18 +1,21 @@
 ---
-description: TVSDKがプレイリスト/マニフェスト内でサブスクライブされたタグを検出すると、プレイヤーは自動的にタグを処理し、PTTimedMetadataオブジェクトの形式で公開しようとします。
-seo-description: TVSDKがプレイリスト/マニフェスト内でサブスクライブされたタグを検出すると、プレイヤーは自動的にタグを処理し、PTTimedMetadataオブジェクトの形式で公開しようとします。
+description: TVSDKは、プレイリスト/マニフェスト内にサブスクライブされたタグを検出すると、タグを自動的に処理して、PTTimedMetadataオブジェクトの形式で公開しようとします。
+seo-description: TVSDKは、プレイリスト/マニフェスト内にサブスクライブされたタグを検出すると、タグを自動的に処理して、PTTimedMetadataオブジェクトの形式で公開しようとします。
 seo-title: 時間指定メタデータクラス
 title: 時間指定メタデータクラス
 uuid: d1ac6b0b-163f-4968-9160-0f60ff439c09
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
 
 # 時間指定メタデータクラス{#timed-metadata-class}
 
-TVSDKがプレイリスト/マニフェスト内でサブスクライブされたタグを検出すると、プレイヤーは自動的にタグを処理し、PTTimedMetadataオブジェクトの形式で公開しようとします。
+TVSDKは、プレイリスト/マニフェスト内にサブスクライブされたタグを検出すると、タグを自動的に処理して、PTTimedMetadataオブジェクトの形式で公開しようとします。
 
 このクラスは次の要素を提供します。
 
@@ -33,12 +36,12 @@ TVSDKがプレイリスト/マニフェスト内でサブスクライブされ�
   <tr> 
    <td colname="col1"><span class="codeph"> name</span> </td> 
    <td colname="col02"><span class="codeph"> NSString</span></td> 
-   <td colname="col2"> 時間指定メタデータの名前。 タイプがTAGの場合 <span class="codeph"> 、値は</span>キュー/タグ名を表します。 タイプが <span class="codeph"> ID3の場合</span>、nullです。 </td> 
+   <td colname="col2"> 時間指定メタデータの名前。 typeが <span class="codeph"> TAG</span>、値はキュー/タグ名を表します。 typeが <span class="codeph"> ID3</span>の場合はnullです。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> time</span> </td> 
    <td colname="col02"><span class="codeph"> CMTime</span></td> 
-   <td colname="col2"> この時間指定メタデータがストリーム内に存在する、メインコンテンツの開始を基準とした時間位置（ミリ秒）。 </td> 
+   <td colname="col2"> この時間指定メタデータがストリーム内で存在するメインコンテンツの開始に対する位置（ミリ秒）。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> type</span> </td> 
@@ -56,27 +59,24 @@ TVSDKがプレイリスト/マニフェスト内でサブスクライブされ�
 
 次の点に注意してください。
 
-* TVSDKは、属性リストをキーと値のペアに自動的に抽出し、属性をメタデータプロパティに格納します。
+* TVSDKは、属性リストを自動的にキーと値のペアに抽出し、属性をメタデータプロパティに保存します。
 
    >[!TIP]
    >
-   >特殊文字を含む文字列など、マニフェスト内のカスタムタグの複雑なデータは引用符で囲む必要があります。 例：  >
+   >マニフェスト内のカスタムタグに含まれる複雑なデータ（特殊文字を含む文字列など）は、引用符で囲む必要があります。 例：
    >
    >
-   ```>
+   ```
    >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```  >
-   >
+   >```
 
-
-
-* カスタムタグの形式が原因で抽出が失敗した場合、コンテンツプロパティには常にタグの生データ（コロンの後の文字列）が含まれます。 この場合、エラーは発生しません。
+* カスタムタグの形式が原因で抽出が失敗した場合、コンテンツプロパティには常にタグの生データが含まれます。これはコロンの後の文字列です。 この場合、エラーはスローされません。
 
 | 要素 | 説明 |
 |---|---|
-| タグ、ID3 | 時間指定メタデータに使用できるタイプ。 |
-| `@property (nonatomic, assign) CMTime time` | このメタデータがストリームに挿入された場所で、メインコンテンツの開始を基準とする時間位置。 |
+| TAG、ID3 | 時間指定メタデータに使用できるタイプ。 |
+| `@property (nonatomic, assign) CMTime time` | このメタデータが挿入されるストリーム内での位置を、メインコンテンツの開始を基準とした時間で表します。 |
 | `@property (nonatomic, assign) PTTimedMetadataType type` | 時間指定メタデータのタイプを返します。 |
 | `@property (nonatomic, retain) NSString *metadataId` | キュー/タグ属性から抽出されたIDを返します。 それ以外の場合は、一意のランダム値が提供されます。 |
 | `@property (nonatomic, retain) NSString *name` | キューの名前を返します。通常はHLSタグ名です。 |

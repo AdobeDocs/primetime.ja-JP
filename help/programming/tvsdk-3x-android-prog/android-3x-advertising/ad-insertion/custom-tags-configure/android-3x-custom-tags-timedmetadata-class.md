@@ -1,18 +1,21 @@
 ---
-description: TVSDKがプレイリスト/マニフェスト内でサブスクライブされたタグを検出すると、プレイヤーは自動的にタグを処理し、TimedMetadataオブジェクトの形式で公開しようとします。
-seo-description: TVSDKがプレイリスト/マニフェスト内でサブスクライブされたタグを検出すると、プレイヤーは自動的にタグを処理し、TimedMetadataオブジェクトの形式で公開しようとします。
+description: TVSDKがプレイリスト/マニフェスト内にサブスクライブされたタグを検出すると、プレイヤーは自動的にそのタグを処理し、TimedMetadataオブジェクトの形式で公開しようとします。
+seo-description: TVSDKがプレイリスト/マニフェスト内にサブスクライブされたタグを検出すると、プレイヤーは自動的にそのタグを処理し、TimedMetadataオブジェクトの形式で公開しようとします。
 seo-title: 時間指定メタデータクラス
 title: 時間指定メタデータクラス
 uuid: c7b1c1d7-48b3-43c7-aa21-f800d894976d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '418'
+ht-degree: 0%
 
 ---
 
 
 # 時間指定メタデータクラス {#timed-metadata-class}
 
-TVSDKがプレイリスト/マニフェスト内でサブスクライブされたタグを検出すると、プレイヤーは自動的にタグを処理し、TimedMetadataオブジェクトの形式で公開しようとします。
+TVSDKがプレイリスト/マニフェスト内にサブスクライブされたタグを検出すると、プレイヤーは自動的にそのタグを処理し、TimedMetadataオブジェクトの形式で公開しようとします。
 
 このクラスは次の要素を提供します。
 
@@ -28,27 +31,27 @@ TVSDKがプレイリスト/マニフェスト内でサブスクライブされ�
   <tr> 
    <td colname="col1"> <span class="codeph"> id </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> <p>時間指定メタデータを表す一意の識別子です。 </p> <p>この値は通常、キュー/タグID属性から抽出されます。 それ以外の場合は、一意のランダム値が提供されます。 getIdを使 <span class="codeph"> 用しま </span>す。 </p> </td> 
+   <td colname="col2"> <p>時間指定メタデータを表す一意の識別子です。 </p> <p>この値は通常、キュー/タグID属性から抽出されます。 それ以外の場合は、一意のランダム値が提供されます。 getIdを使用 <span class="codeph"> し </span>ます。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> メタデータ </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadata </span> </td> 
    <td colname="col02"> メタデータ </td> 
-   <td colname="col2"> <p>プレイリスト/マニフェストのカスタムタグから処理/抽出された情報。 getMetadataを使 <span class="codeph"> 用しま </span>す。 </p> </td> 
+   <td colname="col2"> <p>プレイリスト/マニフェストカスタムタグから処理/抽出された情報。 getMetadataを使用 <span class="codeph"> し </span>ます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> name </span> </td> 
    <td colname="col02"> 文字列 </td> 
-   <td colname="col2"> <p>時間指定メタデータの名前。 タイプがTAGの場 <span class="codeph"> 合、 </span>値はキュー/タグ名を表します。 typeが <span class="codeph"> ID3の場合、 </span>nullです。 getNameを使 <span class="codeph"> 用しま </span>す。 </p> </td> 
+   <td colname="col2"> <p>時間指定メタデータの名前。 typeが <span class="codeph"> TAGの場合、値はキュー/タグ名を表し </span>ます。 typeが <span class="codeph"> ID3の場合 </span>はnullです。 getNameを使用 <span class="codeph"> し </span>ます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> time </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> <p>この時間指定メタデータがストリーム内に存在する、メインコンテンツの開始を基準とした時間位置（ミリ秒）。 getTimeを使 <span class="codeph"> 用しま </span>す。 </p> </td> 
+   <td colname="col2"> <p>この時間指定メタデータがストリーム内で存在するメインコンテンツの開始に対する位置（ミリ秒）。 getTimeを使用 <span class="codeph"> し </span>ます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> type </span> </td> 
    <td colname="col02"> タイプ </td> 
-   <td colname="col2"> <p>時間指定メタデータのタイプ。 getTypeを使 <span class="codeph"> 用しま </span>す。 
+   <td colname="col2"> <p>時間指定メタデータのタイプ。 getTypeを使用 <span class="codeph"> し </span>ます。 
      <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
       <li id="li_739D30561BFB4D9B97DF212E4880BA2C">TAG — 時間指定メタデータがプレイリスト/マニフェスト内のタグから作成されたことを示します。 </li> 
       <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 — 時間指定メタデータがメディアストリームのID3タグから作成されたことを示します。 </li> 
@@ -61,22 +64,19 @@ TVSDKがプレイリスト/マニフェスト内でサブスクライブされ�
 
 次の点に注意してください。
 
-* TVSDKは、属性リストをキーと値のペアに自動的に抽出し、属性をメタデータプロパティに格納します。
+* TVSDKは、属性リストを自動的にキーと値のペアに抽出し、属性をメタデータプロパティに保存します。
 
    >[!TIP]
    >
-   >特殊文字を含む文字列など、マニフェスト内のカスタムタグの複雑なデータは引用符で囲む必要があります。 例：  >
+   >マニフェスト内のカスタムタグに含まれる複雑なデータ（特殊文字を含む文字列など）は、引用符で囲む必要があります。 例：
    >
    >
-   ```>
+   ```
    >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url= 
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```  >
-   >
+   >```
 
-
-
-* カスタムタグの形式が原因で抽出が失敗した場合、メタデータのプロパティは空になり、アプリケーションは実際の情報を抽出する必要があります。 この場合、エラーは発生しません。
+* カスタムタグの形式が原因で抽出が失敗した場合、メタデータプロパティは空になり、アプリケーションで実際の情報を抽出する必要があります。 この場合、エラーはスローされません。
 
 <table id="table_1BAE98BF23F641A3A5709EBE37B327F6"> 
  <thead> 
@@ -87,16 +87,16 @@ TVSDKがプレイリスト/マニフェスト内でサブスクライブされ�
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> パブリック列挙型{TAG, ID3} </span> </td> 
+   <td colname="col1"> <span class="codeph"> public enum Type {TAG, ID3} </span> </td> 
    <td colname="col2"> <p>時間指定メタデータに使用できるタイプ。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public TimedMetadata(Type type, long time, long id, String name, Metadata metadata); </span> </td> 
-   <td colname="col2"> <p>デフォルトのコンストラクター（timeはローカルストリーム時間）。 </p> </td> 
+   <td colname="col2"> <p>デフォルトコンストラクター（timeはローカルストリーム時間です）。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public long getTime(); </span> </td> 
-   <td colname="col2"> <p>このメタデータがストリームに挿入された場所で、メインコンテンツの開始を基準とする時間位置。 </p> </td> 
+   <td colname="col2"> <p>このメタデータが挿入されるストリーム内での位置を、メインコンテンツの開始を基準とした時間で表します。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public Metadata getMetadata(); </span> </td> 

@@ -5,7 +5,10 @@ seo-title: クローズドキャプションの表示を制御する
 title: クローズドキャプションの表示を制御する
 uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
@@ -16,27 +19,26 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 >[!TIP]
 >
->プレイヤーがシークモードに入ったときにクローズドキャプションテキストが表示された場合、シークの完了後にテキストが表示されることはなくなりました。 代わりに、数秒後に、TVSDKはビデオ内の終了シーク位置の後の次のクローズドキャプションテキストを表示します。
+>プレイヤーがシークモードに入ったときにクローズドキャプションテキストが表示されている場合、シーク完了後にテキストが表示されることはなくなりました。 代わりに、数秒後に、TVSDKはビデオ内の終了シーク位置の後に次のクローズドキャプションテキストを表示します。
 
 >[!NOTE]
 >
->クローズドキャプションの表示値は、で定義されま `ClosedCaptionsVisibility`す。>
+>クローズドキャプションの表示値は、で定義し `ClosedCaptionsVisibility`ます。
 >
-```>
+>
+```
 >public static const HIDDEN:String = hidden; 
 >public static const VISIBLE:String = visible;
->```>
+>```
 
-
-
-1. が少なくともPREPARED `MediaPlayer` ステータスになるまで待ちます( [有効な状態を待つを参照](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md))。
-1. クローズドキャプションの現在の表示設定を取得するには、のgetterメソッドを使用します。こ `MediaPlayer`のメソッドは、表示値を返します。
+1. 少なくともPREPAREDステータス `MediaPlayer` になるまで待ちます(有効な状態を [待つを参照](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md))。
+1. クローズドキャプションの現在の表示設定を取得するには、のgetterメソッドを使用します。このメソッドは、表示値 `MediaPlayer`を返します。
 
    ```
    public function get ccVisibility():String
    ```
 
-1. クローズドキャプションの表示/非表示を変更するには、setterメソッドを使用し、から表示値を渡しま `ClosedCaptionsVisibility`す。
+1. クローズドキャプションの表示/非表示を変更するには、setterメソッドを使用して、表示値をから渡し `ClosedCaptionsVisibility`ます。
 
    例：
 
@@ -44,7 +46,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    public function set ccVisibility(value:String):void
    ```
 
-1. コンボボックスを定義します。
+1. ドロップダウンリストを定義します。
 
    ```
    <s:DropDownList id="ccTracksList" width="85" 
@@ -74,7 +76,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    player.removeEventListener(MediaPlayerItemEvent.CAPTIONS_UPDATED, onCaptionUpdated);
    ```
 
-1. ユーザーがリストから選択を行った場合は、リストを作成して更新します。
+1. ユーザーがリストから選択を行った場合は、リストを作成および更新します。
 
    ```
    private function onCCTrackChange(event:IndexChangeEvent):void { 

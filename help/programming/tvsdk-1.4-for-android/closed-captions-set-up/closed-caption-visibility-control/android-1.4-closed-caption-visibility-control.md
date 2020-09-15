@@ -5,7 +5,10 @@ seo-title: クローズドキャプションの表示を制御する
 title: クローズドキャプションの表示を制御する
 uuid: 42913347-8158-474e-aa3c-ba4d38baba12
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -16,29 +19,28 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 >[!TIP]
 >
->プレイヤーがシークモードに入ったときにクローズドキャプションテキストが表示された場合、シークの完了後にテキストが表示されることはなくなりました。 代わりに、数秒後に、TVSDKはビデオ内の終了シーク位置の後の次のクローズドキャプションテキストを表示します。
+>プレイヤーがシークモードに入ったときにクローズドキャプションテキストが表示されている場合、シーク完了後にテキストが表示されることはなくなりました。 代わりに、数秒後に、TVSDKはビデオ内の終了シーク位置の後に次のクローズドキャプションテキストを表示します。
 
 >[!NOTE]
 >
->クローズドキャプションの表示値は、で定義されま `MediaPlayer.Visibility`す。>
+>クローズドキャプションの表示値は、で定義し `MediaPlayer.Visibility`ます。
 >
-```java>
+>
+```java
 >enum Visibility { 
 >       VISIBLE,  
 >       INVISIBLE 
 >}
->```>
+>```
 
-
-
-1. MediaPlayerが少なくともPREPARED状態になるまで待ちます(有効な状態にな [るまで待つを参照](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md))。
-1. クローズドキャプションの現在の表示設定を取得するには、MediaPlayerのgetterメソッドを使用します。このメソッドは表示値を返します。
+1. MediaPlayerがPREPARED状態以上になるまで待ちます(有効な状態になるまで [待つを参照してください](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md))。
+1. クローズドキャプションの現在の表示設定を取得するには、MediaPlayerのgetterメソッドを使用します。このメソッドは、表示値を返します。
 
    ```java
    Visibility getCCVisibility() throws IllegalStateException;
    ```
 
-1. クローズドキャプションの表示/非表示を変更するには、setterメソッドを使用し、から表示値を渡しま `MediaPlayer.Visibility`す。
+1. クローズドキャプションの表示/非表示を変更するには、setterメソッドを使用して、表示値をから渡し `MediaPlayer.Visibility`ます。
 
    例：
 

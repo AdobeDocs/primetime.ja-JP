@@ -5,7 +5,7 @@ seo-title: クローズドキャプションのスタイル設定を制御する
 title: クローズドキャプションのスタイル設定を制御する
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 4ccc99f1ad6536ceb5e09c898dba3f71fa2de3f3
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -143,10 +143,11 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
       >など。
       >
       >アプリケーションでは、に色スタイル情報を渡すときは常に `TextFormatBuilder`、 `Color` 定義済みリストを以前と同じように使用しますが、ここで、値を文字列として取得す `getValue()` るには、色に追加する必要があります。 例：
-
+      >
+      >
       ```
-      tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
-      ```
+      >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
+      >```
 
 
 
@@ -174,7 +175,8 @@ public TextFormatBuilder(
 ```
 
 >[!TIP]
-デフォルト値(例えば `DEFAULT`)を定義するオプションで、その値はキャプションが最初に指定されたときの設定を示します。
+>
+>デフォルト値(例えば `DEFAULT`)を定義するオプションで、その値はキャプションが最初に指定されたときの設定を示します。
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 

@@ -5,7 +5,10 @@ seo-title: カスタムスキン
 title: カスタムスキン
 uuid: bc71926e-0dec-4628-8248-911224a7a6c2
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
@@ -23,32 +26,29 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 * ボタンとテキストの前景色
 
-   フォアグラウンドを持つすべてのコントロールは、このクラスを使用 `vid-skin-fgcolor` します。 すべてのコントロールの前景を変更するには、クラスを持つすべての要素を繰り返し処理し、 `vid-skin-fgcolor` 必要な色を指定します。
+   フォアグラウンドを持つすべてのコントロールは、 `vid-skin-fgcolor` クラスを使用します。 すべてのコントロールの前景を変更するには、 `vid-skin-fgcolor` クラスを持つすべての要素を繰り返し実行し、必要な色を指定します。
 * ボタンとテキストの背景色
 
-   フォアグラウンドを持つすべてのコントロールが、このクラスを使用し `vid-skin-bgcolor` ています。 すべてのコントロールの前景を変更するには、クラスを持つすべての要素を繰り返し処理し、 `vid-skin-bgcolor` 必要な色を指定します。
+   フォアグラウンドを持つすべてのコントロールは、この `vid-skin-bgcolor` クラスを使用します。 すべてのコントロールの前景を変更するには、 `vid-skin-bgcolor` クラスを持つすべての要素を繰り返し実行し、必要な色を指定します。
 * 再生ヘッドの形状
 
-   再生ヘッドは、正方形または円形にすることができます。 再生ヘッドを変更するには、要素に `square` クラス `round` を追加し `playhead` ます。
+   再生ヘッドは、正方形または円形にできます。 再生ヘッドを変更するには、要素に `square` クラスを追加するか、ま `round` たはクラスを追加し `playhead` ます。
 * バッファリングスピナーのスタイル
 
-   参照プレーヤーは、プレーヤーがコンテンツをバッファリングする際に、次のスタイルのスピナーを表示できます。
+   参照プレーヤーは、プレイヤーがコンテンツをバッファリングする際に、次のスタイルのスピナーを表示できます。
 
    * オーバーレイテキスト( `overlay-text`)
-   * [矩形]スピナー( `spinner`)
+   * [矩形のスピナー] ( `spinner`)
    * シグナル( `signal`)
    * 縦棒グラフ( `vertical`)
 
       >[!TIP]
       >
-      >バッファリングスピナーを使用するには、buffering-overlay要素にクラスを追加する必要があります。 例えば、を使用するに `overlay-text`は、次の行をファイルに追加し `BufferOverlay.js` ます。      >
+      >バッファリングスピナーのいずれかを使用するには、buffering-overlay要素にクラスを追加する必要があります。 例えば、を使用するに `overlay-text`は、次の行を `BufferOverlay.js` ファイルに追加します。
       >
       >
-      ```js      >
+      ```js
       >var overlay = document.getElementById("buffering-overlay"); 
       >overlay.classList.add ("spinner");
-      >```      >
-      >
-
-
+      >```
 

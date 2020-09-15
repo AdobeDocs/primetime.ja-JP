@@ -1,43 +1,48 @@
 ---
-description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTPライブストリーミング(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
-seo-description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTPライブストリーミング(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
-seo-title: Adobe Creative Repackaging Service(CRS)を使用して、互換性のない広告を再パッケージ化する
-title: Adobe Creative Repackaging Service(CRS)を使用して、互換性のない広告を再パッケージ化する
+description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
+seo-description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
+seo-title: Adobeクリエイティブ再パッケージ化サービス(CRS)を使用して、互換性のない広告を再パッケージ化する
+title: Adobeクリエイティブ再パッケージ化サービス(CRS)を使用して、互換性のない広告を再パッケージ化する
 uuid: c3961628-39aa-444c-9c93-9f1e267d9cd4
 translation-type: tm+mt
-source-git-commit: 1859eb201a41797544fee1ad97d5cb21c7a0a7c1
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '374'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Creative Repackaging Service(CRS)を使用して、互換性のない広告を再パッケージ化する {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
+# Adobeクリエイティブ再パッケージ化サービス(CRS)を使用して、互換性のない広告を再パッケージ化する {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
 
-一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTPライブストリーミング(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
+一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
 
 エージェンシー広告サーバー、在庫パートナー、広告ネットワークなど、様々なサードパーティから提供される広告は、多くの場合、プログレッシブダウンロードMP4形式など、互換性のない形式で配信されます。
 
-TVSDKが最初に互換性のない広告を見つけたとき、プレイヤーはその広告を無視し、Primetime広告挿入バックエンドの一部であるクリエイティブ再パッケージ化サービス(CRS)に対して、互換性のある形式に広告を再パッケージ化する要求を発行します。 CRSは、広告の複数のビットレートM3U8レンディションを生成し、これらのレンディションをPrimetime Content Delivery Network(CDN)に保存しようとします。 次回TVSDKがその広告を指す広告応答を受け取ると、プレイヤーはCDNからHLS互換のM3U8バージョンを使用します。
+TVSDKが互換性のない広告を初めて検出したとき、プレイヤーはその広告を無視し、Primetime広告挿入バックエンドの一部であるCreative Repackaging Service(CRS)に対して、互換性のある形式に広告を再パッケージ化するよう要求します。 CRSは、広告の複数のビットレートM3U8レンディションを生成し、これらのレンディションをPrimetime Content Network(CDN)に保存します。 次回TVSDKがその広告を指す広告レスポンスを受け取ると、プレイヤーはCDNからHLS互換のM3U8バージョンを使用します。
 
-このオプションのCRS機能をアクティブにするには、アドビの担当者にお問い合わせください。
+このオプションのCRS機能をアクティブにするには、Adobeの担当者にお問い合わせください。
 
 >[!NOTE]
 >
->CRSバージョン3.0（およびそれ以前）のお客様の場合、CRSバージョン3.1以降、次の変更によりセキュリティとパフォーマンスの両方が向上しました。>
->* CRS 3.1は、再パッケージ化されるコンテ `https:` ンツが使用されている場合に続行しま `https:`す。 これにより、一部のプレーヤーが安全でないコンテンツを表示する可能性が低下します。
+>CRS Version 3.0（およびそれ以前）のお客様は、CRS Version 3.1以降、セキュリティとパフォーマンスの両方を改善しました。
+>
+>* CRS 3.1は、再パッケージ化するコンテンツ `https:` が使用されている場合に続行し `https:`ます。 これにより、一部のプレーヤーで、セキュリティで保護されていないコンテンツが表示される可能性が低くなります。
    >
    >
 * CRS 3.1は、ネットワーク呼び出しを大幅に最小化し、ビデオの起動時間を改善します。
+
 >
 
 
 
-CRSについて詳しくは、 [Creative Packaging Service(CRS)を参照してください](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf)。
+CRSについて詳しくは、「 [Creative Packaging Service(CRS)」を参照してください](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf)。
 
 ## TVSDKアプリケーションでのCRSの有効化{#enable-crs-in-tvsdk-applications}
 
-TVSDKアプリケーションでCRSを有効にするには、Auditudeの設定で次の情報を設定する必要があります。
+TVSDKアプリケーションでCRSを有効にするには、Auditude設定で次の情報を設定する必要があります。
 
-1. でCRSを有効にしま `AuditudeSettings`す。
+1. でCRSを有効にし `AuditudeSettings`ます。
 
    ```
    ... 

@@ -5,9 +5,9 @@ seo-title: Primetime DRMインターフェイスの概要
 title: Primetime DRMインターフェイスの概要
 uuid: 3aae7c7a-fd0c-430e-9018-fd72801ab778
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -47,14 +47,14 @@ DRM保護されたストリームがマルチビットレート(MBR)でエンコ
 
 >[!TIP]
 >
->DRM保護されたアセットのURLをiOSアプリで参照する場合、クエリ文字列パラメーターを(MBR)設定レベルM3U8 URLに追加する `?faxs=1` 必要があります。 次に例を示します。>
+>DRM保護されたアセットのURLをiOSアプリで参照する場合、クエリ文字列パラメーターを(MBR)設定レベルM3U8 URLに追加する `?faxs=1` 必要があります。 例：
 >
-```>
+>
+```
 >https://your.domain.com/hls/[...]/index.m3u8?faxs=1
->```>
->The `faxs=1` query string parameter signals that the content is DRM protected, and triggers the DRM decryption workflow accordingly in the iOS TVSDK. You can also append the `faxs=1` tag on DRM-protected HLS asset URLs that are destined for other platforms; it is observed as required on iOS or treated as a non-op in players on other platforms.
-
-
+>```
+>
+>`faxs=1` クエリ文字列パラメーターは、コンテンツがDRM保護されていることを伝え、それに応じてiOS TVSDKでDRM復号ワークフローをトリガーします。 また、他のプラットフォーム向けのDRM保護されたHLSアセットURLに `faxs=1` タグを追加することもできます。iOSでは必須と見なされるか、他のプラットフォームでは非操作として扱われます。
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 

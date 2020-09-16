@@ -4,9 +4,9 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: ca603507f696f75a32b4a4fc8cc35f9e1c14c214
+source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントは、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を提供します。
 
-## PTAI 20.9.1の機能強化および修正点
+## PTAI 20.9.2の機能強化および修正点
 
-このリリースでは、EXT-X-MAPにCDNトークンやEXT-X-MAPタグが誤ってDVR時間枠から外れるという、お客様の最も多くの問題の修正に焦点を当てていました。
+このリリースでは、タグを使用した非線形広告タイプの組み込みのサポートの提供、 `EXT-X-MARKER` およびプロバイダーの応答に時間がかかりすぎる全体的な広告解決時間の制限に焦点を当てています。
 
 Dynamic Versionの最新のリリースバージョンについて詳しくは、「 [PTAIリリースノート](ptai-20x-release-notes.md)」を参照してください。
 

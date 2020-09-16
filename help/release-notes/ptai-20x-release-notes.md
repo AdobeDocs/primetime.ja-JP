@@ -1,28 +1,43 @@
 ---
-title: PTAI 20.9.1リリースノート
-description: PTAI 20.9.1のリリースノートでは、2020年のPrimetime DynamicAd Insertionの新しい問題や変更された問題、解決された問題、既知の問題について説明します。
+title: PTAI 20.9.2リリースノート
+description: PTAI 20.9.2リリースノートでは、2020年のPrimetime DynamicAd Insertionの新しい問題や変更された問題、解決された問題、既知の問題について説明します。
 translation-type: tm+mt
-source-git-commit: 699e6a463bce4f7853406cb7fe529fb09f87ca92
+source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
 
 
-# Primetime DynamicAd Insertion20.9.1リリースノート
+# Primetime DynamicAd Insertion20.9.2リリースノート
 
-動的Ad Insertion20.9.1のリリースノートでは、2020年のPrimetime DynamicAd Insertionの新機能や変更点、解決された問題、既知の問題について説明します。
+動的Ad Insertion20.9.2のリリースノートでは、2020年のPrimetime DynamicAd Insertionの新機能や変更点、解決された問題、既知の問題について説明します。
 
-## PTAI 20.9.1の新機能
+## PTAI 20.9.2の新機能
+
+**日時：** 2020年9月15日火曜日午前3時30分から東部標準時の午前6時30分
+
+**機能強化**
+
+* タグを使用した非線形広告タイプの組み込みのサポートが提供され `EXT-X-MARKER` ました。
+この機能の詳細や有効については、テクニカルサポート担当者にお問い合わせください。
+
+* プロバイダーの対応に時間がかかりすぎる場合に、全体的な広告解決時間を制限できるようになりました。 制限を有効にするには、ブートストラップAPIパラメータ `ptadtimeout` をミリ秒単位の値に設定します。
+
+   >[!NOTE]
+   >
+   >このタイムアウトは、広告リクエストにのみ適用され、広告クリエイティブリクエストには適用されません。
+
+### 以前のリリースバージョンでの機能強化および修正点
+
+#### バージョン20.9.1
 
 **日時：** 2020年9月1日火曜日午前3時30分から東部標準時の午前7時30分
 
 **変更点**
 
 * HLS/CMAFを使用するお客様が、EXT-X-MAPでCDNトークンが欠落したり、EXT-X-MAPタグがDVRウィンドウから誤ってロールアウトされたりする問題を修正しました。
-
-### 以前のリリースバージョンでの機能強化および修正点
 
 #### バージョン20.8.4
 

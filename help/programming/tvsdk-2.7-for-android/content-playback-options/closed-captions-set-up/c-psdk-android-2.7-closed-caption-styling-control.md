@@ -5,7 +5,7 @@ seo-title: クローズドキャプションのスタイル設定を制御する
 title: クローズドキャプションのスタイル設定を制御する
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 4ccc99f1ad6536ceb5e09c898dba3f71fa2de3f3
+source-git-commit: b02dfafdc78ca209da5ba0ed855342952be4288f
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -133,11 +133,11 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
       >
       >**カラー設定：** Android TVSDK 2.Xでは、クローズドキャプションのカラースタイルが強化されました。 この機能強化により、RGBカラー値を表す16進文字列を使用してクローズドキャプションの色を設定できるようになりました。 RGB 16進数カラー表現は、Photoshopなどのアプリケーションで使用する、使い慣れた6バイトの文字列です。
       >
-      >    * FFFFFF =黒
-      >    * 000000 =白
-      >    * FF0000 =赤
-      >    * 00FF00 =緑
-      >    * 0000FF =青
+      >* FFFFFF =黒
+      >* 000000 =白
+      >* FF0000 =赤
+      >* 00FF00 =緑
+      >* 0000FF =青
 
       >
       >など。

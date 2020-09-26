@@ -4,9 +4,9 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,9 @@ ht-degree: 0%
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントは、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を提供します。
 
-## PTAI 20.9.2の機能強化および修正点
+## PTAI 20.9.3の機能強化および修正点
 
-このリリースでは、タグを使用した非線形広告タイプの組み込みのサポートの提供、 `EXT-X-MARKER` およびプロバイダーの応答に時間がかかりすぎる全体的な広告解決時間の制限に焦点を当てています。
-
-Dynamic Versionの最新のリリースバージョンについて詳しくは、「 [PTAIリリースノート](ptai-20x-release-notes.md)」を参照してください。
+リリースに焦点を当てたBootstrap APIパラメータ `ptparallelstream`ーです。これにより、CMAFデミュードされたオーディオまたはビデオストリームを同時に要求するプレーヤーを持つお客様は、オーディオとビデオトラックの広告の一貫性を確保できます。
 
 ## TVSDK 3.12 Androidの修正点
 

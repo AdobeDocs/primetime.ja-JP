@@ -5,9 +5,9 @@ seo-title: マニフェストサーバークエリパラメーター
 title: マニフェストサーバークエリパラメーター
 uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 クエリパラメーターは、マニフェストサーバーに対して、リクエストを送信したクライアントの種類と、そのクライアントがマニフェストサーバーに何を求めているかを伝えます。 必須の形式や値が必要な場合もあります。
 
-完全なURLは、ベースURLの後に疑問符が続き、次に引数が続くようにアンパサンドで区切られて構成され `parameterName=value` ます。 `Base URL?name1=value1&name2=value2& . . .&name n=value n`
+完全なURLは、ベースURLの後に疑問符が続き、次に引数が続くようにアンパサンドで区切られて構成され `parameterName=value` ます。 `Base URL?name1=value1&name2=value2& . . .&name n=value n`.
 
-## 認識されるパラメータ {#section_072845B7FA94468C8068E9092983C9E6}
+## 認識されるパラメータ {#recognized-parameters}
 
 マニフェストサーバーは、以下のパラメーターを認識します。 広告サーバーに対して、認識されていないすべてのパラメーターと共に、これらのパラメーターを処理または渡します。
 
@@ -50,3 +50,5 @@ ht-degree: 0%
 | scteTracking | SCTEトラッキング情報をJSON V2サイドカーで取得する前に、M3U8を取得します。  <br/>このパラメーターは、プレーヤーがM3U8をフェッチする際にSCTEタグ情報の取得が必要であることをマニフェストサーバーに示します。 | いいえ(デフォルト： false ) | trueまたはfalseの注意： SCTE-35データは、次のクエリパラメーター値を組み合わせたJSONサイドカーで返されます。 <ul><li>`ptcueformat=turner | elemental | nfl | DPIScte35` </li><li>pttrackingversion=v2 </li><li>scteTracking=true</li></ul> |
 | vetargetmultiplier | ライブポイントからのセグメント数プリロールオフセットは、次を使用して設定されます。  `(  vetargetmultiplier  *  targetduration ) +  vebufferlength`  <br/><br/>**注意**: ライブ/リニアのみ | いいえ(デフォルト： 3.0 ) | 浮動小数点 |
 | vebufferLength | ライブポイントからの秒数メモ： ライブ/リニアのみ | いいえ(デフォルト： 3.0 ) | 浮動小数点 |
+| ptadtimeout | 広告解決に要する時間を全体的に制限するには、プロバイダーの応答に時間がかかりすぎる場合。 | はい（有効にする場合） | ミリ秒単位の値 |
+| ptparallelstream | CMAFのデミュックスオーディオまたはビデオストリームを並行してリクエストするプレーヤーを持つお客様は、オーディオとビデオトラックの広告の一貫性を確保できます。 | はい（機能を有効にする場合）または無効にする場合は省略します。 | true |

@@ -1,20 +1,30 @@
 ---
-title: PTAI 20.9.2リリースノート
-description: PTAI 20.9.2リリースノートでは、2020年のPrimetime DynamicAd Insertionの新しい問題や変更された問題、解決された問題、既知の問題について説明します。
+title: PTAI 20.9.3リリースノート
+description: PTAI 20.9.3のリリースノートでは、2020年のPrimetime DynamicAd Insertionの新しい問題や変更された問題、解決された問題、既知の問題について説明します。
 translation-type: tm+mt
-source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
 
 
-# Primetime DynamicAd Insertion20.9.2リリースノート
+# Primetime DynamicAd Insertion20.9.3リリースノート
 
-動的Ad Insertion20.9.2のリリースノートでは、2020年のPrimetime DynamicAd Insertionの新機能や変更点、解決された問題、既知の問題について説明します。
+動的Ad Insertion20.9.3のリリースノートでは、2020年のPrimetime DynamicAd Insertionの新機能や変更点、解決された問題、既知の問題について説明します。
 
-## PTAI 20.9.2の新機能
+## PTAI 20.9.3の新機能
+
+**日時：** 2020年9月30日水曜日午前3時30分～午前6時30分東部時間
+
+**変更点**
+
+* BootstrapAPIパラメーターを追加 `ptparallelstream`しました。 これにより、CMAFのデミュックスオーディオまたはビデオストリームをリクエストするプレーヤーを持つお客様は、オーディオとビデオトラックの広告の一貫性を確保できます。 この機能を有効にするにはパラメータ値をtrueに設定し、無効にするには省略します。
+
+### 以前のリリースバージョンでの機能強化および修正点
+
+#### バージョン20.9.2
 
 **日時：** 2020年9月15日火曜日午前3時30分から東部標準時の午前6時30分
 
@@ -28,8 +38,6 @@ ht-degree: 0%
    >[!NOTE]
    >
    >このタイムアウトは、広告リクエストにのみ適用され、広告クリエイティブリクエストには適用されません。
-
-### 以前のリリースバージョンでの機能強化および修正点
 
 #### バージョン20.9.1
 

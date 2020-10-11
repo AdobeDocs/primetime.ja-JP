@@ -2,9 +2,9 @@
 title: Adobe PrimetimeAd Insertionの概要
 description: Adobe PrimetimeAd Insertionの概要
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: 2a9bb089cda2b315f91b30d5cab0db9b3e372799
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ PrimetimeAd Insertionは、ビデオマニフェストを書き直して、各�
 
 1. PrimetimeAd Insertionは、コンテンツCDNから要求されたストリームを取得し、キュー情報を解析/読み取り、広告サーバーの呼び出しを行い、必要に応じて広告の時間を置き換えます。
 
-1. PrimetimeAd Insertionは、リソースURLを書き換え、広告クリエイティブがトランスコードを必要とするかどうかを検出することでマニフェストを正規化します。 [ジャストインタイム広告トランスコード](just-in-time-transcoding.md) および [パッケージ化を参照してください](just-in-time-repackaging.md)。
+1. PrimetimeAd Insertionは、リソースURLを書き換え、広告クリエイティブでトランスコードが必要かどうかを検出することでマニフェストを正規化します。 <!-- see [Just-in-time ad transcoding](just-in-time-transcoding.md) and [packaging](just-in-time-repackaging.md).-->
 
 1. PrimetimeAd Insertionは、必要な広告クリエイティブを取得し、マニフェストに適切なフラグメントを挿入します。
 

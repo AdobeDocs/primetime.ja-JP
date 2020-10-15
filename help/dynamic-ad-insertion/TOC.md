@@ -2,20 +2,20 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime動的Ad Insertionヘルプ
-user-guide-description: Explains how to monetize content by inserting user-targeted dynamic ads on the server and engage audience with personalized ads.
+user-guide-title: Primetime Ad Insertion のヘルプ
+user-guide-description: ユーザーをターゲットに設定した動的な広告をサーバーに挿入してコンテンツを収益化し、パーソナライズされた広告をオーディエンスに提供する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 0%
+source-wordcount: '250'
+ht-degree: 9%
 
 ---
 
 
-# 動的Ad Insertionヘルプ {#ad-insertion}
+# Primetime Ad Insertion Help {#ad-insertion}
 
-+ [動的なAd Insertionの概要](home.md)
++ [PrimetimeAd Insertionの概要](home.md)
 + PrimetimeAd Insertionの概要{#get-started}
    + [概要](get-started-ptai.md)
    + [PrimetimeAd Insertionを使用するための準備](setup-ptai.md)
@@ -24,7 +24,7 @@ ht-degree: 0%
    + [ライブ/リニアストリームでの広告挿入の使用](ad-insertion-live-linear-stream.md)
    + [VODに広告挿入を使用する](ad-insertion-vod.md)
    + [広告トラッキングの設定](set-up-ad-tracking.md)
-+ [動的Ad Insertionリリースノート](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
++ [PrimetimeAd Insertionリリースノート](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
 + [マニフェストサーバーデバッグツール](manifest-server-debugging-tool.md)
 
 <!-- + [Server Side Ad Insertion debugging dashboard](ssai-debugging-dashboard.md)-->

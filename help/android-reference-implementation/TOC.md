@@ -2,13 +2,13 @@
 cloud: experience-cloud
 product: primetime
 audience: end-user
-user-guide-title: Primetimeリファレンス導入のヘルプ
-user-guide-description: Helps understand the TVSDK and modify the feature managers to customize your personal player.
+user-guide-title: Primetime リファレンス実装のヘルプ
+user-guide-description: TVSDK を理解し、機能マネージャーを変更して、個人用プレーヤーをカスタマイズします。
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 0%
+source-wordcount: '246'
+ht-degree: 7%
 
 ---
 

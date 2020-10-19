@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Primetime プログラミングのヘルプ
 user-guide-description: Android デバイスでは Java、iOS デバイスでは Objective-C を使用したアプリケーションやビデオプレーヤーの開発を学習できます。
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 02ac57d14cf5c4c2819d17413a9d3e9a31237715
 workflow-type: tm+mt
 source-wordcount: '4327'
 ht-degree: 0%
@@ -489,7 +489,7 @@ ht-degree: 0%
          + [概要](tvsdk-1.4-for-android/ui-configure/abr-control-quality/android-1.4-abr-control-quality.md)
          + [ABRControlParametersを使用した可変ビットレートの設定](tvsdk-1.4-for-android/ui-configure/abr-control-quality/android-1.4-abr-set-using-abrparameters.md)
       + [画面キャプチャを有効にする](tvsdk-1.4-for-android/ui-configure/android-1.4-enable-screen-capture.md)
-      + 特定のビデオ用にメディアプレイヤーを初期化します {#initialize}
+      + 特定のビデオ用にメディアプレイヤーを初期化する {#initialize}
          + [メディアリソースの作成](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-create.md)
          + [メディアリソースをMediaPlayerに読み込む](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md)
          + [MediaPlayerItemLoaderを使用したメディアリソースの読み込み](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md)
@@ -785,7 +785,7 @@ ht-degree: 0%
          + [特定の時間にストリームを開始](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-stream-entry-control.md)
          + [ビデオ画質に関する可変ビットレート(ABR)](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/c-psdk-dhls-1.4-abr-control-quality.md)
          + [ビデオ表示の位置とサイズの制御](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-control-video-view.md)
-      + 特定のビデオ用にメディアプレイヤーを初期化します {#initialize-media-player}
+      + 特定のビデオ用にメディアプレイヤーを初期化する {#initialize-media-player}
          + [メディアリソースの作成](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-create.md)
          + [メディアリソースをMediaPlayerに読み込む](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md)
          + [MediaPlayerItemLoaderを使用したメディアリソースの読み込み](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load-using-mediaplayeritemloader.md)

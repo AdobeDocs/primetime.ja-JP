@@ -785,7 +785,7 @@ ht-degree: 0%
          + [特定の時間にストリームを開始](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-stream-entry-control.md)
          + [ビデオ画質に関する可変ビットレート(ABR)](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/c-psdk-dhls-1.4-abr-control-quality.md)
          + [ビデオ表示の位置とサイズの制御](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-control-video-view.md)
-      + 特定のビデオ用にメディアプレイヤーを初期化する {#initialize-media-player}
+      + 特定のビデオ用にメディアプレイヤーを初期化します {#initialize-media-player}
          + [メディアリソースの作成](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-create.md)
          + [メディアリソースをMediaPlayerに読み込む](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md)
          + [MediaPlayerItemLoaderを使用したメディアリソースの読み込み](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load-using-mediaplayeritemloader.md)
@@ -982,7 +982,7 @@ ht-degree: 0%
    + コンテンツ再生オプション {#content-playback-options}
       + [Flashフェイルオーバー](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-flash-failover.md)
       + [MediaPlayerの設定](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/t-psdk-browser-tvsdk-2.4-mediaplayer-set-up.md)
-      + 特定のビデオ用にメディアプレイヤーを初期化する {#initialize-specific-video}
+      + 特定のビデオ用にメディアプレイヤーを初期化します {#initialize-specific-video}
          + [メディアリソースの作成](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-create.md)
          + [接触チャネル間のリソース共有](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-cors-cred-support.md)
          + [メディアリソースをMediaPlayerに読み込む](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-load.md)

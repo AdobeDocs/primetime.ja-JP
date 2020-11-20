@@ -37,8 +37,7 @@ TVSDKは、ビデオのサイズや位置が変更されると(アプリケー�
    >
    >例：
    >
-   >
-   ```
+   >```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 

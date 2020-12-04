@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# BEESリファレンスの実装のデプロイ {#deploy-the-bees-reference-implementation}
+# BEESリファレンス実装を導入{#deploy-the-bees-reference-implementation}
 
 1. Tomcatアプリケーションサーバーを設定します。 （Tomcatのマニュアルを参照）。
-1. Tomcatの `[!DNL bees.war]` フォルダにファイルをコピー [!DNL webapps/] します。
-1. にリクエストを送信し `https://localhost:8080/bees`ます。
+1. `[!DNL bees.war]`ファイルをTomcatの[!DNL webapps/]フォルダにコピーします。
+1. `https://localhost:8080/bees`にリクエストを送信します。
 
    「BEES is operational」というメッセージが表示された場合は、デプロイメントは正常に完了しています。
 1. サーバーでSSLを有効にします。

@@ -17,13 +17,13 @@ ht-degree: 0%
 
 コンテンツをパッケージ化する場合は、ライセンスサーバーのURLを指定する必要があります。
 
-Adobe Primetime DRMサーバーのURLは、次の形式を使用します。
+Adobe PrimetimeDRMサーバーのURLは次の形式を使用します。
 
 ```
 http(s)://<license-server-host:port>/flashaccessserver/<tenant-name>
 ```
 
-例えば、ポート8080 `mylicenseserver.com` をリスンするライセンスサーバーホスト名、およびというテナントの場合 *`tenant1`*、コンテンツのパッケージ化時に指定するライセンスサーバーURLに次の構文を使用します。
+例えば、ポート8080をリッスンするライセンスサーバーホスト名`mylicenseserver.com`とテナント名&#x200B;*`tenant1`*&#x200B;の場合、コンテンツのパッケージ化時に指定するライセンスサーバーURLに次の構文を使用します。
 
 ```
 https://mylicenseserver.com:8080/flashaccessserver/tenant1

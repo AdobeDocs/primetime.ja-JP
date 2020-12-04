@@ -1,20 +1,23 @@
 ---
-description: これらのクラスは、プレイヤーのパフォーマンスを判断するのに役立つ情報を提供します。
-seo-description: これらのクラスは、プレイヤーのパフォーマンスを判断するのに役立つ情報を提供します。
+description: プレイヤーのパフォーマンスを判断するのに役立つ情報を提供するクラスです。
+seo-description: プレイヤーのパフォーマンスを判断するのに役立つ情報を提供するクラスです。
 seo-title: QoSクラス
 title: QoSクラス
 uuid: c1f0218d-4a79-4141-9a74-e70ac4f70aa5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '426'
+ht-degree: 0%
 
 ---
 
 
-# QoSクラス {#qos-classes}
+# QoSクラス{#qos-classes}
 
-これらのクラスは、プレイヤーのパフォーマンスを判断するのに役立つ情報を提供します。
+プレイヤーのパフォーマンスを判断するのに役立つ情報を提供するクラスです。
 
-パッケージ： [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/package-summary.html) Package: [com.adobe.mediacore.qos.metrics](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/package-summary.html)
+パッケージ：[com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/package-summary.html)パッケージ：[com.adobe.mediacore.qos.metrics](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/package-summary.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_2893EFF9755149159A4F94E781C76B6E"> 
  <thead> 
@@ -25,12 +28,13 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph">指標を参照してください。<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/BufferingMetrics.html" format="html" scope="external"> BufferingMetrics</a></span></td> 
-   <td colname="2"> プレーヤーがバッファリングに費やした時間と、バッファリングイベントが発生した頻度に関する情報を提供します。 </td> 
+   <td colname="1"><span class="codeph">metrics.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/BufferingMetrics.html" format="html" scope="external"> BufferingMetrics</a></span></td> 
+   <td colname="2"> プレイヤーがバッファリングに費やした時間と、バッファリングイベントが発生した頻度に関する情報を提供します。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/DeviceInformation.html" format="html" scope="external"> DeviceInformation</a> </span></td> 
-   <td colname="2">フレーズを実行するプラットフォームとオペレーティングシステムに関する情報を提供します。 
+   <td colname="2">フレーズが含まれるプラットフォームとオペレーティングシステムに関する情報を提供します。
+    実行： 
     <ul id="ul_0DE69F3B38E84964AB98DCCD11E5E123"> 
      <li id="li_19B2D1889FCA4B0F8FCB0EE8F87353B2">プラットフォームOSのバージョン </li> 
      <li id="li_CA35F4A48FD34555AC7D7832D5997AD4">フレーズライブラリのバージョン番号 </li> 
@@ -42,23 +46,23 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/LoadInfo.html" format="html" scope="external"> LoadInfo</a></span> </td> 
-   <td colname="2"> 様々なリソース（ファイル、マニフェストまたはプレイリスト、フラグメント/セグメント、トラックなど）の読み込みに関する様々なQoS情報が含まれます。 </td> 
+   <td colname="2"> 様々なリソース（ファイル、マニフェストまたはプレイリスト、フラグメント/セグメント、トラックなど）の読み込みに関する様々なQoS情報が含まれています。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/PlaybackInformation.html" format="html" scope="external"> PlaybackInformation</a></span> </td> 
-   <td colname="2"> 再生の実行方法に関する情報を提供します。 これには、フレームレート、プロファイルビットレート、バッファリングに費やした合計時間、バッファリングの試行回数、最初のビデオフラグメントから最初のバイトを取得するのにかかった時間、最初のフレームのレンダリングにかかった時間、現在のバッファ長、バッファ時間が含まれます。 </td> 
+   <td colname="2"> 再生の実行方法に関する情報を提供します。 フレームレート、プロファイルビットレート、バッファリングに費やした合計時間、バッファリング試行回数、最初のビデオフラグメントからの最初のバイト取得に要した時間、最初のフレームのレンダリングに要した時間、現在のバッファ長、バッファ時間などが含まれます。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph">指標を参照してください。<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> PlaybackLoadMetrics</a></span> </td> 
-   <td colname="2"> メディアの読み込みに要した時間、プレーヤーが最初のフレームをレンダリングするのに要した時間、エラーが発生した場合に失敗した時間に関する情報を提供します。 </td> 
+   <td colname="1"><span class="codeph">metrics.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> PlaybackLoadMetrics</a></span> </td> 
+   <td colname="2"> メディアの読み込みに要した時間、プレイヤーが最初のフレームをレンダリングするのに要した時間、エラーが発生した場合は失敗した時間に関する情報を提供します。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph">指標を参照してください。<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> PlaybackMetrics</a> </span></td> 
-   <td colname="2"> 再生動作に関する情報を提供します。 フレームレート、ビットレート、バッファー長などが含まれます。 </td> 
+   <td colname="1"><span class="codeph">metrics.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> PlaybackMetrics</a> </span></td> 
+   <td colname="2"> 再生動作に関する情報を提供します。 例えば、フレームレート、ビットレート、バッファー長などがあります。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph">指標を参照してください。<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackSessionMetrics.html" format="html" scope="external"> PlaybackSessionMetrics</a></span> </td> 
-   <td colname="2"> プレイヤーが実際に再生に費やした時間（秒）と、ビデオが実際に画面に表示されていた時間に関する情報を提供します。 </td> 
+   <td colname="1"><span class="codeph">metrics.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackSessionMetrics.html" format="html" scope="external"> PlaybackSessionMetrics</a></span> </td> 
+   <td colname="2"> プレイヤーが再生に費やした実際の時間（秒）と、ビデオが実際に画面に表示されていた実際の時間に関する情報を提供します。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/QOSProvider.html" format="html" scope="external"> QOSProvider</a></span></td> 

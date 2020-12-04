@@ -6,24 +6,27 @@ title: シグナリングモードと時間範囲
 uuid: a4d2b0f3-49ce-4a07-a460-9e63bb91b5d3
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '91'
+ht-degree: 0%
 
 ---
 
 
-# シグナリングモードと時間範囲 {#signaling-mode-and-time-range}
+# シグナリングモードと時間範囲{#signaling-mode-and-time-range}
 
 <table> 
  <thead> 
   <tr> 
    <th class="entry"> </th> 
-   <th class="entry"> マーク </th> 
-   <th class="entry"> 削除 </th> 
-   <th class="entry"> 置換 </th> 
+   <th class="entry"> MARK </th> 
+   <th class="entry"> DELETE </th> 
+   <th class="entry"> REPLACE </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> CustomRange OpportunityGenerator </span> </td> 
+   <td> <span class="codeph"> CustomRange OpportunityGenerator  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -42,7 +45,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> ServerMapシグナリング </span> モード </td> 
+   <td> <span class="codeph"> ServerMap </span> シグナリングモード </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -65,7 +68,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    <td> 該当なし（自動CustomRangeシグナリングモード） </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> ManifestCueシグナリング </span> モード </td> 
+   <td> <span class="codeph"> ManifestCue </span> シグナリングモード </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -89,7 +92,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    <td> 該当なし（自動CustomRangeシグナリングモード） </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> CustomRangeシグナリング </span> モード </td> 
+   <td> <span class="codeph"> CustomRange </span> シグナリングモード </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -135,14 +138,14 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
  <thead> 
   <tr> 
    <th class="entry"> </th> 
-   <th class="entry"> マーク </th> 
-   <th class="entry"> 削除 </th> 
-   <th class="entry"> 置換 </th> 
+   <th class="entry"> MARK </th> 
+   <th class="entry"> DELETE </th> 
+   <th class="entry"> REPLACE </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator </span> </td> 
+   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -161,8 +164,8 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> SeverMapシグナリング </span> モード </td> 
-   <td> 存在しない（広告が無効になっている）。 </td> 
+   <td> <span class="codeph"> SeverMap </span> シグナリングモード </td> 
+   <td> 存在しません（広告は無効です）。 </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -172,11 +175,11 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> 該当なし(自動CustomRangeシグナ <span class="codeph"> リング </span> モード) </td> 
+   <td> 該当なし（自動<span class="codeph"> CustomRange </span>シグナリングモード） </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> ManifestCueシグナリング </span> モード </td> 
-   <td> 存在しない（広告が無効になっている）。 </td> 
+   <td> <span class="codeph"> ManifestCue </span> シグナリングモード </td> 
+   <td> 存在しません（広告は無効です）。 </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -186,13 +189,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> 該当なし(自動CustomRangeシグナ <span class="codeph"> リング </span> モード) </td> 
+   <td> 該当なし（自動<span class="codeph"> CustomRange </span>シグナリングモード） </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> CustomRangeシグナリング </span> モード </td> 
-   <td> 存在しない（広告が無効になっている）。 </td> 
+   <td> <span class="codeph"> CustomRange </span> シグナリングモード </td> 
+   <td> 存在しません（広告は無効です）。 </td> 
    <td> なし </td> 
-   <td> なし(CustomRangeOpportunityGeneratorでの対 <span class="codeph"> 応が必 </span>要) </td> 
+   <td> なし（<span class="codeph"> CustomRangeOpportunityGenerator </span>で対応） </td> 
   </tr> 
  </tbody> 
 </table>

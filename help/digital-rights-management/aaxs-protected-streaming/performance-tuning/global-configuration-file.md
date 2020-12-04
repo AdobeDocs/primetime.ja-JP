@@ -4,31 +4,34 @@ title: グローバル設定ファイル
 uuid: 48c45f56-55c2-4526-b854-5552caf21541
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '285'
+ht-degree: 0%
 
 ---
 
 
-# グローバル設定ファイル{#global-configuration-file}
+# グローバル構成ファイル{#global-configuration-file}
 
-パフォーマンスに最も大きな影響を与えるのは、グローバル設定ファイルflashaccess-global.xmlの設定を使用することです。 これらの設定には、要素と要素 `<Caching>` が含ま `<Logging>` れます。
+パフォーマンスに対する最大の影響は、グローバル設定ファイルflashaccess-global.xmlの設定を使用することです。 これらの設定には、`<Caching>`要素と`<Logging>`要素が含まれます。
 
-* `<Caching>` この要素 `<Caching>` は、メモリ内の設定ファイルのキャッシュを制御します。 要素の `<Caching>` 構文は次のとおりです。
+* `<Caching>` この `<Caching>` 要素は、メモリ内の設定ファイルのキャッシュを制御します。`<Caching>`要素の構文は次のとおりです。
 
    ```
    <Caching refreshDelaySeconds="..." numTenants="..."/>
    ```
 
-   * `refreshDelaySeconds` サーバーが設定ファイルの更新をチェックする頻度を制御します。 値を小さくするとパフォーマン `refreshDelaySeconds` スに悪影響を与え、値を大きくするとパフォーマンスが向上します。 詳しくは、「設定ファ `refreshDelaySeconds`イルの更[新](../../aaxs-protected-streaming/updating-configuration-files/updating-configuration-files-overview.md)」を参照してください。
+   * `refreshDelaySeconds` サーバーが設定ファイルの更新をチェックする頻度を制御します。`refreshDelaySeconds`の値を小さくするとパフォーマンスが低下し、大きくするとパフォーマンスが向上します。 `refreshDelaySeconds`の詳細については、「[設定ファイルの更新](../../aaxs-protected-streaming/updating-configuration-files/updating-configuration-files-overview.md)」を参照してください。
 
-   * `numTenants` テナントの数を指定します。 残りのテナントに対する要求はキャッシュミスを引き起こすので、テナント数より少ない値はパフォーマンスに影響する可能性が高くなります。 設定データのキャッシュミスはパフォーマンスに悪影響を与えます。 したがって、考慮する必要のあるメモリ制限がない限り、この値はサーバーに対して設定されているテナント数よりも大きい値に設定することをお勧めします。
+   * `numTenants` テナント数を指定します。テナントの数より少ない値は、残りのテナントへの要求によってキャッシュのミスが発生するので、パフォーマンスに影響する可能性があります。 設定データのキャッシュミスはパフォーマンスに悪影響を与えます。 そのため、Adobeでは、考慮すべきメモリ制限がない限り、サーバーに設定されているテナント数よりも大きい値を設定することをお勧めします。
 
-* `<Logging>` この要 `<Logging>` 素は、ログレベルと、ログファイルをロールする頻度を指定します。 要素の `<Logging>` 構文は次のとおりです。
+* `<Logging>` この `<Logging>` 要素は、ログレベルと、ログファイルをロールする頻度を指定します。`<Logging>`要素の構文は次のとおりです。
 
    ```
    <Logging level="..." rollingFrequency=""/>
    ```
 
-   * `level` ログに記録するメッセージを指定します。 「DEBUG」の値を指定すると、多くのログメッセージが生成され、パフォーマンスに悪影響を与える可能性があります。 最適なパフォーマンスを得るために、「WARN」を設定することをお勧めします。 ただし、この値によって、ライセンス監査などの重要な実行時情報が失われるリスクはあります。 パフォーマンスへの影響を最小限に抑えて貴重なログ情報を保持するには、「INFO」の値を使用します。
-   * `rollingFrequency` ログファイルをロールする頻度を指定 *します*。 ローリングとは、新しいログファイルがアクティブなログになるプロセスです。以前にアクティブだったログファイルは、書き込まれず、ロールされたと見なされます。 周期間隔は、「MINUTELY」、「HOURLY」、「TWOYS-DAILY」、「DAILY」、「WEEKLY」、「MONTHLY」または「NEVER」に設定できます。
+   * `level` ログに記録するメッセージを指定します。「DEBUG」の値を指定すると、多くのログメッセージが生成され、パフォーマンスに悪影響を与える可能性があります。 Adobeでは、最適なパフォーマンスを得るために「WARN」の設定を推奨しています。 ただし、この値によって、ライセンス監査などの重要なランタイム情報が失われるリスクがあります。 パフォーマンスへの影響を最小限に抑えながら、貴重なログ情報を保持するには、「INFO」の値を使用します。
+   * `rollingFrequency` ログファイルを *ロールする頻度を指定します*。ローリングとは、新しいログファイルがアクティブなログになる処理です。以前アクティブだったログファイルは、書き込まれず、ロールされたと見なされます。 周期間隔は、「MINUTELY」、「HOURLY」、「TWY-DAILY」、「DAILY」、「WEEKLY」、「MONTHLY」または「NEVER」に設定できます。
 
-パフォ *ーマンスの最適化に関するその他のヒントについては、「Adobe Access SDKを使用した* Protecting Content」を参照してください。
+パフォーマンスの最適化に関するその他のヒントについては、*AdobeアクセスSDKを使用したコンテンツの保護*&#x200B;を参照してください。

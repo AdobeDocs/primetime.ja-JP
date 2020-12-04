@@ -6,19 +6,22 @@ title: ビデオの長さの表示
 uuid: 945f222d-80ba-4832-a06f-9bb8db6adbcb
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '123'
+ht-degree: 0%
 
 ---
 
 
-# ビデオの長さの表示 {#display-the-duration-of-the-video}
+# ビデオの長さの表示{#display-the-duration-of-the-video}
 
 現在アクティブなコンテンツの長さを表示できます。
 
-次のサンプルコードを使用して、ビデオの長さの表示を実装します。
+以下のサンプルコードを使用して、ビデオの長さの表示を実装します。
 
     &#39;PTMediaPlayer&#39;プロパティ&#39;[seekableRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange)&#39;には、現在のシーク可能な時間範囲が含まれます。
     
-    * VODの場合、この範囲は、広告を含むVODコンテンツ範囲全体です。
+    * VODの場合、この範囲は、広告を含むVODコンテンツ全体です。
     *ライブ/リニアの場合、この範囲はシーク可能な時間を表します。
     
     APIについて詳しくは、[TVSDK 3.4 for iOS API Reference](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v3/index.html)を参照してください。

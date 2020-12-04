@@ -1,35 +1,38 @@
 ---
-description: サウンドのボリュームを制御するユーザインターフェイスを設定できます。
-seo-description: サウンドのボリュームを制御するユーザインターフェイスを設定できます。
+description: サウンドの音量を制御するユーザインターフェイスを設定できます。
+seo-description: サウンドの音量を制御するユーザインターフェイスを設定できます。
 seo-title: ボリューム制御の提供
 title: ボリューム制御の提供
 uuid: c51e99b6-efd1-414e-9ef7-77bd53e0d6c0
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
-# ボリューム制御の提供{#provide-volume-control}
+# ボリューム制御{#provide-volume-control}を提供
 
-サウンドのボリュームを制御するユーザインターフェイスを設定できます。
+サウンドの音量を制御するユーザインターフェイスを設定できます。
 
-1. MediaPlayerインスタンスがこのコマンドの有効なステータスになるまで待ちます。
+1. MediaPlayerインスタンスがこのコマンドに対して有効なステータスになるまで待ちます。
 
    RELEASED以外の状態はすべて有効です。
-1. インスタンスでボリュームセットメソッドを呼び出 `MediaPlayer` して、オーディオのボリュームを設定します。
+1. `MediaPlayer`インスタンスのボリューム設定メソッドを呼び出して、オーディオのボリュームを設定します。
 
    ```
    public function set volume(value:Number):void
    ```
 
-   ボリュームの値は、要求されたボリュームを最大ボリュームの割合で表します。0は無音、1は最大ボリュームです。
+   ボリュームの値は、要求されたボリュームを最大ボリュームの割合で表します。0は無音、1は最大です。
 
    <table id="table_144A2B1260374FBE8D976194F602DDC7"> 
    <thead> 
    <tr> 
       <th colname="col1" class="entry"> 指定したボリュームが </th> 
-      <th colname="col2" class="entry"> 結果のボリュームは、 </th> 
+      <th colname="col2" class="entry"> 結果のボリュームは </th> 
    </tr> 
    </thead>
    <tbody> 
@@ -47,7 +50,8 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
       <ul id="ul_8C2282F0EDC44A408820F5768709214F"> 
       <li id="li_B00BC6F4812D4000891358F762C8E492">0 ～ 1の場合の結果 </li> 
       <li id="li_03B7F30662554F299320040CAC2DEB7A">結果が1より大きい場合は1 </li> 
-      </ul> <p>ヒント： このロジックは、ボリュームの値の範囲が0 ～ 100のfrases/ <span class="codeph">primetime-sdk-name</span>（以前のバージョン）に基づいて、クライアントから提供される値を処理します。 </p> </td> 
+      </ul> <p>ヒント： このロジックは、 
+      <span class="codeph">frases/primetime-sdk-name</span>。ボリューム値の範囲は0 ～ 100です。 </p> </td> 
    </tr> 
    </tbody> 
    </table>

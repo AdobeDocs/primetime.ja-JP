@@ -1,30 +1,33 @@
 ---
-description: Primetime Digital Rights Management(DRM)システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 また、サードパーティのDRMソリューションをアドビの統合Primetime DRMソリューションの代わりに使用することもできます。
-seo-description: Primetime Digital Rights Management(DRM)システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 また、サードパーティのDRMソリューションをアドビの統合Primetime DRMソリューションの代わりに使用することもできます。
+description: PrimetimeDigital Rights Management(DRM)システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 または、サードパーティのDRMソリューションを、Adobeの統合Primetime DRMソリューションの代替として使用できます。
+seo-description: PrimetimeDigital Rights Management(DRM)システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 または、サードパーティのDRMソリューションを、Adobeの統合Primetime DRMソリューションの代替として使用できます。
 seo-title: Primetime DRMインターフェイスの概要
 title: Primetime DRMインターフェイスの概要
 uuid: 71479464-8356-4732-9774-da9f6084e6ad
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '429'
+ht-degree: 0%
 
 ---
 
 
-# 概要 {#primetime-drm-interface-overview}
+# 概要{#primetime-drm-interface-overview}
 
-Primetime Digital Rights Management(DRM)システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 また、サードパーティのDRMソリューションをアドビの統合Primetime DRMソリューションの代わりに使用することもできます。
+PrimetimeDigital Rights Management(DRM)システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 または、サードパーティのDRMソリューションを、Adobeの統合Primetime DRMソリューションの代替として使用できます。
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-サードパーティのDRMソリューションの可用性に関する最新情報については、アドビの担当者にお問い合わせください。
+サードパーティのDRMソリューションの可用性に関する最新情報については、Adobeの担当者にお問い合わせください。
 
-Primetimeデジタル著作権管理(DRM)システムのクライアント側の主要な要素は、DRMマネージャーです。 Android SDKに付属のサンプルアプリケーションには、特定のDRM操 `DRMHelper` 作をより簡単に実装できるようにする方法を示すクラスが含まれています。
+Primetime digital rights management(DRM)システムのクライアント側の主要要素はDRMマネージャーです。 Android SDKに含まれるサンプルアプリケーションには`DRMHelper`クラスが含まれており、このクラスは、特定のDRM操作の実装を簡単にする方法を示しています。
 
-Primetime DRMは、TVSDKアプリケーションにコンテンツ保護を実装するための、スケーラブルで効率的なワークフローを提供します。 各デジタルメディアファイルのライセンスを作成することで、ビデオコンテンツの権限を保護し、管理します。
+Primetime DRMは、TVSDKアプリケーションにコンテンツ保護を実装するためのスケーラブルで効率的なワークフローを提供します。 各デジタルメディアファイルのライセンスを作成することで、ビデオコンテンツの権限を保護し、管理します。
 
-TVSDKパッケージに含まれているDRMサンプルプレイヤーコードを参照してください。
+TVSDKパッケージに含まれるDRMサンプルプレイヤーコードを参照してください。
 
-DRMを操作するための最も重要なAPI要素は次のとおりです。
+以下は、DRMを操作するための最も重要なAPI要素です。
 
 * DRMサブシステムを実装するDRMマネージャーオブジェクトへのメディアプレイヤー内の参照：
 
@@ -34,13 +37,13 @@ DRMを操作するための最も重要なAPI要素は次のとおりです。
 
    >[!TIP]
    >
-   >このAPIは、が呼び出された後にの `DRMManager` み有効なオブジェクトを `MediaPlayerEvent.DRM_METADATA` 返します。 このイベントが発生す `getDRMManager()` る前にを呼び出すと、NULLが返される場合があります。
+   >このAPIは、`MediaPlayerEvent.DRM_METADATA`が呼び出された後にのみ有効な`DRMManager`オブジェクトを返します。 このイベントが起動する前に`getDRMManager()`を呼び出すと、NULLが返される場合があります。
 
-* DRMワー `DRMHelper` クフローを実装する場合に役立つヘルパークラス。
+* `DRMHelper`ヘルパークラス。DRMワークフローの実装時に役立ちます。
 
-   はを参照してく `DRMHelper` ださ `ReferencePlayer`い。
+   `DRMHelper`は`ReferencePlayer`で確認できます。
 
-* DRMメタ `DRMHelper` データがメディアとは別のURLに配置されている場合にDRMメタデータを読み込むメタデータローダーメソッドです。
+* `DRMHelper`メタデータローダーメソッド。DRMメタデータがメディアとは別のURLにある場合に、そのメタデータを読み込みます。
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -48,7 +51,7 @@ DRMを操作するための最も重要なAPI要素は次のとおりです。
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* DRMメタ `DRMHelper` データをチェックして、認証が必要かどうかを判断するメソッドです。
+* DRMメタデータをチェックして認証が必要かどうかを判断する`DRMHelper`メソッド。
 
    ```java
    /** 
@@ -62,7 +65,7 @@ DRMを操作するための最も重要なAPI要素は次のとおりです。
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
    ```
 
-* `DRMHelper` メソッドを使用して認証を実行します。
+* `DRMHelper` 認証を実行する方法。
 
    ```java
    /** 
@@ -87,11 +90,11 @@ DRMを操作するための最も重要なAPI要素は次のとおりです。
    final DRMAuthenticationListener authenticationListener);
    ```
 
-* 様々なDRMアクティビティとステータスをアプリケーションに通知するイベント。
+* 様々なDRMアクティビティとステータスをアプリに通知するイベント。
 
 <!--<a id="section_899BD9061D484E1BBA46E84617C36867"></a>-->
 
-関連するその他のAPI要素：
+関連するその他のAPIエレメント：
 
 * [com.adobe.ave.drm.DRMManager](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMManager.html)
 * [com.adobe.ave.drm.DRMMetdata](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMMetadata.html)
@@ -108,4 +111,4 @@ Comment Type: draft
 -->
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-DRMについて詳しくは、 [Adobe Primetime DRMのドキュメントを参照してください](https://helpx.adobe.com/primetime/user-guide.html)。
+DRMについて詳しくは、[Adobe PrimetimeDRMドキュメント](https://helpx.adobe.com/primetime/user-guide.html)を参照してください。

@@ -6,6 +6,9 @@ title: カスタムオポチュニティ/コンテンツリゾルバーの実装
 uuid: bfc14318-ca4b-46cc-8128-e3743af06d9a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
@@ -18,13 +21,13 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 ![](assets/ios_psdk_content_resolver.png)
 
-1. 抽象クラスを拡張して、カスタム広告リゾルバーを `PTContentResolver` 開発します。
+1. `PTContentResolver`抽象クラスを拡張して、カスタム広告リゾルバーを開発します。
 
-   `PTContentResolver` は、コンテンツリゾルバークラスによって実装する必要があるインターフェイスです。 同じ名前の抽象クラスも使用でき、設定を自動的に処理（委譲を取得）します。
+   `PTContentResolver` は、コンテンツリゾルバークラスで実装する必要があるインターフェイスです。同じ名前の抽象クラスも使用でき、設定を自動的に処理（委任の取得）します。
 
    >[!TIP]
    >
-   >`PTContentResolver` は、クラスを通じて公開さ `PTDefaultMediaPlayerClientFactory` れます。 クライアントは、抽象クラスを拡張することで、新しいコンテンツリゾルバーを `PTContentResolver` 登録できます。 デフォルトでは、特に削除しない限り、はに `PTDefaultAdContentResolver` 登録されています `PTDefaultMediaPlayerClientFactory`。
+   >`PTContentResolver` は、 `PTDefaultMediaPlayerClientFactory` クラスを通じて公開されます。クライアントは、`PTContentResolver`抽象クラスを拡張することで、新しいコンテンツリゾルバーを登録できます。 デフォルトでは、特別に削除しない限り、`PTDefaultAdContentResolver`は`PTDefaultMediaPlayerClientFactory`に登録されます。
 
    ```
    @protocol PTContentResolver <NSObject> 
@@ -52,27 +55,28 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    @end
    ```
 
-1. 受信した `shouldResolveOpportunity` データを処 `YES` 理する必要がある場合は、実装して返しま `PTPlacementOpportunity`す。
-1. 代替コ `resolvePlacementOpportunity`ンテンツまたは広告の読み込みを開始する実装。
-1. 広告が読み込まれたら、挿入するコンテ `PTTimeline` ンツに関する情報を含む広告を準備します。
+1. `shouldResolveOpportunity`を実装し、受信した`PTPlacementOpportunity`を処理する必要がある場合は`YES`を返します。
+1. 代替コンテンツまたは広告を読み込む開始を`resolvePlacementOpportunity`に実装します。
+1. 広告が読み込まれたら、挿入するコンテンツに関する情報を`PTTimeline`に準備します。
 
        以下に、タイムラインに関する有益な情報を示します。
    
-   * プリロール、ミッ `PTAdBreak`ドロール、ポストロールのタイプは複数あります。
+   * プリロール、ミッドロール、ポストロールのタイプは複数`PTAdBreak`にすることができます。
 
-      * には次 `PTAdBreak` のものがあります。
+      * `PTAdBreak`は次のものです。
 
-         * 時間 `CMTimeRange` の開始時間と時間の長さを示す。
+         * ブレークの開始時間と継続時間を示す`CMTimeRange`。
 
-            これは、の範囲プロパティとして設定されま `PTAdBreak`す。
+            これは`PTAdBreak`の範囲プロパティとして設定されます。
 
-         * `NSArray` の `PTAd`数
+         * `NSArray` の値 `PTAd`。
 
-            これは、のadsプロパティとして設定されま `PTAdBreak`す。
-   * Aは広 `PTAd` 告を表し、各広告には次の `PTAd` ものがあります。
+            これは`PTAdBreak`の広告プロパティとして設定されます。
+   * `PTAd`は広告を表し、各`PTAd`は次のものを持ちます。
 
-      * 広告の `PTAdHLSAsset` プライマリアセットプロパティとしてのセット。
-      * クリック可能な広告ま `PTAdAsset` たはバナー広告として複数のインスタンスが含まれる場合があります。
+      * 広告の主なアセットプロパティとして設定される`PTAdHLSAsset`。
+      * クリック可能な広告またはバナー広告として複数の`PTAdAsset`インスタンスが存在する可能性があります。
+
    例：
 
    ```
@@ -102,8 +106,8 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    _timeline.adBreaks = ptBreaks;
    ```
 
-1. を呼び `didFinishResolvingPlacementOpportunity`出し、を提供しま `PTTimeline`す。
-1. を呼び出して、カスタムコンテンツ/広告リゾルバーをデフォルトのメディアプレイヤーファクトリに登録しま `registerContentResolver`す。
+1. `didFinishResolvingPlacementOpportunity`を呼び出します。これにより、`PTTimeline`が提供されます。
+1. `registerContentResolver`を呼び出して、カスタムコンテンツ/広告リゾルバーをデフォルトのメディアプレイヤーファクトリに登録します。
 
    ```
    //Remove default content/ad resolver 
@@ -116,7 +120,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    [[PTDefaultMediaPlayerFactory defaultFactory] registerContentResolver:[contentResolver autorelease]];
    ```
 
-1. カスタムオポチュニティリゾルバーを実装している場合は、デフォルトのメディアプレイヤーファクトリに登録します。
+1. カスタムオポチュニティリゾルバーを実装した場合、それをデフォルトのメディアプレイヤーファクトリに登録します。
 
    >[!TIP]
    >
@@ -134,6 +138,6 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
               registerOpportunityResolver:[opportunityResolver autorelease]];
    ```
 
-プレーヤーがコンテンツを読み込み、VODまたはLIVEのタイプであると判断されると、次のいずれかが発生します。>
-* コンテンツがVODの場合、カスタムコンテンツリゾルバーを使用して、ビデオ全体の広告タイムラインが取得されます。
+プレイヤーがコンテンツを読み込み、VODまたはLIVEのタイプであると判断されると、次のいずれかが発生します。>
+* コンテンツがVODの場合、カスタムコンテンツリゾルバーを使用して、ビデオ全体の広告タイムラインを取得します。
 * コンテンツがLIVEの場合、配置オポチュニティ（キューポイント）がコンテンツ内で検出されるたびに、カスタムコンテンツリゾルバーが呼び出されます。

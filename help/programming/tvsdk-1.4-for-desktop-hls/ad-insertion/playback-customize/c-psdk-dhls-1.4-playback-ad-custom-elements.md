@@ -31,7 +31,8 @@ TVSDKは、広告を含むコンテンツの再生動作をカスタマイズす
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
    <td colname="col2">広告の時間を視聴者が視聴したものとしてマークするかどうかを制御します。視聴済みの場合はマークするタイミングを制御します。 次を使用して監視ポリシーを設定および取得します。 
     <pre>
-     adBreakAsWatched <span class="codeph"></span> プロパティ。
+     the 
+     <span class="codeph"> adBreakAsWatched</span>プロパティ。
     </pre> </td> 
   </tr> 
   <tr> 

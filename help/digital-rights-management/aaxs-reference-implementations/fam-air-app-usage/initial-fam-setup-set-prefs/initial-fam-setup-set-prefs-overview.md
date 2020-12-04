@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# 環境設定の概要 {#setting-preferences-overview}
+# 環境設定の概要{#setting-preferences-overview}
 
-PackagerサーバーのURLを除き、以下に指定したすべての環境設定がサーバー上の [!DNL flashaccess-refimpl-packager.properties] ファイルに保存されます。 すべての設定は、プロパティファイルで直接変更することも、AIRアプリケーションを使用して変更することもできます。 パスワードは、サーバー上のプロパティファイルに保存されると暗号化されます。 UIに暗号化されていないパスワードを入力すると、ファイルに保存される前に暗号化されます。
+PackagerサーバーのURLを除き、以下に指定したすべての環境設定がサーバー上の[!DNL flashaccess-refimpl-packager.properties]ファイルに保存されます。 すべての設定は、プロパティファイルで直接変更することも、AIRアプリケーションを使用して変更することもできます。 パスワードは、サーバー上のプロパティファイルに保存されると暗号化されます。 UIに暗号化されていないパスワードを入力すると、ファイルに保存される前に暗号化されます。
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ PackagerサーバーのURLを除き、以下に指定したすべての環境設
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> Packager Server URL </td> 
-   <td colname="2" class="- topic/entry "> flashaccess-packager.war <span class="filepath"> を実行しているサーバーの場所で </span>す。例： <span class="filepath"> https://localhost:8080 </span> </td> 
+   <td colname="2" class="- topic/entry "> <span class="filepath"> flashaccess-packager.war </span>；を実行しているサーバーの場所例：<span class="filepath"> https://localhost:8080 </span> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> リソースディレクトリ </td> 
@@ -41,7 +41,7 @@ PackagerサーバーのURLを除き、以下に指定したすべての環境設
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> ライセンスサーバのURL </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">クライアントがライセンスを要求するサーバのURL例： <span class="filepath"> https://mylicenseserver.com:8080 </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">クライアントがライセンスを要求するサーバのURL例：<span class="filepath"> https://mylicenseserver.com:8080 </span> </p> </td> 
   </tr> 
  </tbody> 
 </table>

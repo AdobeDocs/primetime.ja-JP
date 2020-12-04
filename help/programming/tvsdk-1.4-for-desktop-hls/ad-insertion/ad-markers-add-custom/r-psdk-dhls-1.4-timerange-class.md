@@ -6,6 +6,9 @@ title: TimeRangeクラス
 uuid: 5d0c979e-cc63-4fdd-becc-b0e3987b0891
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
@@ -16,15 +19,15 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-セッ `TimeRange` ト内の各指定は、TVSDKによって内部的に維持され、広告関連の期間として適切にマークされる必要のある、再生タイムライン上のセグメントを表します。
+セット内の各`TimeRange`仕様は、TVSDKが内部的に保持し、広告関連の期間として適切にマークする必要がある再生タイムライン上のセグメントを表します。
 
-このク `TimeRange` ラスは、タイムライン上の開始位置と終了位置を公開する単純なデータ構造です。 これら2つの読み取り専用プロパティは、再生タイムラインの時間範囲の概念を抽象化します。
+`TimeRange`クラスは、開始の位置とタイムライン上の終了位置を公開する単純なデータ構造です。 これら2つの読み取り専用プロパティは、再生タイムラインの時間範囲の概念を抽象化します。
 
 >[!TIP]
 >
 >どちらの値もミリ秒で表されます。
 
-以下に、TimeRangeクラスの概要を示します。
+TimeRangeクラスの概要を次に示します。
 
 ```
 public final class TimeRange {

@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# コンテンツの安全なパッケージ化 {#securely-packaging-content}
+# コンテンツの安全なパッケージ化{#securely-packaging-content}
 
 AdobeアクセスMedia Packagerコマンドラインツールの設定ファイルには、パッケージ化の際に使用するPKCS12秘密鍵証明書が必要です。
 
-参照実装のコマンドラインツールでは、PKCS12秘密鍵証明書ファイルのパスワードは、flashaccess.propertiesファイルにクリアテキストで保存されます。 このため、このファイルをホストするコンピューターを保護し、セキュリティで保護された環境になっていることを確認する際は、十分に注意が必要です。 ( [物理的なセキュリティとアクセスを参照](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md))。
+参照実装のコマンドラインツールでは、PKCS12秘密鍵証明書ファイルのパスワードは、flashaccess.propertiesファイルにクリアテキストで保存されます。 このため、このファイルをホストするコンピューターを保護し、セキュリティで保護された環境になっていることを確認する際は、十分に注意が必要です。 （[物理的セキュリティとアクセス](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md)を参照）。
 
 また、License Server証明書とLicense Serverトランスポート証明書も使用されます。 この情報の整合性と機密性の両方を保護する必要があります。 権限のあるエンティティのみ、パッケージャーの使用を許可する必要があります。 秘密鍵が侵害された場合は、証明書を失効できるように、すぐにAdobe Systems Incorporatedに知らせてください。
 

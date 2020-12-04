@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Javaを使用したパスワードの準備{#prepare-passwords-using-java}
+# Java{#prepare-passwords-using-java}を使用してパスワードを準備する
 
-Javaでの実行 `ScrambleUtil.class` :
+Javaで`ScrambleUtil.class`を実行：
 
-1. 移動先 `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
+1. `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`に移動
 1. コマンドラインで次のように入力します。
 
    ```

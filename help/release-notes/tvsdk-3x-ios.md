@@ -10,11 +10,11 @@ ht-degree: 0%
 ---
 
 
-# TVSDK 3.12 iOS向けリリースノート {#tvsdk-for-ios-release-notes}
+# TVSDK 3.12 iOS向けリリースノート{#tvsdk-for-ios-release-notes}
 
 TVSDK 3.12 for iOSリリースノートでは、TVSDK iOS 3.12の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
 
-## システムとソフトウェアの要件 {#system-software-requirements}
+## システムとソフトウェアの要件{#system-software-requirements}
 
 iOS 3.12をダウンロードする前に、ハードウェア、オペレーティングシステム、アプリケーションのバージョンが次の要件を満たしていることを確認してください。
 
@@ -24,17 +24,17 @@ iOS 3.12をダウンロードする前に、ハードウェア、オペレーテ
 
 15分間の再生後にライブストリームが失敗する問題を修正しました。
 
-現在のリリースでの修正点については、 [お客様の問題を修正し](#resolved-issues) 、制限については、 [既知の問題と制限に関する節を参照してください](#known-issues-and-limitations) 。
+現在のリリースの修正点については、[修正されたお客様の問題](#resolved-issues)を参照し、制限については、[既知の問題と制限](#known-issues-and-limitations)の節を参照してください。
 
-### 以前のリリースの新機能および修正点 {#whats-new-previous}
+### 以前のリリース{#whats-new-previous}の新機能および修正点
 
 **iOS TVSDK 3.11**
 
-お客様がアプリケーションのクラッシュの原因となる、 `isFallbackOnInvalidCreativeEnabled` および方法に関する問題を修正 `customParams` しました。
+`isFallbackOnInvalidCreativeEnabled`とメソッド`customParams`によってアプリケーションがクラッシュするお客様の問題に対して修正を行いました。
 
 **iOS TVSDK 3.10**
 
-* ネットワークが使用できない場合にTVSDKプレイヤーが `PTMediaPlayerStatusError` 通知を実行しない問題を修正しました。
+* ネットワークが使用できない場合にTVSDKプレイヤーが`PTMediaPlayerStatusError`通知を実行しない問題を修正しました。
 
 **iOS TVSDK 3.9**
 
@@ -66,7 +66,7 @@ vastXMLプロパティが正しく設定されず、nil値を返していた問�
 
 *バックグラウンドに切り替わったときにオーディオの再生を続行するようにアプリを設定します。*
 
-この機能を有効にするには、PTMediaPlayerクラスに `audioPlaybackInBackground` 追加された新しいAPIを設定する必要があります。 このAPIを有効にすると、アプリでバックグラウンドオーディオを再生できるようになります。
+この機能を有効にするには、PTMediaPlayerクラスに追加された新しいAPI `audioPlaybackInBackground`を設定する必要があります。 このAPIを有効にすると、アプリでバックグラウンドオーディオを再生できるようになります。
 
 **iOS TVSDK 3.4.0.19（修正プログラム）**
 
@@ -76,11 +76,11 @@ vastXMLプロパティが正しく設定されず、nil値を返していた問�
 
 **広告解決タイムアウト**
 
-* TVSDK 3.4では、広告全体の解決とマニフェストのダウンロードに対してタイムアウト値を設定できるようになりました。 所定のタイムアウト内に、一部の広告が解決されない場合、TVSDKは残りの広告を再生します。
+* TVSDK 3.4では、広告全体の解決とマニフェストのダウンロードに対してタイムアウト値を設定できるようになりました。 指定のタイムアウト内に、一部の広告が    解決済みの場合、TVSDKは残りの広告を再生します。
 
 * PTAdMetadata:adRequestTimeout APIは非推奨となり、削除されます。 デフォルト値は35秒に設定されています。
 
-* PTAdMetadataClassに2つの新しい代替APIが導入されました。adResolutionTimeout — 広告解決全体の呼び出しのタイムアウト — 広告マニフェストのダウンロードのタイムアウト。
+* PTAdMetadataClassに2つの新しい代替APIが導入されました。adResolutionTimeout — 広告解決呼び出し全体のタイムアウト                adManifestTimeout — 広告マニフェストのダウンロードのタイムアウト。
 
 **売上高の最適化**
 
@@ -104,9 +104,11 @@ TVSDK 3.3は、iOS 11 SDKに準拠しています。 非推奨のAPIはすべて
 
 **バージョン3.1**
 
-* **追加のログのサポート**&#x200B;広告の再生に失敗した場合の詳細な通知のサポートを追加しました。
+* **追加のログの**
+サポート広告の再生に失敗した場合の詳細な通知のサポートを追加しました。
 
-* **FairPlayで暗号化されたCMAFストリームのサポート** FairPlayで暗号化されたCMAFストリームをAVCコーデックでの再生でサポートするようになりました。
+* **FairPlayで暗号化されたCMAFストリームの**
+サポートFairPlayで暗号化されたCMAFストリームをAVCコーデックでの再生でサポートするようになりました。
 
 **バージョン3.0.1**
 
@@ -118,13 +120,13 @@ TVSDK 3.3は、iOS 11 SDKに準拠しています。 非推奨のAPIはすべて
 
 * ジャストインタイム — 広告マーカーに近い広告の解決
 
-JITを有効にするために、アプリレベルのインターフェイスにブール型のプロパティが追加されました。 `enableDelayAdLoading` がNO `enableDelayAdLoading` の場合は、True `setadMetadata.delayAdLoading`に設定されます（PTAdMetadataインターフェイスのプロパティ）。
+JITを有効にするために、アプリレベルのインターフェイスにブール型の`enableDelayAdLoading`プロパティが追加されました。 `enableDelayAdLoading`がNOの場合、`setadMetadata.delayAdLoading`はTrue（PTAdMetadataインターフェイスのプロパティ）になります。
 
-このプロパティを有効にすると、TVSDKは、定義された許容値に基づいて、各広告の時間を位置より前に解決します。 デフォルトでは、 `delayAdTolerance` は5秒に設定されています。
+このプロパティを有効にすると、TVSDKは、定義された許容値に基づいて、各広告の時間を位置より前に解決します。 デフォルトでは、`delayAdTolerance`は5秒に設定されています。
 
 **バージョン1.4.45**
 
-Xcode10に準拠するために、TVSDKは「`libstdc++`」から「`libc++`」に移行しました。その結果、サポートされる最小バージョンはiOS 7です。 以前はiOS 6でした。
+Xcode10に準拠するため、TVSDKは「`libstdc++`」から「`libc++`」に移行しました。その結果、サポートされる最小バージョンはiOS 7です。 以前はiOS 6でした。
 
 **バージョン1.4.44**
 
@@ -143,15 +145,15 @@ Xcode10に準拠するために、TVSDKは「`libstdc++`」から「`libc++`」�
 
 **バージョン1.4.42**
 
-このリリースでは、新機能は追加されません。 修正された問題のリストについては、「 [解決された問題](#resolved-issues)」を参照してください。
+このリリースでは、新機能は追加されません。 修正された問題のリストについては、[解決された問題](#resolved-issues)を参照してください。
 
 **バージョン1.4.41**
 
 APIの変更：
 
-* **isSecure**:プレイヤーの記録とエラーのスローを保護するために、新しいAPIがisSecureに導入されました。 デフォルト値はtrueです。
+* **isSecure**:プレイヤーの記録とエラーのスローを保護するために、新しいAPIがisSecureに導入されました。デフォルト値はtrueです。
 
-* **allowExternalRecording**:安全なコンテンツに対して空中再生のミラーリングを可能にする新しいAPIが導入されました。 エアプレイのミラーリングは録画として扱われるので、 `allowExternalRecording` 値はに設定する必要があります。これは、エアプレイのミラーリングを可能にするためで `True``False` す。また、コンテンツのセキュリティを確保するためには、エアプレイのミラーリングを停止するように設定する必要があります。 デフォルトで `value` はtrueです。
+* **allowExternalRecording**:安全なコンテンツに対して空中再生のミラーリングを可能にする新しいAPIが導入されました。エアプレイのミラーリングは記録として扱われるので、コンテンツを保護するために、エアプレイのミラーリングを許可するには`allowExternalRecording`の値を`True`に設定する必要があります。 `False`デフォルトでは、`value`はtrueです。
 
 **バージョン1.4.40**
 
@@ -161,33 +163,33 @@ APIの変更：
 
 * iOS TVSDKは、VHL 2.0.1およびVHL 2.0.1とNielsenで認証されています。
 
-* iOS TVSDKが更新され、新しいAkamaiホストからCRSリクエストが作成されるようにな `primetime-a.akamaihd.net`りました。
+* iOS TVSDKが更新され、新しいAkamaiホスト`primetime-a.akamaihd.net`からCRSリクエストが作成されるようになりました。
 
 * 新しいホスト名の設定では、HTTPとHTTPS(SSL)の両方を介して、CRSアセットの配信をより大規模に提供します。
 
 **バージョン1.4.36**
 
-iOS TVSDKでVHL 2.0を統合および認証します。APIの複雑さを軽減して、 `VideoHeartbeatsLibrary` 実装のバリアを軽減します。
+iOS TVSDKでVHL 2.0を統合および認証します。APIの複雑さを軽減して、`VideoHeartbeatsLibrary`実装のバリアを軽減します。
 
 **バージョン1.4.34**
 
 **ネットワーク広告情報**
 
-TVSDK APIは、サードパーティのVAST応答に関する追加情報を提供するようになりました。 広告ID、Ad SystemおよびVAST広告拡張は、広告アセットのプロパティを介してアクセス可能な `PTNetworkAdInfo` クラスで提供され `networkAdInfo` ます。 この情報は、 **Mort Analyticsなどの他のAd Analyticsプラットフォームとの統合に使用できます**。
+TVSDK APIは、サードパーティのVAST応答に関する追加情報を提供するようになりました。 広告ID、Ad SystemおよびVAST広告拡張は、広告アセットの`networkAdInfo`プロパティからアクセスできる`PTNetworkAdInfo`クラスに提供されます。 この情報は、**Mort Analytics**&#x200B;など、他のAd Analyticsプラットフォームとの統合に使用できます。
 
 **バージョン1.4.31**
 
-* **請求指標** ：実際の使用状況に関係なく固定料金ではなく、使用した分のみの支払いを希望する顧客に対応するために、Adobeは使用状況指標を収集し、これらの指標を使用して顧客の請求額を決定します。
+* **請求** 指標Adobeは、実際の使用状況に関係なく固定料金ではなく、使用した分のみを支払いたい顧客に対応するために、使用状況指標を収集し、これらの指標を使用して顧客の請求額を決定します。
 
    TVSDKがストリーム開始イベントを生成するたびに、プレイヤーはHTTPメッセージを定期的にAdobeの請求システムに送信する開始を実行します。 請求可能期間と呼ばれる期間は、標準のVOD、プロVOD（ミッドロール広告が有効）、ライブコンテンツで異なる場合があります。 各コンテンツタイプのデフォルトの期間は30分ですが、実際の値はAdobeとの契約によって決まります。
 
-* **CRS Ads** TVSDKのマルチCDNのサポートが、CRS広告のマルチCDNをサポートするようになりました。 CRS広告にFTPの詳細を指定することで、AkamaiなどのデフォルトのAdobe所有CDN以外のCDNの場所を指定できます。
+* **CRS AdsTVSDKのマルチCDNのサポートCRS** 広告のマルチCDNがサポートされるようになりました。CRS広告にFTPの詳細を指定することで、AkamaiなどのデフォルトのAdobe所有CDN以外のCDNの場所を指定できます。
 
 **バージョン1.4.29**
 
-この `PTSDKConfig` クラスに、forceHTTPS APIが追加されました。
+`PTSDKConfig`クラスにforceHTTPS APIが追加されました。
 
-この `PTSDKConfig` クラスは、Adobe PrimetimeAd Decisioning、DRMおよびVideo Analyticsサーバーに対するリクエストでSSLを強制するメソッドを提供します。 詳しくは、このクラスのメソッド `forceHTTPS``isForcingHTTPS` とメソッドを参照してください。 マニフェストがHTTPS経由で読み込まれる場合、TVSDKはHTTPSのコンテンツ使用を保持し、そのマニフェストから相対URLを読み込む際にこの使用状況を順守します。
+`PTSDKConfig`クラスは、Adobe PrimetimeAd Decisioning、DRMおよびVideo Analyticsサーバーに対するリクエストに対してSSLを強制するメソッドを提供します。 詳しくは、このクラスの`forceHTTPS`メソッドと`isForcingHTTPS`メソッドを参照してください。 マニフェストがHTTPS経由で読み込まれる場合、TVSDKはHTTPSのコンテンツ使用を保持し、そのマニフェストから相対URLを読み込む際にこの使用状況を順守します。
 
 >[!NOTE]
 >
@@ -262,8 +264,8 @@ DRMポリシーで、デバイスの出力保護機能に応じて、許可さ�
 * **バージョン1.4.1.1へのビデオハートビートライブラリ(VHL)の更新**
 
    * 他のSDKやプレーヤーから、Adobe Analyticsビデオエッセンシャルに様々な解析使用例をバンドルする機能が追加されました。
-   * 広告トラッキングは、およびのメソッドを削除するこ `trackAdBreakStart``trackAdBreakComplete` とで最適化されました。 広告の時間は、 `trackAdStart` およびメソッドの呼び出しから推論され `trackAdComplete` ます。
-   * 広告を追跡する際に、この `playhead` プロパティは不要になりました。
+   * 広告トラッキングは、`trackAdBreakStart`メソッドと`trackAdBreakComplete`メソッドを削除することで最適化されました。 広告の時間は、`trackAdStart`メソッド呼び出しと`trackAdComplete`メソッド呼び出しから推定されます。
+   * 広告を追跡する際に、`playhead`プロパティは不要になりました。
    * Marketing Cloud訪問者IDのサポートを追加しました。
 
 * **Nielsen SDKの統合**
@@ -280,7 +282,7 @@ TVSDKは、1.4 TVSDKの更新の一環として、リニアコンテンツに対
 
 現在は、C3時間枠から取得されるビデオオンデマンド(VOD)アセットに新しい広告を動的に挿入するために、追加の準備作業を行う必要はありません。 TVSDKは、カスタムコンテンツ範囲を削除し、新しい広告を動的に挿入するAPIを提供します。 この強力な新機能は、ライブ/リニアコンテンツの放送中に、アセットを「クリーンアップ」する適切な時間をかけずに、オンデマンドコンテンツとして即座にプルダウンされる場合にも役立ちます。
 
-## 解決された問題 {#resolved-issues}
+## 解決された問題{#resolved-issues}
 
 解決が報告された問題に関連付けられている場合、Zendesk参照（ZD#xxxxなど）が表示されます。
 
@@ -303,13 +305,13 @@ Comment Type: draft
 
 * TVSDK for iOS 3.10を使用している場合、ライブストリームは15分の再生後に失敗します。
 
-### 以前のリリースで解決された問題 {#resolved-issues-previous}
+### 以前のリリース{#resolved-issues-previous}で解決された問題
 
 **iOS TVSDK 3.11**
 
-* (ZD#40998) — アプリケーションがクラッシュ `isFallbackOnInvalidCreativeEnabled` します。
+* (ZD#40998) - `isFallbackOnInvalidCreativeEnabled`により、アプリケーションがクラッシュします。
 
-* (ZD#41289) — この方法 `NSInvalidArgumentException` では、アプリケーションのクラッシュが発生す `customParams` る問題が観察されます。
+* (ZD#41289) - `NSInvalidArgumentException`は、`customParams`メソッドを使用して観察され、アプリケーションがクラッシュします。
 
 **iOS TVSDK 3.10**
 
@@ -323,9 +325,9 @@ Comment Type: draft
 
 * (ZD#40087) — 有効期限が切れたVODコンテンツに対するプレイヤーエラーが発生してiOSがクラッシュします。
 
-* (ZD#40083) — プリロール広告はでライブストリームで再生されず、プレイヤーがエラー `OpportunityGenerator` を返します。
+* (ZD#40083) — プリロール広告は`OpportunityGenerator`のライブストリームで再生されず、プレーヤーがエラーを返します。
 
-* (ZD#39828) - `CurrentItem` プロパティにNULL許容注釈がないため、通知に含まれるプレイヤーのステータスが次の場合にプレイヤーがクラッシュし `PTMediaPlayerStatusStopped`ます。
+* (ZD#39828) - `CurrentItem`プロパティにNULL許容注釈がないため、通知に含まれるプレイヤーのステータスが`PTMediaPlayerStatusStopped`の場合にプレイヤーがクラッシュします。
 
 **iOS TVSDK 3.7**
 
@@ -349,14 +351,13 @@ Comment Type: draft
 
 サブタイトルを持ついくつかのストリームに対してSTOPメソッドが呼び出された場合に発生する断続的なクラッシュを修正しました。
 
-* **チケット#37080** — マニフェスト呼び出しに対して重複リクエストが表示されます。
-再生中にマニフェストURLに対して行われた重複要求を修正しました。 TVSDKは、マニフェストごとに1回呼び出すようになりました。
+* **チケット#37080**  — マニフェスト呼び出しに対して表示される重複要求。再生中にマニフェストURLに対して行われた重複要求を修正しました。 TVSDKは、マニフェストごとに1回呼び出すようになりました。
 
-* **Ticket#37** - CRS正規化ルールはeq一致タイプで失敗しました。ホスト名に「eq」一致タイプを設定した最後の正規化ルールセットで検出された場合に、プレイヤーがクラッシュしていた問題を修正しました。
+* **Ticket#37** - CRS正規化ルールはeq一致タイプで失敗しました。ホスト名に「eq」一致タイプを設定した最後の正規化ルールセットを使用した場合に、プレイヤーがクラッシュしていた問題を修正しました。
 
 **バージョン3.1**
 
-**チケット#36313** — リニア広告の時間中に断続的な予測できない結果ライブストリーム内のリニア広告の時間中の断続的な再生を修正しました。
+**チケット#36313**  — リニア広告の時間中、断続的な予測できない結果、ライブストリーム内のリニア広告の時間中の断続的な再生が修正されました。
 
 **バージョン3.0.1**
 
@@ -364,34 +365,33 @@ Comment Type: draft
 
 **バージョン3.0**
 
-* **Ticket35311** — 電話の中断中に、プレイヤーのステータスがPAUSEDになりません。中断を停止する割り込みハンドラーが追加されました。 中断すると、プレイヤーのステータスはPAUSEDになり、再生ボタンのクリック時に再生を再開します。
+* **Ticket35311**  — 電話の中断中に、プレイヤーのステータスがPAUSEDになりません。プレイヤーの中断を停止する割り込みハンドラーが追加されました。中断すると、プレイヤーのステータスはPAUSEDになり、再生ボタンのクリック時に再生を再開します。
 
-* **Ticket36685** — ライブアセット — プレイヤーの時間の進行状況と時間が一致しません。SCTEマーカーtimeCorrect時間は、ライブポイントより前にあるSCTEマーカーに対して計算されます。
+* **Ticket36685**  — ライブアセット — プレイヤーの時間の進行状況と時間が一致しません。SCTEマーカーの時間正しい時間は、ライブポイントより前にあるSCTEマーカーに対して計算されます。
 
-* **一時停止中に新しい位置にシークした場合、Ticket36492** - `currentTime``localTime` および更新されないstatusPlayerの現在時間が、プレイヤーが一時停止状態にある場合に、0に設定できるようになりました。以前は、再生状態でのみ現在時間が0に設定されていました。
+* **一時停止中に新しい位置にシークする際** に、Ticket36492 `currentTime` - `localTime` および更新されないステータスプレイヤーの現在時間が、プレイヤーが一時停止状態にある場合に、ゼロに設定できるようになりました。以前は、再生状態でのみ現在時間が0に設定されていました。
 
 **バージョン1.4.45**
 
-* **Ticket36294** - iOS TVSDKがXcode 10で機能しないXCode 10上のTVSDKでのコンパイルの問題を修正しました。 XCode 10の要件により、iOS 1.4.45以降向けのTVSDKを基にビルドするアプリでは、iOS 7.0以降でのデプロイメントのターゲットを最小限に抑える必要があります
+* **Ticket36294** - iOS TVSDKがXcode 10で機能しないXCode 10上のTVSDKでのコンパイルの問題を修正しました。XCode 10の要件により、iOS 1.4.45以降向けのTVSDKを基にビルドするアプリでは、iOS 7.0以降でのデプロイメントのターゲットを最小限に抑える必要があります
 
-* **Ticket36321** - 「再生中」状態のとインスタンス間のシーク可能な範囲で観察さ `PTMediaPlayer``AVPlayer` れる不一致。
+* **Ticket36321**  - 「再生中」状態のと `PTMediaPlayer`  `AVPlayer` インスタンス間のシーク可能な範囲で観察される不一致。
 
-* **Ticket36493** - iOS 12での `libstdc++` サポートiOS 12でのTVSDKに関するコンパイルの問題を修正しました。 TVSDK for iOS 1.4.45以降を基にビルドされるアプリでは、iOS 7.0以降でのデプロイメントのターゲットを最小限にする必要があります
+* **Ticket36493**  - iOS 12での `libstdc++` サポートiOS 12でのTVSDKに関するコンパイルの問題を修正しました。TVSDK for iOS 1.4.45以降を基にビルドされるアプリでは、iOS 7.0以降でのデプロイメントのターゲットを最小限にする必要があります
 
 **バージョン1.4.44**
 
-* **Ticket34683** — 広告再生の進行状況時間が負の値になっています。
+* **Ticket34683**  — 広告再生の進行状況時間が負の値になっています。
 
 広告サーバーから報告される期間と実際の広告コンテンツとの間に不一致がある場合の問題に対処するため、追加のチェックが行われます。
 
-* **一時停止中に新しい位置にシークした場合に、Ticket34801** - currentTimeとlocalTimeが更新されなかったstatusPlayerの現在時間が、プレイヤーが一時停止状態にある場合に、0に設定できるようになりました。以前は、再生状態でのみ現在時間が0に設定されていました。
+* **一時停止中に新しい位置にシークした場合に、Ticket34801** - currentTimeとlocalTimeが更新されなかったステータスプレイヤーの現在時間が、一時停止状態の場合に0に設定できるようになりました。以前は、再生状態でのみ現在時間が0に設定されていました。
 
-* **Ticket35037** — シグナルベースの広告挿入から戻ると、再生が停止し、不正なURLが発生します。
-1.4.42リリースの閉じた問題#34385で修正されました。 操作キューをより堅牢にするために、isCancelledチェックおよび例外処理コードが追加されました。
+* **Ticket35037**  — シグナルベースの広告挿入から戻ると、再生が停止し、URLが正しくありません。1.4.42リリースの閉じた問題#34385で修正されました。 操作キューをより堅牢にするために、isCancelledチェックおよび例外処理コードが追加されました。
 
 **バージョン1.4.43**
 
-* (ZD#32990) - iOS:広告の代わりに一部のキューポイントで再生するコンテンツ。 `selectedMediaOptionInMediaSelectionGroup` AVPlayerItemインターフェイスの一部であったAPIは、iOS 11のAVMediaSelectionの下に移動されました。 この新しいAPIを使用して問題が解決しました。
+* (ZD#32990) - iOS:広告の代わりに一部のキューポイントで再生するコンテンツ。 `selectedMediaOptionInMediaSelectionGroup` AVPlayerItemインターフェイスの一部であったAPIは、iOS 11のAVMediaSelectionの下に移動されました。この新しいAPIを使用して問題が解決しました。
 
 * (ZD#33683)TVSDKは、メタデータ文字列から==サフィックスを削除しました。 この問題は解析ロジックで修正されました。
 
@@ -411,7 +411,7 @@ Comment Type: draft
 
 * (ZD#34385) — シグナルベースの広告挿入から戻ると、再生が停止し、不正なURLが表示されます。
 
-   マニフェストの読み取りを引き続き実行でき `CustomAVAssetLoaderOperations`るように、の最大同時カウント数を増やします。
+   マニフェストの読み取りを引き続き実行できるように、`CustomAVAssetLoaderOperations`の最大同時カウント数を増やします。
 
 * (ZD#34373) — ストリームの記録が許可されていない場合、エンドユーザーはHDMI接続のデバイスにストリーミングできません。
 
@@ -419,13 +419,13 @@ Comment Type: draft
 
    最終的な広告クリエイティブの広告IDは、VAST/VMAPリダイレクトの場合に、VHL pingで取得されるようになりました。
 
-* (ZD#33904) - TVSDKは、AVFoundation通知およびに対して登録され `AVAudioSessionMediaServicesWereLostNotification` ていません `AVAudioSessionMediaServicesWereResetNotification`。
+* (ZD#33904) - TVSDKは、AVFoundation通知`AVAudioSessionMediaServicesWereLostNotification`および`AVAudioSessionMediaServicesWereResetNotification`に登録されていません。
 
-   `PTMediaServicesWereLostNotification` メディアサービス `PTMediaServicesWereResetNotification` がリセットまたは失われたときに通知を受け取るために、プレイヤーアプリに登録できるようになりました。
+   `PTMediaServicesWereLostNotification` メディアサービス `PTMediaServicesWereResetNotification` がリセットまたは失われたときに通知を取得できるようになりました。
 
 * (ZD#33815) — アプリを更新しないと、優先順位付けと正規化のCRSルールを更新できません。
 
-   iOS TVSDKに `getCRSRulesJsonURL``setCRSRulesJsonURL` およびAPIを追加しました。
+   iOS TVSDKに`getCRSRulesJsonURL`および`setCRSRulesJsonURL` APIを追加しました。
 
 **バージョン1.4.41 (1.4.41.76)**
 
@@ -438,17 +438,17 @@ Comment Type: draft
 * (ZD #30371) — リニアストリームに2つ以上の広告を挿入すると、AdBreakの開始時間が変わります。
 
    再生が完全に行われないという、Apple TVでコンテンツを再生しようとするとエラーが発生する問題を修正しました
-* (ZD #32146)- iOS 11開発ベータ版のブロック時 `PTMediaPlayerStatusError` に、HLS Liveコンテンツに対して受信されません。
+* (ZD #32146)- iOS 11開発ベータのブロック時にHLS Liveコンテンツに対して`PTMediaPlayerStatusError`を受け取りません。
 
-   Charlesを使用したブロック時に、HLS LiveおよびVODコンテンツに対して受信される `PTMediaPlayerStatusError` ものはありません（接続の破棄および403）。
+   Charlesを使用したブロック時に、HLS LiveおよびVODコンテンツに対して`PTMediaPlayerStatusError`を受信しません（接続の切断と403）。
 
 * (ZD #29242) — 広告が有効な状態でAirplayビデオ再生が失敗する。
 
    広告が有効で、AirPlayが有効になっている場合、ビデオの再生は開始されず、エラーも表示されません。
 
-* (ZD#33341) - Xcode 9でビルドの警告を `DRMInterface.h` トリガーします。
+* (ZD#33341) - `DRMInterface.h`は、Xcode 9でビルドの警告をトリガーします。
 
-   パラメータリストに「void」という語が含まれ `DRMInterface.h` ていない2つのブロックプロトタイプを修正しました。
+   `DRMInterface.h`内の2つのブロックプロトタイプを修正しました。このプロトタイプのパラメータリストに「void」という単語が含まれていませんでした。
 
 * (ZD#31979) - iPhone 7/iPhone7+用iOS 10以降ではコンパイル/実行されません。
 
@@ -468,14 +468,14 @@ Comment Type: draft
 
 * (ZD #32465) — プレイヤーは、結合された再生リストを処理できません。
 
-   呼び出 `finishLoadingWithError`し（次を含む）エラー) AVファンデーションが代替ストリームを試行し、フェイルオーバーをトリガーする場合。
+   `finishLoadingWithError`を呼び出す（次を含む）:エラー) AVファンデーションが代替ストリームを試行し、フェイルオーバーをトリガーする場合。
 
 * (ZD #31951) — ライセンスの循環中にTVSDKエラーが発生しました。
 
    ライセンスのローテーションの問題を修正しました。
 * (ZD #31951) — 広告の時間内の空白の画面。広告の時間は完了しません。
 
-   Facebook VPAID広告が1つの `<AdParameters>` VASTノードで複数のCDATAブロックを返す場合が多い問題を扱いました。
+   Facebook VPAID広告が1つの`<AdParameters>` VASTノードで複数のCDATAブロックを返すことが多い問題に対処しました。
 * (ZD #33336) - iOS TVSDK - Freewheelから返される広告が十分にあるにもかかわらず、広告ポッドが埋められません。
 
    シーケンス広告とフォールバック広告の間に親子関係を作成し、親シーケンスとインデックスに基づく並べ替えを行いました。
@@ -516,7 +516,7 @@ Comment Type: draft
 
 CRS正規化ルールに基づくCRSリクエストでのクリエイティブIDとAdSystemの使用
 
-* (ZD #29176) — クラッシュオン `PTAdPolicyDeligate` `satAdBreakAsWatched:position`
+* (ZD #29176) - `PTAdPolicyDeligate` `satAdBreakAsWatched:position`でのクラッシュ
 
 空のAdBreakによるクラッシュが処理されるようになりました。
 
@@ -548,7 +548,7 @@ CRSの正規化ルールに基づく、CRSリクエストでのクリエイテ�
 
 * (ZD #29462) - iOS TVSDKでクラッシュを引き起こすVODの広告。
 
-この問題は修正されました。 iOS TVSDKは、処理を行わずに、処理を増やして `exception(AUDNetworkAdInfo::initWithAdId)` います。 この例外は、広告IDが空であるためです。
+この問題は修正されました。 iOS TVSDKは`exception(AUDNetworkAdInfo::initWithAdId)`を増やしており、処理していません。 この例外は、広告IDが空であるためです。
 
 * (ZD #29281)- CRSリクエストに対するAdSystem追加およびクリエイティブID。
 
@@ -576,7 +576,7 @@ EXT-X-CUE-OUTミッドロール広告が再生されるようになりました�
 
 * (ZD #28481) — これらのFERストリームの広告の時間の終わりに誤ったキーが追加されることが原因でFERが停止した場合
 
-FERストリームの場合、広告の時間の前のキーは、広告の時間の終わりの後に挿入されます。 この問題は、広告の時間の最後に *最後のSeenキーを追加することで解決しました* 。
+FERストリームの場合、広告の時間の前のキーは、広告の時間の終わりの後に挿入されます。 この問題は、広告の時間の末尾に&#x200B;*最後に表示されたキー*&#x200B;を追加することで解決しました。
 
 **バージョン1.4.33** （iOS 6.0以降の場合は1.4.33.803）
 
@@ -588,9 +588,9 @@ CRSバックエンドの要件に従って、正規化されたURLではなく�
 
 この問題は、リソースの読み込みを更新して、使用可能なすべてのバンドルから検索することで解決されました。
 
-* (ZD# 27460)ミッドロールの最初の広告呼び出し — 403が返されるPOST `cdn.auditude.com` 。
+* (ZD# 27460)ミッドロールの最初の広告呼び出し — `cdn.auditude.com`にPOSTして403を返しました。
 
-新しいCDNアカウントは、POSTのCDN要求を処理できません。 この問題は、コードを更新して、 `cdn.auditude.com` 広告リクエストをPOSTではなくGETにすることで解決されました。
+新しいCDNアカウントは、POSTのCDN要求を処理できません。 この問題は、コードを更新して`cdn.auditude.com`広告リクエストをPOSTではなくGETにすることで解決されました。
 
 **バージョン1.4.32** （iOS 6.0以降の場合は1.4.32.792）
 
@@ -606,7 +606,7 @@ CRSバックエンドの要件に従って、正規化されたURLではなく�
 
 * (ZD# 24528)TVSDKの請求に対する使用指標の実装
 
-詳しくは、 [請求指標を参照してください]。
+詳しくは、[請求指標]を参照してください。
 
 * (ZD# 24642)TVSDKのピクチャインピクチャのサポート
 
@@ -851,7 +851,7 @@ AdobeアクセスDRMストリームでの再生を開始する際に101000エラ
 
 * (ZD #21119) — 広告の再生後、TVSDKが停止します。
 
-広告挿入を使用しているときに、シーケンスIVを使用してAES暗号化ストリームに対するサポートが追加されました。
+広告挿入を使用しているときに、シーケンスIVを使用してAES暗号化ストリームをサポートするようになりました。
 
 * (ZD #21125) — ライブ/リニア広告の時間から早い段階で戻る
 
@@ -944,7 +944,7 @@ JavaScriptのMIMEタイプが必ずしも有効なMIMEタイプとして含ま�
 
 この問題は、プレイヤー名のデフォルト値を削除することで解決されました。
 
-**iOS 6.0以降の場合はバージョン1.4.17** (1.4.17.545)
+**iOS 6.0以降の場合のバージョン1.4.17** (1.4.17.545)
 
 * (Zendesk #2228)- TVSDKを拡張して、マニフェストのフェッチのJSON応答を返します。
 
@@ -954,7 +954,7 @@ JavaScriptのMIMEタイプが必ずしも有効なMIMEタイプとして含ま�
 
 Zendesk #2228と同じ解像度
 
-* (Zendesk #3304) - VAST 3.0 `[ERRORCODE]` マクロが入力されていない
+* (Zendesk #3304) - VAST 3.0 `[ERRORCODE]`マクロが入力されていない
 
 トラッキングURLの先頭にスペースが含まれている場合に、Auditude SDKがpingの送信に失敗する問題が解決されました。
 
@@ -988,7 +988,7 @@ TVSDKはcurlではなくhttprconnectionを直接使用するので、CRSのaudit
 
 * (Zendesk #18053) - TVSDKを使用するアプリケーションがMarshmallowでクラッシュする
 
-TVSDKライブラリがYUV `->` RGBカラー変換を行うネオンコードを使用している場合に、TVSDKがAndroid M OSでクラッシュしていました。 この問題は、ネオン以外のバージョンのを使用して、この問題の原因となっている機能を更新することで解決しました `code`。
+TVSDKライブラリがYUV `->` RGBカラー変換を行うネオンコードを使用している場合に、TVSDKがAndroid M OSでクラッシュしていました。 この問題は、ネオンでないバージョンの`code`を使用して、この問題の原因となっている機能を更新することで解決しました。
 
 * (Zendesk #18072) - Android M — アプリケーションクラッシュ
 
@@ -1022,9 +1022,9 @@ TVSDKライブラリがYUV `->` RGBカラー変換を行うネオンコードを
 
 **バージョン1.4.13** （iOS 6.0以降）
 
-* (ZD #3304) - VAST 3.0 `[ERRORCODE]` マクロが入力されていない
+* (ZD #3304) - VAST 3.0 `[ERRORCODE]`マクロが入力されていない
 
-   * インライン広告に不適切なクリエイティブが含まれる場合、エラーコード400が表示されます。
+   * エラーコード400は、インラインの場合に表示されます。   広告のクリエイティブが悪い。
    * `[ERRORCODE]` マクロはURLエンコードされます。
 
 * (ZD #3865)IMA広告とのハートビート統合
@@ -1063,7 +1063,7 @@ ZD #4279に対する修正により解決
 
 広告アセットが相対リダイレクトURLを使用していた場合のバグを修正しました。
 
-**iOS 6.0以降の場合はバージョン1.4.9** (1.4.9.427)
+**iOS 6.0以降の場合のバージョン1.4.9** (1.4.9.427)
 
 * (ZD #3075)インターネット到達可能性の問題 — iOS
 
@@ -1093,7 +1093,7 @@ PTPlaybackInformationが更新され、更新されたindicatedBitrateが公開�
 
 **バージョン1.4.5** (1.4.5.283)
 
-* (ZD #2141) TreeHouseアプリの解析実装に、パッケージを構築するための `AdobeAnalyticsPlugin.a` ライブラリが追加されました。
+* (ZD #2141) TreeHouseアプリの解析実装に、パッケージを構築するために`AdobeAnalyticsPlugin.a`ライブラリが追加されました。
 * 1.4.1.2へのビデオハートビートライブラリの更新
 * (PTPALY-4226)（ZD #2423に関連）DRMリセットを実行すると、アプリケーションドキュメントデータが削除される場合があります。
 
@@ -1105,7 +1105,7 @@ PTPlaybackInformationが更新され、更新されたindicatedBitrateが公開�
 
 **バージョン1.4.2** (1.4.2.210:iOS 6.0以降)
 
-* (ZD #1129) `_player.currentItem.audioOptions` が空を返す
+* (ZD #1129) `_player.currentItem.audioOptions`が空を返す
 * (ZD #2109)Primetime PSDK 1.4.1.125はXcode 5.1.1では動作しません。
 * (ZD #2137)DRMメタデータを読み込めない場合にiOS上のPSDKでクラッシュする
 
@@ -1120,11 +1120,11 @@ PTPlaybackInformationが更新され、更新されたindicatedBitrateが公開�
 
 * Zendesk #1024 — マニフェストを介してストリームから広告を削除する機能
 
-## デバイスの認定とサポート {#device-certification-and-support}
+## デバイスの認定とサポート{#device-certification-and-support}
 
 >[!NOTE]
 >
->以下の機能は、TVSDKではサポートされ **ていません** 。
+>以下の機能は、TVSDKでは&#x200B;**サポートされていません**。
 >
 >* プラットフォームやバージョンでのスローモーション。
 >* ライブトリック再生。
@@ -1141,7 +1141,7 @@ PTPlaybackInformationが更新され、更新されたindicatedBitrateが公開�
 **バージョン1.4.28**
 
 * TVSDK 1.4.28はiOS 10 Beta 7用に認定されています。
-* DRMでは、APIとAPIを追加してHTTPSを強制的にサポート `forceHTTPS` し `isForcingHTTPS` ます。
+* `forceHTTPS` APIと`isForcingHTTPS` APIを追加してHTTPSを強制的にサポートするDRMを追加しました。
 * VHLライブラリを1.5.8に、Adobeモバイルライブラリを4.8.4に、ロガーユーティリティライブラリをバージョン7.0デプロイメントターゲットに更新しました。
 
 **バージョン1.4.19**
@@ -1159,7 +1159,7 @@ PTPlaybackInformationが更新され、更新されたindicatedBitrateが公開�
    * TVSDK tvOsのサポートは、非AdobeのDRM暗号化ストリームに制限されています。 tvOSビルド設定でdrmNativeInterface.frameworkへの参照を削除する必要があります。 AES暗号化ストリームは引き続きサポートされます。
    * Appleでは、すべてのApple TVアプリケーションでビットコードを有効にする必要があるので、プロジェクト設定でこのフラグをオンにする必要があります。
 
-## 既知の問題と制限事項 {#known-issues-and-limitations}
+## 既知の問題と制限{#known-issues-and-limitations}
 
 * iOS UIWebViewクラスの廃止により、iOS TVSDK 3.6以降では次の処理が行われません。
    * iPad 13では、VPAID広告は期待どおりに再生されません。
@@ -1190,8 +1190,8 @@ PTPlaybackInformationが更新され、更新されたindicatedBitrateが公開�
 * JITが有効で許容値が10秒に設定されている場合、VMAP->VASTリダイレクト広告の場合、最初のミッドロール広告の時間に対してVAST呼び出しは表示されません。
 * 広告解像度タイムアウトが正しく機能するために、ライブストリームの再生中にプレイリストが更新されるたびに、プレイヤーは20秒以内に関連付けられたプレイリストを期待します。 この間隔内に関連付けされたプレイリストを受け取らない場合、内部エラーがスローされ、プレイヤーが停止します。
 
-## 役立つリソース {#helpful-resources}
+## 役立つリソース{#helpful-resources}
 
 * [TVSDK 3.4 iOSプログラマーガイド](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-for-ios/introduction/ios-3x-overview.html)
 * [TVSDK iOS 3.4 APIリファレンス](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v34/index.html)
-* 「 [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html) 」ページのヘルプドキュメントを参照してください。
+* [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html)のページにある完全なヘルプドキュメントを参照してください。

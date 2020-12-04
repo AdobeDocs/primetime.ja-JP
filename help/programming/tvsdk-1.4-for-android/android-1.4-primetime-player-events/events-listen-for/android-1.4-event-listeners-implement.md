@@ -6,6 +6,9 @@ title: イベントリスナーとコールバックの実装
 uuid: 6b7859a4-55f9-48b1-b1f1-7b79bc92610a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
@@ -16,29 +19,29 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 イベントが発生すると、TVSDKのイベントメカニズムは、登録されたイベントハンドラーを呼び出し、イベント情報をハンドラーに渡します。
 
-TVSDKは、リスナーをインターフェイスのパブリック内部インターフェイスとして定義 `MediaPlayer` します。
+TVSDKは、リスナーを`MediaPlayer`インターフェイスのパブリック内部インターフェイスとして定義します。
 
-アプリケーションは、アプリケーションに影響を与えるTVSDKイベントのイベントリスナーを実装する必要があります。
+アプリケーションは、アプリケーションに影響を与えるTVSDKイベント用のイベントリスナーを実装する必要があります。
 
 ビデオ分析のイベントの完全なリストについては、コアビデオ再生の追跡を参照してください。
 
-1. アプリケーションがリッスンする必要のあるイベントを決定します。
+1. アプリケーションがリッスンする必要があるイベントを決定します。
 
-   * **必要なイベント**:すべての再生イベントをリッスンします。
+   * **必須イベント**:すべての再生イベントをリッスンします。
 
       >[!IMPORTANT]
       >
-      >再生イベントは、 `onStateChanged` エラーを含むプレーヤーの状態を提供します。 どの状態でも、プレイヤーの次のステップに影響を与える可能性があります
+      >再生イベント`onStateChanged`は、エラーを含むプレイヤーの状態を提供します。 状態によっては、プレイヤーの次のステップに影響を与える可能性があります
 
    * **その他のイベント**:アプリケーションに応じて、オプションです。
 
-      例えば、広告を再生に組み込む場合、AdPlaybackEventListenerコールバックを実装します。
+      例えば、再生に広告を組み込む場合は、AdPlaybackEventListenerコールバックを実装します。
 
-1. 各イベントのイベントリスナーを実装します。
+1. 各イベントにイベントリスナーを実装します。
 
-   TVSDKは、イベントリスナーコールバックにパラメーター値を返します。 これらの値は、適切なアクションを実行するためにリスナーで使用できるイベントに関する関連情報を提供します。
+   TVSDKは、イベントリスナーコールバックにパラメーター値を返します。 これらの値は、リスナーで使用して適切なアクションを実行できるイベントに関する関連情報を提供します。
 
-   `MediaPlayer.EventListener` に、すべてのコールバックインターフェイスを示します。 各インターフェイスには、各イベントに対して返されるコールバック名とパラメータが表示されます。
+   `MediaPlayer.EventListener` すべてのコールバックインターフェイスをリストします。各インターフェイスには、各イベントに対して返されるコールバック名とパラメーターが表示されます。
 
    例：
 
@@ -47,7 +50,7 @@ TVSDKは、リスナーをインターフェイスのパブリック内部イン
     MediaPlayer.PlayerState state, MediaPlayerNotification notification)
    ```
 
-1. を使用して、コールバックリスナーをオブジ `MediaPlayer` ェクトに登録しま `MediaPlayer.addEventListener`す。
+1. `MediaPlayer.addEventListener`を使用して、`MediaPlayer`オブジェクトにコールバックリスナーを登録します。
 
    ```
    mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK, 
@@ -59,30 +62,30 @@ TVSDKは、リスナーをインターフェイスのパブリック内部イン
    }
    ```
 
-## 再生イベントの順序 {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
+## 再生イベントの順序{#section_6D412C33ACE54E9D90DB1DAA9AA30272}
 
-TVSDKは、一般に予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づいて、期待される順序でアクションを実装できます。
+TVSDKは、通常予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づくアクションを期待された順序で実装できます。
 
 次の例は、再生イベントを含む一部のイベントの順序を示しています。
 
-* メディアリソースを通じて正常に読み込む `MediaPlayer.replaceCurrentResource`と、イベントの順序は次のとおりです。
+* `MediaPlayer.replaceCurrentResource`を介してメディアリソースを正常に読み込むと、次の順序でイベントされます。
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` 状態を持って `MediaPlayer.PlayerState.INITIALIZING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` 状態を持って  `MediaPlayer.PlayerState.INITIALIZING`
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` 状態を持って `MediaPlayer.PlayerState.INITIALIZED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` 状態を持って  `MediaPlayer.PlayerState.INITIALIZED`
 
 >[!TIP]
 >
->メインスレッドにメディアリソースを読み込みます。 メディアリソースをバックグラウンドスレッドに読み込むと、この操作または後続のTVSDK操作、あるいはその両方の操作で、エラー(例えば、 `IllegalStateException`)が発生して終了する場合があります。
+>メインスレッドにメディアリソースを読み込みます。 メディアリソースをバックグラウンドスレッドに読み込むと、この操作または後続のTVSDK操作、あるいはその両方の操作が、エラー（例えば`IllegalStateException`）をスローして終了する場合があります。
 
-* 通じて再生を準備する場合、 `MediaPlayer.prepareToPlay`イベントの順序は次のとおりです。
+* `MediaPlayer.prepareToPlay`を介して再生を準備する場合、イベントの順序は次のとおりです。
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` 状態を持って `MediaPlayerStatus.PREPARING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` 状態を持って  `MediaPlayerStatus.PREPARING`
 
 1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` 広告が挿入された場合。
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` 状態を持って `MediaPlayerStatus.PREPARED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` 状態を持って  `MediaPlayerStatus.PREPARED`
 
-* ライブ/リニアストリームの場合、再生時間が進み、追加のオポチュニティが解決されるに従って、再生中に、イベントの順序は次のとおりです。
+* ライブ/リニアストリームの場合、再生中、再生時間が進み、追加のオポチュニティが解決されると、次の順序でイベントが発生します。
 
 1. `MediaPlayer.PlaybackEventListener.onUpdated`
 1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` 広告が挿入された場合
@@ -110,14 +113,14 @@ mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK,
 });
 ```
 
-## 広告イベントの順序 {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
+## 広告イベントの順序{#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
-再生に広告が含まれる場合、TVSDKは、一般に予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づいて、期待される順序でアクションを実装できます。
+再生に広告が含まれる場合、TVSDKは、通常予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づくアクションを期待された順序で実装できます。
 
 広告を再生する場合、イベントの順序は次のとおりです。
 
 * `AdPlaybackEventListener.onAdBreakStart`
-* 広告の時間内のすべての広告に対して、次がディスパッチされます。
+* 次は、広告の時間内の各広告に対してディスパッチされます。
 
    * `AdPlaybackEventListener.onAdStart`
    * `AdPlaybackEventListener.onAdProgress` （広告の再生中に複数回）
@@ -125,7 +128,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK,
    * `AdPlaybackEventListener.onAdStart`
    * `AdPlaybackEventListener.onAdBreakComplete`
 
-次の例は、広告再生イベントの一般的な流れを示しています。
+次の例に、広告再生イベントの一般的な流れを示します。
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,  
@@ -148,7 +151,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 広告を再生する場合、イベントの順序は次のとおりです。
 
 * `AdPlaybackEventListener.onAdBreakStart`
-* 広告の時間内のすべての広告に対して、次がディスパッチされます。
+* 次は、広告の時間内の各広告に対してディスパッチされます。
 
    * `AdPlaybackEventListener.onAdStart`
    * `AdPlaybackEventListener.onAdProgress` （広告の再生中に複数回）
@@ -157,7 +160,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 
 * `AdPlaybackEventListener.onAdBreakComplete`
 
-次の例は、広告再生イベントの一般的な流れを示しています。
+次の例に、広告再生イベントの一般的な流れを示します。
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,  
@@ -177,11 +180,11 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 });
 ```
 
-## QoSイベント {#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
+## QoSイベント{#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
 
-TVSDKは、サービス品質(QoS)イベントをディスパッチして、QoS統計の計算に影響を与える可能性のあるイベント（バッファリングやシークイベントなど）をアプリケーションに通知します。
+TVSDKは、QoS(QoS)イベントをディスパッチして、バッファリングやシークイベントなど、QoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
 
-次の例は、これらのイベントの一般的な流れを示しています。
+次の例に、これらのイベントの一般的な流れを示します。
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.QOS,  
@@ -205,11 +208,11 @@ mediaPlayer.addEventListener(MediaPlayer.Event.QOS,
 });
 ```
 
-## DRMイベント {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
+## DRMイベント{#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
 
 TVSDKは、新しいDRMメタデータが使用可能になった場合など、DRM関連の操作に応じて、デジタル著作権管理(DRM)イベントをディスパッチします。 プレイヤーは、これらのイベントに応じてアクションを実装できます。
 
-すべてのDRM関連イベントに関する通知を受け取るには、をリッスンしま `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`す。 TVSDKは、クラスを通じて追加のDRMイベントをディスパッ `DRMManager` チします。
+DRM関連のイベントをすべて通知するには、`onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`をリッスンします。 TVSDKは、追加のDRMイベントを`DRMManager`クラスを通じてディスパッチします。
 
 次の例に、一般的な流れを示します。
 
@@ -221,7 +224,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.DRM,
 }); 
 ```
 
-## ローダイベント {#section_5638F8EDACCE422A9425187484D39DCC}
+## ローダイベント{#section_5638F8EDACCE422A9425187484D39DCC}
 
 プレイヤーは、次のイベントに基づいてアクションを実装できます。
 

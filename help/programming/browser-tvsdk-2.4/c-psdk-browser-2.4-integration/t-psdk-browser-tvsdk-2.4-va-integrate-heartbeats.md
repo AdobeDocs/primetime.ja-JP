@@ -1,32 +1,35 @@
 ---
-description: ビデオの使用を追跡および分析するようにプレーヤーを設定できます。
-seo-description: ビデオの使用を追跡および分析するようにプレーヤーを設定できます。
+description: ビデオの使用を追跡および分析するようにプレイヤーを設定できます。
+seo-description: ビデオの使用を追跡および分析するようにプレイヤーを設定できます。
 seo-title: ビデオ分析の初期化と設定
 title: ビデオ分析の初期化と設定
 uuid: 4a582b35-ae92-4557-806d-e174fc878cc5
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '703'
+ht-degree: 0%
 
 ---
 
 
-# ビデオ分析の初期化と設定 {#initialize-and-configure-video-analytics}
+# ビデオ分析の初期化と設定{#initialize-and-configure-video-analytics}
 
-ビデオの使用を追跡および分析するようにプレーヤーを設定できます。
+ビデオの使用を追跡および分析するようにプレイヤーを設定できます。
 
-ビデオ追跡（ビデオハートビート）をアクティブ化する前に、次の事項を確認します。
+ビデオトラッキング（ビデオハートビート）をアクティブ化する前に、以下があることを確認します。
 
-* 設定/ブラウザーTVSDKの初期化情報 — 特定のビデオトラッキングアカウント情報については、アドビの担当者にお問い合わせください。
+* 設定/ブラウザTVSDKの初期化情報 — 特定のビデオトラッキングアカウント情報については、Adobeの担当者にお問い合わせください。
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84">
  <tbody>
   <tr>
    <td colname="col1"> AppMeasurementトラッキングサーバーエンドポイント </td>
-   <td colname="col2"> Adobe Analytics（旧称SiteCatalyst）のバックエンド収集エンドポイントのURL。 </td>
+   <td colname="col2"> Adobe Analytics(旧称SiteCatalyst)のバックエンド収集エンドポイントのURLです。 </td>
   </tr>
   <tr>
    <td colname="col1"> ビデオ分析トラッキングサーバーエンドポイント </td>
-   <td colname="col2"> ビデオ分析のバックエンドコレクションエンドポイントのURLです。 これは、すべてのビデオハートビートトラッキング呼び出しが送信される場所です。 <p>ヒント： 訪問者トラッキングサーバーのURLは、AnalyticsトラッキングサーバーのURLと同じです。 訪問者IDサービスの実装について詳しくは、IDサービスの実装を <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> 参照してくださ </a>い。 </p> </td>
+   <td colname="col2"> Video Analyticsのバックエンド収集エンドポイントのURL。 すべてのビデオハートビートトラッキング呼び出しが送信される場所です。 <p>ヒント： 訪問者トラッキングサーバーのURLは、AnalyticsトラッキングサーバーのURLと同じです。 訪問者IDサービスの実装について詳しくは、<a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external">実装IDサービス</a>を参照してください。 </p> </td>
   </tr>
   <tr>
    <td colname="col1"> アカウント名 </td>
@@ -34,15 +37,15 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
   </tr>
   <tr>
    <td colname="col1"> Marketing Cloud組織ID </td>
-   <td colname="col2"> 訪問者コンポーネントをインスタンス化するために必要なstring値。 </td>
+   <td colname="col2"> 訪問者コンポーネントのインスタンス化に必要なstring値。 </td>
   </tr>
   <tr>
    <td colname="col1"> 訪問者トラッキングサーバーエンドポイント </td>
-   <td colname="col2"> 現在のビデオビューアの一意の識別子を提供するバックエンドエンドポイントのURL。 </td>
+   <td colname="col2"> 現在のビデオビューアの一意の識別子を提供するバックエンドのエンドポイントのURL。 </td>
   </tr>
   <tr>
    <td colname="col1"> 投稿者 </td>
-   <td colname="col2"> これはPublisher IDで、アドビの担当者が顧客に提供します。 <p>ヒント： このIDは、単なるブランド名やテレビ名を持つ文字列ではありません。 </p> </td>
+   <td colname="col2"> これはPublisher IDで、Adobeの担当者からお客様に提供されます。 <p>ヒント： このIDは、単なるブランド名やテレビ名を持つ文字列ではありません。 </p> </td>
   </tr>
  </tbody>
 </table>
@@ -53,13 +56,13 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
        次の情報に注意してください。
    
-   * インスタンス化には、アドビが提供するMarketing Cloud組織ID入力パラメーターが必要です。
+   * インスタンス化には、Adobeが提供するMarketing Cloud組織ID入力パラメーターが必要です。
 
       これは文字列値です。
    * VisitorAPIライブラリの唯一の設定オプションは、現在のユーザーの一意の識別子を提供するバックエンドエンドポイントのURLです。
    * 訪問者トラッキングサーバーのURLは、AnalyticsトラッキングサーバーのURLと同じです。
 
-      訪問者IDサービスの実装について詳しくは、訪問者IDサービ [スの実装を参照してください](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html)。
+      訪問者IDサービスの実装について詳しくは、[訪問者IDサービスの実装](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html)を参照してください。
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
@@ -68,11 +71,11 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 2. AppMeasurementコンポーネントをインスタンス化し、設定します。
 
-   AppMeasurementインスタンスには、多くの設定オプションがあります。 詳しくは、 [Adobe Analytics Developerドキュメントを参照して](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) ください。 次のサンプルコード(、および `account`)のオ `visitorNamespace`プショ `trackingServer`ンは必須で、値はアドビが提供します。
+   AppMeasurementインスタンスには、多くの設定オプションがあります。 詳しくは、[Adobe Analytics開発者](https://microsite.omniture.com/t2/help/en_US/reference/#Developer)のドキュメントを参照してください。 次のサンプルコード(`account`、`visitorNamespace`、`trackingServer`)のオプションは必須で、値はAdobeで提供されます。
 
    >[!IMPORTANT]
    >
-   >依存関係チェーンが正しく設定されていることを確認する必要があります。 AppMeasurementインスタンスは、訪問者APIコンポーネントを集約（依存）します。
+   >依存関係チェーンが正しく設定されていることを確認する必要があります。 AppMeasurementインスタンスの集計(訪問者APIコンポーネントに依存)。
 
    ```js
    var appMeasurement = new AppMeasurement();
@@ -86,16 +89,16 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
    >[!IMPORTANT]
    >
-   >ビデオ分析フローを開始する前に、が `appMeasurementObject.visitor` 設定されていることをアプリケーションで確認してください。設定されていない場合は、追跡結果が表示されない可能性があります。 これらの結果は、ログ内のメッセージで示されます。 空のtrack呼び出し( `appMeasurementObject.track`)を追加し、プロパティが設定さ `visitor` れるまでプロパティをポーリングし、ビデオ分析を開始できます。
+   >アプリケーションで、ビデオ分析のフローを開始する前に`appMeasurementObject.visitor`が設定されていることを確認してください。設定されていないと、トラッキング結果が得られない場合があります。 これらの結果は、ログ内のメッセージで示されます。 空のトラック呼び出し(`appMeasurementObject.track`)を追加し、設定されるまで`visitor`プロパティをポーリングして、ビデオ分析を開始できます。
 
 3. ビデオハートビートトラッキングメタデータを初期化し、設定します。
 
    >[!IMPORTANT]
    >
-   >ビデオ分析モジュールのミッドストリームを停止し、必要に応じて再初期化することができます。 モジュールを再初期化する前に、ビデオ分析のメタデータも正しいコンテンツのメタデータに更新されていることを確認します。 メタデータを再作成するには、手順1と2を繰り返します。
+   >ビデオ分析モジュールのミッドストリームを停止し、必要に応じて再初期化できます。 モジュールを再初期化する前に、ビデオ分析メタデータも正しいコンテンツメタデータに更新されていることを確認します。 メタデータを再作成するには、手順1と2を繰り返します。
 
    1. ビデオ分析メタデータのインスタンスを作成します。
-このインスタンスには、ビデオハートビートトラッキングを有効にするために必要なすべての設定情報が含まれています。 例：
+このインスタンスは、ビデオハートビートトラッキングを有効にするために必要なすべての設定情報を含みます。 例：
 
       ```js
       function getVideoAnalyticsMetadata() {
@@ -114,11 +117,11 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
       }
       ```
 
-   2. メディアプレイヤーインスタンスを作成した後、ビデオ分析トラッカーインスタンスを作成し、メディアプレイヤーインスタンスへの参照を指定します。
+   2. メディアプレイヤーインスタンスを作成したら、ビデオ分析トラッカーインスタンスを作成し、メディアプレイヤーインスタンスの参照を指定します。
 次の点に注意してください。
 
-      * 各コンテンツ再生セッションに対して新しいトラッカーインスタンスを必ず作成し、（メディアプレーヤーインスタンスを切り離した後で）以前の参照を削除します。
-      * サブ手順1で作成されたメタデータは、ビデオ分析トラッカーのコンストラクターで指定する必要があります。
+      * コンテンツ再生セッションごとに新しいトラッカーインスタンスを必ず作成し、（メディアプレイヤーインスタンスを切り離した後で）以前の参照を削除してください。
+      * サブ手順1で作成したメタデータは、Video Analytics Trackerのコンストラクターで提供する必要があります。
 
          ```js
          var videoAnalyticsMetadata = getVideoAnalyticsMetadata();
@@ -126,7 +129,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
          videoAnalyticsProvider.attachMediaPlayer(player);
          ```
    3. ビデオ分析トラッカーを破棄します。
-新しいコンテンツ再生セッションを開始する前に、ビデオトラッカーの以前のインスタンスを破棄します。 コンテンツ完了イベント（または通知）を受け取ったら、数分待ってから、ビデオトラッカーインスタンスを破棄します。 インスタンスをすぐに破棄すると、ビデオ分析トラッカーでビデオ完了のpingを送信する機能が妨げられる可能性があります。
+新しいコンテンツ再生セッションを開始する前に、ビデオトラッカーの以前のインスタンスを破棄します。 コンテンツ完了イベント（または通知）を受け取ったら、ビデオトラッカーインスタンスを破棄するまで数分待ちます。 インスタンスをすぐに破棄すると、ビデオ分析トラッカーがビデオ完了pingを送信する機能を妨げる可能性があります。
 
       ```js
       if (videoAnalyticsProvider) {
@@ -134,10 +137,10 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
           videoAnalyticsProvider = null;
       ```
    4. 手動でライブ/リニアストリームを完了としてマークします。
-1つのライブストリームに複数のエピソードがある場合、Complete APIを使用して、手動でエピソードを完了としてマークできます。 これにより、現在のビデオエピソードのビデオトラッキングセッションが終了し、次のエピソードの新しいトラッキングセッションを開始できます。
+1つのライブストリームに様々なエピソードがある場合、完了APIを使用して、手動でエピソードを完了とマークできます。 これにより、現在のビデオエピソードのビデオトラッキングセッションが終了し、次のエピソードの新しいトラッキングセッションを開始できます。
       >[!TIP]
       >
-      >このAPIはオプションで、VODビデオ追跡には必要ありません。
+      >このAPIはオプションで、VODビデオトラッキングには必要ありません。
 
       ```js
       if (videoAnalyticsProvider)

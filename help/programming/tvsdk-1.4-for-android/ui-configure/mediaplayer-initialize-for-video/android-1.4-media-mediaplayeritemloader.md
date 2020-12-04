@@ -6,32 +6,35 @@ title: MediaPlayerItemLoaderを使用したメディアリソースの読み込�
 uuid: b2311ddc-f059-4775-8553-fc354ec2636b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '255'
+ht-degree: 0%
 
 ---
 
 
-# MediaPlayerItemLoaderを使用したメディアリソースの読み込み {#load-a-media-resource-using-mediaplayeritemloader}
+# MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}を使用したメディアリソースの読み込み
 
 メディアリソースを解決する別の方法は、MediaPlayerItemLoaderを使用する方法です。 これは、MediaPlayerインスタンスをインスタンス化せずに、特定のメディアストリームに関する情報を取得する場合に役立ちます。
 
-クラスを通 `MediaPlayerItemLoader` じて、インスタンスにビューをアタッチしなくても、メディアリソー `MediaPlayerItem` スと対応するリソースを交換できます。これにより、ビデオデコード `MediaPlayer` のハードウェアリソースが割り当てられます。 インスタンスを取得するプロ `MediaPlayerItem` セスは非同期です。
+`MediaPlayerItemLoader`クラスを通じて、`MediaPlayer`インスタンスに表示を割り当てることなく、対応する`MediaPlayerItem`とメディアリソースを交換できます。その結果、ビデオデコーディングハードウェアリソースが割り当てられます。 `MediaPlayerItem`インスタンスを取得するプロセスは非同期です。
 
-1. コールバックインターフェ `MediaPlayerItemLoader.LoaderListener` イスを実装します。
+1. `MediaPlayerItemLoader.LoaderListener`コールバックインターフェイスを実装します。
 
        このインターフェイスは、次の2つのメソッドを定義します。
    
    * `LoaderListener.onError` コールバック関数
 
-      TVSDKは、これを使用して、エラーが発生したことをアプリケーションに通知します。 TVSDKは、エラーコードをパラメーターとして提供し、診断情報を含む説明文字列を提供します。
+      TVSDKは、このメソッドを使用して、エラーが発生したことをアプリケーションに通知します。 TVSDKは、エラーコードをパラメーターとして提供し、診断情報を含む説明文字列を提供します。
 
    * `LoaderListener.onError` コールバック関数
 
-      TVSDKは、これを使用して、要求された情報が、コールバックのパラメーターとして渡されるインスタンスの形式で利用でき `MediaPlayerItem` ることをアプリケーションに通知します。
+      TVSDKは、このメソッドを使用して、要求された情報がコールバックに対するパラメーターとして渡される`MediaPlayerItem`インスタンスの形式で利用できることをアプリケーションに知らせます。
 
-1. このインスタンスを、のコンストラクターにパラメーターとして渡すことで、TVSDKに登録しま `MediaPlayerItemLoader`す。
-1. を呼び出 `MediaPlayerItemLoader.load`し、オブジェクトのインスタンスを渡 `MediaResource` します。
+1. このインスタンスを`MediaPlayerItemLoader`のコンストラクターにパラメーターとして渡して、TVSDKに登録します。
+1. `MediaPlayerItemLoader.load`を呼び出し、`MediaResource`オブジェクトのインスタンスを渡します。
 
-   オブジェクトのURL `MediaResource` は、情報を取得するストリームを指し示す必要があります。 例：
+   `MediaResource`オブジェクトのURLは、情報を取得するストリームを指している必要があります。 例：
 
    ```java
    // instantiate the listener interface 

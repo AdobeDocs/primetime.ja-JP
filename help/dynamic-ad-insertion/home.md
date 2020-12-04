@@ -7,22 +7,22 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '426'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
 
-# 概要 {#ptai-overview}
+# 概要{#ptai-overview}
 
 視聴者は、テレビだけでなく、スマートフォン、タブレット、ノートパソコン、その他の様々なデバイスでテレビを視聴しています。 しかし、彼らはテレビの質に優れた体験を期待している。 したがって、このようなエクスペリエンスの提供は、スポーツイベントなど複雑な状況や、リアルタイムのプログラム的広告決定を使用している場合でも重要です。 広告インベントリが損なわれやすいので、テクノロジーが一瞬でも失敗する余裕はありません。
 
 Adobe PrimetimeAd Insertionを使用すると、バッファリングや再生のエラーを発生させずに、ターゲット化された広告エクスペリエンスを作成できます。 広告は、ライブ、リニアまたはVODコンテンツに挿入できます。 また、Primetimeの既存の統合を主要な広告サーバーと連携させることで、複雑さを最小限に抑えることができます。 常に視聴可能な優れた広告エクスペリエンスを提供し、スキップ可能なVAST広告をサポートします。 複数のデバイスにわたって顧客に対してより良い表示エクスペリエンスを提供することで、より高いエンゲージメントとより多くの売上高を実現します。
 
-## Primetime Ad Insertion Help {#ad-insertion-user-guide}
+## Primetime Ad Insertion のヘルプ {#ad-insertion-user-guide}
 
 このセルフヘルプガイドでは、ユーザーターゲットの動的な広告をサーバーに挿入してコンテンツを収益化し、パーソナライズされた広告をオーディエンスに提供する方法を説明します。 左側のナビゲーションを使用して、様々な設定の相互作用や広告挿入の追跡方法を詳しく調べます。
 
-## 関連項目 {#ptaisee-also}
+## {#ptaisee-also}も参照
 
 | ユーザーガイド | 説明 |
 |---|---|
@@ -31,7 +31,7 @@ Adobe PrimetimeAd Insertionを使用すると、バッファリングや再生�
 | [マニフェストサーバーデバッグツール](manifest-server-debugging-tool.md) | Manifest Serverデバッグツールと、広告挿入の問題を調査するために提供されるデバッグ情報についての洞察を提供します。 |
 | [Creative Repackagingサービスの概要](creative-repackaging-service/crs-overview.md) | CRSが、HLS以外の広告クリエイティブをHLSストリームで正しく再生する方法を説明します。 |
 
-## 主要なPrimetimeユーザーガイド {#other-primetime-helps}
+## 主なPrimetimeユーザーガイド{#other-primetime-helps}
 
 | ユーザーガイド | 説明 |
 |---|---|
@@ -42,7 +42,7 @@ Adobe PrimetimeAd Insertionを使用すると、バッファリングや再生�
 | [Primetime APIリファレンス](../reference/api-references.md) | TVSDK 関数、データ構造、および他のプログラミング構成に関する詳細な情報を提供します。 |
 | [アーカイブ](https://helpx.adobe.com/primetime/archives.html) | アーカイブされたドキュメントのPDFをダウンロードします。 |
 
-## 役立つリソース {#helpful-resources}
+## 役立つリソース{#helpful-resources}
 
 * [Adobe Primetimeを知る](https://www.adobe.com/in/marketing/primetime.html)
 

@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 強化されたライセンスチェーン {#enhanced-license-chaining}
+# 拡張ライセンスチェーン{#enhanced-license-chaining}
 
 拡張ライセンスチェーンを使用すると、親ルートライセンスを使用してライセンスをバッチ更新することで、ライセンスを更新できます。
 

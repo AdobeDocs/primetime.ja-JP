@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# 広告サーバーの統合 {#integrate-ad-server}
+# 広告サーバーを統合{#integrate-ad-server}
 
 開始を行うには、PrimetimeAd Insertionコンソールにアクセスするためのログインが与えられます。PrimetimeAd Insertionが、広告リクエストを任意の広告サーバーに転送する際に使用するルールを設定します。 PrimetimeAd Insertionは、VASTまたはVMAPに準拠した広告サーバーのほとんどをサポートしています。
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >[IAB VASTページ](https://www.iab.com/guidelines/digital-video-ad-serving-template-vast)
 
-## マクロのサポート {#macro-support}
+## マクロのサポート{#macro-support}
 
 PrimetimeAd Insertionは、すべてのストリームに対して次の広告サーバーマクロを有効にします。
 
@@ -31,6 +31,6 @@ PrimetimeAd Insertionは、すべてのストリームに対して次の広告�
 
 その他のマクロが必要な場合は、Adobe Primetimeサポート担当者にお問い合わせください。
 
-## 高度な機能 {#advanced-features}
+## 高度な機能{#advanced-features}
 
-PrimetimeAd Insertionには、高度な機能を有効にするルールベースの判定機能もあります。 これは、在庫権限に基づいて異なる広告サーバーに広告をルーティングする場合や、個々の広告の周波数制限を有効にする場合に重要です。 <!--For more information, see [Advanced Features](route-ads-based-on-rules.md).-->
+PrimetimeAd Insertionには、高度な機能を有効にするルールベースの判定機能もあります。 これは、在庫権限に基づいて異なる広告サーバーに広告をルーティングする場合や、個々の広告の周波数制限を有効にする場合に重要です。<!--For more information, see [Advanced Features](route-ads-based-on-rules.md).-->

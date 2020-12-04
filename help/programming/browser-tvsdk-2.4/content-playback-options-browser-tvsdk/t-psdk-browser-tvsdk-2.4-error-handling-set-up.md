@@ -6,6 +6,9 @@ title: エラー処理の設定
 uuid: 9e650ea7-86cb-4489-a3fd-80cd2ccef41f
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '145'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 アプリケーション内の1か所を設定し、ERROR状態に応じてエラー処理を実行できます。
 
-1. のイベントリスナーを追加しま `AdobePSDK.MediaPlayerStatusChangeEvent`す。
+1. &lt;a0追加/>のイベントリスナー。`AdobePSDK.MediaPlayerStatusChangeEvent`
 
    例：
 
@@ -23,13 +26,13 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
                            onStatusChange);
    ```
 
-1. イベントリスナーで、がの場合、す `event.status` べての `AdobePSDK.MediaPlayerStatus.ERROR`エラーを処理するロジックを指定します。
-1. エラーの処理後、オブジェクトをリセットするか、 `MediaPlayer` 新しいメディアリソースを読み込みます。
+1. イベントリスナーで、`event.status`が`AdobePSDK.MediaPlayerStatus.ERROR`の場合、すべてのエラーを処理するロジックを指定します。
+1. エラーの処理後、`MediaPlayer`オブジェクトをリセットするか、新しいメディアリソースを読み込みます。
 
-       MediaPlayerオブジェクトがERROR状態の場合、次のいずれかのタスクを完了するまで、この状態を終了することはできません。
+       MediaPlayerオブジェクトがERROR状態の場合、次のいずれかのタスクが完了するまで、この状態を終了することはできません。
    
-   * メソッドを使用して、MediaPlayerオブジェクトをリセッ `MediaPlayer.reset` トします。
-   * この方法を使用して、新しいメディアリソースを読み込 `MediaPlayer.replaceCurrentResource` みます。
+   * `MediaPlayer.reset`メソッドを使用して、MediaPlayerオブジェクトをリセットします。
+   * `MediaPlayer.replaceCurrentResource`メソッドを使用して、新しいメディアリソースを読み込みます。
 
 <!--<a id="example_342CA5A8CD7C45BD88233C5BDBB17220"></a>-->
 

@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 保護されたコンテンツの再生に必要なデバイス機能 {#device-capabilities-required-to-play-protected-content}
+# 保護されたコンテンツの再生に必要なデバイス機能{#device-capabilities-required-to-play-protected-content}
 
 コンテンツへのアクセスに必要なハードウェア機能を指定します。 ハードウェア機能に関する情報は、ポーティングキットを使用するデバイスで利用できます。
 
@@ -42,5 +42,5 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->この使用ルールは、Adobeアクセスクライアントバージョン2.0.2以降でサポートされています。 古いクライアントでの動作は、ライセンスサーバーでサポートされている最小クライアントバージョンによって異なります。 「 [最小クライアントバージョン](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)」を参照してください。
+>この使用ルールは、Adobeアクセスクライアントバージョン2.0.2以降でサポートされています。 古いクライアントでの動作は、ライセンスサーバーでサポートされている最小クライアントバージョンによって異なります。 「[最小クライアントバージョン](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)」を参照してください。
 

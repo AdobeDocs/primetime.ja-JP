@@ -6,11 +6,14 @@ title: ブラックアウト処理の実装
 uuid: 3b4e3f53-0e27-4369-85f2-940380ed16ac
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 0%
 
 ---
 
 
-# ブラックアウト処理の実装{#implement-blackout-handling}
+# ブラックアウト処理{#implement-blackout-handling}の実装
 
 TVSDKは、ブラックアウト期間を処理するためのAPIとサンプルコードを提供します。
 
@@ -30,7 +33,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. フォアグラウンドストリームとバックグラウンドストリームの時間指定メタデータイベントのイベントリスナーを作成します。
+1. フォアグラウンドストリームとバックグラウンドストリームに、時間指定メタデータイベント用のイベントリスナーを作成します。
 
    ```
    private function createMediaPlayer(context:MediaPlayerContext):void { 
@@ -42,7 +45,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. フォアグラウンドストリームとバックグラウンドストリームの両方に時間指定メタデータイベントハンドラーを実装します。
+1. フォアグラウンドストリームとバックグラウンドストリームの両方に対して時間指定メタデータイベントハンドラーを実装します。
 
    前景：
 
@@ -124,7 +127,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. 再生ヘッドの位置の更新が発生するたびに、TimedMetadataObjectsのリストのチェックを設定します。
+1. 再生ヘッド位置の更新が発生するたびに、TimedMetadataObjectsのリストのチェックを設定します。
 
    ```
    private function onTimeChange(event:TimeChangeEvent):void { 
@@ -157,7 +160,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. ブラックアウト期間の開始と終了時にコンテンツを切り替えるメソッドを作成します。
+1. ブラックアウト期間の開始時と終了時にコンテンツを切り替える方法を作成します。
 
    ```
    public function initiate(event:TimerEvent=null):void { 

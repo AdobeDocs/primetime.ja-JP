@@ -19,8 +19,8 @@ AdBannerAssetのコンテンツは、コンパニオンバナーを記述しま�
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-この `AdobePSDK.PSDKEventType.AD_STARTED` イベントは、 `Ad` プロパティ( `companionAssets``Array<AdBannerAsset>`)を含むインスタンスを返します。
-それぞれ `AdBannerAsset` に、アセットの表示に関する情報が提供されます。
+`AdobePSDK.PSDKEventType.AD_STARTED`イベントは、`companionAssets`プロパティ(`Array<AdBannerAsset>`)を含む`Ad`インスタンスを返します。
+各`AdBannerAsset`は、アセットの表示に関する情報を提供します。
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -52,7 +52,7 @@ AdBannerAssetのコンテンツは、コンパニオンバナーを記述しま�
     <pre>
       バナーデータ
     </pre> </td> 
-   <td colname="col2"> このコンパニオンバナーの <span class="codeph"> resourceType</span> で指定されるタイプのデータです。 </td> 
+   <td colname="col2"> このコンパニオンバナーの<span class="codeph"> resourceType</span>で指定されるタイプのデータです。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 静的URL </td> 

@@ -1,29 +1,32 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: DRMContentDataを使用した事前読み込みライセンスの使用
-title: DRMContentDataを使用した事前読み込みライセンスの使用
+seo-title: DRMContentDataを使用したライセンスのプリロード
+title: DRMContentDataを使用したライセンスのプリロード
 uuid: 5cedd077-0613-4677-8fb0-81237d7ac61a
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
 
-# DRMContentDataを使用した事前読み込みライセンスの使用{#using-drmcontentdata-to-pre-load-licenses}
+# DRMContentDataを使用したライセンスのプリロード{#using-drmcontentdata-to-pre-load-licenses}
 
-次の手順では、オブジェクトを使用して保護されたメディアファイルのライセンスを事前に読み込むためのワークフローについて説明 `DRMContentData` します。
+次の手順では、`DRMContentData`オブジェクトを使用して保護されたメディアファイルのライセンスをプリロードするためのワークフローについて説明します。
 
 1. パッケージ化されたコンテンツのバイナリDRMメタデータを取得します。
 
-   Primetime DRM Java Reference Implementations Packagerを使用する場合、このメタデータファイルは自動的に拡張子付きで生成さ [!DNL .metadata] れます。 例えば、このメタデータはクラスを使用してダウンロードで `URLLoader` きます。 HLSまたはHDSコンテンツを使用する場合、メタデータはコンテンツマニフェストファイルで参照されるか(または [!DNL .m3u8] )、Base64エンコードされた文字列としてマニフェストファイルに含まれます(使用前に [!DNL .f4m]** Base64デコードされる必要があります)。
-1. オブジェクトを `DRMContentData` 作成し、メタデータをコンストラクター関数に渡します。
+   Primetime DRM Java Reference Implementations Packagerを使用する場合、このメタデータファイルは[!DNL .metadata]拡張子が付いて自動的に生成されます。 例えば、`URLLoader`クラスを使用して、このメタデータをダウンロードできます。 HLSまたはHDSコンテンツを使用する場合、メタデータはコンテンツマニフェストファイル（[!DNL .m3u8]または[!DNL .f4m]）で参照されるか、**&#x200B;内に&lt;a2/>含まれます（使用前にBase64エンコードされた文字列にする必要があります）。
+1. `DRMContentData`オブジェクトを作成し、メタデータをコンストラクタ関数に渡します。
 
    ```
    var drmData:DRMContentData = new DRMContentData( metadata );
    ```
 
-1. 残りの手順は、「コンテンツ保護プロセスの詳細」で説明したワ *ークフローと同じです*。
+1. 残りの手順は、*コンテンツ保護プロセスの詳細*&#x200B;で説明しているワークフローと同じです。
 
 <!--<a id="example_EBEDA8E10F6344CABA4DE31DC342B8F8"></a>-->
 

@@ -6,17 +6,20 @@ title: カスタムコンテンツリゾルバーの実装
 uuid: bc0eda17-9b5d-4733-8e93-790758e68df5
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 2%
 
 ---
 
 
-# カスタムコンテンツリゾルバーの実装 {#implement-a-custom-content-resolver}
+# カスタムコンテンツリゾルバーの実装{#implement-a-custom-content-resolver}
 
 デフォルトのリゾルバーに基づいて、独自のコンテンツリゾルバーを実装できます。
 
-TVSDKは、新しいオポチュニティを生成する際に、登録されたコンテンツリゾルバーを繰り返し処理し、そのオポチュニティを解決できるコンテンツリゾルバーを探します。 最初に返されたオポチュニテ `true` ィが選択され、そのオポチュニティが解決されます。 コンテンツリゾルバーに対応していない場合、そのオポチュニティはスキップされます。 コンテンツ解決プロセスは通常非同期なので、コンテンツリゾルバーは、プロセスが完了したことをTVSDKに通知します。
+TVSDKは、新しいオポチュニティを生成する際に、登録されているコンテンツリゾルバーを繰り返し処理し、そのオポチュニティを解決できるコンテンツリゾルバーを探します。 オポチュニティの解決のために、`true`を最初に返すものが選択されます。 オポチュニティを解決できるコンテンツリゾルバーがない場合、そのオポチュニティはスキップされます。 通常、コンテンツ解決プロセスは非同期的なので、コンテンツリゾルバーは、TVSDKにプロセスが完了したことを通知する必要があります。
 
-1. インターフェイスを拡張し `ContentFactory`て上書きすることで、独自のカ `ContentFactory` スタムを実装しま `retrieveResolvers`す。
+1. `ContentFactory`インターフェイスを拡張し、`retrieveResolvers`をオーバーライドして、独自のカスタム`ContentFactory`を実装します。
 
    例：
 
@@ -51,7 +54,7 @@ TVSDKは、新しいオポチュニティを生成する際に、登録された
    } 
    ```
 
-1. をに登 `ContentFactory` 録します `MediaPlayer`。
+1. `ContentFactory`を`MediaPlayer`に登録します。
 
    例：
 
@@ -68,9 +71,9 @@ TVSDKは、新しいオポチュニティを生成する際に、登録された
    itemLoader.load(resource, id, config);
    ```
 
-1. 次の手順でTVSDK `AdvertisingMetadata` にオブジェクトを渡します。
-   1. オブジェクトを作 `AdvertisingMetadata` 成します。
-   1. オブジェクトを `AdvertisingMetadata` に保存しま `MediaPlayerItemConfig`す。
+1. 次のように、`AdvertisingMetadata`オブジェクトをTVSDKに渡します。
+   1. `AdvertisingMetadata`オブジェクトを作成します。
+   1. `AdvertisingMetadata`オブジェクトを`MediaPlayerItemConfig`に保存します。
 
       ```java
       AdvertisingMetadata advertisingMetadata = new AdvertisingMetadata(); 
@@ -81,8 +84,8 @@ TVSDKは、新しいオポチュニティを生成する際に、登録された
       mediaPlayerItemConfig.setAdvertisingMetadata(advertisingMetadata); 
       ```
 
-1. クラスを拡張するカスタム広告リゾルバークラスを作成 `ContentResolver` します。
-   1. カスタム広告リゾルバーで、override `doConfigure`、 `doCanResolve`、、 `doResolve`、 `doCleanup`:
+1. `ContentResolver`クラスを拡張するカスタム広告リゾルバークラスを作成します。
+   1. カスタム広告リゾルバーで、`doConfigure`、`doCanResolve`、`doResolve`、`doCleanup`をオーバーライドします。
 
       ```java
       void doConfigure(MediaPlayerItem item); 
@@ -91,7 +94,7 @@ TVSDKは、新しいオポチュニティを生成する際に、登録された
       void doCleanup();
       ```
 
-      渡された項 `advertisingMetadata` 目から、次の情報を取得しま `doConfigure`す。
+      `doConfigure`に渡されたアイテムから`advertisingMetadata`を取得します。
 
       ```java
       MediaPlayerItemConfig itemConfig = item.getConfig(); 
@@ -100,9 +103,9 @@ TVSDKは、新しいオポチュニティを生成する際に、登録された
         mediaPlayerItemConfig.getAdvertisingMetadata(); 
       ```
 
-   1. 配置オポチュニティごとに、を作成しま `List<TimelineOperation>`す。
+   1. 配置オポチュニティごとに、`List<TimelineOperation>`を作成します。
 
-      このサンプル `TimelineOperation` は、次の構造を提供しま `AdBreakPlacement`す。
+      次のサンプル`TimelineOperation`は`AdBreakPlacement`の構造を提供します。
 
       ```java
       AdBreakPlacement( 
@@ -115,14 +118,14 @@ TVSDKは、新しいオポチュニティを生成する際に、登録された
 
    1. 広告が解決されたら、次のいずれかの関数を呼び出します。
 
-      * 広告の解決に成功した場合は、を呼 `process(List<TimelineOperation> proposals)` び出し `notifyCompleted(Opportunity opportunity)` 、 `ContentResolverClient`
+      * 広告の解決に成功した場合は、`ContentResolverClient`で`process(List<TimelineOperation> proposals)`と`notifyCompleted(Opportunity opportunity)`を呼び出します。
 
          ```java
          _client.process(timelineOperations); 
          _client.notifyCompleted(opportunity); 
          ```
 
-      * 広告の解決に失敗した場合は、 `notifyResolveError``ContentResolverClient`
+      * 広告の解決に失敗した場合は、`ContentResolverClient`で`notifyResolveError`を呼び出します
 
          ```java
          _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);

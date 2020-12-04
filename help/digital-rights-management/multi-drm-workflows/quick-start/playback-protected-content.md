@@ -13,15 +13,15 @@ ht-degree: 0%
 ---
 
 
-# 保護されているコンテンツの再生 {#playback-your-protected-content}
+# 保護されたコンテンツの再生{#playback-your-protected-content}
 
 DRMソリューションをテストするには、操作している特定のDRMソリューションを処理できるビデオアプリケーションが必要です。 このプレイヤーは、Adobeが提供するサンプルプレイヤー、または独自のTVSDKベースのビデオアプリケーションにすることができます。
 
 1. ExpressPlayサーバーから返されたトークンレスポンスのLicense Server URLを使用して、保護されたコンテンツを再生できるかどうかをテストします。
 
-   * **Widevine** - ExpressPlayライセンストークンリクエストに対して受け取ったWidevineレスポンスを直接使用します。
-   * **PlayReady** — ライセンストークンリクエストから返されるJSONオブジェクトから、ライセンスサーバーのURLとトークンを取得します。
-   * **FairPlay** - ExpressPlayライセンストークンリクエストに対して受け取ったFairPlayレスポンスを直接使用します。
+   * **Widevine**  - ExpressPlayライセンストークンリクエストに対して受け取ったWidevineレスポンスを直接使用します。
+   * **PlayReady**  — ライセンストークンリクエストから返されるJSONオブジェクトから、ライセンスサーバーのURLとトークンを取得します。
+   * **FairPlay**  - ExpressPlayライセンストークンリクエストに対して受け取ったFairPlayレスポンスを直接使用します。
 
 1. 独自のプレーヤーまたは既存のAdobeのサンプルプレーヤーを使用して、保護されたコンテンツの再生をテストします。
 
@@ -49,14 +49,14 @@ DRMソリューションをテストするには、操作している特定のDR
    https://drmtest2.adobe.com/TVSDK_HTML5/samples/reference/reference_player.html
    ```
 
-   **FairPlay設定のテスト時の再生の確認：** FairPlayライセンスサーバーを使用している場合、FairPlayではコンテンツを再生するために追加の手順が必要です。 を使用して接続 [!DNL curl] をテストする場合( [ライセンスを参照](../../multi-drm-workflows/quick-start/handle-the-licensing.md))、M3U8マニフェスト *（パッケージ化されたコンテンツ）を次のように* 編集する必要があります。
+   **FairPlay設定のテスト時に再生をチェックする：FairPlay** を使用する場合、ExpressPlayライセンスサーバーを使用するときに、コンテンツを再生するために追加の手順が必要です。[!DNL curl]を使用して接続をテストする場合（[ライセンス](../../multi-drm-workflows/quick-start/handle-the-licensing.md)で説明）は、次のように&#x200B;*M3U8マニフェスト*（パッケージ化されたコンテンツ）を編集する必要があります。
 
-1. ライ追加センストークンリクエストからマニフェスト内の `#EXT-X-KEY:` タグに返されたレスポンス。と
-1. そのURLのプロトコルを（現在はマニフェスト内に）応答からに変更 `https://` し `skd://`ます。
+1. ライ追加センストークンリクエストからマニフェスト内の`#EXT-X-KEY:`タグに返された応答。と
+1. そのURLのプロトコルを（現在はマニフェスト内に）応答から`https://`に変更し、`skd://`に変更します。
 
    FairPlayを使用して再生をテストする例を、ライセンス手順を含めて以下に示します。
 
-1. FairPlayライセンストークンリクエストを使用して、ライセンストークンURLを取得します。 (独自の実稼働用ユーザー認証子を使用し、FairPlayコンテンツのパッケージ化に使用したのと同じCEK `iv` を必ず使用してください)。 次のコマンドを実行して、サンプルコンテンツのライセンストークンURLを取得します。
+1. FairPlayライセンストークンリクエストを使用して、ライセンストークンURLを取得します。 （独自の実稼働用ユーザー認証子を使用し、FairPlayコンテンツのパッケージ化に使用したのと同じCEKおよび`iv`を必ず使用してください）。 次のコマンドを実行して、サンプルコンテンツのライセンストークンURLを取得します。
 
    ```
    curl -v "https://fp-gen.service.expressplay.com/hms/fp/token? 
@@ -74,7 +74,7 @@ DRMソリューションをテストするには、操作している特定のDR
    SSwcDq1ZnRtXunFLueTw6LAL52aZllMLasCSzYRMaAVHw 
    ```
 
-1. 返されたライセンストークンURLレスポンスをM3U8マニフェストに含め、ライセンストークンURLのスキームを **`sdk://``https://`元に変更します。 M3U8マニフェスト内の#EXT-X-KEYタグの例を以下に示します。
+1. 返されたライセンストークンURLレスポンスをM3U8マニフェストに追加し、*ライセンストークンURLのスキームを`https://`から* `sdk://`に変更します。 M3U8マニフェスト内の#EXT-X-KEYタグの例を以下に示します。
 
    ```
    #EXT-X-KEY:METHOD=SAMPLE-AES, 
@@ -87,7 +87,7 @@ DRMソリューションをテストするには、操作している特定のDR
 
    >[!NOTE]
    >
-   >上記の情報は、FairPlay設定のテストにのみ適用されます。 FairPlayハンドラーの設定方法によっては、実稼働環境の設定には適用されない場合があります。 詳しくは、iOSアプリケーションでのApple FairPlayの [有効化](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) （英語）を参照してください。
+   >上記の情報は、FairPlay設定のテストにのみ適用されます。 FairPlayハンドラーの設定方法によっては、実稼働環境の設定には適用されない場合があります。 詳しくは、[iOSアプリケーションでApple FairPlayを有効にする](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)を参照してください。
 
 ビデオを再生できた場合は、コンテンツのパッケージ化とライセンスが正常に完了しています。 ビデオが再生されない場合は、トラブルシューティングページでトラブルの解決方法を確認してください。
 

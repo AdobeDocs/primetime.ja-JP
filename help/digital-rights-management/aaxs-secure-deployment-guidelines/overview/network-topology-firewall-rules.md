@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# ファイアウォール規則 {#firewall-rules}
+# ファイアウォール規則{#firewall-rules}
 
 ## 着信URL {#section-F111526A9DB844CBBF21A3CAE5F50880}
 
@@ -78,11 +78,11 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">クライアントがFMRMS 1.x DRMメタデータをAdobeアクセスDRMメタデータに変換するために使用するURL。 </p> <p class="- topic/p ">注意： <i class="+ topic/ph hi-d/i ">このURLはSSL(HTTPS)を使用する必要があります</i>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">クライアントがFMRMS 1.x DRMメタデータをAdobeアクセスDRMメタデータに変換するために使用するURL。 </p> <p class="- topic/p ">注意：<i class="+ topic/ph hi-d/i ">このURLはSSL (HTTPS)</i>を使用する必要があります。 </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ESWebサービスのURL。 コンテンツが以前のバージョンのFMRMSを使用して公開された場合、このURLを使用すると、古いクライアントがAdobeに接続でき、サーバーアクセスにアップグレードするように求められます。 </p> <p class="- topic/p ">注意： <i class="+ topic/ph hi-d/i ">このURLはSSL(HTTPS)を使用する必要があります</i>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ESWebサービスのURL。 コンテンツが以前のバージョンのFMRMSを使用して公開された場合、このURLを使用すると、古いクライアントがAdobeに接続でき、サーバーアクセスにアップグレードするように求められます。 </p> <p class="- topic/p ">注意：<i class="+ topic/ph hi-d/i ">このURLはSSL (HTTPS)</i>を使用する必要があります。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 
@@ -99,7 +99,7 @@ ht-degree: 0%
 
 ライセンスサーバーは、Adobeから次のCRLをダウンロードするために、ファイアウォール経由でのアクセスを必要とします。
 
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
-* <span></span>https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
+* h<span></span>ttps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
+* ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl

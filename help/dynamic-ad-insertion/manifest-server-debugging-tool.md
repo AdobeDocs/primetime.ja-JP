@@ -21,11 +21,11 @@ ht-degree: 0%
 ---
 
 
-# マニフェストサーバーデバッグツール {#manifest-server-debugging-tool}
+# マニフェストサーバーデバッグツール{#manifest-server-debugging-tool}
 
-## デバッグツールの概要 {#overview-of-debugging-tool}
+## デバッグツールの概要{#overview-of-debugging-tool}
 
-デバッグツールを使用すると、発行者は、HTTPヘッダーでマニフェストサーバーからリアルタイムに返されるデバッグ情報を調べたり、より詳細な情報が必要な場合は、その後にセッションログを調べたりして、コストのかかる広告挿入の問題を調査できます。 AkamaiなどのAdobeパートナーは、このツールを使用して、Primetime ad decisioningとの統合をデバッグできます。
+デバッグツールを使用すると、発行者は、HTTPヘッダーでマニフェストサーバーからリアルタイムに返されるデバッグ情報を調べたり、より詳細な情報が必要な場合は、その後セッションログを調べたりして、コストのかかる広告挿入の問題を調査できます。 AkamaiなどのAdobeパートナーは、このツールを使用して、Primetime ad decisioningとの統合をデバッグできます。
 
 このツールは、主要なマニフェストサーバー広告トラッキング設定での広告挿入の問題のデバッグをサポートします。
 
@@ -35,25 +35,25 @@ ht-degree: 0%
 
 これらのすべてのケースをサポートするために、ツールはプレイヤーの発行者コードを必要としないか、使用しません。
 
-マニフェストサーバーセッションを開始すると、リクエストURLにパラメーターを設定して、デバッグ情報のログを求めることができます。 このパラメーターの異なる値を使用すると、マニフェストサーバーに指定したデバッグ情報をHTTPヘッダーで返すよう求めることもできますが、ヘッダーに含める情報の量は限られます。 Adobeから秘密鍵証明書を取得して完全なログファイルにアクセスできます。このログファイルは、マニフェストサーバーが定期的にアーカイブサーバーに保存（1時間ごとなど）されます。 そのサーバーの資格情報を取得すると、いつでも直接アクセスできます。
+マニフェストサーバーセッションを開始すると、リクエストURLにパラメーターを設定して、デバッグ情報のログを求めることができます。 このパラメーターの異なる値を使用すると、マニフェストサーバーに指定したデバッグ情報をHTTPヘッダーで返すよう求めることもできますが、ヘッダーに含める情報の量は限られます。 Adobeから秘密鍵証明書を取得して完全なログファイルにアクセスできます。このログファイルは、マニフェストサーバーによって定期的にアーカイブサーバーに保存されます（1時間ごとなど）。 そのサーバーの資格情報を取得すると、いつでも直接アクセスできます。
 
 <!-- You can also see the [server side event tracking captured in the SSAI dashboard](ssai-debugging-dashboard.md).-->
 
-## デバッグツールのオプション {#debugging-tool-options}
+## デバッグツールのオプション{#debugging-tool-options}
 
 デバッグツールを呼び出すとき、マニフェストサーバーがHTTPヘッダーで返す情報に関して、いくつかのオプションがあります。 このオプションは、マニフェストサーバーがログファイルに配置する内容には影響しません。
 
-### ptdebugの指定 {#specifying-ptdebug}
+### ptdebug {#specifying-ptdebug}の指定
 
 マニフェストサーバーセッションのデバッグログを開始する場合、ptdebugパラメーターを要求URLに追加して、マニフェストサーバーがHTTPヘッダーで返す情報に関する次のオプションを指定できます。
 
-* ptdebug=trueレコードを除き、レコードから `TRACE_HTTP_HEADER` の大部分 `call/response data``TRACE_AD_CALL` のレコード。
-* ptdebug=AdCallTRACEのみ_AD_*type* (例えば、TRACE_AD_CALL)レコード
+* ptdebug=true `TRACE_HTTP_HEADER`レコードと`TRACE_AD_CALL`レコードのほとんどの`call/response data`を除くすべてのレコード。
+* ptdebug=AdCallTRACE_AD_*タイプ*(例えば、TRACE_AD_CALL)レコードのみ。
 * ptdebug=HeaderのみのTRACE_HTTP_HEADERレコード
 
 このオプションは、マニフェストサーバーがログファイルに配置する内容には影響しません。 ログファイルはテキストファイルです。このため、様々なツールを適用して、関心のある情報を抽出し、形式を変更できます。
 
-次に、 `ptdebug=Header`16進数の長い文字列の一部は、明確にするためににに置き換え `. . .` られます。
+`ptdebug=Header`の際に返されるHTTPヘッダの例を以下に示します。 16進数の長い文字列の一部は、明確にするために`. . .`に置き換えられます。
 
 ```
 X-ADBE-AI-DBG-1 TRACE_MISC    HTTP request received
@@ -82,7 +82,7 @@ X-ADBE-AI-DBG-16 TRACE_HTTP_HEADER  MAIN  RESPONSE Access-Control-Allow-Origin  
 X-ADBE-AI-DBG-17 TRACE_MISC   Done
 ```
 
-## ログレコードの形式 {#formats-of-log-records}
+## ログレコードの形式{#formats-of-log-records}
 
 各ログレコードにはタイプとフィールドのセットがあり、その一部はオプションです。 レコードの種類に対応するすべてのレコードのフィールドは同じです。 タイムスタンプとセッションに関する情報を提供します。 レコードタイプはログに記録されるイベントの種類を識別し、後続のフィールドはログに記録されるイベントに関する情報を提供します。
 
@@ -99,7 +99,7 @@ X-ADBE-AI-DBG-17 TRACE_MISC   Done
 | record_type | string | ログに記録されるイベントの種類 |
 | その他のフィールド | *** | イベントの種類に応じて異なる |
 
-### TRACE_要求_情報レコード {#trace-request-info-records}
+### TRACE_要求_INFOレコード{#trace-request-info-records}
 
 このタイプのレコードは、HTTP要求の結果を記録します。 TRACE_REQUEST_INFOより後のフィールドは、表に示す順序で表示され、タブで区切られます。
 
@@ -128,13 +128,13 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
 ?u=cecebae72a919de350b9ac52602623f3&z=189938&ptcueformat=turner& sid =yk-cnnlive-003 &ptdebug=true 0 0 0 Variant 111.22.3.44 111.22.3.45 127.0.0.1:46383
 ```
 
-### TRACE_HTTP_HEADERレコード {#trace-http-header-records}
+### TRACE_HTTP_HEADERレコード{#trace-http-header-records}
 
 マニフェストサーバーとクライアント、広告サーバー、またはコンテンツサーバーとの間でHTTP呼び出し中に交換された、このタイプのログHTTPヘッダーのレコードです。 TRACE_HTTP_HEADERより後のフィールドは、表に示す順に表示され、タブで区切られます。
 
 | フィールド | タイプ | 説明 |
 |--- |--- |--- |
-| request_type | string | リクエストのタイプ（MAINまたはUNKNOWN） |
+| request_type | string | 要求のタイプ（MAINまたはUNKNOWN） |
 | request_response | string | 応答ヘッダー（リクエストまたは応答） |
 | header_name | string | HTTPヘッダー名 |
 | header_value | string | Base64エンコードされたHTTPヘッダー値 |
@@ -174,7 +174,7 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
     UNKNOWN RESPONSE  Via MS4xIH. . .
 ```
 
-### TRACE_AD_CALLレコード {#trace-ad-call-records}
+### TRACE_AD_CALLレコード{#trace-ad-call-records}
 
 このタイプのレコードは、マニフェストサーバー広告リクエストの結果をログに記録します。 TRACE_AD_CALLより後のフィールドは、表に示す順序で表示され、タブで区切られます。
 
@@ -195,7 +195,7 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
 200 8 https://ad.stg2.auditude.com/adserver/a?cip=0.0.0.0&g=1000012&of=1.5 &ptcueformat=turner&ptdebug=true&tl=l,150,30,m&tm=63&u=ceceb. . . Auditude IvpIyC. . . 150 PD94bWw. . .
 ```
 
-### TRACE_AD_INSERT、TRACE_AD_RESOLVE、TRACE_AD_REDIRECTレコード {#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
+### TRACE_AD_INSERT、TRACE_AD_RESOLVE、TRACE_AD_REDIRECTレコード{#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
 
 このタイプのレコードは、レコードタイプで示される広告リクエストの結果を記録します。 レコードの種類を超えたフィールドは、表に示されている順序でタブで区切って表示されます。
 
@@ -216,7 +216,7 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
 
 >[!NOTE]
 >
->ad_content_url_actual、ad_call_id、miscの各フィールドはオプションです。
+>ad_content_url_actual、ad_call_idおよびmiscフィールドはオプションです。
 
 TRACE_AD_RESOLVEとTRACE_AD_INSERTの場合、ad_content_url_actualフィールドのURLは、トランスコードされた広告（存在する場合）に使用されます。 それ以外の場合は、TRACE_AD_RESOLVEの場合は空、TRACE_AD_INSERTの場合はad_content_urlと同じフィールドです。
 
@@ -237,7 +237,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 ```
 
-### TRACE_TRACKING_URLレコード {#trace-tracking-url-records}
+### TRACE_TRACKING_URLレコード{#trace-tracking-url-records}
 
 このタイプのレコードは、マニフェストサーバー広告リクエストの結果をログに記録します。 TRACE_TRACKING_URLより後のフィールドは、表に示す順序で、タブで区切って表示されます。
 
@@ -256,17 +256,17 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
     sid:3086f5cd . . .;pts:0    200
 ```
 
-### TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODEレコード {#trace-transcoding-no-media-to-transcode-records}
+### TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODEレコード{#trace-transcoding-no-media-to-transcode-records}
 
 このタイプのレコードは、見つからない広告クリエイティブをログに記録します。 TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODEの後の唯一のフィールドが表に表示されます。
 
 | フィールド | タイプ | 説明 |
 |--- |--- |--- |
-| ad_id | string | 完全修飾広告ID `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]` プロトコル：AUDITUDE,VAST`)` |
+| ad_id | string | 完全修飾広告ID `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` Q_AD_ID:`PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]`プロトコル：AUDITUDE,VAST`)` |
 
-### TRACE_TRANSCODING_REQUESTEDレコード {#trace-transcoding-requested-records}
+### TRACE_TRANSCODING_REQUESTEDレコード{#trace-transcoding-requested-records}
 
-このタイプのレコードは、マニフェストサーバーがCRSに送信するトランスコード要求の結果を記録します。 TRACE_TRANSCODING_REQUESTED以外のフィールドは、表に示す順序でタブで区切って表示されます。
+このタイプのレコードは、マニフェストサーバーがCRSに送信するトランスコード要求の結果を記録します。 TRACE_TRANSCODING_REQUESTEDの後のフィールドは、表に示す順序でタブで区切って表示されます。
 
 | フィールド | タイプ | 説明 |
 |--- |--- |--- |
@@ -276,7 +276,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | flags | string | ID3は、トランスコードリクエストにID3タグの追加のリクエストが含まれているかどうかを示します |
 | ターゲット期間 | string | トランスコードされたクリエイティブのターゲット時間（秒） |
 
-### TRACE_追跡_リクエストレコード {#trace-tracking-request-records}
+### TRACE_TRACKING_REQUESTレコード{#trace-tracking-request-records}
 
 このタイプのレコードは、サーバー側の追跡を行うリクエストを示します。 TRACE_TRACKING_REQUESTより後のフィールドは、表に示す順序で、タブで区切って表示されます。
 
@@ -286,7 +286,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | 開始 | float | PTSフラグメント開始時間（ミリ秒精度の秒） |
 | end | float | PTSフラグメントの終了時間（ミリ秒の精度の秒） |
 
-### TRACE_追跡_リクエスト_URLレコード {#trace-tracking-request-url-records}
+### TRACE_TRACKING_REQUEST_URLレコード{#trace-tracking-request-url-records}
 
 このタイプのレコードは、サーバー側の追跡の追跡URLを提供します。 TRACE_TRACKING_REQUEST_URLより後のフィールドは、表に示された順序でタブで区切って表示されます。
 
@@ -296,7 +296,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | ad_system | string | 広告システム（auditudeなど） |
 | url | string | URL to ping |
 
-### TRACE_WEBVTT_REQUESTレコード {#trace-webvtt-request-records}
+### TRACE_WEBVTT_REQUESTレコード{#trace-webvtt-request-records}
 
 このタイプのログのレコードは、マニフェストサーバーがWEBVTTキャプションに対して行う要求を行います。 TRACE_WEBVTT_REQUESTより後のフィールドは、表に示されている順に表示され、タブで区切られます。
 
@@ -307,16 +307,16 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | 開始 | float | 分割開始時間（秒、ミリ秒の精度） |
 | end | float | 分割終了時間（ミリ秒精度の秒数） |
 
-### TRACE_WEBVTT_RESPONSEレコード {#trace-webvtt-response-records}
+### TRACE_WEBVTT_RESPONSEレコード{#trace-webvtt-response-records}
 
-こ ``of ``の ``type ``ログを記録 ``responses ``します。 ``manifest ``サーバーの ``sends ``ログ ``clients ``を、captionsに `` `answer` ``記録し ``requests ```for```WEBVTT ``ます。 TRACE_WEBVTT_RESPONSE以外のフィールドは、表に示されている順に、区切られた `by`タブで表示されます。
+``of ``この``type ``ログ``responses ````manifest ``サーバー``sends ``を`` `answer` ``の``clients ``に``requests `` `for` ``WEBVTT ``キャプションに記録します。 TRACE_WEBVTT_RESPONSE &quot;を超えるフィールドは、表に示す順に表示され、`by`タブが区切られて表示されます。
 
 | フィールド | タイプ | 説明 |
 |--- |--- |--- |
 | status | string | 返されたHTTPステータスコード |
 | response | string | クライアントに送信されるBase64エンコードされた応答 |
 
-### TRACE_WEBVTT_SOURCEレコード {#trace-webvtt-source-records}
+### TRACE_WEBVTT_SOURCEレコード{#trace-webvtt-source-records}
 
 マニフェストサーバーがWEBVTTキャプションに対して行う要求に対する、このタイプのログ応答のレコードです。 TRACE_WEBVTT_SOURCEより後のフィールドは、表に示されている順序で、タブで区切って表示されます。
 
@@ -326,34 +326,34 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | source | string | Base64エンコードされた元のVTTコンテンツ |
 
 
-### TRACE_MISCレコード {#trace-misc-records}
+### TRACE_MISCレコード{#trace-misc-records}
 
 このタイプのレコードを使用すると、マニフェストサーバーが広告を取り込む際に、特別に計画されていないイベントと情報をログに記録できます。 TRACE_MISCの後のフィールドは、メッセージ文字列で構成されます。 表示されるメッセージには、次のようなものがあります。
 
-* 広告は無視されました：AdPlacement `[adManifestURL=https://cdn2.auditude.com/assets/3p/v2/8c/2b/8c2bb. . . .m3u8, durationSeconds=15.0, ignore=false, redirectAd=false, priority=1]`
-* AdPlacementManifestURL=*adManifestURL**, durationSeconds=* seconds *, ignore=ignore* redirectRedirectAd=*redirectRedirectPriority,**ad priority=ad*
+* Adは無視されました：AdPlacement `[adManifestURL=https://cdn2.auditude.com/assets/3p/v2/8c/2b/8c2bb. . . .m3u8, durationSeconds=15.0, ignore=false, redirectAd=false, priority=1]`
+* AdPlacement adManifestURL=*adManifestURL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirectAd*, priority=**
 * 広告の配置がNULLを返しました。
 * 広告は正常に繋ぎ合わせられました。
-* 広告呼び出しに失敗しました： *エラーメッセージ*。
-* 生のマニフェストを取得するためのUser-Agentの追加： *user-agent*.
-* 生のマニフェストを取得するためのcookieの追加： [cookie]
-* 不正なURL *要求URLエラーメッセージ*。 （バリアントURLの解析に失敗しました）
-* 呼び出されたURL:URL *が戻り値：応答コード*。 （ライブURL）
+* 広告呼び出しに失敗しました：*エラーメッセージ*。
+* 生のマニフェストを取得するためのUser-Agentの追加：*user-agent*.
+* 生のマニフェストを取得するためのcookieの追加：[cookie]
+* 不正なURL *要求されたURLエラーメッセージ*。 （バリアントURLの解析に失敗しました）
+* 呼び出されたURL:URL *が返されました：応答コード*。 （ライブURL）
 * 呼び出されたURL:URL *リターンコード：応答コード*。 (VOD URL)
 * 広告の解決中に競合が見つかりました：ミッドロール開始またはミッドロールエンドのいずれかが、ミッドロール(VOD)に含まれるプリロールまたはプリロール内にあります。
-* URIのハンドラーによって発生した未処理の例外を検出しました： *リクエストURL*。
+* URIのハンドラーによって発生した未処理の例外を検出しました：*リクエストURL*。
 * バリアントマニフェストの生成が完了しました。 （バリアント）
 * バリアントマニフェストの生成が完了しました。
-* VASTリダイレクト*リダイレクトURL *エラーの処理中に例外が発生しました： *エラーメッセージ*。
-* 広告マニフェストURLの広告のプレイリストを取得できません *でした*。
+* VASTリダイレクト*リダイレクトURL *エラーの処理中に例外が発生しました：*エラーメッセージ*。
+* *広告マニフェストURL*&#x200B;の広告のプレイリストを取得できませんでした。
 * 対象のマニフェストを生成できませんでした。 (HLSManifestResolver)
-* 最初の広告呼び出しの応答を解析できませんでした： *エラーメッセージ*。
-* *GET|POST*パスの要求を処理できませんでした： *リクエストURL*。 （ライブ/VOD）
-* ライブマニフェスト要求を処理できませんでした： *リクエストURL*。 （ライブ）
-* バリアントマニフェストを返せませんでした： *エラーメッセージ*。
-* グループIDの検証に失敗しました： *グループID*。
-* 生のマニフェストの取得： *コンテンツURL*。 （ライブ）
-* VASTリダイレクトに従う： *リダイレクトURL*。
+* 最初の広告呼び出しの応答を解析できませんでした：*エラーメッセージ*。
+* *GET|POST*パスの要求を処理できませんでした：*リクエストURL*。 （ライブ/VOD）
+* ライブマニフェスト要求を処理できませんでした：*リクエストURL*。 （ライブ）
+* バリアントマニフェストを返せませんでした：*エラーメッセージ*。
+* グループIDの検証に失敗しました：*グループID*。
+* 生のマニフェストの取得：*コンテンツURL*。 （ライブ）
+* VASTリダイレクトに従う：*リダイレクトURL*。
 * 空が見つかりました。 (VOD)
 * *number *adsが見つかりました。 (VOD)
 * HTTP要求を受信しました。 （最初のメッセージ）
@@ -364,43 +364,43 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 * 新しいセッションを初期化します。 （バリアント）
 * 無効なHTTPメソッドです。 GETにする必要があります。 (VOD)
 * 無効なHTTPメソッドです。 トラッキングリクエストはGETである必要があります。 （ライブ）
-* 無効なURL *要求URLエラーメッセージ*。 （バリアント）
+* 無効なURL *要求されたURLエラーメッセージ*&#x200B;です。 （バリアント）
 * 無効なグループです。 (HLSManifestResolver)
 * 無効な要求です。 キャプションは有効な追跡リクエストではありません。 (VOD)
 * 無効な要求です。 キャプションの要求は、セッションの確立後に行う必要があります。 (VOD)
 * 無効な要求です。 トラッキングリクエストは、セッションの確立後に行う必要があります。 (VOD)
-* オーバーロードグループIDに対する無効なサーバーインスタンス： *グループID*。 （ライブ）
-* VASTリダイレクトの制限に達しました — *数*。
-* 広告の呼び出し： *広告呼び出しのURL*。
-* 次のマニフェストが見つかりません： *コンテンツURL*。 （ライブ）
-* 有効なIDに一致する値が見つかりません： *を使用します*。 (HLSManifestResolver)
+* オーバーロードグループIDに対する無効なサーバーインスタンス：*グループID*。 （ライブ）
+* VASTリダイレクトの制限に達しました — *数値*。
+* 広告の呼び出し：*広告呼び出しURL*。
+* 次のマニフェストが見つかりません：*コンテンツURL*。 （ライブ）
+* 有効なIDに一致する値が見つかりません：*利用可能なID*。 (HLSManifestResolver)
 * 再生セッションが見つかりません。 (HLSManifestResolver)
-* マニフェスト *コンテンツURLに対するVODリクエストを処理しています*。
+* マニフェスト&#x200B;*コンテンツURL*&#x200B;に対するVODリクエストを処理しています。
 * バリアントを処理中です。
-* マニフェスト *コンテンツURLのキャプションリクエストを処理しています*。
+* マニフェスト&#x200B;*コンテンツURL*&#x200B;のキャプション要求を処理しています。
 * トラッキングリクエストを処理しています。 (VOD)
 * リダイレクト広告の応答が空です。 (VASTStAX)
-* リクエスト： *URL*。
+* リクエスト：*URL*。
 * 再生セッションが見つからなかったため、GETリクエストに対するエラー応答を返します。 (VOD)
 * 内部サーバーエラーが原因で、GETリクエストに対するエラー応答を返します。
-* 無効なアセットを指定したGET要求に対するエラー応答を返す： *広告リクエストID*。 (VOD)
-* 無効または空のグループIDを指定したGET要求に対するエラー応答を返す： *グループID*。 (VOD)
+* 無効なアセットを指定したGET要求に対するエラー応答を返す：*広告リクエストID*。 (VOD)
+* 無効または空のグループIDを指定したGET要求に対するエラー応答を返す：*グループID*。 (VOD)
 * 無効な追跡位置の値を指定したGETリクエストに対するエラー応答を返します。 (VOD)
 * 無効な構文を持つGETリクエストに対するエラー応答を返します — *リクエストURL*。 （ライブ/VOD）
-* サポートされていないHTTPメソッドを使用した要求に対するエラー応答を返します： *GET|POST*。 （ライブ/VOD）
+* サポートされていないHTTPメソッドを使用した要求に対するエラー応答を返します：*GET|POST*。 （ライブ/VOD）
 * キャッシュからマニフェストを返しています。 (VOD)
 * サーバーが過負荷の状態です。 広告ステッチ要求なしで続行します。 （バリアント）
 * 対象のマニフェストを生成中に開始が発生しました。 (HLSManifestResolver)
-* 次からバリアントマニフェストを生成中に開始が発生しました： *コンテンツURL*。 （バリアント）
+* 次からバリアントマニフェストを生成中に開始が発生しました：*コンテンツURL*。 （バリアント）
 * 開始が広告をマニフェストにステッチしています。 (VODHLSResolver)
-* HH:MM:SS *で広告をステッチしようとしています*:AdPlacementManifestURL=*adマニフェストURL, durationSeconds=* seconds *, ignore=* ignore redirectRedirectRedirect *ad* priority, ad priority=adマニフェストURL, durationSeconds=seconds ****, ignororeritority, (HLSManifestResolver)
+* *HH:MM:SS*&#x200B;で広告をステッチしようとしています：AdPlacement adManifestURL=*広告マニフェストURL*、durationSeconds=*seconds*、ignore=*ignore*、redirectAd=*redirect ad*、priority=*priority&lt;a1111/>。*(HLSManifestResolver)
 * pttimelineが無効なため、広告を取得できません — 広告のないコンテンツを返しました。 (VOD)
 * 広告を取得できません — 広告のないコンテンツを返しました。 (VOD)
 * 広告のクエリを取得できず、コンテンツURLが指定されませんでした。 (VOD)
 * 受け取った有効なURL。 （VOD/バリアント）
 * バリアントM3U8が見つかりません。 （バリアント）
 
-### TRACE_TRACKING_URLレコード {#trace-tracking-url-records-1}
+### TRACE_TRACKING_URLレコード{#trace-tracking-url-records-1}
 
 マニフェストサーバーは、サーバー側のトラッキングワークフロー中にトラッキングURLを呼び出した後、この種のレコードを生成します。 TRACE_TRACKING_URLより後のフィールドは、表に示す順序で、タブで区切って表示されます。
 
@@ -411,7 +411,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | url | string | URLのピング |
 | state | string | HTTPステータスコード |
 
-### TRACE_PLAYBACK_PROGRESSレコード {#trace-playback-progress-records}
+### TRACE_PLAYBACK_PROGRESSレコード{#trace-playback-progress-records}
 
 マニフェストサーバーは、サーバー側のトラッキングワークフロー中に再生進行に関するシグナルを受け取ると、この種のレコードを生成します。 TRACE_PLAYBACK_PROGRESSの後のフィールドは、表に示されている順に表示され、タブで区切られます。
 
@@ -431,6 +431,6 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 >
 >最後の4つのフィールドはオプションです。
 
-## 役立つリソース {#helpful-resources}
+## 役立つリソース{#helpful-resources}
 
-* 「 [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html) 」ページのヘルプドキュメントを参照してください。
+* [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html)のページにある完全なヘルプドキュメントを参照してください。

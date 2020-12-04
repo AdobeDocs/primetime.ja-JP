@@ -1,20 +1,23 @@
 ---
 description: localTimeでbeginからendまでのTimeRangesをタイムラインから削除します。
 seo-description: localTimeでbeginからendまでのTimeRangesをタイムラインから削除します。
-seo-title: Primetime ad decisioning広告による範囲の削除
-title: Primetime ad decisioning広告による範囲の削除
+seo-title: Primetime Ad Decisioning広告の範囲の削除
+title: Primetime Ad Decisioning広告の範囲の削除
 uuid: efd36a2f-db61-434a-bc2a-50a866f44b33
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
 
-# Primetime ad decisioning広告による範囲の削除{#delete-ranges-with-primetime-ad-decisioning-ad}
+# Primetime ad decisioning ad{#delete-ranges-with-primetime-ad-decisioning-ad}を含む範囲の削除
 
 localTimeでbeginからendまでのTimeRangesをタイムラインから削除します。
 
-フレーズ広告を含む範囲を削除します。
+フレーズ広告のある範囲を削除します。
 
 ```
 {   

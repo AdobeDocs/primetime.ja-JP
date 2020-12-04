@@ -6,126 +6,129 @@ title: 広告削除および置換APIの変更
 uuid: 9d208d3b-6459-4aaf-bc56-53c405ccc1b6
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '396'
+ht-degree: 0%
 
 ---
 
 
-# 広告削除および置換APIの変更 {#ad-deletion-and-replacement-api-changes}
+# 広告削除および置換APIの変更{#ad-deletion-and-replacement-api-changes}
 
 TVSDKに加えられた以下の変更は、広告の削除と置換をサポートします。
 
-* `AdSignalingMode` シグナリングモ `CUSTOM_RANGES` ードを追加しました。
+* `AdSignalingMode` シグナリング `CUSTOM_RANGES` モードが追加されました。
 
-* `OpportunityGenerator`  `extractAdSignalingMode()` — 置換範 `AdSignalingMode.CUSTOM_RANGES` 囲がメタデータ内にある場合に設定します。
+* `OpportunityGenerator`  `extractAdSignalingMode()`  — 置換範囲がメタデータ内にある `AdSignalingMode.CUSTOM_RANGES` 場合に設定します。
 
-* `PlacementType` タイプを追 `CUSTOM_RANGE` 加しました。
+* `PlacementType` タイプを追加 `CUSTOM_RANGE` しました。
 
 * `PlacementMode`
 
-   * モードを追 `DELETE` 加しました。
-   * モードの `MARK` 追加
-   * 追加さ `FreeReplace` れたモード — このモードは継続時間を持ちますが、純粋な挿入です。
+   * `DELETE`モードを追加しました。
+   * `MARK`モードを追加しました
+   * `FreeReplace`モードが追加されました — このモードは継続時間を持ちますが、純粋な挿入です
 
-* `TimeRange` クラスを廃止しま `final` した
+* `TimeRange` クラスの廃止 `final` 
 
-* メソッドの `ReplaceTimeRange()` 追加
+* `ReplaceTimeRange()`メソッドの追加
 
-   拡張がプ `TimeRange` ロパティを持つよ `replacementDuration` うになる。 MARKおよびDELETEの場合、は0 `replacementDuration` です。
+   `TimeRange`を拡張して`replacementDuration`プロパティを持つようにします。 MARKとDELETEの場合、`replacementDuration`は0です。
 
 * `TimeRangeCollection`
 
-   * 抽出するユ `toReplaceMetadata()` ーティリティ関数を追加しまし `timeRanges`た。
+   * `timeRanges`を抽出する`toReplaceMetadata()`ユーティリティ関数が追加されました。
 
-   * およびで動作するように変更されま `DELETE` した `REPLACE`
+   * `DELETE`と`REPLACE`で動作するように変更
 
-   * `METADATA_KEY_CUSTOM_MARK_RANGES`, `METADATA_KEY_CUSTOM_DELETE_RANGES`, `METADATA_KEY_CUSTOM_REPLACE_RANGES`
+   * `METADATA_KEY_CUSTOM_MARK_RANGES`,  `METADATA_KEY_CUSTOM_DELETE_RANGES`  `METADATA_KEY_CUSTOM_REPLACE_RANGES`
 
 * `CatalogItem`
 
-   * 追加 `createCustomTimeRangesFrom()` - JSONファイルからMARK/DELETE/REPLACEの使用例のメタデータを作成します。
-   * 削除 `createCustomAdMarkersMetadataFrom()`
+   * `createCustomTimeRangesFrom()`の追加 — JSONファイルからMARK/DELETE/REPLACE使用例のメタデータを作成します。
+   * 削除`createCustomAdMarkersMetadataFrom()`
 
 * `DefaultMetadataKeys`
 
-   * 追加済み `CUSTOM_DELETE_RANGES_METADATA_KEY`
-   * 追加済み `CUSTOM_REPLACE_RANGES_METADATA_KEY`
+   * `CUSTOM_DELETE_RANGES_METADATA_KEY`を追加
+   * `CUSTOM_REPLACE_RANGES_METADATA_KEY`を追加
    * `CUSTOM_AD_MARKERS_METADATA_KEY` （変更なし）
 
 * `DefaultContentFactory`
 
    * `doRetrieveGenerators()`
 
-      * メタデータ `CustomRangesOpportunityGenerator` にカスタム範囲が含まれる場合に対して追加されました。
+      * メタデータにカスタム範囲が含まれる場合に`CustomRangesOpportunityGenerator`を追加
    * `doRetrieveResolvers()`
 
-      * DELETEおよ `CustomRangeResolver` びREPLACEカスタム範囲がメタデータに存在する場合に追加
-      * 次より `CustomAdMarkerResolver` 前に移動 `AuditudeResolver`
+      * &lt;a0/追加>DELETEとREPLACEカスタム範囲がメタデータに存在する場合`CustomRangeResolver`
+      * `CustomAdMarkerResolver`を`AuditudeResolver`の前に移動
 
 
-* 追加済み `CustomRangeOpportunityGenerator`
+* `CustomRangeOpportunityGenerator`を追加
 
    * `doUpdate()` 空のまま — 更新なし、VOD
-   * `doProcess()` 新しいタイプの新しい配置を作成します `Placement.Delete_Range`
+   * `doProcess()` 新しいタイプの新しい配置を作成します  `Placement.Delete_Range`
 
-   * のジェ `CustomRangeOppotunityGenerator` ネレーターリストの先頭に追加されたので、 `DefaultContentFactory`広告挿入の前に削除範囲が処理されます。
+   * `DefaultContentFactory`のgeneratorsリストの先頭に`CustomRangeOppotunityGenerator`が追加されたので、広告挿入の前に削除範囲が処理されます。
 
-   * すべてのオ `createCustomRangeOpportunities` ポチュニティを作成するために追加されました
+   * すべてのオポチュニティを作成するために`createCustomRangeOpportunities`を追加しました
 
-      MARK — およびの有効なマーク範囲ごとに1つのオポチュニテ `PlacementType.CUSTOM_RANGE` ィ `PlacementMode.MARK`
+      MARK - `PlacementType.CUSTOM_RANGE`と`PlacementMode.MARK`の有効なマーク範囲ごとに1つのオポチュニティ
 
-      DELETE — およびの有効な削除範囲ごとに1つのオポチュニテ `PlacementType.CUSTOM_RANGE` ィ `PlacementMode.DELETE`
+      DELETE- `PlacementType.CUSTOM_RANGE`と`PlacementMode.DELETE`の有効な削除範囲ごとに1つのオポチュニティ
 
       REPLACE — 有効な置換範囲ごとに2つのオポチュニティ：
 
-      1. およびの範囲の削除オポチュニテ `PlacementType.CUSTOM_RANGE` ィで `PlacementMode.DELETE`す。
+      1. `PlacementType.CUSTOM_RANGE`と`PlacementMode.DELETE`の削除範囲オポチュニティ。
 
-      1. またはおよびのPrimetime ad decisioningの広 `PlacementType.MID_ROLL` 告オポチュニテ `PlacementType.PRE_ROLL` ィ `PlacementMode.FREEREPLACE`
+      1. `PlacementType.MID_ROLL`または`PlacementType.PRE_ROLL`と`PlacementMode.FREEREPLACE`のPrimetime ad decisioningの広告オポチュニティ
 
-* 追加され `CustomRangeResolver`た：
+* `CustomRangeResolver`を追加：
 
-   * `doCanResolve()` 削除範 `true` 囲に対してを返します。
+   * `doCanResolve()` 削除範囲 `true` に対してを返します。
 
-   * 配置用 `createDeleteRangeOperation()` に作成す `DeleteRange` るために追加
+   * 配置の`DeleteRange`を作成する`createDeleteRangeOperation()`を追加しました
 
-* 追加され `CustomRangeHelper`た：
+* `CustomRangeHelper`を追加：
 
-   * マーク/削除/置換を抽出して処理する共通のユーテ `timeRanges` ィリティクラス。
-   * 追加済み `extractCustomRangesMetadata()`
-   * 追加済み `extractCustomRanges()`
-   * 追加され `mergeRanges()` た — 競合とサブセット/結合を解決します。
+   * `timeRanges`のマーク/削除/置換を抽出して処理する共通ユーティリティクラス。
+   * `extractCustomRangesMetadata()`を追加
+   * `extractCustomRanges()`を追加
+   * `mergeRanges()`の追加 — 競合やサブセット/結合を解決します。
 
 * `MediaPlayerTimeline`:
 
-   * &quot;>で、操作 `executeOperation()`がある場合は、操 `DeleteRange`作内のメソッドを削除する呼び出しを追加
+   * &quot;>`executeOperation()`内で、操作が`DeleteRange`の場合、操作内のメソッドを削除する呼び出しを追加
 
-   * で、操 `executeOperation()`作が(サーバーから `NOPTimelineOperation` の空の) `AdBreaks` 場合、クリアする呼び出しを追加しました。
+   * `executeOperation()`で、操作が`NOPTimelineOperation` （空の`AdBreaks`がサーバーから戻ってくる）の場合、クリアする呼び出しを追加します。
 
-   * 追加済み `onDeleteRangeComplete()`
-   * 追加済み `removeRange()`
-   * モード `adjustPlacement()`の場合、 `PlacementMode.FREEREPLACE` 長さをゼロにします。 この時間は、リクエスト時に `AdBreaks`はより早く必要です。この時点で純粋な挿入を行うには、ゼロにする必要があります。
+   * `onDeleteRangeComplete()`を追加
+   * `removeRange()`を追加
+   * `adjustPlacement()`では、`PlacementMode.FREEREPLACE`モードの場合、長さをゼロにします。 `AdBreaks`をリクエストする場合は、この時間が早く必要になります。純粋な挿入にするには、この時点で0にする必要があります。
 
-* `VideoEngineTimeline` 追加さ `removeC3Ad()` れた — 削除範 `removeByLocalTime()` 囲の呼び出し
+* `VideoEngineTimeline` 追加 `removeC3Ad()`  — 削除範囲 `removeByLocalTime()` の呼び出し
 
 * `AdSignalingModeGenerator`
 
    * `doConfigure()`  — オポチュニティが生成されない場合は解決しない
-   * `createInitialOpportunity()`  — の初期オポチュニティを生成しませ `AdSignalingMode.CUSTOM_RANGE`ん。 もうこ `CustomRangeOpportunityGenerator` れを隠してる。
+   * `createInitialOpportunity()`  — の初期オポチュニティを生成し `AdSignalingMode.CUSTOM_RANGE`ません。`CustomRangeOpportunityGenerator`は既にこれを覆っています。
 
 * `DeleteRange`
 
-   * 拡張 `TimelineOperation`。
-   * 削除および置 `CustomRangeResolver` 換（置換の削除部分）のために作成
+   * `TimelineOperation`を拡張します。
+   * `CustomRangeResolver`が削除と置換（置換の削除部分）のために作成しました
 
 * `AuditudeConstant`
 
    * `MAX_PLACEMENTS_PER_REQUEST 1->5`  — 梱包を許可
    * `MINIMUM_AD_DURATION 10->5`
 
-* `AuditudeRequest` 異なる `accepts()` 配置タイプ（プリロール、ミッドロール、ポストロール）のパッキングを許可するようにメソッドを変更しました。
+* `AuditudeRequest` 異なる配置タイプ（プリロール、ミッドロール、ポストロール）のパッキングが可能になるように `accepts()` メソッドが変更されました。
 
-* `AuditudeRequestHelper` 広告パラメーターのサーバー上書きを許可するバグを修正しました。
+* `AuditudeRequestHelper` サーバーが広告パラメーターを上書きできるようにバグを修正しました。
 
-* `AuditudeResolver` 梱包を許 `canBePacked()` 可する方法が変更されました
+* `AuditudeResolver` 梱包を許可する `canBePacked()` 方法が変更されました
 
-* `CustomAdResolver` 抽出関 `timeRange` 数は削除されました。 一度に1つの配置を得て、それを1つに変えます `AdBreakPlacement timelineOperation`。
+* `CustomAdResolver`  `timeRange` 抽出関数は削除されました。一度に1つの場所を取得し、`AdBreakPlacement timelineOperation`にします。
 

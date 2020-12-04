@@ -1,26 +1,29 @@
 ---
-description: 'マニフェストのダウンロード時にネットワーク接続状態を無視するようTVSDKに指示する新しいAPIが導入されました。 '
-seo-description: 'マニフェストのダウンロード時にネットワーク接続状態を無視するようTVSDKに指示する新しいAPIが導入されました。 '
+description: 'TVSDKに、マニフェストのダウンロード時にネットワーク接続状態を無視するよう指示する新しいAPIが導入されました。 '
+seo-description: 'TVSDKに、マニフェストのダウンロード時にネットワーク接続状態を無視するよう指示する新しいAPIが導入されました。 '
 seo-title: Androidでのオフライン再生
 title: Androidでのオフライン再生
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
 
-# Androidでのオフライン再生 {#offline-playback-with-android}
+# Android {#offline-playback-with-android}でのオフライン再生
 
-マニフェストのダウンロード時にネットワーク接続状態を無視するようTVSDKに指示する次のAPIが導入されました。 ネットワーク接続状態は、通常、アダプティブビットレートストリーミング(ABR)中に、フォールバックを試みるか、ネットワークの再開を待つかを決定するために使用されます。
+TVSDKに、マニフェストのダウンロード時にネットワーク接続状態を無視するよう指示する以下のAPIが導入されました。 ネットワーク接続状態は、通常、アダプティブビットレートストリーミング(ABR)中に使用され、フォールバックを試行するか、ネットワークの再開を待つかを決定します。
 
 ```
 NetworkConfiguration::setOfflinePlayback(boolean)
 boolean NetworkConfiguration::getOfflinePlayback()
 ```
 
-この設定を有効にして、ネットワーク接続を無視することができます。
+この設定を有効にして、ネットワーク接続を無視できます。
 
-trueに設 `com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback` 定します。 ブール値のデフォルト値はfalseです。
+`com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback`をtrueに設定します。 ブール値のデフォルト値はfalseです。
 
 ```
 // example of NetworkConfiguration

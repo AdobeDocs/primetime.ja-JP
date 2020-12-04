@@ -6,11 +6,14 @@ description: 次のコードブロックは、エンタイトルメントリソ�
 seo-description: 次のコードブロックは、エンタイトルメントリソースIDが単純なテキスト文字列の場合のJSONオブジェクトの例を示しています。
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
 
-# エンタイトルメントリソースIDのJSONオブジェクト {#json-object-for-entitlement-resource-id}
+# エンタイトルメントリソースID {#json-object-for-entitlement-resource-id}のJSONオブジェクト
 
 次のコードブロックは、エンタイトルメントリソースIDが単純なテキスト文字列の場合のJSONオブジェクトの例を示しています。 この場合、リソースIDは文字列「resource」です。
 

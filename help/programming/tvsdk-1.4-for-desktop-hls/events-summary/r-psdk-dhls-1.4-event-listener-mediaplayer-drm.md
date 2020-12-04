@@ -6,6 +6,9 @@ title: DRMイベント
 uuid: f1da5b31-3fad-4bb4-8aa3-3925d5f0e123
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
@@ -14,8 +17,8 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 TVSDKは、新しいDRMメタデータが使用可能になった場合など、DRM関連の操作に応じて、デジタル著作権管理(DRM)イベントをディスパッチします。
 
-すべてのDRM関連イベントに関する通知を受け取るには、オブジェクト `DRMMetadataInfoEvent` でDRMイベントをリッスン `MediaPlayer` します。
+すべてのDRM関連イベントに関して通知を受けるには、`MediaPlayer`オブジェクトでDRMイベントの`DRMMetadataInfoEvent`をリッスンします。
 
 | イベント | 意味 |
 |---|---|
-| DRMMetadataInfoEvent.[DRM_METADATA_INFO_AVAILABLE](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/DRMMetadataInfoEvent.html#DRM_METADATA_INFO_AVAILABLE) | 新しいDRMメタデータを使用できます。 |
+| DRMMetadataInfoEvent.[DRM_METADATA_INFO_AVAILABLE](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/DRMMetadataInfoEvent.html#DRM_METADATA_INFO_AVAILABLE) | 新しいDRMメタデータが使用可能です。 |

@@ -1,43 +1,46 @@
 ---
-description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む1つの方法です。
-seo-description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む1つの方法です。
-seo-title: MediaPlayerへのメディアリソースの読み込み
-title: MediaPlayerへのメディアリソースの読み込み
+description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む方法の1つです。
+seo-description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む方法の1つです。
+seo-title: メディアリソースをMediaPlayerに読み込む
+title: メディアリソースをMediaPlayerに読み込む
 uuid: 6ee8032f-0728-423f-a1d2-5030aa7db14f
 translation-type: tm+mt
 source-git-commit: 4ef05be045334a2e723da4c7c6a7ee22fb0f776c
+workflow-type: tm+mt
+source-wordcount: '252'
+ht-degree: 0%
 
 ---
 
 
-# MediaPlayerへのメディアリソースの読み込み {#load-a-media-resource-in-the-mediaplayer}
+# メディアリソースをMediaPlayer {#load-a-media-resource-in-the-mediaplayer}に読み込む
 
-MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む1つの方法です。
+MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む方法の1つです。
 
 1. 再生する新しいリソースをMediaPlayerの再生可能な項目に設定します。
 
-   既存のインスタンスを呼び出して渡すことで、既存のMediaPlayerの現在再生可能な `MediaPlayer.replaceCurrentItem` 項目を置き換 `MediaResource` えます。
+   `MediaPlayer.replaceCurrentItem`を呼び出し、既存の`MediaResource`インスタンスを渡すことで、既存のMediaPlayerの現在再生可能なアイテムを置き換えます。
 
-1. インターフェイスの実装をイ `MediaPlayer.PlaybackEventListener` ンスタンスに登録 `MediaPlayer` します。
+1. `MediaPlayer.PlaybackEventListener`インターフェイスの実装を`MediaPlayer`インスタンスに登録します。
 
    * `onPrepared`
-   * `onStateChanged`に設定され、INITIALIZEDとERRORを確認します。
+   * `onStateChanged`に値を入力し、INITIALIZEDとERRORを確認します。
 
-1. メディアプレイヤーの状態がINITIALIZEDに変わった場合、 `MediaPlayer.prepareToPlay`
+1. メディアプレイヤーの状態がINITIALIZEDに変わった場合は、`MediaPlayer.prepareToPlay`を呼び出すことができます
 
-   INITIALIZED状態は、メディアが正常に読み込まれたことを示します。 広告の解 `prepareToPlay` 決と配置プロセス（ある場合）を開始に呼び出します。
+   INITIALIZED状態は、メディアが正常に読み込まれたことを示します。 `prepareToPlay`開始を呼び出すと、広告解決と配置プロセスが発生します（存在する場合）。
 
-1. TVSDKがコールバックを呼び出す `onPrepared` と、メディアストリームは正常に読み込まれ、再生の準備が整います。
+1. TVSDKが`onPrepared`コールバックを呼び出すと、メディアストリームの読み込みが成功し、再生の準備が整います。
 
-   メディアストリームが読み込まれると、が作 `MediaPlayerItem` 成されます。
+   メディアストリームが読み込まれると、`MediaPlayerItem`が作成されます。
 
->障害が発生した場合は、ERROR `MediaPlayer` ステータスに切り替わります。 また、コールバックを呼び出すことで、アプリケーションに通知 `PlaybackEventListener.onStateChanged`します。
+>エラーが発生した場合、`MediaPlayer`はERRORステータスに切り替わります。 また、`PlaybackEventListener.onStateChanged`コールバックを呼び出すことで、アプリケーションに通知します。
 >
->これは、次のいくつかのパラメータを渡します。
->* の値 `state` を持つタ `MediaPlayer.PlayerState` イプのパラメータ `MediaPlayer.PlayerState.ERROR`。
+>これは、次のいくつかのパラメーターを渡します。
+>* `MediaPlayer.PlayerState.ERROR`の値を持つタイプ`MediaPlayer.PlayerState`の`state`パラメータ。
    >
    >
-* エラー `notification` 情報に関する `MediaPlayerNotification` 診断情報を含むタイプのイベント。
+* エラーイベントに関する診断情報を含む、タイプ`MediaPlayerNotification`の`notification`パラメーター。
 
 
 以下のサンプルコードは、メディアリソースの読み込みプロセスを簡単に示しています。

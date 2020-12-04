@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# HSMの設定{#hsm-configuration}
+# HSM設定{#hsm-configuration}
 
 HSMをサポートするSun PKCS#11プロバイダーを使用して、参照の実装を設定できます。 HSMの使用は必須ではありませんが、使用することをお勧めします。
 
-HSMで秘密鍵証明書を使用するには、Sun PKCS#11プロバイダーの設定ファイルを作成する必要があります。 詳しくは、『 [Java PCKS#11リファレンスガイド](https://docs.oracle.com/javase/1.5.0/docs/guide/security/p11guide.html)』を参照してください。
+HSMで秘密鍵証明書を使用するには、Sun PKCS#11プロバイダーの設定ファイルを作成する必要があります。 詳しくは、[Java PCKS#11リファレンスガイド](https://docs.oracle.com/javase/1.5.0/docs/guide/security/p11guide.html)を参照してください。
 
 HSMおよびSun PKCS#11の設定ファイルが設定されていることを確認するには、Java JDKと共にインストールされたkeytoolを使用して次のコマンドを入力します。
 

@@ -4,17 +4,20 @@ title: ライセンスサーバーのプロパティファイル
 uuid: bede307a-2060-451f-baf5-d058702c0a7e
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '195'
+ht-degree: 0%
 
 ---
 
 
-# ライセンスサーバーのプロパティファイル {#license-server-properties-file}
+# ライセンスサーバーのプロパティファイル{#license-server-properties-file}
 
-このファイルを [!DNL flashaccess-refimpl.properties] 使用して、参照実装のLicense Serverコンポーネントを設定します。 少なくとも、Transport CredentialとLicense Server Credentialに関連するプロパティを必ず設定してください。 秘密鍵証明書ファイルの場所は、プロパティで指定されたディレクトリを基準に指定する必要があ `config.resourcesDirectory` ります。 また、このファイルには、コンテンツのパッケージ化に関連するいくつかのプロパティが含まれています。これらのプロパティは、Flash Media Rights Management Server 1.xメタデータの変換にのみ使用されます。 このプロパティファイルの値を変更した場合は、変更を有効にするには、ライセンスサーバーを再起動する必要があります。
+[!DNL flashaccess-refimpl.properties]ファイルを使用して、参照実装のLicense Serverコンポーネントを設定します。 少なくとも、Transport CredentialとLicense Serverの秘密鍵証明書に関連するプロパティを設定する必要があります。 秘密鍵証明書ファイルの場所は、`config.resourcesDirectory`プロパティで指定されたディレクトリを基準に指定する必要があります。 このファイルには、コンテンツのパッケージ化に関連するいくつかのプロパティも含まれています。これらのプロパティは、FlashMediaRights ManagementServer 1.xのメタデータ変換にのみ使用されます。 このプロパティファイルの値のいずれかを変更した場合、変更を有効にするには、ライセンスサーバーを再起動する必要があります。
 
-Adobe AccessでiOSクライアントへのリモートキー配信のライセンスの生成をサポートするには、でキーサーバー証明書を指定する必要がありま [!DNL flashaccess-refimpl.properties]す。
+Adobeアクセスでリモートキー配信のライセンスをiOSクライアントに対して生成できるようにするには、[!DNL flashaccess-refimpl.properties]にキーサーバー証明書を指定する必要があります。
 
-次のプロパティがAdobe Accessに追加されました。
+Adobeアクセスに次のプロパティが追加されました。
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_xz2_lwy_n4"> 
  <thead class="- topic/thead "> 
@@ -26,11 +29,11 @@ Adobe AccessでiOSクライアントへのリモートキー配信のライセ�
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> HandlerConfiguration.KeyServerCertificate</span> </td> 
-   <td colname="2" class="- topic/entry "> 鍵サーバーのライセンスサーバー証明書（アドビが発行）。 この証明書は、メタデータがキーサーバーが必要であることを示している場合に、iOSデバイスのライセンスを生成するために使用されます。 </td> 
+   <td colname="2" class="- topic/entry "> Adobeが発行するキーサーバーのライセンスサーバー証明書。 この証明書は、メタデータがキーサーバーが必要であることを示している場合に、iOSデバイスのライセンスを生成するために使用されます。 </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> RefImpl.HSM.HandlerConfiguration.\ KeyServerCertificate.Alias</span> </td> 
-   <td colname="2" class="- topic/entry ">HSMに保存されるキーサーバーのアドビ発行ライセンスサーバー証明書のエイリアス。 HSMが有効な場合は、HandlerConfiguration.KeyServerCertificateの代わりにこのプロパティを使用 <span class="codeph"> します</span>。 </td> 
+   <td colname="2" class="- topic/entry ">HSMに保存されているキーサーバーのAdobe発行ライセンスサーバー証明書のエイリアス。 HSMが有効な場合は、<span class="codeph"> HandlerConfiguration.KeyServerCertificate</span>の代わりに、このプロパティを使用します。 </td> 
   </tr> 
  </tbody> 
 </table>

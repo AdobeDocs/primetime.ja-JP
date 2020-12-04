@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->クローズドキャプションは常に有効です。 デフォルトのクローズドキャプショントラックはすべて存在すると見なされます。 デフォルトのトラック（CC1-CC4、CS1-CS6など）は、に列挙され `ClosedCaptionsTrack.DefaultCCTypes`ます。 再生が始まると、TVSDKは、これらのチャネルのいずれかに関するアクティビティを探します。 アクティビティが見つかった場合は、そのトラックの `isActive` メソッドを設定し、 `MediaPlayer.PlaybackEventListener.onUpdated` イベントをディスパッチします。
+>クローズドキャプションは常に有効です。 デフォルトのクローズドキャプショントラックはすべて存在すると見なされます。 デフォルトのトラック（CC1-CC4、CS1-CS6など）は、`ClosedCaptionsTrack.DefaultCCTypes`に列挙されます。 再生が始まると、TVSDKは、これらのチャネルのいずれかに関するアクティビティを探します。 アクティビティが見つかった場合は、そのトラックの`isActive`メソッドを設定し、`MediaPlayer.PlaybackEventListener.onUpdated`イベントをディスパッチします。
 
 1. メディアプレイヤーがPREPARED状態になるまで待ちます。
 1. 以下のイベントをリッスンします。

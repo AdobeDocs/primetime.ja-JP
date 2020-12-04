@@ -1,26 +1,29 @@
 ---
-description: Primetime DRMの主なコンポーネントは、Java SDKと、Flash PlayerおよびAdobe AIRクライアントのランタイム環境で構成されます。
-seo-description: Primetime DRMの主なコンポーネントは、Java SDKと、Flash PlayerおよびAdobe AIRクライアントのランタイム環境で構成されます。
-seo-title: Java SDK、Flash PlayerおよびAdobe AIRクライアント
-title: Java SDK、Flash PlayerおよびAdobe AIRクライアント
+description: Primetime DRMの主なコンポーネントは、Java SDK、Flash PlayerおよびAdobe AIRクライアントランタイム環境で構成されます。
+seo-description: Primetime DRMの主なコンポーネントは、Java SDK、Flash PlayerおよびAdobe AIRクライアントランタイム環境で構成されます。
+seo-title: Java SDK、Flash Player、Adobe AIRクライアント
+title: Java SDK、Flash Player、Adobe AIRクライアント
 uuid: e6daed27-3803-4ef7-ba25-4a180af7502f
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Primetime DRM SDK {#section_522E57DFEEFF4794978FF2D366B83690}
+# Adobe PrimetimeDRM SDK {#section_522E57DFEEFF4794978FF2D366B83690}
 
-Primetime DRMは、サーバー実装を作成できる構築ブロックを提供するJava SDKとして提供されます。 SDKを使用すると、組織のビジネスモデルに適したPrimetime DRMソリューションを作成できます。
+Primetime DRMは、サーバー実装を作成できる構成要素を提供するJava SDKとして提供されます。 SDKを使用して、組織のビジネスモデルに適したPrimetime DRMソリューションを作成できます。
 
 SDKで提供されるJava APIについて、以下のサブセクションで説明します。
 
 ## デバイスグループドメインを管理するためのJava API{#java-apis-for-managing-device-group-domains}
 
-これらのAPIを使用すると、サーバーはデバイスグループドメインに参加および離脱するクライアント要求を処理できます。
+これらのAPIは、デバイスグループドメインに参加および離脱するクライアント要求をサーバーが処理できるようにするために使用されます。
 
-デバイスグループドメインは、相互にライセンスを共有できるデバイスの論理的な集まりです。 これを行うには、各デバイスが最初に同じドメインに参加/登録する必要があります。 サーバー上で実行されるPrimetime DRM SDKは、デバイスドメインの参加（登録解除）要求と、デバイスドメインの離脱（登録解除）要求を処理する必要があります。 どのドメインにも参加していないデバイスは、そのデバイスにバインドされたライセンスが発行され、他のデバイスと共有することはできません。
+デバイスグループドメインは、相互にライセンスを共有できるデバイスの論理的な集まりです。 この処理を行うには、各デバイスが最初に同じドメインに参加/登録する必要があります。 サーバー上で実行されているPrimetime DRM SDKは、デバイスドメインの参加（登録解除）要求と、デバイスドメインの離脱（登録解除）要求を処理する必要があります。 どのドメインにも参加していないデバイスは、そのデバイスにバインドされているライセンスが発行されます。このライセンスは、他のデバイスとは共有できません。
 
 ## コンテンツ保護用のJava API{#java-apis-for-protecting-content}
 
@@ -28,7 +31,7 @@ SDKで提供されるJava APIについて、以下のサブセクションで説
 
 * ポリシー管理
 
-   ポリシー管理APIは、コンテンツに適用するポリシーを作成および変更するために使用します。 ポリシーの作成や更新が可能です。例えば、すべての使用ルールの取得/設定や、カスタム名前空間での追加パラメーターの許可などです。
+   ポリシー管理APIは、コンテンツに適用するポリシーを作成および変更するために使用します。 ポリシーの作成や更新が可能です。例えば、すべての使用ルールの取得/設定、カスタム名前空間での追加のパラメーターの許可などを行うことができます。
 
 * コンテンツのパッケージ化
 
@@ -40,16 +43,16 @@ SDKで提供されるJava APIについて、以下のサブセクションで説
 
 * 認証
 
-   認証APIを使用して、認証要求を処理し、認証トークンを生成できます。
+   認証APIは、認証要求を処理し、認証トークンを生成するために使用できます。
 
 * ライセンスの生成と取得
 
-   ライセンス生成および獲得APIは、ユーザのライセンスを生成するために使用されます。
+   ライセンスの生成と取得APIは、ユーザーのライセンスの生成に使用されます。
 
 * Adobe AIRバージョン1.5のクライアントとコンテンツのサポート
 
-   後方互換性を確保するため、SDKには、AIRバージョン1.5以前のクライアントおよび保護されたコンテンツで使用するために作成されたAIRアプリケーションからの要求を処理するAPIが含まれています。
+   下位互換性を確保するため、SDKには、AIRバージョン1.5以前のクライアントおよび保護されたコンテンツで使用するために作成されたAIRアプリケーションからの要求を処理するAPIが含まれています。
 
-## リファレンスの実装 {#reference-implementation}
+## リファレンス実装{#reference-implementation}
 
-SDKには、Java APIの使用方法を示す、シンプルなAdobe Primetime DRMデプロイメントであるリファレンス実装が含まれています。 リファレンスの実装では、Java APIに基づくコンテンツのパッケージ化とポリシー管理のためのLicense Server、Watched Folder Packager、Primetime DRM Manager AIRアプリケーション、およびコマンドラインツールが提供されます。 Primetime DRM参照の実装について詳しくは、コンテンツの保護を参照してください。
+SDKには、Java APIの使用方法を示すシンプルなAdobe PrimetimeDRMデプロイメントのリファレンス実装が含まれています。 このリファレンスの実装には、Java APIに基づくコンテンツのパッケージ化とポリシー管理のためのライセンスサーバー、監視フォルダーパッケージャー、Primetime DRM Manager AIRアプリケーション、およびコマンドラインツールが用意されています。 Primetime DRM参照の実装について詳しくは、「コンテンツの保護」を参照してください。

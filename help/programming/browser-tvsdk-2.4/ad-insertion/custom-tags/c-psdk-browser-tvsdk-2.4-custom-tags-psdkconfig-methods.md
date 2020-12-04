@@ -1,26 +1,29 @@
 ---
-description: MediaPlayerItemConfigクラスを使用して、ストリーム内のカスタムタグ名を設定できます。
-seo-description: MediaPlayerItemConfigクラスを使用して、ストリーム内のカスタムタグ名を設定できます。
+description: MediaPlayerItemConfigクラスを使用して、ストリーム内にカスタムタグ名を設定できます。
+seo-description: MediaPlayerItemConfigクラスを使用して、ストリーム内にカスタムタグ名を設定できます。
 seo-title: タグのConfigクラスメソッド
 title: タグのConfigクラスメソッド
 uuid: 222a0349-58d5-4bf3-9d03-e5920610faf5
 translation-type: tm+mt
 source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
 
-# タグのConfigクラスメソッド{#config-class-methods-for-tags}
+# tags{#config-class-methods-for-tags}のConfigクラスメソッド
 
-MediaPlayerItemConfigクラスを使用して、ストリーム内のカスタムタグ名を設定できます。
+MediaPlayerItemConfigクラスを使用して、ストリーム内にカスタムタグ名を設定できます。
 
-To create a new `MediaPlayerItemConfig`:
+新しい`MediaPlayerItemConfig`を作成するには：
 
 ```js
 var mediaPlayerItemConfig = new AdobePSDK.MediPlayerItemConfig();
 ```
 
-メソッドを使用してカスタムタグを管理 `MediaPlayerItemConfig` する方法について、次に示す情報を示します。
+カスタムタグの管理に`MediaPlayerItemConfig`メソッドを使用する方法について、次に情報を示します。
 
 <table id="table_0AC0973497144DDAB05726E3F031ACD1"> 
  <tbody> 
@@ -40,10 +43,10 @@ var mediaPlayerItemConfig = new AdobePSDK.MediPlayerItemConfig();
     <code class="syntax javascript">
       var&nbsp;subscribeTags&nbsp;=&nbsp;["#EXT-X-PROGRAM-DATE-TIME"];mediaPlayerItemConfig.subscribeTags&nbsp;=&nbsp;subscribeTags;
     </code> </td> 
-   <td colname="col2"> <p>アプリケーションに公開されるサブスクライブ済みタグのリストを設定します。 </p> <p>また、アプリケーションは、adTagsを通じて送信されるすべてのタグを自動的にサブスクライブ <span class="codeph"> していま </span>す。 </p> </td> 
+   <td colname="col2"> <p>アプリケーションに公開されるサブスクライブ済みタグのリストを設定します。 </p> <p>また、アプリケーションは、<span class="codeph"> adTags </span>を通じて送信されるすべてのタグを自動的にサブスクライブします。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <b>デフォルトのオポチュニティディテクターで使用される広告タグのカスタマイズ </b> </td> 
+   <td colname="col1"> <b>デフォルトのオポチュニティディテクターで使用される広告タグのカスタマイズ  </b> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
@@ -65,9 +68,9 @@ var mediaPlayerItemConfig = new AdobePSDK.MediPlayerItemConfig();
 
 次の点に注意してください。
 
-* カスタムタグ名に接頭辞を含める必要が `#` あります。
+* カスタムタグ名には、`#`プレフィックスを含める必要があります。
 
-   例えば、は正し `#EXT-X-ASSET` いカスタムタグ名ですが、正しくあ `EXT-X-ASSET` りません。
+   例えば、`#EXT-X-ASSET`は正しいカスタムタグ名ですが、`EXT-X-ASSET`は正しくありません。
 
 * メディアストリームの読み込み後は、設定を変更できません。
 

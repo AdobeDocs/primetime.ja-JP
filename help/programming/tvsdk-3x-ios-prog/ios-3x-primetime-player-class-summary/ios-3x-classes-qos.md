@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# QoSクラス {#qos-classes}
+# QoSクラス{#qos-classes}
 
 プレイヤーのパフォーマンスを判断するのに役立つ情報を提供するクラスです。
 

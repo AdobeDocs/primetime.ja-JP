@@ -13,25 +13,25 @@ ht-degree: 0%
 ---
 
 
-# TVSDKアプリケーションでのApple FairPlayの有効化{#enable-apple-fairplay-in-tvsdk-applications}
+# TVSDKアプリケーションでApple FairPlayを有効にする{#enable-apple-fairplay-in-tvsdk-applications}
 
 AppleのDRMソリューションであるApple FairPlay StreamingをTVSDKアプリケーションに実装できます。
 
-1. FairPlay用のCustomer Resource Loaderは、を実装して作成し `PTAVAssetResourceLoaderDelegate`ます。
+1. `PTAVAssetResourceLoaderDelegate`を実装して、FairPlay Customer Resource Loaderを作成します。
 
-   詳しくは、TVSDKアプリケーションでの [Apple FairPlayを参照してください](../../c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)。
+   詳しくは、[TVSDKアプリケーションでのApple FairPlay](../../c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)を参照してください。
 
    >[!NOTE]
    >
-   >『 *FairPlay Streamingプログラムガイド* 』(FairPlayStreaming_PG.pdf *)の手順に従っていることを確認してください。この手順は、* FPS対応アプリケーション開発用の [](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)FairPlay Server SDKに含まれています。
+   >[fps対応アプリを開発するFairPlay Server SDKの&#x200B;*FairPlayストリーミングプログラムガイド*(*FairPlayStreaming_PG.pdf*)の手順に従っていることを確認してください。](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)
 
-   この `resourceLoader:shouldWaitForLoadingOfRequestedResource` メソッドは、のメソッドと同じで `AVAssetResourceLoaderDelegate`す。
+   `resourceLoader:shouldWaitForLoadingOfRequestedResource`メソッドは、`AVAssetResourceLoaderDelegate`内のメソッドと同じです。
 
    >[!IMPORTANT]
    >
-   >ExpressPlayライセンスサーバーシナリオでは、コンテンツを再生するには、ExpressPlay FairPlayサーバーライセンスリクエストURLをからに変更し `skd://` ます(または `https://``https://`)。
+   >ExpressPlayライセンスサーバーシナリオでは、コンテンツを再生するには、ExpressPlay FairPlayサーバーライセンスリクエストURLを`skd://`から`https://`（または`https://`）に変更します。
 
-1. FairPlay *Customer* Resource Loaderをに登録 `registerPTAVAssetResourceLoader`します。
+1. *FairPlay* Customer Resource Loaderを`registerPTAVAssetResourceLoader`に登録します。
 
    ```
    PTFairPlayResourceLoader *resourceLoader =  

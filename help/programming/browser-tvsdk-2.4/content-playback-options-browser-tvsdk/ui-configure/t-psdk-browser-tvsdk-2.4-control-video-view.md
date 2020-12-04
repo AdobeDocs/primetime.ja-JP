@@ -1,38 +1,41 @@
 ---
-description: MediaPlayerViewオブジェクトを使用して、ビデオビューの位置とサイズを制御できます。
-seo-description: MediaPlayerViewオブジェクトを使用して、ビデオビューの位置とサイズを制御できます。
-seo-title: ビデオビューの位置とサイズの制御
-title: ビデオビューの位置とサイズの制御
+description: MediaPlayerViewオブジェクトを使用して、ビデオ表示の位置とサイズを制御できます。
+seo-description: MediaPlayerViewオブジェクトを使用して、ビデオ表示の位置とサイズを制御できます。
+seo-title: ビデオ表示の位置とサイズの制御
+title: ビデオ表示の位置とサイズの制御
 uuid: d09dbc18-1ec0-4336-bf3f-7ff6c265c443
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '317'
+ht-degree: 0%
 
 ---
 
 
-# ビデオビューの位置とサイズの制御{#control-the-position-and-size-of-the-video-view}
+# ビデオ表示の位置とサイズを制御{#control-the-position-and-size-of-the-video-view}
 
-MediaPlayerViewオブジェクトを使用して、ビデオビューの位置とサイズを制御できます。
+MediaPlayerViewオブジェクトを使用して、ビデオ表示の位置とサイズを制御できます。
 
-ブラウザーTVSDKは、アプリケーション、プロファイルスイッチ、コンテンツスイッチなどによって行われた変更によってビデオのサイズや位置が変更された場合、デフォルトでビデオビューの縦横比を維持しようとします。
+アプリケーション、プロファイルスイッチ、コンテンツスイッチなどによって行われた変更によってビデオのサイズや位置が変わった場合は、ブラウザーTVSDKは、デフォルトでビデオ表示の縦横比を維持しようとします。
 
-別のスケールポリシーを指定することで、デフォルトの縦横比の動作を上書きする *ことができま*&#x200B;す。 オブジェクトのプロパティを使用して、ス `MediaPlayerView` ケールポリシーを指 `scalePolicy` 定します。 のデフォルトのスケールポリシ `MediaPlayerView` ーは、クラスのインスタンスで設定さ `MaintainAspectRatioScalePolicy` れます。 スケールポリシーをリセットするには、のデフォルトのインスタンスを `MaintainAspectRatioScalePolicy` 独自のポ `MediaPlayerView.scalePolicy` リシーで置き換えます。
+異なる&#x200B;*スケールポリシー*&#x200B;を指定すると、デフォルトの縦横比の動作を上書きできます。 `MediaPlayerView`オブジェクトの`scalePolicy`プロパティを使用して、スケールポリシーを指定します。 `MediaPlayerView`のデフォルトのスケールポリシーは、`MaintainAspectRatioScalePolicy`クラスのインスタンスを使用して設定されます。 スケールポリシーをリセットするには、`MediaPlayerView.scalePolicy`の`MaintainAspectRatioScalePolicy`のデフォルトインスタンスを独自のポリシーに置き換えます。
 
 >[!IMPORTANT]
 >
->プロパティをnull値に設 `scalePolicy` 定することはできません。
+>`scalePolicy`プロパティをnull値に設定することはできません。
 
-## Flash以外のフォールバックシナリオ {#non-flash-fallback-scenarios}
+## Flash以外のフォールバックシナリオ{#non-flash-fallback-scenarios}
 
-Flash以外のフォールバックシナリオでは、スケールポリシーが正しく機能するために、コンストラクターで指定されたビデオdiv要素は、 `View` およびのゼロ以外の値を返す必要が `offsetWidth` ありま `offsetHeight`す。 誤った関数の例を示すため、ビデオdiv要素の幅と高さがCSSで明示的に設定されていない場合、コンストラクタはまたはに対して0 `View` を返すことが `offsetWidth` ありま `offsetHeight`す。
+Flash以外のフォールバックシナリオでは、スケールポリシーが正しく機能するために、`View`コンストラクターで指定されたビデオdiv要素は、`offsetWidth`と`offsetHeight`に対してゼロ以外の値を返す必要があります。 誤った関数の例を示すために、ビデオdiv要素の幅と高さがcssで明示的に設定されていない場合、`View`コンストラクタは、`offsetWidth`または`offsetHeight`に対して0を返します。
 
 >[!NOTE]
 >
->CustomScalePolicyは、IE、Edge、Safari 9など、一部のブラウザーでのサポートに制限があります。 これらのブラウザーでは、ビデオのネイティブの縦横比は変更できません。 ただし、ビデオの位置とサイズは、スケールポリシーに従って適用されます。
+>CustomScalePolicyでは、IE、Edge、Safari 9など、一部のブラウザーのサポートが制限されています。 これらのブラウザーでは、ビデオのネイティブの縦横比は変更できません。 ただし、ビデオの位置とサイズは、スケールポリシーに従って適用されます。
 
-1. 独自のスケール `MediaPlayerViewScalePolicy` ポリシーを作成するには、インターフェイスを実装します。
+1. `MediaPlayerViewScalePolicy`インターフェイスを実装して、独自のスケールポリシーを作成します。
 
-   には次の1 `MediaPlayerViewScalePolicy` つの方法があります。
+   `MediaPlayerViewScalePolicy`には次のメソッドが1つあります。
 
    ```js
    /** 
@@ -64,14 +67,14 @@ Flash以外のフォールバックシナリオでは、スケールポリシー
    };
    ```
 
-1. 実装をプロパティに割り当 `MediaPlayerView` てます。
+1. 実装を`MediaPlayerView`プロパティに割り当てます。
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(videoDiv); 
    view.scalePolicy= new MediaPlayerViewCustomScalePolicy();
    ```
 
-1. ビューをMedia Playerのプロパティに追加し `view` ます。
+1. メディアプレ追加イヤーの`view`プロパティへの表示。
 
    ```
    mediaplayer.view = view;
@@ -79,7 +82,7 @@ Flash以外のフォールバックシナリオでは、スケールポリシー
 
 <!--<a id="example_ABCD79AE29DB4A668F9A8B729FE44AF9"></a>-->
 
-**例：縦横比を維持せずに、ビデオビュー全体に表示されるようにビデオを拡大・縮小します。**
+**次に例を示します。縦横比を維持せずに、ビデオ表示全体に合わせてビデオを拡大・縮小します。**
 
 ```
 /** 

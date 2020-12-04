@@ -1,20 +1,23 @@
 ---
-description: ユーザーが広告をクリックすると、アプリケーションはメインビデオコンテンツの再生を一時停止する必要があります。
-seo-description: ユーザーが広告をクリックすると、アプリケーションはメインビデオコンテンツの再生を一時停止する必要があります。
+description: ユーザーが広告をクリックすると、アプリケーションは、メインビデオコンテンツの再生を一時停止する必要があります。
+seo-description: ユーザーが広告をクリックすると、アプリケーションは、メインビデオコンテンツの再生を一時停止する必要があります。
 seo-title: 再生の一時停止と再開
 title: 再生の一時停止と再開
 uuid: 87ba9f05-912d-4b85-8add-feb26a796a3a
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
 
-# 再生の一時停止と再開 {#pause-and-resume-playback}
+# 再生の一時停止と再開{#pause-and-resume-playback}
 
-ユーザーが広告をクリックすると、アプリケーションはメインビデオコンテンツの再生を一時停止する必要があります。
+ユーザーが広告をクリックすると、アプリケーションは、メインビデオコンテンツの再生を一時停止する必要があります。
 
-1. Androidアクティビテ `onPause` ィのおよ `onResume` びを上書きします。
+1. Androidアクティビティの`onPause`と`onResume`を上書きします。
 
    ```java
    @Override 

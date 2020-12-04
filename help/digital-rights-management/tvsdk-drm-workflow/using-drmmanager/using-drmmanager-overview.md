@@ -4,32 +4,35 @@ title: DRMManagerクラスの使用の概要
 uuid: 71ce061b-75b6-4ab5-8bbd-cafe7c3e4592
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '458'
+ht-degree: 0%
 
 ---
 
 
-# DRMManagerクラスの使用 {#using-the-drmmanager-class}
+# DRMManagerクラス{#using-the-drmmanager-class}の使用
 
-このクラスを使 `DRMManager` 用して、アプリケーションのライセンスとPrimetime DRMライセンスサーバーセッションを管理します。
+`DRMManager`クラスを使用して、アプリケーション内のライセンスとPrimetime DRMライセンスサーバーセッションを管理します。
 
 **ライセンス管理**
 
-保護されたコンテンツをデバイスが再生すると、ランタイムはコンテンツの表示に必要なライセンスを取得し、キャッシュします。 アプリケーションがコンテンツをローカルに保存し、ライセンスがオフラインでの再生を許可している場合、ユーザーはネットワークに接続しなくても、アプリケーション内のコンテンツを表示できます。 を使用して、ラ `DRMManager`イセンスを事前にキャッシュできます。 コンテンツを表示するために必要なライセンスを取得する必要はありません。 例えば、アプリケーションでメディアファイルをダウンロードし、ユーザーがオンラインの間、ライセンスを取得することができます。
+デバイスが保護されたコンテンツを再生するたびに、ランタイムはコンテンツの表示に必要なライセンスを取得してキャッシュします。 アプリケーションがコンテンツをローカルに保存し、ライセンスがオフライン再生を許可している場合、ユーザーはネットワークに接続せずにアプリケーション内のコンテンツを表示できます。 `DRMManager`を使用して、ライセンスを事前にキャッシュできます。 コンテンツの表示に必要なライセンスを取得する必要はありません。 例えば、アプリケーションでメディアファイルをダウンロードし、ユーザーがオンラインの間はライセンスを取得できます。
 
-ライセンスを事前に読み込むには、オブジェクトを使 `DRMContentData` 用します。 このオ `DRMContentData` ブジェクトには、ライセンスを提供できるPrimetime DRMライセンスサーバーのURLが含まれ、ユーザー認証が必要かどうかを示します。 この情報を使用して、このメソッドを呼び出し、 `DRMManager``loadVoucher()` ライセンスを取得してキャッシュできます。 ライセンスのプリロードのワークフローについては、オフライン再生用のプリロ *ードライセンスで詳しく説明しています*。
+ライセンスを事前に読み込むには、`DRMContentData`オブジェクトを使用します。 `DRMContentData`オブジェクトには、ライセンスを提供できるPrimetime DRMライセンスサーバーのURLが含まれ、ユーザー認証が必要かどうかを示します。 この情報を使用して、`DRMManager` `loadVoucher()`メソッドを呼び出し、ライセンスを取得してキャッシュできます。 プリロードライセンスのワークフローについては、*オフライン再生用のプリロードライセンス*&#x200B;で詳しく説明されています。
 
 **セッション管理**
 
-また、を使用して、Primetime DRMライ `DRMManager` センスサーバーに対するユーザーの認証や、永続的なセッションの管理を行うこともできます。 メソッドを呼 `DRMManager` び出し `authenticate()` て、Primetime DRMライセンスサーバーとのセッションを確立します。 認証が正常に完了すると、オブジェクト `DRMManager` がディスパッチ `DRMAuthenticationCompleteEvent` されます。 このオブジェクトには、セッショントークンが含まれます。 このトークンを保存して以降のセッションを確立し、ユーザーがアカウントの資格情報を提供する必要がないようにすることができます。 メソッドにトークンを渡し `setAuthenticationToken()` て、新しい認証済みセッションを確立します。 （トークンを生成したサーバーの設定によって、トークンの有効期限と他の属性が決まります）。
+`DRMManager`を使用して、Primetime DRMライセンスサーバーに対するユーザーの認証や、永続的なセッションの管理を行うこともできます。 `DRMManager` `authenticate()`メソッドを呼び出して、Primetime DRMライセンスサーバーとのセッションを確立します。 認証が正常に完了すると、`DRMManager`は`DRMAuthenticationCompleteEvent`オブジェクトをディスパッチします。 このオブジェクトには、セッショントークンが含まれます。 このトークンを保存して以降のセッションを確立し、ユーザーがアカウントの資格情報を提供する必要がないようにすることができます。 `setAuthenticationToken()`メソッドにトークンを渡して、新しい認証済みセッションを確立します。 （トークンを生成したサーバーの設定によって、トークンの有効期限やその他の属性が決まります）。
 
-## DRMStatusイベントの処理 {#handling-drmstatus-events}
+## DRMStatusイベントの処理{#handling-drmstatus-events}
 
-メソッド `DRMManager` の呼び出し `DRMStatusEvent` が正常に完了した後、オブジェク `loadVoucher()` トがディスパッチされます。 ライセンスを取得した場合、イベントオブジェクトのdetailプロパティの値は次のとおりです。voucherプロ `DRM.voucherObtained`パティにはオブジェクトが含ま `DRMVoucher` れます。 ライセンスが取得されない場合、detailプロパティの値は次のとおりです。 `DRM.voucherObtained`;ただし、voucherプロパティはnullです。 例えば、のを使用し、ローカルにキャッシュされたライセンスがな `LoadVoucherSetting` い場合、 `localOnly` ライセンスを取得できません。 認証または通 `loadVoucher()` 信エラーが原因で呼び出しが正常に完了しなかった場合は、代わりにまたはオ `DRMManager` ブジェクト `DRMErrorEvent` がディスパッ `DRMAuthenticationErrorEvent` チされます。
+`DRMManager`は、`loadVoucher()`メソッドの呼び出しが正常に完了した後、`DRMStatusEvent`オブジェクトをディスパッチします。 ライセンスを取得した場合、イベントオブジェクトのdetailプロパティに次の値が設定されます。`DRM.voucherObtained`、voucherプロパティには`DRMVoucher`オブジェクトが含まれます。 ライセンスが取得されない場合、detailプロパティの値は次のとおりです。`DRM.voucherObtained`;ただし、voucherプロパティはnullです。 例えば、`localOnly`の`LoadVoucherSetting`を使用していて、ローカルにキャッシュされたライセンスがない場合、ライセンスを取得できません。 `loadVoucher()`の呼び出しが正常に完了しない場合（認証または通信エラーが原因の場合など）、`DRMManager`は代わりに`DRMErrorEvent`または`DRMAuthenticationErrorEvent`オブジェクトをディスパッチします。
 
-## DRMAuthenticationCompleteイベントの処理{#handling-drmauthenticationcomplete-events}
+## DRMAuthenticationCompleteイベント{#handling-drmauthenticationcomplete-events}の処理
 
-メソッ `DRMManager` ドの呼び出 `DRMAuthenticationCompleteEvent` しによってユーザーが正常に認証されると、オブジェクトがディスパッチさ `authenticate()` れます。 このオブジ `DRMAuthenticationCompleteEvent` ェクトには、アプリケーションセッション間でのユーザー認証を保持するために使用できる、再利用可能なトークンが含まれています。 このトークンをメソッドに渡 `DRMManager` して、 `setAuthenticationToken()` セッションを再確立します。 (トークンクリエーターは、有効期限などのトークン属性を設定します。 アドビでは、トークン属性を調べるAPIを提供していません。)
+`DRMManager`は、ユーザーが`authenticate()`メソッドの呼び出しによって認証されると、`DRMAuthenticationCompleteEvent`オブジェクトをディスパッチします。 `DRMAuthenticationCompleteEvent`オブジェクトには、再利用可能なトークンが含まれており、これを使用してアプリケーションセッション間でユーザー認証を保持できます。 このトークンを`DRMManager` `setAuthenticationToken()`メソッドに渡して、セッションを再確立します。 (トークン作成者は有効期限などのトークン属性を設定します。 Adobeは、トークン属性を調べるAPIを提供しません。)
 
-## DRMAuthenticationErrorイベントの処理{#handling-drmauthenticationerror-events}
+## DRMAuthenticationErrorイベント{#handling-drmauthenticationerror-events}の処理
 
-またはメ `DRMManager` ソッドの呼び出 `DRMAuthenticationErrorEvent` しによってユーザーが正常に認証されなかった場合に、オブジェクト `authenticate()` がディスパッチさ `setAuthenticationToken()` れます。
+`DRMManager`は、`authenticate()`メソッドまたは`setAuthenticationToken()`メソッドの呼び出しでユーザーが認証に成功しなかった場合に、`DRMAuthenticationErrorEvent`オブジェクトをディスパッチします。

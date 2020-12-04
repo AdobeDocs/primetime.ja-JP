@@ -1,23 +1,26 @@
 ---
-description: コンテンツのパッケージ化は、Web上で再生するビデオコンテンツを準備するプロセスです。 パッケージ化には、生のビデオをマニフェストファイルに変換し、オプションで、デバイスやブラウザーごとに異なるDRMソリューションを使用してコンテンツを暗号化する機能が含まれます。
-seo-description: コンテンツのパッケージ化は、Web上で再生するビデオコンテンツを準備するプロセスです。 パッケージ化には、生のビデオをマニフェストファイルに変換し、オプションで、デバイスやブラウザーごとに異なるDRMソリューションを使用してコンテンツを暗号化する機能が含まれます。
+description: コンテンツのパッケージ化は、Web上で再生するビデオコンテンツを準備するプロセスです。 パッケージ化には、生のビデオをマニフェストファイルに変換することや、オプションで、デバイスやブラウザーごとに異なるDRMソリューションを使用してコンテンツを暗号化することが含まれます。
+seo-description: コンテンツのパッケージ化は、Web上で再生するビデオコンテンツを準備するプロセスです。 パッケージ化には、生のビデオをマニフェストファイルに変換することや、オプションで、デバイスやブラウザーごとに異なるDRMソリューションを使用してコンテンツを暗号化することが含まれます。
 seo-title: コンテンツのパッケージ化
 title: コンテンツのパッケージ化
 uuid: b9bc6104-a1ea-4ea0-a0a4-af8a606e5d47
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
 
-# コンテンツのパッケージ化 {#package-your-content}
+# コンテンツのパッケージ化{#package-your-content}
 
-コンテンツのパッケージ化は、Web上で再生するビデオコンテンツを準備するプロセスです。 パッケージ化には、生のビデオをマニフェストファイルに変換し、オプションで、デバイスやブラウザーごとに異なるDRMソリューションを使用してコンテンツを暗号化する機能が含まれます。
+コンテンツのパッケージ化は、Web上で再生するビデオコンテンツを準備するプロセスです。 パッケージ化には、生のビデオをマニフェストファイルに変換することや、オプションで、デバイスやブラウザーごとに異なるDRMソリューションを使用してコンテンツを暗号化することが含まれます。
 
-コンテンツを準備するには、Adobe Offline PackagerまたはExpressPlayのBento4パッケージャーなどの他のツールを使用できます。 パッケージャーは、再生するビデオを準備（元のファイルをフラグメント化してマニフェストに含めるなど）し、選択したDRMソリューション（PlayReady、Widevine、FairPlay、Accessなど）でビデオを保護します。:
+コンテンツを準備するには、AdobeのOffline Packagerを使用するか、ExpressPlayのBento4パッケージャーなどの他のツールを使用します。 パッケージャーは、再生するビデオの準備（元のファイルをフラグメント化してマニフェストに含めるなど）と、選択したDRMソリューション（PlayReady、Widevine、FairPlay、Accessなど）でビデオを保護します。:
 
-* [Adobe Offline Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)
-* [ExpressPlay Packager](https://www.expressplay.com/developer/packaging-tools/)
+* [Adobeオフラインパッケージャー](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)
+* [ExpressPlayパッケージャー](https://www.expressplay.com/developer/packaging-tools/)
 
 <!--<a id="fig_jbn_fw5_xw"></a>-->
 
@@ -25,15 +28,15 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 1. 設定のテストに使用するコンテンツをパッケージ化するか、取得します。
 
-   パッケージ化の重要なポイントの1つは、このパッケージ化手順で使用するキーID（コンテンツID）が、後続のライセンストークンリクエストで指定する必要があるものと同じであることです。 キーIDは、CEKを識別する唯一の項目です(CEKは、独自のキー管理データベースに保存するか、 [ExpressPlayのKey Storage Serviceを使用して保存します](https://www.expressplay.com/developer/key-storage/))。
+   パッケージ化に関して覚えておくべき重要なポイントの1つは、このパッケージ化手順で使用するキーID（コンテンツID）が、後続のライセンストークンリクエストで指定する必要のあるものと同じであることです。 キーIDは、CEKを識別する唯一の項目です(CEKは、独自のキー管理データベースに格納することも、[ExpressPlayのキーストレージサービス](https://www.expressplay.com/developer/key-storage/)を使用して格納することもできます)。
 
    >[!NOTE]
    >
-   >Adobe Accessに詳しい方にとって、これは各ソリューションの動作方法に関する重要な違いです。 Accessでは、ライセンスキーはDRMメタデータに埋め込まれ、保護されたコンテンツと共に送受信されます。 ここで説明するMulti-DRMシステムでは、実際のライセンスは渡されず、安全に保存され、キーIDを介して取得されます。
+   >Adobeアクセスに詳しい方は、これが各ソリューションの動作方法に関する重要な違いです。 Accessでは、ライセンスキーはDRMメタデータに埋め込まれ、保護されたコンテンツとの間で渡されます。 ここで説明するMulti-DRMシステムでは、実際のライセンスは渡されず、安全に保存され、キーIDを介して取得されます。
 
 <!--<a id="example_52AF76B730174B79B6088280FCDF126D"></a>-->
 
-Widevine用にAdobe Offline Packagerを使用したパッケージ化の例を次に示します。 Packagerでは設定ファイル(例： [!DNL widevine.xml])が使用され、次のようになります。
+WidevineにAdobeOffline Packagerを使用したパッケージ化の例を次に示します。 Packagerは設定ファイル（例：[!DNL widevine.xml]）を使用し、次のようになります。
 
 ```
 <config> 
@@ -51,21 +54,21 @@ Widevine用にAdobe Offline Packagerを使用したパッケージ化の例を�
 </config>
 ```
 
-* `in_path`  — このエントリは、ローカルのパッケージ化コンピューター上のソースビデオの場所を指します。
-* `out_type`  — このエントリは、パッケージ化された出力のタイプを示します。この場合はDASH（HTML5でのWidevine保護の場合）。
-* `out_path`  — 出力先のローカルマシン上の場所。
-* `drm_sys`  — パッケージ化するDRMソリューション。 これは、、また `widevine`はのい `fairplay`ずれかで `playready`す。
+* `in_path`  — このエントリは、パッケージ化を行うローカルコンピューター上のソースビデオの場所を指します。
+* `out_type`  — このエントリでは、パッケージ化された出力のタイプを示します。この場合はDASH（HTML5でのWidevine保護用）です。
+* `out_path`  — 出力を送信するローカルマシン上の場所。
+* `drm_sys`  — パッケージ化の対象とするDRMソリューション。これは`widevine`、`fairplay`、または`playready`になります。
 
-* `frag_dur` とは、 `target_dur` ビデオ再生に関連するDASH固有の期間エントリです。
+* `frag_dur` と `target_dur` は、ビデオ再生に関連するDASH固有の期間のエントリです。
 
-* `key_file_path`  — これは、コンテンツ暗号化キー(CEK)として機能するパッケージ化コンピューター上のライセンスファイルの場所です。 これは、Base-64エンコードされた16バイトの16進文字列です。
-* `widevine_content_id`  — これはWidevineの&quot;boilerplate&quot;;いつもだ `2a`。 (と混同しないでくだ `widevine_key_id`さい)。
+* `key_file_path`  — コンテンツ暗号化キー(CEK)の役割を果たすパッケージ化を行ったコンピューター上のライセンスファイルの場所です。Base-64エンコードされた16バイトの16進文字列です。
+* `widevine_content_id`  — これはWidevineの「ボイラープレート」です。いつもそう `2a`だ（これを`widevine_key_id`と混同しないでください）。
 
-* `widevine_provider`  — この場合、常にをに設定します `intertrust`。
+* `widevine_provider`  — 当社の目的では、常に「」に設定してくだ `intertrust`さい。
 
-* `widevine_key_id`  — エントリで指定したライセンスの識別子 `key_file_path` です。 つまり、コンテンツの暗号化に使用するキーを識別します。 このIDは、自分で作成する16バイトの16進文字列です。
+* `widevine_key_id`  — これは、 `key_file_path` エントリで指定したライセンスの識別子です。つまり、コンテンツの暗号化に使用するキーを識別します。 このIDは、自分で作成する16バイトの16進文字列です。
 
-[Packagerのドキュメントに記載されているように](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)、「ベストプラクティスとして、出力の生成に使用する一般的なオプションを含む設定ファイルを作成します。 次に、特定のオプションをコマンドライン引数として指定して、出力を作成します。」 この場合、設定ファイルは十分に完成しているので、次のように出力を作成できます。
+[Packagerドキュメント](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)に記載されているように、「ベストプラクティスとして、出力の生成に使用する一般的なオプションを含む設定ファイルを作成します。 次に、コマンドライン引数として特定のオプションを指定して、出力を作成します。」 この場合、設定ファイルは完全に完成しているので、次のように出力を作成できます。
 
 ```
 java -jar OfflinePackager.jar -conf_path widevine.xml -out_path test_dash/ 
@@ -73,5 +76,5 @@ java -jar OfflinePackager.jar -conf_path widevine.xml -out_path test_dash/
 
 >[!NOTE]
 >
->コマンドラインパラメータは、設定ファイルのパラメータよりも優先されます。 この例では、必要なものはすべてconfigファイルに含まれていますが、設定ファイルで指定された出力パスをによって上書きしま `-out_path test_dash/`す。
+>コマンドラインパラメータは、設定ファイルのパラメータよりも優先されます。 この例では、必要なものはすべてconfigファイルに含まれていますが、設定ファイルで指定された出力パスより`-out_path test_dash/`が優先されます。
 

@@ -1,21 +1,24 @@
 ---
-description: メディアコンテンツがライブかビデオオンデマンドか(VOD)を知る必要がある場合があります。
-seo-description: メディアコンテンツがライブかビデオオンデマンドか(VOD)を知る必要がある場合があります。
+description: メディアコンテンツがライブかビデオオンデマンド(VOD)かを知る必要がある場合があります。
+seo-description: メディアコンテンツがライブかビデオオンデマンド(VOD)かを知る必要がある場合があります。
 seo-title: コンテンツがライブかVODかの識別
 title: コンテンツがライブかVODかの識別
 uuid: e6a66104-97fb-438a-8356-e21f94058c85
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '90'
+ht-degree: 0%
 
 ---
 
 
-# コンテンツがライブかVODかの識別 {#identify-whether-the-content-is-live-or-vod}
+# コンテンツがライブかVODかを識別します{#identify-whether-the-content-is-live-or-vod}
 
-メディアコンテンツがライブかビデオオンデマンドか(VOD)を知る必要がある場合があります。
+メディアコンテンツがライブかビデオオンデマンド(VOD)かを知る必要がある場合があります。
 
-1. プレイヤーが少なくともこの状態にあることを確認し `PREPARED` てください。
-1. コンテンツがラ `MediaPlayerItem` イブ()かVOD( `true`)かを指定 `false`します。
+1. プレイヤーが`PREPARED`状態以上であることを確認してください。
+1. `MediaPlayerItem`コンテンツがライブ(`true`)かVOD(`false`)かを判断します。
 
    ```java
    boolean isLive();

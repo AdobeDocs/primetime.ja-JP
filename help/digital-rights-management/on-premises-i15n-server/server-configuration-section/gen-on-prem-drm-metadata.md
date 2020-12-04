@@ -4,25 +4,28 @@ title: オンプレミスDRMメタデータの生成
 uuid: 89d53924-1a8d-42d4-a716-ce4f4566b6bf
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 1%
 
 ---
 
 
 # オンプレミスDRMメタデータの生成{#generate-the-on-premises-drm-metadata}
 
-ユーテ [!DNL CreateMetadata.jar] ィリティがフォルダに含ま [!DNL create_metadata] れます。 このユーティリティのポイントは、オンプレミスのDRMメタデータを作成し、指定したオンプレミスの個別化サーバーに対してクライアントが個別化プロセスを実行するようにクライアントを開始することです。
+[!DNL CreateMetadata.jar]ユーティリティは[!DNL create_metadata]フォルダーに含まれています。 このユーティリティのポイントは、オンプレミスDRMメタデータを作成し、指定したオンプレミス個別化サーバーに対してクライアントが個別化プロセスを実行するように開始することです。
 
-1. 次のファイルを使用して、Primetime DRMリファレンスの実装 — コマンドラインツールを更新します。
+1. 次のファイルを使用して、Primetime DRM参照実装の更新 — コマンドラインツール
 
    * [!DNL CreateMetadata.jar]
    * [!DNL commons-cli-1.2.jar]
    * [!DNL createMetadata.properties]
 
-      この2つのJARファイルは、フォルダーに格納で [!DNL Command Line Tools/libs] きます。 ファイル [!DNL createMetadata.properties] は、ファイルの横に配置で [!DNL flashaccesstools.properties] きます。
+      2つのJARファイルは[!DNL Command Line Tools/libs]フォルダーに格納できます。 [!DNL createMetadata.properties]ファイルは、[!DNL flashaccesstools.properties]ファイルの隣に置くことができます。
 
 <!--<a id="example_2116349CA33642CD9293EAD94A532ED8"></a>-->
 
-メタデータの作成 [!DNL examplecreate.sh] 例を示すスクリプトが含まれています。 メタデータを生成する前に、スクリプトファイルとプロパティファイルの両方で、License Server URLとIndividualization Server URLを必ず設定してください。
+メタデータのサンプル作成を示す[!DNL examplecreate.sh]スクリプトが含まれています。 メタデータを生成する前に、スクリプトファイルとプロパティファイルの両方で、License Server URLと個別化サーバーURLを設定してください。
 
 ユーティリティの入力は次のとおりです。
 

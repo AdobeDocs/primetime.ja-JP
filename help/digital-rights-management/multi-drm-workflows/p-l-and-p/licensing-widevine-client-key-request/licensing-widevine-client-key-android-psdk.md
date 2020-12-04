@@ -6,15 +6,18 @@ title: Android PSDKのキーリクエストワークフロー
 uuid: 575163de-0f96-434d-a3ff-7e114caf72de
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
 
-# Android PSDKのキーリクエストワークフロー{#key-request-workflow-on-android-psdk}
+# Android PSDK{#key-request-workflow-on-android-psdk}のキーリクエストワークフロー
 
 クライアントコードは、Android APIにデータを渡します。
 
-Androidでは、次のAPIを使用して、クライアントコードがライセンスサーバーのURLと付随するライセンス取得データを渡す必要があります。
+Androidでは、次のAPIを使用して、クライアントコードにライセンスサーバーのURLとそれに付随するライセンス取得データを渡す必要があります。
 
 ```
 class DRMManager 
@@ -32,9 +35,9 @@ class DRMManager
     }
 ```
 
-このAPIが正常に呼び出された後、コードは通常の方法でコンテンツの再生を開始できます。 Expressplayを使用している場合は、トークンをライセンスサーバーのURLの一部として渡すか、リクエストプロパティとして渡し、ライセンスサーバーのURLからトークンを取り除くことができます。
+このAPIの呼び出しが完了すると、コードは通常の方法で開始コンテンツを再生できます。 Expressplayを使用している場合は、トークンをライセンスサーバーURLの一部として渡すか、リクエストプロパティとして渡して、ライセンスサーバーURLからトークンを取り除くことができます。
 
-一部のAndroidデバイスは、WidevineとPlayReadyの両方をサポートしています。 このようなデバイスでは、コンテンツに複数のDRMヘッダーが含まれる場合、顧客は特定のDRMを使用してPSDKに強制的にコンテンツの復号化を行わせる必要があります。 これは、再生前に次のAPIを呼び出すことで実行できます。
+一部のAndroidデバイスは、WidevineとPlayReadyの両方をサポートしています。 このようなデバイスでは、コンテンツに複数のDRMヘッダーがある場合、顧客は特定のDRMを使用してPSDKにコンテンツの復号化を強制する必要があります。 これは、再生前に次のAPIを呼び出すことで実行できます。
 
 ```
 class MediaPlayer 

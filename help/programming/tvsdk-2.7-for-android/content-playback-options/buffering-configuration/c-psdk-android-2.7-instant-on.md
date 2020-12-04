@@ -1,32 +1,35 @@
 ---
-description: 即時オンを有効にすると、1つ以上のチャネルがプリロードされます。 ユーザーがチャネルまたはチャネルを切り替えると、コンテンツは直ちに再生されます。 バッファリングは、ユーザーが視聴を開始するまでに完了します。
-seo-description: 即時オンを有効にすると、1つ以上のチャネルがプリロードされます。 ユーザーがチャネルまたはチャネルを切り替えると、コンテンツは直ちに再生されます。 バッファリングは、ユーザーが視聴を開始するまでに完了します。
+description: 即時オンを有効にすると、1つ以上のチャネルがプリロードされます。 ユーザーがチャネルを選択するかチャネルを切り替えると、コンテンツは直ちに再生されます。 バッファリングは、ユーザーが開始を監視するまでに完了します。
+seo-description: 即時オンを有効にすると、1つ以上のチャネルがプリロードされます。 ユーザーがチャネルを選択するかチャネルを切り替えると、コンテンツは直ちに再生されます。 バッファリングは、ユーザーが開始を監視するまでに完了します。
 seo-title: 即時オン
 title: 即時オン
 uuid: 7e14b779-2a36-4ff4-a365-9ac49a836ff3
 translation-type: tm+mt
 source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+workflow-type: tm+mt
+source-wordcount: '441'
+ht-degree: 0%
 
 ---
 
 
-# 即時オン {#instant-on}
+# {#instant-on}の瞬間
 
-即時オンを有効にすると、1つ以上のチャネルがプリロードされます。 ユーザーがチャネルまたはチャネルを切り替えると、コンテンツは直ちに再生されます。 バッファリングは、ユーザーが視聴を開始するまでに完了します。
+即時オンを有効にすると、1つ以上のチャネルがプリロードされます。 ユーザーがチャネルを選択するかチャネルを切り替えると、コンテンツは直ちに再生されます。 バッファリングは、ユーザーが開始を監視するまでに完了します。
 
-即時オンを指定しない場合、TVSDKは再生するメディアを初期化しますが、アプリケーションが呼び出すまでストリームのバッファリングを開始しませ `play`ん。 バッファリングが完了するまで、ユーザーにはコンテンツが表示されません。 即時オンを使用すると、複数のメディアプレイヤー（またはメディアプレイヤーアイテムローダー）インスタンスを起動でき、TVSDKはストリームのバッファリングを即座に開始します。 ユーザーがチャネルを変更し、ストリームが正しくバッファーされた場合、新しいチャネルを呼び出す `play` と、即座に再生が開始されます。
+即時オンを指定しないと、TVSDKは再生するメディアを初期化しますが、開始が`play`を呼び出すまで、ストリームをバッファリングしません。 バッファリングが完了するまで、ユーザーにはコンテンツが表示されません。 即時オンでは、複数のメディアプレイヤー（またはメディアプレイヤーアイテムローダー）インスタンスを起動でき、TVSDK開始はストリームを直ちにバッファリングできます。 ユーザーがチャネルを変更し、ストリームが正しくバッファリングされた場合、新しいチャネル開始ーで即座に`play`を呼び出します。
 
-TVSDKが実行できるインスタンスの数と数に制限はあり `MediaPlayer` ませんが、 `MediaPlayerItemLoader` 実行するインスタンスの数が多いと、より多くのリソースが消費されます。 アプリケーションのパフォーマンスは、実行中のインスタンスの数に影響を受ける可能性があります。 詳しくは、メディアプレ `MediaPlayerItemLoader`イヤーへ [のメディアリソースの読み込みを参照してください](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md)。
+TVSDKが実行できる`MediaPlayer`および`MediaPlayerItemLoader`のインスタンス数に制限はありませんが、実行するインスタンス数が増えると、より多くのリソースが消費されます。 アプリケーションのパフォーマンスは、実行中のインスタンス数の影響を受ける場合があります。 `MediaPlayerItemLoader`について詳しくは、[メディアプレイヤーへのメディアリソースの読み込み](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md)を参照してください。
 
 >[!IMPORTANT]
 >
->TVSDKは、との両方で機能する単一 `QoSProvider` のTVSDKをサポートして `itemLoader` いませ `MediaPlayer`ん。 顧客が即時オンを使用する場合、アプリケーションは2つのQoSインスタンスを維持し、情報の両方のインスタンスを管理する必要があります。
+>TVSDKは、1つの`QoSProvider`をサポートせず、`itemLoader`と`MediaPlayer`の両方で動作します。 顧客が即時オンを使用する場合、アプリケーションは2つのQoSインスタンスを維持し、情報の両方のインスタンスを管理する必要があります。
 
-詳しくは、MediaPlayerItemLoaderを使用したメ `MediaPlayerItemLoader`ディアリ [ソースの読み込みを参照してください](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md)。
+`MediaPlayerItemLoader`について詳しくは、[MediaPlayerItemLoaderを使用したメディアリソースの読み込み](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md)を参照してください。
 
-## QoSプロバイダーインスタンスをmediaPlayerItemLoaderに追加します {#section_2F9F24C7BFAD49599D043D64F767F9A0}
+## mediaPlayerItemLoader追加 {#section_2F9F24C7BFAD49599D043D64F767F9A0}に対するQoSプロバイダーインスタンス
 
-* QoSプロバイダーの作成とインスタンスへのアタ `mediaPlayerItemLoader` ッチ
+* QoSプロバイダーの作成と`mediaPlayerItemLoader`インスタンスへの接続
 
    ```
    // Create an instance of QoSProvider  
@@ -37,28 +40,28 @@ TVSDKが実行できるインスタンスの数と数に制限はあり `MediaPl
    _qosProvider.attachMediaPlayerItemLoader(this._loader); 
    ```
 
-   再生が開始したら、を使用して `_qosProvider` QoSdataを取 `timeToLoad` 得し `timeToPrepare` ます。 残りのQoS指標は、に添付されたを使用して `QoSProvider` 取得できます `mediaPlayer`。
+   再生開始が終了したら、`_qosProvider`を使用して`timeToLoad`と`timeToPrepare`のQoSdataを取得します。 残りのQoS指標は、`mediaPlayer`に添付された`QoSProvider`を使用して取得できます。
 
-   詳しくは、MediaPlayerItemLoaderを使用したメ `MediaPlayerItemLoader`ディアリ [ソースの読み込みを参照してください](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader)。
+   `MediaPlayerItemLoader`について詳しくは、[MediaPlayerItemLoaderを使用したメディアリソースの読み込み](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader)を参照してください。
 
-## 即時オンのバッファリングの設定 {#section_4FE346B7BE434BA8A2203896D6E52146}
+## {#section_4FE346B7BE434BA8A2203896D6E52146}に即時バッファリングを設定
 
 TVSDKは、メディアリソースでインスタントオンを使用できるメソッドとステータスを提供します。
 
 >[!NOTE]
 >
->アドビでは、InstantOn用の使用をお `MediaPlayerItemLoader` 勧めしています。 を参照し `MediaPlayerItemLoader`てくださ `MediaPlayer`い。
+>Adobeでは、InstantOnに`MediaPlayerItemLoader`を使用することを推奨します。 `MediaPlayer`ではなく`MediaPlayerItemLoader`を使用するには、media-resource-load-using-mediaplayeritemloaderを参照してください。
 
 1. リソースが読み込まれ、プレイヤーがリソースを再生する準備ができていることを確認します。
-1. 呼び出す前に、 `play`各インスタ `prepareBuffer` ンスに対してを呼び出 `MediaPlayer` します。
+1. `play`を呼び出す前に、各`MediaPlayer`インスタンスに対して`prepareBuffer`を呼び出します。
 
    >[!NOTE]
    >
-   >`prepareBuffer` 即時オンを有効にし、TVSDKはバッファリングを直ちに開始し、バッファーがいっぱいにな `BUFFERING_COMPLETED` ったらイベントをディスパッチします。
+   >`prepareBuffer` 即時オンを有効にし、TVSDK開始が即座にバッファリングを行い、バッファーがいっぱいになると `BUFFERING_COMPLETED` イベントをディスパッチします。
 
    >[!TIP]
    >
-   >デフォルトでは、 `prepareBuffer` 最初か `prepareToPlay` ら再生を開始するようにメディアストリームを設定します。 別の位置から開始するには、位置（ミリ秒）をに渡します `prepareToPlay`。
+   >デフォルトでは、`prepareBuffer`と`prepareToPlay`は、最初から再生する開始へのメディアストリームを設定します。 別の位置で開始するには、位置（ミリ秒）を`prepareToPlay`に渡します。
 
    ```
    @Override 
@@ -78,9 +81,9 @@ TVSDKは、メディアリソースでインスタントオンを使用できる
    }
    ```
 
-1. イベントを受け取ったら、 `BUFFERING_COMPLETE` アイテムの再生を開始するか、コンテンツが完全にバッファされたことを示す視覚的なフィードバックを表示します。
+1. `BUFFERING_COMPLETE`イベントを受け取ると、開始がアイテムを再生したり、コンテンツが完全にバッファーされたことを示す視覚的なフィードバックを表示したりします。
 
    >[!NOTE]
    >
-   >を呼び出すと、再 `play`生はすぐに開始されます。
+   >`play`を呼び出すと、再生はすぐに開始されます。
 

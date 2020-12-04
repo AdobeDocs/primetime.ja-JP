@@ -1,33 +1,36 @@
 ---
 description: TVSDKを使用して、セッション管理、ゲートアクセスなどのために、cookieヘッダーに任意のデータを送信できます。
 seo-description: TVSDKを使用して、セッション管理、ゲートアクセスなどのために、cookieヘッダーに任意のデータを送信できます。
-seo-title: Cookieの使用
-title: Cookieの使用
+seo-title: cookieの使用
+title: cookieの使用
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
 source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
 
-# Cookieの使用 {#work-with-cookies}
+# Cookieを使用する{#work-with-cookies}
 
 TVSDKを使用して、セッション管理、ゲートアクセスなどのために、cookieヘッダーに任意のデータを送信できます。
 
-何らかの認証を持つキーサーバーへのリクエストの例を次に示します。
+認証を使用したキーサーバーへのリクエスト例を以下に示します。
 
-1. 顧客がブラウザーでWebサイトにログインすると、その顧客のログイン情報により、この顧客がコンテンツの表示を許可されます。
-1. ライセンスサーバーの期待に基づいて、アプリケーションが認証トークンを生成します。
+1. 顧客がブラウザーでWebサイトにログインし、ログインにこの顧客がコンテンツの表示を許可されていることが示されます。
+1. ライセンスサーバーの期待値に基づいて、アプリケーションが認証トークンを生成します。
 
    この値はTVSDKに渡されます。
 1. TVSDKは、この値をcookieヘッダーに設定します。
-1. TVSDKがキーサーバーにリクエストを送信し、コンテンツを復号化するキーを取得すると、リクエストにはcookieヘッダーに認証値が含まれます。
+1. TVSDKがキーサーバーにリクエストを送信し、コンテンツの復号化キーを取得すると、そのリクエストのCookieヘッダーに認証値が含まれます。
 
    キーサーバーは、要求が有効であることを認識しています。
 
 Cookieを使用するには：
 
-1. を作成し `cookieManager` 、URIのcookieをcookieStoreに追加します。
+1. `cookieManager`を作成し、URIのcookieをcookieStoreに追加します。
 
    例：
 
@@ -43,21 +46,21 @@ Cookieを使用するには：
 
    >[!TIP]
    >
-   >302リダイレクトが有効な場合、Cookieが属するドメインとは異なるドメインに広告リクエストがリダイレクトされる可能性があります。
+   >302リダイレクトが有効な場合、cookieが属するドメインとは別のドメインに広告リクエストがリダイレクトされる場合があります。
 
-   TVSDKは、実行時にこ `cookieManager` れをクエリし、URLに関連付けられているcookieがあるかどうかを確認し、それらのcookieを自動的に使用します。
+   TVSDKは、実行時にこの`cookieManager`をクエリし、URLに関連付けられたCookieがあるかどうかを確認し、それらのCookieを自動的に使用します。
 
-   再生中にアプリケーションでcookieを更新する必要がある場合は、JAVA cookieストアで更新が発生するので、 `networkConfiguration.setCookieHeaders` APIを使用しないでください。
+   再生中にアプリケーションでcookieを更新する必要がある場合は、`networkConfiguration.setCookieHeaders` APIを使用しないでください。更新はJAVA cookieストアで行われます。
 
    `networkConfiguration.setCookieHeaders` APIは、TVSDKのC++ CookieStoreにcookieを設定します。
 
-   JAVA cookieを使用し、アプリケーションとTVSDK間で共有する場合は、JAVA CookieStoreを使用してcookieのみを管理します。
+   JAVA cookieを使用し、アプリケーションとTVSDKの間で共有する場合、JAVA CookieStoreを使用してcookieのみを管理します。
 
-   再生が初期化される前に、上記のようにCookie Managerを使用してCookieをCookieStoreに設定します。
+   再生が初期化される前に、前述のCookie Managerを使用してCookieをCookieStoreに設定します。
 
-   CookieStoreに保存されたcookieは、TVSDKによって自動的に取得されます。
+   CookieStoreに保存されたCookieは、TVSDKによって自動的に取得されます。
 
-   再生中にcookieの値を後で更新する必要がある場合は、同じキーと新しい値フィールドを使用して、CookieStoreの同じ追加メソッドを呼び出します。
+   再生中に後でcookieの値を更新する必要がある場合は、同じキーと新しい値フィールドを使用して、CookieStoreの同じ追加メソッドを呼び出します。
 
    また、
    `networkConfiguration.setReadSetCookieHeader`(false)を呼び出す前に
@@ -68,7 +71,7 @@ Cookieを使用するには：
    >この「setReadSetCookieHeader」をfalseに設定した後、JAVA cookieマネージャーを使用してキーリクエストのcookieを設定します。
 
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
-このコールバックAPIは、C++ cookieの更新（http応答からのcookie）がある場合は常に呼び出されます。 アプリケーションは、このコールバックをリッスンし、それに応じてJAVA CookieStoreを更新して、JAVAでのネットワーク呼び出しで次のようにcookieを利用できるようにします。
+このコールバックAPIは、C++ cookie（http応答からのcookie）に更新がある場合に必ず呼び出されます。アプリケーションは、このコールバックをリッスンする必要があり、それに応じてJAVA CookieStoreを更新し、JAVAでのネットワーク呼び出しで次のようにcookieを利用できるようにします。
 
    ```
    private final CookiesUpdatedEventListener cookiesUpdatedEventListener = new CookiesUpdatedEventListener() {

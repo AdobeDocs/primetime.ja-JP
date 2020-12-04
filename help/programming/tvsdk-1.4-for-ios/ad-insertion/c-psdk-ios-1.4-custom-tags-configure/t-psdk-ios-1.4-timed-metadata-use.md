@@ -6,17 +6,20 @@ title: 時間指定メタデータの使用
 uuid: 9bbdaefa-4ac5-4e08-92b4-15ebe5c46864
 translation-type: tm+mt
 source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 1%
 
 ---
 
 
-# 時間指定メタデータの使用{#use-timed-metadata}
+# 時間指定メタデータを使用{#use-timed-metadata}
 
 現在の再生時間が開始時間と一致する場合は、TimedMetadataを使用できます。
 
-再生中にこれらの保存されたオ `PTTimedMetadata` ブジェクトを使用するには、ディスパッチされる [Store timed-metadataオブジェクトの保存済みディクショナリを使用します](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md)。
+再生中にこれらの保存した`PTTimedMetadata`オブジェクトを使用するには、[Store timed-metadata objects as dispatched](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md)の保存済みディクショナリを使用します。
 
-1. この通知から現在の再生時間を抽出して更新し、現在の再生時間と一致する開 `PTTimedMetadata` 始時間を持つすべてのオブジェクトを検索します。
+1. この通知から現在の再生時間を抽出して更新し、現在の再生時間と一致する開始時間を持つすべての`PTTimedMetadata`オブジェクトを見つけます。
 
    これらのオブジェクトを使用して、様々なアクションを実行できます。
 
@@ -57,4 +60,4 @@ source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
    }
    ```
 
-1. リストから古いインスタ `PTTimedMetadata` ンスを定期的にフラッシュし、メモリが継続的に増加するのを防ぎます。
+1. リストから古い`PTTimedMetadata`インスタンスを定期的にフラッシュして、メモリが継続的に増大するのを防ぎます。

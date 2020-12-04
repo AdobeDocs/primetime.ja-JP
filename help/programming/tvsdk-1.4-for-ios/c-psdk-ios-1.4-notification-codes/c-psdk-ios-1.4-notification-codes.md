@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# TVSDK通知システム {#tvsdk-notification-system}
+# TVSDK通知システム{#tvsdk-notification-system}
 
 TVSDK通知システムは、診断メタデータを提供する様々なエラー、警告および情報通知を生成します。
 
@@ -45,15 +45,15 @@ TVSDK通知システムは、診断メタデータを提供する様々なエラ
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> name</span></td> 
-   <td colname="2">SEEK_ERRORなど、コードに関する人間が判読できる説明を含む文字列 <span class="codeph"> です</span>。 </td> 
+   <td colname="2"><span class="codeph"> SEEK_ERROR</span>など、コードに関する人間が読める説明を含む文字列です。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> metadata</span> </td> 
-   <td colname="2">通知に関する追加の関連情報を含むキー/値のペア。 例えば、 <span class="codeph"> URL</span> という名前のキーは、エラーの原因となった無効なURLなど、通知に関連するURLの値と対になります。 </td> 
+   <td colname="2">通知に関する追加の関連情報を含むキー/値のペア。 例えば、<span class="codeph"> URL</span>という名前のキーは、エラーの原因となった無効なURLなど、通知に関連するURLの値と対になります。 </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span></td> 
-   <td colname="2">この通知に直接影響を与えた別の <span class="codeph"> PTNotification</span> オブジェクトへの参照です。 例えば、タイムライン挿入の競合に直接対応する、広告挿入の失敗に関する通知などが考えられます。 内部通知を提供しない通知もあります。 </td> 
+   <td colname="2">この通知に直接影響を与えた別の<span class="codeph"> PTNotification</span>オブジェクトへの参照です。 例えば、タイムライン挿入の競合に直接対応する、広告挿入の失敗に関する通知などが考えられます。 内部通知を提供しない通知もあります。 </td> 
   </tr> 
  </tbody> 
 </table>

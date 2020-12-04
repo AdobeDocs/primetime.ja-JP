@@ -10,11 +10,11 @@ ht-degree: 0%
 ---
 
 
-# ライブ/リニアストリームでのAd Insertionの使用 {#ad-insertion-live-linear-stream}
+# ライブ/リニアストリームでAd Insertionを使用{#ad-insertion-live-linear-stream}
 
 PrimetimeのAd Insertionにより、発行者は、ライブ/リニアストリーム中に発生する標準的な、複雑な広告挿入状況を処理できます。
 
-## サポートされるキュー形式 {#cue-formats-supported}
+## サポートされているキュー形式{#cue-formats-supported}
 
 PrimetimeAd Insertionは、次に示す様々な標準キュー形式と非標準キュー形式をサポートしています。
 
@@ -26,10 +26,10 @@ PrimetimeAd Insertionは、次に示す様々な標準キュー形式と非標�
 
 その他の詳細やサポートされているキュー形式については、Primetimeのサポート担当者にお問い合わせください。
 
-## 広告の時間の部分的なサポート {#partial-ad-break-support}
+## 広告ブレークの部分的なサポート{#partial-ad-break-support}
 
 部分的な広告の時間は、広告の時間の開始後にビューアがライブ/リニアストリームに入る状況で使用できます。  例えば、ビューアが1時に2:00の長い広告の時間を入力した場合、広告の時間の一部が挿入され、残りの時間に広告が提供されます。 部分的な広告の時間の挿入がない場合、その時間中は広告はこのビューアに提供されません。 PrimetimeAd Insertionは、適切なタグがメディアストリームに存在する場合、デフォルトで部分的な広告ブレークの挿入を有効にします。
 
-## 早期リターン（早期広告終了） {#early-return-early-ad-exit}
+## 早期リターン（早期広告出口） {#early-return-early-ad-exit}
 
 ライブ/リニアストリームの広告の時間から早い段階で返す必要がある場合があります。例えば、スポーツイベントが突然アクションに戻った場合などです。 各ad decisioning形式には、「キューアウト」（広告）または「キューイン」（コンテンツ）へのタグが含まれます。 広告の時間の終了前に「キューイン」タグを検出した場合、Adobe PrimetimeAd Insertionはキューインを受け入れます。 コンテンツパッケージャーに問い合わせて、早期返却を有効にしてください。

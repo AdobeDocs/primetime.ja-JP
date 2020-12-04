@@ -11,22 +11,22 @@ ht-degree: 0%
 ---
 
 
-# 保護されたストリーミング用のAdobe PrimetimeDRMサーバーのデプロイ{#deploying-the-adobe-primetime-drm-server-for-protected-streaming}
+# 保護されたストリーミング用のAdobe PrimetimeDRMサーバーの展開{#deploying-the-adobe-primetime-drm-server-for-protected-streaming}
 
 保護ストリーミング用のAdobe PrimetimeDRMサーバーを配備する前に、要件のトピックに記載されているJavaおよびTomcatのバージョンをインストールしておく必要があります。
 
-保護されたストリーミング用のPrimetime DRMサーバーには、が含まれ [!DNL flashaccesserver.war]ます。 次の場合：
+保護されたストリーミング用のPrimetime DRMサーバーパッケージには[!DNL flashaccesserver.war]が含まれています。 次の場合：
 
-* このWARファイルをデプロイするには、Tomcatの [!DNL webapps] ディレクトリにコピーする必要があります。
-* WARファイルを以前に展開している場合は、（ Tomcatのディレクトリ内の）パック解除されたWARディレクトリ [!DNL flashaccessserver] を削除する必要があり [!DNL webapps] ます。
+* このWARファイルをデプロイするには、Tomcatの[!DNL webapps]ディレクトリにコピーする必要があります。
+* WARファイルを以前にデプロイした場合は、パック解除されたWARディレクトリ（Tomcatの[!DNL webapps]ディレクトリの[!DNL flashaccessserver]）を削除する必要があります。
 
-* WARファイルの開梱をTomcatで防ぐには、Tomcatの [!DNL server.xml] ディレクトリでファイルを編集し、に設定して [!DNL conf] 属性を設定し `unpackWARs``false`ます。
+* TomcatがWARファイルを開くのを防ぐには、Tomcatの[!DNL conf]ディレクトリで[!DNL server.xml]ファイルを編集し、`unpackWARs`属性を`false`に設定して設定します。
 
 >[!NOTE]
 >
->システムクラスパスに含めるよう [!DNL commons-logging.jar] にTomcatを設定した場合（Primetime DRMサーバーで保護ストリーミングを行う場合は不要）、Log4Jを使用するようにコモンズログを設定する必要があります。
+>システムのクラスパスに[!DNL commons-logging.jar]を含めるようにTomcatを設定した場合（保護ストリーミング用のPrimetime DRMサーバーには不要）、Log4Jを使用するようにTomcatのコモンズログを設定する必要があります。
 
-サーバは、最適なパフォーマンスを得るために、オプションでプラットフォーム固有のライブラリ(Microsoft Windows [!DNL jsafe.dll] またはLinux [!DNL libjsafe.so] 上)を使用します。 プラットフォームに適したライブラリを、プラットフォーム [!DNL thirdparty/cryptoj/]**から、`PATH`環境変数またはLinuxで指定された場所にコピー`LD_LIBRARY_PATH`できます。
+サーバは、最適なパフォーマンスを得るために、オプションでプラットフォーム固有のライブラリ（Microsoft Windowsの場合は[!DNL jsafe.dll]、Linuxの場合は[!DNL libjsafe.so]）を使用します。 使用しているプラットフォームに適したライブラリを&#x200B;[!DNL thirdparty/cryptoj/]*プラットフォーム*&#x200B;から、Linuxの`PATH`環境変数または`LD_LIBRARY_PATH`で指定された場所にコピーできます。
 
 >[!NOTE]
 >

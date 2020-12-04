@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 概要 {#notification-codes-overview}
+# 概要{#notification-codes-overview}
 
 TVSDK通知システムは、診断メタデータを提供する様々なエラー、警告および情報通知を生成します。
 
@@ -40,20 +40,21 @@ TVSDK通知システムは、診断メタデータを提供する様々なエラ
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">情報通知イベント、300000 ～ 399999 </li> 
     </ul> <p>エラーなどのトップレベルの範囲は、それぞれサブ範囲（再生エラーを表す101000 ～ 101999など）に分けられます。 </p>
     <pre>
-     定義済みリストmediacore.PSDKErrorCode <span class="codeph"></span> リストーに、使用可能な値が格納されます。
+     定義済みリスト 
+     <span class="codeph"> mediacore.PSDKErrorCode</span>は、可能な値をリストします。
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> name </td> 
-   <td colname="2">SEEK_ERRORなど、コードに関する人間が判読できる説明を含む文字列 <span class="codeph"> です</span>。 </td> 
+   <td colname="2"><span class="codeph"> SEEK_ERROR</span>など、コードに関する人間が読める説明を含む文字列です。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> metadata </td> 
-   <td colname="2">通知に関する追加の関連情報を含むキー/値のペア。 例えば、 <span class="codeph"> URL</span> という名前のキーは、エラーの原因となった無効なURLなど、通知に関連するURLの値と対になります。 </td> 
+   <td colname="2">通知に関する追加の関連情報を含むキー/値のペア。 例えば、<span class="codeph"> URL</span>という名前のキーは、エラーの原因となった無効なURLなど、通知に関連するURLの値と対になります。 </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> innerNotification </td> 
-   <td colname="2">この通知に直接影響を与えた別の <span class="codeph"> MediaPlayerNotification</span> オブジェクトへの参照です。 例えば、タイムライン挿入の競合に直接対応する、広告挿入の失敗に関する通知などが考えられます。 内部通知を提供しない通知もあります。 </td> 
+   <td colname="2">この通知に直接影響を与えた別の<span class="codeph"> MediaPlayerNotification</span>オブジェクトへの参照です。 例えば、タイムライン挿入の競合に直接対応する、広告挿入の失敗に関する通知などが考えられます。 内部通知を提供しない通知もあります。 </td> 
   </tr> 
  </tbody> 
 </table>

@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 概要 {#control-closed-caption-visibility}
+# 概要{#control-closed-caption-visibility}
 
 クローズドキャプションの表示を制御できます。 表示がオンの場合、現在選択されているトラックが表示されます。 現在のトラックを変更しても、表示設定は変わりません。
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->クローズドキャプションの表示値は、で定義し `MediaPlayer.Visibility`ます。
+>クローズドキャプションの表示値は`MediaPlayer.Visibility`で定義されています。
 >
 >
 ```java
@@ -33,14 +33,14 @@ ht-degree: 0%
 >}
 >```
 
-1. MediaPlayerがPREPARED状態以上になるまで待ちます(有効な状態になるまで [待つを参照してください](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md))。
+1. MediaPlayerがPREPARED状態以上になるまで待ちます（[有効な状態を待つ](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)を参照）。
 1. クローズドキャプションの現在の表示設定を取得するには、MediaPlayerのgetterメソッドを使用します。このメソッドは、表示値を返します。
 
    ```java
    Visibility getCCVisibility() throws IllegalStateException;
    ```
 
-1. クローズドキャプションの表示/非表示を変更するには、setterメソッドを使用して、表示値をから渡し `MediaPlayer.Visibility`ます。
+1. クローズドキャプションの表示/非表示を変更するには、setterメソッドを使用して、`MediaPlayer.Visibility`から表示値を渡します。
 
    例：
 

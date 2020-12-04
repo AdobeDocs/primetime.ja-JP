@@ -1,18 +1,21 @@
 ---
-description: 複数のコンテンツリゾルバーを使用して、異なるタイムライン操作を処理できます。
-seo-description: 複数のコンテンツリゾルバーを使用して、異なるタイムライン操作を処理できます。
+description: 複数のコンテンツリゾルバーを使用して、様々なタイムライン操作を処理できます。
+seo-description: 複数のコンテンツリゾルバーを使用して、様々なタイムライン操作を処理できます。
 seo-title: 広告削除/置換用のコンテンツリゾルバー
 title: 広告削除/置換用のコンテンツリゾルバー
 uuid: d43d54be-e04a-49dd-a695-e4e8f981ccb4
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '51'
+ht-degree: 0%
 
 ---
 
 
-# 広告削除/置換用のコンテンツリゾルバー {#content-resolvers-for-ad-deletion-replacement}
+# 広告削除/置換用のコンテンツリゾルバー{#content-resolvers-for-ad-deletion-replacement}
 
-複数のコンテンツリゾルバーを使用して、異なるタイムライン操作を処理できます。
+複数のコンテンツリゾルバーを使用して、様々なタイムライン操作を処理できます。
 
 ```java
 public List<ContentResolver> retrieveResolvers(MediaPlayerItem item) { 

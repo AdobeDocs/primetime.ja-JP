@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Jailbreak Enforcation(Adobe Primetimeが必要) {#jailbreak-enforcement-requires-adobe-primetime}
+# Jailbreakの強制(Adobe Primetimeが必要) {#jailbreak-enforcement-requires-adobe-primetime}
 
-jailbreakの検出をサポートするプラットフォーム（AndroidやiOS携帯端末など）では、jailbreakの強制を有効にすると、デバイスで検出された場合に、コンテンツの再生 [!DNL jailbreak/root] が無効になります。
+jailbreakの検出をサポートするプラットフォーム（AndroidやiOS携帯端末など）では、jailbreakの強制を有効にすると、デバイスで[!DNL jailbreak/root]が検出された場合に、コンテンツの再生が無効になります。
 
 >[!NOTE]
 >

@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# パスワードスクランブラ {#password-scrambler}
+# パスワードスクランブラ{#password-scrambler}
 
 Password Scramblerユーティリティは、保護されたストリーミング設定ファイル用のAdobe PrimetimeDRMサーバのパスワードを暗号化します。
 
@@ -44,7 +44,7 @@ Encrypted password:
 </i class="+ topic>
 ```
 
-とファイルで指定したパスワードはすべて暗号化 [!DNL flashaccess-global.xml] する必要があり [!DNL flashaccess-tenant.xml] ます。
+[!DNL flashaccess-global.xml]ファイルと[!DNL flashaccess-tenant.xml]ファイルに指定したパスワードはすべて暗号化する必要があります。
 
 >[!NOTE]
 >

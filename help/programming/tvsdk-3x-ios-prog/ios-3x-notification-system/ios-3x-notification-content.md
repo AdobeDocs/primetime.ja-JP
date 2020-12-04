@@ -1,34 +1,37 @@
 ---
-description: PTNotificationオブジェクトは、プレイヤーのステータス、警告およびエラーの変更に関する情報を提供します。 ビデオの再生を停止するエラーは、プレーヤーのステータスの変更の原因にもなります。
-seo-description: PTNotificationオブジェクトは、プレイヤーのステータス、警告およびエラーの変更に関する情報を提供します。 ビデオの再生を停止するエラーは、プレーヤーのステータスの変更の原因にもなります。
+description: PTNotificationオブジェクトは、プレイヤーの状態、警告およびエラーの変更に関する情報を提供します。 ビデオの再生を停止させるエラーは、プレイヤーのステータスが変化する原因にもなります。
+seo-description: PTNotificationオブジェクトは、プレイヤーの状態、警告およびエラーの変更に関する情報を提供します。 ビデオの再生を停止させるエラーは、プレイヤーのステータスが変化する原因にもなります。
 seo-title: 通知内容
 title: 通知内容
 uuid: d42d2e89-1bdd-4be0-8a69-821fec6bbc75
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
 
-# プレイヤーのステータス、アクティビティ、エラーおよびログに関する通知 {#notifications-player-status-activity-errors-logging}
+# プレイヤーの状態、アクティビティ、エラー、ログに関する通知{#notifications-player-status-activity-errors-logging}
 
-`PTNotification` オブジェクトは、プレイヤーのステータス、警告およびエラーの変更に関する情報を提供します。 ビデオの再生を停止するエラーは、プレーヤーのステータスの変更の原因にもなります。
+`PTNotification` オブジェクトは、プレイヤーのステータス、警告およびエラーの変更に関する情報を提供します。ビデオの再生を停止させるエラーは、プレイヤーのステータスが変化する原因にもなります。
 
 アプリケーションは、通知とステータス情報を取得できます。 通知情報を使用して、診断と検証のログシステムを作成することもできます。
 
 >[!NOTE]
 >
->また、TVSDKは、プレイヤ *`notification`* ーアクティビティに関する情 `NSNotifications` 報を提供するためにディスパッチされる( `PTMediaPlayer`*`event`* 通知)通知を参照するためにも使用します。
+>TVSDKはまた、*`notification`*&#x200B;を使用して`NSNotifications`（`PTMediaPlayer`通知） *`event`*&#x200B;通知を参照し、プレイヤーのアクティビティに関する情報を提供します。
 
-また、TVSDKは、問題が発生し `PTMediaPlayerNewNotificationItemEntryNotification` た場合にも問題を発生させま `PTNotification`す。
+TVSDKは、`PTNotification`を発行する際にも`PTMediaPlayerNewNotificationItemEntryNotification`を発行します。
 
-イベントリスナーを実装して、イベントを取得し、イベントに応答します。 多くのイベントは、ステータス `PTNotification` 通知を提供します。
+イベントリスナーを実装して、イベントを取得し、応答します。 多くのイベントは`PTNotification`ステータス通知を提供します。
 
-## 通知内容 {#notification-content}
+## 通知内容{#notification-content}
 
 `PTNotification` プレイヤーのステータスに関連する情報を提供します。
 
-TVSDKは、通知の時系列のリストを提供 `PTNotification` します。 各通知には、次の情報が含まれます。
+TVSDKは、`PTNotification`通知の時系列リストを提供します。 各通知には、次の情報が含まれます。
 
 * タイムスタンプ
 * 次の要素で構成される診断メタデータ：
@@ -36,32 +39,32 @@ TVSDKは、通知の時系列のリストを提供 `PTNotification` します。
    * `type`:INFO、WARNまたはERROR。
    * `code`:通知の数値表現。
    * `name`:SEEK_ERRORなど、通知の解読可能な説明
-   * `metadata`:通知に関する関連情報を含むキーと値のペア。 例えば、という名前のキ `URL` ーは、通知に関連するURLの値を提供します。
+   * `metadata`:通知に関する関連情報を含むキー/値のペア。例えば、`URL`という名前のキーは、通知に関連するURLの値を提供します。
 
-   * `innerNotification`:この通知に直接影響を与え `PTNotification` る別のオブジェクトへの参照です。
+   * `innerNotification`:この通知に直接影響を与える別の `PTNotification` オブジェクトへの参照です。
 
-この情報は、後で分析するためにローカルに保存したり、ログやグラフィカル表示のためにリモートサーバーに送信したりできます。
+この情報は、後で分析するためにローカルに保存したり、ログ記録やグラフィカル表現のためにリモートサーバーに送信したりできます。
 
-## 通知の設定 {#notification-setup}
+## 通知の設定{#notification-setup}
 
-TVSDKは、基本通知用にプレイヤーを設定しますが、カスタム通知用にも同じ設定を行う必要があります。
+TVSDKは、プレイヤーに基本的な通知を設定しますが、カスタム通知に対しても同じ設定を行う必要があります。
 
-には、次の2つの実装がありま `PTNotification`す。
+`PTNotification`には2つの実装があります。
 
-* 聞く
-* カスタム通知を `PTNotificationHistory`
+* リスニングするには
+* カスタム通知を`PTNotificationHistory`に追加するには
 
-通知をリッスンするために、TVSDKはクラスをイ `PTNotification` ンスタンス化し、PTMediaPlayerインスタンスにアタッチさ `PTMediaPlayerItem`れる、クラスのインスタンスに添付します。 1つのインスタンスにつ `PTNotificationHistory` き1つのみがあ `PTMediaPlayer`る。
+通知をリッスンするために、TVSDKは`PTNotification`クラスをインスタンス化し、それを`PTMediaPlayerItem`のインスタンスに接続します。このインスタンスはPTMediaPlayerインスタンスにアタッチされます。 `PTMediaPlayer`ごとに`PTNotificationHistory`インスタンスが1つだけ存在します。
 
 >[!IMPORTANT]
 >
 >カスタマイズを追加する場合は、TVSDKではなく、アプリケーションでこれらの手順を実行する必要があります。
 
-## 通知のリッスン {#listen-to-notifications}
+## 通知をリッスン{#listen-to-notifications}
 
-で通知をリッスンする方法は2 `PTNotification` つあります `PTMediaPlayer`。
+`PTMediaPlayer`内の`PTNotification`通知をリッスンする方法は2つあります。
 
-1. タイマーを使用し `PTNotificationHistory` てのを手 `PTMediaPlayerItem` 動で確認し、違いを確認します。
+1. `PTMediaPlayerItem`の`PTNotificationHistory`をタイマーで手動で確認し、違いを確認します。
 
    ```
    //Access to the PTMediaPlayerItem  
@@ -72,8 +75,8 @@ TVSDKは、基本通知用にプレイヤーを設定しますが、カスタム
    NSArray *notifications = notificationHistory.notificationItems;
    ```
 
-1. NSNotificationのポスト [を使](https://developer.apple.com/library/mac/%23documentation/Cocoa/Reference/Foundation/Classes/NSNotification_Class/Reference/Reference.html) 用します `PTMediaPlayerPTMediaPlayerNewNotificationEntryAddedNotification`。
-1. 通知の取得元 `NSNotification` のインスタンスを使用 `PTMediaPlayer` して、に登録します。
+1. `PTMediaPlayerPTMediaPlayerNewNotificationEntryAddedNotification`のポストされた[NSNotification](https://developer.apple.com/library/mac/%23documentation/Cocoa/Reference/Foundation/Classes/NSNotification_Class/Reference/Reference.html)を使用します。
+1. 通知を取得する`PTMediaPlayer`のインスタンスを使用して`NSNotification`に登録します。
 
    ```
    //Register to the NSNotification 
@@ -82,11 +85,11 @@ TVSDKは、基本通知用にプレイヤーを設定しますが、カスタム
      name:PTMediaPlayerNewNotificationEntryAddedNotification object:self.player];
    ```
 
-## 通知コールバックの実装 {#implement-notification-callbacks}
+## 通知コールバックを実装{#implement-notification-callbacks}
 
 通知コールバックを実装できます。
 
-次を使用して、ユーザー情報から `PTNotification` を取得し、 `NSNotification` その値を読み取ることで、通知コールバックを実装しま `PTMediaPlayerNotificationKey`す。
+`NSNotification`ユーザー情報から`PTNotification`を取得し、`PTMediaPlayerNotificationKey`を使用してその値を読み取ることで、通知コールバックを実装します。
 
 ```
 - (void) onMediaPlayerNotification:(NSNotification *) nsnotification { 
@@ -95,9 +98,10 @@ TVSDKは、基本通知用にプレイヤーを設定しますが、カスタム
 }
 ```
 
-## カスタム通知の追加 {#add-custom-notifications}
+## 追加カスタム通知{#add-custom-notifications}
 
-カスタム通知を追加するには：新しいを作成 `PTNotification``PTNotificationHistory``PTMediaPlayerItem`し、現在の
+カスタム通知を追加するには：
+新しい`PTNotification`を作成し、現在の`PTMediaPlayerItem`を使用して`PTNotificationHistory`に追加します。
 
 ```
 //Access to the PTMediaPlayerItem  

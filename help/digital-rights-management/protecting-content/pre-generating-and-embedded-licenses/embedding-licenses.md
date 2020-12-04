@@ -11,13 +11,13 @@ ht-degree: 0%
 ---
 
 
-# ライセンスの埋め込み {#embedding-licenses}
+# ライセンスの埋め込み{#embedding-licenses}
 
 コンテンツが暗号化され、ライセンスが事前に生成されたら、そのライセンスを暗号化されたコンテンツに埋め込むことができます。
 
-ライセンスを埋め込む場合は、のインスタンスを取得する必要があり `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`ます。 暗号化されたコンテンツの種類がわかっている場合は、または `FLVKeyMetaDataUpdater``F4VKeyMetaDataUpdater`；のコンストラクタを使用してください。それ以外の場合は、を使用 `MediaProcessorFactory.getMediaProcessor()` して、検出されたファイルタイプに基づくインスタンスを返します。 次に、を構築して呼び出す必要 `KeyMetaDataCallback` があり `modifyKeyMetaData()`ます。 次に、DRMメタデータが暗号化されたコンテンツ内に配置されると、コールバック実装が呼び出されます。 見つかったメタデータに基づいて、埋め込むライセンスを選択し、を使用してライセンスを設定でき `EmbedLicenseKeyMetaData.setEmbeddedLicenses()`ます。
+ライセンスを埋め込む場合は、`com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`のインスタンスを取得する必要があります。 暗号化されたコンテンツの種類がわかっている場合は、`FLVKeyMetaDataUpdater`または`F4VKeyMetaDataUpdater`；のコンストラクタを使用してください。それ以外の場合は、`MediaProcessorFactory.getMediaProcessor()`を使用して、検出されたファイルタイプに基づくインスタンスを返します。 次に、`KeyMetaDataCallback`を構築して`modifyKeyMetaData()`を呼び出す必要があります。 次に、DRMメタデータが暗号化されたコンテンツ内に配置されると、コールバック実装が呼び出されます。 見つかったメタデータに基づいて、埋め込むライセンスを選択し、`EmbedLicenseKeyMetaData.setEmbeddedLicenses()`を使用してライセンスを設定できます。
 
-埋め込みライセンス `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` を示すサンプルコードについては、リファレンス実装のコマンドラインツール [!DNL Samples] ディレクトリのを参照してください。
+埋め込みライセンスの例を示すサンプルコードについては、リファレンス実装のコマンドラインツール[!DNL Samples]ディレクトリの`com.adobe.flashaccess.samples.licenseembedder.EmbedLicense`を参照してください。
 
 >[!NOTE]
 >

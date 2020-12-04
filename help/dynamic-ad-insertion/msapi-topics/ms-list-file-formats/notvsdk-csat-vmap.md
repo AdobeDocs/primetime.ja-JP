@@ -1,22 +1,25 @@
 ---
-description: クライアントが追跡情報を要求すると、マニフェストサーバーはフォーマットされたファイルを返します。 その形式と内容は、クエリパラメータpttrackingversionの値によって異なります
-seo-description: クライアントが追跡情報を要求すると、マニフェストサーバーはフォーマットされたファイルを返します。 その形式と内容は、クエリパラメータpttrackingversionの値によって異なります
+description: クライアントがトラッキング情報を要求すると、マニフェストサーバーはフォーマットされたファイルを返します。 その形式と内容は、クエリパラメーターpttrackingversionの値に依存します
+seo-description: クライアントがトラッキング情報を要求すると、マニフェストサーバーはフォーマットされたファイルを返します。 その形式と内容は、クエリパラメーターpttrackingversionの値に依存します
 seo-title: 追跡URLのVMAP形式
 title: 追跡URLのVMAP形式
 uuid: e3173fad-caa2-49cb-9a65-631573812e52
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
-# 追跡URLのVMAP形式 {#vmap-format-for-tracking-urls}
+# 追跡URL {#vmap-format-for-tracking-urls}のVMAP形式
 
-クライアントが追跡情報を要求すると、マニフェストサーバーはフォーマットされたファイルを返します。 形式と内容は、クエリパラメーターの値によって異なります `pttrackingversion`
+クライアントがトラッキング情報を要求すると、マニフェストサーバーはフォーマットされたファイルを返します。 形式と内容は、クエリパラメータ`pttrackingversion`の値に依存します
 
-## 単一のVMAP形式 {#vmap}
+## 単一のVMAP形式{#vmap}
 
-標準的なVMAPブロックから取得された、次の例の `pttrackingversion=vmap` 形式を持つマニフェストサーバーが送信するVMAPファイル。 不要な繰り返しを避けるために短縮され、構造がより明確になりました。 省略記号（3つのドット、スペースで区切られた）は、一部のURL内および一部のコードブロック間の情報が省略されたことを示します。 短縮されていないURLは、VMAPファイルの1行に表示されますが、複数行に表示されます。
+`pttrackingversion=vmap`の形式が次の例の場合に、マニフェストサーバーが送信するVMAPファイルです。この形式は、一般的なVMAPブロックから取得されます。 不要な繰り返しを避けるために短縮されたので、構造がより明確になります。 省略記号（3つのドット、スペースで区切られた）は、一部のURL内および一部のコードブロック間の情報が省略されたことを示します。 短縮化されていないURLは、VMAPファイル内の1行に表示されますが、複数行に表示されます。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 

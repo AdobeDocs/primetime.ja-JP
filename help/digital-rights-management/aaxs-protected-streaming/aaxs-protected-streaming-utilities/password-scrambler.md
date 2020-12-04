@@ -4,13 +4,16 @@ title: パスワードスクランブラ
 uuid: e488babc-cd50-41b9-acb8-490e8e42e8bc
 translation-type: tm+mt
 source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+workflow-type: tm+mt
+source-wordcount: '80'
+ht-degree: 0%
 
 ---
 
 
-# パスワードスクランブラ {#password-scrambler}
+# パスワードスクランブラ{#password-scrambler}
 
-Password Scramblerユーティリティは、パスワードを暗号化して、Adobe Access Serverで保護されたストリーミング設定ファイルに使用できるようにします。 スクランブラを実行するには、次のコマンドを実行します。
+Password Scramblerユーティリティは、パスワードを暗号化して、保護ストリーミング設定ファイル用のAdobe Access Serverで使用できるようにします。 スクランブラを実行するには、次のコマンドを実行します。
 
 ```
 Scrambler.bat password 
@@ -32,5 +35,5 @@ flashaccess-global.xmlおよびflashaccess-tenant.xmlで指定されているす
 
 >[!NOTE]
 >
->Adobe Access Server for Protected StreamingのPassword Scramblerユーティリティは、リファレンス実装ライセンスサーバーに付属のスクランブラと交換できません。
+>保護ストリーミング用Adobe Access ServerのPassword Scramblerユーティリティは、リファレンス実装ライセンスサーバに付属のスクランブラと交換できません。
 

@@ -1,19 +1,22 @@
 ---
-description: 優先度ルールは、VAST/VMAP応答からの再生用に選択される広告クリエイティブの優先順位を定義します。
+description: 優先度ルールは、VAST/VMAP応答からの再生用に選択される広告クリエイティブの優先度順序を定義します。
 keywords: priority rule;creative selection rules
-seo-description: 優先度ルールは、VAST/VMAP応答からの再生用に選択される広告クリエイティブの優先順位を定義します。
-seo-title: 優先度ルール
-title: 優先度ルール
+seo-description: 優先度ルールは、VAST/VMAP応答からの再生用に選択される広告クリエイティブの優先度順序を定義します。
+seo-title: 優先順位ルール
+title: 優先順位ルール
 uuid: a0924b3e-45cb-45ca-8a98-ed7d42aaed14
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 0%
 
 ---
 
 
-# 優先度ルール{#priority-rules}
+# 優先順位規則{#priority-rules}
 
-優先度ルールは、VAST/VMAP応答からの再生用に選択される広告クリエイティブの優先順位を定義します。
+優先度ルールは、VAST/VMAP応答からの再生用に選択される広告クリエイティブの優先度順序を定義します。
 
 ## Priorityルールには、次の属性と可能な値が含まれます。
 
@@ -31,13 +34,13 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td><span class="codeph"> priority</span></td> 
    <td><span class="codeph"> 配列</span></td> 
    <td></td> 
-   <td> 再生用にソースクリエイティブを選択する優先度を定義する小文字のMIMEタイプの配列。</td> 
+   <td> ソースクリエイティブを再生用に選択する優先度を定義する、小文字のMIME型の配列です。</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> 文字列</span></td> 
    <td><span class="codeph"> ホスト</span></td> 
-   <td>現在、ホストのみ <span class="codeph"> がサポー</span> トされています。 この属性は、一致と値の属性が定義され <span class="codeph"> ている</span> 場合 <span class="codeph"> に必ず存在します</span> 。</td> 
+   <td>現在、<span class="codeph"> host</span>のみがサポートされています。 <span class="codeph">が</span>と一致し、<span class="codeph">の値</span>が定義されている場合、この属性が存在する必要があります。</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> 一致</span></td> 
@@ -45,31 +48,31 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td><span class="codeph"> multiple</span></td> 
    <td>可能な値：
     <ul id="ul_tnf_2hx_hz"> 
-     <li><span class="codeph"> eq</span> — 等しい</li> 
-     <li><span class="codeph"> ne</span> — 次と等しくない</li> 
-     <li><span class="codeph"> co</span> — 次を含む</li> 
-     <li><span class="codeph"> nc</span> — 次を含まない</li> 
-     <li><span class="codeph"> sw</span> — 次で始まる</li> 
-     <li><span class="codeph"> ew</span> — 次で終わる</li> 
+     <li><span class="codeph"> eq</span>  — 等しい</li> 
+     <li><span class="codeph"> ne</span>  — 次に等しくない</li> 
+     <li><span class="codeph"> co</span>  — 次を含む</li> 
+     <li><span class="codeph"> nc</span>  — 次を含まない</li> 
+     <li><span class="codeph"> sw</span> -開始</li> 
+     <li><span class="codeph"> ew</span>  — 次で終わる</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> 文字列</span></td> 
    <td><span class="codeph"> priority</span></td> 
-   <td>値は常に優先度である必要があり <span class="codeph"> ます</span></td> 
+   <td>値は常に<span class="codeph">優先度</span>にする必要があります</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> 配列</span></td> 
    <td></td> 
-   <td> <p>TVSDKは、ソースクリエイティブの <span class="codeph"> 項目に対し</span> 、一致する属性を使用し <span class="codeph"></span> 、この配列に定義された値と照合します。</p> </td> 
+   <td> <p>TVSDKは、ソースクリエイティブの<span class="codeph">アイテム</span>の<span class="codeph"> matches</span>属性を使用し、この配列で定義されている値と照合します</p> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> 流れ</span></td> 
    <td><span class="codeph"> 文字列</span></td> 
    <td></td> 
-   <td> <p>値はVODまたはラ <span class="codeph"> イブ</span> で <span class="codeph"> す</span></p> </td> 
+   <td> <p>値は<span class="codeph"> vod</span>または<span class="codeph"> live</span>です</p> </td> 
   </tr> 
  </tbody> 
 </table>

@@ -6,21 +6,24 @@ title: 範囲の削除
 uuid: 2aaea7a0-5d52-49a1-901c-f71e4b081d91
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 0%
 
 ---
 
 
-# 範囲の削除 {#delete-ranges}
+# 範囲を削除{#delete-ranges}
 
-タイムラインから `TimeRanges` との間 `begin` で削除 `end` するこ `localTime` とができます。
+`localTime`内の`begin`と`end`の間の`TimeRanges`は、タイムラインから削除できます。
 
 >[!TIP]
 >
->コンテンツから特定の範囲のみを削除するには、インスタンスを作 `CustomRangeMetadata` 成し、定義済みのカスタム範囲を持つ操 `DELETE` 作としてタイプを指定します。
+>コンテンツから特定の範囲のみを削除するには、`CustomRangeMetadata`インスタンスを作成し、定義したカスタム範囲を持つ`DELETE`操作としてタイプを指定します。
 
 広告マップは、広告サーバーの定義に従って使用する必要があります。
 
-1. Adobe Primetime ad decisioning広告の範囲を削除するには：
+1. Adobe PrimetimeAd Decisioning広告の範囲を削除するには：
 
    ```
    {   

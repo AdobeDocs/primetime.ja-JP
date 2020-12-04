@@ -1,32 +1,35 @@
 ---
-description: 通知をリッスンし、独自の通知を通知履歴に追加できます。
-seo-description: 通知をリッスンし、独自の通知を通知履歴に追加できます。
-seo-title: 通知システムの設定
-title: 通知システムの設定
+description: 通知をリッスンしたり、独自の通知を通知履歴に追加したりできます。
+seo-description: 通知をリッスンしたり、独自の通知を通知履歴に追加したりできます。
+seo-title: 通知システムのセットアップ
+title: 通知システムのセットアップ
 uuid: caa6a306-dea9-45ee-b0b3-569b5f2527a1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
 
-# 通知システムの設定{#set-up-your-notification-system}
+# 通知システムのセットアップ{#set-up-your-notification-system}
 
-通知をリッスンし、独自の通知を通知履歴に追加できます。
+通知をリッスンしたり、独自の通知を通知履歴に追加したりできます。
 
-Primetime Player通知システムの中核は、スタンドアロン `Notification` 通知を表すクラスです。
+Primetime Player通知システムの中核は`Notification`クラスで、スタンドアロン通知を表します。
 
-クラス `NotificationHistory` は、通知を蓄積するメカニズムを提供します。 通知のコレクションを表す通知(NotificationHistoryItem)オブジェクトのログを保存します。
+`NotificationHistory`クラスは、通知を蓄積するメカニズムを提供します。 このクラスは、通知のコレクションを表す通知(NotificationHistoryItem)オブジェクトのログを保存します。
 
 通知を受信するには：
 
-* 通知のリッスン
-* 通知履歴への通知の追加
+* 通知をリッスンする
+* 追加通知履歴への通知
 
 1. 状態の変更をリッスンします。
-1. コールバックを実装 `MediaPlayer.PlaybackEventListener.onStateChanged` します。
-1. TVSDKは、2つのパラメーターをコールバックに渡します。
+1. `MediaPlayer.PlaybackEventListener.onStateChanged`コールバックを実装します。
+1. TVSDKは、2つのパラメーターをこのコールバックに渡します。
 
-   * 新しい状態( `MediaPlayer.PlayerState`)
-   * オブジェクト `MediaPlayerNotification` です。
+   * 新しい状態(`MediaPlayer.PlayerState`)
+   * `MediaPlayerNotification`オブジェクト
 

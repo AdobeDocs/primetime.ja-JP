@@ -1,33 +1,36 @@
 ---
-description: SEESリファレンスサーバーでは、ExpressPlayを使用してデバイスバインディングのエンタイトルメントサービスを有効にする方法を示します。
-seo-description: SEESリファレンスサーバーでは、ExpressPlayを使用してデバイスバインディングのエンタイトルメントサービスを有効にする方法を示します。
+description: SEESリファレンスサーバーでは、ExpressPlayを使用してデバイスバインディングエンタイトルメントサービスを有効にする方法を示しています。
+seo-description: SEESリファレンスサーバーでは、ExpressPlayを使用してデバイスバインディングエンタイトルメントサービスを有効にする方法を示しています。
 seo-title: リファレンスサービスのデバイスバインディングエンタイトルメント
 title: リファレンスサービスのデバイスバインディングエンタイトルメント
 uuid: 22ce2f8e-1758-4528-8caf-60d209839afe
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 0%
 
 ---
 
 
-# リファレンスサービス：デバイスバインディングのエンタイトルメント {#reference-service-device-binding-entitlement}
+# リファレンスサービス：デバイスバインディングエンタイトルメント{#reference-service-device-binding-entitlement}
 
-SEESリファレンスサーバーでは、ExpressPlayを使用してデバイスバインディングのエンタイトルメントサービスを有効にする方法を示します。
+SEESリファレンスサーバーでは、ExpressPlayを使用してデバイスバインディングエンタイトルメントサービスを有効にする方法を示しています。
 
 >[!NOTE]
 >
->デバイスに対応したエンタイトルメントサービスは、時間制限にすることも、レンタル期間を設定することもできます。
+>デバイスバウンドのエンタイトルメントサービスは、時間制限にすることも、レンタル期間を設定することもできます。
 
-情報をブートスト `device_id` ラップするには、ダミーのM3U8コンテンツを再生します。 その後、ExpressPlayトークンにcookieを埋め込み、SPC（この内容）を生成し、ExpressPlay `device_id`サーバーにを送 `getToken` 信できます。
+`device_id`情報をブートストラップするには、ダミーのM3U8コンテンツを再生します。 次に、ExpressPlayトークンにCookieを埋め込み、SPC（`device_id`を含む）を生成し、`getToken`をExpressPlayサーバーに送信します。
 
 ![](assets/fees-device-binding.png)
 
-シーケンスは、ダミーのM3U8の再生から始まります。 CookieがSEESサーバーに送信され、ExpressPlayトークンのURLが取得されます。 cookieにバインドされたExpressPlayトークンのURLを受け取ったら、次の手順はSPCを生成し、ExpressPlayサーバーに送信することです。 ExpressPlayサーバーは、SPCから `device_id` cookieを抽出し、ExpressPlayトークンのURLからcookieを抽出し、そのcookieとトランザクショ `device_id` ンログに格納します。
+ダミーM3U8を再生することによるシーケンス開始。 CookieがSEESサーバーに送信され、ExpressPlayトークンURLが取得されます。 CookieにバウンドされたExpressPlayトークンURLを受け取ったら、次の手順はSPCを生成し、ExpressPlayサーバーに送信することです。 ExpressPlayサーバーは、SPCから`device_id`を抽出し、ExpressPlayトークンURLからcookieを抽出して、Cookieと`device_id`をトランザクションログに配置します。
 
-クライアントは、同じcookieを送信するSEESに対して実際のライセンスリクエストを行います。 SEESは、ExpressPlayサーバーからCookieを取得するた `device_id` めにCookieを使用します。
+クライアントは、同じcookieを送信するSEESに対して実際のライセンスリクエストを行います。 SEESはcookieを使用してExpressPlayサーバーから`device_id`を取得します。
 
-SEEは、デバイスにバインドされ、時間にバインドされたExpressPlayトークンを要求し、そのトークンをクライアントに返します。
+SEEは、デバイスにバインドされたExpressPlayトークンとタイムバウンドを要求し、そのトークンをクライアントに返します。
 
 クライアントは、ExpressPlayトークンを使用してライセンスリクエストを行います。
 
-ExpressPlayサーバーは、SPC内の `device_id` とExpressPlayトークン内のと `device_id` を比較します。 ExpressPlayサーバーは、2つの値が一致する場合にのみライセンス `device_id` を発行します。
+ExpressPlayサーバーは、SPC内の`device_id`とExpressPlayトークン内の`device_id`を比較します。 ExpressPlayサーバーは、2つの`device_id`値が一致する場合にのみライセンスを発行します。

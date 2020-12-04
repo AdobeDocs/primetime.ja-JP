@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 保護されたコンテンツの再生に必要なデバイス機能 {#device-capabilities-required-to-play-protected-content}
+# 保護されたコンテンツの再生に必要なデバイス機能{#device-capabilities-required-to-play-protected-content}
 
 必要なデバイス機能は、コンテンツへのアクセスに必要なハードウェア機能を指定します。 ハードウェア機能に関する情報は、ポーティングキットを使用するデバイスで利用できます。
 
@@ -46,5 +46,5 @@ ht-degree: 0%
 >
 >この使用ルールは、Adobe PrimetimeDRMクライアントバージョン2.0.2以降でサポートされています。 古いクライアントでの動作は、ライセンスサーバーでサポートされている最小クライアントバージョンによって異なります。
 >
->「 [最小クライアントバージョン](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md)」を参照してください。
+>[最小クライアントバージョン](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md)を参照してください。
 

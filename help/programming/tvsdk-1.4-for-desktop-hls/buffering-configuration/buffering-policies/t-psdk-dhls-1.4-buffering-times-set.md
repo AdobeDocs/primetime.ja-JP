@@ -6,6 +6,9 @@ title: バッファリング時間の設定
 uuid: 25142b01-5381-49c9-b89a-24c858faaf13
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
@@ -16,13 +19,13 @@ MediaPlayerは、初期バッファリング時間と再生バッファリング
 
 >[!TIP]
 >
->再生を開始する前にバッファー制御パラメーターを設定しなかった場合、メディアプレイヤーは、初期バッファーが2秒、再生中のバッファー時間が30秒にデフォルト設定されます。
+>再生を開始する前にバッファー制御パラメーターを設定しなかった場合、メディアプレイヤーはデフォルトで、初期バッファーが2秒、継続中の再生バッファー時間が30秒に設定されます。
 
-1. オブジェクトを設定し `BufferControlParameters` ます。このオブジェクトには、初期バッファー時間と再生バッファー時間の制御パラメーターがカプセル化されています。
+1. `BufferControlParameters`オブジェクトを設定します。このオブジェクトには、初期バッファー時間と再生バッファー時間の制御パラメーターがカプセル化されています。
 
        このクラスは、次のファクトリメソッドを提供します。
    
-   * 初期バッファー時間を再生バッファー時間と同じに設定するには：
+   * 初期バッファー時間を再生バッファー時間と等しく設定するには：
 
       ```
       createSimple(bufferTime:uint):BufferControlParameters
@@ -34,18 +37,18 @@ MediaPlayerは、初期バッファリング時間と再生バッファリング
       createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
       ```
 
-      これらのメソッドは、次のよ `IllegalArgumentException` うな場合に、パラメーターが有効でない場合にスローします。
+      これらのメソッドは、次のような場合に、パラメーターが有効でない場合は`IllegalArgumentException`をスローします。
 
    * 初期バッファー時間が0未満です。
    * 初期バッファー時間がバッファー時間より長くなっています。
 
-1. バッファパラメータの値を設定するには、次の方法を使用 `MediaPlayer` します。
+1. バッファパラメータの値を設定するには、次の`MediaPlayer`メソッドを使用します。
 
    ```
    public function set bufferControlParameters(value:BufferControlParameters):void
    ```
 
-1. 現在のバッファーパラメーター値を取得するには、次のメソッドを使用 `MediaPlayer` します。
+1. 現在のバッファーパラメーター値を取得するには、次の`MediaPlayer`メソッドを使用します。
 
    ```
    public function get bufferControlParameters():BufferControlParameters
@@ -59,4 +62,4 @@ MediaPlayerは、初期バッファリング時間と再生バッファリング
 mediaPlayer.bufferControlParameters = BufferControlParameters.createDual(2000, 30000); 
 ```
 
-は、この `psdkdemo` 機能を示します。アプリケーションの設定を使用して、バッファー値を設定します。
+`psdkdemo`はこの機能を示しています。アプリケーションの設定を使用して、バッファー値を設定します。

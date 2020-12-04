@@ -4,25 +4,28 @@ title: 保護されたストリーミング用のサーバーの設定と展開
 uuid: 300a1b63-0bf0-48a8-977d-212563025c19
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
 
-# 保護されたストリーミング用のサーバーの設定と展開 {#set-up-and-deploy-the-server-for-protected-streaming}
+# 保護されたストリーミング用にサーバーをセットアップし、展開する{#set-up-and-deploy-the-server-for-protected-streaming}
 
 1. Primetime DRM DVDの設定フォルダーを設定します。
 
    `\Adobe Access Server for Protected Streaming\configs\`
-1. サンプルフォルダ `configs` ーをにコピーし、 `<Tomcat_installation_dir>` コピーしたフォルダーの名前をに変更しま `licenseserver`す。
+1. サンプル`configs`フォルダーを`<Tomcat_installation_dir>`にコピーし、コピーしたフォルダーの名前を`licenseserver`に変更します。
 
-   configsフォルダーのパスは、次のようになりま `<Tomcat_install_dir>\licenseserver\`す。
-1. を実行し `Scrambler.bat` て、Primetime DRMディレクトリ内のトランスポートおよびライセンスサーバーのPFXファイルの暗号化されたパスワードを取得 `<DVD>` しま `\Adobe Access Server for Protected Streaming\` す。
+   configsフォルダーのパスは、次に`<Tomcat_install_dir>\licenseserver\`になります。
+1. `Scrambler.bat`を実行し、Primetime DRM `<DVD>` `\Adobe Access Server for Protected Streaming\`ディレクトリ内のトランスポートおよびライセンスサーバーのPFXファイル用の暗号化されたパスワードを取得します。
 
    * `Scrambler.bat <Adobe-provided transport credential password>`
    * `Scrambler.bat <Adobe-provided license server credential password>`
 
-1. PFXファイルをディレクトリにコピー `<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\<tenant-name>\` します。
-1. 次の設定で、対応するテナ `<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\sampletenant\flashaccess-tenant.xml`ント設定を編集します。
+1. PFXファイルを`<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\<tenant-name>\`ディレクトリにコピーします。
+1. `<TomcatInstallDir>\licenseserver\flashaccessserver\tenants\sampletenant\flashaccess-tenant.xml`の対応するテナント構成を次の設定で編集します。
 
    ```
    Configuration|Tenant|Credentials|TransportCredential|File|path=<filename-transport-credential-PFX> 
@@ -31,15 +34,15 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
    Configuration|Tenant|Credentials|LicenseServerCredential|File|password=<scrambled-license-servercredential-password>
    ```
 
-1. ユーティリテ `Validator.bat` ィを実行し、構成が有効であることを確認します。
+1. `Validator.bat`ユーティリティを実行して、構成が有効であることを確認します。
 
    ```
    Validator.bat -g -r <absolute-path-to TomcatInstallDir\licenseserver>
    ```
 
-1. CDからデ `flashaccessserver.war` ィレクトリにファイルをコピー `<TomcatInstallDir>\webapps\` します。
-1. Tomcatが実行中の場合は、コマンドウィンドウ内を押して(コマンドウィ `<CTRL-C>` ンドウから起動した場合)、実行中のTomcatインスタンスを停止します。 また、TomcatがWindowsサービスとしてインストールされている場合は、Windowsサービスアプリケーションからサーバーを停止することもできます。
-1. Tomcatを起動するには、次のコマンドを入力します。
+1. `flashaccessserver.war`ファイルをCDから`<TomcatInstallDir>\webapps\`ディレクトリにコピーします。
+1. Tomcatが実行中の場合は、コマンドウィンドウで`<CTRL-C>`を押して、実行中のTomcatインスタンスを停止します（コマンドウィンドウから起動した場合）。 また、TomcatがWindowsサービスとしてインストールされている場合は、Windowsサービスアプリケーションからサーバーを停止することもできます。
+1. Tomcatを開始するには、次のコマンドを入力します。
 
    ```
    <TomcatInstallDir>\bin\catalina run

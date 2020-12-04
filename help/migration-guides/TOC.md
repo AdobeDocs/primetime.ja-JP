@@ -13,7 +13,7 @@ ht-degree: 64%
 ---
 
 
-# Primetime 移行のヘルプ {#migration}
+# Primetime 移行のヘルプ  {#migration}
 
 + [移行のヘルプの概要](home.md)
 + [Android向けTVSDK 1.4 ～ 2.5(Java)](tvsdk-14-25-android.md)

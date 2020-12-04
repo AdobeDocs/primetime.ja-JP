@@ -6,15 +6,18 @@ title: 広告の削除と置換の例
 uuid: 6bf9d71a-73fe-4033-b97a-6b0cff8687f2
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '68'
+ht-degree: 0%
 
 ---
 
 
-# 広告の削除と置換の例 {#examples-to-delete-and-replace-ads}
+# 広告の削除と置換の例{#examples-to-delete-and-replace-ads}
 
 以下に、広告を削除して置き換えるプロセスの例を示します。
 
-次に、を使用する例を示しま `DELETE_RANGE`す。
+`DELETE_RANGE`の使用例を次に示します。
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means,  
@@ -43,7 +46,7 @@ config.setCustomRangeMetadata(customRangeMetadata);
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
 
-次に、を使用する例を示しま `REPLACE_RANGE`す。
+`REPLACE_RANGE`の使用例を次に示します。
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means, like 

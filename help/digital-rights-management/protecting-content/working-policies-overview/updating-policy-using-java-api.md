@@ -4,22 +4,25 @@ title: Java APIを使用したDRMポリシーの更新
 uuid: ec21351c-900e-48f5-845a-c0b430c210d7
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
 
-# Java APIを使用したDRMポリシーの更新 {#updating-a-drm-policy-with-the-java-api}
+# Java API {#updating-a-drm-policy-with-the-java-api}を使用したDRMポリシーの更新
 
 Java APIを使用してDRMポリシーを更新するには：
 
-1. 開発環境を設定し、「開発環境の設定」に記載されているすべてのJARファイルをプロジ [ェクトに含めます](../../protecting-content/setting-up-the-sdk/setup-dev-env.md)。
-1. DRMインスタンスを作 `Policy` 成し、ファイルまたはデータベースからDRMポリシーを読み取ります。
+1. 開発環境を設定し、プロジェクトに[開発環境の設定](../../protecting-content/setting-up-the-sdk/setup-dev-env.md)に記載されているすべてのJARファイルを含めます。
+1. DRM `Policy`インスタンスを作成し、ファイルまたはデータベースからDRMポリシーを読み取ります。
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. DRMオブジェクトの名 `Policy` 前や使用ルールなどのプロパティを設定して、DRMオブジェクトを更新します。
+1. DRM `Policy`オブジェクトのプロパティ（名前や使用ルールなど）を設定して、DRM &lt;a0/>オブジェクトを更新します。
 
    ```java
    // Change the DRM policy name.  
@@ -44,7 +47,7 @@ Java APIを使用してDRMポリシーを更新するには：
    }
    ```
 
-1. 更新したDRMオブジェクトをシ `Policy` リアライズし、ファイルまたはデータベースに保存します。
+1. 更新されたDRM `Policy`オブジェクトをシリアル化し、ファイルまたはデータベースに保存します。
 
    ```java
    // Serialize the DRM policy.  
@@ -58,4 +61,4 @@ Java APIを使用してDRMポリシーを更新するには：
    out.close();
    ```
 
-このサン `com.adobe.flashaccess.samples.policy.UpdatePolicy` プルコードのソースについては、Reference Implementation Command Line Tools [!DNL samples] ディレクトリのを参照してください。
+このサンプルコードのソースについては、リファレンス実装のコマンドラインツール[!DNL samples]ディレクトリの`com.adobe.flashaccess.samples.policy.UpdatePolicy`を参照してください。

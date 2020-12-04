@@ -1,20 +1,23 @@
 ---
 description: マニフェスト内のタグに関する通知を受け取るには、適切なイベントリスナーを実装する必要があります。
 seo-description: マニフェスト内のタグに関する通知を受け取るには、適切なイベントリスナーを実装する必要があります。
-seo-title: 時間指定メタデータ通知のリスナーの追加
-title: 時間指定メタデータ通知のリスナーの追加
+seo-title: 時間指定メタデータ追加通知のリスナー
+title: 時間指定メタデータ追加通知のリスナー
 uuid: 336882e7-e2d8-49b8-a23d-f236c7e6a594
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '174'
+ht-degree: 0%
 
 ---
 
 
-# 時間指定メタデータ通知のリスナーの追加 {#add-listeners-for-timed-metadata-notifications}
+# 時間指定メタデ追加ータ通知のリスナー{#add-listeners-for-timed-metadata-notifications}
 
 マニフェスト内のタグに関する通知を受け取るには、適切なイベントリスナーを実装する必要があります。
 
-時間指定メタデータを監視するには、をリッスンし、関連するア `onTimedMetadata`クティビティをアプリケーションに通知します。 コンテンツの解析中に一意のサブスクライブ済みタグが識別されるたびに、TVSDKは新しいオブジェクトを準備し、こ `TimedMetadata` のイベントをディスパッチします。 このオブジェクトには、サブスクライブしたタグの名前、このタグが表示される再生時のローカル時間、その他のデータが含まれます。
+`onTimedMetadata`をリッスンすると、時間指定メタデータを監視できます。これにより、関連するアクティビティがアプリケーションに通知されます。 TVSDKは、コンテンツの解析中に一意のサブスクライブ済みタグを識別するたびに、新しい`TimedMetadata`オブジェクトを準備し、このイベントをディスパッチします。 このオブジェクトには、サブスクライブしたタグの名前、このタグが表示される再生中のローカル時間、その他のデータが含まれます。
 
 1. イベントをリッスンします。
 
@@ -38,4 +41,4 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
    }; 
    ```
 
-ID3メタデータは、同じリス `onTimedMetadata` ナーを使用してID3タグの存在を示します。 ただし、このプロパティを使用してTAGとID3を区別できるので、 `TimedMetadata``type` 混乱の原因になることはありません。 ID3タグについて詳しくは、 [ID3タグを参照してください](../../content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md)。
+ID3メタデータは、同じ`onTimedMetadata`リスナーを使用してID3タグの存在を示します。 ただし、`TimedMetadata` `type`プロパティを使用してTAGとID3を区別できるので、混乱の原因になりません。 ID3タグについて詳しくは、[ID3タグ](../../content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md)を参照してください。

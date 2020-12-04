@@ -4,6 +4,9 @@ title: カスタマイズされたVODアセットの例
 uuid: 1db76b3f-b57a-428a-b79f-d4657ded8391
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '72'
+ht-degree: 0%
 
 ---
 
@@ -38,8 +41,8 @@ seg5.ts
 #EXT-X-ENDLIST
 ```
 
-アプリケーションでは、次のシナリオを設定できます。
+アプリケーションで次のシナリオを設定できます。
 
-* ファイルにタ `#EXT-X-ASSET` グや、登録したその他のカスタムタグ名のセットが存在する場合の通知。
-* タグまたはその他のカ `#EXT-X-AD` スタムタグ名がストリーム内に見つかった場合に広告を挿入します。
+* `#EXT-X-ASSET`タグまたはサブスクライブした他のカスタムタグ名のセットがファイルに存在する場合の通知。
+* `#EXT-X-AD`タグまたは他のカスタムタグ名がストリーム内で見つかった場合に広告を挿入します。
 

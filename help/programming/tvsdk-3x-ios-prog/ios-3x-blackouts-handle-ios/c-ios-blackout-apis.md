@@ -1,38 +1,41 @@
 ---
-description: TVSDKは、メソッド、メタデータ、通知など、ブラックアウトの実装時に役立つAPI要素を提供します。
-seo-description: TVSDKは、メソッド、メタデータ、通知など、ブラックアウトの実装時に役立つAPI要素を提供します。
+description: TVSDKは、メソッド、メタデータ、通知など、ブラックアウトの実装に役立つAPIエレメントを提供します。
+seo-description: TVSDKは、メソッド、メタデータ、通知など、ブラックアウトの実装に役立つAPIエレメントを提供します。
 seo-title: ブラックアウトAPI要素
 title: ブラックアウトAPI要素
 uuid: f87f4ed0-3f97-48bd-bceb-28357a978964
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '317'
+ht-degree: 0%
 
 ---
 
 
-# ブラックアウトAPI要素 {#blackout-api-elements}
+# ブラックアウトAPI要素{#blackout-api-elements}
 
-TVSDKは、メソッド、メタデータ、通知など、ブラックアウトの実装時に役立つAPI要素を提供します。
+TVSDKは、メソッド、メタデータ、通知など、ブラックアウトの実装に役立つAPIエレメントを提供します。
 
 プレイヤーにブラックアウトソリューションを実装する場合は、以下を使用できます。
 
 * **PTMediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` 現在読み込まれているリソースをバックグラウンドリソースとして保存します。 このメ `replaceCurrentItemWithPlayerItem` ソッドの後にを呼び出すと、、、またはを呼び出すまで、TVSDKはバックグラウンドアイテムのマニフェストのダ `unregisterCurrentBackgroundItem` ウンロー `stop`ドを続行しま `reset` す。
+   * `registerCurrentItemAsBackgroundItem` 現在読み込まれているリソースをバックグラウンドリソースとして保存します。このメソッドの後に`replaceCurrentItemWithPlayerItem`を呼び出すと、`unregisterCurrentBackgroundItem`、`stop`、または`reset`を呼び出すまで、TVSDKはバックグラウンドアイテムのマニフェストのダウンロードを続行します。
 
-   * `unregisterCurrentBackgroundItem` バックグラウンドアイテムをnilに設定し、バックグラウンドマニフェストのフェッチと解析を停止します。
+   * `unregisterCurrentBackgroundItem` バックグラウンドアイテムをnilに設定し、バックグラウンドマニフェストのフェッチおよび解析を停止します。
 
-* **PTMetadata.PTBlackoutMetadata** ブラック `PTMetadata` アウトに固有のクラス。
+* **PTMetadata.** PTBlackoutMetadataブラックアウトに固有の `PTMetadata` クラス。
 
-   これにより、TVSDKでシーク不可能範囲（の配列）を設定 `CMTimeRanges`できます。 TVSDKは、ユーザーがシークするたびにこれらの範囲をチェックします。 設定され、ユーザーがシーク不可能な範囲をシークした場合、TVSDKは、ビューアをシーク不可能な範囲の最後まで強制的に移動させます。
+   これにより、TVSDKにシーク不能範囲（`CMTimeRanges`の配列）を設定できます。 TVSDKは、ユーザーがシークするたびに、これらの範囲をチェックします。 この変数が設定され、ユーザーがシーク不可能範囲をシークした場合、TVSDKは視聴者をシーク不可能範囲の終わりまで強制的に移動させます。
 
-* **START HERE NEXT** PTAdMetadata **「はい」または「いいえ」に設定して、ライブストリームのプリロールを有効**`enableLivePreroll` または無効にします。 NOの場合、TVSDKは、コンテンツ再生前にプリロール広告に対する明示的な広告サーバー呼び出しを行わないので、プリロールは再生されません。 これはミッドロールには影響しません。 デフォルトはYESです。
+* **開始HERE** **** NEXTPTAdMetadataYesをYESまたはNOに設定して、ライブストリーム上のプリロール `enableLivePreroll` を有効または無効にします。NOの場合、TVSDKは、コンテンツ再生前にプリロール広告に対する明示的な広告サーバー呼び出しを行わないので、プリロールは再生されません。 これは、ミッドロールには影響しません。 デフォルトはYESです。
 
 * **NSNotifications**
 
-   * `PTTimedMetadataChangedInBackgroundNotification` - TVSDKがバックグラウンドマニフェスト内でサブスクライブされたタグを検出し、そこから新しいインスタ `PTTimedMetadata` ンスを作成した場合にポストされます。 通知のオブジェクトは、現在再生中の `PTMediaPlayerItem` インスタンスです。 キーを使用して、通 `PTTimedMetadata` 知のディクショナリからインスタ `userInfo` ンスを取得で `PTTimedMetadataKey` きます。
+   * `PTTimedMetadataChangedInBackgroundNotification` - TVSDKは、バックグラウンドマニフェスト内でサブスクライブ済みのタグを検出し、そこから新しい `PTTimedMetadata` インスタンスを作成するとポストされます。通知のオブジェクトは、現在再生中の`PTMediaPlayerItem`インスタンスです。 `PTTimedMetadataKey`キーを使用して、`PTTimedMetadata`インスタンスを通知の`userInfo`ディクショナリから取得できます。
 
-   * `PTBackgroundManifestErrorNotification`  — メディアプレイヤーがバックグラウンドマニフェストの読み込みに完全に失敗した、つまり、すべてのストリームURLがエラーまたは無効な応答を返した場合にポストされます。 通知のオブジェクトは、現在再生中の `PTMediaPlayerItem` インスタンスです。
+   * `PTBackgroundManifestErrorNotification`  — メディアプレイヤーがバックグラウンドマニフェストの読み込みに完全に失敗した、つまり、すべてのストリームURLがエラーまたは無効な応答を返す場合にポストされます。通知のオブジェクトは、現在再生中の`PTMediaPlayerItem`インスタンスです。
 
 * **PTNotification**
 
@@ -40,5 +43,5 @@ TVSDKは、メソッド、メタデータ、通知など、ブラックアウト
 
       * コード：204000
       * タイプ：警告
-      * バックグラウンドマニフェストのダウンロード中にエラーが発生しました。
-   * `INVALID_SEEK_WARNING` シーク不可能な範囲（で設定）でシークが試行されたと `nonSeekableRanges` きにディスパッ `PTBlackoutMetadata`チされます。
+      * バックグラウンドマニフェストのダウンロードでエラーが発生しました。
+   * `INVALID_SEEK_WARNING` シーク不可能な範囲(に `nonSeekableRanges` 設定されている)でシークが試行された場合にディスパッチされ `PTBlackoutMetadata`ます。

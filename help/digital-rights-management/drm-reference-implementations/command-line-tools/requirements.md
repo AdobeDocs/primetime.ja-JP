@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# コマンドラインツールの要件 {#command-line-tools-requirements}
+# コマンドラインツールの要件{#command-line-tools-requirements}
 
 * Java 1.5以降。
 * Adobeが発行するPackager、トランスポートおよびライセンスサーバーの資格情報（証明書とパスワード）。

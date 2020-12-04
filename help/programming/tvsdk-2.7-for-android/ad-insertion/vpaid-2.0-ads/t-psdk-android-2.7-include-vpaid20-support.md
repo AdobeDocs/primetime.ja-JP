@@ -6,11 +6,14 @@ title: VPAID 2.0統合の実装
 uuid: fa5b9cdd-e684-4656-91b7-50781dc59e23
 translation-type: tm+mt
 source-git-commit: 25f97c8d296f71deddc8f9d12b97007ddf73f603
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 2%
 
 ---
 
 
-# VPAID 2.0統合の実装 {#implement-vpaid-integration}
+# VPAID 2.0統合の実装{#implement-vpaid-integration}
 
 VPAID 2.0サポートを追加するには、カスタム広告表示と適切なリスナーを追加します。
 
@@ -37,10 +40,10 @@ VPAID 2.0サポートを追加するには：
 
    >[!IMPORTANT]
    >
-   >VPAID 2.0ワークフローでは、カスタム広告表示の場合、カスタム広告表示を作成してから破棄するまで、開始(イベント `CustomAdView` )と完了(イベント `AdBreak``AD_BREAK_START``AdBreak``AD_BREAK_COMPLETE`)の間でインスタンスを維持することが非常に重要です。 つまり、すべての広告の時間の開始でカスタム広告表示を作成し、完了するたびに広告の時間のを破棄しないでください。
+   >VPAID 2.0ワークフローでは、カスタム広告表示の場合、カスタム広告表示を作成してから破棄するまで、`AdBreak`開始(イベント`AD_BREAK_START`)と`AdBreak`完了(イベント`AD_BREAK_COMPLETE`)にわたって`CustomAdView`インスタンスを維持することが非常に重要です。 つまり、各広告ブレーク開始にカスタム広告表示を作成し、完了するたびにその広告ブレークを破棄しないでください。
    >
    >
-   >また、プレイヤーがPREPARED状態の場合にのみ、カスタム広告表示を作成する必要があります。
+   >また、プレイヤーがPREPARED状態の場合、カスタム広告表示を作成する必要があります。
    >
    >
    >リセットが呼び出された場合にのみ、カスタム広告表示を破棄します。 例：
@@ -54,7 +57,7 @@ VPAID 2.0サポートを追加するには：
    >} 
    >```
    >
-   >最後に、カスタム広告表示を削除する前に、 `FrameLayout`例：
+   >最後に、カスタム広告表示を破棄する前に、`FrameLayout`から削除する必要があります。 例：
    >
    >
    ```

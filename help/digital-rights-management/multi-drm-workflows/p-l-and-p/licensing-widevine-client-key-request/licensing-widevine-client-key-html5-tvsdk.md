@@ -1,20 +1,23 @@
 ---
-description: コードは、DRMManagerを通じてキーをリクエストできます。
-seo-description: コードは、DRMManagerを通じてキーをリクエストできます。
-seo-title: HTML5 TVSDKのキーリクエストワークフロー
-title: HTML5 TVSDKのキーリクエストワークフロー
+description: コードは、DRMManagerを通じてキーを要求できます。
+seo-description: コードは、DRMManagerを通じてキーを要求できます。
+seo-title: HTML5 TVSDKでのキーリクエストワークフロー
+title: HTML5 TVSDKでのキーリクエストワークフロー
 uuid: a1f50eba-4301-49a1-b2e5-9add6687cff8
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '119'
+ht-degree: 0%
 
 ---
 
 
-# HTML5 TVSDKのキーリクエストワークフロー{#key-request-workflow-on-html-tvsdk}
+# HTML5 TVSDK{#key-request-workflow-on-html-tvsdk}のキーリクエストワークフロー
 
-コードは、DRMManagerを通じてキーをリクエストできます。
+コードは、DRMManagerを通じてキーを要求できます。
 
-また、Browser TVSDKは、DRMManagerオブジェクトを通じてsetProtectionData APIを公開します。
+また、Browser TVSDKは、DRMManagerオブジェクトを介してsetProtectionData APIを公開します。
 
 ```
 [  /** 
@@ -31,9 +34,9 @@ license acquisition. </p>
    setProtectionData: function(protectionData) 
 ```
 
-通常の方法でコンテンツの再生を開始する前に、コードでこのAPIを呼び出す必要があります。 MediaPlayer.vo.protection.ProtectionDataは、次のURLに記載されています。https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html [](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
+通常の方法でコンテンツの再生を開始する前に、コードはこのAPIを呼び出す必要があります。 MediaPlayer.vo.protection.ProtectionDataは次の場所にドキュメント化されています。[https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
 
-以下に、PlayReadyとWidevineの両方のライセンスサーバーURLを含む保護データオブジェクトの例を示します。
+以下に、PlayReadyとWidevineの両方のライセンスサーバーURLを持つ保護データオブジェクトの例を示します。
 
 ```
 var protectionData = { 
@@ -53,4 +56,4 @@ var protectionData = {
    };
 ```
 
-TVSDKは、特定のDRMシステムを強制するAPIを提供しません。各ブラウザーがサポートするDRMシステムは1つだけです。
+TVSDKは、特定のDRMシステムを強制するAPIを提供しません。各ブラウザーは1つのDRMシステムのみをサポートしているからです。

@@ -1,27 +1,30 @@
 ---
-description: Primetime DRM Cloudを使用して、ExpressPlayを利用したTVSDKアプリ用の複数のDRMソリューションを実装できます。 DRMソリューションには、AppleのFairPlay、GoogleのWidevine、MicrosoftのPlayReady、AdobeのPrimetime Accessが含まれます。
-seo-description: Primetime DRM Cloudを使用して、ExpressPlayを利用したTVSDKアプリ用の複数のDRMソリューションを実装できます。 DRMソリューションには、AppleのFairPlay、GoogleのWidevine、MicrosoftのPlayReady、AdobeのPrimetime Accessが含まれます。
+description: Primetime DRM Cloudを使用して、ExpressPlayを利用したTVSDKアプリに複数のDRMソリューションを実装できます。 DRMソリューションには、AppleのFairPlay、GoogleのWidevine、MicrosoftのPlayReadyおよびAdobeからのPrimetime Accessが含まれます。
+seo-description: Primetime DRM Cloudを使用して、ExpressPlayを利用したTVSDKアプリに複数のDRMソリューションを実装できます。 DRMソリューションには、AppleのFairPlay、GoogleのWidevine、MicrosoftのPlayReadyおよびAdobeからのPrimetime Accessが含まれます。
 seo-title: Multi-DRMの概要
 title: Multi-DRMの概要
 uuid: 1705a338-baeb-4fcd-ae16-08963da55ab8
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '332'
+ht-degree: 0%
 
 ---
 
 
-# Multi-DRMワークフロー {#multi-drm-workflows}
+# Multi-DRMワークフロー{#multi-drm-workflows}
 
-Primetime DRM Cloudを使用して、ExpressPlayを利用したTVSDKアプリ用の複数のDRMソリューションを実装できます。 DRMソリューションには、AppleのFairPlay、GoogleのWidevine、MicrosoftのPlayReady、AdobeのPrimetime Accessが含まれます。
+Primetime DRM Cloudを使用して、ExpressPlayを利用したTVSDKアプリに複数のDRMソリューションを実装できます。 DRMソリューションには、AppleのFairPlay、GoogleのWidevine、MicrosoftのPlayReadyおよびAdobeからのPrimetime Accessが含まれます。
 
-## Multi-DRMの概要 {#multi-drm-overview}
+## Multi-DRMの概要{#multi-drm-overview}
 
-Adobe TVSDKは、複数のDRMスキームを使用したDRM保護をサポートしています。 アドビでは、複数のプ *ラットフォームでのビデオコンテンツのパッケージ化、ライセンス、再生を行うPrimetime DRM* CloudをExpressPlayを利用して提供しています。
+AdobeTVSDKは、複数のDRMスキームを使用したDRM保護をサポートしています。 Adobeオファー&#x200B;*Primetime DRM Cloud。ExpressPlay*&#x200B;を利用して、複数のプラットフォームでのビデオコンテンツのパッケージ化、ライセンス、再生を行います。
 
-サポートされるDRMスキームには、Adobeの *Primetime Access* DRM(AAXS)、 [Widevine on ChromeやAndroid、](https://www.widevine.com) FairPlay [on SafariやiXBOXの](https://developer.apple.com/streaming/fps/) FairPlay [](https://www.microsoft.com/playready/) 、Xbox OS、PlayReady Edge、OneなどのネイティブDRMが含まれます。 これらのプラットフォームで現在使用可能なDRMスキームの種類や、今後のリリースの予定日については、アドビの担当者にお問い合わせください。
+サポートされるDRMスキームには、Adobeの&#x200B;*Primetime Access* DRM(AAXS)、ChromeおよびAndroidの[Widevine](https://www.widevine.com)、SafariおよびiOSの[FairPlay](https://developer.apple.com/streaming/fps/)、およびa6が含まれます。>PlayReady](https://www.microsoft.com/playready/) on Edge and XboxOne. [これらのプラットフォームで現在使用可能なDRMスキームの種類や、今後のリリース予定日については、Adobeの担当者にお問い合わせください。
 
-TVSDKは、これらのプロトコルを使用するライセンスサーバーによって発行されたDRMライセンスをサポートします。 複数のDRMソリューションのサポートに加え、アドビでは、ExpressPlayを利用した ** Primetime DRM Cloudを、ExpressPlayが各ソリューションのライセンスサーバーを運用するソリューションとして提供しています。 これにより、DRMライセンスの発行ニーズのセットアップとメンテナンスが簡単になります。
+TVSDKは、これらのプロトコルを使用するライセンスサーバーによって発行されるDRMライセンスをサポートしています。 複数のDRMソリューションのサポートに加えて、ExpressPlayが各ソリューションのライセンスサーバーを運用するソリューションとして、Adobeオファー&#x200B;*Primetime DRM Cloud（ExpressPlay*&#x200B;を利用）がサポートされます。 これにより、DRMライセンスの発行ニーズのセットアップとメンテナンスを簡単に行うことができます。
 
-Primetime DRM CloudをExpressPlayで *利用してTVSDKアプリにDRMニーズを実装するには* 、まず [ExpressPlay.comアカウントを取得する必要があります](https://www.expressplay.com) 。 ExpressPlayは、複数の異なるDRM保護スキームのライセンス機能を提供し、パッケージ化やキー管理などの他のサービスも提供します。
+*Primetime DRM Cloud（ExpressPlay*&#x200B;を利用）をTVSDKアプリにDRMニーズを実装するために使用するには、まず[ExpressPlay.com](https://www.expressplay.com)アカウントを取得する必要があります。 ExpressPlayは、様々なDRM保護スキームに対するライセンス機能を提供し、パッケージ化やキー管理などの他のサービスも提供します。
 
-アドビの担当者がExpressPlayアカウントを最初に設定します。 その後、アカウントを設定し、ExpressPlayサーバーへのライ *センストークンリクエストで* 、使用する顧客認証子を取得できます。
+最初は、Adobeの担当者がExpressPlayアカウントを設定します。 その後、アカウントを設定し、ExpressPlayサーバーへのライセンストークンリクエストで使用する&#x200B;*ユーザー認証子*&#x200B;を取得します。

@@ -1,22 +1,25 @@
 ---
-description: ID3タグは、ファイルのタイトルやアーティスト名など、オーディオファイルやビデオファイルに関する情報を提供します。 ブラウザーTVSDKは、HLSストリーム内のトランスポートストリーム(TS)セグメントレベルでID3タグを検出し、イベントをディスパッチします。 タグからデータを抽出できます。
-seo-description: ID3タグは、ファイルのタイトルやアーティスト名など、オーディオファイルやビデオファイルに関する情報を提供します。 ブラウザーTVSDKは、HLSストリーム内のトランスポートストリーム(TS)セグメントレベルでID3タグを検出し、イベントをディスパッチします。 タグからデータを抽出できます。
+description: ID3タグは、ファイルのタイトルやアーティスト名など、オーディオファイルやビデオファイルに関する情報を提供します。 ブラウザーTVSDKは、HLSストリーム内のトランスポートストリーム(TS)セグメントレベルでID3タグを検出し、イベントをディスパッチします。 アプリケーションは、タグからデータを抽出できます。
+seo-description: ID3タグは、ファイルのタイトルやアーティスト名など、オーディオファイルやビデオファイルに関する情報を提供します。 ブラウザーTVSDKは、HLSストリーム内のトランスポートストリーム(TS)セグメントレベルでID3タグを検出し、イベントをディスパッチします。 アプリケーションは、タグからデータを抽出できます。
 seo-title: ID3タグ
 title: ID3タグ
 uuid: a47cd0cc-b11d-47df-b1fb-56918896ef4c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 0%
 
 ---
 
 
 # ID3タグ{#id-tags}
 
-ID3タグは、ファイルのタイトルやアーティスト名など、オーディオファイルやビデオファイルに関する情報を提供します。 ブラウザーTVSDKは、HLSストリーム内のトランスポートストリーム(TS)セグメントレベルでID3タグを検出し、イベントをディスパッチします。 タグからデータを抽出できます。
+ID3タグは、ファイルのタイトルやアーティスト名など、オーディオファイルやビデオファイルに関する情報を提供します。 ブラウザーTVSDKは、HLSストリーム内のトランスポートストリーム(TS)セグメントレベルでID3タグを検出し、イベントをディスパッチします。 アプリケーションは、タグからデータを抽出できます。
 
-基になるHLSストリームで新しいID3メタデータが見つかると、Browser TVSDKはイベントをトリガー `AdobePSDK.TimedMetadataEvent` します。
+基になるHLSストリームに新しいID3メタデータが見つかると、Browser TVSDKは`AdobePSDK.TimedMetadataEvent`イベントをトリガーします。
 
-ID3の `TimedMetadata` オブジェクトには、次のプロパティがあります。
+ID3の`TimedMetadata`オブジェクトには次のプロパティがあります。
 
 <table id="table_6C61886187FB44B4B9821E4B00200018"> 
  <thead> 
@@ -27,35 +30,35 @@ ID3の `TimedMetadata` オブジェクトには、次のプロパティがあり
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> type </span> </p> </td> 
-   <td colname="col2"> <p>TimedMetadataオブジェクト <span class="codeph"> のタ </span> イプ。 </p> <p>ID3メタデータの場合、値 <span class="codeph"> はAdobePSDK.TimedMetadataType.ID3です </span>。 </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> type  </span> </p> </td> 
+   <td colname="col2"> <p><span class="codeph"> TimedMetadata </span>オブジェクトのタイプです。 </p> <p>ID3メタデータの場合、値は<span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>です。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> time </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> time  </span> </p> </td> 
    <td colname="col2"> <p> この時間指定メタデータが検出されたプレイヤーの時間。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> id </span> </p> </td> 
-   <td colname="col2"> <p>TimedMetadataオブジェ <span class="codeph"> クトの </span> ID。 </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> id  </span> </p> </td> 
+   <td colname="col2"> <p><span class="codeph"> TimedMetadata </span>オブジェクトのID。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> name </span> </p> </td> 
-   <td colname="col2"> <p>TimedMetadataオブジェ <span class="codeph"> クトの </span> 名前。 ID3メタデータの場合、値は「ID3」です。 </p> </td> 
+   <td colname="col2"> <p><span class="codeph"> TimedMetadata </span>オブジェクトの名前。 ID3メタデータの場合、値は「ID3」です。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> コンテンツ </span> </p> </td> 
-   <td colname="col2"> <p>時間指定メタデータのコンテンツ。 ID3タグの場合、この値はシリアライズされたバイト配列を表します。 </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> content  </span> </p> </td> 
+   <td colname="col2"> <p>時間指定メタデータコンテンツ。 ID3タグの場合、この値はシリアライズされたバイト配列を表します。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> メタデータ </span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph"> TimedMetadataが処理 </span> した情報。これは、ID3フレームが <span class="codeph"> 保存されるAdobePSDK.Metadata </span> のインスタンスです。 </p> <p> <p>注意： Safariビデオタ <span class="codeph"> グ </span> の場合、ID3タグの特定のフレームデータは、AdobePSDK.Metadataオブジェクトを通じてオブジェクトの形式で公開され、他のブラウザーの場合、ID3タグのフレームデータは、 <span class="codeph"> AdobePSDK.Metadataオブジェクトを通じてバイト配列の形式で公開され </span><span class="codeph"></span> ます。 </p> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> metadata  </span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> TimedMetadata </span> 処理済み情報。 <span class="codeph"> AdobePSDK.Metadataのインスタンスで、ID3フレーム </span> が保存されます。 </p> <p> <p>注意： Safari <span class="codeph">ビデオ</span>タグでは、ID3タグの特定のフレームデータが<span class="codeph"> AdobePSDK.Metadata </span>オブジェクトを介してオブジェクトの形式で公開され、その他のブラウザでは、ID3タグのフレームデータが<span class="codeph"> AdobePSDK.Metadataを介してバイト配列の形式で公開されます/&gt;オブジェクト。</span> </p> </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 &#x200B;
 
-に保存される様々なID3タグは、次の2 `TimedMetadata` つの方法でアプリケーションから取得できます。
+`TimedMetadata`に保存されている様々なID3タグは、次の2つの方法でアプリケーションによって取得できます。
 
 * AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLEイベントリスナー内。
 
@@ -114,7 +117,7 @@ ID3の `TimedMetadata` オブジェクトには、次のプロパティがあり
    }); 
    ```
 
-* のプロパ `MediaPlayerItem`ティを使 `timedMetadata` 用する。
+* `MediaPlayerItem`の`timedMetadata`プロパティを使用します。
 
    ```
    var isSafari = function () { 

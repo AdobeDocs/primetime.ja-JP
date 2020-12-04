@@ -1,26 +1,29 @@
 ---
-description: Primetime DRMを設定する場合は、DVDからファイルをコピーします。 これらのファイルには、コード、証明書、およびサードパーティクラスを含むJARファイルが含まれます。 さらに、Adobe Systems, Incorporatedから証明書を要求する必要があります。 その後、アドビから複数の資格情報が発行され、パッケージ化されたコンテンツ、ライセンス、クライアントとサーバー間の通信の整合性を保護するために使用されます。
-seo-description: Primetime DRMを設定する場合は、DVDからファイルをコピーします。 これらのファイルには、コード、証明書、およびサードパーティクラスを含むJARファイルが含まれます。 さらに、Adobe Systems, Incorporatedから証明書を要求する必要があります。 その後、アドビから複数の資格情報が発行され、パッケージ化されたコンテンツ、ライセンス、クライアントとサーバー間の通信の整合性を保護するために使用されます。
-seo-title: 開発環境の設定
-title: 開発環境の設定
+description: Primetime DRMを設定する場合は、DVDからファイルをコピーします。 これらのファイルには、コード、証明書、およびサードパーティクラスを含むJARファイルが含まれます。 また、IncorporatedのAdobe Systemsに証明書を要求する必要があります。 次に、Adobeは、パッケージ化されたコンテンツ、ライセンス、およびクライアントとサーバー間の通信の整合性を保護するために使用する複数の資格情報を発行します。
+seo-description: Primetime DRMを設定する場合は、DVDからファイルをコピーします。 これらのファイルには、コード、証明書、およびサードパーティクラスを含むJARファイルが含まれます。 また、IncorporatedのAdobe Systemsに証明書を要求する必要があります。 次に、Adobeは、パッケージ化されたコンテンツ、ライセンス、およびクライアントとサーバー間の通信の整合性を保護するために使用する複数の資格情報を発行します。
+seo-title: 開発環境のセットアップ
+title: 開発環境のセットアップ
 uuid: 68afefe8-7ec6-466e-89a8-bc0da8afb4c8
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 0%
 
 ---
 
 
-# 開発環境の設定 {#set-up-your-development-environment}
+# 開発環境のセットアップ{#set-up-your-development-environment}
 
-Primetime DRMを設定する場合は、DVDからファイルをコピーします。 これらのファイルには、コード、証明書、およびサードパーティクラスを含むJARファイルが含まれます。 さらに、Adobe Systems, Incorporatedから証明書を要求する必要があります。 その後、アドビから複数の資格情報が発行され、パッケージ化されたコンテンツ、ライセンス、クライアントとサーバー間の通信の整合性を保護するために使用されます。
+Primetime DRMを設定する場合は、DVDからファイルをコピーします。 これらのファイルには、コード、証明書、およびサードパーティクラスを含むJARファイルが含まれます。 また、IncorporatedのAdobe Systemsに証明書を要求する必要があります。 次に、Adobeは、パッケージ化されたコンテンツ、ライセンス、およびクライアントとサーバー間の通信の整合性を保護するために使用する複数の資格情報を発行します。
 
-アドビは、DVDでPrimetime DRM SDKを提供しています。
+Adobeは、DVDでPrimetime DRM SDKを提供します。
 
 1. [!DNL [DRM DVD]/SDK/]から開発システム（Javaクラスパス上）に次のファイルをコピーします。
 
-   * [!DNL adobe-flashaccess-certs.jar]  — アドビのルート証明書を含む
-   * [!DNL adobe-flashaccess-sdk.jar] - Primetime DRMコアSDKクラスを含む
-   * [!DNL adobe-flashaccess-sdk-pro.jar] - Primetime DRM Professional SDKクラスを含み、Professional機能にのみ必要
+   * [!DNL adobe-flashaccess-certs.jar] -Adobeルート証明書を含みます。
+   * [!DNL adobe-flashaccess-sdk.jar] - Primetime DRMコアSDKクラスを含みます
+   * [!DNL adobe-flashaccess-sdk-pro.jar] - Primetime DRM Professional SDKクラスが含まれます。これはProfessional機能にのみ必要です
 
 1. [!DNL [DRM DVD]/SDK/thirdparty]から開発システムに次のファイルをコピーします。
 
@@ -39,15 +42,15 @@ Primetime DRMを設定する場合は、DVDからファイルをコピーしま�
    * [!DNL jackson-core--2.4.0-rc4-20140529.184520-13.jar]
    * [!DNL jackson-databind-2.4.0-rc4-20140603.005043-38.jar]
 
-1. （オプション）パフォーマンスを向上させるには、適切なプラットフォーム固有のライブラリを[!DNL [DRM DVD]/SDK/thirdparty/cryptoj/]から開発システムにコピーして、暗号化操作のネイティブサポートを有効にします（パスに場所を入れておくことを忘れない）。
+1. （オプション）パフォーマンスを向上させるために、適切なプラットフォーム固有のライブラリを[!DNL [DRM DVD]/SDK/thirdparty/cryptoj/]から開発システムにコピーして、暗号化操作のネイティブサポートを有効にできます（パスに場所を忘れない）。
 
    * [!DNL jsafe.dll] - Windows
    * [!DNL libjsafe.so] - Linux
 
       >[!NOTE]
       >
-      >これらのライブラリの32ビット版と64ビット版が用意されています。 64ビット版のOSを使用し、64ビット版のJavaを実行している場合は、64ビット版のみを使用してください。
+      >これらのライブラリの32ビット版と64ビット版が提供されています。 64ビット版のOSを使用し、64ビット版のJavaを実行している場合は、64ビット版のみを使用してください。
 
-1. （オプション）Adobe Flash Media Rights Management Server(FMRMS)1.xとの互換性に関する機能については、開発システム `[DRM DVD]/SDK/adobe-flashaccess-lcrm.jar]` に次のコピーを作成します。
+1. （オプション）AdobeFlashメディアRights Managementサーバー(FMRMS)1.xとの互換性に関連する機能については、開発システムに`[DRM DVD]/SDK/adobe-flashaccess-lcrm.jar]`をコピーします。
 
-   これは、以前にFMRMS 1.xをデプロイし、FMRMSで保護されたコンテンツを再パッケージ化しない場合にのみ展開します。 この場合、古いコンテンツやクライアントを管理できるように、このサポートをライセンスサーバーに追加する必要があります。
+   これは、以前にFMRMS 1.xをデプロイしたが、FMRMSで保護されたコンテンツを再パッケージ化したくない場合にのみ展開してください。 この場合、古いコンテンツやクライアントを管理できるように、このサポートをライセンスサーバに追加する必要があります。

@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# ライセンスサーバーの構築 {#building-the-license-server}
+# ライセンスサーバーの構築{#building-the-license-server}
 
 リファレンス実装ライセンスサーバには、ライセンスサーバをデプロイするためのWARファイルが含まれています。 また、すべてのライセンスサーバーのソースコードとAntビルドスクリプト(Reference Implementation\Server\refimpl\build-refimpl.xml)も含まれているので、コードを簡単に変更できます。
 
@@ -19,4 +19,4 @@ ht-degree: 0%
 >
 >この手順は、ソースコードを変更する場合にのみ必要です。 評価のために、この手順をスキップし、出荷済みのWARファイルを使用できます。
 
-Antスクリプトを実行する前に、スクリプトを変更して、AdobeアクセスSDK、Tomcat、MySQL、およびLog4Jの場所を指定します。 テキストエディターでbuild-refimpl.xmlを開き、プロパティの値を編集し `sdkdir, tomcatdir, mysqldir, and log4jdir`ます。 ソースコードをコンパイルし、参照実装用のWARファイルを作成するには、Antスクリプトを含むディレクトリ `ant -f build-refimpl.xml all` でを使用してスクリプトを実行します。 スクリプトが完了すると、サーバーのWARファイルを含む [!DNL refimpl-build/wars] ディレクトリが作成されます。
+Antスクリプトを実行する前に、スクリプトを変更して、AdobeアクセスSDK、Tomcat、MySQL、およびLog4Jの場所を指定します。 build-refimpl.xmlをテキストエディターで開き、`sdkdir, tomcatdir, mysqldir, and log4jdir`プロパティの値を編集します。 ソースコードをコンパイルし、参照実装用のWARファイルを作成するには、Antスクリプトを含むディレクトリで`ant -f build-refimpl.xml all`を使用してスクリプトを実行します。 スクリプトが完了すると、サーバーのWARファイルを含む[!DNL refimpl-build/wars]ディレクトリが作成されます。

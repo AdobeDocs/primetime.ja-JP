@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # ログファイル{#log-files}
 
-保護されたストリーミングアプリケーション用にAdobe Access Serverが生成するログファイルは、LicenseServer.LogRoot *で指定されたディレクトリにあります*。
+保護されたストリーミングアプリケーション用にAdobe Access Serverが生成するログファイルは、*LicenseServer.LogRoot*&#x200B;で指定されたディレクトリにあります。
 
 >[!NOTE]
 >

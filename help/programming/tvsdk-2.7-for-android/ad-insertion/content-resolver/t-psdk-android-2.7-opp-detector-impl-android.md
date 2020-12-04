@@ -6,15 +6,18 @@ title: カスタムオポチュニティジェネレーターの実装
 uuid: 93d8253f-10f9-4950-a273-28975cb69caa
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '117'
+ht-degree: 3%
 
 ---
 
 
-# カスタムオポチュニティジェネレーターの実装 {#implement-a-custom-opportunity-generator}
+# カスタムオポチュニティジェネレーターの実装{#implement-a-custom-opportunity-generator}
 
 OpportunityGeneratorクラスを実装することで、独自のオポチュニティジェネレーターを実装できます。
 
-1. インターフェイスを実装し `ContentFactory` て上書きすることで、カ `ContentFactory` スタムを実装しま `retrieveGenerators`す。
+1. `ContentFactory`インターフェイスを実装し、`retrieveGenerators`をオーバーライドして、カスタム`ContentFactory`を実装します。
 
    例：
 
@@ -30,7 +33,7 @@ OpportunityGeneratorクラスを実装することで、独自のオポチュニ
    }
    ```
 
-1. をに登 `ContentFactory` 録します `MediaPlayer`。
+1. `ContentFactory`を`MediaPlayer`に登録します。
 
    例：
 
@@ -47,14 +50,14 @@ OpportunityGeneratorクラスを実装することで、独自のオポチュニ
    itemLoader.load(resource, id, config);
    ```
 
-1. クラスを実装するカスタムオポチュニティジェネレータークラスを作成 `OpportunityGenerator` します。
+1. `OpportunityGenerator`クラスを実装するカスタムオポチュニティジェネレータークラスを作成します。
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. カスタムオポチュニティジェネレーターで、上書き `doConfigure`および `doUpdate` 次の操作を行い `doCleanup`ます。
+   1. カスタムオポチュニティジェネレーターで、`doConfigure`、`doUpdate`および`doCleanup`をオーバーライドします。
 
       ```java
       @Override 
@@ -75,7 +78,7 @@ OpportunityGeneratorクラスを実装することで、独自のオポチュニ
       List<TimedMetadata> tList = getItem().getTimedMetadata(); 
       ```
 
-   1. またはのグ `TimedMetadata` ループごとに、 `TimedMetadata`次の属性を持つオポチュニティを作成します。
+   1. `TimedMetadata`または`TimedMetadata`の各グループに対して、次の属性を持つオポチュニティを作成します。
 
       ```java
       Opportunity( 
@@ -86,11 +89,11 @@ OpportunityGeneratorクラスを実装することで、独自のオポチュニ
       ); 
       ```
 
-   1. 作成された各オポチュニティに対して、を呼 `resolve` び出しま `OpportunityGeneratorClient:getClient().resolve(opportunity);`す。
+   1. オポチュニティを作成するたびに、`OpportunityGeneratorClient:getClient().resolve(opportunity);`で`resolve`を呼び出します。
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
-次に、カスタム配置オポチュニティディテクターの例を示します。
+次に、カスタム配置オポチュニティディテクターのサンプルを示します。
 
 ```java
 public class MyOpportunityGenerator implements OpportunityGenerator {

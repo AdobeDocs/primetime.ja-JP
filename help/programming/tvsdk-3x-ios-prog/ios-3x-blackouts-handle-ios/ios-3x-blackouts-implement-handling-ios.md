@@ -6,11 +6,14 @@ title: ブラックアウト処理の実装
 uuid: a447ff24-8386-4cae-878e-0859fb191de2
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 1%
 
 ---
 
 
-# ブラックアウト処理の実装 {#implement-blackout-handling}
+# ブラックアウト処理{#implement-blackout-handling}を実装
 
 TVSDKは、ブラックアウト期間を処理するためのAPIとサンプルコードを提供します。
 
@@ -27,7 +30,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. の通知リスナーを追加しま `PTTimedMetadataChangedNotification`す。
+1. 追加`PTTimedMetadataChangedNotification`の通知リスナーです。
 
    ```
    - (void)addobservers 
@@ -37,7 +40,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. フォアグラウンドのオブジェクトに対し `PTTimedMetadata` てリスナーメソッドを実装します。
+1. フォアグラウンドで`PTTimedMetadata`オブジェクトのリスナーメソッドを実装します。
 
    例：
 
@@ -61,7 +64,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. 再生中に `TimedMetadata` 一定の更新を行うオブジェクトを処理します。
+1. 再生中に一定の更新を行って`TimedMetadata`オブジェクトを処理します。
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +85,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. ハンドラーを追 `PTTimedMetadata` 加して、代替コンテンツに切り替え、オブジェクトとその再生時間で示されるメ `PTTimedMetadata` インコンテンツに戻るようにします。
+1. 代替コンテンツに追加切り替え、`PTTimedMetadata`オブジェクトに示されるメインコンテンツとその再生時間に戻る`PTTimedMetadata`ハンドラー。
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +200,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. バックグラウンドでオブジェクトの `PTTimedMetadata` リスナーメソッドを実装します。
+1. バックグラウンドで`PTTimedMetadata`オブジェクトのリスナーメソッドを実装します。
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 

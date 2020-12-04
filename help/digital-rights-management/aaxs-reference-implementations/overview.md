@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 概要 — リファレンス実装の使用 {#overview-using-the-reference-implementations}
+# 概要 — リファレンス実装の使用{#overview-using-the-reference-implementations}
 
 Adobeアクセス製品には、次のコンポーネントに関するリファレンス実装が付属しています。
 

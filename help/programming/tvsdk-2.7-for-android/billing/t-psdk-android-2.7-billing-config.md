@@ -1,18 +1,21 @@
 ---
-description: デフォルトの設定を使用する場合、課金を有効にしたり設定したりするために必要な操作は他にありません。 アドビの有効化担当者から別の設定パラメーターを取得した場合は、メディアプレイヤーを初期化する前に、BillingMetricsConfigurationクラスを使用してこれらのパラメーターを設定します。
-seo-description: デフォルトの設定を使用する場合、課金を有効にしたり設定したりするために必要な操作は他にありません。 アドビの有効化担当者から別の設定パラメーターを取得した場合は、メディアプレイヤーを初期化する前に、BillingMetricsConfigurationクラスを使用してこれらのパラメーターを設定します。
+description: デフォルト設定を使用する場合は、課金を有効にしたり設定したりする必要はありません。 Adobe有効化担当者から別の設定パラメーターを取得した場合は、メディアプレイヤーを初期化する前に、BillingMetricsConfigurationクラスを使用してこれらのパラメーターを設定します。
+seo-description: デフォルト設定を使用する場合は、課金を有効にしたり設定したりする必要はありません。 Adobe有効化担当者から別の設定パラメーターを取得した場合は、メディアプレイヤーを初期化する前に、BillingMetricsConfigurationクラスを使用してこれらのパラメーターを設定します。
 seo-title: 請求指標の設定
 title: 請求指標の設定
 uuid: d8656ab2-fdd8-4fe4-8578-a6c8ecd378e2
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
-# 請求指標の設定 {#configure-billing-metrics}
+# 請求指標の設定{#configure-billing-metrics}
 
-デフォルトの設定を使用する場合、課金を有効にしたり設定したりするために必要な操作は他にありません。 アドビの有効化担当者から別の設定パラメーターを取得した場合は、メディアプレイヤーを初期化する前に、BillingMetricsConfigurationクラスを使用してこれらのパラメーターを設定します。
+デフォルト設定を使用する場合は、課金を有効にしたり設定したりする必要はありません。 Adobe有効化担当者から別の設定パラメーターを取得した場合は、メディアプレイヤーを初期化する前に、BillingMetricsConfigurationクラスを使用してこれらのパラメーターを設定します。
 
 >[!TIP]
 >
@@ -20,11 +23,11 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 >[!IMPORTANT]
 >
->設定した設定は、メディアプレイヤーの使用期間中有効のままになります。 メディアプレイヤーを初期化した後は、設定を変更できません。
+>設定した設定は、メディアプレイヤーの使用期間中有効です。 メディアプレイヤーを初期化した後は、設定を変更できません。
 
 請求指標を設定するには：
 
-1. 次のコード例を入力します。
+1. 次のコードサンプルを入力します。
 
    ```java
    MediaPlayerItemConfig config = new MediaPlayerItemConfig(); 

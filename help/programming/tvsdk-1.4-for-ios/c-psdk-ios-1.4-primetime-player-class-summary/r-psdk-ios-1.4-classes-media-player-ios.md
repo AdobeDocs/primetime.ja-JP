@@ -6,11 +6,14 @@ title: Media Playerクラス
 uuid: 6b59dcff-9722-4a84-9049-f6f10f7b3e82
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 0%
 
 ---
 
 
-# Media Playerクラス {#media-player-classes}
+# メディアプレイヤクラス{#media-player-classes}
 
 Primetime Player Objective-C APIを使用して、プレイヤーの動作をカスタマイズできます。
 
@@ -33,7 +36,7 @@ Primetime Player Objective-C APIを使用して、プレイヤーの動作をカ
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTDefaultMediaPlayerClientFactory.html" format="html" scope="external"> PTDefaultMediaPlayerClientFactory</a></span> </td> 
-   <td colname="2"> TVSDKでのPTMediaPlayerClientFactoryのデフォ <span class="codeph"> ルト実装</span> 。 使用可能なPTOpportunityResolver <span class="codeph"> 、PTContentResolver</span>、 <span class="codeph"> PTAdPolicySelectorの各インスタン</span>スを提供します <span class="codeph"></span> 。 </td> 
+   <td colname="2"> TVSDKでの<span class="codeph"> PTMediaPlayerClientFactory</span>のデフォルト実装。 使用可能な<span class="codeph"> PTOpportunityResolver</span>、<span class="codeph"> PTContentResolver</span>、<span class="codeph"> PTAdPolicySelector</span>の各インスタンスを提供します。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html" format="html" scope="external"> PTMediaPlayer</a></span> </td> 
@@ -41,7 +44,7 @@ Primetime Player Objective-C APIを使用して、プレイヤーの動作をカ
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTMediaPlayerClientFactory.html" format="html" scope="external"> PTMediaPlayerClientFactory</a></span> </td> 
-   <td colname="2"> 使用可能なPTOpportunityResolver、PTContentResolver <span class="codeph"> 、PTAdPolicySelectorの各インスタンスを提供するために、カスタムメディアプレイヤークライアントファクトリが実装する</span> 必要があるメソッドを説明する <span class="codeph"></span><span class="codeph"></span> プロトコルです。 </td> 
+   <td colname="2"> 使用可能な<span class="codeph"> PTOpportunityResolver</span> 、<span class="codeph"> PTContentResolver</span>および<span class="codeph"> PTAdPolicySelector</span>インスタンスを提供するためにカスタムメディアプレイヤークライアントファクトリが実装する必要があるメソッドを記述するプロトコル。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayerItem.html" format="html" scope="external"> PTMediaPlayerItem</a></span> </td> 
@@ -49,15 +52,15 @@ Primetime Player Objective-C APIを使用して、プレイヤーの動作をカ
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayerView.html" format="html" scope="external"> PTMediaPlayerView</a></span> </td> 
-   <td colname="2"> Primetime Playerフレームワークのビューコンポーネントを管理します。 </td> 
+   <td colname="2"> Primetime Playerフレームワークの表示コンポーネントを管理します。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaProfile.html" format="html" scope="external"> PTMediaProfile</a></span> </td> 
-   <td colname="2"> バリアントプレイリスト内の単一ストリームのプロファイルを表します。 </td> 
+   <td colname="2"> バリアントプレイリストの単一ストリームのプロファイルを表します。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaSelectionOption.html" format="html" scope="external"> PTMediaSelectionOption</a></span> </td> 
-   <td colname="2">様々な言語設定、アクセシビリティ要件またはカスタムアプリケーション設定に対応する、オーディオビジュアルメディアリソースを表します。 有効なオプションの種類： 
+   <td colname="2">様々な言語設定、アクセシビリティ要件またはカスタムアプリケーション設定に対応するためのオーディオビジュアルメディアリソースを表します。 有効なオプションの種類： 
     <ul id="ul_p2q_gn2_2m"> 
      <li id="li_46BE5AE49732481FB6D336FFF896E5AD">サブタイトル(<span class="codeph"> PTMediaSelectionOptionTypeSubtitle</span>) </li> 
      <li id="li_6CEADCA12D4A48B7AE4A539985F32119">代替オーディオ(<span class="codeph"> PTMediaSelectionOptionTypeAudio</span>) </li> 
@@ -65,12 +68,12 @@ Primetime Player Objective-C APIを使用して、プレイヤーの動作をカ
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTOpportunityResolver.html" format="html" scope="external"> PTOpportunityResolverクラス</a> 、 </span><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolver.html" format="html" scope="external"></a> PTOpportunityResolverプロトコル</span> </td> 
-   <td colname="2"> Adobe Primetime ad decisioningプロセスの配置として使用されるマニフェスト内キューの処理に使用されるクラス。 </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTOpportunityResolver.html" format="html" scope="external"> PTOpportunityResolverclass、</a> </span>  <span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolver.html" format="html" scope="external"> </a> PTOpportunityResolverprotocol</span> </td> 
+   <td colname="2"> Adobe Primetimead decisioningプロセスの場所として使用されるマニフェスト内キューを処理するために使用されるクラス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolverDelegate.html" format="html" scope="external"> PTOpportunityResolverDelegate</a></span> </td> 
-   <td colname="2"> オポチュニティ解決のステータスを委譲する通信に、カスタムオポチュニテ <span class="codeph"> ィリゾルバー( PTOpportunityResolver</span> )が使用する必要があるメソッドを記述するプロトコル。 </td> 
+   <td colname="2"> オポチュニティ解決の状態を委譲するための通信にカスタムオポチュニティリゾルバー(<span class="codeph"> PTOpportunityResolver</span>)が使用する必要があるメソッドを記述するプロトコル。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTSDK.html" format="html" scope="external"> PTSDK</a></span> </td> 

@@ -2,13 +2,16 @@
 uuid: a03d9753-0133-4d37-8136-cad6c78645e4
 translation-type: tm+mt
 source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+workflow-type: tm+mt
+source-wordcount: '26'
+ht-degree: 0%
 
 ---
 
 
 # null {#no-title}
 
-Content Encryption Key Storage ID Content Encryption Key Storage ID(CEKSID)は、キー管理システムからコンテンツ暗号化キーを取得するためのIDです。
+Content Encryption KeyストレージID Content Encryption KeyストレージID(CEKSID)は、キー管理システムからコンテンツ暗号化キーを取得するためのIDです。
 
 ```
 :    

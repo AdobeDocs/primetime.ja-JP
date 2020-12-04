@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 概要 {#primetime-ad-server-metadata-overview}
+# 概要{#primetime-ad-server-metadata-overview}
 
 TVSDKは、VODおよびライブ/リニアストリームの広告の解決と挿入をサポートしています。
 
@@ -21,8 +21,8 @@ TVSDKは、VODおよびライブ/リニアストリームの広告の解決と�
 >
 >ビデオコンテンツに広告を含める前に、次のメタデータ情報を提供します。
 >
->* 再生する特定 `mediaID`のコンテンツを識別する。
->* 会社 `zoneID`またはWebサイトを識別するユーザー。
+>* 再生する特定のコンテンツを識別する`mediaID`。
+>* `zoneID`。会社またはWebサイトを識別します。
 >* 割り当てられた広告サーバーのドメインを指定する広告サーバードメイン。
 >* その他のターゲティングパラメーター。
 
@@ -30,13 +30,13 @@ TVSDKは、VODおよびライブ/リニアストリームの広告の解決と�
 
 
 
-## Primetime広告サーバーメタデータの設定 {#section_86C4A3B2DF124770B9B7FD2511394313}
+## Primetime広告サーバーメタデータの設定{#section_86C4A3B2DF124770B9B7FD2511394313}
 
-広告サーバーに接続するために必要な `PTAuditudeMetadata` 情報をTVSDKに提供する必要があります。
+広告サーバーに接続するために必要な`PTAuditudeMetadata`情報をTVSDKに提供する必要があります。
 
 広告サーバーのメタデータを設定するには：
 
-1. PTAuditudeMetadataのインスタンスを作成し [、そのプロパティを設定します](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) 。
+1. [PTAuditudeMetadata](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html)のインスタンスを作成し、そのプロパティを設定します。
 
    ```
    PTAuditudeMetadata *adMetadata = [[PTAuditudeMetadata alloc] init];  
@@ -46,7 +46,7 @@ TVSDKは、VODおよびライブ/リニアストリームの広告の解決と�
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. を使用して、 `PTAuditudeMetadata` インスタンスを現在のメタデータのメタデータとして設定し `PTMediaPlayerItem` ま `PTAdResolvingMetadataKey`す。
+1. `PTAdResolvingMetadataKey`を使用して、`PTAuditudeMetadata`インスタンスを現在の`PTMediaPlayerItem`メタデータのメタデータとして設定します。
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 
@@ -74,13 +74,13 @@ TVSDKは、VODおよびライブ/リニアストリームの広告の解決と�
    }
    ```
 
-## フルイベント再生での広告の有効化 {#section_6016E1DAF03645C8A8388D03C6AB7571}
+## フルイベント再生で広告を有効にする{#section_6016E1DAF03645C8A8388D03C6AB7571}
 
 フルイベント再生(FER)は、ライブ/DVRアセットとして機能するVODアセットなので、広告が正しく配置されていることを確認する手順をアプリケーションで実行する必要があります。
 
-ライブコンテンツの場合、TVSDKは、マニフェスト内のメタデータ/キューを使用して、広告を配置する場所を決定します。 ただし、ライブ/リニアコンテンツは、VODコンテンツに似ている場合があります。 例えば、ライブコンテンツが完了すると、ライブマニフェストに `EXT-X-ENDLIST` タグが追加されます。 HLSの場合、 `EXT-X-ENDLIST` タグは、ストリームがVODストリームであることを意味します。 TVSDKは、広告を正しく挿入するために、このストリームを通常のVODストリームと自動的に区別することはできません。
+ライブコンテンツの場合、TVSDKは、マニフェスト内のメタデータ/キューを使用して、広告を配置する場所を決定します。 ただし、ライブ/リニアコンテンツは、VODコンテンツに似ている場合があります。 例えば、ライブコンテンツが完了すると、ライブマニフェストに`EXT-X-ENDLIST`タグが追加されます。 HLSの場合、`EXT-X-ENDLIST`タグは、ストリームがVODストリームであることを意味します。 TVSDKは、広告を正しく挿入するために、このストリームを通常のVODストリームと自動的に区別することはできません。
 
-アプリケーションで、コンテンツがライブかVODかをTVSDKに通知する必要があります。それには、 `PTAdSignalingMode`
+アプリケーションは、TVSDKに対して、コンテンツがライブかVODかを`PTAdSignalingMode`を指定して通知する必要があります。
 
 FERストリームの場合、再生を開始する前にタイムラインに挿入する必要がある広告の時間のリストは、Adobe Primetimead decisioningサーバーで提供しないでください。 これは、VODコンテンツの一般的なプロセスです。 代わりに、別のシグナリングモードを指定することで、TVSDKは、FERマニフェストからすべてのキューポイントを読み取り、各キューポイントの広告サーバーに移動して広告の時間をリクエストします。 このプロセスは、ライブ/DVRコンテンツと似ています。
 
@@ -88,11 +88,11 @@ FERストリームの場合、再生を開始する前にタイムラインに�
 
 1. vCMSなどの外部ソースから、使用する必要があるシグナリングモードを取得します。
 1. 広告関連のメタデータを作成します。
-1. デフォルトの動作を上書きする必要がある場合は、を使用 `PTAdSignalingMode` してを指定し `PTAdMetadata.signalingMode`ます。
+1. デフォルトの動作を上書きする必要がある場合は、`PTAdMetadata.signalingMode`を使用して`PTAdSignalingMode`を指定します。
 
-   有効な値は、 `PTAdSignalingModeDefault`、 `PTAdSignalingModeManifestCues`および `PTAdSignalingModeServerMap`です。
+   有効な値は`PTAdSignalingModeDefault`、`PTAdSignalingModeManifestCues`、`PTAdSignalingModeServerMap`です。
 
-   呼び出す前に、広告シグナリングモードを設定する必要があり `prepareToPlay`ます。 TVSDK開始が広告を解決してタイムラインに配置した後、広告シグナリングモードに対する変更は無視されます。 広告シグナリングモードは、リソースの広告メタデータを作成するときに設定します。
+   `prepareToPlay`を呼び出す前に、広告シグナリングモードを設定する必要があります。 TVSDK開始が広告を解決してタイムラインに配置した後、広告シグナリングモードに対する変更は無視されます。 広告シグナリングモードは、リソースの広告メタデータを作成するときに設定します。
 
 1. 再生を続けます。
 

@@ -13,16 +13,16 @@ ht-degree: 0%
 ---
 
 
-# サーバープロパティファイルのパスワードの準備{#prepare-passwords-for-the-server-properties-files}
+# サーバーのプロパティファイル{#prepare-passwords-for-the-server-properties-files}のパスワードを準備します
 
-参照実装は、秘密鍵証明書 `ScrambleUtil.class`のパスワードをセキュリティで保証するクラスを提供します。
+参照実装は、`ScrambleUtil.class`を提供します。これは、秘密鍵証明書のパスワードをセキュリティで保証するクラスです。
 
-このツールを使用して、パスワードを [!DNL flashaccess-refimpl.properties] ファイルに含める前に暗号化します。
+パスワードを[!DNL flashaccess-refimpl.properties]ファイルに含める前に、このツールを使用してパスワードを暗号化します。
 
 ツールを実行するには、AntスクリプトまたはJavaスクリプトを使用できます。
 
-暗号化されたパスワードはユーティリティによって生成され、 [!DNL flashaccess-refimpl.properties] ファイルにコピーする必要があります。
+ユーティリティは暗号化されたパスワードを生成します。このパスワードは[!DNL flashaccess-refimpl.properties]ファイルにコピーする必要があります。
 
 >[!NOTE]
 >
->参照実装で指定されたパスワードを使用 `ScrambleUtil.class` してエンコードされたパスワードは、保護されたストリーミング用のPrimetime DRMサーバーでは機能しません。
+>参照実装で指定された`ScrambleUtil.class`でエンコードされたパスワードは、保護ストリーミング用のPrimetime DRMサーバーでは機能しません。

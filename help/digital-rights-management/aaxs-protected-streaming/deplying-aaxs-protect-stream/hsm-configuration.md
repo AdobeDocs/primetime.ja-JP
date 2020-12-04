@@ -4,23 +4,26 @@ title: HSMの設定
 uuid: da4d7118-65a8-460d-a796-b7bf5c28b208
 translation-type: tm+mt
 source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
+workflow-type: tm+mt
+source-wordcount: '142'
+ht-degree: 0%
 
 ---
 
 
-# HSMの設定 {#hsm-configuration}
+# HSM設定{#hsm-configuration}
 
-HSMを使用してサーバー秘密鍵証明書を保存する場合は、秘密鍵と証明書をHSMに読み込んで、設定ファイルを作成する必要が [!DNL pkcs11.cfg] あります。 このファイルは、 *LicenseServer.ConfigRootディレクトリ内に存在する必要があります* 。 PKCS11設定ファ [!DNL Adobe Access Server for Protected Streaming/configs] イルの例については、Adobe Access DVDのディレクトリを参照してください。 の形式について詳しくは、Sun PKCS11 [!DNL pkcs11.cfg]プロバイダのドキュメントを参照してください。
+HSMを使用してサーバーの秘密鍵証明書を保存する場合は、秘密鍵と証明書をHSMに読み込んで、[!DNL pkcs11.cfg]設定ファイルを作成する必要があります。 このファイルは、*LicenseServer.ConfigRoot*&#x200B;ディレクトリに存在する必要があります。 AdobeアクセスDVDの[!DNL Adobe Access Server for Protected Streaming/configs]ディレクトリを参照して、PKCS11設定ファイルの例を確認してください。 [!DNL pkcs11.cfg]の形式について詳しくは、Sun PKCS11プロバイダーのドキュメントを参照してください。
 
-HSMおよびSun PKCS11の設定ファイルが正しく設定されていることを確認するには、ファイルが存在するディレクトリ（Java JREおよびJDKと共にインストールされている）から次のコマンドを [!DNL pkcs11.cfg][!DNL keytool] 使用します。
+HSMおよびSun PKCS11の設定ファイルが正しく設定されていることを確認するには、[!DNL pkcs11.cfg]ファイルが存在するディレクトリ（[!DNL keytool]はJava JREおよびJDKと共にインストールされています）から次のコマンドを使用します。
 
 ```
 keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 
   -providerArg pkcs11.cfg -list
 ```
 
-秘密鍵証明書がリストに表示される場合は、HSMが適切に設定され、ライセンスサーバーが秘密鍵証明書にアクセスできるようになります。
+リストに秘密鍵証明書が表示されている場合、HSMが正しく設定され、ライセンスサーバーがその秘密鍵証明書にアクセスできるようになります。
 
 >[!NOTE]
 >
->Adobe Access Server for Protected Streamingは、現在、64ビットWindows OS上のHSMをサポートしていません。
+>保護されたストリーミング用のAdobeアクセスサーバーは、現在、64ビットWindows OS上のHSMをサポートしていません。

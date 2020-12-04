@@ -6,19 +6,22 @@ title: コマンドラインツール設定ファイルについて
 uuid: 8220921f-1fe9-439c-8134-dc16c2e3601b
 translation-type: tm+mt
 source-git-commit: 0143d98185b9a63ef978aba18e2f3c8728333155
+workflow-type: tm+mt
+source-wordcount: '146'
+ht-degree: 0%
 
 ---
 
 
-# コマンドラインツール設定ファイルについて{#about-command-line-tools-configuration-files}
+# コマンドラインツール構成ファイルについて{#about-command-line-tools-configuration-files}
 
-コマンドラインツールは、ツールを実行 [!DNL flashaccesstools.properties] したディレクトリ内を検索します。 ただし、コマンドラインツー `-c` ルの実行時にこのオプションを使用して、デフォルトの別の場所を指定できま [!DNL flashaccesstools.properties]す。 を使用して、別の設定フ `-c` ァイルを指定することもできます。
+コマンドラインツールは、ツールを実行するディレクトリ内の[!DNL flashaccesstools.properties]を探します。 ただし、コマンドラインツールを実行する際に`-c`オプションを使用して、デフォルトの[!DNL flashaccesstools.properties]とは異なる場所を指定できます。 `-c`を使用して別の設定ファイルを指定することもできます。
 
-コマンドラインツールの設定ファイルは、 *Javaプロパティファイルの形式を使用し* 、次のルールが適用されます。
+コマンドラインツールの構成ファイルは、*Javaプロパティファイル*&#x200B;の形式を使用します。この形式には、次のルールが適用されます。
 
-* バックスラッシュを追加してエスケープします。
+* 円記号を追加した円記号で円記号をエスケープします。
 
-   例えば、Windowsマシンでは、ファイルを指定す [!DNL C:\credentials.pfx] るには、またはと入力する必要があ [!DNL C:\\credentials.pfx] ります `C:/credentials.pfx`。 Windowsネットワークサーバー上のファイルを指定するには、 `\\\\server\\folder\\filename.pfx`
-* Latin-1文字 *のみ含め* ます。
+   例えば、Windowsマシンでは、[!DNL C:\credentials.pfx]ファイルを指定するには、[!DNL C:\\credentials.pfx]または`C:/credentials.pfx`と入力する必要があります。 Windowsネットワークサーバー上のファイルを指定するには、`\\\\server\\folder\\filename.pfx`と入力する必要があります。
+* *Latin-1*&#x200B;文字のみを含めます。
 
-   Latin-1以外の文字を使用す&#x200B;*るには* 、適切なUnicodeエスケープシーケンスを使用する必要があります。 オプションで、（Javaに付属の）ツ [!DNL native2ascii] ールを設定ファイルのエントリに適用することもできます。
+   *Latin-1*&#x200B;以外の文字を使用するには、適切なUnicodeエスケープシーケンスを使用する必要があります。 必要に応じて、[!DNL native2ascii]ツール（Javaに付属）を設定ファイルのエントリに適用できます。

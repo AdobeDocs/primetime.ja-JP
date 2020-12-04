@@ -1,49 +1,52 @@
 ---
-description: Video Player Ad-Serving Interface Definition(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアエクスペリエンスを提供し、広告のターゲット設定、広告インプレッションの追跡、ビデオコンテンツの収益化をより良く行うことができます。
-seo-description: Video Player Ad-Serving Interface Definition(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアエクスペリエンスを提供し、広告のターゲット設定、広告インプレッションの追跡、ビデオコンテンツの収益化をより良く行うことができます。
+description: ビデオプレーヤー広告配信インターフェイス定義(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアの操作性を提供し、発行者はターゲット広告の改善、広告インプレッションの追跡、ビデオコンテンツの収益化を行うことができます。
+seo-description: ビデオプレーヤー広告配信インターフェイス定義(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアの操作性を提供し、発行者はターゲット広告の改善、広告インプレッションの追跡、ビデオコンテンツの収益化を行うことができます。
 seo-title: VPAID 2.0広告のサポート
 title: VPAID 2.0広告のサポート
 uuid: 7168a6e4-9c5e-4d3a-8710-867cf98e4445
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '423'
+ht-degree: 0%
 
 ---
 
 
-# VPAID 2.0広告のサポート {#vpaid-ad-support}
+# VPAID 2.0広告のサポート{#vpaid-ad-support}
 
-Video Player Ad-Serving Interface Definition(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアエクスペリエンスを提供し、広告のターゲット設定、広告インプレッションの追跡、ビデオコンテンツの収益化をより良く行うことができます。
+ビデオプレーヤー広告配信インターフェイス定義(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアの操作性を提供し、発行者はターゲット広告の改善、広告インプレッションの追跡、ビデオコンテンツの収益化を行うことができます。
 
 次の機能がサポートされています。
 
 * VPAID仕様のバージョン2.0
 
-   詳しくは、 [IAB VPAID 2.0を参照してください](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf)。
+   詳しくは、[IAB VPAID 2.0](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf)を参照してください。
 * ビデオオンデマンド(VOD)コンテンツのリニアVPAID広告
 * JavaScript VPAID広告
 
-   VPAID広告はJavaScriptベースで、広告応答はVPAID広告のメディアタイプを識別する必要があります `application/javascript`。
+   VPAID広告はJavaScriptベースである必要があり、広告応答はVPAID広告のメディアタイプを`application/javascript`として識別する必要があります。
 
 次の機能はサポートされていません。
 
 * VPAID仕様のバージョン1.0
 * スキップ可能な広告
-* オーバーレイ広告、動的コンパニオン広告、最小化可能な広告、折りたたみ可能な広告、展開可能な広告など、ノンリニア広告
+* オーバーレイ広告、動的コンパニオン広告、最小化可能な広告、折りたたみ可能な広告、展開可能な広告などのノンリニア広告
 * VPAID広告のプリロード
-* ライブコンテンツのVPAID広告
-* Flash VPAID広告
+* ライブコンテンツ内のVPAID広告
+* FlashVPAID広告
 
-## APIの変更 {#section_D62F3E059C6C493592D34534B0BFC150}
+## APIの変更{#section_D62F3E059C6C493592D34534B0BFC150}
 
-APIに対して次の変更が行われました。
+APIに次の変更が加えられました。
 
-* 関数が `getCustomAdView` に追加され、VPAID広告をレ `MediaPlayer` ンダリングするWebビューを返すようになりました。
+* `getCustomAdView`関数が`MediaPlayer`に追加され、VPAID広告をレンダリングするWeb表示ーを返します。
 
-   この関数によって返されるオ `CustomAdView` ブジェクトについて詳しくは、 [APIリファレンスを参照してください](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/index.html)。
+   この関数から返される`CustomAdView`オブジェクトについて詳しくは、[APIリファレンス](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/index.html)を参照してください。
 
-* イベント `CUSTOM_AD` は、メディアプレイヤーインスタンスからディスパッチされます。
+* `CUSTOM_AD`イベントがメディアプレイヤーインスタンスからディスパッチされます。
 
-   アプリケーションは、を実装することでイベントコールバックを登録できま `CustomAdEventListener`す。
+   アプリケーションは、`CustomAdEventListener`を実装することでイベントコールバックを登録できます。
 
 * `MediaPlayer.setCustomAdTimeout(int milliseconds)` VPAID読み込みプロセスのデフォルトのタイムアウトを変更できます。
 
@@ -53,26 +56,26 @@ APIに対して次の変更が行われました。
 
 VPAID広告の再生中：
 
-* VPAID広告は、プレイヤービューの上のビューコンテナに表示されるので、ユーザーがプレーヤービューをタップしたことに依存するコードは機能しません。
-* メインコンテンツプレイヤーが一時停止し、プレイヤーイ `pause` ンスタンス `play` に対する呼び出しと呼び出しを使用して、VPAID広告を一時停止および再開します。
+* VPAID広告は、プレイヤー表示の上の表示コンテナに表示されるので、プレイヤー表示でのユーザーによるタップに依存するコードは機能しません。
+* メインコンテンツプレイヤーが一時停止し、プレイヤーインスタンスの`pause`と`play`の呼び出しを使用して、VPAID広告を一時停止および再開します。
 
-* VPAID広告はインタラクティブになるので、VPAID広告の期間は事前に定義されていません。
+* VPAID広告には、インタラクティブな広告が含まれる可能性があるので、広告の長さは事前に定義されたものではありません。
 
-   広告サーバーの応答で定義される広告の時間と合計広告の時間の時間は、正確でない場合があります。
+   広告サーバーの応答で定義される広告の継続時間と広告の時間の合計の継続時間は、正確でない場合があります。
 
-## VPAID 2.0統合の実装 {#implement-vpaid-integration}
+## VPAID 2.0統合の実装{#implement-vpaid-integration}
 
-VPAID 2.0サポートを追加するには、カスタム広告ビューと適切なリスナーを追加します。
+VPAID 2.0サポートを追加するには、カスタム広告表示と適切なリスナーを追加します。
 
 VPAID 2.0サポートを追加するには：
 
-1. カスタム広告ビューをプレーヤーインターフェイスに追加します。
+1. プレ追加イヤーインターフェイスへのカスタム広告表示。
 
    ```java
    _playerFrame.addView(mediaPlayer.createCustomAdView());
    ```
 
-1. カスタム広告イベントのリスナーを追加します。
+1. カスタム広告イベント追加のリスナー。
 
    ```java
    mediaplayer.addEventListener(MediaPlayer.Event.CUSTOM_AD,  

@@ -4,16 +4,19 @@ title: Java APIを使用したDRMポリシーの作成
 uuid: 1672a6d0-e38c-4330-97b0-02147f99db47
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
 
-# Java APIを使用したDRMポリシーの作成 {#creating-a-drm-policy-with-the-java-api}
+# Java API {#creating-a-drm-policy-with-the-java-api}を使用したDRMポリシーの作成
 
 Java APIを使用してDRMポリシーを作成するには：
 
-1. 開発環境を設定し、「開発環境の設定」に記載されているすべてのJARファイルをプロ [ジェクトに含めます](../../protecting-content/setting-up-the-sdk/setup-dev-env.md)。
-1. オブジェクト `com.adobe.flashaccess.sdk.policy.Policy` を作成し、権限、ライセンスキャッシュ期間、DRMポリシーの終了日などのプロパティを指定します。
+1. 開発環境を設定し、プロジェクトに[開発環境の設定に記載されているすべてのJARファイルを含めます。](../../protecting-content/setting-up-the-sdk/setup-dev-env.md)
+1. `com.adobe.flashaccess.sdk.policy.Policy`オブジェクトを作成し、権限、ライセンスキャッシュ期間、DRMポリシーの終了日など、そのプロパティを指定します。
 
    ```java
    // Create a new DRM policy object.  
@@ -48,7 +51,7 @@ Java APIを使用してDRMポリシーを作成するには：
    } 
    ```
 
-1. DRMオブジェクトをシ `Policy` リアライズし、ファイルまたはデータベースに保存します。
+1. DRM `Policy`オブジェクトをシリアル化し、ファイルまたはデータベースに保存します。
 
    ```java
    // Serialize the DRM policy  
@@ -62,4 +65,4 @@ Java APIを使用してDRMポリシーを作成するには：
    out.close(); 
    ```
 
-このサン [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] プルコードの完全なソースについては、Reference Implementation Command Line Tools [!DNL samples] ディレクトリのを参照してください。
+このサンプルコードの完全なソースについては、リファレンス実装のコマンドラインツール[!DNL samples]ディレクトリの[!DNL com.adobe.flashaccess.samples.policy.CreatePolicy]を参照してください。

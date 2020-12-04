@@ -1,26 +1,29 @@
 ---
 description: VODコンテンツに広告を挿入できます。
 seo-description: VODコンテンツに広告を挿入できます。
-seo-title: 時間範囲を広告に置換
-title: 時間範囲を広告に置換
+seo-title: 時間範囲の広告への置換
+title: 時間範囲の広告への置換
 uuid: 50cdcc06-7df5-414b-95d4-c684bc68dce3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '107'
+ht-degree: 0%
 
 ---
 
 
-# 時間範囲を広告に置換{#replace-time-ranges-with-an-ad}
+# 時間範囲を広告{#replace-time-ranges-with-an-ad}に置換
 
 VODコンテンツに広告を挿入できます。
 
-この場合、との間の `TimeRanges` がタイ `begin` ムラ `end` インか `localTime` ら削除されます。 これらは、「」「」「」「」「」「」に置き換 `AdBreak` えら `begin` れま `begin+replaceDuration`す。 置換期間がパラメーターとして存在しない場合、サーバーは返されたAdbreakに対して判断を行います。
+この場合、`localTime`の`begin`と`end`の間の`TimeRanges`は、タイムラインから削除されます。 これらは、`begin`の`AdBreak`から`begin+replaceDuration`に置き換えられます。 置き換え時間がパラメーターとして存在しない場合、サーバーは返されたAdbreakに対して判定を行います。
 
 >[!NOTE]
 >
->カスタム範囲に対しては、必ず特定の置換期間を指定する必要があります。 このカスタム範囲を置き換える広告がない場合は、置き換え期間を0にします。
+>カスタム範囲に対しては、必ず特定の置き換え時間を指定する必要があります。 このカスタム範囲を置き換える広告がない場合は、置き換え時間を0にします。
 
-範囲をPrimetime ad decisioning広告に置き換えます。
+範囲をPrimetime ad decisioningの広告に置き換えます。
 
 ```
 {   

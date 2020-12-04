@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# 概要 {#overview}
+# 概要{#overview}
 
-*「パッケージ化* 」とは、ポリシーを暗号化し、FLVまたはF4Vファイルに適用するプロセスを指します。 メディアパッケージAPIを使用してファイルをパッケージ化します。 AdobeアクセスJava SDKでパッケージ化できるのは、プログレッシブダウンロードFlashおよびAIRコンテンツ（FLV、F4V、MP4など）のみです。 AdobeHTTP Dynamic Streaming(HDS)やApple HTTP Live Streaming(HLS)など、他のコンテンツ形式用にAdobeアクセスDRMを使用してコンテンツをパッケージ化するには、Adobeメディアサーバー( [https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html))や、AdobeブロードキャストSDK( [https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf))を実装するエンコーダーなどの他のツールを使用する必要があります。 また、お客様は、AdobeのJava Primetime Packagerツールセットを使用して、HDS、HLS、DASHなどの様々なターゲット形式にコンテンツをパッケージ化できます。
+** パッケージ化とは、ポリシーを暗号化し、FLVまたはF4Vファイルに適用するプロセスです。メディアパッケージAPIを使用してファイルをパッケージ化します。 AdobeアクセスJava SDKでパッケージ化できるのは、プログレッシブダウンロードFlashおよびAIRコンテンツ（FLV、F4V、MP4など）のみです。 AdobeHTTP Dynamic Streaming(HDS)やApple HTTP Live Streaming(HLS)など、他のコンテンツ形式用にAdobeアクセスDRMを使用してコンテンツをパッケージ化するには、Adobeメディアサーバー([https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html))や、AdobeブロードキャストSDKを実装するエンコーダー([https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf&lt;a3)などのツールを使用する必要があります>)。 ](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf)また、お客様は、AdobeのJava Primetime Packagerツールセットを使用して、HDS、HLS、DASHなどの様々なターゲット形式にコンテンツをパッケージ化できます。
 
 パッケージは、ライセンスサーバーから分離されます。 パッケージャーがライセンスサーバーに接続してコンテンツに関する情報を交換する必要はありません。 ライセンスの発行に必要なライセンスサーバーの知識がすべて、コンテンツのメタデータに含まれます。
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 >
 >このアーキテクチャにより、コンテンツをパッケージ化する際に、使用ポリシーを指定し、コンテンツに連結することができます。 クライアントがコンテンツを再生する前に、クライアントはそのコンピューターのライセンスを取得する必要があります。 ライセンスでは、適用される使用規則が指定され、コンテンツの復号化に使用されるキーが提供されます。 ポリシーはライセンスを生成するためのテンプレートですが、ライセンスを発行する際に、ライセンスサーバが使用規則を上書きするように選択する場合があります。 有効期限や再生ウィンドウなどの制約によって、ライセンスが無効になる場合があります。
 
-コンテンツをパッケージ化する場合は、多数のオプションを使用できます。 これらは、インター `DRMParameters` フェイスと、そのインターフェイスを実装するクラス（および）で指定 `F4VDRMParameters` され `FLVDRMParameters`ます。 これらのクラスを使用して、署名とキーのパラメーターを設定でき、オーディオコンテンツ、ビデオコンテンツまたはスクリプトデータを暗号化するかどうかを指定できます。 リファレンスの実装でこれらの機能がどのように実装されているかを確認するには、『Adobeアクセスリファレンスの実装の *使用*』で説明されているMedia Packagerのコマンドラインオプションの説明を参照してください。 これらのオプションはJava APIに基づいているので、プログラム的に使用することができます。
+コンテンツをパッケージ化する場合は、多数のオプションを使用できます。 これらは`DRMParameters`インターフェイスと、そのインターフェイスを実装するクラス（`F4VDRMParameters`と`FLVDRMParameters`）で指定されます。 これらのクラスを使用して、署名とキーのパラメーターを設定でき、オーディオコンテンツ、ビデオコンテンツまたはスクリプトデータを暗号化するかどうかを指定できます。 リファレンス実装での実装方法を確認するには、Media Packagerのコマンドラインオプションの説明を参照してください。詳しくは、「*Adobeアクセスリファレンス実装の使用*」を参照してください。 これらのオプションはJava APIに基づいているので、プログラム的に使用することができます。
 
 パッケージのオプションは次のとおりです。
 
@@ -35,12 +35,12 @@ ht-degree: 0%
 * CEKの暗号化に使用するライセンスサーバー証明書。
 * メタデータに署名するPackagerの資格情報
 
-Adobeアクセスは、CEKに渡すためのAPIを提供します。 CEKが指定されていない場合、SDKがランダムに生成します。 通常、コンテンツの各部分に異なるCEKが必要です。 ただし、Dynamic Streamingでは、そのコンテンツのすべてのファイルに同じCEKを使用する可能性が高いので、必要なライセンスは1つだけで、ビットレート間のトランジションをシームレスに行うことができます。 同じキーとライセンスを複数のコンテンツで使用するには、を使用して同じ `DRMParameters` オブジェクトをCEKに渡す `MediaEncrypter.encryptContent()`か、CEKで渡し `V2KeyParameters.setContentEncryptionKey()`ます。 コンテンツの各部分に異なるキーとライセンスを使用するには、ファイルごとに新しい `DRMParameters` インスタンスを作成します。
+Adobeアクセスは、CEKに渡すためのAPIを提供します。 CEKが指定されていない場合、SDKがランダムに生成します。 通常、コンテンツの各部分に異なるCEKが必要です。 ただし、Dynamic Streamingでは、そのコンテンツのすべてのファイルに同じCEKを使用する可能性が高いので、必要なライセンスは1つだけで、ビットレート間のトランジションをシームレスに行うことができます。 複数のコンテンツに同じキーとライセンスを使用するには、同じ`DRMParameters`オブジェクトを`MediaEncrypter.encryptContent()`に渡すか、`V2KeyParameters.setContentEncryptionKey()`を使用してCEKで渡します。 コンテンツの各部分に異なるキーとライセンスを使用するには、各ファイルに新しい`DRMParameters`インスタンスを作成します。
 
-キー回転を使用してコンテンツをパッケージ化する場合、使用する回転キーとキーの変更頻度を制御できます。 `F4VDRMParameters` インターフェイスを `FLVDRMParameters` 実装し `KeyRotationParameters` ます。 このインターフェイスを使用して、キーの回転を有効にできます。 また、を指定する必要があり `RotatingContentEncryptionKeyProvider`ます。 暗号化された各サンプルに対して、使用する回転キーを決定するクラスです。 独自のプロバイダーを実装することも、SDKに含ま `TimeBasedKeyProvider` れるプロバイダーを使用することもできます。 この実装では、指定した秒数の経過後、ランダムに新しいキーが生成されます。
+キー回転を使用してコンテンツをパッケージ化する場合、使用する回転キーとキーの変更頻度を制御できます。 `F4VDRMParameters` インター `FLVDRMParameters` フェイスを `KeyRotationParameters` 実装します。このインターフェイスを使用して、キーの回転を有効にできます。 また、`RotatingContentEncryptionKeyProvider`を指定する必要があります。 暗号化された各サンプルに対して、使用する回転キーを決定するクラスです。 独自のプロバイダーを実装するか、SDKに含まれる`TimeBasedKeyProvider`を使用します。 この実装では、指定した秒数の経過後、ランダムに新しいキーが生成されます。
 
-場合によっては、コンテンツのメタデータを別のファイルとして保存し、コンテンツとは別のクライアントでメタデータを使用できるようにする必要があります。 これを行うには、を呼び出し `MediaEncrypter.encryptContent()`て、 `MediaEncrypterResult` オブジェクトを返します。 を呼び出 `MediaEncrypterResult.getKeyInfo()` し、結果をにキャストし `V2KeyStatus`ます。 次に、コンテンツのメタデータを取得し、ファイルに保存します。
+場合によっては、コンテンツのメタデータを別のファイルとして保存し、コンテンツとは別のクライアントでメタデータを使用できるようにする必要があります。 これを行うには、`MediaEncrypter.encryptContent()`を呼び出し、`MediaEncrypterResult`オブジェクトを返します。 `MediaEncrypterResult.getKeyInfo()`を呼び出し、結果を`V2KeyStatus`にキャストします。 次に、コンテンツのメタデータを取得し、ファイルに保存します。
 
-これらのタスクはすべてJava APIを使用して実行できます。 この章で説明するJava APIについて詳しくは、『 *AdobeアクセスAPIリファレンス*』を参照してください。
+これらのタスクはすべてJava APIを使用して実行できます。 この章で説明するJava APIについて詳しくは、「*AdobeアクセスAPIリファレンス*」を参照してください。
 
-Media Packagerのリファレンス実装について詳しくは、『Adobeアクセスリファレンス実装の *使用*』を参照してください。
+Media Packagerのリファレンス実装について詳しくは、「*Adobeアクセスリファレンス実装の使用*」を参照してください。

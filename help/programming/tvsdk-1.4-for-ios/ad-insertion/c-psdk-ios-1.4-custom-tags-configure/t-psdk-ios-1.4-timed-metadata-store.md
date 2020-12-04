@@ -6,28 +6,31 @@ title: ディスパッチ時の時間指定メタデータオブジェクトの�
 uuid: d26ed49e-fb29-4765-86e9-9ebbe5fa0a2b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
 
-# ディスパッチ時の時間指定メタデータオブジェクトの格納 {#store-timed-metadata-objects-as-they-are-dispatched}
+# ディスパッチ時の時間指定メタデータオブジェクトの保存{#store-timed-metadata-objects-as-they-are-dispatched}
 
 アプリケーションは、適切なPTTimedMetadataオブジェクトを適切なタイミングで使用する必要があります。
 
-再生前に発生するコンテンツの解析中に、TVSDKはサブスクライブされたタグを識別し、これらのタグをアプリケーションに通知します。 各時間に関連付けられる時間は、再 `PTTimedMetadata` 生タイムラインの絶対時間です。
+再生前に発生するコンテンツ解析中に、TVSDKはサブスクライブされたタグを識別し、これらのタグをアプリケーションに通知します。 各`PTTimedMetadata`に関連付けられる時間は、再生タイムラインでの絶対時間です。
 
 アプリケーションは、次のタスクを実行する必要があります。
 
 1. 現在の再生時間を追跡します。
-1. 現在の再生時間を、ディスパッチされるオブジェクトに一致さ `PTTimedMetadata` せます。
+1. 現在の再生時間を、ディスパッチされた`PTTimedMetadata`オブジェクトと一致させます。
 
-1. 開始時間が `PTTimedMetadata` 現在の再生時間と等しい場所を使用します。
+1. `PTTimedMetadata`は、開始時間が現在の再生時間と等しい場合に使用します。
 
    >[!NOTE]
    >
-   >以下のコードは、一度に1つのインスタンスしか存在しな `PTTimedMetadata` いことを前提としています。 複数のインスタンスがある場合、アプリケーションはそれらを適切に辞書に保存する必要があります。 1つの方法は、特定の時間に配列を作成し、その配列にすべてのインスタンスを格納することです。
+   >以下のコードでは、`PTTimedMetadata`インスタンスが一度に1つしか存在しないと想定しています。 複数のインスタンスがある場合は、アプリケーションでそれらを辞書に適切に保存する必要があります。 1つの方法は、特定の時間に配列を作成し、その配列内のすべてのインスタンスを格納することです。
 
-   次の例は、各の開始時間でキ `PTTimedMetadata` ーを設定し `NSMutableDictionary (timedMetadataCollection)` たオブジェクトを保存する方法を示しま `timedMetadata`す。
+   次の例は、各`timedMetadata`の開始時間にキーを設定した`NSMutableDictionary (timedMetadataCollection)`に`PTTimedMetadata`オブジェクトを保存する方法を示しています。
 
    ```
    NSMutableDictionary *timedMetadataCollection; 
@@ -52,9 +55,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    }
    ```
 
-## ニールセンID3タグの解析 {#example_3B51E9D4AF2449FAA8E804206F873ECF}
+## Nielsen ID3タグを解析中{#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-解析用にID3タグを抽出するには、次の方法を使用し `onMediaPlayerSubscribedTagIdentified` ます。
+ID3タグを解析用に抽出するには、`onMediaPlayerSubscribedTagIdentified`メソッドで次の構文を使用します。
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 
@@ -67,7 +70,7 @@ Unknown macro: { PTMetadata *metadata = (PTMetadata *)timedMetadata; NSString * 
 }
 ```
 
-ID3タグを解析した後、次を使用して、ニールセン固有のメタデータを抽出します。
+ID3タグの解析後、次の構文を使用して、ニールセン固有のメタデータを抽出します。
 
 ```
     (NSString *)parseNielsenUrlFromID3Tag:(NSString *)str 

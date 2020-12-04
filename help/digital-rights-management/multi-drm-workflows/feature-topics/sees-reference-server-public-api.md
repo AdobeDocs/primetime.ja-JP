@@ -1,26 +1,29 @@
 ---
-description: エンタイトルメントの要求と応答は、ライセンスサーバーと顧客のエンタイトルメントサービスとの間の相互に認証されたSSL接続を介して渡されます。
-seo-description: エンタイトルメントの要求と応答は、ライセンスサーバーと顧客のエンタイトルメントサービスとの間の相互に認証されたSSL接続を介して渡されます。
+description: エンタイトルメントのリクエストと応答は、ライセンスサーバーとお客様のエンタイトルメントサービスの間の相互に認証されたSSL接続を介して渡されます。
+seo-description: エンタイトルメントのリクエストと応答は、ライセンスサーバーとお客様のエンタイトルメントサービスの間の相互に認証されたSSL接続を介して渡されます。
 seo-title: パブリックAPIを参照
 title: パブリックAPIを参照
 uuid: f3a17d61-04ee-4bdb-9d64-a98066c6d1c8
 translation-type: tm+mt
 source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
+workflow-type: tm+mt
+source-wordcount: '179'
+ht-degree: 0%
 
 ---
 
 
-# パブリックAPIを参照 {#sees-public-api}
+# パブリックAPI {#sees-public-api}を参照
 
-エンタイトルメントの要求と応答は、ライセンスサーバーと顧客のエンタイトルメントサービスとの間の相互に認証されたSSL接続を介して渡されます。
+エンタイトルメントのリクエストと応答は、ライセンスサーバーとお客様のエンタイトルメントサービスの間の相互に認証されたSSL接続を介して渡されます。
 
-HTTPS URIスキーム( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2))を使用してエンタイトルメントエンドポイントを定義し、HTTP POSTリクエストメソッド( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3))を使用してリクエストを行います。 エンタイトルメントエンドポイントと、バックエンドエンタイトルメントを示すフラグが必要で、パッケージ化時にポリシーに含める必要があります。
+HTTPS URIスキーム([https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2))を使用してエンタイトルメントエンドポイントを定義し、HTTPPOSTリクエストメソッド([https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3))を要求に使用します。 エンタイトルメントエンドポイントとバックエンドエンタイトルメントを示すフラグは必須で、パッケージ化の際にポリシーに含める必要があります。
 
-## 権利付与要求 {#section_BFBFEF0795CA46D6842C479256B95F95}
+## エンタイトルメント要求{#section_BFBFEF0795CA46D6842C479256B95F95}
 
 エンタイトルメントリクエストの本文は、以下に示すように定義されたJSONオブジェクトになります。
 
-**JSONエンタイトルメントリクエストオブジェクトの定義**
+**JSONエンタイトルメント要求オブジェクトの定義**
 
 ```
 { 
@@ -52,7 +55,7 @@ HTTPS URIスキーム( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https
 }
 ```
 
-## 権利付与の応答 {#section_F15A9FD6BAD946B3B4C5C14612F90154}
+## エンタイトルメント応答{#section_F15A9FD6BAD946B3B4C5C14612F90154}
 
 エンタイトルメント応答の本文はJSONオブジェクトです。
 

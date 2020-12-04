@@ -6,26 +6,29 @@ title: MediaPlayerItemLoaderを使用したメディアリソースの読み込�
 uuid: a7ec8f58-7357-4757-a402-e879dd6caec8
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
 
-# MediaPlayerItemLoaderを使用したメディアリソースの読み込み{#load-a-media-resource-using-mediaplayeritemloader}
+# MediaPlayerItemLoader{#load-a-media-resource-using-mediaplayeritemloader}を使用したメディアリソースの読み込み
 
 メディアリソースを解決する別の方法は、MediaPlayerItemLoaderを使用する方法です。 これは、MediaPlayerインスタンスをインスタンス化せずに、特定のメディアストリームに関する情報を取得する場合に役立ちます。
 
-クラスを通 `MediaPlayerItemLoader` じて、インスタンスにビューをアタッチしなくても、メディアリソー `MediaPlayerItem` スと対応するリソースを交換できます。これにより、ビデオデコード `MediaPlayer` のハードウェアリソースが割り当てられます。 インスタンスを取得するプロ `MediaPlayerItem` セスは非同期です。
+`MediaPlayerItemLoader`クラスを通じて、`MediaPlayer`インスタンスに表示を割り当てることなく、対応する`MediaPlayerItem`とメディアリソースを交換できます。その結果、ビデオデコーディングハードウェアリソースが割り当てられます。 `MediaPlayerItem`インスタンスを取得するプロセスは非同期です。
 
-1. 次のイベントのイベントリスナーを実装 `MediaPlayerItemLoader` します。
+1. 以下の`MediaPlayerItemLoader`イベント用にイベントリスナーを実装します。
 
-   * `MediaPlayerItemLoaderEvent.ERROR` event
+   * `MediaPlayerItemLoaderEvent.ERROR` イベント
 
-      TVSDKは、これを使用して、エラーが発生したことをアプリケーションに通知します。 TVSDKは、診断情報を含むエラープロパティを提供します。
+      TVSDKは、このメソッドを使用して、エラーが発生したことをアプリケーションに通知します。 TVSDKは、診断情報を含むエラープロパティを提供します。
 
-1. このインスタンスをに登録しま `MediaPlayerItemLoader`す。
-1. を呼び出 `DefaultMediaPlayerItemLoader.load`し、オブジェクトのインスタンスを渡 `MediaResource` します。
+1. このインスタンスを`MediaPlayerItemLoader`に登録します。
+1. `DefaultMediaPlayerItemLoader.load`を呼び出し、`MediaResource`オブジェクトのインスタンスを渡します。
 
-   オブジェクトのURL `MediaResource` は、情報を取得するストリームを指し示す必要があります。 例：
+   `MediaResource`オブジェクトのURLは、情報を取得するストリームを指している必要があります。 例：
 
    ```
    private function onLoadError(event:MediaPlayerItemLoaderEvent):void { 

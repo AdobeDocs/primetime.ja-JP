@@ -16,11 +16,11 @@ ht-degree: 0%
 ---
 
 
-# Primetime Streaming Serverのリリース {#primetime-streaming-server-x-releases}
+# Primetime Streaming Serverリリース{#primetime-streaming-server-x-releases}
 
 Primetime Streaming Server 1.3および1.4リリースの新機能。
 
-## Primetime Streaming Server 1.4の新機能（12月のリリース） {#what-s-new-in-primetime-streaming-server-december-release}
+## Primetime Streaming Server 1.4の新機能（12月リリース） {#what-s-new-in-primetime-streaming-server-december-release}
 
 **Offline Packager**
 
@@ -51,11 +51,11 @@ PHDS/PHLS証明書が更新されました。 同じ新しい有効期限は2016
 * PTPUB-634 -Offline Packagerは、SpliceInsertをマニフェストに追加します。
 * PTPUB-635 — 単一の広告キュー用に複数のSpliceOutタグが挿入されます。
 
-### リリース1.4の既知の問題 {#known-issue-in-release}
+### リリース1.4の既知の問題{#known-issue-in-release}
 
-* PTPUB- 645 DPISimpleモードは、両方のコマンドラインキューとインストリームキューが両方ともオフラインパッケージャーの設定で提供されている場合に、DPIScte35モードが指定されている場合でも強制されます。
+* PTPUB- 645 DPISimpleモードは、コマンドラインキューとインストリームキューの両方がオフラインパッケージャーの設定で提供されている場合に、DPIScte35モードが指定されている場合でも強制されます。
 
-## Primetime Streaming Server 1.3.1の新機能（5月のリリース） {#what-s-new-in-primetime-streaming-server-may-release}
+## Primetime Streaming Server 1.3.1（5月リリース）の新機能{#what-s-new-in-primetime-streaming-server-may-release}
 
 バージョン1.3.1は、修正プログラムを参照しています。 次の強化点は、JIT MP4の主なパフォーマンス強化事例で構成されているので、お客様向けに推奨されるアップグレードになっています。
 
@@ -63,17 +63,17 @@ PHDS/PHLS証明書が更新されました。 同じ新しい有効期限は2016
 1. JITマニフェストリクエストからMP4 JIT変換用に生成されたフラグメントURIにクエリパラメーターをコピーするための設定「CopyQueryParamToJITFragmentURIs」が追加されました。 使用例については、HTTP接触チャネルサーバーのドキュメントを参照してください
 1. vod.xmlに追加されたConfig/MP4Only設定経由の、JIT変換の拡張子のないMP4ファイルを許可する
 
-### リリース1.3.1に含まれているバグ修正 {#bug-fixes-included-in-release-1}
+### リリース1.3.1 {#bug-fixes-included-in-release-1}に含まれているバグ修正
 
 * 3759167 — パッケージ化時のタイムスタンプの異常が原因で、一部のSCTE35キューが出力マニフェストに到達しない場合があります。 SCTE35メッセージのSpliceInfoSectionのTimeSignalのSpliceTimeにpts_adjustmentを適用します。
 
-### リリース1.3.1の既知の問題 {#known-issues-in-release}
+### リリース1.3.1 {#known-issues-in-release}の既知の問題
 
 * 3717039 — パッケージャーがDPI単純モードキューを生成するように設定されている場合、スプライス挿入や配置のオポチュニティなど、特定の信号タイプを探し、単純モードキューに変換する必要があります。 プログラム開始、ネットワーク開始など、他の種類の信号は無視する必要があります。
 
 * 3718598 -接触チャネルサーバーがHSMアクセスで保護されたコンテンツを提供するように設定されている場合、バックエンドLunaSAクライアントはHSMモジュールと頻繁に通信します。
 
-## Primetime Streaming Server 1.3の新機能（4月のリリース） {#what-s-new-in-primetime-streaming-server-april-release}
+## Primetime Streaming Server 1.3（APRILリリース）の新機能{#what-s-new-in-primetime-streaming-server-april-release}
 
 Primetime 1.3リリースでは、ストリーミングコンテンツに関する新機能、操作性とセキュリティが向上しています。
 
@@ -121,13 +121,13 @@ Primetime Offline Packagerのメザニンアセットのパッケージ化に要
 
 Primetime接触チャネルのJITパッケージ化機能には、大規模なVODアセットのライブラリに対するユーザーの要求に対処するため、パフォーマンスがいくつか強化されました。
 
-## Adobe Primetime Streaming Server 1.4 {#adobe-primetime-streaming-server}
+## Adobe Primetimeストリーミングサーバ1.4 {#adobe-primetime-streaming-server}
 
-### 必要システム構成 {#minimum-system-requirements}
+### 最小システム要件{#minimum-system-requirements}
 
 **ネットワーク要件**
 
-* MPEG-TSストリームをエンコーダーからLive Packagerに送信するには、ネットワークをマルチキャストに対応させる必要があります。 Live Packagerは、マルチキャストネットワークを必要としないエンコーダーからもRTMPストリームを受け付けます。
+* MPEG-TSストリームをエンコーダーからLive Packagerに送信するには、ネットワークをマルチキャストに対応させる必要があります。 Live Packagerは、マルチキャストネットワークを必要としないエンコーダーからもRTMPストリームを受け入れます。
 
 **サポートされるオペレーティングシステム**
 
@@ -136,24 +136,24 @@ Primetime接触チャネルのJITパッケージ化機能には、大規模なVO
 **ハードウェア要件**
 
 * 3.2 GHz Intel® Pentium® 4プロセッサー（デュアルIntel Xeon®以上を推奨）
-* 64ビットオペレーティングシステム： 4 GBのRAM（8 GBを推奨）
+* 64ビットオペレーティングシステム：4 GBのRAM（8 GBを推奨）
 * 1 Gbイーサネットカードを推奨（複数のネットワークカードと10 Gbもサポート）
 * ディスク：
 
-   * (Disk-SAS): 最小10 GB(7.5K RPM)
-   * （ディスク —SSD）: 400 MBps読み取り/書き込み
-   * (NAS): 1 GB専用リンク
+   * (Disk-SAS):最小10 GB(7.5K RPM)
+   * （ディスク —SSD）:400 MBps読み取り/書き込み
+   * (NAS):1 GB専用リンク
 
 **ソフトウェア要件**
 
-* Oracle Java JRE 1.7(推奨： Sun/Oracle Hotspot JVM)。 JConsoleがJMX APIにアクセスするには、JDKが必要です
+* OracleJava JRE 1.7(推奨：Sun/OracleホットスポットJVMを参照)。 JConsoleがJMX APIにアクセスするには、JDKが必要です
 
-### Primetime Streaming Serverのインストールと設定 {#install-and-configure-primetime-streaming-server}
+### Primetime Streaming Serverのインストールと設定{#install-and-configure-primetime-streaming-server}
 
 **ストリーミングサーバのインストール**
 
-1. Java SEおよびJDKソフトウェアを [Oracleサイトからダウンロードし](https://www.oracle.com/technetwork/java/javase/downloads/index.html) 、インストール手順に従います。
-2. Adobe Primetime-Streaming Server 1.4アーカイブファイルをディスク `Primetime- StreamingServer-1-4-0-b206-12042014.zip` に展開します。
+1. [Oracleサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html)からJava SEおよびJDKソフトウェアをダウンロードし、インストール手順に従います。
+2. Adobe Primetimeストリーミングサーバ1.4アーカイブファイル`Primetime- StreamingServer-1-4-0-b206-12042014.zip`をディスクに展開します。
 
 **Primetimeストリーミングサーバの開始**
 
@@ -196,15 +196,15 @@ Refer the Primetime Streaming Server Getting Started document for the configurat
 
 ストリーミングサーバをアンインストールするには、ストリーミングサーバを停止し、Primetimeディレクトリ内のストリーミングサーバのpssディレクトリを削除します
 
-## Live Packagerと接触チャネルサーバー1.4の使用 {#working-with-live-packager-and-origin-server}
+## Live Packagerと接触チャネルサーバー1.4の操作{#working-with-live-packager-and-origin-server}
 
 この節は、Primetime Streaming Serverを使用せず、代わりにPrimetime Live PackagerやPrimetime接触チャネルサーバーをデプロイする場合に適用されます
 
-### 必要システム構成 {#minimum-system-requirements-1}
+### 最小システム要件{#minimum-system-requirements-1}
 
 **ネットワーク要件**
 
-* MPEG-TSストリームをエンコーダーからLive Packagerに送信するには、ネットワークをマルチキャストに対応させる必要があります。 Live Packagerは、マルチキャストネットワークを必要としないエンコーダーからもRTMPストリームを受け付けます。
+* MPEG-TSストリームをエンコーダーからLive Packagerに送信するには、ネットワークをマルチキャストに対応させる必要があります。 Live Packagerは、マルチキャストネットワークを必要としないエンコーダーからもRTMPストリームを受け入れます。
 
 **サポートされるオペレーティングシステム**
 
@@ -213,33 +213,33 @@ Refer the Primetime Streaming Server Getting Started document for the configurat
 **ハードウェア要件**
 
 * 3.2 GHz Intel® Pentium® 4プロセッサー（デュアルIntel Xeon®以上を推奨）
-* 64ビットオペレーティングシステム： 4 GBのRAM（8 GBを推奨）
+* 64ビットオペレーティングシステム：4 GBのRAM（8 GBを推奨）
 * 1 Gbイーサネットカードを推奨（複数のネットワークカードと10 Gbもサポート）
 * ディスク：
 
-   * (Disk-SAS): 最小10 GB(7.5K RPM)
-   * （ディスク —SSD）: 400 MBps読み取り/書き込み
-   * (NAS): 1 GB専用リンク
+   * (Disk-SAS):最小10 GB(7.5K RPM)
+   * （ディスク —SSD）:400 MBps読み取り/書き込み
+   * (NAS):1 GB専用リンク
 
 **ソフトウェア要件**
 
-* Oracle Java JRE 1.7(推奨： Sun/Oracle Hotspot JVM)。 JConsoleがJMX APIにアクセスするには、JDKが必要です
+* OracleJava JRE 1.7(推奨：Sun/OracleホットスポットJVMを参照)。 JConsoleがJMX APIにアクセスするには、JDKが必要です
 
 上記の最小必要システム構成は、Live Packagerだけでなく、接触チャネルサーバーにも当てはまります。
 
-### Live Packagerのインストールと設定 {#install-and-configure-the-live-packager}
+### Live Packagerのインストールと設定{#install-and-configure-the-live-packager}
 
 **Live Packagerのインストール**
 
-1. Java SEおよびJDKソフトウェアを [Oracleサイトからダウンロードし](https://www.oracle.com/technetwork/java/javase/downloads/index.html) 、インストール手順に従います。
-1. Adobe Primetime - Live Packager 1.4アーカイブファイルをディスク `Primetime-LivePackager-1-4-0-b206-12042014.zip` に展開します。
+1. [Oracleサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html)からJava SEおよびJDKソフトウェアをダウンロードし、インストール手順に従います。
+1. Adobe Primetime- Live Packager 1.4アーカイブファイル`Primetime-LivePackager-1-4-0-b206-12042014.zip`をディスクに展開します。
 
 **HTTP接触チャネルサーバーのインストール**
 
-1. Java JREおよびJDKソフトウェアを [Oracleサイトからダウンロードし](https://www.oracle.com/technetwork/java/javase/downloads/index.html) 、インストール手順に従います。
-1. Adobe Primetime - HTTP接触チャネルサーバー1.4アーカイブファイルをディスク `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`に展開します。
+1. [Oracleサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html)からJava JREおよびJDKソフトウェアをダウンロードし、インストール手順に従います。
+1. Adobe Primetime- HTTP接触チャネルサーバ1.4アーカイブファイル`Primetime-HttpOrigin-1-4-0-b206-12042014.zip`をディスクに展開します。
 
-**Live Packagerを開始するには** 、Packagerを開始するには、Packagerのルートディレクトリから次のコマンドを実行します。\
+**Live** Packagerを開始するにはPackagerを開始するには、Packagerのルートディレクトリから次のコマンドを実行します。\
 `$packager_start.sh`
 
 **HTTP接触チャネルサーバーを開始するには**
@@ -261,7 +261,7 @@ HTTP接触チャネルサーバーを停止するには、接触チャネルサ�
 
 Packagerを再起動するには、Packagerを停止して開始します。
 
-**注意**: Packagerの開始は、一時ディレクトリ内のフラグメントターゲットからブートストラップ情報を初期化しようとします。 フラグメントターゲットでブートストラップ情報が見つかった場合は、パッケージャーが再起動されたことを意味します。 再起動の場合、パッケージャーは次のフラグメント境界まで待機し、次に開始のパッケージ化を待ちます。 パッケージャーは、ブートストラップに欠落しているフラグメントがあることを示すギャップのエントリを挿入します。
+**注意**:Packagerの開始は、一時ディレクトリ内のフラグメントターゲットからブートストラップ情報を初期化しようとします。フラグメントターゲットでブートストラップ情報が見つかった場合は、パッケージャーが再起動されたことを意味します。 再起動の場合、パッケージャーは次のフラグメント境界まで待機し、次に開始のパッケージ化を待ちます。 パッケージャーは、ブートストラップに欠落しているフラグメントがあることを示すギャップのエントリを挿入します。
 
 **HTTP接触チャネルサーバーの再起動**
 
@@ -271,7 +271,7 @@ HTTP接触チャネルサーバーを再起動するには、HTTP接触チャネ
 
 配布ファイルには、パッケージャーのテストに使用できるサンプル設定が含まれています。
 
-Adobe Primetime - Live Packager 1.4アーカイブを抽出した後、開始ーをpackagerディレクトリに変更し、packager_directory.shスクリプトを実行します。 サンプル設定では、マルチキャストアドレス239.235.0.3:14000をリッスンし、ローカル接触チャネルサーバーをポート8080で実行します。 出力がに書き込まれるように設定され `packager/webroot/_default_/_default_/ directory`ます。
+Adobe Primetime- Live Packager 1.4アーカイブを抽出した後、ディレクトリをpackager開始に変更し、packager_directory.shスクリプトを実行します。 サンプル設定では、マルチキャストアドレス239.235.0.3:14000をリッスンし、ローカル接触チャネルサーバーをポート8080で実行します。 出力は`packager/webroot/_default_/_default_/ directory`に書き込まれるように設定されます。
 
 <!-- 
 
@@ -293,9 +293,9 @@ Packagerをアンインストールするには、Packagerを停止し、Primeti
 
 HTTP接触チャネルサーバーをアンインストールするには、HTTP接触チャネルサーバーを停止し、Primetimeディレクトリ内のHTTP接触チャネルサーバーのhttproginディレクトリを削除します。
 
-## Adobe Primetime Offline Packager 1.4 {#adobe-primetime-offline-packager}
+## Adobe Primetimeオフラインパッケージャ1.4 {#adobe-primetime-offline-packager}
 
-### 必要システム構成 {#minimum-system-requirements-2}
+### 最小システム要件{#minimum-system-requirements-2}
 
 **サポートされるオペレーティングシステム**
 
@@ -304,27 +304,27 @@ HTTP接触チャネルサーバーをアンインストールするには、HTTP
 **ハードウェア要件**
 
 * 3.2 GHz Intel® Pentium® 4プロセッサー（デュアルIntel Xeon®以上を推奨）
-* 64ビットオペレーティングシステム： 4 GBのRAM（8 GBを推奨）
+* 64ビットオペレーティングシステム：4 GBのRAM（8 GBを推奨）
 * 1 Gbイーサネットカードを推奨（複数のネットワークカードと10 Gbもサポート）
 * ディスク：
 
-   * (Disk-SAS): 最小10 GB(7.5K RPM)
-   * （ディスク —SSD）: 400 MBps読み取り/書き込み
-   * (NAS): 1 GB専用リンク
+   * (Disk-SAS):最小10 GB(7.5K RPM)
+   * （ディスク —SSD）:400 MBps読み取り/書き込み
+   * (NAS):1 GB専用リンク
 
 **ソフトウェア要件**
 
-* Oracle Java JRE 1.7以降。
+* OracleJava JRE 1.7以降。
 
-### Offline Packagerのインストールと設定 {#install-and-configure-offline-packager}
+### Offline Packagerのインストールと設定{#install-and-configure-offline-packager}
 
 Offline Packagerをインストールするには、次の手順に従います。
 
-1. Java SEソフトウェアを [Oracleサイトからダウンロードし](https://www.oracle.com/technetwork/java/javase/downloads/index.html) 、インストール手順に従います。
-1. Adobe Primetime - Offline Packager 1.4アーカイブファイルをディスク `Primetime- OfflinePackager-1-4-0-b206-12042014.zip`に展開します。
+1. [Oracleのサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html)からJava SEソフトウェアをダウンロードし、インストール手順に従います。
+1. Adobe Primetime- Offline Packager 1.4アーカイブファイル`Primetime- OfflinePackager-1-4-0-b206-12042014.zip`をディスクに展開します。
 
-設定の詳細については、Primetime Offline Packagerの概要ドキュメントを参照して [ください](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)。
+[ここ](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)で利用可能な設定の詳細については、Primetime Offline Packager使用の手引きドキュメントを参照してください。
 
-## 役立つリソース {#helpful-resources}
+## 役立つリソース{#helpful-resources}
 
-* Adobe Primetimeのラーニングとサポートの [ページで、完全なヘルプドキュメントを参照してください](https://helpx.adobe.com/support/primetime.html) 。
+* [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html)のページにある完全なヘルプドキュメントを参照してください。

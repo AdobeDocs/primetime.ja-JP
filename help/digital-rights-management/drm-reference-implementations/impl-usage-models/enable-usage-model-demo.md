@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# 使用モデルのデモを有効にする{#enable-the-usage-model-demo}
+# 使用モデルのデモ{#enable-the-usage-model-demo}を有効にします。
 
-1. パッケージ化時にカスタムプロパティ `RI_UsageModelDemo=true` を指定します。
+1. パッケージ化時にカスタムプロパティ`RI_UsageModelDemo=true`を指定します。
 
    Media Packagerコマンドラインツールを使用してコンテンツをパッケージ化する場合は、次のように入力します。
 

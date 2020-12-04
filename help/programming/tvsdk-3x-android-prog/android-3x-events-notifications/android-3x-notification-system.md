@@ -13,19 +13,19 @@ ht-degree: 0%
 ---
 
 
-# プレイヤーのステータス、アクティビティ、エラーおよびログに関する通知とイベント {#notifications-and-events-for-player-status-activity-errors-and-logging}
+# プレイヤーの状態、アクティビティ、エラー、ログに関する通知とイベント{#notifications-and-events-for-player-status-activity-errors-and-logging}
 
 イベントと通知は、ビデオアプリケーションの非同期的な側面を管理するのに役立ちます。
 
-`MediaPlayerStatus` オブジェクトは、プレイヤーの状態の変更に関する情報を提供します。 `Notification` オブジェクトは、警告およびエラーに関する情報を提供します。 ビデオの再生を停止させるエラーは、プレイヤーのステータスが変化する原因にもなります。 イベントリスナーを実装して、イベント( `MediaPlayerEvent` オブジェクト)を取得し、応答します。
+`MediaPlayerStatus` オブジェクトは、プレイヤーの状態の変更に関する情報を提供します。`Notification` オブジェクトは、警告およびエラーに関する情報を提供します。ビデオの再生を停止させるエラーは、プレイヤーのステータスが変化する原因にもなります。 イベントリスナーを実装して、イベント（`MediaPlayerEvent`オブジェクト）を取得し、応答します。
 
 アプリケーションは、通知とステータス情報を取得できます。 この情報を使用して、診断と検証のためのログシステムを作成することもできます。
 
-## 通知内容 {#section_DF951FF601794CF592841BB7406DC1A1}
+## 通知内容{#section_DF951FF601794CF592841BB7406DC1A1}
 
 `MediaPlayerNotification` プレイヤーのステータスに関連する情報を提供します。
 
-TVSDKは、通知の時系列リストを提供し `MediaPlayerNotification` 、各通知には次の情報が含まれます。
+TVSDKは、`MediaPlayerNotification`通知の時系列リストを提供し、各通知には次の情報が含まれます。
 
 * タイムスタンプ
 * 次の要素で構成される診断メタデータ：
@@ -33,32 +33,32 @@ TVSDKは、通知の時系列リストを提供し `MediaPlayerNotification` 、
    * `type`:INFO、WARNまたはERROR。
    * `code`:通知の数値表現。
    * `name`:SEEK_ERRORなど、通知の解読可能な説明
-   * `metadata`:通知に関する関連情報を含むキー/値のペア。 例えば、という名前のキー `URL` は、通知に関連するURLの値を提供します。
+   * `metadata`:通知に関する関連情報を含むキー/値のペア。例えば、`URL`という名前のキーは、通知に関連するURLの値を提供します。
 
    * `innerNotification`:この通知に直接影響を与える別の `MediaPlayerNotification` オブジェクトへの参照です。
 
 この情報は、後で分析するためにローカルに保存したり、ログ記録やグラフィカル表現のためにリモートサーバーに送信したりできます。
 
-## 通知システムのセットアップ {#section_9E37C09ECFA54B3DA8D3AA9ED1BAFC17}
+## 通知システムのセットアップ{#section_9E37C09ECFA54B3DA8D3AA9ED1BAFC17}
 
 通知をリッスンできます。
 
-Primetime Player通知システムの中核は、スタンドアロン通知を表す `Notification` クラスです。
+Primetime Player通知システムの中核は`Notification`クラスで、スタンドアロン通知を表します。
 
 通知を受信するには、次のように通知をリッスンします。
 
-1. コールバックを実装し `NotificationEventListener.onNotification()` ます。
-1. TVSDKは、 `NotificationEvent` オブジェクトをコールバックに渡します。
+1. `NotificationEventListener.onNotification()`コールバックを実装します。
+1. TVSDKは、`NotificationEvent`オブジェクトをコールバックに渡します。
 
    >[!NOTE]
    >
-   >通知の種類は、 `Notification.Type` 列挙に列挙されます。
+   >通知の種類は`Notification.Type`列挙に列挙されます。
 
    * `ERROR`
    * `INFO`
    * `WARNING`
 
-## リ追加アルタイムログとデバッグ {#section_9D4004308CB243AD9B50818895D10005}
+## 追加リアルタイムログおよびデバッグ{#section_9D4004308CB243AD9B50818895D10005}
 
 通知を使用して、ビデオアプリケーションにリアルタイムログを実装できます。
 

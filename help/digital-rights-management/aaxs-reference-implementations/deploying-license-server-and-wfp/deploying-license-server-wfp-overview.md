@@ -4,16 +4,19 @@ title: ライセンスサーバーと監視フォルダーパッケージャー�
 uuid: 4b71f2f4-f971-4382-ae41-171f7dfdfe21
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '196'
+ht-degree: 0%
 
 ---
 
 
-# ライセンスサーバーと監視フォルダーパッケージャーの展開の概要 {#deploying-the-license-server-and-watched-folder-packager-overview}
+# ライセンスサーバーと監視フォルダーパッケージャーの展開の概要{#deploying-the-license-server-and-watched-folder-packager-overview}
 
-ライセンスサーバーのWARファイルをTomcatのディレクトリにコピー [!DNL webapps] します。 WARファイルを以前にデプロイした場合は、パック解除されたWARディレクトリ( 、 、およびTomcatのデ [!DNL flashaccess]ィレクト [!DNL edcws]リ)を手 [!DNL flashaccess-packager] 動で削除する必要が [!DNL webapps] あります。 TomcatがWARファイルを展開しないようにするには、Tomcatのconf [!DNL server.xml] ディレクトリでファイルを編集し、属性をに設 `unpackWARs` 定しま `false`す。
+ライセンスサーバーのWARファイルをTomcatの[!DNL webapps]ディレクトリにコピーします。 WARファイルを以前にデプロイした場合は、Tomcatの[!DNL webapps]ディレクトリ内にある、アンパックしたWARディレクトリ([!DNL flashaccess]、[!DNL edcws]、[!DNL flashaccess-packager])を手動で削除する必要があります。 TomcatがWARファイルを開くのを防ぐには、Tomcatのconfディレクトリで[!DNL server.xml]ファイルを編集し、`unpackWARs`属性を`false`に設定します。
 
-プロパティファイル( [!DNL flashaccess-refimpl.properties])は、サーバーがプロパティを読み込むためのクラスパス上に存在する必要があります。 このファイルをディレクトリにコピーし、適切な値でファイルを更新します。 Tomcatのディレ [!DNL catalina.properties] クトリ内のファイルを編 [!DNL conf] 集し、を含むディレクトリをプロパテ [!DNL flashaccess-refimpl.properties] ィに追加 `shared.loader` します。 ログを [!DNL log4j.xml] 設定するファイルも、クラスパス上に存在する必要があります(例 [!DNL resources\log4j.xml] を参照)。
+プロパティファイル([!DNL flashaccess-refimpl.properties])は、サーバーがプロパティを読み込むためのクラスパス上に存在する必要があります。 このファイルをディレクトリにコピーし、適切な値でファイルを更新します。 Tomcatの[!DNL conf]ディレクトリで[!DNL catalina.properties]ファイルを編集し、[!DNL flashaccess-refimpl.properties]を含むディレクトリを`shared.loader`プロパティに追加します。 ログを設定するための[!DNL log4j.xml]ファイルは、クラスパス上にも存在する必要があります（例については[!DNL resources\log4j.xml]を参照）。
 
-参照実装サーバーは、複数の証明書ファイル、ポリシーファイル、その他のリソースを使用します。 これらのファイルはすべて1つのリソースフォルダーに格納されます。 デフォルトでは、リソースフォルダは [!DNL C:\flashaccess-server-resources]ですが、この場所はで変更できま [!DNL flashaccess-refimpl.properties]す。 サーバーを起動する前に、必要なすべてのリソースをこの場所にコピーしてください。
+参照実装サーバーは、複数の証明書ファイル、ポリシーファイル、その他のリソースを使用します。 これらのファイルはすべて1つのリソースフォルダーに格納されます。 デフォルトでは、リソースフォルダーは[!DNL C:\flashaccess-server-resources]ですが、この場所は[!DNL flashaccess-refimpl.properties]で変更できます。 サーバーを起動する前に、必要なすべてのリソースをこの場所にコピーしてください。
 
-Tomcatとライセンスサーバーを起動するには、Tomcatのデ `catalina.bat start` ィレクトリからを実行 [!DNL bin] します。
+Tomcatとライセンスサーバを開始するには、Tomcatの[!DNL bin]ディレクトリから`catalina.bat start`を実行します。

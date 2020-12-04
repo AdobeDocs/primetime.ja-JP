@@ -1,29 +1,32 @@
 ---
-seo-title: Adobe PassとAdobe Access
-title: Adobe PassとAdobe Access
+seo-title: Adobe PassとAdobeへのアクセス
+title: Adobe PassとAdobeへのアクセス
 uuid: 09e75cd7-00b3-4f0f-869e-43dc4d5c3bf7
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '400'
+ht-degree: 0%
 
 ---
 
 
-# Adobe PassとAdobe Access {#adobe-pass-and-adobe-access}
+# Adobe PassとAdobeへのアクセス{#adobe-pass-and-adobe-access}
 
-Adobe Pass ( [](https://www.adobe.com/products/adobepass/))は、複数のコンテンツプロバイダー間でのユーザー/デバイスの認証と承認を提供します。 ユーザーは、有効なケーブルテレビまたは衛星テレビの購読を持っている必要があります。
+Adobe Pass([](https://www.adobe.com/products/adobepass/))は、複数のコンテンツプロバイダーでユーザー/デバイスの認証と承認を行います。 有効なケーブルテレビまたは衛星テレビ購読が必要です。
 
 <!--<a id="fig_cln_bc2_44"></a>-->
 
 ![](assets/AdobePass_web.png)
 
-Adobe Passは、Adobe Accessと共に使用して、メディアコンテンツを保護できます。 このシナリオでは、ビデオプレーヤー(SWF)は、Adobe Systemsがホストする *Access Enabler*(Access Enabler)と呼ばれる別のSWFを読み込むことができます。 *Access Enablerは* 、Adobe Passサービスに接続し、MVPD(Multichannel Video Programming Distributor)IDプロバイダーシステムとのSAML SSO統合を容易にするために使用されます。 これには、ユーザーのブラウザーを短時間MVPDログインページにリダイレクトし、AuthNトークンを保存して、最後にAuthNキャッシュセッションを使用してコンテンツWebサイトに戻ります。
+Adobe Passは、Adobeアクセスと併用してメディアコンテンツを保護できます。 このシナリオでは、ビデオプレーヤー(SWF)は、Adobe Systemsがホストする&#x200B;*アクセスイネーブラ*&#x200B;と呼ばれる別のSWFを読み込むことができます。 *Access Enabler*&#x200B;は、Adobe Passサービスに接続し、MVPD（マルチチャネルビデオプログラミングディストリビュータ）IDプロバイダシステムとのSAML SSO統合を容易にするために使用されます。 これには、ユーザーのブラウザーを短時間MVPDログインページにリダイレクトし、AuthNトークンを保存して、最後にキャッシュされたAuthNセッションを使用してコンテンツWebサイトに戻ることが関係します。
 
-その後、 *Access Enablerを使用して* 、Adobe PassサービスとMVPDとの間のバックエンド認証を容易に行うことができます。 MVPDはビジネスロジックを維持し、ユーザーに権利を付与するコンテンツを決定します。 エンタイトルメントは、そのコンテンツリソースの追加のAuthZトークンで保持され、クライアントに送り返されます。
+*Access Enabler*&#x200B;は、Adobe PassサービスとMVPDとの間のバックエンド認証を容易にします。 MVPDはビジネスロジックを維持し、ユーザーが権利を持つコンテンツを決定します。 エンタイトルメントは、そのコンテンツリソースの追加のAuthZトークンに保持され、クライアントに送り返されます。
 
-認証トークンと認証トークンは、改ざんやスプーフィングを避けるために、Adobe Accessクライアントの一意のIDと秘密鍵を使用して署名されます。 このトークンは、 *Access Enablerを介してのみアクセスできます*。
+認証および認証トークンは、Adobeアクセスクライアントの一意のIDと秘密キーを使用して署名され、改ざんやスプーフィングを防ぎます。 このトークンは、*アクセスイネーブラ*&#x200B;を介してのみアクセスできます。
 
-ビデオ・プレイヤは、 `getAuthorization` Access Enablerでを呼び出すことで、プロセスをトリ *ガーする*&#x200B;ことができます。 有効なAuthN/AuthZトークンが存在する場合、 ** AccessEnablerは、ビデオコンテンツを再生するための短時間のみ有効なメディアトークンを含む、ビデオプレーヤーへのコールバックを発行します。
+ビデオプレーヤーは、*アクセスイネーブラ*&#x200B;で`getAuthorization`を呼び出すことで、プロセスをトリガーできます。 有効なAuthN/AuthZトークンが存在する場合、*AccessEnabler*&#x200B;は、ビデオコンテンツを再生するための短時間のみ有効なメディアトークンを含むビデオプレーヤーへのコールバックを発行します。
 
-Adobe Passは、サーバーにデプロイできるメディアトークンバリデーターのJavaライブラリを提供します。 コンテンツ保護にFlass Accessサーバーを使用する場合、メディアトークンバリデーターをAdobe Accessのサーバー側プラグインと統合し、メディアトークンの検証が正常に完了した後に汎用ライセンスを自動的に発行できます。 その後、コンテンツがCDNサーバーからクライアントにストリーミングされます。 コンテンツのライセンスを取得するには、短時間のみ有効なメディアトークンをAdobe Accessサーバーに送信し、トークンの有効性を検証し、ライセンスを発行します。
+Adobe Passは、サーバーにデプロイできるメディアトークンバリデーターJavaライブラリを提供しています。 コンテンツ保護にFlass Accessサーバーを使用する場合、メディアトークンバリデーターをAdobeアクセスサーバー側プラグインと統合して、メディアトークンの検証が正常に完了した後に汎用ライセンスを自動的に発行できます。 次に、コンテンツがCDNサーバーからクライアントにストリーミングされます。 コンテンツのライセンスを取得するには、短時間のみ有効なメディアトークンをAdobeアクセスサーバに送信し、そのサーバでトークンの有効性を検証し、ライセンスを発行します。
 
-長期間有効なAuthNトークンは、通常、すべてのコンテンツ開発者の *Access* Enablerで使用され、そのMVPD加入者のAuthNを表します。 また、Adobe Access ServerとToken Verifierは、CDNまたはサービスプロバイダーがコンテンツプロバイダーに代わって操作できます。
+長期間有効なAuthNトークンは、通常、MVPD加入者のAuthNを表すために、すべてのコンテンツ開発者の&#x200B;*Access Enabler*&#x200B;で使用されます。 また、Adobe Access Serverとトークンの検証は、CDNまたはサービスプロバイダーがコンテンツプロバイダーに代わって操作できます。

@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# ビデオ分析の初期化と設定 {#initialize-and-configure-video-analytics}
+# ビデオ分析の初期化と設定{#initialize-and-configure-video-analytics}
 
 ビデオの使用を追跡および分析するようにプレイヤーを設定できます。
 ビデオトラッキング（ビデオハートビート）をアクティブ化する前に、以下があることを確認します。
@@ -26,8 +26,8 @@ ht-degree: 0%
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>重要： このJSON設定ファイル名はADBMobileConfig.jsonのままにしておく必要があり <span class="filepath"> ま </span>す。 この構成ファイルの名前とパスは変更できません。 このファイルへのパスは、 <span class="filepath"> &lt;source root&gt;/assetsである必要があり </span>ます。 </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
+   <td colname="col2"> <p>重要： このJSON設定ファイル名は<span class="filepath"> ADBMobileConfig.json </span>のままにしておく必要があります。 この構成ファイルの名前とパスは変更できません。 このファイルへのパスは、<span class="filepath"> &lt;source root&gt;/assets </span>でなければなりません。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> AppMeasurementトラッキングサーバーエンドポイント </td> 
@@ -35,7 +35,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"> ビデオ分析トラッキングサーバーエンドポイント </td> 
-   <td colname="col2"> Video Analyticsのバックエンド収集エンドポイントのURL。 すべてのビデオハートビートトラッキング呼び出しが送信される場所です。 <p>ヒント： 訪問者トラッキングサーバーのURLは、AnalyticsトラッキングサーバーのURLと同じです。 訪問者IDサービスの実装について詳しくは、「IDサービスの <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> 実装」を参照してくだ </a>さい。 </p> </td> 
+   <td colname="col2"> Video Analyticsのバックエンド収集エンドポイントのURL。 すべてのビデオハートビートトラッキング呼び出しが送信される場所です。 <p>ヒント： 訪問者トラッキングサーバーのURLは、AnalyticsトラッキングサーバーのURLと同じです。 訪問者IDサービスの実装について詳しくは、<a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external">実装IDサービス</a>を参照してください。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> アカウント名 </td> 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 プレーヤーでビデオトラッキングを設定するには：
 
-1. リソースファイルの読み込み時間オプションが正しいことを確認 `ADBMobileConfig.json` します。
+1. `ADBMobileConfig.json`リソースファイルの読み込み時間オプションが正しいことを確認します。
 
    ```
    { 
@@ -84,21 +84,21 @@ ht-degree: 0%
    読み込み時間オプションを設定するには：
 
 
-   1. 適切な値(Adobeが提供する値)が `ADBMobileConfig.json` ファイルに含まれていることを確認します。
-   1. このファイルがフ `assets/` ォルダー内にあることを確認します。
+   1. `ADBMobileConfig.json`ファイルに(Adobeが提供する)適切な値が含まれていることを確認します。
+   1. このファイルが`assets/`フォルダー内にあることを確認します。
 
       このフォルダーは、アプリケーションソースツリーのルートに存在する必要があります。
 
    1. アプリケーションをコンパイルしてビルドします。
    1. バンドルされたアプリケーションをデプロイして実行します。
 
-      これらのAppMeasurement設定について詳しくは、「Adobe Analyticsでのビデオの [測定](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/)」を参照してください。
+      これらのAppMeasurement設定について詳しくは、[Adobe Analyticsでのビデオの測定](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/)を参照してください。
 
 1. ビデオハートビートトラッキングメタデータを初期化し、設定します。
 
    >[!IMPORTANT]
    >
-   >ビデオ分析モジュールのミッドストリームを停止し、必要に応じて再初期化できます。 モジュールを再初期化する前に、ビデオ分析メタデータも正しいコンテンツメタデータに更新されていることを確認します。 メタデータを再作成するには、次の最初の2つの手順(サブ手順 **a** と **b**)を繰り返します。
+   >ビデオ分析モジュールのミッドストリームを停止し、必要に応じて再初期化できます。 モジュールを再初期化する前に、ビデオ分析メタデータも正しいコンテンツメタデータに更新されていることを確認します。 メタデータを再作成するには、次の最初の2つの手順を繰り返します（サブ手順&#x200B;**a**&#x200B;と&#x200B;**b**）。
 
    1. ビデオ分析メタデータのインスタンスを作成します。
 
@@ -135,13 +135,13 @@ ht-degree: 0%
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
       ```
 
-   1. インスタンスにVideo Analyticsメタデータを設定し `videoAnalyticsProvider` ます。
+   1. `videoAnalyticsProvider`インスタンスにVideo Analyticsメタデータを設定します。
 
       ```java
       videoAnalyticsProvider.setVideoAnalyticsMetadata(vaMetadata);
       ```
 
-   1. メディアプレイヤーインスタンスを `videoAnalyticsProvider` インスタンスにアタッチします。
+   1. メディアプレイヤーインスタンスを`videoAnalyticsProvider`インスタンスに接続します。
 
       ```java
       videoAnalyticsProvider.attachMediaPlayer(mediaPlayer); 

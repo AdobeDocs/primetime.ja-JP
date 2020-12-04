@@ -1,38 +1,41 @@
 ---
-description: TVSDKは、一般に予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づいて、期待される順序でアクションを実装できます。
-seo-description: TVSDKは、一般に予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づいて、期待される順序でアクションを実装できます。
+description: TVSDKは、通常予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づくアクションを期待された順序で実装できます。
+seo-description: TVSDKは、通常予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づくアクションを期待された順序で実装できます。
 seo-title: 再生イベントの順序
 title: 再生イベントの順序
 uuid: 4a9ea66b-a383-46ff-9ab8-983b1dd7f935
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 
 
 # 再生イベントの順序{#order-of-playback-events}
 
-TVSDKは、一般に予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づいて、期待される順序でアクションを実装できます。
+TVSDKは、通常予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づくアクションを期待された順序で実装できます。
 
 <!--<a id="section_6E34A6C7936245D88DEB3315DA64598B"></a>-->
 
 次の例は、再生イベントを含む一部のイベントの順序を示しています。
 
-* メディアリソースを通じて正常に読み込む `MediaPlayer.replaceCurrentResource`と、イベントの順序は次のとおりです。
+* `MediaPlayer.replaceCurrentResource`を介してメディアリソースを正常に読み込むと、次の順序でイベントされます。
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 身分が `MediaPlayerStatus.INITIALIZING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` ステータス  `MediaPlayerStatus.INITIALIZING`
 
    * `MediaPlayerItemEvent.ITEM_CREATED`
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 身分が `MediaPlayerStatus.INITIALIZED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` ステータス  `MediaPlayerStatus.INITIALIZED`
 
-* 通じて再生を準備する場合、 `MediaPlayer.prepareToPlay`イベントの順序は次のとおりです。
+* `MediaPlayer.prepareToPlay`を介して再生を準備する場合、イベントの順序は次のとおりです。
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 身分が `MediaPlayerStatus.PREPARING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` ステータス  `MediaPlayerStatus.PREPARING`
 
    * `TimelineEvent.TIMELINE_UPDATED` 広告が挿入された場合
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 身分が `MediaPlayerStatus.PREPARED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` ステータス  `MediaPlayerStatus.PREPARED`
 
-* ライブ/リニアストリームの場合、再生時間が進み、追加のオポチュニティが解決されるに従って、再生中に、イベントの順序は次のとおりです。
+* ライブ/リニアストリームの場合、再生中、再生時間が進み、追加のオポチュニティが解決されると、次の順序でイベントが発生します。
 
    * `MediaPlayerItemEvent.ITEM_UPDATED`
    * `TimelineEvent.TIMELINE_UPDATED` 広告が挿入された場合

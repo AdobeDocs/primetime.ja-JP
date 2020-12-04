@@ -6,35 +6,38 @@ title: イベントリスナーとコールバックの実装
 uuid: f186b39e-e634-4f64-977d-279147d76c5c
 translation-type: tm+mt
 source-git-commit: 1034a0520590777cc0930d2f732741202bc3bc04
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
 
-# イベントリスナーとコールバックの実装 {#implement-event-listeners-and-callbacks}
+# イベントリスナーとコールバックを実装する{#implement-event-listeners-and-callbacks}
 
 イベントハンドラーを使用すると、TVSDKイベントに応答できます。
 
 イベントが発生すると、TVSDKのイベントメカニズムは、登録されたイベントハンドラーを呼び出し、イベント情報を渡します。
 
-TVSDKは、リスナーをインターフェイス内のパブリック内部インターフェイスとして定 `MediaPlayer` 義します。
+TVSDKは、リスナーを`MediaPlayer`インターフェイス内のパブリック内部インターフェイスとして定義します。
 
-アプリケーションに影響を与えるTVSDKイベントのイベントリスナーを、アプリケーションで実装する必要があります。
+アプリケーションで、アプリケーションに影響を与えるTVSDKイベント用のイベントリスナーを実装する必要があります。
 
-1. アプリケーションがリッスンする必要のあるイベントを決定します。
+1. アプリケーションがリッスンする必要があるイベントを決定します。
 
-   * 必要なイベント：すべての再生イベントをリッスンします。
+   * 必須イベント:すべての再生イベントをリッスンします。
 
       >[!IMPORTANT]
       >
-      >プレイヤーのステータスが必要な方法で変化した場合に発生するステータス変更イベントをリッスンします。 提供される情報には、プレイヤーが次に実行できる操作に影響を与える可能性のあるエラーが含まれます。
+      >プレイヤーのステータスが必要に応じて変化した場合に発生する、ステータス変更イベントをリッスンします。 提供される情報には、プレイヤーが次に実行できる操作に影響する可能性のあるエラーが含まれます。
 
-   * アプリケーションに応じたその他のイベントについては、Primetimeプレイヤーイベ [ントの概要を参照してくださ](../../android-3x-events-notifications/events-summary/android-3x-events-summary.md)い。
+   * その他のイベントについては、アプリケーションに応じて、[Primetimeプレイヤーイベントの概要](../../android-3x-events-notifications/events-summary/android-3x-events-summary.md)を参照してください。
 
-1. 各イベントのイベントリスナーを実装し、追加します。
+1. 各イベントにイベントリスナーを実装し、追加します。
 
-   ほとんどのイベントで、TVSDKはイベントリスナーに引数を渡します。 この値は、イベントに関する情報を提供し、次に何を行うかを決定するのに役立ちます。 列挙は、 `MediaPlayerEvent` ディスパッチするすべてのイベントを一覧 `MediaPlayer` 表示します。 詳しくは、Primetimeプレーヤーイベン [トの概要を参照してください](../../android-3x-events-notifications/events-summary/android-3x-events-summary.md)。
+   ほとんどのイベントで、TVSDKはイベントリスナーに引数を渡します。 これらの値は、次に何を行うかを決定する際に役立つイベントに関する情報を提供します。 `MediaPlayerEvent`定義済みリストは、`MediaPlayer`がディスパッチするすべてのイベントをリストします。 詳しくは、[Primetimeプレイヤーイベントの概要](../../android-3x-events-notifications/events-summary/android-3x-events-summary.md)を参照してください。
 
-   例えば、がのイン `mPlayer` スタンスの場合、 `MediaPlayer`次の方法でイベントリスナーを追加し、構成します。
+   例えば、`mPlayer`が`MediaPlayer`のインスタンスである場合、次のようにイベントリスナーを追加し、構造化します。
 
    ```java
    mPlayer.addEventListener(MediaPlayerEvent.STATUS_CHANGED, new StatusChangeEventListener() { 
@@ -49,37 +52,37 @@ TVSDKは、リスナーをインターフェイス内のパブリック内部イ
    }); 
    ```
 
-## 再生イベントの順序 {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
+## 再生イベントの順序{#section_6D412C33ACE54E9D90DB1DAA9AA30272}
 
-TVSDKは、一般に予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づいて、期待される順序でアクションを実装できます。
+TVSDKは、通常予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づくアクションを期待された順序で実装できます。
 
 次の例は、再生中に発生する一部のイベントの順序を示しています。
 
-メディアリソースを通じて正常に読み込む `MediaPlayer.replaceCurrentResource`と、イベントの順序は次のとおりです。
+`MediaPlayer.replaceCurrentResource`を介してメディアリソースを正常に読み込むと、次の順序でイベントされます。
 
-1. `MediaPlayerEvent.STATUS_CHANGED` 身分が `MediaPlayerStatus.INITIALIZING`
+1. `MediaPlayerEvent.STATUS_CHANGED` ステータス  `MediaPlayerStatus.INITIALIZING`
 
-1. `MediaPlayerEvent.STATUS_CHANGED` 身分が `MediaPlayerStatus.INITIALIZED`
+1. `MediaPlayerEvent.STATUS_CHANGED` ステータス  `MediaPlayerStatus.INITIALIZED`
 
 >[!TIP]
 >
->メインスレッドにメディアリソースを読み込みます。 バックグラウンドスレッドにメディアリソースを読み込むと、この操作またはその後の操作で、やなどのエラーが発生する `MediaPlayerException`場合があります。
+>メインスレッドにメディアリソースを読み込みます。 メディアリソースをバックグラウンドスレッドに読み込むと、この操作またはそれ以降の操作で`MediaPlayerException`などのエラーが発生し、終了する場合があります。
 
-通じて再生を準備する場合、 `MediaPlayer.prepareToPlay`イベントの順序は次のとおりです。
+`MediaPlayer.prepareToPlay`を介して再生を準備する場合、イベントの順序は次のとおりです。
 
-1. `MediaPlayerEvent.STATUS_CHANGED` 身分が `MediaPlayerStatus.PREPARING`
+1. `MediaPlayerEvent.STATUS_CHANGED` ステータス  `MediaPlayerStatus.PREPARING`
 
 1. `MediaPlayerEvent.TIMELINE_UPDATED` 広告が挿入された場合。
-1. `MediaPlayerEvent.STATUS_CHANGED` 身分が `MediaPlayerStatus.PREPARED`
+1. `MediaPlayerEvent.STATUS_CHANGED` ステータス  `MediaPlayerStatus.PREPARED`
 
-ライブ/リニアストリームの場合、再生時間が進み、追加のオポチュニティが解決されるに従って、再生中に、イベントの順序は次のとおりです。
+ライブ/リニアストリームの場合、再生中、再生時間が進み、追加のオポチュニティが解決されると、次の順序でイベントが発生します。
 
 1. `MediaPlayerEvent.ITEM_UPDATED`
 1. `MediaPlayerEvent.TIMELINE_UPDATED` 広告が挿入された場合
 
-## 広告イベントの順序 {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
+## 広告イベントの順序{#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
-再生に広告が含まれる場合、TVSDKは、一般に予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、期待されたシーケンス内のイベントに基づいてアクションを実装できます。
+再生に広告が含まれる場合、TVSDKは、通常予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、期待されたシーケンス内のイベントに基づいてアクションを実装できます。
 
 広告を再生する場合、イベントの順序は次のとおりです。
 
@@ -94,7 +97,7 @@ TVSDKは、一般に予想されるシーケンスでイベント/通知をデ�
 * `MediaPlayerEvent.AD_COMPLETE`
 * `MediaPlayerEvent.AD_BREAK_COMPLETE`
 
-次の例は、広告再生イベントの一般的な流れを示しています。
+次の例に、広告再生イベントの一般的な流れを示します。
 
 ```
 mediaPlayer.addEventListener(MediaPlayerEvent.AD_RESOLUTION_COMPLETE, new AdResolutionCompleteEventListener() { 
@@ -135,12 +138,12 @@ mediaPlayer.addEventListener(MediaPlayerEvent.AD_CLICK, new AdClickedEventListen
     });
 ```
 
-## DRMイベントの順序 {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
+## DRMイベントの順序{#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
 
 TVSDKは、新しいDRMメタデータが使用可能になった場合など、DRM関連の操作に応じて、デジタル著作権管理(DRM)イベントをディスパッチします。 プレイヤーは、これらのイベントに応じてアクションを実装できます。
 
-すべてのDRM関連イベントに関する通知を受け取るには、をリッスンしま `MediaPlayerEvent.DRM_METADATA`す。 TVSDKは、クラスを通じて追加のDRMイベントをディスパッ `DRMManager` チします。
+DRM関連のイベントをすべて通知するには、`MediaPlayerEvent.DRM_METADATA`をリッスンします。 TVSDKは、追加のDRMイベントを`DRMManager`クラスを通じてディスパッチします。
 
-## ローダイベントの順序 {#section_5638F8EDACCE422A9425187484D39DCC}
+## ローダイベントの順序{#section_5638F8EDACCE422A9425187484D39DCC}
 
-TVSDKは、ローダイベ `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` ントが発生するとディスパッチします。
+TVSDKは、ローダのイベントが発生すると`MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE`をディスパッチします。

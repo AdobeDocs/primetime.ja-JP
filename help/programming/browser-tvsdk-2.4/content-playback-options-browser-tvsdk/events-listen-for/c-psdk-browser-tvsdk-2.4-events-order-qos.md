@@ -1,20 +1,23 @@
 ---
-description: ブラウザーTVSDKは、サービス品質(QoS)イベントをディスパッチして、バッファリングやシークイベントなどのQoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
-seo-description: ブラウザーTVSDKは、サービス品質(QoS)イベントをディスパッチして、バッファリングやシークイベントなどのQoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
+description: ブラウザーTVSDKは、QoS(Quality of Service)イベントをディスパッチして、バッファリングやシークイベントなど、QoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
+seo-description: ブラウザーTVSDKは、QoS(Quality of Service)イベントをディスパッチして、バッファリングやシークイベントなど、QoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
 seo-title: QoSイベント
 title: QoSイベント
 uuid: 3384bc51-b435-4cd9-a1f8-9abf2605205b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 1%
 
 ---
 
 
 # QoSイベント{#qos-events}
 
-ブラウザーTVSDKは、サービス品質(QoS)イベントをディスパッチして、バッファリングやシークイベントなどのQoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
+ブラウザーTVSDKは、QoS(Quality of Service)イベントをディスパッチして、バッファリングやシークイベントなど、QoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
 
-すべてのQoS関連イベントに関する通知を受け取るには、MediaPlayerインスタンスを作成し、 `AdobePSDK.QOSProvider` このインスタンスにMediaPlayerインスタンスをアタッチ `QOSProvider` します。
+すべてのQoS関連イベントに関して通知を受けるには、`AdobePSDK.QOSProvider`のインスタンスを作成し、MediaPlayerインスタンスをこの`QOSProvider`インスタンスに接続します。
 
 ```js
 var qosProvider = new AdobePSDK.QOSProvider(); 
@@ -22,7 +25,7 @@ var qosProvider = new AdobePSDK.QOSProvider();
 qosProvider.attachMediaPlayer(player);
 ```
 
-インスタンスのプロパティを定期的に確認するように、アプリケ `playbackInformation` ーションでタイマーを設 `qosProvider` 定します。 このプロ `playbackInformation` パティは、現在の再生統計のスナップショットを提供します。 例：
+アプリケーションでタイマーを設定し、`qosProvider`インスタンスの`playbackInformation`プロパティを定期的に確認します。 `playbackInformation`プロパティは、現在の再生統計のスナップショットを提供します。 例：
 
 ```js
 var startTimer = function () { 

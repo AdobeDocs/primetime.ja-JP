@@ -14,6 +14,6 @@ ht-degree: 78%
 ---
 
 
-# Primetimeリファレンス {#reference}
+# Primetimeリファレンス{#reference}
 
 + [APIリファレンス](api-references.md)

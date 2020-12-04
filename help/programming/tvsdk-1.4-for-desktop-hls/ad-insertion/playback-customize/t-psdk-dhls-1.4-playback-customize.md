@@ -1,29 +1,32 @@
 ---
-description: 広告の動作は、カスタマイズまたは上書きできます。
-seo-description: 広告の動作は、カスタマイズまたは上書きできます。
+description: 広告動作は、カスタマイズまたは上書きできます。
+seo-description: 広告動作は、カスタマイズまたは上書きできます。
 seo-title: カスタマイズされた再生の設定
 title: カスタマイズされた再生の設定
 uuid: 479ca1b0-6b3f-42fa-85e1-31d707da8730
 translation-type: tm+mt
 source-git-commit: a21a5fcc819a7bec58ad36e118d04f462ec3fd92
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
 
 # カスタマイズされた再生の設定{#set-up-customized-playback}
 
-広告の動作は、カスタマイズまたは上書きできます。
+広告動作は、カスタマイズまたは上書きできます。
 
-広告の動作をカスタマイズまたは上書きする前に、広告ポリシーインスタンスをに登録します。
-動作をカスタマイズするには、次のいずれかの操作を行います。
+広告動作をカスタマイズまたは上書きする前に、に広告ポリシーインスタンスを登録します。
+広告動作をカスタマイズするには、次のいずれかを実行します。
 
-* インターフェイス `AdPolicySelector` とそのすべてのメソッドを実装します。
+* `AdPolicySelector`インターフェイスとそのすべてのメソッドを実装します。
 
-   すべてのデフォルトの広告動作を上書きする必要がある場合 **は** 、このオプションをお勧めします。
+   デフォルトの広告動作&#x200B;**すべての**&#x200B;を上書きする必要がある場合は、このオプションをお勧めします。
 
-* クラスを拡張 `DefaultAdPolicySelector` し、カスタマイズが必要な動作のみを実装します。
+* `DefaultAdPolicySelector`クラスを拡張し、カスタマイズが必要な動作のみに実装を提供します。
 
-   このオプションは、一部のデフォルトの動作のみを上書きする **必要が** ある場合に推奨されます。
+   デフォルトの動作の&#x200B;**一部**&#x200B;のみを上書きする必要がある場合は、このオプションをお勧めします。
 
 両方のオプションに対して、次のタスクを実行します。
 
@@ -55,7 +58,7 @@ source-git-commit: a21a5fcc819a7bec58ad36e118d04f462ec3fd92
    factory->retrieveAdPolicySelector(item, &defaultAdPolicySelector);
    ```
 
-1. TVSDKが広告ワークフローで使用する新しいコンテンツファクトリを登録します。
+1. 広告ワークフローでTVSDKが使用する新しいコンテンツファクトリを登録します。
 
    ```
    PSDKConfig.advertisingFactory = new CustomContentFactory();
@@ -63,4 +66,4 @@ source-git-commit: a21a5fcc819a7bec58ad36e118d04f462ec3fd92
 
    >[!TIP]
    >
-   >カスタムコンテンツファクトリがクラスを通じて特定のストリームに登録され `MediaPlayerItemConfig` た場合、インスタンスの割り当てが解除されると `MediaPlayer` クリアされます。 新しい再生セッションが作成されるたびに、アプリケーションで登録する必要があります。
+   >カスタムコンテンツファクトリが`MediaPlayerItemConfig`クラスを通じて特定のストリームに登録された場合、`MediaPlayer`インスタンスの割り当てが解除されるとクリアされます。 新しい再生セッションが作成されるたびに、アプリケーションでそのセッションを登録する必要があります。

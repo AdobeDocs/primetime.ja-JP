@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# TVSDK 3.12 for Androidリリースノート {#tvsdk-for-android-release-notes}
+# Android向けTVSDK 3.12リリースノート{#tvsdk-for-android-release-notes}
 
 Android向けTVSDK 3.12リリースノートでは、TVSDK Android 3.12の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
 
@@ -26,39 +26,39 @@ Androidリファレンスプレイヤーは、Android TVSDKと共に、配布物
 >
 >リファレンスプレーヤーを正常に構築するには、リリースと共に配布されているREADME.mdに記載されているとおり、次の操作を行います。
 >
->1. https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases [からVideoHeartbeat.jarをダウンロードします](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) （Android v2.0.0用のVideoHeartbeatライブラリ）
+>1. [https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases)からVideoHeartbeat.jarをダウンロードします（Android v2.0.0用VideoHeartbeatライブラリ）
 >1. libs/フォルダーにVideoHeartbeat.jarを抽出します。
 
 
 Android向けTVSDKは、以前のバージョンと比べて多くのパフォーマンスが向上しています。 高品質な視聴環境を提供し、マルチCDNのサポートを除き、バージョン1.4のすべての機能を搭載しています。
 
-サポートされる機能とサポートされない機能の包括的なセットは、リリースノートの [機能マトリクス](#feature-matrix) セクションに表示されます。
+サポートされる機能とサポートされない機能の包括的なセットは、リリースノートの[機能マトリクス](#feature-matrix)セクションに表示されます。
 
 ## Android TVSDK 3.12
 
 Primetime Referenceアプリケーションのグレードバージョンがバージョン5.6.4に更新されました。
 
-Android Studioを使用してReference Appをセットアップして実行するには、TVSDKのzipファイル()に記載されているReadMeファイルの指示に従ってく `TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md`ださい。
+Android Studioを使用してReference Appをセットアップして実行するには、`TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md`にあるTVSDK zipで入手可能なReadMeファイルの指示に従ってください。
 
-現在のリリースで修正されたトップのお客様の問題は、 [解決された問題の節で説明しています](#resolved-issues) 。
+現在のリリースで修正されたお客様の問題のトップは、[解決された問題](#resolved-issues)のセクションで説明されています。
 
 ### 以前のリリースの新機能および機能強化
 
 **Android TVSDK 3.11**
 
-* **保護システム固有のヘッダー(PSSH)ボックスのフェッチが許可されました** - TVSDKは、現在読み込まれているメディアリソースに関連付けられた保護システム固有のヘッダーボックスを取得できます。 に新しいAPI `getPSSH()` が追加され `com.adobe.mediacore.drm.DRMManager`ました。
+* **保護システム固有のヘッダー(PSSH)ボックスの取得が許可されています** - TVSDKは、現在読み込まれているメディアリソースに関連付けられた保護システム固有のヘッダーボックスを取得できます。新しいAPI `getPSSH()`が`com.adobe.mediacore.drm.DRMManager`に追加されました。
 
-詳しくは、Widevine DRM [を参照してください](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md)。
+詳しくは、[Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md)を参照してください。
 
 **Android TVSDK 3.10**
 
-このリリースでは、「 [解決された問題](#resolved-issues) 」セクションで説明されている、お客様の主な問題の修正に重点を置いています。
+このリリースでは、[解決された問題](#resolved-issues)で述べた、お客様の最も問題を修正することに重点を置いています。
 
 **Android TVSDK 3.9**
 
-* **HTTPSを介した安全な配信** - Android TVSDK 3.9では、HTTPSを介した安全な配信機能を導入し、比類のない拡張性とパフォーマンスで安全にコンテンツを配信します。
+* **HTTPSを介した安全な配信** - Android TVSDK 3.9は、HTTPSを介した安全な配信機能を導入し、比類のない拡張性とパフォーマンスで安全にコンテンツを配信します。
 
-   HTTPS経由の安全な配信を有効にするため、クラスで新しいAPIが導入され `NetworkConfiguration` ました。
+   HTTPS経由の安全な配信を有効にするため、`NetworkConfiguration`クラスで導入された新しいAPIです。
 
    `public void setForceHTTPS (boolean value)`
 
@@ -66,27 +66,27 @@ Android Studioを使用してReference Appをセットアップして実行す�
 
 **Android TVSDK 3.8**
 
-* **部分的な広告ブレーク機能を伴うプリロールのサポート** — この機能強化により、TVSDK 3.8は、部分的な広告ブレーク機能(PABI)を伴うプリロール広告をサポートします。
+* **部分的な広告ブレーク機能を伴うプリロールのサポート**  — この機能強化により、TVSDK 3.8は、部分的な広告ブレーク機能(PABI)を伴うプリロール広告をサポートします。
 
 プリロール広告がある場合は、その広告が再生され、ライブポイントからコンテンツが再生され、ライブテレビのエクスペリエンスがエミュレートされます。
 
 **Android TVSDK 3.7**
 
-* Widevineテストコンテンツの場合、DRMManagerクラス `setMediaDrmCallback` の新しいAPIが公開され、MediaDrmCallbackインターフェイスのデフォルト実装が上書きされます。
+* Widevineテストコンテンツの場合、DRMManagerクラスの新しいAPI `setMediaDrmCallback`が公開され、MediaDrmCallbackインターフェイスのデフォルト実装を上書きします。
 
    `public static void setMediaDrmCallback(MediaDrmCallback callback)`
 
-* C++レイヤー（Android 64ビット） `MediaPlayerEvent.ITEM_UPDATED` でAppCrashエラーが処理されない問題を修正しました。
+* C++レイヤー（Android 64ビット）で`MediaPlayerEvent.ITEM_UPDATED`を処理できなかったAppCrashエラーを修正しました。
 
 **Android TVSDK 3.6**
 
-* **64ビット要件のアプリケーションの強化** — ネイティブライブラリ `(libAVEAndroid.so)` がアップグレードされ、2つのバージョンで利用できるようになりました。 既存のarmeabi（32ビット）ネイティブライブラリの場所がから変更され `/framework/Player to /framework/Player/armeabi` 、 `/framework/Player/arm64-v8a.`
+* **64ビット要件のためのアプリケーションの強化**  — ネイティブライブラリ `(libAVEAndroid.so)` はアップグレードされ、2つのバージョンで利用できるようになりました。既存のarmeabi（32ビット）ネイティブライブラリの場所が`/framework/Player to /framework/Player/armeabi`から変更され、追加のarm64-v8a（64ビット）ライブラリが`/framework/Player/arm64-v8a.`に導入されました
 
 **バージョン3.5**
 
-* **Just In Time Ad Resolution** - TVSDK 3.5は、再生された広告のサポートをタイムラインから削除します。
+* **Just In Time Ad Resolution**  - TVSDK 3.5は、再生された広告のサポートをタイムラインから削除します。
 
-* **オフライン再生のサポートを有効にしました** — オフライン再生を使用すると、ビデオコンテンツをデバイスにダウンロードして、接続されていないときに視聴できるようになりました。 詳しくは、「[Androidでの](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_3.5.pdf)オフライン再生」を参照してください。
+* **オフライン再生のサポートを有効にしました**  — オフライン再生を使用すると、ビデオコンテンツをデバイスにダウンロードして、接続されていないときに視聴できるようになりました。詳しくは、「[Androidでのオフライン再生](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_3.5.pdf)」を参照してください。
 
 **バージョン3.4**
 
@@ -96,7 +96,7 @@ Android Studioを使用してReference Appをセットアップして実行す�
 
 * **APIの変更**
 
-   * ネットワークエラーとタイムアウトを処理す `NetworkConfiguration::setNumOfTimesManifestRetryBeforeError(n)*` るための新しいAPIが追加されました。
+   * ネットワークエラーとタイムアウトを処理するために、新しいAPIが`NetworkConfiguration::setNumOfTimesManifestRetryBeforeError(n)*`に追加されました。
       * (n)は再試行数です。
 
 **バージョン3.2**
@@ -129,7 +129,7 @@ Android Studioを使用してReference Appをセットアップして実行す�
 
 * **AC3/EAC3オーディオコーデックを使用したストリームの再生を有効にする**
 
-   * `void alwaysUseAC3OnSupportedDevices(boolean val)` 授 `MediaPlayer` 業中
+   * `void alwaysUseAC3OnSupportedDevices(boolean val)`  `MediaPlayer` 授業中
 
 * **TVSDKは、暗号化されたWidevine CTRに対して、CMAFおよびプレーンストリームの再生をサポートしています。**
 
@@ -141,21 +141,22 @@ Android Studioを使用してReference Appをセットアップして実行す�
 
 * **TVSDK 3.0は、High Efficiency Video Coding(HEVC)ストリームをサポートしています。**
 
-* **ジャストインタイム — 広告マーカーに近い広告を解決する遅延広告**&#x200B;解決が、各広告の時間を個別に解決するようになりました。 以前は、広告の解決は2段階のアプローチでした。プリロールは、再生開始の前に解決され、再生開始後に組み合わされたすべてのミッド/ポストロールスロットが解決されました。 この強化された機能を使用すると、広告キューポイントの前の特定の時間に各広告の時間が解決されるようになりました。
+* **ジャストインタイム — 広告**
+マーカーに近い広告を解決遅延広告解決で、各広告の時間を個別に解決できるようになりました。以前は、広告の解決は2段階のアプローチでした。プリロールは、再生開始の前に解決され、再生開始後に組み合わされたすべてのミッド/ポストロールスロットが解決されました。 この強化された機能を使用すると、広告キューポイントの前の特定の時間に各広告の時間が解決されるようになりました。
 
 >[!NOTE]
 >
 >遅延広告の解決は、デフォルトでオフになるように変更され、明示的に有効にする必要があります。
 
-この広告メタデータに関連付けられ `AdvertisingMetadata::setDelayAdLoadingTolerance` ている遅延広告読み込みの許容値を取得するための新しいAPIが追加されました。\
+この広告メタデータに関連付けられている遅延広告読み込みの許容値を取得するために、新しいAPIが`AdvertisingMetadata::setDelayAdLoadingTolerance`に追加されました。\
 PREPARATIONの直後にシークが可能になり、広告の時間をシークすると、シークが完了する直前に解決されます。\
-シグナリングモード `SERVER_MAP` とがサポート `MANIFEST_CUES` されています。
+シグナリングモード`SERVER_MAP`と`MANIFEST_CUES`がサポートされます。
 
-詳しくは、APIとイベントの変更に関するAndroid向け [TVSDK 3.0プログラマーガイド](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/c-lazy-ad-resolving.md) （英語）を参照してください。
+詳しくは、APIとイベントの変更点について、[Android向けTVSDK 3.0プログラマーガイド](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/c-lazy-ad-resolving.md)を参照してください。
 
-* **最新バージョン`targetSdkVersion`に更新**
+* **最新バ `targetSdkVersion` ージョンに更新**
 
-19 `targetSdkVersion` から27に更新され、スムーズに機能するようになりました。
+`targetSdkVersion`を19から27に更新し、スムーズに機能するようにしました。
 
 * **Placement.Type getPlacementType()は、インターフェイスTimelineMarkerのメソッドになりました**
 
@@ -167,7 +168,7 @@ PREPARATIONの直後にシークが可能になり、広告の時間をシーク
 
 * **バックグラウンドオーディオの有効化**
 
-   アプリがフォアグラウンドからバックグラウンドに移動したときのオーディオ再生を有効にするには、プレイヤーがPREPARED状態のときに、アプリはMediaPlayerの `enableAudioPlaybackInBackground` APIを引数としてtrueで呼び出す必要があります。
+   アプリがフォアグラウンドからバックグラウンドに移動したときのオーディオ再生を有効にするには、プレイヤーがPREPARED状態のときに、アプリは引数としてtrueを指定してMediaPlayerの`enableAudioPlaybackInBackground` APIを呼び出す必要があります。
 
 * **alwaysUseAudioOutputLatency(boolean val) in MediaPlayerクラス**
 
@@ -195,17 +196,17 @@ TVSDKは、必要に応じて、継続中のセグメントのダウンロード
 
 * **CRSリクエストに追加されたAdSystemおよびCreative ID**
 
-   1401リクエスト `AdSystem``CreativeId` と1403リクエストに、およびを新しいパラメーターとして含めるようになりました。
+   現在は、1401および1403リクエストに新しいパラメーターとして`AdSystem`と`CreativeId`を含めます。
 
-* **NetworkConfigurationクラスのAPI setEncodeUrlForTrackingは、URL内の安全でない文字をエンコードする必要があるため** 、削除されました。
+* **URL内の安全でない文字をエンコードする必要があるため、** 削除されるNetworkConfigurationクラスのAPI setEncodeUrlForTracking。
 
 **バージョン2.5.4**
 
 Android TVSDK v2.5.4オファーには、次の更新とAPIの変更が含まれています。
 
-* デフォルト値の変更 `WebViewDebbuging`
+* `WebViewDebbuging`のデフォルト値の変更
 
-   `WebViewDebbuging` の値はデフォルトで `Fals`eに設定されています。 有効にするには、アプリケーション `setWebContentsDebuggingEnabled(true)` でを呼び出します。
+   `WebViewDebbuging` の値はデフォルトで `Fals`eに設定されています。有効にするには、アプリケーションで`setWebContentsDebuggingEnabled(true)`を呼び出します。
 
 * **OpenSSLおよびCurlバージョンのアップグレード**
 
@@ -213,7 +214,7 @@ Android TVSDK v2.5.4オファーには、次の更新とAPIの変更が含まれ
 
 * VAST応答オブジェクトのアプリレベルアクセス
 
-   VAST応答オブジェクト `NetworkAdInfo::getVastXml()` へのアクセスを提供する新しいAPIが導入されました。
+   VAST応答オブジェクトのアクセスをアプリケーションに提供する新しいAPI `NetworkAdInfo::getVastXml()`が導入されました。
 
 **バージョン2.5.3**
 
@@ -232,17 +233,17 @@ Android TVSDK v2.5.3オファーには、次の更新とAPIの変更が含まれ
 
 * APIの変更：
 
-   * 新しいイベント `CookiesUpdatedEvent` が追加されます。 Cookieが更新されると、メディアプレイヤーによってディスパッチされます。
+   * 新しいイベント`CookiesUpdatedEvent`が追加されます。 Cookieが更新されると、メディアプレイヤーによってディスパッチされます。
 
-   * カスタムユーザーエージェントを使用す `NetworkConfiguration::set/ getCustomUserAgent()` るための新しいAPIが追加されました。
+   * カスタムユーザーエージェントを使用するために、新しいAPIが`NetworkConfiguration::set/ getCustomUserAgent()`に追加されました。
 
-   * 安全でない文字のエンコードを強制す `NetworkConfiguration::set/ getEncodedUrlForTracking` るために、に新しいAPIが追加されました。
+   * `NetworkConfiguration::set/ getEncodedUrlForTracking`に新しいAPIが追加され、安全でない文字のエンコードを強制的に行います。
 
-   * フェイルオーバー時にネットワーク検証URL `NetworkConfiguration::getNetworkDownVerificationUrl()` を設定するための新しいAPIが追加されました。
+   * フェイルオーバー時にネットワーク検証URLを設定するための新しいAPIが`NetworkConfiguration::getNetworkDownVerificationUrl()`に追加されました。
 
-   * キャプションの表示時にスペースを英数字として扱うかどうかを定義する新しいプロパティが追加されました。 `TextFormat::treatSpaceAsAlphaNum`
+   * `TextFormat::treatSpaceAsAlphaNum`に新しいプロパティが追加され、キャプションを表示する際にスペースを英数字として扱うかどうかを定義します。
 
-* 変更点 `SizeAvailableEvent`。 以前は、2.5.2の `getHeight()` および `getWidth()``SizeAvailableEvent` メソッドは、メディア形式で返されたフレームの高さとフレームの幅を返すのに使用されていました。 現在は、デコーダーが返す出力の高さと出力の幅を返します。
+* `SizeAvailableEvent`の変更。 以前は、2.5.2の`getHeight()`メソッドと`getWidth()`メソッドは、フレームの高さとフレームの幅を返すのに使用されていましたが、これはメディア形式で返されていました。 `SizeAvailableEvent`現在は、デコーダーが返す出力の高さと出力の幅を返します。
 
 * バッファリング動作の変更：バッファリング動作が変更されました。 バッファーが空の場合の処理をアプリケーション開発者に任せます。 2.5.3は、バッファーが空の場合に再生バッファーサイズを使用します。
 
@@ -254,22 +255,22 @@ Android TVSDK v2.5.2オファーの重要なバグ修正とAPIの変更点です
 
 Android 2.5.1でリリースされた重要な新機能。
 
-* **パフォーマンスの向上 —** 新しいTVSDK 2.5.1アーキテクチャにより、パフォーマンスが多数改善されました。 サードパーティのベンチマーク調査による統計に基づき、新しいアーキテクチャは、起動時間を5分の1に短縮し、ドロップフレーム数を業界平均よりも3.8分の1に削減します。
+* **パフォーマンスの向上 —** 新しいTVSDK 2.5.1アーキテクチャにより、パフォーマンスが多数改善されました。サードパーティのベンチマーク調査による統計に基づき、新しいアーキテクチャは、起動時間を5分の1に短縮し、ドロップフレーム数を業界平均よりも3.8分の1に削減します。
 
-* **VODおよびライブの即時オン — 即時オンを有効にすると** 、TVSDKは、再生開始の前にメディアを初期化し、バッファリングします。 複数のMediaPlayerItemLoaderインスタンスをバックグラウンドで同時に起動できるので、複数のストリームをバッファリングできます。 ユーザーがチャネルを変更し、ストリームが正しくバッファリングされた場合、新しいチャネル開始で直ちに再生されます。 TVSDK 2.5.1は、 **ライブストリームに対してもインスタントオンをサポートし** ます。 ライブストリームは、ライブ時間が移動すると再バッファリングされます。
+* **VODおよびliveの即時オン — 即時オンを有効に** すると、TVSDKは、再生開始の前にメディアを初期化し、バッファリングします。複数のMediaPlayerItemLoaderインスタンスをバックグラウンドで同時に起動できるので、複数のストリームをバッファリングできます。 ユーザーがチャネルを変更し、ストリームが正しくバッファリングされた場合、新しいチャネル開始で直ちに再生されます。 TVSDK 2.5.1は、**ライブ**&#x200B;ストリームのインスタントオンもサポートします。 ライブストリームは、ライブ時間が移動すると再バッファリングされます。
 
-* **ABRロジックの強化 —** 新しいABRロジックは、バッファー長、バッファー長の変化率、測定された帯域幅に基づいています。 これにより、ABRは帯域幅が変動する場合に適切なビットレートを選択し、バッファー長が変化するレートを監視することで、ビットレートの切り替えが実際に発生する回数を最適化します。
+* **ABRロジックの改善 —** 新しいABRロジックは、バッファー長、バッファー長の変化率、測定された帯域幅に基づいています。これにより、ABRは帯域幅が変動する場合に適切なビットレートを選択し、バッファー長が変化するレートを監視することで、ビットレートの切り替えが実際に発生する回数を最適化します。
 
-* **部分セグメントのダウンロード/サブセグメント —** TVSDKは、各フラグメントのサイズをさらに小さくして、可能な限り早く開始を再生します。 tsフラグメントには、2秒ごとにキーフレームが必要です。
+* **部分的なセグメントのダウンロード/サブセグメント —** TVSDKは、各フラグメントのサイズをさらに小さくして、可能な限り早く開始を再生します。tsフラグメントには、2秒ごとにキーフレームが必要です。
 
-* **遅延広告の解決 —** TVSDKは、非プリロール広告の解決を待たずに再生を開始するので、起動時間が短くなります。 シークやトリック再生などのAPIは、すべての広告が解決されるまで許可されません。 これは、CSAIで使用されるVODストリームに適用されます。 シークや早送りなどの操作は、広告の解決が完了するまで許可されません。 ライブストリームの場合、ライブイベント中は、この機能を広告解決に対して有効にすることはできません。
+* **遅延広告の解決 —** TVSDKは、非プリロール広告の解決を待たずに再生を開始するので、起動時間が短くなります。シークやトリック再生などのAPIは、すべての広告が解決されるまで許可されません。 これは、CSAIで使用されるVODストリームに適用されます。 シークや早送りなどの操作は、広告の解決が完了するまで許可されません。 ライブストリームの場合、ライブイベント中は、この機能を広告解決に対して有効にすることはできません。
 
-* **永続的なネットワーク接続 —** この機能を使用すると、TVSDKは永続的なネットワーク接続の内部リストを作成および保存できます。 これらの接続は、複数の要求に対して再利用され、各ネットワーク要求に対して新しい接続を開き、その後破棄するのではなくなります。 これにより、効率が向上し、ネットワークコードの遅延が減少し、再生パフォーマンスが向上します。
-TVSDKは、接続を開くと、サーバーに *キープアライブ接続を要求します* 。 一部のサーバーでは、このタイプの接続がサポートされていない場合があります。サポートされていない場合、TVSDKは、再度リクエストごとに接続を行うためにフォールバックされます。 また、永続的な接続はデフォルトでオンになりますが、TVSDKには、アプリが必要に応じて永続的な接続をオフにできるように設定オプションが追加されました。
+* **永続的なネットワーク接続 —** この機能を使用すると、TVSDKは永続的なネットワーク接続の内部リストを作成および保存できます。これらの接続は、複数の要求に対して再利用され、各ネットワーク要求に対して新しい接続を開き、その後破棄するのではなくなります。 これにより、効率が向上し、ネットワークコードの遅延が減少し、再生パフォーマンスが向上します。
+TVSDKは、接続を開くと、*キープアライブ*&#x200B;接続をサーバーに要求します。 一部のサーバーでは、このタイプの接続がサポートされていない場合があります。サポートされていない場合、TVSDKは、再度リクエストごとに接続を行うためにフォールバックされます。 また、永続的な接続はデフォルトでオンになりますが、TVSDKには、アプリが必要に応じて永続的な接続をオフにできるように設定オプションが追加されました。
 
-* **並行ダウンロード —** ビデオとオーディオをシリーズではなく並行してダウンロードすると、起動の遅延が減少します。 この機能を使用すると、HLS LiveファイルとVODファイルの再生、サーバーからの使用可能な帯域幅の使用の最適化、バッファーの実行不足状況に陥る確率の低下、ダウンロードと再生の間の遅延の最小化を行うことができます。
+* **並行ダウンロード — ビデオとオーディオをシリーズではなく並行して** ダウンロードすると、起動の遅延が減少します。この機能を使用すると、HLS LiveファイルとVODファイルの再生、サーバーからの使用可能な帯域幅の使用の最適化、バッファーの実行不足状況に陥る確率の低下、ダウンロードと再生の間の遅延の最小化を行うことができます。
 
-* **並行的な広告ダウンロード —** TVSDKは、広告の時間をヒットする前に、コンテンツ再生と並行して広告をプリフェッチするので、広告とコンテンツのシームレスな再生を可能にします。
+* **並行的な広告ダウンロード —** TVSDKは、広告の時間をヒットする前に、コンテンツ再生と並行して広告をプリフェッチします。これにより、広告とコンテンツのシームレスな再生を実現します。
 
 * **再生**
 
@@ -279,9 +280,9 @@ TVSDKは、接続を開くと、サーバーに *キープアライブ接続を�
    >
    >ABRの切り替え、トリック再生、広告挿入、遅延オーディオバインディングおよびサブセグメントは、MP4再生ではサポートされません。
 
-* **可変ビットレート(ABR)を使用したトリック再生 —** この機能を使用すると、トリック再生モード中にTVSDKがiFrameストリームを切り替えることができます。 iFrame以外のプロファイルを使用して、低速でトリック再生を行うことができます。
+* **可変ビットレート(ABR)を使用したトリック再生 —** この機能を使用すると、トリック再生モード中にTVSDKがiFrameストリームを切り替えることができます。iFrame以外のプロファイルを使用して、低速でトリック再生を行うことができます。
 
-* **トリックの再生がスムーズになりました —** 以下の改善により、ユーザーエクスペリエンスが向上します。
+* **トリックの再生がスムーズになりま** した。以下の改善により、ユーザーエクスペリエンスが向上します。
 
    * 帯域幅とバッファーのプロファイルに基づく、トリック再生中の可変ビットレートとフレームレートの選択
 
@@ -293,26 +294,26 @@ TVSDKは、接続を開くと、サーバーに *キープアライブ接続を�
 
 * **ワークフローのサポート**
 
-   * **直接請求の統合 —** これは、請求指標をAdobe Analyticsバックエンドに送信します。バックエンドは、Adobe Primetimeによって、お客様が使用するストリームに関して認定されています。
+   * **ダイレクト請求の統合 —** これは、請求指標をAdobe Analyticsバックエンドに送信します。バックエンドは、Adobe Primetimeによって、お客様が使用するストリームに関して認定されています。
 
    TVSDKは、顧客の販売契約に従って自動的に指標を収集し、課金の目的で必要な定期的な使用状況レポートを生成します。 TVSDKは、すべてのストリーム開始イベントで、Adobe Analyticsデータ挿入APIを使用して、コンテンツタイプ、広告挿入有効フラグ、drm有効フラグなどの請求指標（請求対象ストリームの長さに基づく）をAdobe AnalyticsPrimetimeが所有するレポートスイートに送信します。 これは、お客様独自のAdobe Analyticsレポートスイートやサーバーコールに影響を与えたり、含めたりすることはありません。 リクエストに応じて、この請求の使用状況レポートが定期的に顧客に送信されます。 これは、利用状況の請求のみをサポートする請求機能の最初のフェーズです。 ドキュメントで説明されているAPIを使用して、販売契約に基づいて設定できます。 この機能はデフォルトで有効になっています。 この機能をオフにするには、リファレンスプレイヤーのサンプルを参照してください。
 
-   * **フェイルオーバーのサポートの強化 —** ホストサーバー、プレイリストファイル、セグメントに障害が発生した場合でも中断されない再生を継続するために実装された追加の戦略。
+   * **フェイルオーバーのサポートの強化 — ホストサーバー、プレイリストファイル、セグメントに障害が発生した場合でも、中断されない再生を継続するために実装された** 追加の戦略。
 
 
 * **広告**
 
-   * **Morth統合 —** Morthからの広告視聴率測定のサポート。
+   * **堀の統合 — 堀からの広告視認性測定の** サポート
 
-   * **コンパニオンバナー —** Companion Bannerはリニア広告と共に表示され、多くの場合、広告が終了しても表示に引き続き表示されます。 これらのバナーは、html（HTMLスニペット）またはiframe（iframeページのURL）のタイプにすることができます。
+   * **コンパニオンバナー —** コンパニオンバナーはリニア広告と共に表示され、多くの場合、広告が終了しても表示に引き続き表示されます。これらのバナーは、html（HTMLスニペット）またはiframe（iframeページのURL）のタイプにすることができます。
 
 * **解析**
 
-   * **VHL 2.0 -** これは、Adobe Analyticsの使用データの自動収集のための、最新の最適化されたビデオハートビートライブラリ(VHL)統合です。 APIの複雑さが減少し、導入が容易になりました。 Android用VHLライブラリ [v2.0.0をダウンロードし](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) 、libsフォルダーにJARファイルを抽出します。
+   * **VHL 2.0 -** これは、Adobe Analytics用の使用データの自動収集のための、最新の最適化されたビデオハートビートライブラリ(VHL)統合です。APIの複雑さが減少し、導入が容易になりました。 Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases)用のVHLライブラリ[v2.0.0をダウンロードし、libsフォルダーにJARファイルを抽出します。
 
 * **SizeAvalableEventListener**
 
-   * `getHeight()` との `getWidth()``SizeAvailableEvent` メソッドは、それぞれ高さと幅で出力を返すようになりました。 表示縦横比は次のように計算できます。
+   * `getHeight()` の `getWidth()` メソッド `SizeAvailableEvent` は、それぞれ高さと幅で出力を返すようになりました。表示縦横比は次のように計算できます。
 
       ```java
       SizeAvailableEvent e;
@@ -329,9 +330,9 @@ TVSDKは、接続を開くと、サーバーに *キープアライブ接続を�
 
 * **Cookie**
 
-   * Android TVSDKは、AndroidアプリケーションのCookieStoreに保存されたJAVA cookieへのアクセスをサポートするようになりました。 新しいCookieが **セット —Cookie** 応答ヘッダーの一部として提供されるたびに記録するコールバックAPI(onCookiesUpdated)が提供されます。 これらのcookieは、CookieStoreを使用して特定のURI/ドメインに対してこれらのcookie値を設定することで、別のURI/ドメインに使用されるHttpCookieのリストとして使用できます。 同様に、TVSDKのcookieの値も、CookieStore追加APIを使用して更新されます。
+   * Android TVSDKは、AndroidアプリケーションのCookieStoreに保存されたJAVA cookieへのアクセスをサポートするようになりました。 新しいCookieが&#x200B;**Set-Cookie**&#x200B;応答ヘッダーの一部として提供される場合は常に記録するコールバックAPI(onCookiesUpdated)が提供されます。 これらのcookieは、CookieStoreを使用して特定のURI/ドメインに対してこれらのcookie値を設定することで、別のURI/ドメインに使用されるHttpCookieのリストとして使用できます。 同様に、TVSDKのcookieの値も、CookieStore追加APIを使用して更新されます。
 
-## 機能のマトリックス {#feature-matrix}
+## 機能マトリックス{#feature-matrix}
 
 Android向けTVSDKは、ビデオアプリケーションに機能を追加するために実装できる多数の機能をサポートしています。
 
@@ -416,7 +417,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 | Adobe AnalyticsVHL統合 | VOD + Live | Y |
 | 請求 | VOD + Live | Y |
 
-## 解決された問題 {#resolved-issues}
+## 解決された問題{#resolved-issues}
 
 解決が報告された問題に関連付けられている場合、Zendesk参照（ZD#xxxxなど）が表示されます。
 
@@ -488,7 +489,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 
 * ZD#36442 — 新しい再生が行われるたびに、リモートデバッグセッションが切断され、デバッグができなくなります。
 
-   * デバッグはデフォルトで有効になっていないため、Web表示ーではデフォルトでデバッグはできません。 MediaPlayer.getCustomAdView()から返されたオブジェクトでsetWebContentsDebuggingEnabled(true)を呼び出すことで、必要に応じてアプリケーションがデバッグを有効にする必要があります。
+   * デバッグはデフォルトで有効になっていないため、Web表示ーではデフォルトでデバッグできません。 MediaPlayer.getCustomAdView()から返されたオブジェクトでsetWebContentsDebuggingEnabled(true)を呼び出すことで、必要に応じてアプリケーションがデバッグを有効にする必要があります。
 
 * ZD#33688 — ジャストインタイムのサポートと解決
 
@@ -514,7 +515,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 
 * ZD #31533 — アプリがバックグラウンドに送信された後、Androidでオーディオを再生します。
 
-   * アプリがバックグラウンドにある場合にオーディオを再生できるように、引数として「True」を指定して（プレイヤーがPREPARED状態の場合）呼び出す必要があるMediaPlayerの `enableAudioPlaybackInBackground` APIを追加しました。
+   * アプリがバックグラウンドにある場合にオーディオを再生できるように、MediaPlayerの`enableAudioPlaybackInBackground` APIを追加しました。このAPIは、引数として「True」を指定して（プレイヤーがPREPARED状態の場合）呼び出す必要があります。
 
 **Android TVSDK 2.5.5**
 
@@ -661,7 +662,7 @@ WebViewDebuggingはデフォルトでFalseに設定されています。 デバ�
 * EAC3 SAPトラックが別々に割り当てられたHLSが読み込まれません。
 * メディアプレイヤーが復元された後に、TVSDKが画面オンインテントを受け取ると、プレイヤーがクラッシュする。
 
-## 既知の問題と制限事項 {#known-issues-and-limitations}
+## 既知の問題と制限{#known-issues-and-limitations}
 
 **Android TVSDK 3.11**
 
@@ -715,7 +716,7 @@ WebViewDebuggingはデフォルトでFalseに設定されています。 デバ�
    * 4Kのサポートはまだ存在しません
    * ID3タグのサポートが検証されていません
 
-* 広告の進行状況イベントの場合、タイムラインバーに100%正確な広告再生時間が反映されない場合があります。 回避策として、広告の再生の完了を知り、タイムラインバー `adcompleteevent` の更新、広告に関連するUIの削除など、様々な目的でUIを更新できます。
+* 広告の進行状況イベントの場合、タイムラインバーに100%正確な広告再生時間が反映されない場合があります。 回避策として、`adcompleteevent`を使用して広告の再生の完了を知り、タイムラインバーの更新、広告関連のUIの削除など、様々な目的でUIを更新できます。
 * VMAPから返される広告呼び出しは、ジャストインタイムルックアヘッド位置を受け入れません。
 
 **Android TVSDK 2.5.6**
@@ -750,12 +751,12 @@ WebViewDebuggingはデフォルトでFalseに設定されています。 デバ�
 * VMAP XMLで、明示的な終了タグ(&lt;/VAST>)のない空のVASTタグがあり、その後に改行がない場合、VMAP XMLは正しく解析されず、広告が再生されない場合があります。
 * VPAIDポストロールはサポートされていません。
 
-## 役立つリソース {#helpful-resources}
+## 役立つリソース{#helpful-resources}
 
 * [必要システム構成](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-requirements.html)
 * [TVSDK 3.10 for Androidプログラマーガイド](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-overview-prod-audience-guide.html)
 * [APIリファレンス用のTVSDK Android Javadoc](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html)
-* [TVSDK Android C++ APIドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) — 各Javaクラスには対応するC++クラスがあり、C++ドキュメントにはJavadocsよりも詳しい説明が記載されています。Java APIについて詳しくは、C++のドキュメントを参照してください。
+* [TVSDK Android C++ APIドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html)  — 各Javaクラスには対応するC++クラスがあり、C++ドキュメントにはJavadocsよりも詳しい説明が記載されています。Java APIの詳しい理解については、C++のドキュメントを参照してください。
 * [Android向けTVSDK 1.4から2.5(Java)への移行ガイド](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
-* 画面のオン/オフシナリオの処理については、ビルドに含まれる `Application_Changes_for_Screen_On_Off.pdf` ファイルを参照してください。
-* 「 [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html) 」ページのヘルプドキュメントを参照してください。
+* 画面のオン/オフシナリオの処理については、ビルドに含まれている`Application_Changes_for_Screen_On_Off.pdf`ファイルを参照してください。
+* [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html)のページにある完全なヘルプドキュメントを参照してください。

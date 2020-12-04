@@ -11,13 +11,13 @@ ht-degree: 0%
 ---
 
 
-# SWFアプリケーションでのリスト表示 {#swf-application-allowlisting}
+# SWFアプリケーションで{#swf-application-allowlisting}の一覧表示を許可
 
 SWFアプリケーションを許可リストするには、次の2つの方法のいずれかに従います。
 
 * SWFへのURLを指定できます。 これは非常に柔軟なアプローチです。特に、SWFを定期的に再構築する開発環境では特に便利です。
-* SWFハッシュを指定できます。 これは、SWFの暗号化ダイジェスト値です。 このアプローチは、アプリケーションが変更され再構築されるとSWF HASHが変更されるので、柔軟性に欠けます（ただし、より厳密に）。 この場合、以前のHASHに連結されたすべてのコンテンツは、新しいプレイヤーで再生できず、再パッケージする必要があります。 フ [!DNL PolicyManager.jar][!DNL .swf] ァイルを指定すると、自動的にハッシュが計算されます。
+* SWFハッシュを指定できます。 これは、SWFの暗号化ダイジェスト値です。 このアプローチは、アプリケーションが変更され再構築されるとSWF HASHが変更されるので、柔軟性に欠けます（ただし、より厳密に）。 この場合、以前のHASHに連結されたすべてのコンテンツは、新しいプレイヤーで再生できず、再パッケージする必要があります。 [!DNL PolicyManager.jar]ファイルを指定すると、&lt;a0/>ツールは自動的にハッシュを計算します。[!DNL .swf]
 
-   一方、Flash/Adobe Media Server(FMS/AMS)を介してPrimetime DRMを使用している場合は、特定のSWFへのパスを指定すると、FMS/AMSが示すDRMポリシーに挿入するSWFがFMS/AMSによって自動的にハッシュされます。
+   一方、Flash/Adobeメディアサーバー(FMS/AMS)を介してPrimetime DRMを使用している場合は、特定のSWFへのパスを指定すると、FMS/AMSが示すDRMポリシーに挿入するSWFが自動的にハッシュされます。
 
-詳し `policy.allowedSWFApplication.n` くは、 *設定プロパティの* 「」を参照してください。
+詳しくは、*設定プロパティ*&#x200B;の`policy.allowedSWFApplication.n`を参照してください。

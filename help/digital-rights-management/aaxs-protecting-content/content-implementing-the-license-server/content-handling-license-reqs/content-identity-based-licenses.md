@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# IDベースのライセンス {#identity-based-licenses}
+# IDベースのライセンス{#identity-based-licenses}
 
-IDベースのライセンスを使用する場合、サーバーは、ライセンスを発行する前に有効な認証トークンを確認します。 認証トークンの処理について詳しくは、 [ユーザー認証](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md) を参照してください。
+IDベースのライセンスを使用する場合、サーバーは、ライセンスを発行する前に有効な認証トークンを確認します。 認証トークンの処理の詳細については、[ユーザー認証](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md)を参照してください。
 
 >[!NOTE]
 >

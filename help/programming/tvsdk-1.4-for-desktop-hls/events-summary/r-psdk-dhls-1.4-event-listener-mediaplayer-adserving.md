@@ -6,6 +6,9 @@ title: 広告配信/時間指定メタデータイベント
 uuid: fd50a937-0c9b-4c47-acb2-1ffc0592ad54
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 TVSDKは、時間指定メタデータ操作に応じて広告配信イベントをディスパッチします。
 
-このような関連イベントの通知をすべて受け取るには、次のイベントのイベントリスナーをオ `MediaPlayer` ブジェクトに登録します。
+このようなすべての関連イベントに関して通知を受けるには、次のイベントの`MediaPlayer`オブジェクトにイベントリスナーを登録します。
 
 | イベント | 意味 |
 |---|---|

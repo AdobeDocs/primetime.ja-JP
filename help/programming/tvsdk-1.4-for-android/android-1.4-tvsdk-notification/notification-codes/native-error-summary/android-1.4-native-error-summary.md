@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# NATIVE_ERROR通知の詳細 {#details-for-the-native-error-notification}
+# NATIVE_ERROR通知{#details-for-the-native-error-notification}の詳細
 
 TVSDKは、ネイティブエラーを処理する際に、以下のメタデータキーの値の一部またはすべてを設定します。
 
@@ -24,7 +24,7 @@ TVSDKは、ネイティブエラーを処理する際に、以下のメタデー
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_CODE </span> </td> 
+   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_CODE  </span> </td> 
    <td colname="col2"> 
     <pre>
       AVEのネイティブエラーコードです。 
@@ -36,19 +36,19 @@ TVSDKは、ネイティブエラーを処理する際に、以下のメタデー
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_NAME </span> </td> 
-   <td colname="col2"> エラー名を含む文字列。例えば、 <span class="codeph"> AAXS_InvalidVoucher </span> や <span class="codeph"> DECODER_FAILED </span>などです。 </td> 
+   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_NAME  </span> </td> 
+   <td colname="col2"> エラー名を含む文字列。例えば、<span class="codeph"> AAXS_InvalidVoucher </span>や<span class="codeph"> DECODER_FAILED </span>です。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> NATIVE_SUBERROR_CODE </span> </td> 
-   <td colname="col2"> DRMエラーの場合、サブエラーコードも返されます。 これらのコードは、Flash Playerが返す <span class="codeph"> DRMErrorEvents </span> サブエラーコードに対応します。 Adobeにレポートエラーが発生した場合は、トラブルシューティングのために、この数値を含めてください。 </td> 
+   <td colname="col1"> <span class="codeph"> NATIVE_SUBERROR_CODE  </span> </td> 
+   <td colname="col2"> DRMエラーの場合、サブエラーコードも返されます。 これらのコードは、Flash Playerが返す<span class="codeph"> DRMErrorEvents </span>サブエラーコードに対応します。 Adobeにレポートエラーが発生した場合は、トラブルシューティングのために、この数値を含めてください。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING </span> </td> 
+   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING  </span> </td> 
    <td colname="col2"> DRMの場合、これはDRMサーバーデプロイメント（定義した場合）のカスタムエラー文字列です。 Adobeにレポートエラーが発生した場合も含めます。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> 説明 </span> </td> 
+   <td colname="col1"> <span class="codeph"> 説明  </span> </td> 
    <td colname="col2"> エラーを説明する文字列。 通常はメディアのURLです。 </td> 
   </tr> 
  </tbody> 
@@ -58,4 +58,4 @@ TVSDKは、これらのエラーコードと文字列をビデオエンジンか
 
 >[!IMPORTANT]
 >
->Adobe PrimetimeDRMクライアントの完全なエラーコードのリストについては、『 [DRM Client Error Message Reference](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf)』を参照してください。
+>Adobe PrimetimeDRMクライアントのエラーコードの完全なリストについては、[DRM Client Error Message Reference](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf)を参照してください。

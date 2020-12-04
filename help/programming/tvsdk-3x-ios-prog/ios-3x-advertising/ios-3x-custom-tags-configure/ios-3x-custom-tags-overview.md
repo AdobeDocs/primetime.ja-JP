@@ -4,11 +4,14 @@ title: カスタマイズされたVODアセットの例
 uuid: 23ff3778-09d4-43ef-89c3-67f8fc56f5da
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '72'
+ht-degree: 0%
 
 ---
 
 
-# カスタマイズされたVODアセットの例 {#example-of-a-customized-vod-asset}
+# カスタマイズされたVODアセットの例{#example-of-a-customized-vod-asset}
 
 カスタマイズされたVODアセットの例を次に示します。
 
@@ -38,8 +41,8 @@ seg5.ts
 #EXT-X-ENDLIST
 ```
 
-アプリケーションでは、次のシナリオを設定できます。
+アプリケーションで次のシナリオを設定できます。
 
-* ファイルにタ `#EXT-X-ASSET` グや、登録したその他のカスタムタグ名のセットが存在する場合の通知。
-* タグまたはその他のカ `#EXT-X-AD` スタムタグ名がストリーム内に見つかった場合に広告を挿入します。
+* `#EXT-X-ASSET`タグまたはサブスクライブした他のカスタムタグ名のセットがファイルに存在する場合の通知。
+* `#EXT-X-AD`タグまたは他のカスタムタグ名がストリーム内で見つかった場合に広告を挿入します。
 

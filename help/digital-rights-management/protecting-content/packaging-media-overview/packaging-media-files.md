@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 概要 {#packaging-media-files-overview}
+# 概要{#packaging-media-files-overview}
 
 パッケージ化とは、DRMポリシーを暗号化してビデオコンテンツに適用するプロセスのことです。 メディアパッケージAPIを使用してファイルをパッケージ化できます。 Primetime DRM Java SDKは、MP4などのプログレッシブダウンロードコンテンツのみをパッケージ化できます。
 
@@ -29,14 +29,14 @@ ht-degree: 0%
 >
 >このアーキテクチャにより、使用DRMポリシーを指定し、コンテンツをパッケージ化する際にコンテンツに連結することができます。 クライアントがコンテンツを再生する前に、クライアントは指定したコンピューターのライセンスを取得する必要があります。 ライセンスは、適用される使用規則を指定し、コンテンツの復号化に使用する必要があるキーを提供します。 DRMポリシーは、ライセンスを生成するためのテンプレートを表します。 ただし、ライセンスを発行する場合、ライセンスサーバが使用ルールを上書きする場合があります。 有効期限や再生時間などの制約によって、ライセンスが無効になる場合があります。
 
-Primetime DRMは、CEKを渡すためのAPIを提供します。 CEKが指定されていない場合、SDKがランダムに生成します。 通常、コンテンツのセクションごとに異なるCEKが必要です。 ただし、Dynamic Streamingでは、そのコンテンツを構成するすべてのファイルに対して同じCEKを使用することが考えられます。 したがって、あるビットレートから別のビットレートにシームレスにトランジションするには、1つのライセンスのみが必要です。 複数のコンテンツに同じキーとライセンスを使用する場合は、を使用して同じ `DRMParameters` オブジェクトを渡す `MediaEncrypter.encryptContent()`か、CEKで渡す必要があり `V2KeyParameters.setContentEncryptionKey()`ます。 コンテンツのセクションごとに異なるキーとライセンスを使用する場合は、ファイルごとに新しい `DRMParameters` インスタンスを作成する必要があります。
+Primetime DRMは、CEKを渡すためのAPIを提供します。 CEKが指定されていない場合、SDKがランダムに生成します。 通常、コンテンツのセクションごとに異なるCEKが必要です。 ただし、Dynamic Streamingでは、そのコンテンツを構成するすべてのファイルに対して同じCEKを使用することが考えられます。 したがって、あるビットレートから別のビットレートにシームレスにトランジションするには、1つのライセンスのみが必要です。 複数のコンテンツに同じキーとライセンスを使用する場合は、同じ`DRMParameters`オブジェクトを`MediaEncrypter.encryptContent()`に渡すか、`V2KeyParameters.setContentEncryptionKey()`を使用してCEKに渡す必要があります。 コンテンツのセクションごとに異なるキーとライセンスを使用する場合は、ファイルごとに新しい`DRMParameters`インスタンスを作成する必要があります。
 
-キー回転を使用してコンテンツをパッケージ化する場合、使用する回転キーとキーの変更頻度を制御できます。 `F4VDRMParameters` インターフェイスを `FLVDRMParameters` 実装し `KeyRotationParameters` ます。 このインターフェイスを使用して、キーの回転を有効にできます。 また、を指定する必要があり `RotatingContentEncryptionKeyProvider`ます。 暗号化された各サンプルに対して、使用する回転キーを決定するクラスです。 独自のプロバイダーを実装することも、SDKに含ま `TimeBasedKeyProvider` れるプロバイダーを使用することもできます。 この実装では、指定した秒数の経過後、ランダムに新しいキーが生成されます。
+キー回転を使用してコンテンツをパッケージ化する場合、使用する回転キーとキーの変更頻度を制御できます。 `F4VDRMParameters` インター `FLVDRMParameters` フェイスを `KeyRotationParameters` 実装します。このインターフェイスを使用して、キーの回転を有効にできます。 また、`RotatingContentEncryptionKeyProvider`を指定する必要があります。 暗号化された各サンプルに対して、使用する回転キーを決定するクラスです。 独自のプロバイダーを実装するか、SDKに含まれる`TimeBasedKeyProvider`を使用します。 この実装では、指定した秒数の経過後、ランダムに新しいキーが生成されます。
 
-場合によっては、コンテンツのメタデータを別のファイルとして保存し、コンテンツとは別のクライアントでメタデータを使用できるようにする必要があります。 その場合は、を呼び出す必要があります。これ `MediaEncrypter.encryptContent()`により、 `MediaEncrypterResult` オブジェクトが返されます。 を呼び出 `MediaEncrypterResult.getKeyInfo()` し、結果をにキャストし `V2KeyStatus`ます。 次に、コンテンツのメタデータを取得し、ファイルに保存します。
+場合によっては、コンテンツのメタデータを別のファイルとして保存し、コンテンツとは別のクライアントでメタデータを使用できるようにする必要があります。 その場合は、`MediaEncrypter.encryptContent()`を呼び出して`MediaEncrypterResult`オブジェクトを返す必要があります。 `MediaEncrypterResult.getKeyInfo()`を呼び出し、結果を`V2KeyStatus`にキャストします。 次に、コンテンツのメタデータを取得し、ファイルに保存します。
 
 これらのタスクはすべてJava APIを使用して実行できます。
 
-Java APIについて詳しくは、 *Adobe PrimetimeDRM APIリファレンス* （英語）を参照してください。
+Java APIについて詳しくは、*Adobe PrimetimeDRM APIリファレンス*&#x200B;を参照してください。
 
-Media Packager *のリファレンス実装について詳しくは、「Adobe PrimetimeDRMリファレンス実装の使用* 」を参照してください。
+Media Packagerの参照実装について詳しくは、「*Adobe PrimetimeDRM参照実装の使用*」を参照してください。

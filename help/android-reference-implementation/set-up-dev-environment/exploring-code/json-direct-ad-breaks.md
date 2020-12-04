@@ -1,20 +1,23 @@
 ---
-seo-title: ダイレクト広告の時間のJSONオブジェクト
-title: ダイレクト広告の時間のJSONオブジェクト
+seo-title: 直接広告の時間のJSONオブジェクト
+title: 直接広告の時間のJSONオブジェクト
 uuid: ffb901f4-0a8b-40fe-b6ba-5ffebc324cf2
-description: タイプ値がダイレクト広告の時間の場合にJSONオブジェクトの詳細を表示します
-seo-description: タイプ値がダイレクト広告の時間の場合にJSONオブジェクトの詳細を表示します
+description: タイプ値がダイレクト広告ブレークの場合のJSONオブジェクトの詳細
+seo-description: タイプ値がダイレクト広告ブレークの場合のJSONオブジェクトの詳細
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
-# ダイレクト広告の時間のJSONオブジェクト{#json-object-for-direct-ad-breaks}
+# ダイレクト広告ブレークのJSONオブジェクト{#json-object-for-direct-ad-breaks}
 
-次のコードブロックは、タイプ値がダイレクト広告の時間の場合の詳細JSONオブジェクトを定義します。
+次のコードブロックは、タイプ値が直接広告ブレークの場合のdetails JSONオブジェクトを定義します。
 
-が返 `MetadataNode` すエ `IFeedItemAdapter:getStreamMetadata()` ントリには、次の詳細JSONオブジェ `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` クト値を表す文字列表現のキーと値のエントリが含まれます。
+`IFeedItemAdapter:getStreamMetadata()`から返される`MetadataNode`には、`com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY`型のキーと、下の詳細JSONオブジェクト値の文字列表現の値を持つエントリが含まれます。
 
 ```
 “metadata”: { 
@@ -50,12 +53,12 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 | プロパティ | 説明 |
 |---|---|
-| `tag` | のタグフィールドにマップする文字列 `com.adobe.mediacore.timeline.advertising.AdBreak`。 |
-| `time` | 広告の時間の開始時間を示し、の時間フィールドにマップしま `com.adobe.mediacore.timeline.advertising.AdBreak`す。 値0はプリロール広告を示します。 |
-| `replace` | 広告の時間の置き換えの時間を示し、内のフィールドにマ `replaceDuration` ップしま `com.adobe.mediacore.timeline.advertising.AdBreak`す。 |
-| `ad-list` | 特定の広告の時間中に再生される広告のリストは、のフィールドにマッピ `List<Ad>` ングされま `com.adobe.mediacore.timeline.advertising.AdBreak`す。 |
+| `tag` | `com.adobe.mediacore.timeline.advertising.AdBreak`内のタグフィールドにマップする文字列。 |
+| `time` | 広告の時間の開始時間を示し、`com.adobe.mediacore.timeline.advertising.AdBreak`の時間フィールドにマップします。 値0はプリロール広告を示します。 |
+| `replace` | 広告の時間の置き換え時間を示し、`com.adobe.mediacore.timeline.advertising.AdBreak`の`replaceDuration`フィールドにマップします。 |
+| `ad-list` | 特定の広告の時間中に再生される広告のリストは、`com.adobe.mediacore.timeline.advertising.AdBreak`の`List<Ad>`フィールドにマッピングされます。 |
 
-次のコードブロックは、ads-list配列のJSONオブジェクトを定義します。
+次のコードブロックは、広告 —リスト配列のJSONオブジェクトを定義します。
 
 ```
 "ad-list": [ 
@@ -74,7 +77,7 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 | プロパティ | 説明 |
 |---|---|
-| `url` | 広告コンテンツのURLは、のurlフィールドにマップされま `com.adobe.mediacore.timeline.advertising.Ad`す。 |
-| `duration` | 広告の期間は、の期間フィールドにマップされます `com.adobe.mediacore.timeline.advertising.Ad`。 |
+| `url` | 広告コンテンツへのURLは、`com.adobe.mediacore.timeline.advertising.Ad`のurlフィールドにマップされます。 |
+| `duration` | 広告の長さは、`com.adobe.mediacore.timeline.advertising.Ad`の継続時間フィールドにマップされます。 |
 | `tag` | 説明文字列。 |
 

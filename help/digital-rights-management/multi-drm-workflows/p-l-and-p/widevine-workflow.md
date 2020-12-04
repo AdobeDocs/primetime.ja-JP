@@ -6,23 +6,26 @@ title: WidevineおよびPlayReady用のMulti-DRMワークフロー
 uuid: 295a7024-353c-4ff5-a46a-927020834322
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
 
-# WidevineおよびPlayReady用のMulti-DRMワークフロー {#multi-drm-workflow-for-widevine-and-playready}
+# WidevineおよびPlayReady用のMulti-DRMワークフロー{#multi-drm-workflow-for-widevine-and-playready}
 
 このMulti-DRMワークフローでは、WidevineおよびPlayReadyで暗号化されたDASHコンテンツのセットアップ、パッケージ化、ライセンス、再生を行います。
 
-Primetime TVSDKは、HTML5およびAndroidでのWidevineで暗号化またはPlayReadyで暗号化されたDASHコンテンツの再生をTVSDKバージョン2.Xでのみサポートします。DASHコンテンツの暗号化は、共通の暗号化仕様によって定義され、詳細は本書の範囲外です。 このセクションでは、DASH形式と暗号化仕様の詳細、およびサポートされるコンテンツを生成するために使用できるツールの一部に関する情報を提供します。
+Primetime TVSDKは、Widevineで暗号化またはPlayReady暗号化されたDASHコンテンツのHTML5およびAndroidでの再生をTVSDKバージョン2.Xでのみサポートしています。DASHコンテンツの暗号化はCommon Encryption仕様で定義され、詳細は本ドキュメントの範囲外です。 ここでは、DASH形式と暗号化の仕様に関する詳細、およびサポートされるコンテンツの生成に使用できるツールの一部について説明します。
 
 >[!NOTE]
 >
->Widevineで暗号化されたDASHコンテンツの再生時にAndroid TVSDK 1.Xにバックポートする計画はありません。
+>Widevineで暗号化されたDASHコンテンツの再生時にAndroid TVSDK 1.Xにバックポートする予定はありません。
 
-## DASHコンテンツと共通の暗号化の概要 {#section_33A881158F724835B4B89AAE97302B17}
+## DASHコンテンツと共通の暗号化の概要{#section_33A881158F724835B4B89AAE97302B17}
 
-ダッシュコンテンツは、再生するビデオおよびオーディオファイルを指すxml形式のメインマニフェストで構成されます。 以下の例では、DASHマニフェストがビデオURL video/1080_30.mp4を指し、マニフェストのURLを基準としたオーディオURL audio/1080_30.mp4を指しています。
+ダッシュコンテンツは、再生するビデオおよびオーディオファイルを指すxml形式のメインマニフェストで構成されます。 以下の例では、DASHマニフェストは、マニフェストのURLに対するビデオURL video/1080_30.mp4を指し、オーディオURL audio/1080_30.mp4を指しています。
 
 ```
 <MPD xmlns="urn:mpeg:DASH:schema:MPD:2011" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:scte35="urn:scte:scte35:2013" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"mediaPresentationDuration="PT30S" minBufferTime="PT8S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" type="static" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd">
@@ -44,7 +47,7 @@ Primetime TVSDKは、HTML5およびAndroidでのWidevineで暗号化またはPla
 </MPD>
 ```
 
-以下に、共通暗号化が適用されたマニフェストの例を示します。 マニフェスト内のWidevineコンテンツ保護XML要素(ブ `<ContentProtection>` ロック)には、base64エンコードされたpssh（保護システム固有のヘッダー）ボックスが含まれています。 psshボックスには、コンテンツの復号化を初期化するために必要なデータが含まれます。 このデータは、マニフェストが参照するビデオ/オーディオコンテンツにも埋め込まれます。 DASHコンテンツには複数のコンテンツ保護要素が含まれる場合があります。例えば、PlayReadyの場合は1、Widevineの場合は1です。
+以下に、共通暗号化が適用されたマニフェストの例を示します。 マニフェスト内のWidevineコンテンツ保護XML要素（`<ContentProtection>`ブロック）には、base64エンコードされたpssh（保護システム固有のヘッダー）ボックスが含まれています。 psshボックスには、コンテンツの復号化を初期化するために必要なデータが含まれます。 このデータは、マニフェストが参照するビデオ/オーディオコンテンツにも埋め込まれます。 DASHコンテンツには、PlayReadyの場合は1、Widevineの場合は1など、複数のコンテンツ保護要素を含めることができます。
 
 ```
 <?xml version="1.0" ?>
@@ -121,7 +124,7 @@ Primetime TVSDKは、HTML5およびAndroidでのWidevineで暗号化またはPla
 </MPD>
 ```
 
-上記の最初の例では各ストリームの1つのファイルのみを参照し、2番目の例では一連の小さなコンテンツフラグメントを参照しています。 フラグメントを明示的に参照する代わりに、次のようにフラグメントテンプレートを定義することもできます。
+上の最初の例では各ストリームに対して1つのファイルのみを参照し、2つ目の例では一連の小さなコンテンツフラグメントを参照しています。 フラグメントを明示的に参照する代わりに、次のようにフラグメントテンプレートを定義することもできます。
 
 ```
 <Representation bandwidth="348000" codecs="avc1.42c01e" height="360" id="1" width="640">
@@ -137,4 +140,4 @@ Primetime TVSDKは、HTML5およびAndroidでのWidevineで暗号化またはPla
 </Representation>
 ```
 
-この場合、コンテンツパーサー(TVSDK)は、Jaigo0.m4s、Jaigo1.m4s、Jaigo2.m4sなどでビデオコンテンツを見つける必要があります。 これは主にライブストリーミングに使用され、クライアントが時々マニフェストを再度ダウンロードする必要がないという利点があります。
+この場合、コンテンツパーサー(TVSDK)は、Jaigo0.m4s、Jaigo1.m4s、Jaigo2.m4sなどでビデオコンテンツを見つけることを期待しています。 これは主にライブストリーミングに使用され、クライアントが時々マニフェストを再度ダウンロードする必要がないという利点があります。

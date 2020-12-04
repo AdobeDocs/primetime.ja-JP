@@ -1,22 +1,25 @@
 ---
-description: クライアントがJSON形式の追跡情報を要求した場合、マニフェストサーバーはJSON形式の1つでファイルを返送します。
-seo-description: クライアントがJSON形式の追跡情報を要求した場合、マニフェストサーバーはJSON形式の1つでファイルを返送します。
-seo-title: URLの追跡用のJSON形式
-title: URLの追跡用のJSON形式
+description: クライアントがJSON形式のトラッキング情報を要求する場合、マニフェストサーバーはJSON形式の1つのファイルを返します。
+seo-description: クライアントがJSON形式のトラッキング情報を要求する場合、マニフェストサーバーはJSON形式の1つのファイルを返します。
+seo-title: 追跡URLのJSON形式
+title: 追跡URLのJSON形式
 uuid: 4b17639b-c0de-4ef4-931b-aa7c4c036c0a
 translation-type: tm+mt
 source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
 
-# URLの追跡用のJSON形式 {#json-formats-for-tracking-urls}
+# 追跡URLのJSON形式{#json-formats-for-tracking-urls}
 
-クライアントがJSON形式の追跡情報を要求した場合、マニフェストサーバーはJSON形式の1つでファイルを返送します。
+クライアントがJSON形式のトラッキング情報を要求する場合、マニフェストサーバーはJSON形式の1つのファイルを返します。
 
-## バージョン1を追跡するためのJSON形式 {#json_v1}
+## トラッキングバージョン1のJSON形式{#json_v1}
 
-マニフェストサーバーが送信するJSON `pttrackingversion=v1` ファイル（次の一般形式）。
+`pttrackingversion=v1`の一般的な形式が次の場合に、マニフェストサーバーが送信するJSONファイル。
 
 ```
 { 
@@ -32,11 +35,11 @@ source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
 }, ...]}
 ```
 
-## バージョン2を追跡するためのJSON形式 {#json_v2}
+## バージョン2の追跡用JSON形式{#json_v2}
 
-標準的なJSONブロックから取得された、次 `pttrackingversion=v2` の例の形式を持つマニフェストサーバーが送信するJSONファイル。
+`pttrackingversion=v2`の形式が次の例の場合、マニフェストサーバーが送信するJSONファイルです。この形式は、一般的なJSONブロックから取得されます。
 
-不要な繰り返しを避けるために短縮され、構造がより明確になりました。 省略記号（3つのドット、スペースで区切られた）は、一部のURL内および一部のコードブロック間の情報が省略されたことを示します。 短縮されていないURLは、JSONファイルの1行に表示されますが、複数行に表示されます。
+不要な繰り返しを避けるために短縮されたので、構造がより明確になります。 省略記号（3つのドット、スペースで区切られた）は、一部のURL内および一部のコードブロック間の情報が省略されたことを示します。 短縮化されていないURLは、JSONファイル内の1行に表示されますが、複数行に表示されます。
 
 ```
 { 
@@ -364,11 +367,11 @@ source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
 
 >[!NOTE]
 >
->抽出元 `offset` の属性の値 `scte35` が負の値になる場合 `ad breaks` があります。 これは、JSON V2サイドカーに、現在の再生ウィンドウに一部含まれる広告の時間に関する情報が含まれているためです。 したがって、この属 `scte35` 性には、そのような広告の時間に関する情報も含まれます。
+>`ad breaks`から抽出された`scte35`属性の`offset`値は負の値になる可能性があります。 これは、JSON V2サイドカーには、現在の再生ウィンドウに部分的に含まれる広告の時間に関する情報が含まれているからです。 そのため、`scte35`属性には、そのような広告の時間に関する情報も含まれます。
 
-## バージョン3を追跡するためのJSON形式 {#json_v3}
+## バージョン3の追跡用JSON形式{#json_v3}
 
-マニフェストサーバーが送信するJSON `pttrackingversion=v3` ファイル（次の一般形式）。
+`pttrackingversion=v3`の一般的な形式が次の場合に、マニフェストサーバーが送信するJSONファイル。
 
 ```
 { 

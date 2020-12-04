@@ -1,18 +1,21 @@
 ---
-description: Adobe Flash Playerの使用に役立つAPIがいくつかあります。
-seo-description: Adobe Flash Playerの使用に役立つAPIがいくつかあります。
-seo-title: Adobe Flash Playerの役に立つAPI
-title: Adobe Flash Playerの役に立つAPI
+description: AdobeFlash Playerの使用に役立つAPIがいくつかあります。
+seo-description: AdobeFlash Playerの使用に役立つAPIがいくつかあります。
+seo-title: AdobeFlash Playerに役立つAPI
+title: AdobeFlash Playerに役立つAPI
 uuid: eae314c0-fd9e-480f-ae1c-9b5f3eb4db4b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Flash Playerの役に立つAPI{#helpful-apis-for-the-adobe-flash-player}
+# AdobeFlash Player{#helpful-apis-for-the-adobe-flash-player}に役立つAPI
 
-Adobe Flash Playerの使用に役立つAPIがいくつかあります。
+AdobeFlash Playerの使用に役立つAPIがいくつかあります。
 
 ## AdobePSDK.MediaResource {#section_8C339FA1386D4B1A926A1459B2619E5E}
 
@@ -20,7 +23,7 @@ Adobe Flash Playerの使用に役立つAPIがいくつかあります。
 new MediaResource(url, type, metadata, forceFlash)
 ```
 
-サポートされている場合は、このパラメータを使 `forceFlash` 用して、再生技術の決定シーケンスを上書きし、実装にFlash Playerの使用を強制できます。
+サポートされている場合は、`forceFlash`パラメーターを使用して、再生テクノロジーの決定シーケンスを上書きし、Flash Playerの使用を強制できます。
 
 <!--<a id="section_FEE3205B532446498771F7DD55B5E79F"></a>-->
 

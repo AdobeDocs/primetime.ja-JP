@@ -13,23 +13,23 @@ ht-degree: 0%
 ---
 
 
-# コンテンツのパッケージ化と保護 {#packaging-protecting-content}
+# コンテンツのパッケージ化と保護{#packaging-protecting-content}
 
 コンテンツのパッケージ化と保護に関する情報により、コンテンツを保護できます。
 
-## サーバーの保護 {#securing-the-server}
+## サーバーの保護{#securing-the-server}
 
 ポリシーの管理とコンテンツのパッケージ化が行われるコンピューターを物理的に保護する必要があります。
 
-詳しくは、「 [物理的なセキュリティとアクセス](../../secure-deployment-guidelines/physical-sec-and-access.md)」を参照してください。
+詳しくは、[物理的セキュリティとアクセス](../../secure-deployment-guidelines/physical-sec-and-access.md)を参照してください。
 
-コンテンツのパッケージ化の実装にネットワーク接続が必要な場合は、オペレーティングシステムを強化し、適切なファイアウォールソリューションを実装する必要があります。 詳細については、「 [ネットワークトポロジ](../../secure-deployment-guidelines/overview/network-topology.md)」を参照してください。
+コンテンツのパッケージ化の実装にネットワーク接続が必要な場合は、オペレーティングシステムを強化し、適切なファイアウォールソリューションを実装する必要があります。 詳しくは、[ネットワークトポロジ](../../secure-deployment-guidelines/overview/network-topology.md)を参照してください。
 
-## コンテンツの安全なパッケージ化 {#securely-packaging-content}
+## コンテンツの安全なパッケージ化{#securely-packaging-content}
 
 Adobe PrimetimeDRM Media Packagerのコマンドラインツールの設定ファイルには、パッケージ化の際に使用するPKCS12秘密鍵証明書が必要です。
 
-参照実装のコマンドラインツールでは、PKCS12秘密鍵証明書ファイルのパスワードは、フ `flashaccess.properties` ァイル内にクリアテキストで保存されます。 このため、このファイルをホストするコンピューターをセキュリティで保護し、そのコンピューターがセキュリティで保護された環境ーにあることを確認する場合は、注意が必要です。 詳しくは、「 [物理的なセキュリティとアクセス](../../secure-deployment-guidelines/physical-sec-and-access.md)」を参照してください。
+参照実装のコマンドツールでは、PKCS12秘密鍵証明書ファイルのパスワードは、クリアテキストで`flashaccess.properties`ファイルに保存されます。 このため、このファイルをホストするコンピューターをセキュリティで保護し、そのコンピューターがセキュリティで保護された環境ーにあることを確認する場合は、注意が必要です。 詳しくは、[物理的セキュリティとアクセス](../../secure-deployment-guidelines/physical-sec-and-access.md)を参照してください。
 
 また、License ServerおよびLicense Serverのトランスポート証明書も使用します。この情報の整合性と機密性を保護する必要があります。 権限のあるエンティティのみ、パッケージャーの使用を許可する必要があります。 秘密鍵が侵害された場合は、証明書を失効できるように、すぐにAdobe Systems Incorporatedに知らせてください。
 
@@ -47,7 +47,7 @@ Primetime DRMパッケージ化APIは、特定の状況で警告を発します�
 
 パッケージ化が完了すると、パッケージキーはガベージコレクションされ、明示的に破棄されることはありません。 その結果、パッケージキーはしばらくの間メモリ内に残ります。 マシンへの不正アクセスを防ぎ、コアダンプなどの情報が明らかになる可能性のあるファイルを公開しないようにする必要があります。
 
-## ポリシーの安全な保存 {#securely-storing-policies}
+## ポリシーの安全な保存{#securely-storing-policies}
 
 Adobe PrimetimeDRM SDKを使用すると、コンテンツのパッケージ化とポリシー作成に使用できるアプリケーションを開発できます。
 
@@ -55,13 +55,13 @@ Adobe PrimetimeDRM SDKを使用すると、コンテンツのパッケージ化�
 
 ポリシーは、パッケージ化で使用されるまで、署名も保護も行われません。 パッケージ化ツールのユーザーがポリシーを変更する可能性がある場合は、ポリシーに署名し、ポリシーを変更できないことを確認します。
 
-SDKを使用したアプリケーションの作成について詳しくは、 [API Primetime APIリファレンスのPrimetime DRM APIを参照してください](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)。
+SDKを使用したアプリケーションの作成について詳しくは、[API Primetime APIリファレンス](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)のPrimetime DRM APIを参照してください。
 
-## 非対称キーの暗号化 {#asymmetric-key-encryption}
+## 非対称キーの暗号化{#asymmetric-key-encryption}
 
 非対称キー暗号化（公開鍵による暗号化とも呼ばれます）は、キーのペアを使用します。 1つの鍵は暗号化、もう1つの鍵は復号化です。
 
-復号鍵、つまり暗号鍵 *`private key`*&#x200B;は秘密にされている。暗号化キー(つまり、 *`public key`*&#x200B;コンテンツの暗号化を承認されたユーザーは誰でも利用できるようになります。 公開鍵にアクセスできるユーザーはだれでも、コンテンツを暗号化できます。 ただし、秘密鍵にアクセスできる人だけがコンテンツを復号化できます。 秘密鍵を公開鍵から再構築できません。
+復号鍵(*`private key`*)は秘密にされている。暗号化キー(*`public key`*)は、コンテンツの暗号化を許可されているすべてのユーザーが利用できます。 公開鍵にアクセスできるユーザーはだれでも、コンテンツを暗号化できます。 ただし、秘密鍵にアクセスできる人だけがコンテンツを復号化できます。 秘密鍵を公開鍵から再構築できません。
 
 コンテンツをパッケージ化する場合、License Serverの公開鍵を使用して、DRMメタデータのコンテンツ暗号化キー(CEK)が暗号化されます。 License Serverの秘密鍵にアクセスできるのは、License Serverだけにする必要があります。 他の誰かが鍵を持っていれば、その中身を解読し、表示することができる。
 
@@ -69,4 +69,4 @@ SDKを使用したアプリケーションの作成について詳しくは、 [
 >
 >公開鍵を含むLicense Serverの証明書を、信頼できるソースから取得していることを確認してください。 これにより、不正な公開鍵ではなく、License Serverの鍵であることを確認できます。 攻撃者がLicense Serverのキーに公開鍵を置き換える場合は、そのコンテンツを復号化できます。
 
-コンテンツのパッケージ化方法について詳しくは、「Adobe PrimetimeDRM SDKを [使用したコンテンツの保護](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf)」を参照してください。
+コンテンツをパッケージ化する方法について詳しくは、[Adobe PrimetimeDRM SDKを使用したコンテンツの保護](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf)を参照してください。

@@ -7,23 +7,23 @@ uuid: 8fc45a2f-03d4-4fa0-979b-eb816419c4f7
 translation-type: tm+mt
 source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
 
-# QoS再生とデバイス統計の表示 {#display-qos-playback-and-device-statistics}
+# QoS再生とデバイス統計情報の表示{#display-qos-playback-and-device-statistics}
 
 必要に応じて、QoSProviderから再生とデバイスの統計情報を読み取るようにプレイヤーを設定できます。
 
-この `QoSProvider` クラスは、フレームレート、プロファイルビットレート、バッファリングに費やした合計時間、バッファリング試行回数、最初のビデオフラグメントからの最初のバイト取得に要した時間、最初のフレームのレンダリングに要した時間、現在のバッファリング時間など、様々な統計を提供します。
+`QoSProvider`クラスは、フレームレート、プロファイルビットレート、バッファリングに費やした合計時間、バッファリング試行回数、最初のビデオフラグメントからの最初のバイト取得に要した時間、最初のフレームのレンダリングに要した時間、現在のバッファ長、バッファ時間など、様々な統計を提供します。
 
-参照実装は、QoSオーバーレイの表示を有効にできる `QoSManager` クラスを提供します。 QoS表示は、設定ユーザーインターフェイスで有効にすることもできます。
+参照実装は、QoSオーバーレイの表示を有効にできる`QoSManager`クラスを提供します。 QoS表示は、設定ユーザーインターフェイスで有効にすることもできます。
 
 ![](assets/qos-configuration.jpg)
 
-デバイス情報を取得し、メディアプレーヤに付加し、最新のQoS情報で更新することで、QoS統計を `QoSManager` 追跡します。
+`QoSManager`は、デバイス情報を取得し、メディアプレイヤーに接続し、最新のQoS情報で更新することで、QoS統計を追跡します。
 
 **QoS統計レポートの有効化または無効化**
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >ブール値を変更してQoSレポートを `false` 無効にします。
+   >ブール値を`false`に変更すると、QoSレポートが無効になります。
 
 2. 追加イベントリスナー：
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >プレイヤーアクティビティを破棄する場合は、 [qosManager.destroyQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider()) を呼び出して、QOSプロバイダーをメディアプレイヤーから切り離してクリーンアップします。
+   >プレイヤーアクティビティを破棄する場合は、[qosManager.destroyQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider())を呼び出して、QOSプロバイダーをメディアプレイヤーから切り離してクリーンアップする必要があります。
 
 **関連するAPIドキュメント**
 

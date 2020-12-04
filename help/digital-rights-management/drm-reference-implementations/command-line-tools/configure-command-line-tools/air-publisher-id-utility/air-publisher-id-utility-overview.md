@@ -11,17 +11,17 @@ ht-degree: 0%
 ---
 
 
-# AIR発行者IDユーティリティ {#air-publisher-id-utility}
+# AIRパブリッシャーIDユーティリティ{#air-publisher-id-utility}
 
-AIRファイルを構築すると、AIR Developer Tool(ADT)によって自動的に発行者IDが生成されます。 AIR発行者IDユーティリティ( [!DNL AdobePublisherIDUtility.jar])は、AIRアプリケーションの発行者IDを計算します。
+AIRファイルを構築すると、AIR Developer Tool(ADT)によって自動的に発行者IDが生成されます。 AIR発行者IDユーティリティ([!DNL AdobePublisherIDUtility.jar])は、AIRアプリケーションの発行者IDを計算します。
 
 発行者IDは、AIRファイルの作成に使用する証明書に固有です。 同じ証明書を複数のAIRアプリケーションに再利用する場合、すべてのAIRアプリケーションで同じPublisher IDが使用されます。 リリース1.5.2に成功したAIRリリースでは、生成された発行者IDはファイルに追加されません。 したがって、AIRアプリケーション許可リストを使用する場合は、このツールを使用して発行者IDを決定します。
 
 >[!NOTE]
 >
->AIR許可リストの適用に使用される発行者IDは、アプリケーションの発行者がアプリケーションの [!DNL application.xml] ファイルで指定する発行者IDとは異なります。
+>AIR許可リストの適用に使用される発行者IDは、アプリケーションの発行者がアプリケーションの[!DNL application.xml]ファイルで指定する発行者IDとは異なります。
 
-## AIR Publisher IDユーティリティのコマンドラインの使用 {#air-publisher-id-utility-command-line-usage}
+## AIR Publisher IDユーティリティのコマンドラインでの使用{#air-publisher-id-utility-command-line-usage}
 
 ```
 java -jar AdobePublisherIDUtility.jar 
@@ -43,4 +43,4 @@ java -jar AdobePublisherIDUtility.jar
 
 >[!NOTE]
 >
->Androidアプリケーションの発行者IDを特定するには、 `-s` オプションを使用して、Androidアプリケーションパッケージ(APK)の署名に使用する証明書を指定する必要があります。 Primetime DRMで保護されたコンテンツを再生できるAndroidアプリケーションを作成するには、Primetime DRMが必要です。
+>Androidアプリケーションの発行者IDを特定するには、`-s`オプションを使用して、Androidアプリケーションパッケージ(APK)の署名に使用する証明書を指定する必要があります。 Primetime DRMで保護されたコンテンツを再生できるAndroidアプリケーションを作成するには、Primetime DRMが必要です。

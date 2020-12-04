@@ -1,27 +1,30 @@
 ---
-description: TVSDKは、サブスクライブされたタグがコンテンツマニフェストで検出されるたびに、サブスクライブされたタグのPTTimedMetadataオブジェクトを準備します。
-seo-description: TVSDKは、サブスクライブされたタグがコンテンツマニフェストで検出されるたびに、サブスクライブされたタグのPTTimedMetadataオブジェクトを準備します。
+description: TVSDKは、サブスクライブされたタグがコンテンツマニフェスト内で検出されるたびに、サブスクライブされたタグのPTTimedMetadataオブジェクトを準備します。
+seo-description: TVSDKは、サブスクライブされたタグがコンテンツマニフェスト内で検出されるたびに、サブスクライブされたタグのPTTimedMetadataオブジェクトを準備します。
 seo-title: カスタムタグのサブスクライブ
 title: カスタムタグのサブスクライブ
 uuid: e47076b2-6184-4c20-bae4-ba7ae62cf198
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 1%
 
 ---
 
 
-# カスタムタグのサブスクライブ {#subscribe-to-custom-tags}
+# カスタムタグを登録{#subscribe-to-custom-tags}
 
-TVSDKは、サブスクライブされたタグがコンテンツマニフェストで検出されるたびに、サブスクライブされたタグのPTTimedMetadataオブジェクトを準備します。
+TVSDKは、サブスクライブされたタグがコンテンツマニフェスト内で検出されるたびに、サブスクライブされたタグのPTTimedMetadataオブジェクトを準備します。
 
-再生を開始する前に、タグをサブスクライブする必要があります。
+再生開始の前に、タグをサブスクライブする必要があります。
 HLSマニフェストのカスタムタグに関する通知を受け取るには：
 
-1. カスタムタグを含む配列をに渡して、カスタム広告タグ名をグローバルに設定し `setSubscribedTags` ます `PTSDKConfig`。
+1. カスタムタグを含む配列を`PTSDKConfig`の`setSubscribedTags`に渡して、カスタム広告タグ名をグローバルに設定します。
 
    >[!IMPORTANT]
    >
-   >HLSストリームを使用する場合は、 `#` プレフィックスを含める必要があります。
+   >HLSストリームを操作する場合は、`#`プレフィックスを含める必要があります。
 
    例：
 

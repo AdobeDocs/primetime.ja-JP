@@ -1,20 +1,23 @@
 ---
-description: デジタル著作権管理(DRM)固有のワークフローを完了できます。
-seo-description: デジタル著作権管理(DRM)固有のワークフローを完了できます。
-seo-title: デジタル著作権管理
-title: デジタル著作権管理
+description: Digital Rights Management(DRM)固有のワークフローを完了できます。
+seo-description: Digital Rights Management(DRM)固有のワークフローを完了できます。
+seo-title: Digital Rights Management
+title: Digital Rights Management
 uuid: 011605c7-50c4-4ad5-9961-8cd92d0e6fd8
 translation-type: tm+mt
 source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 
-# デジタル著作権管理 {#digital-rights-management}
+# Digital Rights Management{#digital-rights-management}
 
-デジタル著作権管理(DRM)固有のワークフローを完了できます。
+Digital Rights Management(DRM)固有のワークフローを完了できます。
 
-このイベントをリッスンして、DRMワ `AdobePSDK.DRMMetadataInfoEvent` ークフローを処理できます。
+`AdobePSDK.DRMMetadataInfoEvent`イベントをリッスンしてDRMワークフローを処理できます。
 
 ```js
 ... 
@@ -22,15 +25,15 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 ...
 ```
 
-## デジタル著作権管理の追加 {#add-digital-rights-management}
+## 追加Digital Rights Management{#add-digital-rights-management}
 
-1. を追加して、 `DRMMetadataInfoAvailableEvent` を取得しま `DRMMetadata`す。
+1. 追加`DRMMetadataInfoAvailableEvent`を呼び出して`DRMMetadata`を取得します。
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. 手順1の行 `onDRMMetadataInfoAvailable` の上のセクションを実装します。
+1. 手順1の行の上に`onDRMMetadataInfoAvailable`セクションを実装します。
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
@@ -51,7 +54,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    var drmManager = player.drmManager;
    ```
 
-1. 次のサンプルをコピーして、WidevineおよびPlayReadyの保護データを作成します。
+1. 以下のサンプルをコピーして、WidevineおよびPlayReady用の保護データを作成します。
 
    ```js
    var protectionData = { 
@@ -69,7 +72,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. drmManagerに保護データを追加します。
+1. drmManager追加に保護データを送信します。
 
    ```js
    drmManager.setProtectionData(protectionData);

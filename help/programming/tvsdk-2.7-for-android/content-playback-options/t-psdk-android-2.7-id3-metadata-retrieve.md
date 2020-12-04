@@ -1,18 +1,21 @@
 ---
-description: ID3タグは、ファイルのタイトルやアーティスト名など、オーディオファイルやビデオファイルに関する情報を提供します。 TVSDKは、HLSストリーム内のトランスポートストリーム(TS)セグメントレベルでID3タグを検出し、イベントをディスパッチします。 タグからデータを抽出できます。
-seo-description: ID3タグは、ファイルのタイトルやアーティスト名など、オーディオファイルやビデオファイルに関する情報を提供します。 TVSDKは、HLSストリーム内のトランスポートストリーム(TS)セグメントレベルでID3タグを検出し、イベントをディスパッチします。 タグからデータを抽出できます。
+description: ID3タグは、ファイルのタイトルやアーティスト名など、オーディオファイルやビデオファイルに関する情報を提供します。 TVSDKは、HLSストリーム内のトランスポートストリーム(TS)セグメントレベルでID3タグを検出し、イベントをディスパッチします。 アプリケーションは、タグからデータを抽出できます。
+seo-description: ID3タグは、ファイルのタイトルやアーティスト名など、オーディオファイルやビデオファイルに関する情報を提供します。 TVSDKは、HLSストリーム内のトランスポートストリーム(TS)セグメントレベルでID3タグを検出し、イベントをディスパッチします。 アプリケーションは、タグからデータを抽出できます。
 seo-title: ID3タグ
 title: ID3タグ
 uuid: 3fa199cd-668d-4d26-928f-074b6114b84c
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 0%
 
 ---
 
 
-# ID3タグ {#id-tags}
+# ID3タグ{#id-tags}
 
-ID3タグは、ファイルのタイトルやアーティスト名など、オーディオファイルやビデオファイルに関する情報を提供します。 TVSDKは、HLSストリーム内のトランスポートストリーム(TS)セグメントレベルでID3タグを検出し、イベントをディスパッチします。 タグからデータを抽出できます。
+ID3タグは、ファイルのタイトルやアーティスト名など、オーディオファイルやビデオファイルに関する情報を提供します。 TVSDKは、HLSストリーム内のトランスポートストリーム(TS)セグメントレベルでID3タグを検出し、イベントをディスパッチします。 アプリケーションは、タグからデータを抽出できます。
 
 >[!IMPORTANT]
 >
@@ -21,15 +24,15 @@ ID3タグは、ファイルのタイトルやアーティスト名など、オ�
 TVSDKは、ID3メタデータを検出すると、次のデータを含む通知を発行します。
 
 * TYPE = ID3
-* 名前= ID3
+* NAME = ID3
 
-1. のイベントリスナーを実装し `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` 、オブジェクトに登録 `MediaPlayer` します。
+1. `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)`のイベントリスナーを実装し、`MediaPlayer`オブジェクトに登録します。
 
-   TVSDKは、メタデータを検出すると、このリスナーを呼び `ID3` 出します。
+   TVSDKは、`ID3`メタデータを検出すると、このリスナーを呼び出します。
 
    >[!TIP]
    >
-   >カスタム広告キューは、同じイベントを `onTimedMetadata` 使用して新しいタグの検出を示します。 カスタム広告キューがマニフェストレベルで検出され、ID3タグがストリームに埋め込まれるので、混乱の原因になりません。 詳しくは、「カスタムタグ」を参 [照してください](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md)。
+   >カスタム広告キューは、同じ`onTimedMetadata`イベントを使用して、新しいタグの検出を示します。 カスタム広告キューはマニフェストレベルで検出され、ID3タグはストリームに埋め込まれるので、混乱の原因になりません。 詳しくは、[カスタムタグ](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md)を参照してください。
 
 
 1. メタデータを取得します。

@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# 広告の時間にリニアVPAID広告を表示する{#display-linear-vpaid-ads-in-an-ad-break}
+# 広告の時間{#display-linear-vpaid-ads-in-an-ad-break}にリニアVPAID広告を表示
 
 TVSDKは、広告の時間内でのリニアVideo Player-Ad Interface Definition(VPAID)広告の表示をサポートしています。 VPAIDバージョン1.0はFlashが必要ですが、バージョン2.0はBrowser TVSDKおよびJavaScriptとも連携します。
 
-VPAID広告を正しく表示するには、インスタンス内に広告コンテナ( `AdContainerView`)を指定する必要があり `MediaPlayerContext` ます。
+VPAID広告を正しく表示するには、`MediaPlayerContext`インスタンス内に広告コンテナ(`AdContainerView`)を指定する必要があります。
 
 VPAID広告の制限事項：
 

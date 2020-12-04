@@ -1,34 +1,37 @@
 ---
-description: Flash Playerを使用するには、お使いの環境が必要な要件を満たしていることを確認します。
-seo-description: Flash Playerを使用するには、お使いの環境が必要な要件を満たしていることを確認します。
-seo-title: Flash Playerの要件
-title: Flash Playerの要件
+description: Flash Playerを使用するには、環境が必要な要件を満たしていることを確認します。
+seo-description: Flash Playerを使用するには、環境が必要な要件を満たしていることを確認します。
+seo-title: Flash Player要件
+title: Flash Player要件
 uuid: f181457b-2bb4-4baa-b2b7-d787f65fab75
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '157'
+ht-degree: 1%
 
 ---
 
 
-# Flash Playerの要件{#flash-player-requirements}
+# Flash Player要件{#flash-player-requirements}
 
-Flash Playerを使用するには、お使いの環境が必要な要件を満たしていることを確認します。
+Flash Playerを使用するには、環境が必要な要件を満たしていることを確認します。
 
 <!--<a id="section_FEE654D506EC4D85AE77302AD2A27777"></a>-->
 
-Flash Playerの要件を次に示します。
+Flash Playerの要件は次のとおりです。
 
-* 再生するには、Flash Playerバージ `Primetime.js`ョン23以降をインストールします。
-* Flash Playerバージョン23以降の更新を求めるメッセージを表示するには、Flash Playerバージョン11.0.0以降をインストールします。
+* `Primetime.js`で再生するには、少なくともFlash Playerバージョン23をインストールしてください。
+* Flash Playerバージョン23以降の更新を求めるメッセージを表示するには、少なくともFlash Playerバージョン11.0.0をインストールします。
 
-## パッケージの要件 {#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
+## パッケージ化要件{#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
 
-Flash Playerでの再生には、次のSWFファイルが必要です。
+Flash Playerのある再生には、次のSWFファイルが必要です。
 
-* ブラウザーTVSDK APIを処理するメインアプリケーションSWFファイル。
-* Flash Playerのイ `playerProductInstall.swf` ンストールと更新を処理するSWFファイルです。
+* ブラウザーTVSDK APIを処理するメインアプリケーションのSWFファイル。
+* Flash Playerのインストールと更新を処理する`playerProductInstall.swf` SWFファイル。
 
-また、Flashでのビデオ再生には、SWFまたはファイルの可能性がある認証トークンファイルが必要 `.DAT` です。 SWFファイルへのパス、認証トークンファイル、トークンファイルの名前とタイプは、AdobePSDK APIを使用して指定できます。
+また、Flashでのビデオ再生には、SWFまたは`.DAT`ファイルの可能性がある認証トークンファイルが必要です。 SWFファイルへのパス、認証トークンファイル、トークンファイルの名前と種類は、AdobePSDK APIを使用して指定できます。
 
 例：
 

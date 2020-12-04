@@ -1,26 +1,29 @@
 ---
-description: Primetime DRMソリューションのクライアント側の主要な要素は、DRMマネージャーです。 Android SDKに含まれるサンプルアプリケーションには、特定のDRM操作をより簡単に実装できるようにするためのDRMHelperクラスも含まれています。
-seo-description: Primetime DRMソリューションのクライアント側の主要な要素は、DRMマネージャーです。 Android SDKに含まれるサンプルアプリケーションには、特定のDRM操作をより簡単に実装できるようにするためのDRMHelperクラスも含まれています。
+description: Primetime DRMソリューションのクライアント側の主要要素はDRMマネージャーです。 Android SDKに含まれるサンプルアプリケーションには、特定のDRM操作をより簡単に実装できるようにするためのDRMHelperクラスも含まれています。
+seo-description: Primetime DRMソリューションのクライアント側の主要要素はDRMマネージャーです。 Android SDKに含まれるサンプルアプリケーションには、特定のDRM操作をより簡単に実装できるようにするためのDRMHelperクラスも含まれています。
 seo-title: Primetime DRMインターフェイスの概要
 title: Primetime DRMインターフェイスの概要
 uuid: 9e6f6ae6-7193-40fe-bc9d-d8de33705f5d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
 
-# Primetime DRMインターフェイスの概要 {#primetime-drm-interface-overview}
+# Primetime DRMインターフェイスの概要{#primetime-drm-interface-overview}
 
-Primetime DRMソリューションのクライアント側の主要な要素は、DRMマネージャーです。 Android SDKに含まれるサンプルアプリケーションには、特定のDRM操作を `DRMHelper` より簡単に実装できるようにするためのクラスも含まれています。
+Primetime DRMソリューションのクライアント側の主要要素はDRMマネージャーです。 Android SDKに含まれるサンプルアプリケーションには、特定のDRM操作をより簡単に実装できるようにするための`DRMHelper`クラスも含まれています。
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-Primetime DRMは、TVSDKアプリケーションにコンテンツ保護を実装するための、スケーラブルで効率的なワークフローを提供します。 各デジタルメディアファイルのライセンスを作成することで、ビデオコンテンツの権限を保護し、管理します。
+Primetime DRMは、TVSDKアプリケーションにコンテンツ保護を実装するためのスケーラブルで効率的なワークフローを提供します。 各デジタルメディアファイルのライセンスを作成することで、ビデオコンテンツの権限を保護し、管理します。
 
 詳しくは、TVSDKパッケージに含まれているDRMサンプルプレイヤーコードを参照してください。
 
-DRMを操作する上で最も重要なAPI要素を次に示します。
+DRMを操作するための最も重要なAPI要素を次に示します。
 
 * DRMサブシステムを実装するDRMマネージャーオブジェクトへのメディアプレイヤー内の参照：
 
@@ -30,10 +33,10 @@ DRMを操作する上で最も重要なAPI要素を次に示します。
 
    >[!TIP]
    >
-   >このAPIは、が呼び出された後にの `DRMManager` み有効なオブジェクトを `MediaPlayerEvent.DRM_METADATA` 返します。 このイベントが発生す `getDRMManager()` る前にを呼び出すと、NULLが返される場合があります。
+   >このAPIは、`MediaPlayerEvent.DRM_METADATA`が呼び出された後にのみ有効な`DRMManager`オブジェクトを返します。 このイベントが起動する前に`getDRMManager()`を呼び出すと、NULLが返される場合があります。
 
-* DRMワー `DRMHelper` クフローを実装する場合に役立つヘルパークラス。
-* DRMメタ `DRMHelper` データがメディアとは別のURLに配置されている場合にDRMメタデータを読み込むメタデータローダーメソッドです。
+* `DRMHelper`ヘルパークラス。DRMワークフローの実装時に役立ちます。
+* `DRMHelper`メタデータローダーメソッド。DRMメタデータがメディアとは別のURLにある場合に、そのメタデータを読み込みます。
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -41,7 +44,7 @@ DRMを操作する上で最も重要なAPI要素を次に示します。
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* DRMメタ `DRMHelper` データを確認し、認証が必要かどうかを判断する方法。
+* DRMメタデータをチェックし、認証が必要かどうかを判断する`DRMHelper`メソッド。
 
    ```java
    /** 
@@ -55,7 +58,7 @@ DRMを操作する上で最も重要なAPI要素を次に示します。
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
    ```
 
-* `DRMHelper` メソッドを使用して認証を実行します。
+* `DRMHelper` 認証を実行する方法。
 
    ```java
    /** 
@@ -80,6 +83,6 @@ DRMを操作する上で最も重要なAPI要素を次に示します。
    final DRMAuthenticationListener authenticationListener);
    ```
 
-* 様々なDRMアクティビティとステータスをアプリケーションに通知するイベント。
+* 様々なDRMアクティビティとステータスをアプリに通知するイベント。
 
-DRMについて詳しくは、 [DRMのドキュメントを参照してください](https://helpx.adobe.com/primetime/user-guide.html)。
+DRMについて詳しくは、[DRMドキュメント](https://helpx.adobe.com/primetime/user-guide.html)を参照してください。

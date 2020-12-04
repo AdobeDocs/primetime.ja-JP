@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# 考慮事項とベストプラクティス {#considerations-and-best-practices}
+# 考慮事項とベストプラクティス{#considerations-and-best-practices}
 
 TVSDKを最も効果的に使用するには、操作の特定の詳細を考慮し、特定のベストプラクティスに従う必要があります。
 
-## 考慮事項 {#section_tvsdk_considerations}
+## 考慮事項{#section_tvsdk_considerations}
 
 TVSDKを使用する際は、以下の情報に注意してください。
 
@@ -45,7 +45,7 @@ TVSDKを使用する際は、以下の情報に注意してください。
 
       ユーザーエージェント文字列の値は、デフォルトでオペレーティングシステムが割り当てる値になります。
 
-## ベストプラクティス {#section_tvsdk_best_practices}
+## ベストプラクティス{#section_tvsdk_best_practices}
 
 TVSDKの推奨プラクティスを次に示します。
 

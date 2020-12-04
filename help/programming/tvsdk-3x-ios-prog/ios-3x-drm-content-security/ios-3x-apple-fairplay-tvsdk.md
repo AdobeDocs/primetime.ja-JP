@@ -7,7 +7,7 @@ uuid: 5796d5af-0018-4c69-a755-65e4819ee838
 translation-type: tm+mt
 source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
@@ -31,17 +31,17 @@ https://fp-gen.service.expressplay.com
 
 リソースローダーはリクエストをフォーマットし、再生を許可するExpressPlayトークンをURLに添付します。 ExpressPlayトークンを取得する際には、考慮する必要のあるオプションがいくつかあります。 これらのオプションは、コンテンツのパッケージ化方法によって決まります。
 
-コンテンツをパッケージ化すると、M3U8マニフェストに `skd:` URLが挿入されます。 エントリの後に、任意のデータをマニフェストに含めることがで `skd:` きます。 このデータをアプリケーションコードで使用して、上記のタスクを完了できます。 例えば、再生中のコンテンツのID `skd:{content_id}` をアプリが特定できるようにして、そのコンテンツの特定の部分のトークンをリクエストできます。 また、例えばを使用して、エンタイトルメントサーバーのURLをハードコードする必要がな `skd:{entitlement_server_url}?cid={content_id}`いようにすることもできます。
+コンテンツをパッケージ化すると、PackagerがM3U8マニフェストに`skd:` URLを挿入します。 `skd:`エントリの後に、マニフェストに任意のデータを配置できます。 このデータをアプリケーションコードで使用して、上記のタスクを完了できます。 例えば、`skd:{content_id}`を使用して、再生中のコンテンツのIDをアプリが特定し、そのコンテンツのトークンをリクエストできるようにします。 また、例えば`skd:{entitlement_server_url}?cid={content_id}`を使用すると、アプリにエンタイトルメントサーバーのURLをハードコードする必要がなくなります。
 
-再生開始が他のチャネルで既にコンテンツIDを知っている場合は、 `skd:` URLに情報を必要としないことがあります。 2つ目の例は、設定をテストする理想的なソリューションですが、実稼働環境でも使用できます。
+再生開始が他のチャネルーで既にコンテンツIDを知っている場合は、`skd:` URLに何も情報を必要としないことがあります。 2つ目の例は、設定をテストする理想的なソリューションですが、実稼働環境でも使用できます。
 
 >[!TIP]
 >
->の形式はユーザが決定し `skd:`ます。
+>`skd:`の形式を決定します。
 
-コンテンツはプロトコルを使用して取得されますが、ライセンスリクエストには `skd:` が使用され `https:`ます。 これらのプロトコルを処理する最も一般的なオプションは次のとおりです。
+コンテンツは`skd:`プロトコルを使用して取得されますが、ライセンスリクエストには`https:`が使用されています。 これらのプロトコルを処理する最も一般的なオプションは次のとおりです。
 
-* **エンドツーエンド再生の初期テスト** コンテンツをパッケージ化する場合は、 `skd:` URLを選択します。 アプリケーションをテストする場合は、ExpressPlayからライセンスを手動で取得し、ローダでライセンス( `https:` URL)とコンテンツURLをハードコードします。
+* **エンドツーエンド** 再生の初期テストコンテンツのパッケージ化時に、 `skd:` URLを選択します。アプリケーションをテストする場合は、ExpressPlayからライセンスを手動で取得し、ローダ内のライセンス(`https:` URL)とコンテンツURLをハードコードします。
 
    例：
 
@@ -53,7 +53,7 @@ https://fp-gen.service.expressplay.com
        ExpressPlayToken={copy_your_token_to_here}";
    ```
 
-* **その他のほとんどの場合** 。コンテンツをパッケージ化する場合は、コンテンツのIDを一意に表す `skd:` URLを選択します。 ローダでURLを解析し、サーバに送信してトークンを取得し、生成されたトークンをURLとして使用します。 `skd:`
+* **その他のほとんどの** 場合コンテンツのパッケージ化を行う場合は、コンテンツのIDを一意に表す `skd:` URLを選択します。ローダで`skd:` URLを解析し、サーバに送信してトークンを取得し、結果のトークンをURLとして使用します。
 
    例：
 
@@ -151,23 +151,23 @@ https://fp-gen.service.expressplay.com
    }
    ```
 
-## TVSDKアプリケーションでのApple FairPlayの有効化 {#section_61CFA3C22FE64F52B2C8CE860B72E88B}
+## TVSDKアプリケーションでApple FairPlayを有効にする{#section_61CFA3C22FE64F52B2C8CE860B72E88B}
 
 AppleのDRMソリューションであるApple FairPlay StreamingをTVSDKアプリケーションに実装できます。
 
-1. FairPlay用のCustomer Resource Loaderは、を実装して作成し `PTAVAssetResourceLoaderDelegate`ます。 詳しくは、TVSDKアプリケーションでのApple FairPlayを参照してください。
+1. `PTAVAssetResourceLoaderDelegate`を実装して、FairPlay Customer Resource Loaderを作成します。 詳しくは、TVSDKアプリケーションでのApple FairPlayを参照してください。
 
    >[!NOTE]
    >
-   >『 *FairPlay Streamingプログラムガイド* 』(FairPlayStreaming_PG.pdf *)の手順に従っていることを確認してください。この手順は、* FPS対応アプリケーション開発用の [](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)FairPlay Server SDKに含まれています。
+   >[fps対応アプリを開発するFairPlay Server SDKの&#x200B;*FairPlayストリーミングプログラムガイド*(*FairPlayStreaming_PG.pdf*)の手順に従っていることを確認してください。](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)
 
-   このメソッド `resourceLoader:shouldWaitForLoadingOfRequestedResource` は、のメソッドと同じで `AVAssetResourceLoaderDelegate`す。
+   メソッド`resourceLoader:shouldWaitForLoadingOfRequestedResource`は、`AVAssetResourceLoaderDelegate`のメソッドと同じです。
 
    >[!NOTE]
    >
-   >ExpressPlayライセンスサーバーシナリオでは、コンテンツを再生するには、ExpressPlay FairPlayサーバーライセンスリクエストURLをからに変更し `skd://` ます(または `https://``https://`)。
+   >ExpressPlayライセンスサーバーシナリオでは、コンテンツを再生するには、ExpressPlay FairPlayサーバーライセンスリクエストURLを`skd://`から`https://`（または`https://`）に変更します。
 
-1. FairPlay *Customer* Resource Loaderをに登録 `registerPTAVAssetResourceLoader`します。
+1. *FairPlay* Customer Resource Loaderを`registerPTAVAssetResourceLoader`に登録します。
 
    ```
    PTFairPlayResourceLoader *resourceLoader =  

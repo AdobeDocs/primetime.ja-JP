@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# リモートおよびローカルiOSキーの配信{#remote-and-local-ios-key-delivery}
+# リモートおよびローカルiOSキー配信{#remote-and-local-ios-key-delivery}
 
 Adobe Primetimeは、iOSクライアントに対して主要配信を行う場合、次の2つのオプションをサポートしています。
 
@@ -24,4 +24,4 @@ Adobe Primetimeは、iOSクライアントに対して主要配信を行う場�
 >
 >「主な配信」の選択は、iOSクライアントにのみ影響します。 HLSコンテンツを使用する他のすべてのデバイスは、「Remote」が指定されている場合でも、常に「Local」キー配信を使用します。
 
-詳しくは、「Adobeアクセスキーサーバー *の使用*」を参照してください。
+詳しくは、「*Adobeアクセスキーサーバーの使用*」を参照してください。

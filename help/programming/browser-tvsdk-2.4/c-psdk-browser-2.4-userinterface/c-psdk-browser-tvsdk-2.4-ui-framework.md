@@ -1,28 +1,31 @@
 ---
-description: UIフレームワークは、ブラウザーTVSDKの上にあるUIレイヤーで、初期設定の様々なビデオプレーヤー関連のUI構成を提供します。 環境に適したポイントの変更を行うことで、カスタマイズ性の高いプレーヤーを作成できます。
-seo-description: UIフレームワークは、ブラウザーTVSDKの上にあるUIレイヤーで、初期設定の様々なビデオプレーヤー関連のUI構成を提供します。 環境に適したポイントの変更を行うことで、カスタマイズ性の高いプレーヤーを作成できます。
+description: UIフレームワークは、ブラウザーTVSDKの上部にあるUIレイヤーです。このレイヤーは、初期設定の状態で様々なビデオプレーヤー関連のUI構成を提供します。 環境に適したポイントの変更を行うことで、高度にカスタマイズ可能なプレイヤーを作成できます。
+seo-description: UIフレームワークは、ブラウザーTVSDKの上部にあるUIレイヤーです。このレイヤーは、初期設定の状態で様々なビデオプレーヤー関連のUI構成を提供します。 環境に適したポイントの変更を行うことで、高度にカスタマイズ可能なプレイヤーを作成できます。
 seo-title: UIフレームワーク
 title: UIフレームワーク
 uuid: 8460d65c-b9aa-40d0-9e68-771b9f73a7b4
 translation-type: tm+mt
 source-git-commit: 2399515edaad49341cfa406a13887bcc8a3562be
+workflow-type: tm+mt
+source-wordcount: '886'
+ht-degree: 0%
 
 ---
 
 
-# UIフレームワーク {#the-ui-framework}
+# UIフレームワーク{#the-ui-framework}
 
-UIフレームワークは、ブラウザーTVSDKの上にあるUIレイヤーで、初期設定の様々なビデオプレーヤー関連のUI構成を提供します。 環境に適したポイントの変更を行うことで、カスタマイズ性の高いプレーヤーを作成できます。
+UIフレームワークは、ブラウザーTVSDKの上部にあるUIレイヤーです。このレイヤーは、初期設定の状態で様々なビデオプレーヤー関連のUI構成を提供します。 環境に適したポイントの変更を行うことで、高度にカスタマイズ可能なプレイヤーを作成できます。
 
 >[!TIP]
 >
->視覚（スキン表示）とUIの動作をカスタマイズできます。
+>表示（スキン表示）とUIの動作はカスタマイズ可能です。
 
 独自の動作を書き直すか、特定のデフォルト動作の機能を上書きすることができます。 また、SDKに付属の動作を一から書き込むことで、その動作を再利用することもできます。
 
-## 基本プレーヤーの作成 {#section_30E4812C4DDA4B519C9C837930B6AE45}
+## 基本プレーヤーの作成{#section_30E4812C4DDA4B519C9C837930B6AE45}
 
-`primetimevisualapi.min.js` はUIフレームワークライブラリで、そのすべての機能がグローバルオブジェクトptpを通じて公開されます。 次の例では、メソッドは基にな `videoPlayer` るプレーヤーを作成します。
+`primetimevisualapi.min.js` はUIフレームワークライブラリで、そのすべての機能がグローバルオブジェクトptpを通じて公開されます。次の例では、`videoPlayer`メソッドによって基になるプレーヤーが作成されます。
 
 ```js
 <script src="scripts/primetimevisualapi.min.js"></script> 
@@ -33,35 +36,35 @@ UIフレームワークは、ブラウザーTVSDKの上にあるUIレイヤー�
 </script>
 ```
 
-## プレイヤーの設定 {#section_9FC936B983CD40439E6D7675197B226C}
+## プレイヤーの設定{#section_9FC936B983CD40439E6D7675197B226C}
 
-次のいずれかの方法でプレイヤーを設定できます。
+プレイヤーは、次のいずれかの方法で設定できます。
 
 * JSONオブジェクトの使用
 * APIの使用
 
-JSONオブジェクトを生成するために、Browser TVSDKはUI Configuratorツールを提供します。 このツールでは、様々な設定を選択し、をクリックして設 **[!UICONTROL Test Configuration]** 定を確認し、をクリックして設定をダ **[!UICONTROL Download Configuration]** ウンロードすることができます。 ダウンロードしたファイルの内容は、APIに渡されるJSONオブジェクトとして使用さ `ptp.videoPlayer` れます。
+JSONオブジェクトを生成するために、Browser TVSDKはUI Configuratorツールを提供します。 このツールで様々な設定を選択し、「**[!UICONTROL Test Configuration]**」をクリックして設定を確認し、「**[!UICONTROL Download Configuration]**」をクリックして設定をダウンロードできます。 ダウンロードしたファイルのコンテンツは、JSONオブジェクトとして使用され、`ptp.videoPlayer` APIに渡されます。
 
-**UIコンフィギュレータツールの実行方法**:
+**UI Configuratorツールの実行方法**:
 
-1. ブラウザーTVSDK `frameworks` で使用可能なフォルダーを、ローカルWebサーバー上でホストします。
-1. ツールを開くには、ブラウザーを開いてに移動しま `< path-to-hosted-frameworks-folder>/ui-framework/ui-configurator/`す。
+1. ブラウザーTVSDKで利用可能な`frameworks`フォルダーをローカルWebサーバー上でホストします。
+1. ツールを開くには、ブラウザーを開いて`< path-to-hosted-frameworks-folder>/ui-framework/ui-configurator/`に移動します。
 
 **プレイヤーの動作の設定**
 
-次のいずれかの方法で、プレイヤーの動作を設定できます。
+プレイヤーの動作は、次のいずれかの方法で設定できます。
 
 >[!TIP]
 >
 >一部の設定では、両方のオプションを使用できます。
 
-* **videoBehavior APIを使用して** 、を返し `ptp.videoPlayer` ます。こ `ptp.videoBehavior`れにより、基になるビデオプレーヤーを設定できます。 再生関連の設定が必要な場合は、このオプションを使用できます。
+* **videoBehavior** `ptp.videoPlayer` APIを使用すると、を返し `ptp.videoBehavior`ます。これにより、基になるビデオプレーヤーを設定できます。再生関連の設定が必要な場合は、このオプションを使用できます。
 
    ```js
    player.setAbrControlParameters ({object})
    ```
 
-* **設定オブジェクトをvideoPlayer関数に渡す** 。このオブジェクトを使用する場合は、上記の再生設定に加えて、UIの動作を設定できます。 呼び出し元は、変更する必要があるパラメーターを指定する必要があり、プレーヤーは未指定のパラメーターに対して引き続きデフォルト値を使用します。
+* **設定オブジェクトをvideoPlayer** 関数に渡すこのオブジェクトを使用する場合、上記で説明した再生設定に加えて、UIの動作を設定できます。呼び出し元は、変更する必要があるパラメーターを指定する必要があります。プレイヤーは、未指定のパラメーターに対しては引き続きデフォルト値を使用します。
 
    ```js
    var player = ptp.videoPlayer('#video1', { 
@@ -72,19 +75,19 @@ JSONオブジェクトを生成するために、Browser TVSDKはUI Configurator
    });
    ```
 
-   上記の例では、ABR制御パラメーターは設定オブジェクトを使用して設定されていました。 また、コントロールバーの動作を設定するためにオブジェクトが渡されました。
+   上記の例では、ABR制御パラメーターは設定オブジェクトを使用して設定されています。 また、コントロールバーの動作を設定するために、オブジェクトも渡されました。
 
-   設定オブジェクトの構造については、下の「設定オブジェクトの構造を表示する」の節を参照してください。
+   設定オブジェクトの構造については、下の「表示設定オブジェクトの構造」の節を参照してください。
 
-* **AdobePSDK.MediaPlayerへのアクセス** ：ブラウザーTVSDKのMediaPlayer `videoPlayer.getMediaPlayer` にアクセスする必要がある高度な使用例を特に使用できます。
+* **AdobePSDK.** MediaPlayerへのアクセス高度な使用例 `videoPlayer.getMediaPlayer` の中で、ブラウザーTVSDKのMediaPlayerへのアクセスが必要な場合に使用できます。
 
-* **プレイヤーのスキン表示の設定** 。プレイヤーのスキン表示について詳しくは、プレイヤーのスキン表示を参 [照してください](../../browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md)。
+* **プレイ** ヤーのスキン表示の設定プレイヤーのスキン表示について詳しくは、プレイヤーの [スキン表示を参照してください](../../browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md)。
 
-## デフォルト動作の変更 {#section_D5D692638FFF4BEF81F7BE70E438CCE9}
+## デフォルト動作の変更{#section_D5D692638FFF4BEF81F7BE70E438CCE9}
 
-UIフレームワークの用語では、動作とは、特定のコンポーネントの視覚的な部分と相互作用部分を定義する構成体です。 以下に説明するオブジェクト構造を使用して、動作を変更できます。
+UIフレームワークの用語では、動作とは、特定のコンポーネントの視覚的な部分と相互作用部分を定義する構成体です。 以下に説明するオブジェクト構造を使用して、動作の変更内容を変更できます。
 
-例えば、ボリュームスライダが表示された後、非表示にしたくない場合は、次のサンプルを使用します。
+例えば、ボリュームスライダが表示された後に非表示にしたくない場合は、次の例を使用します。
 
 ```js
 var customVolumeSliderBehavior = function (element, configuration, player) { 
@@ -111,15 +114,15 @@ var player = ptp.videoPlayer('.videoHolder', {
 
 >[!NOTE]
 >
->必要なカスタマイズに応じて、その動作の特定の機能を上書きしたり、独自の動作を作成したりできます。 上書き可能な機能について詳しくは、 [UIフレームワーク](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) APIドキュメントを参照してください。
+>必要なカスタマイズに応じて、その動作の特定の機能を上書きするか、独自の動作を作成できます。 上書き可能な機能について詳しくは、[UIフレームワーク](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) APIドキュメントを参照してください。
 
-## 参照 {#section_0A76A3F44D8A49B09FE4C83F3FACCB76}
+## {#section_0A76A3F44D8A49B09FE4C83F3FACCB76}を参照
 
 その他の参照情報を次に示します。
 
-* **「設定オブジェクトの構造を表示** 」これは、すべてのデフォルト動作と動作のデフォルト要素とを階層的に示す完全なオブジェクト構造です。 サンプル設定では、UIファクトリを使用して要素が作成されていました。 同じ方法を使用することも、好みの方法で要素を構築することもできます。
+* **表示設定オブジェクト** 構造これは、すべてのデフォルト動作と動作のデフォルト要素を階層的に示す完全なオブジェクト構造です。サンプル設定では、UIファクトリを使用して要素を作成していました。 同じ方法または好みの方法を使用して要素を作成できます。
 
-   変更するパーツのみを指定する必要があり、残りの機能はデフォルトから選択されます。 使用事例に応じて、を開始するには、または構造を指定する `SingleViewConfigurationObject` 必要があり `MultiViewConfigurationObject` ます。
+   変更するパーツのみを指定する必要があり、残りの機能はデフォルトから選択されます。 開始を行うには、使用例に応じて`SingleViewConfigurationObject`または`MultiViewConfigurationObject`構造体を指定する必要があります。
 
    ```js
    var DEFAULT_CONTROL_BAR_CONFIG = { 
@@ -766,13 +769,13 @@ var player = ptp.videoPlayer('.videoHolder', {
    };
    ```
 
-* **ヘルパー構成** ：この構成は、次の要素で構成されます。
+* **ヘルパー** 構成要素この構成要素は、次の要素で構成されます。
 
-   * **ファクトリ** ビジュアル要素を作成するには、、、、お `ptp.factories.simpleButtonFactory`よびを `ptp.factories.simpleDivFactory`使用 `ptp.factories.simpleHRFactory`できま `ptp.factories.simpleSliderFactory`す。 詳しくは、 [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) APIドキュメントを参照してください。
+   * **** ファクトリビジュアル要素を作成するには、 `ptp.factories.simpleButtonFactory`、 `ptp.factories.simpleDivFactory`、 `ptp.factories.simpleHRFactory`およびを使用でき `ptp.factories.simpleSliderFactory`ます。詳しくは、[UIフレームワーク](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) APIドキュメントを参照してください。
 
-   * **Mixins** Mixinは、共通の構成を使用するために動作で組み立てられる、組み合わせ可能なモジュールです。 例えば、多くのコンポーネントは、広告の再生中など、コンポーネントの動作に影響を与える可能性のある変更を認識したいと考えています。 これらの要素はすべて、クラスを追加 `adBreak` します。
+   * **MixinsMixinsは、共通の構成を使用するために動作で組み立てることができる、組み合わせ可能なモジュールです。** 例えば、多くのコンポーネントは、広告の再生中など、コンポーネントの動作に影響を与える可能性のある変更を認識したいと思っています。 これらの要素はすべて`adBreak`クラスを追加します。
 
-      次に、組み込みミックスインの実装方法の例を示しま `adBreakStyling`す。
+      以下は、組み込みミックスイン`adBreakStyling`の実装方法の例です。
 
       ```js
       adBreakStyling = function (element, player) { 
@@ -785,7 +788,7 @@ var player = ptp.videoPlayer('.videoHolder', {
       }
       ```
 
-      このミックスインを動作が使用する方法を次に示します。
+      以下に、このミックスインの動作の使用方法を示します。
 
       ```js
       customBehavior = function (element, configuration, player) { 
@@ -798,7 +801,7 @@ var player = ptp.videoPlayer('.videoHolder', {
       }
       ```
 
-      この例 `customBehavior` では、が公開するすべてのメソッドを使 `adBreakStyling`用できるようになりまし `manageAdBreakStyle`た。 追加の使用例の1つは、ミックスインがイベントリスナーを追加できる場合で、ハンドラー内でミックスインが何らかの方法で要素を変更できる場合です。 その後、このミックスインを使用するコンポーネントは、自動的にこの機能を持ちます。
+      `customBehavior`は、`adBreakStyling`が公開するすべてのメソッド（この例では`manageAdBreakStyle`）を使用できます。 その他の使用例として、mixinがイベントリスナーを追加でき、ハンドラーでmixinが何らかの方法で要素を変更できる場合があります。 その後、このミックスインを使用するコンポーネントは、自動的にこの機能を持ちます。
 
-   * **Utils** 設定セクションや `ptp.elementGetter`拡張で使用されるユーティリテ `ptp.deepmerge`ィなど、動作の記述や拡張に役立ちます。 詳しくは、 [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) APIドキュメントを参照してください。
+   * **ユーティリ** ティ設定の節とで使用されるユーティリティな `ptp.elementGetter`ど、一部のユーティリティは、動作の作成 `ptp.deepmerge`や拡張に役立ちます。詳しくは、[UIフレームワーク](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) APIドキュメントを参照してください。
 

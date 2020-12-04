@@ -1,27 +1,30 @@
 ---
 description: テレビのようなエクスペリエンスで、広告の途中やライブストリームに参加できるようにすることができます。
 seo-description: テレビのようなエクスペリエンスで、広告の途中やライブストリームに参加できるようにすることができます。
-seo-title: 部分的な広告の時間の挿入
-title: 部分的な広告の時間の挿入
+seo-title: 広告の時間の部分挿入
+title: 広告の時間の部分挿入
 uuid: 296a9b6a-9e9f-4ca7-ab8a-c8cbc98fb9af
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '349'
+ht-degree: 0%
 
 ---
 
 
-# 部分的な広告の時間の挿入 {#partial-ad-break-insertion}
+# 部分的な広告ブレークの挿入{#partial-ad-break-insertion}
 
 テレビのようなエクスペリエンスで、広告の途中やライブストリームに参加できるようにすることができます。
 
-部分的な広告の時間機能を使用すると、クライアントがミッドロール内でライブストリームを開始する場合、そのミッドロール内で開始するテレビのようなエクスペリエンスを模倣できます。 テレビチャンネルに切り替えるのと似ていて、CMはシームレスに走ります。
+部分的な広告の時間機能を使用すると、クライアントがミッドロール内のライブストリームを開始した場合に、そのミッドロール内で開始する、テレビのようなエクスペリエンスを模倣できます。 テレビチャネルに切り替えるのと同じで、CMはシームレスに走ります。
 
-例えば、ユーザーが90秒の広告の時間（3つの30秒の広告）の途中で、2番目の広告に10秒（広告の時間が40秒になると）加入した場合、次のようになります。
+例えば、ユーザーが90秒の広告の時間（3つの30秒の広告）の途中で加入し、10秒で2番目の広告に入った場合（つまり、広告の時間が始まる40秒の時点）、次のようになります。
 
-* 2番目の広告は、残りの時間（20秒）に続いて3番目の広告が再生されます。
-* 部分的に再生された広告（2番目の広告）の広告トラッカーは実行されません。 3つ目の広告のトラッカーのみが起動されます。
+* 2番目の広告は、残りの時間（20秒）に再生され、次に3番目の広告が再生されます。
+* 部分的に再生された広告（2番目の広告）の広告トラッカーは起動されません。 3番目の広告のトラッカーのみが起動されます。
 
-この動作は、デフォルトでは有効になっていません。 この機能をアプリで有効にするには、次の手順を実行します。
+この動作は、デフォルトでは有効になっていません。 アプリでこの機能を有効にするには、次の手順を実行します。
 
 1. AdvertisingMetadataクラスのメソッドsetEnableLivePrerollを使用して、ライブプリロールを無効にします。
 
@@ -29,7 +32,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    advertisingMetadata.setEnableLivePreroll(String.valueOf(false))
    ```
 
-1. 部分的な広告ブレークの挿入の環境設定をオンにします。 この機能をオンに切り替えるには、MediaPlayerインターフェイスの新しいメソッドsetPartialAdBreakPrefを使用します。 この基本設定の現在の状態を調べるには、getPartialAdBreakPrefメソッドを使用します。
+1. 部分的な広告ブレークの挿入の環境設定をオンにします。 この機能をオンにするには、MediaPlayerインターフェイスの新しいメソッドsetPartialAdBreakPrefを使用します。 この基本設定の現在の状態を調べるには、getPartialAdBreakPrefメソッドを使用します。
 
    ```
    MediaPlayer mediaPlayer = DefaultMediaPlayer.create(getActivity().getApplicationContext()); 
@@ -39,7 +42,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 1. この機能を使用するには、カスタム広告ポリシーセレクターを実装して動作をカスタマイズする必要があります。 AdvertisingFactoryクラスのカスタム実装をまだ持っていない場合は、新しいAdvertisingFactory実装を追加します。 createAdPolicySelectorメソッドを上書きします。 このメソッドは、AdPolicySelectorの実装の新しいインスタンスを返します。
 
-   以下に、参考として実装例を示します。 次の実装例は、com.adobe.mediacoreパッケージで使用できます。 ただし、簡単に参照できるように簡素化されており、そのまま使用することはお勧めしません。
+   参考用に、実装の例を以下に示します。 次の実装例は、com.adobe.mediacoreパッケージで使用できます。 ただし、参照しやすいように簡単になっており、そのまま使用することはお勧めしません。
 
    1. 広告ポリシーセレクターの例
 
@@ -159,7 +162,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
       } 
       ```
 
-   1. 広告工場のサンプル
+   1. 広告ファクトリのサンプル
 
       ```
       private AdvertisingFactory createPartialAdBreakFactory() { 
@@ -184,7 +187,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
       } 
       ```
 
-   1. AdvertisingFactoryをメディアプレイヤーに登録します。
+   1. アドビのAdvertisingFactoryをメディアプレイヤーに登録します
 
       ```
       AdvertisingFactory advertisingFactory = createPartialAdBreakFactory();  
@@ -194,7 +197,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
       } 
       ```
 
-   1. createAdPolicySelectorメソッドを上書きする
+   1. createAdPolicySelectorメソッドの上書き
 
       ```
       @Override 

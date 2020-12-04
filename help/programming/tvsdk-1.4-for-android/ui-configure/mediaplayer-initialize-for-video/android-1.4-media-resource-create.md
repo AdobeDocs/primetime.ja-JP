@@ -6,38 +6,41 @@ title: メディアリソースの作成
 uuid: d9fe982a-bedf-445c-b5be-f7918693782a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '343'
+ht-degree: 0%
 
 ---
 
 
-# メディアリソースの作成 {#create-a-media-resource}
+# メディアリソースの作成{#create-a-media-resource}
 
 新しいビデオコンテンツごとに、ビデオコンテンツに関する情報でMediaResourceインスタンスを初期化し、メディアリソースを読み込みます。 MediaResourceクラスは、MediaPlayerインスタンスによって読み込まれるコンテンツを表します。
 
-1. メディアに関す `MediaResource` る情報をコンストラクターに渡して、を作成 `MediaResource` します。
+1. メディアに関する情報を`MediaResource`コンストラクタに渡して、`MediaResource`を作成します。
 
    <table id="table_DD0D5D9129D54F73881399B9B4FF546A"> 
     <thead> 
     <tr> 
-    <th colname="col1" class="entry"> コンストラクターパラメーター </th> 
+    <th colname="col1" class="entry"> コンストラクタパラメータ </th> 
     <th colname="col2" class="entry"> 説明 </th> 
     </tr> 
     </thead>
     <tbody> 
     <tr> 
     <td colname="col1"> <p>url </p> </td> 
-    <td colname="col2"> <p>メディアのマニフェスト/プレイリストのURLを表す文字列。 </p> </td> 
+    <td colname="col2"> <p>メディアのマニフェスト/プレイリストのURLを表す文字列です。 </p> </td> 
     </tr> 
     <tr> 
     <td colname="col1"> <p>type </p> </td> 
-    <td colname="col2"> <p>指定されたファイルの種類に対応する、MediaResource.Type <span class="codeph"> 列挙 </span> の次のいずれかのメンバーです。 
+    <td colname="col2"> <p>指定されたファイルの種類に対応する<span class="codeph"> MediaResource.Type </span>定義済みリストの次のいずれかのメンバーです。 
     <ul id="ul_72636C41CA7E4538A3BE11A79E0282FC"> 
-    <li id="li_070960200DEB40E992C58FCB8909AEA3"> <span class="codeph"> HLS </span> - M3U8 </li> 
+    <li id="li_070960200DEB40E992C58FCB8909AEA3"> <span class="codeph"> HLS  </span> - M3U8 </li> 
     </ul> </p> </td> 
     </tr> 
     <tr> 
-    <td colname="col1"> <p>メタデータ </p> </td> 
-    <td colname="col2"> <p>読み込むコンテンツに関す <span class="codeph"> るカ </span> スタム情報を含む可能性のあるMetadataクラスのインスタンス。 </p> <p>コンテンツの例としては、メインコンテンツ内に配置する代替コンテンツや広告コンテンツがあります。 広告を使用する場合は、AuditudeSettingsを設定 <span class="codeph"> しま </span>す。 詳しくは、広告挿入メタデータを <a href="../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md" format="dita" scope="local"> 参照してくださ </a>い。 </p> </td> 
+    <td colname="col1"> <p>metadata </p> </td> 
+    <td colname="col2"> <p><span class="codeph"> Metadata </span>クラスのインスタンス。読み込むコンテンツに関するカスタム情報を含む場合があります。 </p> <p>コンテンツの例としては、メインコンテンツ内に配置する代替コンテンツや広告コンテンツがあります。 広告を使用する場合は、<span class="codeph"> AuditudeSettings </span>を設定します。 詳しくは、<a href="../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md" format="dita" scope="local">Ad Insertionメタデータ</a>を参照してください。 </p> </td> 
     </tr> 
     </tbody> 
     </table>
@@ -48,7 +51,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    >
    >MP4ビデオオンデマンド(VOD)コンテンツの場合、TVSDKは、トリック再生、可変ビットレート(ABR)ストリーミング、広告挿入、クローズドキャプションまたはDRMをサポートしません。
 
-   次のコードでは、インスタンスを作成 `MediaResource` します。
+   次のコードは、`MediaResource`インスタンスを作成します。
 
    ```java
    try { 
@@ -66,14 +69,14 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
    >[!TIP]
    >
-   >この時点で、アクセサ(getter)を使 `MediaResource` 用して、リソースのタイプ、URL、およびメタデータを調べることができます。
+   >この時点で、`MediaResource`アクセサ(getter)を使用して、リソースの種類、URL、およびメタデータを調べることができます。
 
 1. 次を使用して、メディアリソースを読み込みます。
 
    * MediaPlayerインスタンス。
 
-      詳しくは、MediaPlayerでのメディアリ [ソースの読み込みを参照してください](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md)。
-   * 詳しく `MediaPlayerItemLoader` は、MediaPlayerItemLoaderを使用したメデ [ィアリソースの読み込みを参照してください](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md)。
+      詳しくは、[MediaPlayerへのメディアリソースの読み込み](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md)を参照してください。
+   * `MediaPlayerItemLoader`詳しくは、[MediaPlayerItemLoaderを使用したメディアリソースの読み込み](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md)を参照してください。
    >[!IMPORTANT]
    >
-   >メディアリソースをバックグラウンドスレッドに読み込まないでください。 ほとんどのTVSDK操作は、メインスレッドで実行する必要があり、バックグラウンドスレッドで実行すると、操作がエラーをスローして終了する場合があります。
+   >メディアリソースをバックグラウンドスレッドに読み込まないでください。 ほとんどのTVSDK操作は、メインスレッドで実行する必要があり、バックグラウンドスレッドで実行すると、操作がエラーをスローして終了する可能性があります。

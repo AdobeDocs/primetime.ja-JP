@@ -4,6 +4,9 @@ title: ファイアウォール規則
 uuid: f1629ceb-22de-4bb5-b73f-9b874d97ea8b
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 0%
 
 ---
 
@@ -16,4 +19,4 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 * [!DNL /flashaccess/status]
 * [!DNL /crossdomain.xml]
 
-ステータスや管理ページな [!DNL /flashaccess/admin/*] どのサービスパスは、ファイアウォール内からのみアクセスできる必要があります。 鍵生成サーバーの一部は、ファイアウォールの外部からアクセスしないでください。
+[!DNL /flashaccess/admin/*]（例：ステータスページと管理ページ）などのサービスパスは、ファイアウォール内からのみアクセスできる必要があります。 Key Generation Serverの一部は、ファイアウォールの外部からアクセスできません。

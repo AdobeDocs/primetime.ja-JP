@@ -1,16 +1,19 @@
 ---
 description: 再生中のコンテンツの現在時間と残り時間を表示できます。
 seo-description: 再生中のコンテンツの現在時間と残り時間を表示できます。
-seo-title: シークスクラブバーを現在の再生時間の位置で表示
-title: シークスクラブバーを現在の再生時間の位置で表示
+seo-title: シークスクラブバーに現在の再生時間の位置を表示
+title: シークスクラブバーに現在の再生時間の位置を表示
 uuid: 3a13f4a5-538d-4e7e-ac24-043927f3f2ee
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 0%
 
 ---
 
 
-# シークスクラブバーを現在の再生時間の位置で表示 {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
+# シークスクラブバーに現在の再生時間の位置{#display-a-seek-scrub-bar-with-the-current-playback-time-position}を表示
 
 再生中のコンテンツの現在時間と残り時間を表示できます。
 

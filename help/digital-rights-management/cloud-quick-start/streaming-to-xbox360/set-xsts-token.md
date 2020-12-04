@@ -6,17 +6,20 @@ title: プレイヤーにXSTSトークンを設定する
 uuid: 8995e029-deee-4e23-9cda-a50de8c4f2c0
 translation-type: tm+mt
 source-git-commit: b7f52b71bde1d7bf59ef51d4f6f90dfaa07e347b
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
 
-# プレイヤーにXSTSトークンを設定する{#set-the-xsts-token-in-your-player}
+# プレイヤーにXSTSトークンを設定{#set-the-xsts-token-in-your-player}
 
-Xbox360では、イベントに応じてトークンを非同期で設定し `MediaPlayer.RequestKeyAttribute` ます。
+Xbox360では、`MediaPlayer.RequestKeyAttribute`イベントに応じてトークンを非同期に設定します。
 
 XSTSトークンを設定します。
 
-ソフトウェアにバンドルされているサンプルアプリでは、XSTSトークンをプレーヤーに設定する方法を示しています。 以下に、サンプルプレーヤーからの関連コードスニペットを示します。
+ソフトウェアにバンドルされているサンプルアプリでは、プレイヤーにXSTSトークンを設定する方法を示しています。 サンプルプレーヤーからの関連コードスニペットを次に示します。
 
 ```
    MediaPlayer mMediaPlayer;  

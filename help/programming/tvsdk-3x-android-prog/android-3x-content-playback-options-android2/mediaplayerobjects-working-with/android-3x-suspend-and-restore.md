@@ -1,25 +1,28 @@
 ---
-description: デバイス画面がオフになり、オンになった場合にTVSDK MediaPlayerを休止し、復元するには、アプリケーションで処理する必要があります。
+description: デバイス画面がオフになっていて、オンになっている場合は、アプリケーションでTVSDK MediaPlayerを一時停止および復元する必要があります。
 keywords: SurfaceView;Suspend;Restore;BroadcastReceiver
-seo-description: デバイス画面がオフになり、オンになった場合にTVSDK MediaPlayerを休止し、復元するには、アプリケーションで処理する必要があります。
-seo-title: MediaPlayerの停止と復元
-title: MediaPlayerの停止と復元
+seo-description: デバイス画面がオフになっていて、オンになっている場合は、アプリケーションでTVSDK MediaPlayerを一時停止および復元する必要があります。
+seo-title: MediaPlayerの中断と復元
+title: MediaPlayerの中断と復元
 uuid: 624a87df-df65-4358-915b-c09a3a4fa224
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
 
-# MediaPlayerの停止と復元 {#suspend-and-restore-mediaplayer}
+# MediaPlayerの休止と復元{#suspend-and-restore-mediaplayer}
 
-デバイス画面がオフになり、オンになった場合にTVSDK MediaPlayerを休止し、復元するには、アプリケーションで処理する必要があります。
+デバイス画面がオフになっていて、オンになっている場合は、アプリケーションでTVSDK MediaPlayerを一時停止および復元する必要があります。
 
-Androidのブロードキャスト受信機内で、画面のオン/オフ `MediaPlayer` に関して、休止操作と復元操作を処理できます。
+Androidのブロードキャスト受信機内の`MediaPlayer`で、画面のオン/オフに関して、休止操作と復元操作を処理できます。
 
-TVSDKは、フラグメント（またはアクティビティ）がバックグラウンドまたはフォアグラウンドのどちらにあるかを判断できません。 また、デバイス画面が `SurfaceView` オフの場合、Androidは破棄されません（ただし、アクティビティは一時停止されます）。 ただし、デバ `SurfaceView` イスが ** 、アプリケーションをバックグラウンドに置くと破棄されます。 TVSDKはこれらの変更を検出できないので、アプリケーションで処理する必要があります。
+TVSDKは、フラグメント(またはアクティビティ)がバックグラウンドかフォアグラウンドのどちらにあるかを判断できません。 また、デバイスの画面がオフの場合、Android `SurfaceView`は破棄されません(ただし、アクティビティは一時停止します)。 ただし、`SurfaceView` *は、デバイスがアプリケーションをバックグラウンドに置くと*&#x200B;を破棄します。 TVSDKは、これらの変更を検出できないので、アプリケーションで処理する必要があります。
 
-次のサンプルコードは、デバイス画面がアプリケーションレベルでオン/オフになっ `MediaPlayer` た場合に、アプリケーションが中断と復元をどのように処理できるかを示しています。
+次のサンプルコードは、デバイス画面がアプリケーションレベルでオン/オフにされた場合に、アプリケーションが`MediaPlayer`を中断および復元する方法を扱うためのコードです。
 
 ```java
 // Track the state of a fragment to determine if it is PAUSED or RESUMED 

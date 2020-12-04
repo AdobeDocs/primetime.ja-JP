@@ -6,11 +6,14 @@ title: キャプショントラックの変更を許可する
 uuid: 5a6d33f2-cece-48f6-8a68-fe76d9d2a950
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
 
-# キャプショントラックの変更を許可する {#allow-users-to-change-the-caption-track}
+# キャプショントラックの変更をユーザーに許可{#allow-users-to-change-the-caption-track}
 
 次の手順は、クローズドキャプショントラックを選択するためのボタンの作成方法の例です。
 
@@ -30,7 +33,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 1. 使用可能なクローズドキャプショントラックのリストを文字列配列に変換します。
 
-   アクティビティ（TVSDKがデータを検出したチャネル）を持つクローズドキャプショントラックは、それに応じてマークされます。
+   アクティビティを持つクローズドキャプショントラック、つまりTVSDKがデータを検出したチャネルは、それに応じてマークされます。
 
    ```java
    /** 
@@ -58,7 +61,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
    } 
    ```
 
-1. ユーザーがボタンをクリックすると、すべてのデフォルトのクローズドキャプショントラックを一覧表示するダイアログが表示されます。
+1. ユーザーがボタンをクリックすると、デフォルトのすべてのクローズドキャプションが追跡するダイアログが表示されます。
 
    ```java
    public void selectClosedCaptioningClick(View view) { 

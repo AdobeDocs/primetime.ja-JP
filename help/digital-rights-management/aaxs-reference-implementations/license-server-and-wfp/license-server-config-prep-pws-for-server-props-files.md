@@ -4,19 +4,22 @@ title: サーバープロパティファイルのパスワードの準備
 uuid: 2d876eb0-b1a5-4c30-ae96-0a22f6a03910
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
 
-# サーバープロパティファイルのパスワードの準備 {#preparing-passwords-for-the-server-properties-files}
+# サーバープロパティファイル{#preparing-passwords-for-the-server-properties-files}のパスワードの準備
 
-秘密鍵証明書のパスワードを確実にセキュリティで保護するため、またはファイルに入力する前にパスワードを暗号化するツールが [!DNL flashaccess-refimpl.properties] 提供さ [!DNL flashaccess-refimpl-packager.properties] れます。
+秘密鍵証明書のパスワードをセキュリティで保護するために、[!DNL flashaccess-refimpl.properties]または[!DNL flashaccess-refimpl-packager.properties]ファイルに入力する前にパスワードを暗号化するツールが提供されます。
 
 提供されたANTスクリプトを使用してツールを実行するには：
 
-* 移動先 *`<Reference Implementation Server Path>`*[!DNL \refimpl]
+* *`<Reference Implementation Server Path>`* [!DNL \refimpl]に移動
 
-* のプロパティ `sdkdir` が、Adobe Access SDKを [!DNL build-refimpl.xml] 含むディレクトリを指していることを確認します。
+* [!DNL build-refimpl.xml]の`sdkdir`プロパティが、AdobeアクセスSDKを含むディレクトリを指していることを確認します
 * ANTを使用して次のコマンドを実行します。
 
    ```
@@ -27,7 +30,7 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 Javaを使用してツールを実行するには：
 
-* 次の場所に移 *`<Reference Implementation Server Path>`*&#x200B;動\ [!DNL scrambler]
+* *`<Reference Implementation Server Path>`*\ [!DNL scrambler]に移動
 
 * コマンドプロンプトで、次のコマンドを入力します。
 
@@ -45,8 +48,8 @@ Javaを使用してツールを実行するには：
        com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
    ```
 
-このユーティリティは、暗号化されたパスワードを出力します。このパスワードは.propertiesファイルにコピーする必要があります。
+このユーティリティは、暗号化されたパスワードを出力します。このパスワードを.propertiesファイルにコピーする必要があります。
 
 >[!NOTE]
 >
->参照実装と共に提供されるパスワードスクランブルユーティリティを使用してエンコードされたパスワードは、保護されたストリーミング用のAdobe Access Serverでは機能しません。
+>リファレンス実装と共に提供されるパスワードスクランブリングユーティリティを使用してエンコードされたパスワードは、保護ストリーミング用Adobe Access Serverでは機能しません。

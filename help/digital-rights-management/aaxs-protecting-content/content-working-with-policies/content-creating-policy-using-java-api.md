@@ -4,16 +4,19 @@ title: Java APIを使用したポリシーの作成
 uuid: c653548d-4abf-46b9-8669-d68b966da359
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 
-# Java APIを使用したポリシーの作成 {#creating-a-policy-using-the-java-api}
+# Java API {#creating-a-policy-using-the-java-api}を使用したポリシーの作成
 
 Java APIを使用してポリシーを作成するには、次の手順を実行します。
 
-1. 開発環境を設定し、「プロジェクト内の開発環境の設定」に記載されてい [るすべてのJARファイルを](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) 含めます。
-1. オブジェクト `com.adobe.flashaccess.sdk.policy.Policy` を作成し、権限、ライセンスキャッシュ期間、ポリシーの終了日などのプロパティを指定します。
+1. 開発環境を設定し、プロジェクト内の[開発環境の設定](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)で説明されているすべてのJARファイルを含めます。
+1. `com.adobe.flashaccess.sdk.policy.Policy`オブジェクトを作成し、権限、ライセンスキャッシュ期間、ポリシーの終了日などのプロパティを指定します。
 
    ```java
      // Create a new Policy object.  
@@ -49,7 +52,7 @@ Java APIを使用してポリシーを作成するには、次の手順を実行
      }
    ```
 
-1. オブジェクトをシ `Policy` リアライズし、ファイルまたはデータベースに保存します。
+1. `Policy`オブジェクトをシリアル化し、ファイルまたはデータベースに格納します。
 
    ```java
      // Serialize the policy  
@@ -63,4 +66,4 @@ Java APIを使用してポリシーを作成するには、次の手順を実行
      out.close();
    ```
 
-このサンプルコードの完全なソースについては、リファレンス実装のコマンドラインツール「 *」ディレクトリのcom.adobe.flashaccess.samples.policy.CreatePolicy* を参照し [!DNL samples]てください。
+このサンプルコードの完全なソースについては、リファレンス実装のコマンドラインツール「[!DNL samples]」ディレクトリの&#x200B;*com.adobe.flashaccess.samples.policy.CreatePolicy*&#x200B;を参照してください。

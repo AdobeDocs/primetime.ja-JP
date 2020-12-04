@@ -4,15 +4,18 @@ title: 認証UIの作成
 uuid: 4744bac0-c36e-4b0a-b3fb-d81c7f2e7617
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 0%
 
 ---
 
 
-# 認証UIの作成 {#create-an-authentication-ui}
+# 認証UIの作成{#create-an-authentication-ui}
 
 1. ユーザーの認証資格情報を取得するユーザーインターフェイスを作成します。
 
-   次に、ユーザ資格情報を取得するためのシンプルなユーザインターフェイスのFlexの例を示します。 このオブジェクトは、2つのオブジェクトを含むパネルオ `TextInput` ブジェクトで構成され、各ユーザー名とパスワードの秘密鍵証明書に対して1つずつ割り当てられます。 このパネルには、メソッドを起動するボタンも含まれ `credentials()` ています。
+   以下は、Flexのユーザー資格情報を取得するためのシンプルなユーザーインターフェイスの例です。 これは2つの`TextInput`オブジェクトを含むパネルオブジェクトで構成され、各ユーザー名とパスワードの秘密鍵証明書に対して1つずつ割り当てられます。 このパネルには、`credentials()`メソッドを起動するボタンも含まれています。
 
    ```xml
    <mx:Panel x="236.5"  
@@ -41,9 +44,9 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
    </mx:Panel>  
    ```
 
-1. ユーザーが `credentials()` 提供する認証値を処理する方法を記述します。
+1. `credentials()`メソッドを記述して、ユーザーが提供する認証値を処理します。
 
-   このメ `credentials()` ソッドは、ユーザー名とパスワードの値をメソッドに渡すユーザー定義のメソッ `setDRMAuthenticationCredentials()` ドです。 値が渡されると、メソッドはオ `credentials()` ブジェクトの値をリセットし `TextInput` ます。
+   `credentials()`メソッドは、ユーザー名とパスワードの値を`setDRMAuthenticationCredentials()`メソッドに渡すユーザー定義のメソッドです。 値が渡されると、`credentials()`メソッドは`TextInput`オブジェクトの値をリセットします。
 
    ```
    <mx:Script> 
@@ -56,7 +59,7 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
    </mx:Script> 
    ```
 
-   このタイプのシンプルインターフェイスを実装する1つの方法は、パネルを新しい状態の一部として含めることです。 新しい状態は、オブジェクトがスローされたときのベース状 `DRMAuthenticateEvent` 態に基づきます。 次の例には、保護されたビデ `VideoDisplay` オファイルを指すsource属性を持つオブジェクトが含まれています。 この場合、メソッドは、 `credentials()` アプリケーションもベース状態に戻すように変更されます。 このメソッドは、ユーザーの資格情報を渡し、TextInputオブジェクトの値をリセットした後に実行されます。
+   このタイプのシンプルインターフェイスを実装する1つの方法は、パネルを新しい状態の一部として含めることです。 新しい状態は、`DRMAuthenticateEvent`オブジェクトがスローされたときの基本状態に基づきます。 次の例には、保護されたビデオファイルを指すsource属性を持つ`VideoDisplay`オブジェクトが含まれています。 この場合、`credentials()`メソッドも変更され、アプリケーションもベース状態に戻ります。 このメソッドは、ユーザー資格情報を渡し、TextInputオブジェクトの値をリセットした後に実行します。
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?> 

@@ -1,29 +1,32 @@
 ---
-description: 既存の遅延広告読み込みメカニズムを使用して、遅延広告解決機能を有効または無効にできます（デフォルトでは、遅延広告解決は無効になっています）。
+description: 遅延広告解決機能は、既存の遅延広告読み込みメカニズムを使用して有効または無効にできます（遅延広告解決はデフォルトで無効です）。
 keywords: Lazy;Ad resolving;Ad loading;delayLoading
-seo-description: 既存の遅延広告読み込みメカニズムを使用して、遅延広告解決機能を有効または無効にできます（デフォルトでは、遅延広告解決は無効になっています）。
+seo-description: 遅延広告解決機能は、既存の遅延広告読み込みメカニズムを使用して有効または無効にできます（遅延広告解決はデフォルトで無効です）。
 seo-title: 遅延広告解決の有効化
 title: 遅延広告解決の有効化
 uuid: 91884eea-a622-4f5d-b6a8-36bb0050ba1d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '320'
+ht-degree: 0%
 
 ---
 
 
-# 遅延広告解決の有効化 {#enable-lazy-ad-resolving}
+# 遅延広告解決を有効にする{#enable-lazy-ad-resolving}
 
-既存の遅延広告読み込みメカニズムを使用して、遅延広告解決機能を有効または無効にできます（デフォルトでは、遅延広告解決は無効になっています）。
+遅延広告解決機能は、既存の遅延広告読み込みメカニズムを使用して有効または無効にできます（遅延広告解決はデフォルトで無効です）。
 
-AdvertisingMetadata.setDelayLoadingをtrueまたはfalseで呼び出すことで、遅延広告解 [決を有効または無効にできます](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) 。
+遅延広告解決を有効または無効にするには、[AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-)をtrueまたはfalseで呼び出します。
 
-* 広告の解決のタイミ *ングとタイムライン上の広告の配置を制御するには、AdvertisingMetadataのBoolean* hasDelayAdLoading ** メソッドとsetDelayAdLoadingメソッドを使用します。
+* 広告解決のタイミングと広告のタイムライン上の配置を制御するには、AdvertisingMetadataでブール値&#x200B;*hasDelayAdLoading*&#x200B;メソッドと&#x200B;*setDelayAdLoading*&#x200B;メソッドを使用します。
 
-   * hasDelayAdLoading *がfalseを返す場合* 、TVSDKは、すべての広告が解決され、配置されてからPREPARED状態に移行します。
-   * hasDelayAdLoading *がtrueを返す場合* 、TVSDKは初期広告のみを解決し、PREPARED状態に移行します。
+   * *hasDelayAdLoading*&#x200B;がfalseを返す場合、TVSDKは、すべての広告が解決され、配置されてから、PREPARED状態に移行します。
+   * *hasDelayAdLoading*&#x200B;がtrueを返した場合、TVSDKは、最初の広告とトランジションのみをPREPARED状態に解決します。
 
-      * 残りの広告は、再生中に解決され、配置されます。
-   * *hasPreroll *またはhasLivePreroll ** falseが返された場合、TVSDKはプリロール広告がないと見なし、コンテンツの再生を直ちに開始します。 これらはデフォルトでtrueに設定されています。
+      * 残りの広告は再生中に解決され、配置されます。
+   * *hasPreroll *または&#x200B;*hasLivePreroll*&#x200B;がfalseを返した場合、TVSDKは、プリロール広告がないと見なし、コンテンツの直ちに再生を開始します。 これらはデフォルトでtrueに設定されています。
 
 
 **遅延広告解決に関連するAPI:**
@@ -46,11 +49,11 @@ Methods:
     public Placement.Type getPlacementType() // Returns whether
 ```
 
-広告をスクラブバーのキューとして正確に反映するには、イベントをリッスンし、こ `TimelineEvent`のイベントを受け取るたびにスクラブバーを再描画します。
+広告をスクラブバーのキューとして正確に反映させるには、`TimelineEvent`イベントをリッスンし、このイベントを受け取るたびにスクラブバーを再描画します。
 
-VODストリームに対して遅延広告解決を有効にすると、すべての広告の時間がタイムラインに配置されますが、多くの広告の時間はまだ解決されません。 これらのマーカーを描画するかどうかは、を確認することで判断できま `TimelineMarker::getDuration()`す。 値が0より大きい場合、広告の時間内の広告は解決されました。
+VODストリームに対して遅延広告解決を有効にすると、すべての広告の時間がタイムラインに配置されますが、広告の時間の多くはまだ解決されません。 アプリケーションは、`TimelineMarker::getDuration()`をチェックして、これらのマーカーを描画するかどうかを決定できます。 値が0より大きい場合は、広告の時間内の広告が解決されています。
 
-TVSDKは、広告の時間が解決されたときと、プレイヤーがPREPAREDステータスに移行したときに、このイベントをディスパッチします。
+TVSDKは、広告の時間が解決されたときにも、また、プレイヤーがPREPAREDステータスにトランジションしたときにも、このイベントをディスパッチします。
 
 ```
 mediaPlayer.addEventListener(MediaPlayerEvent.TIMELINE_UPDATED, timelineUpdatedEventListener); 

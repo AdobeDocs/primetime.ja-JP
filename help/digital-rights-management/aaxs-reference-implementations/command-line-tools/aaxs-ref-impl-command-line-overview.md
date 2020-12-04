@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# コンテンツのパッケージ化と失効リストの作成を行うコマンドラインツール {#command-line-tools-for-packaging-content-revocation-lists}
+# コンテンツのパッケージ化と失効リストの作成を行うコマンドラインツール{#command-line-tools-for-packaging-content-revocation-lists}
 
 リファレンスの実装には、次のコマンドラインツールが含まれています。
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 * ユーティリティライセンスジェネレータ
 * ライセンス埋め込み
 
-## 要件 {#requirements}
+## 要件{#requirements}
 
 リファレンス実装で使用できるコマンドラインツールの使用に関する要件は次のとおりです。
 
@@ -34,21 +34,21 @@ ht-degree: 0%
 >
 >Javaのバグにより、コマンドラインで使用される引数（ファイル名、ポリシー名、説明など）は、オペレーティングシステムのデフォルトの文字セットの文字のみを使用する必要があります。
 
-## 設定ファイル {#configuration-file}
+## 構成ファイル{#configuration-file}
 
 一部のコマンドラインツールでは、ポリシーの適用やファイルの暗号化に使用するツールの情報を含む構成ファイルが必要です。
 
-デフォルトの設定ファイルはで [!DNL flashaccesstools.properties]す。 これは、作業ディレクトリにあります。つまり、ツールを実行するディレクトリ（「コマンドラインツールのインストール」を参照）。 各ツールには、デフォルトを使用したくない場合に使用する設定ファイルを指すオプション( `-c`)も含まれています。
+デフォルトの設定ファイルは[!DNL flashaccesstools.properties]です。 これは、作業ディレクトリにあります。つまり、ツールを実行するディレクトリ（「コマンドラインツールのインストール」を参照）。 各ツールにはオプション(`-c`)も含まれており、デフォルトを使用しない場合に使用する設定ファイルを指定できます。
 
 設定ファイルは、Javaプロパティファイル形式を使用します。 いずれかのプロパティの値に特殊文字が含まれている場合は、次の制限事項に注意してください。
 
-* 円記号を追加した円記号で円記号をエスケープします。 例えば、 [!DNL C:\credentials.pfx] ファイルを指定するには、またはと指定し [!DNL C:\\credentials.pfx] ま `C:/credentials.pfx`す。 ネットワークサーバー上のファイルを指定するには、を指定し `\\\\server\\folder\\filename.pfx`ます。
-* 設定ファイルには、Latin-1文字のみを含めることができます。 Latin-1以外の文字を使用する必要がある場合は、適切なUnicodeエスケープシーケンスを使用します(Javaに付属の [!DNL native2ascii] ツールを使用する場合もあります)。
+* 円記号を追加した円記号で円記号をエスケープします。 例えば、[!DNL C:\credentials.pfx]ファイルを指定するには、[!DNL C:\\credentials.pfx]または`C:/credentials.pfx`と指定します。 ネットワークサーバー上のファイルを指定するには、`\\\\server\\folder\\filename.pfx`を指定します。
+* 設定ファイルには、Latin-1文字のみを含めることができます。 Latin-1以外の文字を使用する必要がある場合は、適切なUnicodeエスケープシーケンスを使用します（Javaに付属の[!DNL native2ascii]ツールを使用します）。
 
 ツールを実行する前に、設定ファイルのプロパティの値を設定します。 一部のコマンドラインツールでは、コマンドラインまたは設定ファイルを使用して、一部のオプションの値を設定できます。 この場合、コマンドラインで設定された値は、設定ファイル内の値よりも優先されます。
 
-## コマンドラインツールのインストール  {#installing-the-command-line-tools}
+## コマンドラインツールのインストール{#installing-the-command-line-tools}
 
-必要なファイルは、DVD上の [!DNL \Reference Implementation\Command Line Tools] ディレクトリ(デフォルトの [!DNL flashaccesstools.properties] 設定ファイルが含まれる)と、ツールのJARファイルが含まれる [!DNL libs] ディレクトリからコピーできます。
+必要なファイルは、DVDの[!DNL \Reference Implementation\Command Line Tools]ディレクトリ（デフォルトの[!DNL flashaccesstools.properties]設定ファイルが含まれる）と[!DNL libs]ディレクトリ（ツールのJARファイルが含まれる）からコピーできます。
 
-この [!DNL samples] ディレクトリには、AdobeアクセスSDK APIの使用を示すいくつかのサンプルのJavaソースファイルが含まれています。 サンプルを作成して実行するには、 [!DNL build-samples.xml] Antスクリプトを使用します。
+[!DNL samples]ディレクトリには、AdobeアクセスSDK APIの使用を示すサンプルのJavaソースファイルが含まれています。 サンプルを作成して実行するには、[!DNL build-samples.xml] Antスクリプトを使用します。

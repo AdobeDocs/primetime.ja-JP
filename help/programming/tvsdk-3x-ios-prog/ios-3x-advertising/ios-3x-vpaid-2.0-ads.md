@@ -1,65 +1,68 @@
 ---
-description: Video Player Ad-Serving Interface Definition(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアエクスペリエンスを提供し、広告のターゲット設定、広告インプレッションの追跡、ビデオコンテンツの収益化をより良く行うことができます。
-seo-description: Video Player Ad-Serving Interface Definition(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアエクスペリエンスを提供し、広告のターゲット設定、広告インプレッションの追跡、ビデオコンテンツの収益化をより良く行うことができます。
+description: ビデオプレーヤー広告配信インターフェイス定義(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアの操作性を提供し、発行者はターゲット広告の改善、広告インプレッションの追跡、ビデオコンテンツの収益化を行うことができます。
+seo-description: ビデオプレーヤー広告配信インターフェイス定義(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアの操作性を提供し、発行者はターゲット広告の改善、広告インプレッションの追跡、ビデオコンテンツの収益化を行うことができます。
 seo-title: VPAID 2.0広告のサポート
 title: VPAID 2.0広告のサポート
 uuid: b688d244-c5ac-4832-b5c2-cb25bc80ce8b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
 
-# VPAID 2.0広告のサポート {#vpaid-ad-support}
+# VPAID 2.0広告のサポート{#vpaid-ad-support}
 
-Video Player Ad-Serving Interface Definition(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアエクスペリエンスを提供し、広告のターゲット設定、広告インプレッションの追跡、ビデオコンテンツの収益化をより良く行うことができます。
+ビデオプレーヤー広告配信インターフェイス定義(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアの操作性を提供し、発行者はターゲット広告の改善、広告インプレッションの追跡、ビデオコンテンツの収益化を行うことができます。
 
 次の機能がサポートされています。
 
 * VPAID仕様のバージョン2.0
 
-   詳しくは、 [IAB VPAID 2.0を参照してください](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf)。
+   詳しくは、[IAB VPAID 2.0](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf)を参照してください。
 * ビデオオンデマンド(VOD)コンテンツのリニアVPAID広告
 * JavaScript VPAID広告
 
-   VPAID広告はJavaScriptベースで、広告応答はVPAID広告のメディアタイプを識別する必要があります `application/javascript`。
+   VPAID広告はJavaScriptベースである必要があり、広告応答はVPAID広告のメディアタイプを`application/javascript`として識別する必要があります。
 
 次の機能はサポートされていません。
 
 * VPAID仕様のバージョン1.0
 * スキップ可能な広告
-* オーバーレイ広告、動的コンパニオン広告、最小化可能な広告、折りたたみ可能な広告、展開可能な広告など、ノンリニア広告
+* オーバーレイ広告、動的コンパニオン広告、最小化可能な広告、折りたたみ可能な広告、展開可能な広告などのノンリニア広告
 * VPAID広告のプリロード
-* ライブコンテンツのVPAID広告
-* Flash VPAID広告
+* ライブコンテンツ内のVPAID広告
+* FlashVPAID広告
 * ポストロールVPAID広告
 
-## APIの変更 {#section_D62F3E059C6C493592D34534B0BFC150}
+## APIの変更{#section_D62F3E059C6C493592D34534B0BFC150}
 
-APIに対して次の変更が行われました。
+APIに次の変更が加えられました。
 
-* `PTAuditudeMetadata` には、VPAID読み込 `customAdLoadTimeout` みプロセスのデフォルトのタイムアウトを変更するプロパティがあります。
+* `PTAuditudeMetadata` には、VPAID読み込みプロセスのデフォルトのタイムアウトを変更する `customAdLoadTimeout` プロパティがあります。
 
    デフォルトのタイムアウト値は10秒です。
 
-* `PTMediaPlayerCustomAdNotification` がインスタンスからディスパッチさ `PTMediaPlayer` れる
+* `PTMediaPlayerCustomAdNotification` が `PTMediaPlayer` インスタンスからディスパッチされる
 
 <!--<a id="section_495700E1C5404A7B85307A4137C740C5"></a>-->
 
 VPAID広告の再生中：
 
-* VPAID広告は、プレイヤービューの上のビューコンテナに表示されるので、ユーザーがプレーヤービューをタップしたことに依存するコードは機能しません。
-* メインコンテンツプレイヤーが一時停止し、プレイヤーイ `pause` ンスタンス `play` に対する呼び出しと呼び出しを使用して、VPAID広告を一時停止および再開します。
+* VPAID広告は、プレイヤー表示の上の表示コンテナに表示されるので、プレイヤー表示でのユーザーによるタップに依存するコードは機能しません。
+* メインコンテンツプレイヤーが一時停止し、プレイヤーインスタンスの`pause`と`play`の呼び出しを使用して、VPAID広告を一時停止および再開します。
 
-* VPAID広告はインタラクティブになるので、VPAID広告の期間は事前に定義されていません。
+* VPAID広告には、インタラクティブな広告が含まれる可能性があるので、広告の長さは事前に定義されたものではありません。
 
-   広告サーバーの応答で定義される広告の時間と合計広告の時間の時間は、正確でない場合があります。
+   広告サーバーの応答で定義される広告の継続時間と広告の時間の合計の継続時間は、正確でない場合があります。
 
-## VPAID 2.0統合の実装 {#section_63C9C737367C4A0AB4D62E0DC2084141}
+## VPAID 2.0統合の実装{#section_63C9C737367C4A0AB4D62E0DC2084141}
 
 iOSアプリケーションにVPAID 2.0サポートを追加するには：
 
-1. （オプション）カスタム広告イベントのリスナーを追加します。
+1. （オプション）カスタム広告イベント追加のリスナー。
 
    ```
    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMediaPlayerCustomAdNotification:) name:PTMediaPlayerCustomAdNotification object:self.player];

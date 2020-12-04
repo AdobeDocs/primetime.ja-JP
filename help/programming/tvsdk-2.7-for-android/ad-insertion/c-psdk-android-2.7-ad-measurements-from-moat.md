@@ -1,24 +1,27 @@
 ---
-description: TVSDKは、FreeWheelや他の広告サーバーから情報を取得し、VAST応答を提供します。 FreeWheelはVAST応答内で、Morthサービスの情報を提供します。 Morthサービスは、クリエイティブが観客の利益を捕らえるか、無視するかをより正確に示すため、広告インプレッション数をカウントします。
-seo-description: TVSDKは、FreeWheelや他の広告サーバーから情報を取得し、VAST応答を提供します。 FreeWheelはVAST応答内で、Morthサービスの情報を提供します。 Morthサービスは、クリエイティブが観客の利益を捕らえるか、無視するかをより正確に示すため、広告インプレッション数をカウントします。
+description: TVSDKは、FreeWheelや、VASTレスポンスを提供する他の広告サーバーから情報を取得します。 FreeWheelはVAST応答内でMorthサービスから情報を提供します。 Mortuサービスは、オーディエンスの利益を捕らえるか無視するかをより正確に示すため、広告インプレッション数を数えます。
+seo-description: TVSDKは、FreeWheelや、VASTレスポンスを提供する他の広告サーバーから情報を取得します。 FreeWheelはVAST応答内でMorthサービスから情報を提供します。 Mortuサービスは、オーディエンスの利益を捕らえるか無視するかをより正確に示すため、広告インプレッション数を数えます。
 seo-title: 堀からの広告測定
 title: 堀からの広告測定
 uuid: b89f900f-50ab-4152-9c0f-11f82d92bffa
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 0%
 
 ---
 
 
 # 堀からの広告測定{#ad-measurements-from-moat}
 
-TVSDKは、FreeWheelや他の広告サーバーから情報を取得し、VAST応答を提供します。 FreeWheelはVAST応答内で、Morthサービスの情報を提供します。 Morthサービスは、クリエイティブが観客の利益を捕らえるか、無視するかをより正確に示すため、広告インプレッション数をカウントします。
+TVSDKは、FreeWheelや、VASTレスポンスを提供する他の広告サーバーから情報を取得します。 FreeWheelはVAST応答内でMorthサービスから情報を提供します。 Mortuサービスは、オーディエンスの利益を捕らえるか無視するかをより正確に示すため、広告インプレッション数を数えます。
 
-Morthは、ブラウザーからアプリケーション内まで、様々な用途で広く測定および閲覧するサービスです。 Martigは、複数のプラットフォームにわたってリアルタイムでマーケティング分析データを生成します。
+Mortは、ブラウザーからアプリケーション内まで、様々な用途にわたって広告を測定し、閲覧するサービスです。 Marutは、複数のプラットフォームにわたってリアルタイムでマーケティング分析データを生成します。
 
-VAST応答XMLには、プロパティと、コードで読み取ることのできる要素、最も外側のプロパ `Ad id` ティ、最も外側の要素が含ま `Extension` れます。 どちらの方法でも、TVSDKを使用して情報と情報の両方を保 `Ad id` 存し、 `Extension` 情報をツリー構造で整理することができます。 この組織では、任意のレベルのデータを取得し、必要な場所にデータを渡すことができます。 最も外側のプロパティの値を使 `Ad id` 用すると、コードで関連するキャンペーンの情報を調整できます。
+VAST応答XMLには、プロパティとコードで読み取れる要素、最も外側の`Ad id`プロパティ、最も外側の`Extension`要素が含まれます。 どちらの方法でも、コードはTVSDKを使用して`Ad id`情報と`Extension`情報の両方を保存し、情報をツリー構造に編成できます。 この組織では、任意のレベルのデータを取得し、必要な場所にコードを渡すことができます。 最も外側の`Ad id`プロパティの値を使用すると、コードは関連付けられたキャンペーンからの情報を調整できます。
 
-例えば、FreeWheelは拡張要素でデータを返すことができます。 以下に、サンプル要素を示します。
+例えば、FreeWheelはExtensions要素でデータを返すことができます。 以下に、要素の例を示します。
 
 ```xml
 <?xml version="1.0"?> 
@@ -36,10 +39,10 @@ VAST応答XMLには、プロパティと、コードで読み取ることので�
 </Extensions> 
 ```
 
-フリーホイールは、次の例のよ `id` うに、要素 `Ad` 内でプロパティを設定することもできます。
+フリーホイールでは、次の例に示すように、`Ad`要素に`id`プロパティを設定することもできます。
 
 ```xml
 <Ad id="118566" sequence="1">
 ```
 
-API情報については、NetworkAdInfoクラスのAPIドキュメントを参照してくだ [さい](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/)
+APIについて詳しくは、クラス[NetworkAdInfo](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/)のAPIドキュメントを参照してください

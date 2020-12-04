@@ -1,20 +1,23 @@
 ---
 description: ビジュアルを設定して、コンテンツがバッファリングされていることをユーザーに通知できます。
 seo-description: ビジュアルを設定して、コンテンツがバッファリングされていることをユーザーに通知できます。
-seo-title: バッファ
-title: バッファ
+seo-title: バッファリング
+title: バッファリング
 uuid: da9498ee-c736-4093-97a2-250d3ad56d49
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '69'
+ht-degree: 2%
 
 ---
 
 
-# バッファ{#buffering}
+# バッファリング{#buffering}
 
 ビジュアルを設定して、コンテンツがバッファリングされていることをユーザーに通知できます。
 
-イベントをリッ `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` スンし `AdobePSDK.PSDKEventType.BUFFERING_END` ます。 例：
+`AdobePSDK.PSDKEventType.BUFFERING_BEGIN`と`AdobePSDK.PSDKEventType.BUFFERING_END`イベントをリッスンします。 例：
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_BEGIN,  
@@ -30,7 +33,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_END,
                         });
 ```
 
-UIフレームワークは、次に示すように拡張可能な、デフォルトのバッファリングオーバーレイ動作の実装を提供します。
+UIフレームワークには、次に示すように拡張できる、デフォルトのバッファリングオーバーレイ動作の実装が用意されています。
 
 ```js
 // Using UI Framework 

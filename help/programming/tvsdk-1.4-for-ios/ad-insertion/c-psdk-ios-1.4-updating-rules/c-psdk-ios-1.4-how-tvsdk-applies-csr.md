@@ -7,20 +7,23 @@ title: クリエイティブ選択ルールの適用
 uuid: 313306b7-6b99-4d90-8717-2b0a1e39a07b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '164'
+ht-degree: 0%
 
 ---
 
 
 # クリエイティブ選択ルールの適用{#apply-creative-selection-rules}
 
-TVSDKは、次の方法でクリエイティブの選択ルールを適用します。
+TVSDKは、次の方法でクリエイティブ選択ルールを適用します。
 
-* TVSDKは、最初にすべての `default` ルールを適用し、次にゾーン固有のルールを適用します。
+* TVSDKは、最初にすべての`default`ルールを適用し、次にゾーン固有のルールを適用します。
 * TVSDKは、現在のゾーンIDに対して定義されていないルールを無視します。
-* TVSDKがデフォルトのルールを適用すると、ゾーン固有のルールは、ルールで選択されたクリエイティブに対する `host` （ドメイン）の一致に基づいて、クリエイティブの優先順位をさらに変更で `default` きます。
+* TVSDKがデフォルトのルールを適用すると、ゾーン固有のルールは、`default`ルールで選択されたクリエイティブに対する`host` （ドメイン）の一致に基づいて、クリエイティブの優先順位をさらに変更できます。
 
-* 追加のゾーンルールを含むサンプルルールファイルでは、TVSDKがルールを適用すると、M3U8クリエイティブドメインにまたはが含まれていない場合、または広告ゾーンが含まれている場合、クリエイティブは再順序付けされ、 `default`[!DNL my.domain.com][!DNL a.bcd.com]`1234`Flash VPAIDクリエイティブが最初に再生されます。 それ以外の場合は、MP4広告が再生され、JavaScriptが再生されます。
+* 追加のゾーンルールを含むサンプルルールファイルでは、TVSDKが`default`ルールを適用すると、M3U8クリエイティブドメインに[!DNL my.domain.com]または[!DNL a.bcd.com]が含まれず、広告ゾーンが`1234`の場合、クリエイティブが再順序付けされ、FlashVPAIDクリエイティブが最初に再生されます。 それ以外の場合は、MP4広告が再生され、JavaScriptにダウンします。
 
-* TVSDKがネイティブに再生できない（など）広告クリエイティブが選択さ [!DNL .mp4]れている場合、TVSDK [!DNL .flv]は再パッケージ化リクエストを発行します。
+* TVSDKがネイティブ（[!DNL .mp4]、[!DNL .flv]など）再生できない広告クリエイティブを選択した場合、TVSDKは再パッケージ化リクエストを発行します。
 
-TVSDKで処理できる広告タイプは、の設定を通じて定義され `validMimeTypes` ます `AuditudeSettings`。
+TVSDKで処理できる広告タイプは、`AuditudeSettings`の`validMimeTypes`設定を通じて定義されます。

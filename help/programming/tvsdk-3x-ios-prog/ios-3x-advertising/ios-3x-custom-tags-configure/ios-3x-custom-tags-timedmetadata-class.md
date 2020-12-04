@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 時間指定メタデータクラス {#timed-metadata-class}
+# 時間指定メタデータクラス{#timed-metadata-class}
 
 TVSDKは、プレイリスト/マニフェスト内にサブスクライブされたタグを検出すると、タグを自動的に処理して、PTTimedMetadataオブジェクトの形式で公開しようとします。
 
@@ -36,7 +36,7 @@ TVSDKは、プレイリスト/マニフェスト内にサブスクライブさ�
   <tr> 
    <td colname="col1"><span class="codeph"> name</span> </td> 
    <td colname="col02"><span class="codeph"> NSString</span></td> 
-   <td colname="col2"> 時間指定メタデータの名前。 typeが <span class="codeph"> TAG</span>、値はキュー/タグ名を表します。 typeが <span class="codeph"> ID3</span>の場合はnullです。 </td> 
+   <td colname="col2"> 時間指定メタデータの名前。 タイプが<span class="codeph"> TAG</span>の場合、値はキュー/タグ名を表します。 タイプが<span class="codeph"> ID3</span>の場合はnullです。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> time</span> </td> 

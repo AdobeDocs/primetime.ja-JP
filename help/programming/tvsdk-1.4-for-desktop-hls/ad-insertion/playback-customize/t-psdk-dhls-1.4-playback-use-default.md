@@ -13,13 +13,13 @@ ht-degree: 0%
 ---
 
 
-# デフォルトの再生動作の使用{#use-the-default-playback-behavior}
+# デフォルトの再生動作{#use-the-default-playback-behavior}を使用
 
 デフォルトの広告動作を使用するように選択できます。
 
 デフォルトの動作を使用するには：
 
-* 独自の `ContentFactory` クラスを実装する場合は、の実装内にの新しいインスタンス `DefaultAdPolicySelector` を返し `doRetrieveAdPolicySelector`ます。
+* 独自の`ContentFactory`クラスを実装する場合は、`doRetrieveAdPolicySelector`の実装に`DefaultAdPolicySelector`の新しいインスタンスを返します。
 
    ```
    public class CustomContentFactory extends ContentFactory { 
@@ -38,4 +38,4 @@ ht-degree: 0%
    }
    ```
 
-* クラスのカスタム実装がない場合、TVSDKは `ContentFactory` を使用し `DefaultAdPolicySelector`ます。
+* `ContentFactory`クラスのカスタム実装がない場合、TVSDKは`DefaultAdPolicySelector`を使用します。

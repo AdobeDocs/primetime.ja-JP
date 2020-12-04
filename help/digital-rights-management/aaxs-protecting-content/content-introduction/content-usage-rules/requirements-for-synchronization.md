@@ -23,5 +23,5 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->この使用ルールは、Adobeアクセスクライアントバージョン3.0以降でサポートされています。 古いクライアントでの動作は、ライセンスサーバーでサポートされている最小クライアントバージョンによって異なります。 「 [最小クライアントバージョン](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)」を参照してください。
+>この使用ルールは、Adobeアクセスクライアントバージョン3.0以降でサポートされています。 古いクライアントでの動作は、ライセンスサーバーでサポートされている最小クライアントバージョンによって異なります。 「[最小クライアントバージョン](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)」を参照してください。
 

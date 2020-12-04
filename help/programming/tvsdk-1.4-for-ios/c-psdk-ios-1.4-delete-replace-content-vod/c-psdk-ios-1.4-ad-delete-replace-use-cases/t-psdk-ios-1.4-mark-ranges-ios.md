@@ -1,20 +1,23 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: 範囲のマーク
-title: 範囲のマーク
+seo-title: 範囲をマーク
+title: 範囲をマーク
 uuid: 994a8f07-0951-47ec-b21a-d74c9eeefd74
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 0%
 
 ---
 
 
-# 範囲のマーク{#mark-ranges}
+# 範囲をマーク{#mark-ranges}
 
-コンテンツの範囲を広 `PTTimeRangeCollection` 告として実装し、マークするには：
-1. 準備して `PTTimeRangeCollection`。
-1. のタイプをに設定し `PTTimeRangeCollection` ます `PTTimeRangeCollectionTypeMarkRanges`。
+`PTTimeRangeCollection`を実装し、コンテンツの範囲を広告としてマークするには：
+1. `PTTimeRangeCollection`を準備します。
+1. `PTTimeRangeCollection`のタイプを`PTTimeRangeCollectionTypeMarkRanges`に設定します。
 
    この手順は、カスタム範囲が広告と同様に扱われる必要があることをTVSDKに通知します。
 
@@ -35,7 +38,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
        type:PTTimeRangeCollectionTypeMarkRanges];
    ```
 
-1. を作成し、 `PTAdMetadata` を設定します `PTTimeRangeCollection`。
+1. `PTAdMetadata`を作成し、`PTTimeRangeCollection`を設定します。
 
    ```
    // Create the PTPlayerItem metadata 
@@ -54,7 +57,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
                                                                   metadata:metadata];
    ```
 
-1. プレーヤーを作成し、再生を開始します。
+1. プレイヤーと開始の再生を作成します。
 
    ```
    //Create PTMediaPlayer using the created PTMediaPlayer 
@@ -67,13 +70,13 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    [player play];
    ```
 
-## 範囲の置換{#replace-ranges}
+## 範囲を置換{#replace-ranges}
 
-コンテンツの範囲を広 `PTTimeRangeCollection` 告として実装および削除するには：
-1. 準備し `PTTimeRangeCollection`ろ。
-1. のタイプをに設定し `PTTimeRangeCollection` ます `PTTimeRangeCollectionTypeReplaceRanges`。
+`PTTimeRangeCollection`を実装し、コンテンツの範囲を広告として削除するには：
+1. `PTTimeRangeCollection`を準備します。
+1. `PTTimeRangeCollection`のタイプを`PTTimeRangeCollectionTypeReplaceRanges`に設定します。
 
-   この手順は、指定された範囲を代替コンテンツ（広告）で置き換える必要があることをTVSDKに通知します。
+   この手順は、提供された範囲を代替コンテンツ（広告）に置き換える必要があることをTVSDKに通知します。
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -94,9 +97,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
    >[!TIP]
    >
-   >この引数はオ `replacementDuration` プションです。 定義されていない場合は、広告の `AdServer` 時間の長さがによって決まります。
+   >引数`replacementDuration`はオプションです。 定義されていない場合、`AdServer`によって広告の時間の長さが決まります。
 
-1. を作成し、 `PTAdMetadata` を設定します `PTTimeRangeCollection`。
+1. `PTAdMetadata`を作成し、`PTTimeRangeCollection`を設定します。
 
    ```
    //Create the PTPlayerItem metadata 
@@ -120,9 +123,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
    >[!TIP]
    >
-   >はとして設定 `signalingMode` されますが、こ `PTAdSignalingModeCustomRanges`の広告シグナリングモードは、タイプのを設定する際に自動的に `PTTimeRangeCollection` 設定されま `PTTimeRangeCollectionTypeReplace`す。
+   >`signalingMode`は`PTAdSignalingModeCustomRanges`として設定されますが、この広告シグナリングモードは、タイプ`PTTimeRangeCollectionTypeReplace`の`PTTimeRangeCollection`を設定する際に自動的に設定されます。
 
-1. プレーヤーを作成し、再生を開始します。
+1. プレイヤーと開始の再生を作成します。
 
    ```
    //Create PTMediaPlayer using the created PTMediaPlayer 
@@ -135,11 +138,11 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    [player play];
    ```
 
-## 範囲の削除 {#delete-ranges}
+## 範囲の削除{#delete-ranges}
 
-コンテンツの範囲を広 `PTTimeRangeCollection` 告として実装および削除するには：
-1. 準備して `PTTimeRangeCollection`。
-1. toのタイプを設定しま `PTTimeRangeCollection` す。 `PTTimeRangeCollectionTypeDeleteRanges`指定された範囲を削除する必要があることをTVSDKに通知します。
+`PTTimeRangeCollection`を実装し、コンテンツの範囲を広告として削除するには：
+1. `PTTimeRangeCollection`を準備します。
+1. `PTTimeRangeCollection`のタイプを`PTTimeRangeCollectionTypeDeleteRanges`に設定します。これは、提供された範囲を削除する必要があることをTVSDKに通知します。
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -156,7 +159,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
                                               type:PTTimeRangeCollectionTypeDeleteRanges];
    ```
 
-1. を作成し、 `PTAdMetadata` を設定します `PTTimeRangeCollection`。
+1. `PTAdMetadata`を作成し、`PTTimeRangeCollection`を設定します。
 
    ```
    //Create the PTPlayerItem metadata 
@@ -180,9 +183,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
    >[!TIP]
    >
-   >広告挿入は、現在のとに基づいてカスタム範囲を削除した `PTAdMetadata` 後に発生します `PTAdSignalingMode`。
+   >広告挿入は、カスタム範囲の削除の後、`PTAdMetadata`と現在の`PTAdSignalingMode`に基づいて発生します。
 
-1. プレーヤーを作成し、再生を開始します。
+1. プレイヤーと開始の再生を作成します。
 
    ```
    //Create PTMediaPlayer using the created PTMediaPlayer 

@@ -17,7 +17,7 @@ ht-degree: 3%
 
 ビデオコンテンツの再生時にキャプションを表示できます。
 
-キャプションを処理するには、 `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` イベントリスナーを追加する必要があります。
+キャプションを処理するには、`AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`イベントリスナーを追加する必要があります。
 
 ```js
 ... 

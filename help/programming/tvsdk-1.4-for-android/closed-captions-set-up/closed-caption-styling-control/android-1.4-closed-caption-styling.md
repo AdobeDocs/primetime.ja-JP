@@ -13,22 +13,22 @@ ht-degree: 0%
 ---
 
 
-# クローズドキャプションのスタイル設定を制御する {#control-closed-caption-styling-overview}
+# クローズドキャプションのスタイル設定を制御する{#control-closed-caption-styling-overview}
 
 TextFormatクラスを使用して、クローズドキャプショントラックのスタイル設定情報を指定できます。 プレイヤーが表示するクローズドキャプションのスタイルを設定します。
 
-このクラスには、フォントの種類、サイズ、色、背景の不透明度などのクローズドキャプションのスタイル情報がカプセル化されています。 関連付けられたヘルパークラス `TextFormatBuilder`は、クローズドキャプションスタイル設定の作業を容易にします。
+このクラスには、フォントの種類、サイズ、色、背景の不透明度などのクローズドキャプションのスタイル情報がカプセル化されています。 関連付けられたヘルパークラス`TextFormatBuilder`は、クローズドキャプションスタイル設定の作業を容易にします。
 
-## クローズドキャプションのスタイルの設定 {#set-closed-caption-styles}
+## クローズドキャプションのスタイルを設定{#set-closed-caption-styles}
 
 TVSDKのメソッドを使用して、クローズドキャプションテキストのスタイルを設定できます。
 
 1. メディアプレイヤーがPREPARED状態以上になるのを待ちます。
-1. インスタンスを作成し `TextFormatBuilder` ます。
+1. `TextFormatBuilder`インスタンスを作成します。
 
    すべてのクローズドキャプションのスタイル設定パラメーターを指定するか、後で設定することができます。
 
-   TVSDKは、クローズドキャプションスタイル情報をインター `TextFormat` フェイスにカプセル化します。 この `TextFormatBuilder` クラスは、このインターフェイスを実装するオブジェクトを作成します。
+   TVSDKは、クローズドキャプションスタイル情報を`TextFormat`インターフェイスにカプセル化します。 `TextFormatBuilder`クラスは、このインターフェイスを実装するオブジェクトを作成します。
 
    ```java
    public TextFormatBuilder( 
@@ -44,9 +44,9 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
       int fillOpacity)
    ```
 
-1. インター `TextFormat` フェイスを実装するオブジェクトへの参照を取得するには、 `TextFormatBuilder.toTextFormat` publicメソッドを呼び出します。
+1. `TextFormat`インターフェイスを実装するオブジェクトへの参照を取得するには、`TextFormatBuilder.toTextFormat`パブリックメソッドを呼び出します。
 
-   メディアプレイヤーに適用できる `TextFormat` オブジェクトを返します。
+   これは、メディアプレイヤーに適用できる`TextFormat`オブジェクトを返します。
 
    ```java
    public TextFormat toTextFormat()
@@ -54,9 +54,9 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
 
 1. 必要に応じて、次のいずれかの操作を行って、現在のクローズドキャプションスタイル設定を取得します。
 
-   * ですべてのスタイル設定を取得し `MediaPlayer.getCCStyle`ます。
+   * `MediaPlayer.getCCStyle`を使用して、すべてのスタイル設定を取得します。
 
-      戻り値はインター `TextFormat` フェイスのインスタンスです。
+      戻り値は`TextFormat`インターフェイスのインスタンスです。
 
       ```js
       /** 
@@ -68,7 +68,7 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
       public TextFormat getCCStyle() throws IllegalStateException;
       ```
 
-   * インター `TextFormat` フェイスgetterメソッドを使用して、設定を一度に1つずつ取得します。
+   * `TextFormat` getterメソッドを使用して、設定を一度に1つずつ取得します。
 
       ```js
       public Color getFontColor(); 
@@ -88,7 +88,7 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
    >
    >WebVTTキャプションのサイズは変更できません。
 
-   * setterメソッドを使用し `MediaPlayer.setCCStyle`て、インター `TextFormat` フェイスのインスタンスを渡します。
+   * setterメソッド`MediaPlayer.setCCStyle`を使用して、`TextFormat`インターフェイスのインスタンスを渡します。
 
       ```js
       /** 
@@ -104,9 +104,9 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
       public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
       ```
 
-   * 個々のsetterメソッドを定義する `TextFormatBuilder` クラスを使用します。
+   * `TextFormatBuilder`クラスを使用します。このクラスは、個々のsetterメソッドを定義します。
 
-      インター `TextFormat` フェイスは、getterメソッドのみとsetterメソッドを持たないように不変オブジェクトを定義します。 クローズドキャプションのスタイル設定パラメーターは、次の `TextFormatBuilder` クラスでのみ設定できます。
+      `TextFormat`インターフェイスは不変オブジェクトを定義するので、getterメソッドのみが存在し、setterメソッドは存在しません。 クローズドキャプションのスタイル設定パラメーターは、`TextFormatBuilder`クラスでのみ設定できます。
 
       ```js
       // set font type 
@@ -128,7 +128,7 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
 
 クローズドキャプションスタイルの設定は非同期的な操作なので、変更が画面に表示されるまでに最大で数秒かかる場合があります。
 
-## クローズドキャプションのスタイル設定オプション {#closed-caption-styling-options}
+## クローズドキャプションのスタイル設定オプション{#closed-caption-styling-options}
 
 複数のキャプションのスタイル設定オプションを指定できます。これらのオプションは、元のキャプションのスタイル設定オプションよりも優先されます
 
@@ -161,25 +161,25 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> フォント </td> 
-   <td colname="2"> <p>フォントタイプ。 </p> <p>TextFormat.Font <span class="codeph"></span> 定義済みリストで定義され、例えば、シリフトのある（またはない）等幅のモノスペースを表す値にのみ設定できます。 </p> <p>ヒント： デバイスで使用できる実際のフォントは異なる場合があり、必要に応じて代替フォントが使用されます。 serifsを持つ等幅スペースは、通常、代替として使用されますが、システムに固有の置き換えである場合もあります。 </p> </td> 
+   <td colname="2"> <p>フォントタイプ。 </p> <p><span class="codeph"> TextFormat.Font </span>定義済みリストで定義され、例えばserifsのある（またはない）等幅を表す値にのみ設定できます。 </p> <p>ヒント： デバイスで使用できる実際のフォントは異なる場合があり、必要に応じて代替フォントが使用されます。 serifsを持つ等幅スペースは、通常、代替として使用されますが、システムに固有の置き換えである場合もあります。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> サイズ </td> 
-   <td colname="2"> <p>キャプションのサイズ。 </p> <p> TextFormat.Size <span class="codeph"></span> 定義済みリストで定義された値にのみ設定できます。 
+   <td colname="2"> <p>キャプションのサイズ。 </p> <p> <span class="codeph"> TextFormat.Size </span>定義済みリストで定義された値にのみ設定できます。 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM </span> — 標準サイズ </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> LARGE </span> — 標準サイズより約30%大きい </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL </span> — 標準サイズより約30 %小さい </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT </span> — キャプションのデフォルトサイズ。媒体と同じ </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span>  — 標準サイズ </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> LARGE  </span>  — 標準サイズより約30%大きい </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL  </span>  — 標準サイズより約30%小さい </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT  </span>  — キャプションのデフォルトサイズ。媒体と同じ </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> フォントエッジ </td> 
-   <td colname="2"> <p>浮き出し、なしなど、フォントエッジに使用する効果。 </p> <p>TextFormat.FontEdge <span class="codeph"></span> 定義済みリストで定義された値にのみ設定できます。 </p> </td> 
+   <td colname="2"> <p>浮き出し、なしなど、フォントエッジに使用する効果。 </p> <p><span class="codeph"> TextFormat.FontEdge </span>定義済みリストで定義されている値にのみ設定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> フォントカラー </td> 
-   <td colname="2"> <p>フォントの色。 </p> <p>TextFormat.Color <span class="codeph"></span> 定義済みリストで定義された値にのみ設定できます。 </p> </td> 
+   <td colname="2"> <p>フォントの色。 </p> <p><span class="codeph"> TextFormat.Color </span>定義済みリストで定義された値にのみ設定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> エッジカラー </td> 
@@ -208,7 +208,7 @@ public TextFormatBuilder(
  </tbody> 
 </table>
 
-## キャプションの書式設定の例 {#examples-caption-formatting}
+## キャプションの書式設定の例{#examples-caption-formatting}
 
 クローズドキャプションの形式設定を指定できます。
 

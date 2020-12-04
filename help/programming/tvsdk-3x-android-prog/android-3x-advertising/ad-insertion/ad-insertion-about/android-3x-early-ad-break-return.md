@@ -1,25 +1,28 @@
 ---
-description: ライブストリーム広告の挿入の場合、時間内のすべての広告が再生されて完了する前に、広告の時間を終了する必要がある場合があります。
-seo-description: ライブストリーム広告の挿入の場合、時間内のすべての広告が再生されて完了する前に、広告の時間を終了する必要がある場合があります。
+description: ライブストリーム広告の挿入の場合、広告の時間内のすべての広告が最後まで再生される前に、広告の時間を終了する必要がある場合があります。
+seo-description: ライブストリーム広告の挿入の場合、広告の時間内のすべての広告が最後まで再生される前に、広告の時間を終了する必要がある場合があります。
 seo-title: 早期の広告ブレークリターンの実装
 title: 早期の広告ブレークリターンの実装
 uuid: 0e77414e-86f5-4979-9caa-eaf2f39144a2
 translation-type: tm+mt
 source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+workflow-type: tm+mt
+source-wordcount: '209'
+ht-degree: 1%
 
 ---
 
 
-# 早期の広告ブレークリターンの実装 {#implement-an-early-ad-break-return}
+# 早期広告ブレークリターンの実装{#implement-an-early-ad-break-return}
 
-ライブストリーム広告の挿入の場合、時間内のすべての広告が再生されて完了する前に、広告の時間を終了する必要がある場合があります。
+ライブストリーム広告の挿入の場合、広告の時間内のすべての広告が最後まで再生される前に、広告の時間を終了する必要がある場合があります。
 
-例えば、特定のスポーツイベントでの広告の時間の長さが、時間が始まる前にわからない場合があります。 TVSDKはデフォルトの時間を提供しますが、時間が終了する前にゲームが再開した場合は、広告の時間を終了する必要があります。 もう1つの例は、ライブストリームの広告の時間中の緊急信号です。
+例えば、特定のスポーツイベントでの広告の時間の継続時間が、その時間の開始前にわからない場合があります。 TVSDKはデフォルトの継続時間を提供しますが、ゲームが終了する前に再開される場合は、広告の時間を終了する必要があります。 もう1つの例は、ライブストリーム内の広告の時間中の緊急信号です。
 
-1. マーカー内の `#EXT-X-CUE-OUT`スプ `#EXT-X-CUE-IN`ライスア `#EXT-X-CUE`ウト/スプライスである、、、およびをサブスクライブします。
-広告マーカーをスプライスアウト/インする方法について詳しくは、「オポチュニティジェネレーターとコン [テンツリゾルバー」を参照してくださ](../../ad-insertion/content-resolver/android-3x-content-resolver.md)い。
-1. カスタムを使用しま `ContentFactory`す。
-1. で、 `retrieveGenerators`を使用します `SpliceInPlacementOpportunityGenerator`。
+1. `#EXT-X-CUE-OUT`、`#EXT-X-CUE-IN`、および`#EXT-X-CUE`に登録します。これはマーカー内のスプライス出力/スプライスです。
+広告マーカーを繋ぎ合わせる方法の詳細については、[オポチュニティジェネレーターとコンテンツリゾルバー](../../ad-insertion/content-resolver/android-3x-content-resolver.md)を参照してください。
+1. カスタム`ContentFactory`を使用します。
+1. `retrieveGenerators`では、`SpliceInPlacementOpportunityGenerator`を使用します。
 
    例：
 
@@ -31,9 +34,9 @@ source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
    }
    ```
 
-   カスタムオポチュニティジェネレーターの実装 `ContentFactory`の手順1を参照し [てください](../../ad-insertion/content-resolver/android-3x-opp-detector-impl-android.md)。
+   カスタム`ContentFactory`の使用について詳しくは、[カスタムオポチュニティジェネレーターの実装](../../ad-insertion/content-resolver/android-3x-opp-detector-impl-android.md)の手順1を参照してください。
 
-1. 同じカスタムで、とを `ContentFactory`実装し、 `retrieveResolvers` を含め `AuditudeResolver` ます `SpliceInCustomResolver`。
+1. 同じカスタム`ContentFactory`で、`retrieveResolvers`を実装し、`AuditudeResolver`と`SpliceInCustomResolver`を含めます。
 
    例：
 

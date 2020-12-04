@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# cookieの使用{#work-with-cookies}
+# cookieを使用する{#work-with-cookies}
 
 TVSDKを使用して、セッション管理、ゲートアクセスなどのために、cookieヘッダーに任意のデータを送信できます。
 
@@ -26,7 +26,7 @@ TVSDKを使用して、セッション管理、ゲートアクセスなどのた
 
 Cookieを使用するには：
 
-1. を作成 `cookieManager` し、URI用のcookieを自分に追加し `cookieStore`ます。
+1. `cookieManager`を作成し、URIのcookieを`cookieStore`に追加します。
 
    例：
 
@@ -46,7 +46,7 @@ Cookieを使用するには：
 
    TVSDKは、実行時にこのcookieManagerをクエリし、URLに関連付けられたcookieがあるかどうかを確認し、それらを自動的に使用します。
 
-   別の方法として、リクエストに使用 `cookieHeaders` する任意のcookieヘッダー文字列 `NetworkConfiguration` を設定するために、を使用することもできます。 デフォルトでは、このCookieヘッダーはキーリクエストでのみ送信されます。 Cookieヘッダーをすべてのリクエストと共に送信するには、次の `NetworkConfiguration` 方法を使用し `setUseCookieHeadersForAllRequests`ます。
+   もう1つの方法は、`NetworkConfiguration`で`cookieHeaders`を使用して、リクエストに使用する任意のcookieヘッダー文字列を設定することです。 デフォルトでは、このCookieヘッダーはキーリクエストでのみ送信されます。 Cookieヘッダーをすべてのリクエストと共に送信するには、`NetworkConfiguration`メソッド`setUseCookieHeadersForAllRequests`を使用します。
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 

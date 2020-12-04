@@ -1,20 +1,23 @@
 ---
-description: 広告の配置を含む、特定のメディアのタイムラインに関する情報を提供するクラスです。
-seo-description: 広告の配置を含む、特定のメディアのタイムラインに関する情報を提供するクラスです。
+description: 広告の配置など、特定のメディアのタイムラインに関する情報を提供するクラスです。
+seo-description: 広告の配置など、特定のメディアのタイムラインに関する情報を提供するクラスです。
 seo-title: Timelineクラス
 title: Timelineクラス
 uuid: dd4af4b4-215e-45cb-8bac-574a461ac1ce
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '244'
+ht-degree: 0%
 
 ---
 
 
-# Timelineクラス{#timeline-classes}
+# Timeline classes{#timeline-classes}
 
-広告の配置を含む、特定のメディアのタイムラインに関する情報を提供するクラスです。
+広告の配置など、特定のメディアのタイムラインに関する情報を提供するクラスです。
 
-パッケージ： [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/package-summary.html)
+パッケージ：[com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/package-summary.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_6752E908BA6546549619994A3F7D5F87"> 
  <thead> 
@@ -30,15 +33,15 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/Timeline.html" format="html" scope="external"> タイムライン</a> </td> 
-   <td colname="2"> タイムラインマーカーを処理するイテレータを提供するインターフェイス。 広告の時間を含む、コンテンツのタイムラインを表します。 </td> 
+   <td colname="2"> タイムラインマーカーを処理する反復子を提供するインターフェイス。 広告の時間を含む、コンテンツのタイムラインを表します。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> TimelineItem</a></span> </td> 
-   <td colname="2"> クラス。 タイムラインアイテムの一般的な不変表現。 </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> TimelineItem</a> </span> </td> 
+   <td colname="2"> クラス。 タイムライン項目の一般的な不変表現。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> TimelineMarker</a></span> </td> 
-   <td colname="2"> タイムライン上のマーカーを表すインターフェイス。 これは、実際のタイムライン上の関心領域を示します。 現在、関心領域は広告で、例えば、スクラブバーUI上で別の色でマークする場合などがあります。 各マーカーは、位置と時間（それぞれミリ秒で表されます）で定義されます。 </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> TimelineMarker</a> </span> </td> 
+   <td colname="2"> タイムライン上のマーカーを表すインターフェイス。 実際のタイムライン上の目標領域を示します。 現在、関心のある領域は広告です。例えば、広告をスクラブバーUIで別の色でマークする場合などがあります。 各マーカーは、位置と時間で定義されます（それぞれがミリ秒で表されます）。 </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineOperation.html" format="html" scope="external"> TimelineOperation</a> </td> 

@@ -1,22 +1,25 @@
 ---
-seo-title: バックグラウンドオーディオの有効化
-title: バックグラウンドオーディオの有効化
+seo-title: バックグラウンドオーディオを有効にする
+title: バックグラウンドオーディオを有効にする
 uuid: 1e7319f5-ee16-47bd-bfd5-d3dcfe69bf4b
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 0%
 
 ---
 
 
-# バックグラウンドオーディオの有効化 {#enable-background-audio}
+# バックグラウンドオーディオを有効にする{#enable-background-audio}
 
-アプリがバックグラウンドにある場合にオーディオ再生を有効にするには、プレイヤーがPREPARED状態の場合に、アプリはMediaPlayerの `enableAudioPlaybackInBackground` APIを引数としてtrueで呼び出す必要があります。
+アプリがバックグラウンドにあるときのオーディオ再生を有効にするには、プレイヤーがPREPARED状態のときに、アプリはMediaPlayerの`enableAudioPlaybackInBackground` APIを引数としてtrueで呼び出す必要があります。
 
 ```
 _mediaPlayer.enableAudioPlaybackInBackground(true);
 ```
 
-電話などに応答するなどのイベント中に、オーディオフォーカスの保留が解除された場合、アプリは再生を一時停止する必要があります。 次のコードスニペットに、を実装する方法を示しま `OnAudioFocusChangeListener`す。
+アプリは、電話への応答などのイベント中に、オーディオのフォーカスが保持されなくなった場合、再生を一時停止する必要があります。 次のコードスニペットは、`OnAudioFocusChangeListener`の実装方法を示しています。
 
 ```
 /** 

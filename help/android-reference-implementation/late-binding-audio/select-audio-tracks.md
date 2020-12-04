@@ -1,24 +1,27 @@
 ---
-seo-title: オーディオトラックの選択
-title: オーディオトラックの選択
+seo-title: オーディオトラックを選択
+title: オーディオトラックを選択
 uuid: a827f426-956b-4a5f-90ba-db12010aa7c7
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
 
-# オーディオトラックの選択{#select-the-audio-tracks}
+# オーディオトラックを選択{#select-the-audio-tracks}
 
-遅延バインディングオーディオ用のオーディオトラックを選択するには、 [IAAConfigを実装しま](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html)す。
+遅延バインディングオーディオ用のオーディオトラックを選択するには、[IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html)を実装します。
 
-| 宛先… | 電話… |
+| 宛先… | 通話… |
 |---|---|
 | 使用可能なAAトラックのリストの取得 | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
 | 現在選択されているトラックを取得 | [getSelectedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
 | AAトラックの選択 | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
 
-次のコード例は、参照実装がTVSDKからオーディオトラックを取得し、選択したトラックを関連するメディア項目に割り当てる方法を示しています。
+以下のコードの例は、リファレンスの実装がTVSDKからオーディオトラックを取得し、選択したトラックを関連付けられたメディア項目に割り当てる方法を示しています。
 
 ```java
 /** 

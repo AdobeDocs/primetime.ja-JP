@@ -1,16 +1,19 @@
 ---
-seo-title: Adobe Media Serverを使用する
-title: Adobe Media Serverを使用する
+seo-title: Adobeメディアサーバを使用
+title: Adobeメディアサーバを使用
 uuid: 272b9919-6ae4-4adb-aab5-28b1f92aa9fe
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 3%
 
 ---
 
 
-# Adobe Media Serverを使用する {#use-adobe-media-server}
+# Adobeメディアサーバを使用{#use-adobe-media-server}
 
-一部のお客様は、既にAdobe Media Serverを使用しており、そのコンテンツ配信モデルを維持したいと考えている場合があります。 この場合、必要なPrimetime Cloud DRM固有のデータは、このキットに含まれる設定ファイルのいずれかから取得し、AMSのJIT(Just In Time)XML設定を入力できます。
+一部のお客様は、既にAdobeメディアサーバーを使用しており、そのコンテンツ配信モデルを維持したいと考えている場合があります。 この場合、必要なPrimetime Cloud DRM固有のデータは、このキットに含まれる設定ファイルのいずれかから収集して、AMSのJIT(Just In Time)XML設定に入力できます。
 
 例：
 

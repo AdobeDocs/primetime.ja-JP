@@ -3,17 +3,20 @@ title: PSDKエラーコード
 description: 様々なエラーコード、警告およびネイティブエラーコードに関する情報です。
 translation-type: tm+mt
 source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
+workflow-type: tm+mt
+source-wordcount: '1897'
+ht-degree: 6%
 
 ---
 
 
-# PSDKエラーコード {#psdk-error-codes}
+# PSDKエラーコード{#psdk-error-codes}
 
-PSDKのエラーコード、警告、ネイティブエラーコードについて詳しく説明します。
+PSDKエラーコード、警告、ネイティブエラーコードについて詳しく説明します。
 
 ## エラー
 
-次の表に、ERRORタイプ通知の詳細を示します。 ほとんどのエラーには関連するメタデータが含まれ、例えば、ダウンロードに失敗したリソースのURLです。 一部の通知には、問題が発生したのがメインビデオコンテンツ、代替オーディオコンテンツ、広告のどちらであったかを指定するメタデータが含まれています。
+次の表に、ERRORタイプ通知の詳細を示します。 ほとんどのエラーには、関連するメタデータが含まれています。例えば、ダウンロードに失敗したリソースのURL。 一部の通知には、問題が発生したのがメインビデオコンテンツ、代替オーディオコンテンツ、広告のどちらであるかを指定するメタデータが含まれています。
 
 <table frame="all" colsep="1" rowsep="1">
   <tr> 
@@ -22,9 +25,9 @@ PSDKのエラーコード、警告、ネイティブエラーコードについ�
    <th><b>説明</b></th>
   </tr>
   <tr>
-    <td>成功</td>
+    <td>SUCCESS</td>
     <td>0</td>
-    <td>基になるAPIによって実行された操作が成功した。</td>
+    <td>基になるAPIによって実行された操作は成功しました。</td>
   </tr>
   <tr>
     <td>INVALID_ARGUMENT</td>
@@ -34,17 +37,17 @@ PSDKのエラーコード、警告、ネイティブエラーコードについ�
   <tr>
     <td>NULL_POINTER</td>
     <td>2</td>
-    <td>渡された引数の1つがNULLであるか、内部メンバの1つが初期化されませんでした。</td>
+    <td>渡された引数の1つがNULLです。または、内部メンバの1つが初期化されませんでした。</td>
   </tr>
   <tr>
     <td>ILLEGAL_STATE</td>
-    <td>3</td>
+    <td>1</td>
     <td>この操作は、現在のプレイヤーの状態ではサポートされていません。</td>
   </tr>
   <tr>
     <td>INTERFACE_NOT_FOUND</td>
     <td>4</td>
-    <td>interfaceCastメソッドは、要求されたインターフェイスがこのメソッドによって実装または継承されていない場合に、このエラーをスローします。</td>
+    <td>interfaceCastメソッドは、要求されたインターフェイスがこのメソッドによって実装/継承されていない場合に、このエラーをスローします。</td>
   </tr>
   <tr>  
     <td>CREATION_FAILED</td>
@@ -69,12 +72,12 @@ PSDKのエラーコード、警告、ネイティブエラーコードについ�
   <tr>
     <td>UNSUPPORTED_FEATURE</td>
     <td>9</td>
-    <td>この機能はサポートされていません。</td>
+    <td>この機能/機能はサポートされていません。</td>
   </tr>
   <tr>
     <td>RANGE_ERROR</td>
     <td>10</td>
-    <td>指定された値が範囲外です。</td>
+    <td>指定した値は範囲外です。</td>
   </tr>
   <tr>
     <td>CODEC_NOT_SUPPORTED</td>
@@ -129,7 +132,7 @@ PSDKのエラーコード、警告、ネイティブエラーコードについ�
   <tr>
     <td>PLAYBACK_NOT_AUTHORIZED</td>
     <td>57</td>
-    <td>HLS再生がFlash Playerで有効になっていません。 AuthorizedFeatures.enableMediaPlayerHLSPlayback()を参照してください。</td>
+    <td>Flash PlayerでHLS再生が有効になっていません。 AuthorizedFeatures.enableMediaPlayerHLSPlayback()を参照してください。</td>
   </tr>
   <tr>
     <td>NETWORK_TIMEOUT</td>
@@ -140,8 +143,8 @@ PSDKのエラーコード、警告、ネイティブエラーコードについ�
 
 ## 警告
 
-次の表に、WARNタイプの通知に関する詳細情報を示します。
-ほとんどの警告には、関連するメタデータが含まれます。例えば、ダウンロードに失敗したリソースのURLです。 一部の通知には、問題が発生したのがメインビデオコンテンツ、代替オーディオコンテンツ、広告のどちらであったかを指定するメタデータが含まれています。
+次の表に、WARNタイプ通知に関する詳細情報を示します。
+ほとんどの警告には、関連するメタデータが含まれています。例えば、ダウンロードに失敗したリソースのURLです。 一部の通知には、問題が発生したのがメインビデオコンテンツ、代替オーディオコンテンツ、広告のどちらであるかを指定するメタデータが含まれています。
 
 <table frame="all" colsep="1" rowsep="1">
   <tr>
@@ -152,7 +155,7 @@ PSDKのエラーコード、警告、ネイティブエラーコードについ�
   <tr>
     <td>PLAYBACK_OPERATION_FAILED</td>
     <td>200</td>
-    <td>再生操作中にエラーが発生しました。 再生関連の操作が失敗しました</td>
+    <td>再生操作中にエラーが発生しました。 再生関連の操作に失敗しました</td>
   </tr>
   <tr>  
     <td>NATIVE_WARNING</td>
@@ -172,7 +175,7 @@ PSDKのエラーコード、警告、ネイティブエラーコードについ�
   <tr>
     <td>AD_RESOLUTION_IN_PROGRESS</td>
     <td>204</td>
-    <td>広告の解決の操作が進行中です。</td>
+    <td>広告の解決操作が進行中です。</td>
   </tr>
   </table>
 
@@ -185,7 +188,7 @@ PSDKのエラーコード、警告、ネイティブエラーコードについ�
     <th><b>説明</b></th>
   </tr>
   <tr>
-    <td>REVENUE_OPTIMIZATION_REPORTING</td>
+    <td>REVENUE_OPTIMIZATION_レポート</td>
     <td>300</td>
     <td>TVSDKに関する詳細な通知を参照してください。</td>
   </tr>
@@ -193,7 +196,7 @@ PSDKのエラーコード、警告、ネイティブエラーコードについ�
 
 ## ネイティブエラーコード
 
-AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオブジェクトに次のビデオ再生通知を返します。
+AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオブジェクトに以下のビデオ再生通知を返します。
 
 <table frame="all" colsep="1" rowsep="1">
   <tr>
@@ -204,26 +207,26 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>  
     <td>END_OF_PERIOD</td>
     <td>-1</td>
-    <td>期間の終わり。</td>
+    <td>期間の終了。</td>
   </tr>
   <tr>
-    <td>成功</td>
+    <td>SUCCESS</td>
     <td>0</td>
     <td>操作が成功しました。</td>
   </tr>
   <tr>
     <td>ASYNC_OPERATION_IN_PROGRESS</td>
     <td>1</td>
-    <td>非同期操作。 操作の要求が行われました。 成功/失敗の情報は、後で利用できます。</td>
+    <td>非同期操作。 操作の要求が行われました。 成功/失敗に関する情報は、後で入手できます。</td>
   </tr>
   <tr>
     <td>EOF</td>
     <td>2</td>
-    <td>ファイルの終わり(EOF)条件が原因で、操作を実行できません。</td>
+    <td>ファイルの終了(EOF)条件が原因で、操作を実行できません。</td>
   </tr>
   <tr>
     <td>DECODER_FAILED</td>
-    <td>3</td>
+    <td>1</td>
     <td>デコーダーが実行時に失敗しました。</td>
   </tr>
   <tr>
@@ -244,7 +247,7 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>
     <td>IRRECOVERABLE_ERROR</td>
     <td>7</td>
-    <td>ビデオエンジンが回復できないエラー状態。</td>
+    <td>ビデオエンジンが回復できないエラー状態です。</td>
   </tr>
   <tr>
     <td>LOST_CONNECTION_RECOVERABLE</td>
@@ -279,17 +282,17 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>  
     <td>UNDER_FLOW</td>
     <td>14</td>
-    <td>アンダーフローの状態。</td>
+    <td>アンダーフロー条件。</td>
   </tr>
   <tr> 
     <td>UNSUPPORTED_CONFIG</td>
     <td>15</td>
-    <td>設定がサポートされていません。</td>
+    <td>構成はサポートされていません。</td>
   </tr>
   <tr>  
     <td>UNSUPPORTED_OPERATION</td>
     <td>16</td>
-    <td>操作はサポートされていません。</td>
+    <td>操作がサポートされていません。</td>
   </tr>
   <tr>
     <td>WAITING_FOR_INIT</td>
@@ -299,7 +302,7 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>  
     <td>INVALID_PARAMETER</td>
     <td>18</td>
-    <td>パラメータが無効です。</td>
+    <td>無効なパラメータです。</td>
   </tr>
   <tr>
     <td>INVALID_OPERATION</td>
@@ -329,12 +332,12 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>
     <td>RANGE_ERROR</td>
     <td>24</td>
-    <td>指定された値が範囲外です。</td>
+    <td>指定した値は範囲外です。</td>
   </tr>
   <tr>
     <td>INVALID_SEEK_TIME</td>
     <td>25</td>
-    <td>シーク時間が無効です。</td>
+    <td>無効なシーク時間です。</td>
   </tr>
   <tr>
     <td>FILE_STRUCTURE_INVALID</td>
@@ -349,12 +352,12 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>
     <td>DRM_INIT_ERROR</td>
     <td>28</td>
-    <td>DRMコンテキストの作成に失敗しました。</td>
+    <td>DRMコンテキストを作成できませんでした。</td>
   </tr>
   <tr>
-    <td>CONTAINER_NOT_SUPPORTED</td>
+    <td>コンテナ_NOT_SUPPORTED</td>
     <td>29</td>
-    <td>コンテナタイプがサポートされていません。</td>
+    <td>コンテナの種類がサポートされていません。</td>
   </tr>
   <tr>
     <td>SEEK_FAILED</td>
@@ -374,7 +377,7 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>  
     <td>NETWORK_ERROR</td>
     <td>33</td>
-    <td>ネットワークからデータを取得中にエラーが発生しました。</td>
+    <td>ネットワークからのデータ取得中にエラーが発生しました。</td>
   </tr>
   <tr>
     <td>OVERFLOW</td>
@@ -382,39 +385,39 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
     <td>オーバーフロー。</td>
   </tr>
   <tr>  
-    <td>VIDEO_PROFILE_NOT_SUPPORTED</td>
+    <td>VIDEO_プロファイル_NOT_SUPPORTED</td>
     <td>35</td>
     <td>サポートされていないビデオプロファイル。</td>
   </tr>
   <tr>
     <td>PERIOD_NOT_LOADED</td>
     <td>36</td>
-    <td>HOLD期間またはまだ読み込まれていない期間で操作が試行されました。</td>
+    <td>保留期間またはまだ読み込まれていない期間に操作が試行されました。</td>
   </tr>
   <tr> 
     <td>INVALID_REPLACE_DURATION</td>
     <td>37</td>
-    <td>指定された置換期間が無効か、ストリームの終わりを超えています。</td>
+    <td>指定した置き換え期間が無効か、ストリームの終わりを超えています。</td>
   </tr>
   <tr>
     <td>CALLED_FROM_WRONG_THREAD</td>
     <td>38</td>
-    <td>APIを間違ったスレッドから呼び出すことはできません。 主に、メインスレッドからのみ呼び出す必要があるAPI要素に対して使用します。</td>
+    <td>APIを間違ったスレッドから呼び出すことはできません。 ほとんどの場合、APIエレメントはメインスレッドからのみ呼び出す必要があります。</td>
   </tr>
   <tr>
     <td>FRAGMENT_READ_ERROR</td>
     <td>39</td>
-    <td>フラグメント読み取りエラー。 フェイルオーバーが存在しません。 エンジンは次のフラグメントの読み取りを試みます。</td>
+    <td>フラグメント読み取りエラー。 フェールオーバーが存在しません。 エンジンは次のフラグメントの読み取りを試みます。</td>
   </tr>
   <tr>
-    <td>中止</td>
+    <td>ABORTED</td>
     <td>40</td>
     <td>明示的なAbortまたはDestroyの呼び出しによって、操作が中止されました。</td>
   </tr>
   <tr>
     <td>UNSUPPORTED_HLS_VERSION</td>
     <td>41</td>
-    <td>このバージョンのHLSメディアを再生できません。</td>
+    <td>このバージョンのHLSメディアは再生できません。</td>
   </tr>
   <tr>
     <td>CANNOT_FAIL_OVER</td>
@@ -429,17 +432,17 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>
     <td>NETWORK_DOWN</td>
     <td>44</td>
-    <td>ユーザーのネットワーク接続がダウンしています。 再生は、いつでも停止し、接続が使用可能になると再開します。</td>
+    <td>ユーザーのネットワーク接続がダウンしています。 いつでも再生が停止する可能性があり、接続が利用可能になると再開します。</td>
   </tr>
   <tr>
-    <td>NO_USABLE_BITRATE_PROFILE</td>
+    <td>NO_USABLE_BITRATE_プロファイル</td>
     <td>45</td>
     <td>使用可能なビットレートプロファイルがストリームに見つかりません。</td>
   </tr>
   <tr>
     <td>BAD_MANIFEST_SIGNATURE</td>
     <td>46</td>
-    <td>マニフェストの署名が正しくありません。 マニフェストの署名テストに失敗しました。</td>
+    <td>マニフェストに不正な署名があります。 マニフェストの署名テストに失敗しました。</td>
   </tr>
   <tr>
     <td>CANNOT_LOAD_PLAYLIST</td>
@@ -449,17 +452,17 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>
     <td>REPLACEMENT_FAILED</td>
     <td>48</td>
-    <td>挿入APIで指定された置き換えに失敗しました。 これは、挿入は成功したが、置き換えに失敗したことを意味します。 置き換えるマニフェストがタイムラインから削除されている場合、置き換えに失敗する可能性があります。</td>
+    <td>挿入APIで指定された置き換えに失敗しました。 これは、挿入に成功したが置き換えに失敗したことを意味します。 置き換えるマニフェストがタイムラインから削除されていると、置き換えに失敗する可能性があります。</td>
   </tr>
   <tr>
-    <td>SWITCH_TO_ASYMMETRIC_PROFILE</td>
+    <td>SWITCH_TO_ASYMMETRIC_プロファイル</td>
     <td>49</td>
-    <td>DRMが非対称プロファイルに切り替えられています。 すべてのプロファイルは、期間内に整列する必要があります。 そうでない場合は、この警告がスローされ、再生が飛び越える可能性があります。</td>
+    <td>DRMが非対称プロファイルに切り替わっています。 すべてのプロファイルは期間内に整列する必要があります。 そうでない場合は、この警告がスローされ、再生が飛ぶことがあります。</td>
   </tr>
   <tr>
     <td>LIVE_WINDOW_MOVED_BACKWARD</td>
     <td>50</td>
-    <td>ライブウィンドウは前方にのみ移動する必要があります。 そうでない場合は、この警告がスローされ、ウィンドウは読み取られません。 そのため、再生が飛ぶ（または停止/長い一時停止）ことがあります。</td>
+    <td>ライブウィンドウは次に進むだけでよいと想定されています。 そうでない場合は、この警告がスローされ、ウィンドウは読み取られません。 そのため、再生が飛ぶ（または停止/長い一時停止）場合があります。</td>
   </tr>
   <tr>
     <td>CURRENT_PERIOD_EXPIRED</td>
@@ -469,7 +472,7 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>
     <td>CONTENT_LENGTH_MISMATCH</td>
     <td>52</td>
-    <td>HTTPサーバーから報告されたコンテンツの長さが、実際のメディアサイズと一致しませんでした。</td>
+    <td>HTTPサーバーから報告されるコンテンツの長さが、実際のメディアサイズと一致しませんでした。</td>
   </tr>
   <tr>
     <td>PERIOD_HOLD</td>
@@ -479,12 +482,12 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>  
     <td>LIVE_HOLD</td>
     <td>54</td>
-    <td>ライブウィンドウの終わりに達したため、メディアリーダーはセグメントを読み込めません。 サーバーがライブウィンドウに新しいメディアを追加すると、セグメントの読み込みが再開されます。 通常、この状態に達するのは次の場合です。<ul><li>bufferTimeが長すぎます（ライブ時間の長さ以上）。</li><li>1つ以上の挿入/消去APIの組み合わせにより、追加されたメディアよりも多くのメディアが置き換えられました。</li><li>次の期間は、メディアの置き換えが保留中のライブ期間です（InsertBy APIの呼び出しが原因）。</li></ul></td>
+    <td>ライブウィンドウの終わりに達したので、メディアリーダーはセグメントを読み込めません。 サーバーがライブウィンドウに新しいメディアを広告すると、セグメントの読み込みが再開されます。 この状態は、通常、次の場合に達します。<ul><li>bufferTimeが高すぎます（ライブ時間帯の長さ以上）。</li><li>1つ以上の挿入/消去APIの組み合わせにより、追加されたメディアより多くのメディアが置き換えられました。</li><li>次の期間は、メディアの置き換えが保留中のライブ期間です（InsertBy APIの呼び出しが原因）。</li></ul></td>
   </tr>
   <tr>
     <td>BAD_MEDIA_INTERLEAVING</td>
     <td>55</td>
-    <td>メディアのオーディオとビデオのインターリーブが正しく行われません。 これはパッケージ化エラーです。 この違いが2秒を超えると、警告が発行されます。</td>
+    <td>メディアのオーディオとビデオが正しくインターリーブされません。 これはパッケージ化エラーです。 この警告は、差が2秒を超えると発行されます。</td>
   </tr>
   <tr>
     <td>DRM_NOT_AVAILABLE</td>
@@ -494,52 +497,52 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>  
     <td>PLAYBACK_NOT_AUTHORIZED</td>
     <td>57</td>
-    <td>HLS再生がFlash Playerで有効になっていません。 AuthorizedFeatures.enableHLSPlaybackを参照してください。</td>
+    <td>Flash PlayerでHLS再生が有効になっていません。 AuthorizedFeatures.enableHLSPlaybackを参照してください。</td>
   </tr>
   <tr>
     <td>BAD_MEDIA_SAMPLE_FOUND</td>
     <td>58</td>
-    <td>デコーダーが、デコードできない不正なサンプルを受信しました。 これは通常、致命的なエラーではありませんが、オーディオ/ビデオに問題がある可能性を示しています。 このエラーのインスタンスが多すぎる場合は、不正なエンコーディングまたは不正なファイルを示しています。</td>
+    <td>デコーダーが、デコードできない不正なサンプルを受け取りました。 通常、これは致命的なエラーではありませんが、オーディオ/ビデオに問題がある可能性を示しています。 このエラーのインスタンスが多すぎる場合は、不正なエンコードまたは不正なファイルを示しています。</td>
   </tr>
   <tr>
     <td>RANGE_SPANS_READ_HEAD</td>
     <td>59</td>
-    <td>再生が開始した後は、挿入/置換範囲に読み取りヘッドを含めないでください。</td>
+    <td>再生が開始した後は、挿入/置換範囲に読み取りヘッドが含まれていてはなりません。</td>
   </tr>
   <tr> 
     <td>POSTROLL_WITH_LIVE_NOT_ALLOWED</td>
     <td>60</td>
-    <td>ポストロール挿入は、ライブメディアでは使用できません。 ただし、サーバーがメディアを完了とマークした後は、これらは許可されます。</td>
+    <td>ポストロール挿入は、ライブメディアでは使用できません。 ただし、サーバーがメディアを完了とマークした後でも使用できます。</td>
   </tr>
   <tr>
     <td>INTERNAL_ERROR</td>
     <td>61</td>
-    <td>発生しない非常にまれな問題です。</td>
+    <td>非常にまれな問題であり、常に発生しないはずです。</td>
   </tr>
   <tr>  
     <td>SPS_PPS_FOUND_OUTSIDE_AVCC</td>
     <td>62</td>
-    <td>ストリームが、常にH264 SPS/PPSをAVCCに配置するパッケージ化の推奨に従わない。 シーク/再生の問題が表示される場合があります。</td>
+    <td>ストリームが、パッケージ化の推奨に従わず、常にH264 SPS/PPSをAVCCに含める。 シーク/再生に関する問題が表示される場合があります。</td>
   </tr>
   <tr>  
     <td>PARTIAL_REPLACEMENT</td>
     <td>63</td>
-    <td>挿入APIで指定された置き換えが部分的にのみ行われました。 これは、replaceDurationがタイムラインの時間にまたがる場合に発生します。</td>
+    <td>挿入APIで指定された置き換えは部分的にしか行われませんでした。 replaceDurationがタイムライン期間に及んでいる場合に発生します。</td>
   </tr>
   <tr>
     <td>RENDITION_M3U8_ERROR</td>
     <td>64</td>
-    <td>レンディションプレイリストで読み込み中にエラーが発生しました。 これはAVEのみで、FlashPlayerの場合は使用できません。</td>
+    <td>レンディションプレイリストで読み込み中にエラーが発生しました。 これはAVEに対してのみ有効で、FlashPlayerには適用されません。</td>
   </tr>
   <tr>
     <td>NULL_OPERATION</td>
     <td>65</td>
-    <td>操作では何も実行されません。</td>
+    <td>操作は何も実行しません。</td>
   </tr>
   <tr>
     <td>SEGMENT_SKIPPED_ON_FAILURE</td>
     <td>66</td>
-    <td>セグメントは再生できず、失敗時にスキップされます。</td>
+    <td>セグメントは再生できず、失敗した場合はスキップされます。</td>
   </tr>
   <tr>
     <td>INCOMPATIBLE_RENDER_MODE</td>
@@ -579,7 +582,7 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>
     <td>NO_TIMELINE</td>
     <td>74</td>
-    <td>内部データ構造にタイムラインが存在しません。</td>
+    <td>内部データ構造にタイムラインがありません。</td>
   </tr>
   <tr>
     <td>LISTENER_NOT_FOUND</td>
@@ -587,7 +590,7 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
     <td>内部データ構造にリスナーが見つかりません。</td>
   </tr>
   <tr>
-    <td>AUDIO_START_ERROR</td>
+    <td>AUDIO_開始_ERROR</td>
     <td>76</td>
     <td>オーディオを開始できません。</td>
   </tr>
@@ -619,22 +622,22 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>
     <td>SECURITY_ERROR</td>
     <td>82</td>
-    <td>セキュリティ上の制限により、コンテンツの読み込みに失敗しました。</td>
+    <td>セキュリティ上の制約により、コンテンツの読み込みに失敗しました。</td>
   </tr>
   <tr>
     <td>TIMELINE_TOO_SHORT</td>
     <td>83</td>
-    <td>タイムラインの時間が短すぎます。 これがライブストリームの場合は、バッファリングが頻繁に発生する可能性があります。</td>
+    <td>タイムラインの時間が短すぎます。 これがライブストリームの場合、バッファリングが頻繁に発生する可能性があります。</td>
   </tr>
   <tr>
-    <td>AUDIO_ONLY_STREAM_START</td>
+    <td>AUDIO_ONLY_STREAM_開始</td>
     <td>84</td>
     <td>ストリームがオーディオ専用ストリームに切り替えられました。</td>
   </tr>
   <tr>  
     <td>AUDIO_ONLY_STREAM_END</td>
     <td>85</td>
-    <td>ストリームがオーディオ専用からビデオ付きのストリームに切り替えられました。</td>
+    <td>ストリームがオーディオ専用からビデオ付きストリームに切り替えられました。</td>
   </tr>
   <tr>
     <td>KEY_NOT_FOUND</td>
@@ -659,21 +662,21 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
   <tr>
     <td>UNREPORTED_TIME_DISCONTINUITY_FOUND</td>
     <td>91</td>
-    <td>報告されていない時間(PTS)不連続が見つかりました。</td>
+    <td>報告されない時間(PTS)不連続が見つかりました。</td>
   </tr>
   <tr>
     <td>UNMATCHED_AV_DISCONTINUITY_FOUND</td>
     <td>92</td>
-    <td>一致しないオーディオとビデオの不連続が見つかりました。</td>
+    <td>一致しないオーディオとビデオの不連続性が見つかりました。</td>
   </tr>
   <tr>
     <td>TRICKPLAY_ENDED_DUE_TO_ERROR</td>
     <td>93</td>
-    <td>トリック再生モードでメディアを再生中にエラーが発生しました。 トリック再生モードが終了し、ストリームが一時停止しました。 Play()を呼び出して、メディアを通常モードで再生します。</td>
+    <td>トリック再生モードでメディアを再生中にエラーが発生しました。 トリック再生モードが終了し、ストリームが一時停止します。 Play()を呼び出して、メディアを通常モードで再生します。</td>
   </tr>
   <tr>
     <td>LIVE_WINDOW_MOVED_AHEAD</td>
     <td>95</td>
-    <td>プレイヤーはライブウィンドウから外れているので、追いつくために前方にシークする必要があります。</td>
+    <td>プレイヤーはライブウィンドウから外れており、追いつくために前方にシークする必要があります。</td>
   </tr>
 </table>

@@ -6,28 +6,31 @@ title: 広告のデフォルトおよびカスタマイズされた再生動作
 uuid: f008eea1-f30f-4a7a-ad8b-9cde4bac121e
 translation-type: tm+mt
 source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 0%
 
 ---
 
 
-# 広告のデフォルトおよびカスタマイズされた再生動作 {#default-and-customized-playback-behavior-with-ads}
+# 広告{#default-and-customized-playback-behavior-with-ads}を使用したデフォルトおよびカスタマイズされた再生動作
 
 メディア再生の動作は、シーク、一時停止、早送りまたは巻き戻し、広告の影響を受けます。
 
-デフォルトの動作を上書きするには、を使用しま `AdBreakPolicySelector` す。
+デフォルトの動作を上書きするには、`AdBreakPolicySelector`を使用します。
 
 >[!IMPORTANT]
 >
->TVSDKは、広告中のシークを無効にする方法を提供しません。 広告中のシークを無効にするようにアプリを設定することをお勧めします。
+>TVSDKは、広告中のシークを無効にする手段を提供しません。 Adobeでは、広告中のシークを無効にするようにアプリを設定することをお勧めします。
 
 ライブ/リニアコンテンツの再生動作は次のとおりです。
 
-* 一時停止後に再生を再開すると、一時停止時にバッファーされたコンテンツが再生されます。
+* 一時停止後に再生を再開すると、一時停止の時点でバッファーされたコンテンツの再生が行われます。
 
-   再開位置がまだ再生範囲にある場合、再生は連続している必要があります。 それ以外の場合、TVSDKは新しいライブポイントにジャンプします。 シーク操作を実行し、別の再生ポイントを選択することもできます。
+   再開位置がまだ再生範囲にある場合、再生は連続している必要があります。 それ以外の場合は、TVSDKは新しいライブポイントにジャンプします。 シーク操作を実行し、別の再生ポイントを選択することもできます。
 * TVSDKは、アプリケーションがライブ再生に入る位置より後のキュー間で広告を解決します。
 
-   再生は、最初のキューが解決された後に開始されます。 ライブ再生を開始する際のデフォルト値はクライアントのライブポイントですが、別の位置を選択できます。 初期位置より前のすべてのキューは、アプリケーションがDVRウィンドウでシークを実行した後に解決されます。
+   再生は、最初のキューが解決された後に開始されます。 ライブ再生に入るデフォルト値はクライアントのライブポイントですが、別の位置を選択できます。 初期位置より前のすべてのキューは、アプリケーションがDVRウィンドウでシークを実行した後に解決されます。
 
 次の表に、TVSDKが再生中に広告と広告の時間を処理する方法を示します。
 
@@ -36,58 +39,58 @@ source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
   <tr> 
    <th colname="col1" class="entry"> <b>ビデオアクティビティ</b> </th> 
    <th colname="col2" class="entry"> <b>デフォルトのTVSDK動作ポリシー</b> </th> 
-   <th colname="col3" class="entry"><b>AdBreakPolicySelectorを通じて可能なカスタマイズ <span class="codeph"> 機能</b></span> </th> 
+   <th colname="col3" class="entry"><b>AdBreakPolicySelectorを通じて可能なカス <span class="codeph"> タマイズ</b></span> </th> 
   </tr>
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> 通常の再生中に、広告の時間が発生します。 </td> 
+   <td colname="col1"> 通常の再生中に、広告の時間を検出します。 </td> 
    <td colname="col2"> 
     <ul id="ul_10D2638676EA4ADDA718E61BD4FDC1D2"> 
      <li id="li_D5CC30F063934C738971E2E8AF00C137"> ライブ/リニアの場合は、広告の時間が既に視聴済みであっても、広告の時間を再生します。 </li> 
      <li id="li_D962C0938DA74186AE99D117E5A74E38">VODの場合、広告の時間を再生し、広告の時間を視聴済みとしてマークします。 </li> 
     </ul> </td> 
-   <td colname="col3">selectPolicyForAdBreakを使用して、広告の時間に別のポリシーを指定し <span class="codeph"> ます</span>。 </td> 
+   <td colname="col3"><span class="codeph"> selectPolicyForAdBreak</span>を使用して、広告の時間に別のポリシーを指定します。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> アプリケーションが、広告の時間をスキップしてメインコンテンツまで早送りします。 </td> 
-   <td colname="col2"> 最後にスキップされた未視聴の広告の時間を再生し、時間の再生が完了したときに、目的のシーク位置で再生を再開します。 </td> 
-   <td colname="col3">selectAdBreaksToPlayを使用して、再生するスキップされた時間を <span class="codeph"> 選択します</span>。 </td> 
+   <td colname="col2"> 最後にスキップされた未視聴の広告の時間を再生し、広告の時間の再生が完了したら、目的のシーク位置で再生を再開します。 </td> 
+   <td colname="col3"><span class="codeph"> selectAdBreaksToPlay</span>を使用して、スキップした広告の時間を選択して再生します。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> アプリケーションが、広告の時間をスキップしてメインコンテンツまで巻き戻します。 </td> 
    <td colname="col2"> 広告の時間を再生せずに、目的のシーク位置までスキップします。 </td> 
-   <td colname="col3">selectAdBreaksToPlayを使用して、再生するスキップされた時間を <span class="codeph"> 選択します</span>。                      </td> 
+   <td colname="col3"><span class="codeph"> selectAdBreaksToPlay</span>を使用して、スキップした広告の時間を選択して再生します。                      </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> アプリケーションが広告の時間まで早送りします。 </td> 
+   <td colname="col1"> アプリケーションが、広告の時間まで早送りします。 </td> 
    <td colname="col2"> シークが終了した広告の先頭から再生します。 </td> 
-   <td colname="col3">selectPolicyForSeekIntoAdを使用して、広告の時間とシークが終了した特定の広告に対して別の広告ポリシーを指定 <span class="codeph"> します</span>。 </td> 
+   <td colname="col3"><span class="codeph"> selectPolicyForSeekIntoAd</span>を使用して、広告の時間とシークが終了した場所の特定の広告に異なる広告ポリシーを指定します。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> アプリケーションが広告の時間まで巻き戻します。 </td> 
+   <td colname="col1"> アプリケーションが、広告の時間まで巻き戻します。 </td> 
    <td colname="col2"> シークが終了した広告の先頭から再生します。 </td> 
-   <td colname="col3">selectPolicyForSeekIntoAdを使用して、広告の時間とシークが終了した特定の広告に対して別の広告ポリシーを指定 <span class="codeph"> します</span>。 </td> 
+   <td colname="col3"><span class="codeph"> selectPolicyForSeekIntoAd</span>を使用して、広告の時間とシークが終了した特定の広告に異なる広告ポリシーを指定します。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> アプリケーションが、視聴済みの広告の時間をスキップしてメインコンテンツまで早送りまたは巻き戻します。 </td> 
    <td colname="col2"> 最後にスキップされた広告の時間が既に視聴済みの場合は、ユーザーが選択したシーク位置までスキップします。 </td> 
-   <td colname="col3">selectAdBreaksToPlayを使用して、スキップされた時間のうちどれを再生 <span class="codeph"> するかを選択し</span> 、AdBreak.isWatchedを使用して、既に視聴済みの時間を判 <span class="codeph"> 別します</span> 。 <p>重要： デフォルトでは、TVSDKは、広告の時間の最初の広告に入った直後に、広告の時間を視聴済みとしてマークします。 </p> </td> 
+   <td colname="col3"><span class="codeph"> selectAdBreaksToPlay</span>を使用して、スキップされた広告の時間のうちどれを再生するかを選択し、<span class="codeph"> AdBreak.isWatched</span>を使用して、既に視聴済みの広告の時間を判断します。 <p>重要： デフォルトでは、TVSDKは、広告の時間の最初の広告に入った直後に、広告の時間を視聴済みとしてマークします。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> アプリケーションが、1つ以上の広告の時間をスキップして、視聴済みの広告の時間まで早送りまたは巻き戻します。 </td> 
    <td colname="col2"> 広告の時間をスキップし、広告の時間の直後の位置までシークします。 </td> 
-   <td colname="col3">selectPolicyForSeekIntoAdを使用して、（視聴済みステータスがtrueに設定された）広告の時間と、シークが終了した特定の広告に対して、別の広告ポリシーを指 <span class="codeph"> 定します</span>。 </td> 
+   <td colname="col3"><span class="codeph"> selectPolicyForSeekIntoAd</span>を使用して、広告の時間（監視ステータスがtrueに設定されている）とシークが終了した場所の特定の広告に異なる広告ポリシーを指定します。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> アプリがトリック再生（DVRモード）に入ります。 再生速度は、負の値（巻き戻し）または1より大きい値（早送り）に設定できます。 </td> 
-   <td colname="col2"> 早送りまたは巻き戻し中にすべての広告をスキップし、トリック再生の終了後に最後にスキップした時間を再生し、再生が終了したら、ユーザーが選択したトリック再生位置までスキップします。 </td> 
-   <td colname="col3">selectAdBreaksToPlayを使用して、トリック再生の終了後に、スキップされた時間のうちどれを再生するか <span class="codeph"> を選択しま</span>す。 </td> 
+   <td colname="col1"> アプリケーションがトリック再生（DVRモード）に入ります。 再生速度は、負の値（巻き戻し）または1より大きい値（早送り）にできます。 </td> 
+   <td colname="col2"> 早送りまたは巻き戻し中はすべての広告をスキップし、トリック再生終了後に、最後にスキップされた広告の時間を再生し、その時間の再生が終了したら、ユーザーが選択したトリック再生位置までスキップします。 </td> 
+   <td colname="col3"><span class="codeph"> selectAdBreaksToPlay</span>を使用して、トリック再生終了後にスキップされた広告の時間のうちどれを再生するかを選択します。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> アプリケーションが、カスタム広告マーカーを使用して挿入された広告をスキップして早送りします。 </td> 
    <td colname="col2"> ユーザーが選択したシーク位置までスキップします。 </td> 
-   <td colname="col3">詳しくは、シークスクラブバ <a href="../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md" format="dita" scope="local"> ーを現在の再生位置で表示するを参照してください</a>。 </td> 
+   <td colname="col3">詳しくは、<a href="../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md" format="dita" scope="local">シークスクラブバーに現在の再生位置を表示する</a>を参照してください。 </td> 
   </tr> 
  </tbody> 
 </table>

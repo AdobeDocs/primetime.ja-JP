@@ -1,45 +1,48 @@
 ---
-description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む1つの方法です。
-seo-description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む1つの方法です。
-seo-title: MediaPlayerへのメディアリソースの読み込み
-title: MediaPlayerへのメディアリソースの読み込み
+description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む方法の1つです。
+seo-description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む方法の1つです。
+seo-title: メディアリソースをMediaPlayerに読み込む
+title: メディアリソースをMediaPlayerに読み込む
 uuid: 8af3e8d1-359d-483c-b394-b95054f7265a
 translation-type: tm+mt
 source-git-commit: 84924d84bfa436a8807c2e8d74d1dc268d457051
+workflow-type: tm+mt
+source-wordcount: '276'
+ht-degree: 0%
 
 ---
 
 
-# MediaPlayerへのメディアリソースの読み込み{#load-a-media-resource-in-the-mediaplayer}
+# メディアリソースをMediaPlayer{#load-a-media-resource-in-the-mediaplayer}に読み込む
 
-MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む1つの方法です。
+MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む方法の1つです。
 
-1. オブジェクト `MediaPlayer` の再生可能な項目を、再生する新しいリソースで設定します。
+1. `MediaPlayer`オブジェクトの再生可能な項目を、再生する新しいリソースで設定します。
 
-   既存のインスタンスを呼び出して渡すことで、既存のMediaPlayerの現在再生可能な `MediaPlayer.replaceCurrentResource` 項目を置き換 `MediaResource` えます。
+   `MediaPlayer.replaceCurrentResource`を呼び出し、既存の`MediaResource`インスタンスを渡すことで、既存のMediaPlayerの現在再生可能なアイテムを置き換えます。
 
 1. 少なくとも次の変更を確認します。
 
    * INITIALIZED
    * PREPARED
-   * エラー
+   * ERROR
 
-      これらのイベントを通じて、メディ `MediaPlayer` アリソースが正常に読み込まれたことをオブジェクトがアプリケーションに通知できます。
+      これらのイベントを通じて、`MediaPlayer`オブジェクトは、メディアリソースが正常に読み込まれたことをアプリケーションに通知できます。
 
-1. メディアプレイヤーの状態がINITIALIZEDに変わった場合、 `MediaPlayer.prepareToPlay`
+1. メディアプレイヤーの状態がINITIALIZEDに変わった場合は、`MediaPlayer.prepareToPlay`を呼び出すことができます
 
-   INITIALIZED状態は、メディアが正常に読み込まれたことを示します。 広告の解 `prepareToPlay` 決と配置プロセス（ある場合）を開始に呼び出します。
+   INITIALIZED状態は、メディアが正常に読み込まれたことを示します。 `prepareToPlay`開始を呼び出すと、広告解決と配置プロセスが発生します（存在する場合）。
 
-1. メディアプレイヤーのステータスがPREPAREDに変わると、メディアストリームは正常に読み込まれ、再生の準備が整います。
+1. メディアプレイヤーのステータスがPREPAREDに変わった場合、メディアストリームの読み込みが成功し、再生の準備が整います。
 
-   メディアストリームが読み込まれると、が作 `MediaPlayerItem` 成されます。
+   メディアストリームが読み込まれると、`MediaPlayerItem`が作成されます。
 
-障害が発生した場合、MediaPlayerはERRORステータスに切り替わります。 また、コールバックにイベントを送出することで、アプリケ `STATUS_CHANGED` ーションに通 `MediaPlayerStatusChangeEvent` 知します。
+エラーが発生した場合は、MediaPlayerのステータスがERRORに切り替わります。 また、`STATUS_CHANGED`イベントを`MediaPlayerStatusChangeEvent`コールバックにディスパッチすることで、アプリケーションに通知します。
 
-これは、次のいくつかのパラメータを渡します。
-* 値を持 `type` つstring型のパラメータ `ERROR`ー。
+これは、次のいくつかのパラメーターを渡します。
+* 値`ERROR`を持つタイプ文字列の`type`パラメータ。
 
-* エラー `MediaError` 情報に関する診断情報を含む通知を取得するために使用できるイベント。
+* エラーイベントに関する診断情報を含む通知を取得するために使用できる`MediaError`パラメーター。
 
 
 <!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->

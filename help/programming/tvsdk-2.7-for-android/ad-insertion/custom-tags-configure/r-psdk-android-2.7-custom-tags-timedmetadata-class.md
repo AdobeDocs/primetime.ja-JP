@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 時間指定メタデータクラス {#timed-metadata-class}
+# 時間指定メタデータクラス{#timed-metadata-class}
 
 TVSDKがプレイリスト/マニフェスト内にサブスクライブされたタグを検出すると、プレイヤーは自動的にそのタグを処理し、TimedMetadataオブジェクトの形式で公開しようとします。
 
@@ -29,29 +29,29 @@ TVSDKがプレイリスト/マニフェスト内にサブスクライブされ�
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> id </span> </td> 
+   <td colname="col1"> <span class="codeph"> id  </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> <p>時間指定メタデータを表す一意の識別子です。 </p> <p>この値は通常、キュー/タグID属性から抽出されます。 それ以外の場合は、一意のランダム値が提供されます。 getIdを使用 <span class="codeph"> し </span>ます。 </p> </td> 
+   <td colname="col2"> <p>時間指定メタデータを表す一意の識別子です。 </p> <p>この値は通常、キュー/タグID属性から抽出されます。 それ以外の場合は、一意のランダム値が提供されます。 <span class="codeph"> getId </span>を使用します。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> metadata </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadata  </span> </td> 
    <td colname="col02"> メタデータ </td> 
-   <td colname="col2"> <p>プレイリスト/マニフェストカスタムタグから処理/抽出された情報。 getMetadataを使用 <span class="codeph"> し </span>ます。 </p> </td> 
+   <td colname="col2"> <p>プレイリスト/マニフェストカスタムタグから処理/抽出された情報。 <span class="codeph"> getMetadata </span>を使用します。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> name </span> </td> 
    <td colname="col02"> 文字列 </td> 
-   <td colname="col2"> <p>時間指定メタデータの名前。 typeが <span class="codeph"> TAGの場合、値はキュー/タグ名を表し </span>ます。 typeが <span class="codeph"> ID3の場合 </span>はnullです。 getNameを使用 <span class="codeph"> し </span>ます。 </p> </td> 
+   <td colname="col2"> <p>時間指定メタデータの名前。 タイプが<span class="codeph"> TAG </span>の場合、値はキュー/タグ名を表します。 型が<span class="codeph"> ID3 </span>の場合、値はnullです。 <span class="codeph"> getName </span>を使用します。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> time </span> </td> 
+   <td colname="col1"> <span class="codeph"> time  </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> <p>この時間指定メタデータがストリーム内で存在するメインコンテンツの開始に対する位置（ミリ秒）。 getTimeを使用 <span class="codeph"> し </span>ます。 </p> </td> 
+   <td colname="col2"> <p>この時間指定メタデータがストリーム内で存在するメインコンテンツの開始に対する位置（ミリ秒）。 <span class="codeph"> getTime </span>を使用します。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> type </span> </td> 
+   <td colname="col1"> <span class="codeph"> type  </span> </td> 
    <td colname="col02"> タイプ </td> 
-   <td colname="col2"> <p>時間指定メタデータのタイプ。 getTypeを使用 <span class="codeph"> し </span>ます。 
+   <td colname="col2"> <p>時間指定メタデータのタイプ。 <span class="codeph"> getType </span>を使用します。 
      <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
       <li id="li_739D30561BFB4D9B97DF212E4880BA2C">TAG — 時間指定メタデータがプレイリスト/マニフェスト内のタグから作成されたことを示します。 </li> 
       <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 — 時間指定メタデータがメディアストリームのID3タグから作成されたことを示します。 </li> 
@@ -87,31 +87,31 @@ TVSDKがプレイリスト/マニフェスト内にサブスクライブされ�
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public enum Type {TAG, ID3} </span> </td> 
+   <td colname="col1"> <span class="codeph"> public enum Type {TAG, ID3}  </span> </td> 
    <td colname="col2"> <p>時間指定メタデータに使用できるタイプ。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public TimedMetadata(Type type, long time, long id, String name, Metadata metadata); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public TimedMetadata(Type type, long time, long id, String name, Metadata metadata);  </span> </td> 
    <td colname="col2"> <p>デフォルトコンストラクター（timeはローカルストリーム時間です）。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public long getTime(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public long getTime();  </span> </td> 
    <td colname="col2"> <p>このメタデータが挿入されるストリーム内での位置を、メインコンテンツの開始を基準とした時間で表します。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public Metadata getMetadata(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public Metadata getMetadata();  </span> </td> 
    <td colname="col2"> <p>ストリームに挿入されるメタデータ。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public Type getType(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public Type getType();  </span> </td> 
    <td colname="col2"> <p>時間指定メタデータのタイプを返します。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public long getId(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public long getId();  </span> </td> 
    <td colname="col2"> <p>キュー/タグ属性から抽出されたIDを返します。 それ以外の場合は、一意のランダム値が提供されます。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public String getName(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public String getName();  </span> </td> 
    <td colname="col2"> <p>キューの名前を返します。通常はHLSタグ名です。 </p> </td> 
   </tr> 
  </tbody> 

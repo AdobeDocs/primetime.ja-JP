@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# クローズドキャプションの表示を制御する{#control-closed-caption-visibility}
+# クローズドキャプションの表示/非表示を制御{#control-closed-caption-visibility}
 
 クローズドキャプションの表示を制御できます。 表示がオンの場合、現在選択されているトラックが表示されます。 現在のトラックを変更しても、表示設定は変わりません。
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->クローズドキャプションの表示値は、で定義し `ClosedCaptionsVisibility`ます。
+>クローズドキャプションの表示値は`ClosedCaptionsVisibility`で定義されています。
 >
 >
 ```
@@ -31,14 +31,14 @@ ht-degree: 0%
 >public static const VISIBLE:String = visible;
 >```
 
-1. 少なくともPREPAREDステータス `MediaPlayer` になるまで待ちます(有効な状態を [待つを参照](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md))。
-1. クローズドキャプションの現在の表示設定を取得するには、のgetterメソッドを使用します。このメソッドは、表示値 `MediaPlayer`を返します。
+1. `MediaPlayer`がPREPAREDステータスを少なくとも持つまで待ちます（[有効な状態を待つ](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)を参照）。
+1. クローズドキャプションの現在の表示設定を取得するには、`MediaPlayer`のgetterメソッドを使用します。このメソッドは、表示値を返します。
 
    ```
    public function get ccVisibility():String
    ```
 
-1. クローズドキャプションの表示/非表示を変更するには、setterメソッドを使用して、表示値をから渡し `ClosedCaptionsVisibility`ます。
+1. クローズドキャプションの表示/非表示を変更するには、setterメソッドを使用して、`ClosedCaptionsVisibility`から表示値を渡します。
 
    例：
 

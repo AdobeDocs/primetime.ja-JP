@@ -1,22 +1,25 @@
 ---
-description: ブラウザーTVSDKは、請求指標をXML形式でアドビに送信します。
-seo-description: ブラウザーTVSDKは、請求指標をXML形式でアドビに送信します。
+description: ブラウザーTVSDKは、請求指標をXML形式でAdobeに送信します。
+seo-description: ブラウザーTVSDKは、請求指標をXML形式でAdobeに送信します。
 seo-title: 請求指標の送信
 title: 請求指標の送信
 uuid: ed2638d2-7894-4840-b31a-51e48e0a3f49
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 0%
 
 ---
 
 
-# 請求指標の送信{#transmit-billing-metrics}
+# 請求指標を送信{#transmit-billing-metrics}
 
-ブラウザーTVSDKは、請求指標をXML形式でアドビに送信します。
+ブラウザーTVSDKは、請求指標をXML形式でAdobeに送信します。
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-ネットワークキャプチャツールを使用して、Browser TVSDKがアドビに送信する統計を監視する場合は、次のようなユニットが表示されます。
+ネットワークキャプチャツールを使用して、Browser TVSDKがAdobeに送信する統計を監視する場合は、次のようなユニットが表示されます。
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -40,4 +43,4 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 </request>
 ```
 
-Booleanプロパティ、お `drmProtected`よび `adsEnabled`Trueの `midrollEnabled` 場合にのみ表示されます。
+ブール値のプロパティ`drmProtected`、`adsEnabled`、および`midrollEnabled`は、trueの場合にのみ表示されます。

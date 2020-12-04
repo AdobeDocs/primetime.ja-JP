@@ -6,15 +6,18 @@ title: Loggingクラス
 uuid: 8b07472e-b529-4c35-b49b-a499debfcff0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
 
-# Loggingクラス{#logging-classes}
+# Logging classes{#logging-classes}
 
 ログをカスタマイズできるクラスです。
 
-パッケージ： [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/package-summary.html)
+パッケージ：[com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/package-summary.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_389797D3CEF14EA2862E0B20C6E6CC41"> 
  <thead> 
@@ -38,7 +41,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> ロガー</a> </span></td> 
-   <td colname="2">インターフェイス。 フレーズのカスタムロガーを実装するために必要なメソ <code>primetime-sdk-name</code> ッド。 </td> 
+   <td colname="2">インターフェイス。 <code>primetime-sdk-name</code> Phraseのカスタムロガーを実装するのに必要なメソッド。 </td> 
   </tr> 
  </tbody>
 </table>

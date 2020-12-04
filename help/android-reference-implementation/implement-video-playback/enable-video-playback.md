@@ -6,15 +6,18 @@ title: ビデオ再生の有効化
 uuid: ddc0defa-c40f-4ee6-a69f-d5eeca6c2fce
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 0%
 
 ---
 
 
-# ビデオ再生の有効化 {#enable-video-playback}
+# ビデオ再生を有効にする{#enable-video-playback}
 
 HLSストリームの設定と再生操作を処理するPlaybackManagerを作成します。 その他の設定は不要です。
 
-1. 次のコードがに存在することを確認して、メディアプレイヤーオブジェクトを作成しま [!DNL PlayerFragment.java]す。
+1. [!DNL PlayerFragment.java]に次のコードが存在することを確認して、メディアプレイヤーオブジェクトを作成します。
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -24,20 +27,20 @@ HLSストリームの設定と再生操作を処理するPlaybackManagerを作�
 
    <!-- I've duplicated this information. It also exists in the PlayerFragment section, just before the Feature manager section. I figured that I should have it here as well, in case they jump directly to this section.-->
 
-1. 次の手順で再生マネージャーを作成しま `ManagerFactory`す。
+1. `ManagerFactory`を使用して再生マネージャーを作成します。
 
    ```java
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
    ```
 
-1. でを実装し `PlaybackManagerEventListener` て、再 `PlayerFragment` 生イベントを処理します。
+1. `PlaybackManagerEventListener`を`PlayerFragment`に実装して、再生イベントを処理します。
 
    ```java
    private final PlaybackManagerEventListener playbackManagerEventListener =  
      new PlaybackManagerEventListener() 
    ```
 
-1. 次の場所にイベントリスナーを登録しま `PlayerFragment`す。
+1. イベントリスナーを`PlayerFragment`に登録します。
 
    ```
    playbackManager.addEventListener(playbackManagerEventListener);
@@ -49,7 +52,7 @@ HLSストリームの設定と再生操作を処理するPlaybackManagerを作�
    playbackManager.setupVideo(url, adsManager); 
    ```
 
-1. コントロールバーの操作は、次の場所で設定しま `PlayerFragment`す。
+1. `PlayerFragment`のコントロールバー操作を設定します。
 
    ```
    controlBar.pressPlay() { 
@@ -57,7 +60,7 @@ HLSストリームの設定と再生操作を処理するPlaybackManagerを作�
    }
    ```
 
-## 関連するAPIドキュメント {#related-api-documentation}
+## 関連するAPIドキュメント{#related-api-documentation}
 
 * [PlaybackManagerクラス](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.html)
 * [PlaybackManagerEventListener](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.PlaybackManagerEventListener.html)

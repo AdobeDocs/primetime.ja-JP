@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# iOSアプリケーションの許可リスト {#allowlist-your-ios-application}
+# iOSアプリケーションの許可リスト{#allowlist-your-ios-application}
 
 iOSアプリは、AdobeのMachotoolsツールを使用して許可リストできます。
 
@@ -33,11 +33,11 @@ iOSアプリを送信する前に、署名してAppleに公開する必要があ
 
 再署名のため、Apple App Storeに送信する前に生成した許可リスト情報は使用できません。
 
-この送信ポリシーを使用するために、Adobeは、iOSアプリケーションにダイジェスト値を作成し、この値に署名し、iOSアプリケーションにこの値を挿入するための指示を行う `machotools` ツールを作成しました。 iOSアプリに指紋を付けた後、アプリをApple App Storeに送信できます。 ユーザーがApp Storeからアプリを実行すると、Primetime DRMはアプリケーション指紋の実行時計算を実行し、以前にアプリケーションに挿入された要約値で確認します。 指紋が一致した場合、アプリが許可されていることが確認され、保護されたコンテンツの再生が許可されます。
+この送信ポリシーを使用するために、AdobeはiOSアプリケーションにダイジェスト値を作成し、この値に署名し、iOSアプリケーションにこの値を挿入するための`machotools`ツールを作成しました。 iOSアプリに指紋を付けた後、アプリをApple App Storeに送信できます。 ユーザーがApp Storeからアプリを実行すると、Primetime DRMはアプリケーション指紋の実行時計算を実行し、以前にアプリケーションに挿入された要約値で確認します。 指紋が一致した場合、アプリが許可されていることが確認され、保護されたコンテンツの再生が許可されます。
 
-Adobe `machotools` ツールは、iOS TVSDK SDKの[!DNL [...]/tools/DRM]フォルダーに置き換えます。
+Adobe`machotools`ツールは、iOS TVSDK SDKの[!DNL [...に含まれています。]/tools/DRM]フォルダー。
 
-使用する手順 `machotools`:
+`machotools`を使用するには：
 
 1. キーペアを生成します。
 
@@ -83,7 +83,7 @@ Adobe `machotools` ツールは、iOS TVSDK SDKの[!DNL [...]/tools/DRM]フォ�
    自己署名証明書を使用してiOSアプリに署名できます。
 
 1. PFXファイルとパスワードの場所を更新します。
-1. Xcodeでアプリケーションを構築する前に、 **[!UICONTROL Build Phases]** /に移動し、次のコマンド **[!UICONTROL Run Script]** を実行スクリプトに追加します。
+1. Xcodeでアプリケーションを構築する前に、**[!UICONTROL Build Phases]** > **[!UICONTROL Run Script]**&#x200B;に移動し、実行スクリプトに次のコマンドを追加します。
 
    ```shell
    mkdir -p "${PROJECT_DIR}/generatedRes" "${PROJECT_DIR}/machotools" sign  
@@ -93,14 +93,14 @@ Adobe `machotools` ツールは、iOS TVSDK SDKの[!DNL [...]/tools/DRM]フォ�
      -pass PASSWORD
    ```
 
-1. を実行 [!DNL machotools] して、アプリのPublisher IDハッシュ値を生成します。
+1. [!DNL machotools]を実行して、アプリのPublisher IDハッシュ値を生成します。
 
    ```shell
    ./machotools dumpMachoSignature -in ${PROJECT_DIR}/generatedRes/AAXSAppDigest.digest
    ```
 
 1. 新しいDRMポリシーを作成するか、既存のポリシーを更新して、返された発行者IDハッシュ値を含めます。
-1. を使用して、新しいDRMポリシーを作成し（既存のポリシーを更新）、返されたPublisher IDハッシュ値、オプションのアプリID、最小および最大バージョンの属性を含めた [!DNL AdobePolicyManager.jar][!DNL flashaccess-tools.properties] ファイルを作成します。
+1. [!DNL AdobePolicyManager.jar]を使用して新しいDRMポリシーを作成し（既存のポリシーを更新）、返されたPublisher IDハッシュ値、オプションのアプリID、最小および最大バージョン属性を含めて、含める[!DNL flashaccess-tools.properties]ファイルを作成します。
 
    ```shell
    java -jar libs/AdobePolicyManager.jar new app_allowlist.pol

@@ -1,5 +1,5 @@
 ---
-title: Primetime のリリースノート
+title: Primetime リリースノート
 seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
@@ -7,12 +7,12 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 33%
+ht-degree: 35%
 
 ---
 
 
-# Primetime のリリースノート
+# Primetime リリースノート
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントは、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を提供します。
 
@@ -24,13 +24,13 @@ Adobe Primetimeリリースノートへようこそ。 左側のナビゲーシ�
 
 このリリースでは、Primetime Referenceアプリケーションのグレード版をバージョン5.6.4に更新することに重点を置いています。
 
-Androidの現在のリリースバージョンについて詳しくは、 [Android](../release-notes/tvsdk-3x-android.md).を参照してください。
+[Android](../release-notes/tvsdk-3x-android.md)の現在のリリースバージョンについて詳しくは、こちらを参照してください。
 
 ## TVSDK 3.12 iOSリリースノートの機能強化および修正点
 
 このリリースでは、お客様の主な問題の解決に重点を置いています。
 
-iOSの現在のリリースバージョンについて詳しくは、 [ご覧ください](../release-notes/tvsdk-3x-ios.md)。
+[iOS](../release-notes/tvsdk-3x-ios.md)の現在のリリースバージョンの詳細については、こちらを参照してください。
 
 ## 関連項目
 
@@ -41,7 +41,7 @@ iOSの現在のリリースバージョンについて詳しくは、 [ご覧く
 | [リファレンスの実装](/help/android-reference-implementation/home.md) | TVSDK を理解し、機能マネージャーを変更して、個人用プレーヤーをカスタマイズします。 |
 | [Primetime APIリファレンス](/help/reference/api-references.md) | TVSDK 関数、データ構造、および他のプログラミング構成に関する詳細な情報を提供します。 |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Digital Rights Management(DRM)の様々なユーザーシナリオの詳細を学ぶ |
-| [PrimetimeAd Insertionヘルプ](/help/dynamic-ad-insertion/home.md) | ユーザーをターゲットに設定した動的な広告をサーバーに挿入してコンテンツを収益化し、パーソナライズされた広告をオーディエンスに提供する方法について説明します。 |
+| [Primetime Ad Insertion のヘルプ](/help/dynamic-ad-insertion/home.md) | ユーザーをターゲットに設定した動的な広告をサーバーに挿入してコンテンツを収益化し、パーソナライズされた広告をオーディエンスに提供する方法について説明します。 |
 | [アーカイブ](https://helpx.adobe.com/primetime/archives.html) | アーカイブされたドキュメントのPDFをダウンロードします。 |
 
 ## 役立つリソース

@@ -1,20 +1,23 @@
 ---
 description: 再生中のコンテンツの現在時間と残り時間を表示できます。
 seo-description: 再生中のコンテンツの現在時間と残り時間を表示できます。
-seo-title: 現在の時間と残り時間の表示
-title: 現在の時間と残り時間の表示
+seo-title: 現在時間と残り時間の表示
+title: 現在時間と残り時間の表示
 uuid: b96ade8b-1c81-4367-ba37-fc41a92d7cbc
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
 
 
-# 現在の時間と残り時間の表示 {#display-the-current-time-and-remaining-time}
+# 現在時間と残り時間を表示{#display-the-current-time-and-remaining-time}
 
 再生中のコンテンツの現在時間と残り時間を表示できます。
 
-1. アクティブコンテンツの現在時間と残り時間を示す表示を実装するには、次のサンプルコードを使用します。
+1. アクティブコンテンツの現在時間と残り時間を表示する表示を実装するには、次のサンプルコードを使用します。
 
    * 
 
@@ -69,7 +72,7 @@ source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
    } 
    ```
 
-1. 広告の進行状況と残りの時間を示す表示を実装するには、次のサンプルコードを使用します。
+1. 広告の進行状況と残りの時間を示す表示を実装するには、以下のサンプルコードを使用します。
 
    * 
 

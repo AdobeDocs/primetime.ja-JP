@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Timeline advertisingクラス {#timeline-advertising-classes}
+# Timeline advertising classes {#timeline-advertising-classes}
 
 タイムライン内で発生する広告に関する情報を提供するクラスです。
 
@@ -78,13 +78,14 @@ ht-degree: 0%
   <tr rowsep="1"> 
    <td colname="1"> 
     <pre>
-     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> PTContentResolverクラス</a> 、 <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a> プロトコル
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> PTContentResolverclass、</a>  
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverprotocol
     </pre> </td> 
    <td colname="2"> Adobe PrimetimeAd Decisioningプロセスの広告解決を処理するクラス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolverDelegate.html" format="html" scope="external"> PTContentResolverDelegate</a> </td> 
-   <td colname="2"> コンテンツ解決のステータスを委譲する通信にカスタムコンテンツリゾルバー(PTContentResolver <span class="codeph"></span> )が使用する必要があるメソッドを記述するプロトコル。 </td> 
+   <td colname="2"> コンテンツ解決のステータスを委譲するための通信にカスタムコンテンツリゾルバー(<span class="codeph"> PTContentResolver</span>)が使用する必要があるメソッドを記述するプロトコル。 </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Constants/PTPlacementType.html" format="html" scope="external"> PTPlacementType</a> </td> 

@@ -1,6 +1,6 @@
 ---
-title: Adobe Primetime APIリファレンス
-seo-title: Adobe Primetime APIリファレンス
+title: Adobe PrimetimeAPIリファレンス
+seo-title: Adobe PrimetimeAPIリファレンス
 description: APIを使用すると、機能的なアプリケーションや統合をすばやく簡単に作成できます。
 seo-description: APIを使用すると、機能的なアプリケーションや統合をすばやく簡単に作成できます。
 topic-tags: API-references
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Adobe Primetime APIリファレンス {#api-references}
+# Adobe PrimetimeAPIリファレンス{#api-references}
 
 + TVSDK 3.12 {#tvsdk-312}
    + [Android向けTVSDK 3.12](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)
@@ -52,7 +52,7 @@ ht-degree: 0%
    + [iOS用DRMクライアントAPI](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/index.html)
    + [DRM SDKサーバーAPI](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/)
 
-+ その他 {#miscellaneous}
++ その他{#miscellaneous}
    + [ビデオハートビートライブラリ](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/index.html)
    + [DHPK 2.0 C++](https://help.adobe.com/en_US/primetime/api/psdk/psdk_doxygen/index.html)
    + [2.4 Browser TVSDK用UIフレームワーク](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)

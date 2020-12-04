@@ -15,7 +15,7 @@ ht-degree: 0%
 
 IDベースのライセンスを使用する場合、サーバーは、ライセンスを発行する前に有効な認証トークンを確認します。
 
-認証トークンの処理について詳しくは、 [ユーザー認証](../../../protecting-content/implementing-the-license-server/processing-drm-requests.md#user-authentication) を参照してください。
+認証トークンの処理の詳細については、[ユーザー認証](../../../protecting-content/implementing-the-license-server/processing-drm-requests.md#user-authentication)を参照してください。
 
 >[!NOTE]
 >

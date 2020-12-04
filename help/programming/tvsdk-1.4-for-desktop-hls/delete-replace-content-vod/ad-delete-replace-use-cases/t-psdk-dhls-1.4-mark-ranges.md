@@ -1,18 +1,21 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: 範囲のマーク
-title: 範囲のマーク
+seo-title: 範囲をマーク
+title: 範囲をマーク
 uuid: d98efb92-701e-4ee2-b574-823c1e5d5149
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '26'
+ht-degree: 0%
 
 ---
 
 
-# 範囲のマーク{#mark-ranges}
+# 範囲をマーク{#mark-ranges}
 
-との間 `TimeRanges` をタイ `begin` ムライ `end` ンから `localTime` のマ `AdBreak` ークで示します。 その他の広告設定は無視されます。
+`localTime`内の`begin`と`end`の間の`TimeRanges`を`AdBreak`としてタイムラインからマークします。 その他の広告設定は無視されます。
 
 1. 時間範囲をマークします。
 

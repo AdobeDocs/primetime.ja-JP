@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# WidevineおよびPlayReady用コンテンツのパッケージ化 {#package-for-widevine}
+# WidevineおよびPlayReady用コンテンツのパッケージ化{#package-for-widevine}
 
 Bento4 PackagerとAdobeOffline Packagerの両方を使用して、暗号化されたDASHコンテンツを作成します。 Bento4は、暗号化されていないmp4コンテンツを入力として受け取ります。
 
-## Bento4でコンテンツをパッケージ化する{#package-your-content-with-bento}
+## Bento4{#package-your-content-with-bento}でコンテンツをパッケージ化する
 
 Bento4パッケージャーは、入力mp4が事前にフラグメント化されていることを想定しています。 Bento4 packagerの配布版には、この機能を実現するためのツールが含まれています。
 
@@ -66,13 +66,13 @@ Bento4パッケージャーは、入力mp4が事前にフラグメント化さ�
 
 where
 
-フ `--encryption-key` ラグの値は次の形式で示されま `<base16 encoded key id>:<base16 encoded encryption key>`す。
+`--encryption-key`フラグの値は`<base16 encoded key id>:<base16 encoded encryption key>`の形式です。
 
-この `--widevine-header=provider:intertrust#content_id:2a` フラグは、パッケージャーにマニフェストにpsshボックスを含めるように指示します。このTVSDKは現在、再生に必要としています。
+`--widevine-header=provider:intertrust#content_id:2a`フラグは、パッケージャーにマニフェストにpsshボックスを含めるように指示します。このSSHボックスは、現在、TVSDKが再生に必要とします。
 
-の値 `-playready-header` は、PlayReadyライセンス取得用です。
+`-playready-header`の値は、PlayReadyライセンス取得のための値です。
 
-## AdobeのOffline Packagerでコンテンツをパッケージ化する {#package-your-content-with-adobe-offline-packager}
+## AdobeのOffline Packager {#package-your-content-with-adobe-offline-packager}でコンテンツをパッケージ化する
 
 AdobeOffline Packagerは、暗号化されていないmp4コンテンツを入力として受け取ります。
 
@@ -92,7 +92,7 @@ http://pr.test.expressplay.com/playready/RightsManager.asmx
 -content_id c595f214d84dc7ecf31a8ebf1b7ddda5
 ```
 
-この場合、オフラインパッケージャーは、Widevineコンテンツ保護とPlayReadyコンテンツ保護の初期化データの両方を出力DASHコンテンツに追加します。 の値 `-key_file_path` は、base64エンコードされたキーに対して設定されます。 の値 `-playready_LA_URL` は、PlayReadyライセンス取得用です。
+この場合、オフラインパッケージャーは、Widevineコンテンツ保護とPlayReadyコンテンツ保護の初期化データの両方を出力DASHコンテンツに追加します。 `-key_file_path`の値は、base64エンコードされたキーに対する値です。 `-playready_LA_URL`の値は、PlayReadyライセンス取得のためのものです。
 
 conf_path引数は、次の値を含む設定ファイルを指します。
 

@@ -6,6 +6,9 @@ title: プリロール広告の無効化
 uuid: 2e307a58-49f2-43d6-908b-97684ad6e3d3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '45'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ return result;
 }
 ```
 
-ライブストリームのプリロールを無効にするには、SpliceOutOpportunityGeneratorのみを含めるように上記を変更します。
+ライブストリームのプリロールを無効にするには、上記を変更してSpliceOutOpportunityGeneratorのみを含めます。
 
 ```
 @inheritDoc 

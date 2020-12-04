@@ -1,35 +1,38 @@
 ---
-description: TVSDKが再生中の、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 これは、広告コンテンツに対応するコンテンツセクションが識別されるカスタムスクラブバーコントロールをアプリケーションで表示する場合に最も役立ちます。
-seo-description: TVSDKが再生中の、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 これは、広告コンテンツに対応するコンテンツセクションが識別されるカスタムスクラブバーコントロールをアプリケーションで表示する場合に最も役立ちます。
-seo-title: 再生タイムラインの確認
-title: 再生タイムラインの確認
+description: TVSDKが再生中の、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 これは、広告コンテンツに対応するコンテンツセクションを識別するカスタムスクラブバーコントロールをアプリケーションが表示する場合に最も役立ちます。
+seo-description: TVSDKが再生中の、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 これは、広告コンテンツに対応するコンテンツセクションを識別するカスタムスクラブバーコントロールをアプリケーションが表示する場合に最も役立ちます。
+seo-title: 再生タイムラインのInspect
+title: 再生タイムラインのInspect
 uuid: d5d68684-d658-44bc-bfff-952b7946c7fd
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '285'
+ht-degree: 0%
 
 ---
 
 
-# 再生タイムラインの確認 {#inspect-the-playback-timeline}
+# 再生タイムラインのInspect{#inspect-the-playback-timeline}
 
-TVSDKが再生中の、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 これは、広告コンテンツに対応するコンテンツセクションが識別されるカスタムスクラブバーコントロールをアプリケーションで表示する場合に最も役立ちます。
+TVSDKが再生中の、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 これは、広告コンテンツに対応するコンテンツセクションを識別するカスタムスクラブバーコントロールをアプリケーションが表示する場合に最も役立ちます。
 
-次のスクリーンショットに示す実装例を示します。  ![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
+以下のスクリーンショットに示す実装例を示します。  ![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
 
-1. メソッドを使 `Timeline` 用して、内のオブジ `MediaPlayer` ェクトにアクセ `getTimeline()` スします。
+1. `getTimeline()`メソッドを使用して、`MediaPlayer`の`Timeline`オブジェクトにアクセスします。
 
-   このク `Timeline` ラスは、インスタンスによって現在読み込まれているメディア項目に関連付けられているタイムラインのコンテンツに関連する情報をカプセル化 `MediaPlayer` します。 このク `Timeline` ラスは、基になるタイムラインの読み取り専用ビューへのアクセスを提供します。 このク `Timeline` ラスは、オブジェクトのリストを介してイテレータを提供するgetterメソッドを提供 `TimelineMarker` します。
+   `Timeline`クラスは、`MediaPlayer`インスタンスによって現在読み込まれているメディア項目に関連付けられているタイムラインのコンテンツに関連する情報をカプセル化します。 `Timeline`クラスは、基になるタイムラインの読み取り専用表示へのアクセスを提供します。 `Timeline`クラスは、`TimelineMarker`オブジェクトのリストを介してイテレーターを提供するgetterメソッドを提供します。
 
-1. のリストを繰り返し処理し、返さ `TimelineMarkers` れた情報を使用してタイムラインを実装します。
+1. `TimelineMarkers`のリストを繰り返し処理し、返された情報を使用してタイムラインを実装します。
 
        &#39;TimelineMarker&#39;オブジェクトには、次の2つの情報が含まれます。
    
    * タイムライン上のマーカーの位置（ミリ秒）
    * タイムライン上のマーカーの時間（ミリ秒）
 
-1. インスタンスでイ `MediaPlayerEvent.TIMELINE_UPDATED` ベントをリッスン `MediaPlayer` し、コールバックを実装 `TimelineUpdatedEventListener.onTimelineUpdated()` します。
+1. `MediaPlayerEvent.TIMELINE_UPDATED`イベントを`MediaPlayer`インスタンスでリッスンし、`TimelineUpdatedEventListener.onTimelineUpdated()`コールバックを実装します。
 
-   このオブ `Timeline` ジェクトは、リスナーを呼び出すことで、再生タイムラインで発生する可能性のある変更をアプリケーションに通知で `OnTimelineUpdated` きます。
+   `Timeline`オブジェクトは、`OnTimelineUpdated`リスナーを呼び出すことで、再生タイムラインで発生する可能性がある変更をアプリケーションに知らせることができます。
 
 ```java
 // access the timeline object 

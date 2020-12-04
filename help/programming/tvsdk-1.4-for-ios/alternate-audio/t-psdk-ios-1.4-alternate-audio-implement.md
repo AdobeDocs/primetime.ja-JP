@@ -6,6 +6,9 @@ title: 代替オーディオトラックへのアクセス
 uuid: 77e39633-bf17-4a06-a2a1-93fdaadedd17
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
@@ -14,10 +17,10 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 遅延バインディングオーディオは、PTMediaPlayerを使用して、M3U8 HLSプレイリストで指定され、複数の代替オーディオストリームを含むことができるビデオを再生します。
 
-1. MediaPlayerが少なくともステータスになるまで待ち `PTMediaPlayerStatusReady` ます。
+1. MediaPlayerが`PTMediaPlayerStatusReady`ステータス以上になるまで待ちます。
 1. このイベントをリッスンします。
 
-   通知 `PTMediaPlayerItemMediaSelectionOptionsAvailable`:オーディオトラックの初期リストを使用できます。
+   通知`PTMediaPlayerItemMediaSelectionOptionsAvailable`:オーディオトラックの初期リストを使用できます。
 
    ```
    [[NSNotificationCenter defaultCenter] addObserver:self 
@@ -26,7 +29,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
         object:self.player];
    ```
 
-1. 使用可能なオーディオトラックをインスタンスから取 `PTMediaPlayerItem` 得します。
+1. `PTMediaPlayerItem`インスタンスから使用可能なオーディオトラックを取得します。
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -36,4 +39,4 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    ```
 
 1. （オプション）使用可能なトラックをユーザーに表示します。
-1. 選択したオーディオトラックをインスタンスに設 `PTMediaPlayerItem` 定します。
+1. 選択したオーディオトラックを`PTMediaPlayerItem`インスタンスに設定します。

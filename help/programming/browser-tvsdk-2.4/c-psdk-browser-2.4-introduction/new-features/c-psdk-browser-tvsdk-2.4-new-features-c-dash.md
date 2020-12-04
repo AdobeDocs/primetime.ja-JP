@@ -26,7 +26,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->以下の機能マトリクスの表で、  ![](assets/supported15.png)
+>以下の機能マトリクステーブルに![](assets/supported15.png)
 >は、この機能が現在のリリースでサポートされていることを意味します。
 
 次の機能がサポートされています。
@@ -82,7 +82,7 @@ ht-degree: 0%
 
  -->
 
-## DASH統合 {#dash-integrations}
+## DASH統合{#dash-integrations}
 
 | カテゴリ | コンテンツタイプ | 機能 | HTML5 FF、IE、Chrome、Android Chrome |
 |---|---|---|---|
@@ -115,7 +115,7 @@ ht-degree: 0%
 | Ad Insertion | VOD + Live | VMAP 1.0 | VODのみ |
 | Ad Insertion | VOD + Live | CRS v3.1 | VODのみ |
 
-## DASHコンテンツ保護機能 {#dash-content-protection}
+## DASHコンテンツ保護機能{#dash-content-protection}
 
 <table id="table_hrb_p2g_xx">  
  <thead> 
@@ -158,7 +158,7 @@ ht-degree: 0%
  </tbody> 
 </table>
 
-## DASH高度な再生機能 {#dash-advanced-playback}
+## DASH高度な再生機能{#dash-advanced-playback}
 
 | カテゴリ | コンテンツタイプ | 機能 | HTML5、FF、IE、Chrome、Android Chrome |
 |---|---|---|---|
@@ -172,7 +172,7 @@ ht-degree: 0%
 | 再生 | VOD + Live | 請求 | ![](assets/supported15.png) |
 | 再生 | VOD + Live | Browserify | ![](assets/supported15.png) |
 
-## DASHコア再生機能 {#dash-core-playback}
+## DASHコア再生機能{#dash-core-playback}
 
 | カテゴリ | コンテンツタイプ | 機能 | HTML5 FF、IE、Chrome、Android Chrome |
 |---|---|---|---|

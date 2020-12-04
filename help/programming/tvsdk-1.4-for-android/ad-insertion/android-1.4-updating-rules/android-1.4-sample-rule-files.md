@@ -1,22 +1,25 @@
 ---
-description: AdobeTVSDKConfig.jsonでは、特定のゾーンのルールとデフォルトのルールを指定できます。
-seo-description: AdobeTVSDKConfig.jsonでは、特定のゾーンのルールとデフォルトのルールを指定できます。
+description: AdobeTVSDKConfig.jsonでは、特定のゾーンのルールと同様に、デフォルトのルールを指定できます。
+seo-description: AdobeTVSDKConfig.jsonでは、特定のゾーンのルールと同様に、デフォルトのルールを指定できます。
 seo-title: クリエイティブ選択ルールの例
 title: クリエイティブ選択ルールの例
 uuid: 7b4b4a76-f813-4f6c-ac41-36ca08bb8173
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 
 # クリエイティブ選択ルールの例{#sample-creative-selection-rules}
 
-では、デフ `AdobeTVSDKConfig.json` ォルトのルールと、特定のゾーンのルールを指定できます。
+`AdobeTVSDKConfig.json`では、既定の規則と特定のゾーンの規則を指定できます。
 
-## デフォルトルールの例 {#section_xy4_3fx_hz}
+## デフォルトのルールの例{#section_xy4_3fx_hz}
 
-次に、デフォルトのルールのみを定 `AdobeTVSDKConfig.json` 義するファイルの例を示します。
+次の例は、デフォルトのルールのみを定義する`AdobeTVSDKConfig.json`ファイルの例です。
 
 ```
 {
@@ -64,9 +67,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 }
 ```
 
-## 追加のゾーン・ルールを含むデフォルト・ルールの例 {#section_ocv_3fx_hz}
+## 追加のゾーン規則{#section_ocv_3fx_hz}を含むデフォルトの規則の例
 
-次の例は、デフォルトの規則 [!DNL AdobeTVSDKConfig.json] を定義するファイルの例と、特定のゾーンID(この場合はzone **&quot;1234&quot;**)の追加の規則を示しています。
+次の例は、デフォルトの規則を定義する[!DNL AdobeTVSDKConfig.json]ファイルの例で、特定のゾーンIDに対する追加の規則（この場合は、ゾーン&#x200B;**&quot;1234&quot;**）を示しています。
 
 ```
 {

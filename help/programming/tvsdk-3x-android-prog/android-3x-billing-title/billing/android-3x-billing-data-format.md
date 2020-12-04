@@ -1,22 +1,25 @@
 ---
-description: TVSDKは、請求指標をXML形式でアドビに送信します。
-seo-description: TVSDKは、請求指標をXML形式でアドビに送信します。
+description: TVSDKは、請求指標をXML形式でAdobeに送信します。
+seo-description: TVSDKは、請求指標をXML形式でAdobeに送信します。
 seo-title: 請求指標の送信
 title: 請求指標の送信
 uuid: c925800c-0fb7-4781-94e8-7e7ad94bb965
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '71'
+ht-degree: 0%
 
 ---
 
 
-# 請求指標の送信 {#transmit-billing-metrics}
+# 請求指標を送信{#transmit-billing-metrics}
 
-TVSDKは、請求指標をXML形式でアドビに送信します。
+TVSDKは、請求指標をXML形式でAdobeに送信します。
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-ネットワークキャプチャツールを使用してTVSDKがアドビに送信する統計を監視する場合、次のようなユニットが表示されます。
+TVSDKがAdobeに送信する統計情報を監視するためにネットワークキャプチャツールを使用する場合は、次のようなユニットが表示されます。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -40,4 +43,4 @@ TVSDKは、請求指標をXML形式でアドビに送信します。
 </request>
 ```
 
-Booleanプロパティ、お `drmProtected`よび `adsEnabled`Trueの `midrollEnabled` 場合にのみ表示されます。
+ブール値のプロパティ`drmProtected`、`adsEnabled`、および`midrollEnabled`は、trueの場合にのみ表示されます。

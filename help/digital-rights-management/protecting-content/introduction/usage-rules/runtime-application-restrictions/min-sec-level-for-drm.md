@@ -1,11 +1,14 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: DRMおよびランタイムの最小セキュリティレベル
-title: DRMおよびランタイムの最小セキュリティレベル
+seo-title: DRMおよび実行時の最小セキュリティレベル
+title: DRMおよび実行時の最小セキュリティレベル
 uuid: 0df2a285-309d-4f49-912c-7a0562637424
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '72'
+ht-degree: 0%
 
 ---
 
@@ -16,4 +19,4 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 DRM/Runtimeモジュールのデフォルトのセキュリティレベルは10000です。
 
-使用例：特定のタイプのコンテンツ（HDビデオなど）では、他のタイプよりも高いセキュリティレベルが必要になる場合があります。
+使用例：特定の種類のコンテンツ（HDビデオなど）は、他の種類よりも高いセキュリティレベルが必要になる場合があります。

@@ -13,7 +13,7 @@ ht-degree: 3%
 ---
 
 
-# WARNING通知コード{#warning-notification-codes}
+# 警告通知コード{#warning-notification-codes}
 
 この表は、WARNタイプの通知に関する詳細情報を示しています。
 
@@ -61,14 +61,14 @@ ht-degree: 3%
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204000 </span> </td> 
+   <td colname="1"><span class="codeph"> 204000  </span> </td> 
    <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_WARNING</span> </td> 
    <td colname="3"> <p>なし </p> </td> 
-   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_ERROR</span><span class="codeph"> BACKGROUND_MANIFEST_WARNING_NAME</span><span class="codeph"> DESCRIPTION</span> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> ERRORBACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
    <td colname="5"> <p> バックグラウンドマニフェストのダウンロードでエラーが発生しました。 バックグラウンドマニフェストの更新に関する問題は、TVSDKの警告としてディスパッチされ、再生が停止することはありません。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204001 </span> </td> 
+   <td colname="1"><span class="codeph"> 204001  </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_SEEK_WARNING</span> </td> 
    <td colname="3"> <p>なし </p> </td> 
    <td colname="4"><span class="codeph"> 説明</span> </td> 
@@ -82,17 +82,17 @@ ht-degree: 3%
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210000 </span> </td> 
-   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES </span> </td> 
+   <td colname="1"><span class="codeph"> 210000  </span> </td> 
+   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES  </span> </td> 
    <td colname="3"> <p>なし </p> </td> 
    <td colname="4"> なし </td> 
    <td colname="5"> 広告シグナリングモードは、カスタム範囲として定義されますが、範囲が定義されていません。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210001 </span> </td> 
-   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES </span> </td> 
+   <td colname="1"><span class="codeph"> 210001  </span> </td> 
+   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES  </span> </td> 
    <td colname="3"> <p>なし </p> </td> 
-   <td colname="4"><span class="codeph"> 説明 </span> </td> 
+   <td colname="4"><span class="codeph"> 説明  </span> </td> 
    <td colname="5"> <p> 1つ以上の時間範囲が無効で、無視または変更されます。 </p> <p> DESCRIPTIONは、無効な範囲の説明を含む文字列です。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -103,52 +103,52 @@ ht-degree: 3%
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYER_NOT_READY </span> </td> 
+   <td colname="1"><span class="codeph"> 270000  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYER_NOT_READY  </span> </td> 
    <td colname="3"> <p>なし </p> </td> 
-   <td colname="4"><span class="codeph"> 説明 </span> </td> 
+   <td colname="4"><span class="codeph"> 説明  </span> </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270001 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
+   <td colname="1"><span class="codeph"> 270001  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="3"> <p>なし </p> </td> 
    <td colname="4"> <p>なし </p> </td> 
    <td colname="5"> <p>ADがストリームに挿入されませんでした。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270002 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING </span> </td> 
-   <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
+   <td colname="1"><span class="codeph"> 270002  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING  </span> </td> 
+   <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="4"> <p>なし </p> </td> 
    <td colname="5"> <p>広告にオーディオ専用ストリームが含まれていません </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270003 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MISSING </span> </td> 
-   <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
+   <td colname="1"><span class="codeph"> 270003  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MISSING  </span> </td> 
+   <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="4"> <p>なし </p> </td> 
    <td colname="5"> <p>コンテンツの現在のビットレートに一致する広告ストリームが見つかりません。 </p> <p>  </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270005 </span> </td> 
-   <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE </span> </td> 
-   <td colname="3"><span class="codeph"> PLAYBACK_ERROR </span> </td> 
+   <td colname="1"><span class="codeph"> 270005  </span> </td> 
+   <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE  </span> </td> 
+   <td colname="3"><span class="codeph"> PLAYBACK_ERROR  </span> </td> 
    <td colname="4"> <p>なし </p> </td> 
    <td colname="5"> <p>AVAssetの作成時にエラーが発生しました。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270006 </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_警告 </span> </td> 
+   <td colname="1"><span class="codeph"> 270006  </span> </td> 
+   <td colname="2"><span class="codeph"> SITECATALYST_警告  </span> </td> 
    <td colname="3"> <p>なし </p> </td> 
-   <td colname="4"><span class="codeph"> 説明 </span> </td> 
+   <td colname="4"><span class="codeph"> 説明  </span> </td> 
    <td colname="5"> <p>警告：sitecatalyst警告の説明を参照してください。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270007 </span> </td> 
-   <td colname="2"><span class="codeph"> NETWORK_ERROR </span> </td> 
+   <td colname="1"><span class="codeph"> 270007  </span> </td> 
+   <td colname="2"><span class="codeph"> NETWORK_ERROR  </span> </td> 
    <td colname="3"> <p>なし </p> </td> 
-   <td colname="4"><span class="codeph"> URL </span> </td> 
+   <td colname="4"><span class="codeph"> URL  </span> </td> 
    <td colname="5"> <p>ネットワークからのデータ取得中にエラーが発生しました。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -171,4 +171,4 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->adIDとソース(URL)は、 `AD_ASSET` キーを持つ通知メタデータのPTAdAssetを介して取得できます。
+>adIDとソース(URL)は、`AD_ASSET`キーを持つ通知メタデータのPTAdAssetを介して取得できます。

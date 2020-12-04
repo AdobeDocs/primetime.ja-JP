@@ -28,50 +28,51 @@ MediaPlayerItemクラスのメソッドを使用すると、読み込まれたMe
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> ライブストリーム </td> 
-   <td colname="2"> <span class="codeph"> live </span> </td> 
+   <td colname="2"> <span class="codeph"> live  </span> </td> 
    <td colname="3"> ストリームがライブの場合はtrue、VODの場合はfalse。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> クローズドキャプション </td> 
-   <td colname="2"> <span class="codeph"> hasClosedCaptions </span> </td> 
+   <td colname="2"> <span class="codeph"> hasClosedCaptions  </span> </td> 
    <td colname="3"> クローズドキャプショントラックが使用可能な場合はtrue。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> closedCaptionsTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> closedCaptionsTracks  </span> </td> 
    <td colname="3"> 使用可能なクローズドキャプショントラックのリストを提供します。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack </span> </td> 
-   <td colname="3"> selectClosedCaptionsTrackで選択されたクローズドキャプショントラックを <span class="codeph"> 取得し </span>ます。 </td> 
+   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack  </span> </td> 
+   <td colname="3"> <span class="codeph"> selectClosedCaptionsTrack </span>で選択されたクローズドキャプショントラックを取得します。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> 代替オーディオ </td> 
-   <td colname="2"> <span class="codeph"> hasAlternateAudio </span> </td> 
+   <td colname="2"> <span class="codeph"> hasAlternateAudio  </span> </td> 
    <td colname="3"> <p>ストリームに代替オーディオトラックがある場合はtrue。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> audioTracks  </span> </td> 
    <td colname="3"> 使用可能な代替オーディオトラックのリストを提供します。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
+   <td colname="2"> <span class="codeph"> selectedAudioTrack  </span> </td> 
    <td colname="3"> 
     <pre>
-      selectAudioTrackで現在選択されているオーディオトラックを <span class="codeph"> 取得し </span>ます。 
+      現在選択されている、 
+     <span class="codeph"> selectAudioTrack </span>. 
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> 時間指定メタデータ </td> 
-   <td colname="2"> <span class="codeph"> hasTimedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> hasTimedMetadata  </span> </td> 
    <td colname="3"> ストリームに時間指定メタデータが関連付けられている場合はtrue。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> timedMetadata  </span> </td> 
    <td colname="3"> ストリームに関連付けられている時間指定メタデータオブジェクトのリストを提供します。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> 複数のプロファイル（ビットレート） </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> プロファイル </span> </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> プロファイル  </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -79,7 +80,7 @@ MediaPlayerItemクラスのメソッドを使用すると、読み込まれたMe
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> メディアリソース </td> 
-   <td colname="2"> <span class="codeph"> リソース </span> </td> 
+   <td colname="2"> <span class="codeph"> リソース  </span> </td> 
    <td colname="3"> この項目に関連付けられているメディアリソースを返します。 </td> 
   </tr> 
  </tbody> 

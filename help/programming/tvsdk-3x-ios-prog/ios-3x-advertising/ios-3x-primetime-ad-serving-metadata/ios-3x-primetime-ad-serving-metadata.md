@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 概要 {#primetime-ad-server-metadata-overview}
+# 概要{#primetime-ad-server-metadata-overview}
 
 TVSDKは、VODおよびライブ/リニアストリームの広告の解決と挿入をサポートしています。
 
@@ -21,18 +21,18 @@ TVSDKは、VODおよびライブ/リニアストリームの広告の解決と�
 
 ビデオコンテンツに広告を含める前に、次のメタデータ情報を提供します。
 
-* 再生する特定 `mediaID`のコンテンツを識別する。
-* 会社 `zoneID`またはWebサイトを識別するユーザー。
+* 再生する特定のコンテンツを識別する`mediaID`。
+* `zoneID`。会社またはWebサイトを識別します。
 * 割り当てられた広告サーバーのドメインを指定する広告サーバードメイン。
 * その他のターゲティングパラメーター。
 
-## Primetime広告サーバーメタデータの設定 {#section_86C4A3B2DF124770B9B7FD2511394313}
+## Primetime広告サーバーメタデータの設定{#section_86C4A3B2DF124770B9B7FD2511394313}
 
-広告サーバーに接続するために必要な `PTAuditudeMetadata` 情報をTVSDKに提供する必要があります。
+広告サーバーに接続するために必要な`PTAuditudeMetadata`情報をTVSDKに提供する必要があります。
 
 広告サーバーのメタデータを設定するには：
 
-1. PTAuditudeMetadataのインスタンスを作成し [、そのプロパティを設定します](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) 。
+1. [PTAuditudeMetadata](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html)のインスタンスを作成し、そのプロパティを設定します。
 
    ```
    PTAuditudeMetadata *adMetadata = [[PTAuditudeMetadata alloc] init];  
@@ -42,7 +42,7 @@ TVSDKは、VODおよびライブ/リニアストリームの広告の解決と�
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. を使用して、 `PTAuditudeMetadata` インスタンスを現在のメタデータのメタデータとして設定し `PTMediaPlayerItem` ま `PTAdResolvingMetadataKey`す。
+1. `PTAdResolvingMetadataKey`を使用して、`PTAuditudeMetadata`インスタンスを現在の`PTMediaPlayerItem`メタデータのメタデータとして設定します。
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 

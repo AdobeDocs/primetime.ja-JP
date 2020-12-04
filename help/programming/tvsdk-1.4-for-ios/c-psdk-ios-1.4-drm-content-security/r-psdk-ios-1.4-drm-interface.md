@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Primetime DRMインターフェイスの概要 {#primetime-drm-interface-overview}
+# Primetime DRMインターフェイスの概要{#primetime-drm-interface-overview}
 
 PrimetimeDigital Rights Management(DRM)システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 または、サードパーティのDRMソリューションを、Adobeの統合Primetime DRMソリューションの代替として使用できます。
 
@@ -39,7 +39,7 @@ TVSDKパッケージに含まれるDRMサンプルプレイヤーコードを参
 
 <!--<a id="section_F986DB1EDD6F44CD8E57419CCA0921E8"></a>-->
 
-DRMメタデータが変更されると、TVSDKは `PTMediaPlayerItemDRMMetadataChanged` 通知を発行します。 このメタデータは、クラスのほとんどすべての関数の入力として使用され `DRMManager` ます。
+DRMメタデータが変更されると、TVSDKは`PTMediaPlayerItemDRMMetadataChanged`通知を発行します。 このメタデータは、`DRMManager`クラスのほとんどすべての関数の入力として使用されます。
 
 <!--<a id="section_223DCF63BAB6438792A85352A79044CC"></a>-->
 
@@ -47,20 +47,20 @@ DRM保護されたストリームがマルチビットレート(MBR)でエンコ
 
 >[!TIP]
 >
->DRM保護されたアセットのURLをiOSアプリで参照する場合、クエリ文字列パラメーターを(MBR)設定レベルM3U8 URLに追加する `?faxs=1` 必要があります。 例：
+>DRM保護されたアセットのURLをiOSアプリで参照する場合、クエリ文字列パラメーター`?faxs=1`を(MBR)設定レベルM3U8 URLに追加する必要があります。 例：
 >
 >
 ```
 >https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 >```
 >
->`faxs=1` クエリ文字列パラメーターは、コンテンツがDRM保護されていることを伝え、それに応じてiOS TVSDKでDRM復号ワークフローをトリガーします。 また、他のプラットフォーム向けのDRM保護されたHLSアセットURLに `faxs=1` タグを追加することもできます。iOSでは必須と見なされるか、他のプラットフォームでは非操作として扱われます。
+>`faxs=1`クエリ文字列パラメーターは、コンテンツがDRM保護されていることを伝え、それに応じてiOS TVSDKでDRM復号ワークフローをトリガーします。 また、他のプラットフォーム向けのDRM保護されたHLSアセットURLに`faxs=1`タグを追加することもできます。iOSでは必須と見なされるか、他のプラットフォームでは非操作として扱われます。
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-DRMについて詳しくは、 [Adobe PrimetimeDRMのドキュメントを参照してください](https://help.adobe.com/en_US/primetime/drm)。
+DRMについて詳しくは、[Adobe PrimetimeDRMドキュメント](https://help.adobe.com/en_US/primetime/drm)を参照してください。
 
-## TSVDKアプリケーションでのPrimetime DRMの実装 {#implement-primetime-drm-in-a-tsvdk-application}
+## TSVDKアプリケーションにPrimetime DRMを実装する{#implement-primetime-drm-in-a-tsvdk-application}
 
 Primetime DRMはTVSDKに統合されているので、TVSDKアプリケーションでのコンテンツ保護の実装を簡略化できます。
 

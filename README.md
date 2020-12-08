@@ -1,16 +1,12 @@
 ---
-source-git-commit: cb347453d4a08b869842aaaaca61538095978c91
+source-git-commit: 8c828661016782f79257c11708bf7cac618853b7
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '460'
-ht-degree: 6%
+source-wordcount: '378'
+ht-degree: 7%
 
 ---
 # Contribute記事
-
-| EXL-PR | EXL | プレビュー | アクティブ化 | 公開済み | ヘルプ |
-|--- |--- |--- |--- |--- |--- |
-| [![ビルドの状態](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/lastBuild/) | [![ビルドの状態](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/lastBuild) | [プレビューURL](https://experienceleague.corp.adobe.com/docs/primetime/programming/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [ライブURL](https://experienceleague.adobe.com/docs/primetime/programming/home.html?lang=en) | [オーサリングガイド](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 ドキュメントチーム以外のAdobe社員の方々から、コミュニティからの寄付を歓迎します。
 
@@ -20,13 +16,13 @@ ht-degree: 6%
 
 ## Adobeコンテンツへの貢献について
 
-『 [Adobeドキュメント寄稿者ガイド](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)』を参照してください。
+『[Adobeドキュメント寄稿者ガイド](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)』を参照してください。
 
 貢献の方法は、自分が何者であるか、また、貢献したい変更の種類によって異なります。
 
 ### 小さな変更
 
-良い心からのマイナーアップデートを行う場合は、記事にアクセスし、その記事のGitHubソースに移動する記事の **編集** リンクをクリックします。 次に、GitHub UIを使用して更新を行います。 詳細については、『一般的な [Adobeドキュメント寄稿者ガイド](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) 』を参照してください。
+心の良さからマイナーアップデートを行う場合は、記事にアクセスし、記事のGitHubソースに移動する記事の&#x200B;**編集**&#x200B;リンクをクリックします。 次に、GitHub UIを使用して更新を行います。 詳しくは、一般的な[Adobeドキュメント寄稿者ガイド](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)を参照してください。
 
 このレポートのドキュメントやコード例に関して提出する小さな修正や説明は、Adobe利用条件でカバーされます。
 
@@ -40,13 +36,13 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Adobeの従業員からの主な変更
 
-Adobe Experience Cloudソリューションのテクニカルライター、プログラムマネージャ、または製品チームの開発者であり、お客様の職務が技術的な記事に貢献したり作成したりする場合は、プライベートリポジトリhttps://git.corp.adobe.com/AdobeDocsを使用する必要があり [ます](https://git.corp.adobe.com/AdobeDocs)。 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
+Adobe Experience Cloudソリューションのテクニカルライター、プログラムマネージャ、または製品チームの開発者で、お客様が技術記事の提供や作成を行う場合は、プライベートリポジトリ[https://git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs)を使用する必要があります。<!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## ツールとセットアップ
 
 コミュニティの寄稿者は、基本的な編集にGitHub UIを使用したり、レポのフォークを使用して大きな貢献を行ったりできます。
 
-詳しくは、『 [Adobeドキュメント寄稿者ガイド](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) 』を参照してください。
+詳しくは、『[Adobeドキュメント寄稿者ガイド](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)』を参照してください。
 
 ## マークダウンを使用してトピックをフォーマットする方法
 

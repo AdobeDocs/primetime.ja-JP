@@ -13,9 +13,9 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 3efbd1113e82c4d5f84798997b6f744daf6f508e
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2437'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 これらのすべてのケースをサポートするために、ツールはプレイヤーの発行者コードを必要としないか、使用しません。
 
-マニフェストサーバーセッションを開始すると、リクエストURLにパラメーターを設定して、デバッグ情報のログを求めることができます。 このパラメーターの異なる値を使用すると、マニフェストサーバーに指定したデバッグ情報をHTTPヘッダーで返すよう求めることもできますが、ヘッダーに含める情報の量は限られます。 Adobeから秘密鍵証明書を取得して完全なログファイルにアクセスできます。このログファイルは、マニフェストサーバーによって定期的にアーカイブサーバーに保存されます（1時間ごとなど）。 そのサーバーの資格情報を取得すると、いつでも直接アクセスできます。
+マニフェストサーバーセッションを開始すると、リクエストURLにパラメーターを設定して、デバッグ情報のログを求めることができます。 このパラメーターの異なる値を使用すると、マニフェストサーバーに指定したデバッグ情報をHTTPヘッダーで返すよう求めることもできますが、ヘッダーに含める情報の量は限られます。 Adobeから秘密鍵証明書を取得して完全なログファイルにアクセスできます。このログファイルは、マニフェストサーバーが定期的にアーカイブサーバーに保存（1時間ごとなど）されます。 そのサーバーの資格情報を取得すると、いつでも直接アクセスできます。
 
 <!-- You can also see the [server side event tracking captured in the SSAI dashboard](ssai-debugging-dashboard.md).-->
 
@@ -309,7 +309,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 
 ### TRACE_WEBVTT_RESPONSEレコード{#trace-webvtt-response-records}
 
-``of ``この``type ``ログ``responses ````manifest ``サーバー``sends ``を`` `answer` ``の``clients ``に``requests `` `for` ``WEBVTT ``キャプションに記録します。 TRACE_WEBVTT_RESPONSE &quot;を超えるフィールドは、表に示す順に表示され、`by`タブが区切られて表示されます。
+このタイプのログ応答のレコードは、マニフェストサーバーがクライアントに`WEBVTT`キャプションの要求に応答して送信します。 `TRACE_WEBVTT_RESPONSE`より後のフィールドは、表に示された順に表示され、タブで区切られます。
 
 | フィールド | タイプ | 説明 |
 |--- |--- |--- |

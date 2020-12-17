@@ -4,10 +4,10 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: fac84687085f289e984c189665bfe775337592b3
+source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 35%
+source-wordcount: '280'
+ht-degree: 34%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 35%
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントは、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を提供します。
 
-## PTAI 20.10.1の機能強化および修正点
+## PTAI 20.12.1の機能強化および修正点
 
-このリリースでは、メンテナンスの更新に焦点を当てています。
+このリリースには、断続的なクライアント接続の問題に対処するための修正プログラムが含まれています。
 
 ## TVSDK 3.12 Androidの修正点
 

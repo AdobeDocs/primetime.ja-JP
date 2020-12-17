@@ -2,7 +2,7 @@
 title: PTAI 20.12.1リリースノート
 description: PTAIリリースノートでは、2020年のPrimetimeAd Insertionの新しい問題や変更された問題、解決された問題、既知の問題について説明します。
 translation-type: tm+mt
-source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
+source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -24,7 +24,7 @@ PrimetimeAd Insertion20.12.1のリリースノートでは、2020年のPrimetime
 
 ### 以前のリリースバージョンでの機能強化および修正点
 
-#### バージョン201.11.1
+#### バージョン20.11.1
 
 **日時：2020年11月5** 日木曜日午前2時から午前05時まで東部標準時
 
@@ -32,7 +32,7 @@ PrimetimeAd Insertion20.12.1のリリースノートでは、2020年のPrimetime
 
 * メンテナンスの更新。
 
-#### バージョン201.10.2
+#### バージョン20.10.2
 
 **日時：2020年10月29** 日木曜日午前12:01から東部標準時の午前6:00まで
 
@@ -40,7 +40,7 @@ PrimetimeAd Insertion20.12.1のリリースノートでは、2020年のPrimetime
 
 * メンテナンスの更新。
 
-#### バージョン201.10.1
+#### バージョン20.10.1
 
 **日時：2020年10月13日** 火曜日午前03:00から午前07:00まで東部標準時
 

@@ -4,7 +4,7 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: d1b79fb39c0f51b6e06653caaaaa491aef7129d7
+source-git-commit: 22ed68a2aa5a85a37763186bd6802f980acfc9d8
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 34%
@@ -16,9 +16,9 @@ ht-degree: 34%
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントは、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を提供します。
 
-## PTAI 21.1.2の機能強化および修正点
+## PTAI 21.2.1の機能強化および修正点
 
-このリリースには、PrimetimeAd Insertionバックエンドmemcacheクラスターのアップグレードが含まれています。
+このリリースでは、DASH出力の最適化がサポートされています。時間ベースのノード統合。
 
 ## TVSDK 3.12 Androidの修正点
 

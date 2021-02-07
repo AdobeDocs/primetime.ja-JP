@@ -1,28 +1,36 @@
 ---
-title: PTAI 21.1.2リリースノート
+title: PTAI 21.2.1リリースノート
 description: PTAIリリースノートでは、2021年にPrimetimeAd Insertionで発生した新しい問題や変更された問題、解決された問題、既知の問題について説明します。
 translation-type: tm+mt
-source-git-commit: d1b79fb39c0f51b6e06653caaaaa491aef7129d7
+source-git-commit: 22ed68a2aa5a85a37763186bd6802f980acfc9d8
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '126'
 ht-degree: 0%
 
 ---
 
 
-# PrimetimeAd Insertion21.1.2リリースノート
+# PrimetimeAd Insertion21.2.1リリースノート
 
 PrimetimeAd Insertion21.x.xのリリースノートでは、2021年のPrimetimeAd Insertionの新しい問題や変更された問題、解決された問題、既知の問題について説明します。
 
-## PTAI 21.1.2の新機能
+## PTAI 21.2.1の新機能
+
+**2021年2月3日** 水曜日の日時：午前1時から午前04時（東部標準時）
+
+**変更点**
+
+* DASH出力の最適化のサポートを追加しました。時間ベースのノード統合。
+
+### 以前のリリースバージョンでの機能強化および修正点
+
+#### バージョン21.1.2
 
 **日時：2021年1月19** 日火曜日午前12:30 ～午前08:30東部時間
 
 **変更点**
 
 * メンテナンスの更新：PrimetimeAd Insertionバックエンドmemcacheクラスターのアップグレード。
-
-### 以前のリリースバージョンでの機能強化および修正点
 
 #### バージョン21.1.1
 

@@ -5,9 +5,9 @@ seo-title: Adobeクリエイティブの再パッケージングサービスを�
 title: Adobeクリエイティブの再パッケージングサービスを使用して、互換性のない広告を再パッケージ化する
 uuid: 56a2405d-b395-4fea-820d-343590be7c19
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,6 @@ ht-degree: 0%
 TVSDKが互換性のない広告を初めて検出したとき、プレイヤーはその広告を無視し、Primetime広告挿入バックエンドの一部であるCreative Repackaging Service(CRS)に対して、互換性のある形式に広告を再パッケージ化するよう要求します。 CRSは、広告のマルチビットレートM3U8レンディションを生成し、これらのレンディションをPrimetime Content Network(CDN)に保存します。 次回TVSDKがその広告を指す広告レスポンスを受け取ると、プレイヤーはCDNからHLS互換のM3U8バージョンを使用します。
 
 このオプション機能を有効にするには、Adobeの担当者にお問い合わせください。
-
-CRSについて詳しくは、[Creative Packaging Service(CRS)](../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md)を参照してください。
 
 ## CRS広告配信{#section_900FDDA5454143718F1EB4C9732C8E1C}の複数CDNのサポート
 

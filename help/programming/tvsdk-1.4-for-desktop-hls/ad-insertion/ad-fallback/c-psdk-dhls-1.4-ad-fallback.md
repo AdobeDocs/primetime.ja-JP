@@ -5,9 +5,9 @@ seo-title: VASTおよびVMAP広告に対する広告のフォールバック
 title: VASTおよびVMAP広告に対する広告のフォールバック
 uuid: 7b44abf9-50cf-4e39-b594-ceb52208a865
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,7 @@ ht-degree: 0%
 
 フォールバックルールが有効になっているデジタルビデオ広告サービングテンプレート(VAST)広告（またはクリエイティブ）の場合、TVSDKは、無効なメディアタイプを持つ広告を空として扱い、その場所にフォールバック広告を使用しようとします。 フォールバック動作のいくつかの側面を設定できます。
 
-VAST/デジタルビデオ複数広告プレイリスト(VMAP)の仕様では、VASTフォールバックが有効な広告に対して、空の広告は自動的にフォールバック広告の使用をトリガーするとされています。 VAST広告が空の場合、TVSDKはフォールバック広告の中でHLSメディアタイプが有効な置換広告を探します。 ラッパー内のVAST広告のメディアタイプが無効な場合、TVSDKはこの広告を空として扱います。 TVSDKが、VMAP内のインライン広告に対して同じ動作を行うかどうかを設定できます。 VAST `fallbackOnNoAd`機能について詳しくは、[デジタルビデオ広告サービングテンプレート(VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast)を参照してください。
-
-Primetime広告挿入バックエンドは、同じVAST/VMAP応答内の異なるメディアタイプから選択できるように、一連の優先順位を維持します。 この優先度リストと変更方法について詳しくは、[CRS](../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md)の概要を参照してください。
+VAST/デジタルビデオ複数広告プレイリスト(VMAP)の仕様では、VASTフォールバックが有効な広告の場合、空の広告は自動的にフォールバック広告の使用をトリガーします。 VAST広告が空の場合、TVSDKはフォールバック広告の中でHLSメディアタイプが有効な置換広告を探します。 ラッパー内のVAST広告のメディアタイプが無効な場合、TVSDKはこの広告を空として扱います。 TVSDKが、VMAP内のインライン広告に対して同じ動作を行うかどうかを設定できます。 VAST `fallbackOnNoAd`機能について詳しくは、[デジタルビデオ広告サービングテンプレート(VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast)を参照してください。
 
 ## VMAPインライン広告のフォールバック広告動作の定義{#define-fallback-ad-behavior-for-vmap-inline-ads}
 

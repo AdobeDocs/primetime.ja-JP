@@ -4,7 +4,7 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 22ed68a2aa5a85a37763186bd6802f980acfc9d8
+source-git-commit: ff723dd66ff4c576bf5c70f5fb061962d021e330
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 34%
@@ -41,7 +41,7 @@ Adobe Primetimeリリースノートへようこそ。 左側のナビゲーシ�
 | [リファレンスの実装](/help/android-reference-implementation/home.md) | TVSDK を理解し、機能マネージャーを変更して、個人用プレーヤーをカスタマイズします。 |
 | [Primetime APIリファレンス](/help/reference/api-references.md) | TVSDK 関数、データ構造、および他のプログラミング構成に関する詳細な情報を提供します。 |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Digital Rights Management(DRM)の様々なユーザーシナリオの詳細を学ぶ |
-| [Primetime Ad Insertion のヘルプ](/help/dynamic-ad-insertion/home.md) | ユーザーをターゲットに設定した動的な広告をサーバーに挿入してコンテンツを収益化し、パーソナライズされた広告をオーディエンスに提供する方法について説明します。 |
+| [Primetime Ad Insertion のヘルプ](/help/primetime-ad-insertion/home.md) | ユーザーをターゲットに設定した動的な広告をサーバーに挿入してコンテンツを収益化し、パーソナライズされた広告をオーディエンスに提供する方法について説明します。 |
 | [アーカイブ](https://helpx.adobe.com/primetime/archives.html) | アーカイブされたドキュメントのPDFをダウンロードします。 |
 
 ## 役立つリソース

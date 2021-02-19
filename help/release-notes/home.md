@@ -4,10 +4,10 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: ff723dd66ff4c576bf5c70f5fb061962d021e330
+source-git-commit: 0c0ef7249688137a67482eab902e9d188b4c661c
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 34%
+source-wordcount: '297'
+ht-degree: 32%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 34%
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントは、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を提供します。
 
-## PTAI 21.2.1の機能強化および修正点
+## PTAI 21.2.2の機能強化および修正点
 
-このリリースでは、DASH出力の最適化がサポートされています。時間ベースのノード統合。
+このリリースでは、HLSストリーム内のEXT-X-IMAGE-STREAM-INFストリーム挿入/同期のサポートが含まれています。 この機能は、サーバー側の設定を通じて有効になります。 この機能を有効にするには、テクニカルアカウント担当者にお問い合わせください。
 
 ## TVSDK 3.12 Androidの修正点
 

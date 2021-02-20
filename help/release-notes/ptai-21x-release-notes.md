@@ -2,7 +2,7 @@
 title: PTAI 21.2.2リリースノート
 description: PTAIリリースノートでは、2021年にPrimetimeAd Insertionで発生した新しい問題や変更された問題、解決された問題、既知の問題について説明します。
 translation-type: tm+mt
-source-git-commit: 61a6c039685c3c6a937e2c98ffa3baf51455507b
+source-git-commit: 8133c35bed7fc72a6c642016a2a4b69204ad8f7a
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
@@ -22,9 +22,9 @@ PrimetimeAd Insertion21.x.xのリリースノートでは、2021年のPrimetimeA
 
 * HLSストリームでのEXT-X-IMAGE-STREAM-INFストリームの挿入/同期のサポートを追加しました。 この機能は、サーバー側の設定を通じて有効になります。 この機能を有効にするには、テクニカルアカウント担当者にお問い合わせください。
 
-### 以前のリリースバージョンでの機能強化および修正点
+## 以前のリリースバージョンでの機能強化および修正点
 
-#### バージョン21.2.1
+### バージョン21.2.1
 
 **2021年2月3日** 水曜日の日時：午前1時から午前04時（東部標準時）
 
@@ -32,7 +32,7 @@ PrimetimeAd Insertion21.x.xのリリースノートでは、2021年のPrimetimeA
 
 * DASH出力の最適化のサポートを追加しました。時間ベースのノード統合。
 
-#### バージョン21.1.2
+### バージョン21.1.2
 
 **日時：2021年1月19** 日火曜日午前12:30 ～午前08:30東部時間
 
@@ -40,7 +40,7 @@ PrimetimeAd Insertion21.x.xのリリースノートでは、2021年のPrimetimeA
 
 * メンテナンスの更新：PrimetimeAd Insertionバックエンドmemcacheクラスターのアップグレード。
 
-#### バージョン21.1.1
+### バージョン21.1.1
 
 **2021年1月13日** 水曜日の日時：01:00 AMから04:00 AM東部時間
 

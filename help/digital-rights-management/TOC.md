@@ -68,7 +68,7 @@ ht-degree: 0%
    + パッケージオプション{#packaging-options}
       + [付属のPrimetime Offline Packagerの使用](cloud-quick-start/packaging-options/use-offline-packager.md)
       + [サードパーティ製エンコーダーの使用](cloud-quick-start/packaging-options/use-third-party-encoder.md)
-      + [Adobeメディアサーバを使用](cloud-quick-start/packaging-options/use-adobe-media-server.md)
+      + [Adobe Mediumサーバーを使用](cloud-quick-start/packaging-options/use-adobe-media-server.md)
    + [パッケージ化されたコンテンツのテスト](cloud-quick-start/test-packaged-content.md)
    + [エラーのトリエイジング](cloud-quick-start/triaging-errors/client-error-triaging.md)
    + カスタム認証/エンタイトルメント{#custom-auth-ent}

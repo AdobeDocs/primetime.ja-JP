@@ -1,24 +1,24 @@
 ---
-title: TVSDK 3.12 for Androidリリースノート
-seo-title: TVSDK 3.12 for Androidリリースノート
-description: Android向けTVSDK 3.12リリースノートでは、TVSDK Android 3.12の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
-seo-description: Android向けTVSDK 3.12リリースノートでは、TVSDK Android 3.12の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
+title: TVSDK 3.13 for Androidリリースノート
+seo-title: TVSDK 3.13 for Androidリリースノート
+description: Android向けTVSDK 3.13リリースノートでは、TVSDK Android 3.13の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
+seo-description: Android向けTVSDK 3.13リリースノートでは、TVSDK Android 3.13の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 33509042e32c2167fab21788042bfb2bb877c0f4
+source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
 workflow-type: tm+mt
-source-wordcount: '5418'
+source-wordcount: '5471'
 ht-degree: 0%
 
 ---
 
 
-# Android向けTVSDK 3.12リリースノート{#tvsdk-for-android-release-notes}
+# Android向けTVSDK 3.13リリースノート{#tvsdk-for-android-release-notes}
 
-Android向けTVSDK 3.12リリースノートでは、TVSDK Android 3.12の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
+Android向けTVSDK 3.13リリースノートでは、TVSDK Android 3.13の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
 
 Androidリファレンスプレイヤーは、Android TVSDKと共に、配布物のsamples/ディレクトリに含まれています。 付属のREADME.mdファイルでは、リファレンスプレイヤーの構築方法が説明されています。
 
@@ -34,6 +34,14 @@ Android向けTVSDKは、以前のバージョンと比べて多くのパフォ�
 
 サポートされる機能とサポートされない機能の包括的なセットは、リリースノートの[機能マトリクス](#feature-matrix)セクションに表示されます。
 
+## Android TVSDK 3.13
+
+FireTV 3D世代ペンダントやFire TVキューブ1世代および2世代のデバイスを含むFireTVデバイスのABRスイッチで、Widevine DRMストリームがフリーズまたは黒いフレームを表示します。
+
+この問題を解決するには、再生を開始する前に、指定したFire TVデバイスのAPI `MediaPlayer.flushVideoDecoderOnHeaderChange(true)`を設定します。 デフォルト値はfalseです。
+
+### 以前のリリースの新機能および機能強化
+
 ## Android TVSDK 3.12
 
 Primetime Referenceアプリケーションのグレードバージョンがバージョン5.6.4に更新されました。
@@ -41,8 +49,6 @@ Primetime Referenceアプリケーションのグレードバージョンがバ�
 Android Studioを使用してReference Appをセットアップして実行するには、`TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md`にあるTVSDK zipで入手可能なReadMeファイルの指示に従ってください。
 
 現在のリリースで修正されたお客様の問題のトップは、[解決された問題](#resolved-issues)のセクションで説明されています。
-
-### 以前のリリースの新機能および機能強化
 
 **Android TVSDK 3.11**
 
@@ -80,7 +86,7 @@ Android Studioを使用してReference Appをセットアップして実行す�
 
 **Android TVSDK 3.6**
 
-* **64ビット要件のためのアプリケーションの強化**  — ネイティブライブラリ `(libAVEAndroid.so)` はアップグレードされ、2つのバージョンで利用できるようになりました。既存のarmeabi（32ビット）ネイティブライブラリの場所が`/framework/Player to /framework/Player/armeabi`から変更され、追加のarm64-v8a（64ビット）ライブラリが`/framework/Player/arm64-v8a.`に導入されました
+* **64ビット要件のためのアプリケーションの強化**  — ネイティブライブラリ `(libAVEAndroid.so)` はアップグレードされ、2つのバージョンで利用できるようになりました。既存のarmeabi(32 bit)ネイティブライブラリの場所が`/framework/Player to /framework/Player/armeabi`から変更され、追加のarm64-v8a(64 bit)ライブラリが`/framework/Player/arm64-v8a.`に導入されました
 
 **バージョン3.5**
 
@@ -489,7 +495,7 @@ Android向けTVSDKは、ビデオアプリケーションに機能を追加す�
 
 * ZD#36442 — 新しい再生が行われるたびに、リモートデバッグセッションが切断され、デバッグができなくなります。
 
-   * デバッグはデフォルトで有効になっていないため、Web表示ーではデフォルトでデバッグできません。 MediaPlayer.getCustomAdView()から返されたオブジェクトでsetWebContentsDebuggingEnabled(true)を呼び出すことで、必要に応じてアプリケーションがデバッグを有効にする必要があります。
+   * デバッグはデフォルトで有効になっていないため、Web表示ーではデフォルトでデバッグはできません。 MediaPlayer.getCustomAdView()から返されたオブジェクトでsetWebContentsDebuggingEnabled(true)を呼び出すことで、必要に応じてアプリケーションがデバッグを有効にする必要があります。
 
 * ZD#33688 — ジャストインタイムのサポートと解決
 

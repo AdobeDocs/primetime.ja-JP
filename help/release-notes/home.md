@@ -4,10 +4,10 @@ seo-title: Adobe Primetimeリリースノート
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 0c0ef7249688137a67482eab902e9d188b4c661c
+source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 32%
+source-wordcount: '345'
+ht-degree: 27%
 
 ---
 
@@ -20,11 +20,13 @@ Adobe Primetimeリリースノートへようこそ。 左側のナビゲーシ�
 
 このリリースでは、HLSストリーム内のEXT-X-IMAGE-STREAM-INFストリーム挿入/同期のサポートが含まれています。 この機能は、サーバー側の設定を通じて有効になります。 この機能を有効にするには、テクニカルアカウント担当者にお問い合わせください。
 
-## TVSDK 3.12 Androidの修正点
+## TVSDK 3.13 Androidの修正点
 
-このリリースでは、Primetime Referenceアプリケーションのグレード版をバージョン5.6.4に更新することに重点を置いています。
+このリリースでは、FireTV 3世代PendantやFireTVキューブ1世代および2世代のデバイスを含むFireTVデバイスのABRスイッチで、Widevine DRMストリームのフリーズや黒いフレームの表示に関する問題を回避できます。
 
-[Android](../release-notes/tvsdk-3x-android.md)の現在のリリースバージョンについて詳しくは、こちらを参照してください。
+この問題を解決するには、再生を開始する前に、指定したFire TVデバイスのAPI `MediaPlayer.flushVideoDecoderOnHeaderChange(true)`を設定します。 デフォルト値はfalseです。
+
+詳しくは、[TVSDK for Androidリリースノート](../release-notes/tvsdk-3x-android.md)を参照してください。
 
 ## TVSDK 3.12 iOSリリースノートの機能強化および修正点
 

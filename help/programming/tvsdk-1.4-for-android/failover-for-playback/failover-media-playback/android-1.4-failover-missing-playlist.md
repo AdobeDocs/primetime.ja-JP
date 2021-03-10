@@ -1,13 +1,10 @@
 ---
 description: プレイリスト全体が見つからない場合（例えば、最上位のマニフェストファイルで指定されているM3U8ファイルがダウンロードされない場合）、TVSDKは回復を試みます。 回復できない場合は、次のステップをアプリケーションが決定します。
-seo-description: プレイリスト全体が見つからない場合（例えば、最上位のマニフェストファイルで指定されているM3U8ファイルがダウンロードされない場合）、TVSDKは回復を試みます。 回復できない場合は、次のステップをアプリケーションが決定します。
-seo-title: プレイリストのフェイルオーバーがありません
 title: プレイリストのフェイルオーバーがありません
-uuid: 91a537f3-3e69-4669-8f84-0292c19ac209
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---

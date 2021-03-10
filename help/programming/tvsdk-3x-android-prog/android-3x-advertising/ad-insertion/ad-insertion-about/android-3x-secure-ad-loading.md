@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: HTTPS経由のセキュアな広告読み込み
 title: HTTPS経由のセキュアな広告読み込み
-uuid: 18be77cc-c59b-4982-b8c1-e4451495edd2
+description: HTTPS経由のセキュアな広告読み込み
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---

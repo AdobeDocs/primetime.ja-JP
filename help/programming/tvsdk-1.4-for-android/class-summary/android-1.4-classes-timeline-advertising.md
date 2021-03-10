@@ -1,13 +1,10 @@
 ---
 description: タイムライン内で発生する広告に関する情報を提供するクラスです。
-seo-description: タイムライン内で発生する広告に関する情報を提供するクラスです。
-seo-title: Timeline advertisingクラス
 title: Timeline advertisingクラス
-uuid: 4e6ca9fb-9e68-4625-a24b-386a50333862
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---

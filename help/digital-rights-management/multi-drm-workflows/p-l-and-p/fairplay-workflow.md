@@ -1,13 +1,10 @@
 ---
 description: DRMワークフローでは、コンテンツのパッケージ化、コンテンツのライセンスの提供、および保護されたコンテンツの独自のビデオアプリケーションからの再生が行われます。 ワークフローは、各DRMソリューションに対して一般的に似ていますが、詳細にはいくつかの違いがあります。
-seo-description: DRMワークフローでは、コンテンツのパッケージ化、コンテンツのライセンスの提供、および保護されたコンテンツの独自のビデオアプリケーションからの再生が行われます。 ワークフローは、各DRMソリューションに対して一般的に似ていますが、詳細にはいくつかの違いがあります。
-seo-title: FairPlay用のMulti-DRMワークフロー
 title: FairPlay用のMulti-DRMワークフロー
-uuid: cd940a70-400c-435e-8322-55bd624164e1
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerViewオブジェクトを使用して、ビデオ表示の位置とサイズを制御できます。
-seo-description: MediaPlayerViewオブジェクトを使用して、ビデオ表示の位置とサイズを制御できます。
-seo-title: ビデオ表示の位置とサイズの制御
 title: ビデオ表示の位置とサイズの制御
-uuid: d09dbc18-1ec0-4336-bf3f-7ff6c265c443
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---

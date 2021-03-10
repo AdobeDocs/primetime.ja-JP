@@ -1,13 +1,10 @@
 ---
 description: 一時停止ボタンと再生ボタンを追加して、ビデオを一時停止または再生できます。
-seo-description: 一時停止ボタンと再生ボタンを追加して、ビデオを一時停止または再生できます。
-seo-title: ビデオの再生と一時停止
 title: ビデオの再生と一時停止
-uuid: 3778a1fb-929c-4579-a14c-561179473dea
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---

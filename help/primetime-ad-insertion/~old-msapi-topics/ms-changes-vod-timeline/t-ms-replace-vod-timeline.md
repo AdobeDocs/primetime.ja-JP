@@ -1,13 +1,10 @@
 ---
 description: 適切に設定されたpttimelineクエリパラメーターで新しい広告挿入リクエストをマニフェストサーバーに送信し、VODタイムラインを置き換えます。
-seo-description: 適切に設定されたpttimelineクエリパラメーターで新しい広告挿入リクエストをマニフェストサーバーに送信し、VODタイムラインを置き換えます。
-seo-title: VODタイムラインの置き換え
 title: VODタイムラインの置き換え
-uuid: 17a6daa3-5ee5-48fb-8981-0d183aed0fe4
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -22,7 +19,7 @@ ht-degree: 0%
 1. 必要に応じて、`enableC3`クエリパラメーターをtrueまたはfalseに設定します。
 1. VODタイムライン形式を使用して`pttimeline`パラメーターを作成します。
    1. `duration = 0`と`number_of_lots = 1`を使用して、各コンテンツブロック（チャプタ）を指定します。
-   1. 通常どおり各広告ブロックを指定しますが、`lots = 0`を設定して広告の時間を削除します。 （M3U8ファイルの）広告の時間の長さを使用するように`duration = 0`を設定します。
+   1. 通常どおり各広告ブロックを指定しますが、`lots = 0`を設定して広告の時間を削除します。 （M3U8ファイルの）広告の時間の継続時間を使用するように`duration = 0`を設定します。
 
 ## 例：VODタイムラインの置き換え
 

@@ -1,13 +1,10 @@
 ---
 description: オペレーティングシステムとアプリケーションサーバーは、Adobe PrimetimeDRMソリューションに含まれています。
-seo-description: オペレーティングシステムとアプリケーションサーバーは、Adobe PrimetimeDRMソリューションに含まれています。
-seo-title: ベンダー固有のセキュリティ情報
 title: ベンダー固有のセキュリティ情報
-uuid: 331baa42-5e19-40a5-bc74-0b1a2cb9370e
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '371'
 ht-degree: 0%
 
 ---

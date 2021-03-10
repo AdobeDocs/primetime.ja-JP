@@ -1,13 +1,10 @@
 ---
 description: ConfigProviderクラスは、メディアプレイヤーの設定を取得します。 機能マネージャーが設定情報を読み取れるように、設定インターフェイスを実装する必要があります。
-seo-description: ConfigProviderクラスは、メディアプレイヤーの設定を取得します。 機能マネージャーが設定情報を読み取れるように、設定インターフェイスを実装する必要があります。
-seo-title: ConfigProvider
 title: ConfigProvider
-uuid: 2467a617-6413-4b5d-9710-894cdc751b26
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---

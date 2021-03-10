@@ -1,13 +1,10 @@
 ---
 description: 'ファイアウォールの規則を決定する際には、次の種類のURLを考慮してください '
-seo-description: 'ファイアウォールの規則を決定する際には、次の種類のURLを考慮してください '
-seo-title: ファイアウォール規則
 title: ファイアウォール規則
-uuid: 309b35b5-8c0a-4cd7-9289-b6b035955697
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---

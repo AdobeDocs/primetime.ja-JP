@@ -1,17 +1,13 @@
 ---
 title: Primetime Offline Packager 2.xのリリース
-seo-title: Primetime Offline Packager 2.xのリリース
 description: Primetime Offline Packager 2.1および2.3.1リリースの新機能
-seo-description: Primetime Offline Packager 2.1および2.3.1リリースの新機能
-uuid: 01926a10-890d-477d-b832-e22847d957e0
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: 933a0711-846a-4bb7-bf51-b300822a93d4
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -74,7 +70,7 @@ Primetime Packagerの最新ドキュメントは、[https://help.adobe.com/en_US
 
 ### Adobe Primetimeオフラインパッケージャー2.3.1 {#adobe-primetime-offline-packager-1}
 
-1. [Oracleのサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html)からJava SEソフトウェアをダウンロードし、インストール手順に従います。
+1. [Oracleサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html)からJava SEソフトウェアをダウンロードし、インストール手順に従います。
 1. `PrimetimeOfflinePackager-2-3-1-b47-10142016.zip`という名前のAdobe PrimetimeOffline Packager 2.3.1アーカイブファイルをディスクに展開します。
 
 ### Offline Packager 2.3.1の設定{#configuring-the-offline-packager}
@@ -126,7 +122,7 @@ Clear DASH output supportが追加されました。 詳しくは、製品ドキ
 
 ### Offline Packager 2.1のインストール{#installing-offline-packager}
 
-1. [Oracleのサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html)からJava SEソフトウェアをダウンロードし、インストール手順に従います。
+1. [Oracleサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html)からJava SEソフトウェアをダウンロードし、インストール手順に従います。
 1. `Adobe Primetime - Offline Packager 2.1.0 archive file, PrimetimeOfflinePackager-2-1-0-b15-07082015.zip`をディスクに展開します。
 
 ### Offline Packager 2.1の設定{#configuring-the-offline-packager-1}

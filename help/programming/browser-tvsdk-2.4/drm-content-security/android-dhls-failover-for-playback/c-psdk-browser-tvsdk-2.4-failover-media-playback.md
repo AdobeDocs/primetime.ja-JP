@@ -1,13 +1,10 @@
 ---
 description: ライブおよびVODメディアの場合、ブラウザーTVSDKは、中解像度ビットレートに関連付けられているプレイリストをダウンロードし、プレイリストで定義されている中解像度ビットレートメディアのセグメントをダウンロードして再生します。
-seo-description: ライブおよびVODメディアの場合、ブラウザーTVSDKは、中解像度ビットレートに関連付けられているプレイリストをダウンロードし、プレイリストで定義されている中解像度ビットレートメディアのセグメントをダウンロードして再生します。
-seo-title: メディアの再生
 title: メディアの再生
-uuid: 454f84fe-8077-4f37-8e62-1d6ba0fcde27
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---

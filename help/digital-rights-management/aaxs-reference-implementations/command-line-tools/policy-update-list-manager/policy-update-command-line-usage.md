@@ -1,9 +1,9 @@
 ---
-seo-title: コマンドラインの使用
 title: コマンドラインの使用
-uuid: 1c3a450d-5d9c-4437-89dd-1bd8719268b7
+description: コマンドラインの使用
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 0%
@@ -72,7 +72,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -r policyID  </span> <span class="+ topic/ph pr-d/codeph codeph"> date  </span> reasonText  <span class="+ topic/ph pr-d/codeph codeph"> " "  </span>reasonText  <span class="+ topic/ph pr-d/codeph codeph"> " "  </span>reasonURL  <span class="+ topic/ph pr-d/codeph codeph">  </span>URL " </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">（オプション）指定した日付のポリシーIDを失効させます。 オプションで、理由コード、理由テキストおよび理由URLも指定できます。 オプションのパラメーターに値が指定されていないことを示す空の文字列""を指定します。 日付を<span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd </span>または<span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec </span>に指定します（例：2008-12-1または2008-12-1-00:00）。12月1日の午前0時は、8)。 日付が指定されていない場合は、現在の日付が使用されます。 理由コードは0以上にする必要があります。 複数の —rオプションを指定できます。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">（オプション）指定した日付のポリシーIDを失効させます。 オプションで、理由コード、理由テキストおよび理由URLも指定できます。 オプションのパラメーターに値が指定されていないことを示す空の文字列""を指定します。 日付を<span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd </span>または<span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec </span>に指定します（例：2008-12-1または2008-12-1-00:00）。12月1日の午前0時は00:008)。 日付が指定されていない場合は、現在の日付が使用されます。 理由コードは0以上にする必要があります。 複数の —rオプションを指定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-rf <span class="+ topic/ph pr-d/codeph codeph"> policyFilename </span> <span class="+ topic/ph pr-d/codeph codeph"> date </span> " <span class="+ topic/ph pr-d/codeph codeph"> reasonCode </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonText </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonURL </span>" </p> </td> 

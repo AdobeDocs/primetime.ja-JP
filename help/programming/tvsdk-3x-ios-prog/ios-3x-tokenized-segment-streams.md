@@ -1,13 +1,10 @@
 ---
 description: コンテンツ配信ネットワーク(CDN)経由で配信されるHLSストリームは、マニフェストの認証トークンと、検証用のセグメントリクエストを使用する場合があります。 これらのトークンは、URLパラメーターとして、またはcookieヘッダーとして提供できます。
-seo-description: コンテンツ配信ネットワーク(CDN)経由で配信されるHLSストリームは、マニフェストの認証トークンと、検証用のセグメントリクエストを使用する場合があります。 これらのトークンは、URLパラメーターとして、またはcookieヘッダーとして提供できます。
-seo-title: トークン化セグメントストリーム
 title: トークン化セグメントストリーム
-uuid: 62e3b858-2605-4960-b504-9010674f80ad
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---

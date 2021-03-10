@@ -1,13 +1,10 @@
 ---
-description: システムがハードウェアアシストデコードにアクセスできる場合、iFrame形式を使用する純粋なソフトウェアTVSDK実装よりもスムーズなトリック再生を実現できます。
-seo-description: システムがハードウェアアシストデコードにアクセスできる場合、iFrame形式を使用する純粋なソフトウェアTVSDK実装よりもスムーズなトリック再生を実現できます。
-seo-title: よりスムーズなトリック再生操作
+description: システムがハードウェアアシストデコードにアクセスできる場合、iFrame形式を使用する純粋なソフトウェアTVSDK実装よりも、スムーズなトリック再生を実現できます。
 title: よりスムーズなトリック再生操作
-uuid: 959d6c67-b64f-4666-8de7-54d247459fd1
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # よりスムーズなトリック再生操作{#smoother-trick-play-operations}
 
-システムがハードウェアアシストデコードにアクセスできる場合、iFrame形式を使用する純粋なソフトウェアTVSDK実装よりもスムーズなトリック再生を実現できます。
+システムがハードウェアアシストデコードにアクセスできる場合、iFrame形式を使用する純粋なソフトウェアTVSDK実装よりも、スムーズなトリック再生を実現できます。
 
 <!--<a id="section_3DBFD7A3D1C7453096D3D3885E786263"></a>-->
 

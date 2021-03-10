@@ -1,13 +1,10 @@
 ---
 description: Widevineライセンストークンインターフェイスは、実稼働およびテストサービスを提供します。
-seo-description: Widevineライセンストークンインターフェイスは、実稼働およびテストサービスを提供します。
-seo-title: Widevineライセンストークンリクエスト/レスポンス
 title: Widevineライセンストークンリクエスト/レスポンス
-uuid: a3522422-7075-49a7-bc55-137ef84ee430
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '858'
 ht-degree: 5%
 
 ---
@@ -60,7 +57,7 @@ Widevineライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> <span class="codeph"> errorFormat  </span> </td> 
-   <td> <span class="codeph"> html </span>または<span class="codeph"> json </span>です。 <p><span class="codeph"> html </span> （デフォルト）の場合、すべてのエラーのHTML表現が応答のエンティティ本体に提供されます。 <span class="codeph"> json </span>を指定した場合、JSON形式で構造化された応答が返されます。 詳しくは、<a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSONエラー</a>を参照してください。 </p> <p>応答のMIMEタイプは、成功した場合は<span class="codeph"> text/uri-リスト</span>、<span class="codeph"> html </span> error形式の場合は<span class="codeph"> text/html </span>、<span class="codeph"> application/json </span> for <span class="codeph"> json </span> error形式の場合は&lt;a9/&gt;です。 </p> </td> 
+   <td> <span class="codeph"> html </span>または<span class="codeph"> json </span>です。 <p><span class="codeph"> html </span> （デフォルト）の場合、すべてのエラーのHTML表現が応答のエンティティ本体に提供されます。 <span class="codeph"> json </span>を指定した場合、JSON形式で構造化された応答が返されます。 詳しくは、<a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSONエラー</a>を参照してください。 </p> <p>応答のMIMEタイプは、成功した場合は<span class="codeph"> text/uri-リスト</span>、<span class="codeph"> html </span> error形式の場合は<span class="codeph"> text/html </span>、<span class="codeph"> application/json </span> for <span class="codeph"> json </span> error形式の場合はです。 </p> </td> 
    <td> いいえ </td> 
   </tr> 
  </tbody> 

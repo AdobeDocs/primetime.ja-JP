@@ -1,9 +1,9 @@
 ---
-seo-title: FMRMS 1.0または1.5からAdobeアクセス2.0以降への移行
 title: FMRMS 1.0または1.5からAdobeアクセス2.0以降への移行
-uuid: 05caeb39-0c62-4053-87a9-8e89030a188d
+description: FMRMS 1.0または1.5からAdobeアクセス2.0以降への移行
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 0%
@@ -23,7 +23,7 @@ LiveCycleESからAdobeアクセスベースのサーバーにライセンス情�
 
 メタデータを変換して1.0または1.5コンテンツのライセンスを発行する場合、既存のポリシーをAdobeアクセス形式に変換して使用する必要があります。 リファレンスImplementation\Server\migration folder contains sample code for creating an Adobe Access policy based on older policies。
 
-FMRMS 1.0からAdobeアクセスに移行する場合は、V1_0PolicyConverter.javaのサンプルを参照してください。 「 `ant-f build-migration.xml build-1.0-converter` 」を実行してサンプルコードをコンパイルします(スクリプトでは、1.0ライブラリとAdobeアクセスライブラリがそれぞれ[!DNL libs/1.0]とlibs/flashaccessにある必要があります)。 converter.propertiesファイルを編集し、LiveCycleESサーバーを指すようにします。 次に、&quot; `ant -f build-migration.xml migrate-all-1.0-policies`&quot;を実行し、すべてのFMRMS 1.0ポリシーをAdobeアクセス形式に変換します。
+FMRMS 1.0からAdobeアクセスに移行する場合は、V1_0PolicyConverter.javaのサンプルを参照してください。 「`ant-f build-migration.xml build-1.0-converter`」を実行してサンプルコードをコンパイルします(スクリプトでは、1.0ライブラリとAdobeアクセスライブラリがそれぞれ[!DNL libs/1.0]とlibs/flashaccessにある必要があります)。 converter.propertiesファイルを編集し、LiveCycleESサーバーを指すようにします。 次に、&quot; `ant -f build-migration.xml migrate-all-1.0-policies`&quot;を実行し、すべてのFMRMS 1.0ポリシーをAdobeアクセス形式に変換します。
 
 FMRMS 1.5からAdobeアクセスに移行する場合は、V1_5PolicyConverter.javaのサンプルを参照してください。 「 `ant-f build-migration.xml build-1.5-converter` 」を実行してサンプルコードをコンパイルします（スクリプトでは、1.5ライブラリと3.0ライブラリがそれぞれlibs/1.5とlibs/flashaccessにある必要があります）。 converter.propertiesファイルを編集し、LiveCycleESサーバーを指すようにします。 次に、&quot; `ant -f build-migration.xml migrate-all-1.5-policies`&quot;を実行し、すべてのFMRMS 1.5ポリシーをAdobeアクセス形式に変換します。
 

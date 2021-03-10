@@ -1,13 +1,10 @@
 ---
 description: コールバック関数を使用して、コンテンツ、広告およびチャプタートラッキングの呼び出しに関するカスタムメタデータを提供できます。
-seo-description: コールバック関数を使用して、コンテンツ、広告およびチャプタートラッキングの呼び出しに関するカスタムメタデータを提供できます。
-seo-title: カスタムメタデータサポートの実装
 title: カスタムメタデータサポートの実装
-uuid: 229681f5-ff77-4321-8022-b8ccf2928fb3
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---

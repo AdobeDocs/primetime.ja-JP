@@ -1,14 +1,11 @@
 ---
 description: 現在使用可能なクローズドキャプショントラックのリストからトラックを選択できます。 これが現在のトラックになり、表示がオンの場合に表示されます。 一部のトラックは最初は使用できない場合があるので、使用可能になったことを示すイベントをリッスンします。
-seo-description: 現在使用可能なクローズドキャプショントラックのリストからトラックを選択できます。 これが現在のトラックになり、表示がオンの場合に表示されます。 一部のトラックは最初は使用できない場合があるので、使用可能になったことを示すイベントをリッスンします。
-seo-title: 使用可能なトラックの中から現在のキャプショントラックを選択
 title: 使用可能なトラックの中から現在のキャプショントラックを選択
-uuid: ee2bda5e-e398-4d09-bc5c-5a6adbf5f603
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 1%
+source-wordcount: '198'
+ht-degree: 2%
 
 ---
 

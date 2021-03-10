@@ -1,9 +1,9 @@
 ---
-seo-title: TVSDK 1.4 for Androidプログラマーガイド
 title: TVSDK 1.4 for Androidプログラマーガイド
-uuid: 1f359716-28e7-465f-bb7b-22392fc8548d
+description: TVSDK 1.4 for Androidプログラマーガイド
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '15'
 ht-degree: 0%

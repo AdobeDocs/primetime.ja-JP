@@ -1,13 +1,10 @@
 ---
 description: ABR制御値はABRControlParametersでのみ設定できますが、新しい値をいつでも作成できます。
-seo-description: ABR制御値はABRControlParametersでのみ設定できますが、新しい値をいつでも作成できます。
-seo-title: ABRControlParametersを使用した可変ビットレートの設定
 title: ABRControlParametersを使用した可変ビットレートの設定
-uuid: 99b7a463-327b-48bf-8244-e41467072b44
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---

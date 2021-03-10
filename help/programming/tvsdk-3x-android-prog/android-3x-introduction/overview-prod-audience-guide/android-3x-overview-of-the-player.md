@@ -1,13 +1,10 @@
 ---
 description: Android向けTVSDK 3.4には、プレーヤーに実装できる様々な機能が含まれています。
-seo-description: Android向けTVSDK 3.4には、プレーヤーに実装できる様々な機能が含まれています。
-seo-title: Primetime TVSDKの機能
 title: Primetime TVSDKの機能
-uuid: 6e26c09c-2858-47d1-80e8-1d7c6a468b86
 translation-type: tm+mt
-source-git-commit: ad58732842eb651514a47dd565e31e3d98a84c46
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---

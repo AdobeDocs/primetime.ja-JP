@@ -1,13 +1,10 @@
 ---
 description: HLSストリームとDASHストリームは、同じビデオの短いバーストを目的として異なるビットレートエンコーディング(プロファイル)を提供します。 ブラウザーTVSDKは、使用可能な帯域幅に基づいて、各バーストの品質レベルを選択できます。
-seo-description: HLSストリームとDASHストリームは、同じビデオの短いバーストを目的として異なるビットレートエンコーディング(プロファイル)を提供します。 ブラウザーTVSDKは、使用可能な帯域幅に基づいて、各バーストの品質レベルを選択できます。
-seo-title: ビデオ画質に関する可変ビットレート(ABR)
 title: ビデオ画質に関する可変ビットレート(ABR)
-uuid: 4c34fb7b-1bbd-4fa9-8929-d50e85a17396
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '443'
 ht-degree: 1%
 
 ---

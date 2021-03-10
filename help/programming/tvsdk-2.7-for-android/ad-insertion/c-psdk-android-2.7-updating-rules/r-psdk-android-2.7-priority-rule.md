@@ -1,14 +1,11 @@
 ---
 description: 優先度ルールは、VAST/VMAP応答からの再生用に選択される広告クリエイティブの優先度順序を定義します。
-keywords: priority rule;creative selection rules
-seo-description: 優先度ルールは、VAST/VMAP応答からの再生用に選択される広告クリエイティブの優先度順序を定義します。
-seo-title: 優先順位ルール
+keywords: 優先度ルール；クリエイティブ選択ルール
 title: 優先順位ルール
-uuid: 4ca31dc7-9c5e-400c-9111-e7b6fc11a392
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---

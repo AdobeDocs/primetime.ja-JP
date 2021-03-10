@@ -1,13 +1,10 @@
 ---
 description: AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオブジェクトに以下のビデオ再生通知を返します。
-seo-description: AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオブジェクトに以下のビデオ再生通知を返します。
-seo-title: NATIVE_ERRORビデオ再生値
 title: NATIVE_ERRORビデオ再生値
-uuid: fbc08ecd-2e28-41ad-955b-557358bccdc8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1407'
 ht-degree: 6%
 
 ---
@@ -47,7 +44,7 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
    <td colname="col3"> ファイルの終了(EOF)条件が原因で、操作を実行できません。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 1 </td> 
+   <td colname="col1"> 3 </td> 
    <td colname="col2"><span class="codeph"> DECODER_FAILED</span> </td> 
    <td colname="col3"> デコーダーが実行時に失敗しました。 </td> 
   </tr> 
@@ -427,7 +424,7 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
    <td colname="col3"> 内部データ構造にオーディオシンクがありません。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 58 </td> 
+   <td colname="col1"> 78 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> ファイルを開けません。 </td> 
   </tr> 
@@ -442,7 +439,7 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
    <td colname="col3"> ファイルから読み取れません。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 61 </td> 
+   <td colname="col1"> 81 </td> 
    <td colname="col2"><span class="codeph"> ID3PARSE_ERROR</span> </td> 
    <td colname="col3"> ID3データの解析中にエラーが発生しました。 </td> 
   </tr> 

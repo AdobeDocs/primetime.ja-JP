@@ -1,14 +1,11 @@
 ---
 description: クローズドキャプションの表示を制御できます。 表示がオンの場合、現在選択されているトラックが表示されます。 現在のトラックを変更しても、表示設定は変わりません。
-seo-description: クローズドキャプションの表示を制御できます。 表示がオンの場合、現在選択されているトラックが表示されます。 現在のトラックを変更しても、表示設定は変わりません。
-seo-title: クローズドキャプションの表示を制御する
 title: クローズドキャプションの表示を制御する
-uuid: 42913347-8158-474e-aa3c-ba4d38baba12
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 0%
+source-wordcount: '172'
+ht-degree: 1%
 
 ---
 

@@ -1,13 +1,10 @@
 ---
 description: TVSDK設定ファイル(AdobeTVSDKConfig.json)を使用して、VAST/VMAP応答で広告クリエイティブを選択するための優先順位を更新できます。 また、この設定ファイルを使用して、広告クリエイティブのソースURL変換ルールを定義することもできます。
-seo-description: TVSDK設定ファイル(AdobeTVSDKConfig.json)を使用して、VAST/VMAP応答で広告クリエイティブを選択するための優先順位を更新できます。 また、この設定ファイルを使用して、広告クリエイティブのソースURL変換ルールを定義することもできます。
-seo-title: 広告クリエイティブ選択ルールの更新
 title: 広告クリエイティブ選択ルールの更新
-uuid: 9eb4ccc2-425f-4c01-a095-f2043df4e25c
 translation-type: tm+mt
-source-git-commit: 6837c753b2f031b024ff510cda670340f346c4e1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---

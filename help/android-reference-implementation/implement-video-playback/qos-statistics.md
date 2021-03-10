@@ -1,13 +1,10 @@
 ---
 description: 必要に応じて、QoSProviderから再生とデバイスの統計情報を読み取るようにプレイヤーを設定できます。
-seo-description: 必要に応じて、QoSProviderから再生とデバイスの統計情報を読み取るようにプレイヤーを設定できます。
-seo-title: QoS再生とデバイス統計の表示
 title: QoS再生とデバイス統計の表示
-uuid: 8fc45a2f-03d4-4fa0-979b-eb816419c4f7
 translation-type: tm+mt
-source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---

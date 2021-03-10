@@ -1,13 +1,10 @@
 ---
 description: DRMソリューションをテストするには、操作している特定のDRMソリューションを処理できるビデオアプリケーションが必要です。 このプレイヤーは、Adobeが提供するサンプルプレイヤー、または独自のTVSDKベースのビデオアプリケーションにすることができます。
-seo-description: DRMソリューションをテストするには、操作している特定のDRMソリューションを処理できるビデオアプリケーションが必要です。 このプレイヤーは、Adobeが提供するサンプルプレイヤー、または独自のTVSDKベースのビデオアプリケーションにすることができます。
-seo-title: 保護されているコンテンツの再生
 title: 保護されているコンテンツの再生
-uuid: 84f73ee7-43d0-481c-a5e7-14f92169323c
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---

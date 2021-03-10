@@ -1,13 +1,10 @@
 ---
 description: コンテンツのパッケージ化は、Web上で再生するビデオコンテンツを準備するプロセスです。 パッケージ化には、生のビデオをマニフェストファイルに変換することや、オプションで、デバイスやブラウザーごとに異なるDRMソリューションを使用してコンテンツを暗号化することが含まれます。
-seo-description: コンテンツのパッケージ化は、Web上で再生するビデオコンテンツを準備するプロセスです。 パッケージ化には、生のビデオをマニフェストファイルに変換することや、オプションで、デバイスやブラウザーごとに異なるDRMソリューションを使用してコンテンツを暗号化することが含まれます。
-seo-title: コンテンツのパッケージ化
 title: コンテンツのパッケージ化
-uuid: b9bc6104-a1ea-4ea0-a0a4-af8a606e5d47
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---

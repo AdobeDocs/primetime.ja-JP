@@ -1,13 +1,10 @@
 ---
 description: 様々な広告シグナリングモードと広告メタデータの組み合わせを使用して、VODストリーム内の時間範囲をマーク、削除および置換できます。 シグナリングモードとメタデータの組み合わせが異なると、動作も異なります。
-seo-description: 様々な広告シグナリングモードと広告メタデータの組み合わせを使用して、VODストリーム内の時間範囲をマーク、削除および置換できます。 シグナリングモードとメタデータの組み合わせが異なると、動作も異なります。
-seo-title: 広告シグナリングモードと広告メタデータの組み合わせからの広告挿入および削除に対する影響
 title: 広告シグナリングモードと広告メタデータの組み合わせからの広告挿入および削除に対する影響
-uuid: c2ae8148-889d-46ae-848a-5f45d993a0e2
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '426'
 ht-degree: 0%
 
 ---

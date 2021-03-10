@@ -1,13 +1,10 @@
 ---
 description: Primetime DRMを使用すると、コンテンツの所有者と配布者は、コンテンツの配布方法と配布方法を制御し、コンテンツのライフサイクル全体を通じてエンドツーエンドの保護を提供できます。 Microsoft® Windows®、Apple® Mac OS®、Linux®およびAndroid®プラットフォームにストリーミングまたはダウンロードできるビデオファイルを暗号化し、オンラインビデオレンタルなどのビジネスモデルを適用します。 消費者は、オンラインでもオフラインでも、利便性の高い高品質コンテンツを楽しむことができます。 Primetime DRMオファーは、コンテンツ所有者や配布者が競合他社との差別化を図る新しいサービスを迅速に提供するために使用できる主な利点です。
-seo-description: Primetime DRMを使用すると、コンテンツの所有者と配布者は、コンテンツの配布方法と配布方法を制御し、コンテンツのライフサイクル全体を通じてエンドツーエンドの保護を提供できます。 Microsoft® Windows®、Apple® Mac OS®、Linux®およびAndroid®プラットフォームにストリーミングまたはダウンロードできるビデオファイルを暗号化し、オンラインビデオレンタルなどのビジネスモデルを適用します。 消費者は、オンラインでもオフラインでも、利便性の高い高品質コンテンツを楽しむことができます。 Primetime DRMオファーは、コンテンツ所有者や配布者が競合他社との差別化を図る新しいサービスを迅速に提供するために使用できる主な利点です。
-seo-title: Adobe PrimetimeDRMについて
 title: Adobe PrimetimeDRMについて
-uuid: 4c445ccb-0a8e-490f-b840-8654fcaa106c
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---

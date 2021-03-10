@@ -1,13 +1,10 @@
 ---
 description: FlashメディアRights Managementサーバー(FMRMS)1.0または1.5でパッケージ化されたコンテンツのライセンスの発行を続けるには、LiveCycleESサーバーのライセンスおよびDRMポリシーデータを、Adobe PrimetimeDRM SDKに基づくお客様の新しいサーバーに移行する必要があります。
-seo-description: FlashメディアRights Managementサーバー(FMRMS)1.0または1.5でパッケージ化されたコンテンツのライセンスの発行を続けるには、LiveCycleESサーバーのライセンスおよびDRMポリシーデータを、Adobe PrimetimeDRM SDKに基づくお客様の新しいサーバーに移行する必要があります。
-seo-title: FMRMS 1.0または1.5からAdobe PrimetimeDRM 2.0以降への移行
 title: FMRMS 1.0または1.5からAdobe PrimetimeDRM 2.0以降への移行
-uuid: 49ecbbd2-d83b-4bf2-841e-c3f9e5d5e141
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
@@ -22,7 +19,7 @@ FlashメディアRights Managementサーバー(FMRMS)1.0または1.5でパッケ
 1. ライセンス情報の読み込み：
 
    1. LiveCycleESからPrimetime DRMベースのサーバーにライセンス情報を読み込むには、[!DNL Reference Implementation\Server\migration\db]フォルダーにあるサンプルデータベーススクリプトを参照してください。
-   1. サンプルスクリプトを実行して、MySQL、OracleまたはSQL Serverのデータベースから関連するデータをCSVファイル形式にエクスポートします。
+   1. サンプルスクリプトを実行して、MySQL、OracleまたはSQL Serverのデータベースから関連するデータをCSVファイル形式に書き出します。
    1. LiveCycleESからデータを書き出した後、データをデータベースに読み込みます。
 
       書き出されるライセンス情報には、次の情報が含まれます。

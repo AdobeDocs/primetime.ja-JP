@@ -1,13 +1,10 @@
 ---
 description: 広告挿入のクライアントリクエストは、通常、バリアントM3U8形式のプレイリストに複数のビットレートを指定します。 マニフェストサーバーは、ビットレートごとに別々のM3U8リンクを含む新しいバリアントM3U8ファイルを生成して返します。 また、これらのM3U8を結び付けるための一意のグループIDも生成されます。
-seo-description: 広告挿入のクライアントリクエストは、通常、バリアントM3U8形式のプレイリストに複数のビットレートを指定します。 マニフェストサーバーは、ビットレートごとに別々のM3U8リンクを含む新しいバリアントM3U8ファイルを生成して返します。 また、これらのM3U8を結び付けるための一意のグループIDも生成されます。
-seo-title: マルチビットレートストリーム
 title: マルチビットレートストリーム
-uuid: f59cb765-e000-43e0-8d3a-8149a3c5b96e
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---

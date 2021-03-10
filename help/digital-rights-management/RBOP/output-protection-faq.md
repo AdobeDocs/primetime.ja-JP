@@ -1,13 +1,10 @@
 ---
 description: 解像度ベースの出力保護の使用に関するよくある質問(FAQ)です。
-seo-description: 解像度ベースの出力保護の使用に関するよくある質問(FAQ)です。
-seo-title: RBOP FAQ
 title: RBOP FAQ
-uuid: 7dcd337c-369a-474c-8768-409c48b5cee5
 translation-type: tm+mt
-source-git-commit: fa9e89dd63c8b4c9d6eee78258957cfd30c29088
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '321'
 ht-degree: 0%
 
 ---

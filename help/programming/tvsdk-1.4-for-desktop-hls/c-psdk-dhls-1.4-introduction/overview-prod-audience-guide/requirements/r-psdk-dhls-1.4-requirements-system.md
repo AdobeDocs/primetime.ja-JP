@@ -1,13 +1,10 @@
 ---
 description: TVSDKを使用するには、お使いのハードウェア、オペレーティングシステム、アプリケーションのバージョンがすべて、以下に示す最小要件を満たしていることを確認してください。
-seo-description: TVSDKを使用するには、お使いのハードウェア、オペレーティングシステム、アプリケーションのバージョンがすべて、以下に示す最小要件を満たしていることを確認してください。
-seo-title: システムとソフトウェアの要件
 title: システムとソフトウェアの要件
-uuid: e0f58dac-96b6-41d1-bc4c-543bb3b4823b
 translation-type: tm+mt
-source-git-commit: 51302d6eaeccdd51b227171cfbd72fca3aeec115
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---

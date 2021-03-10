@@ -1,13 +1,10 @@
 ---
 description: 外部CEK機能を使用して、既存のCKMSを使用してライセンスを検証し、パッケージ化します。
-seo-description: 外部CEK機能を使用して、既存のCKMSを使用してライセンスを検証し、パッケージ化します。
-seo-title: 外部CEKを使用したライセンスの変更とパッケージ化
 title: 外部CEKを使用したライセンスの変更とパッケージ化
-uuid: 1bfd8c6c-4ae9-47de-8247-085b5360127d
 translation-type: tm+mt
-source-git-commit: fe9493d610bc6fb97d30351c707b73cda92c67a0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ ht-degree: 0%
 
 ## EncryptContentWithExternalKey.java
 
-これは、ビデオをAAXS暗号化し、CEKを&#x200B;*含まない&lt;a0/>*&#x200B;のメタデータを作成するコマンドラインツールです（AAXSライセンスサーバーの公開証明書で保護）。 代わりに、ビデオのメタデータにCEK IDが埋め込まれます。
+これは、ビデオをAAXS暗号化し、CEKを&#x200B;*含まない*&#x200B;のメタデータを作成するコマンドラインツールです（AAXSライセンスサーバーの公開証明書で保護）。 代わりに、ビデオのメタデータにCEK IDが埋め込まれます。
 
 ライセンスの取得時に、AAXSライセンスサーバーはメタデータ内のフラグを観察し、このコンテンツが外部CEKを使用して保護されたことを識別します。 ライセンスサーバーは、メタデータからCEK IDを抽出し、セキュリティで保護されたリポジトリ/CKMSをクエリして、適切なCEKを取得します。
 

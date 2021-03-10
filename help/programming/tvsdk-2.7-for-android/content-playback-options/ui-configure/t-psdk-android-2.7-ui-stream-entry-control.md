@@ -1,13 +1,10 @@
 ---
 description: デフォルトでは、再生を開始すると、0のVODメディア開始と、クライアントのライブポイント(MediaPlayer.LIVE_POINT)のライブメディア開始が発生します。 デフォルトの動作を上書きできます。
-seo-description: デフォルトでは、再生を開始すると、0のVODメディア開始と、クライアントのライブポイント(MediaPlayer.LIVE_POINT)のライブメディア開始が発生します。 デフォルトの動作を上書きできます。
-seo-title: 特定の時間にストリームを開始
 title: 特定の時間にストリームを開始
-uuid: 65a19192-b890-4d69-9cb1-582a22988d2b
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '117'
 ht-degree: 1%
 
 ---

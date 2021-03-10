@@ -1,13 +1,10 @@
 ---
 description: TVSDKのイベントは、プレイヤーの状態、発生するエラー、再生を開始するビデオ、広告の完了など、リクエストしたアクションの完了、暗黙的に発生するアクションを示します。
-seo-description: TVSDKのイベントは、プレイヤーの状態、発生するエラー、再生を開始するビデオ、広告の完了など、リクエストしたアクションの完了、暗黙的に発生するアクションを示します。
-seo-title: Primetime Playerイベントのリッスン
 title: Primetime Playerイベントのリッスン
-uuid: e72782bf-9d26-4285-85e4-fd4d803c1bbe
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---

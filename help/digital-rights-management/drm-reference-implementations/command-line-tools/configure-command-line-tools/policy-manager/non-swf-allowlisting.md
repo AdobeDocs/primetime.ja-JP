@@ -1,9 +1,9 @@
 ---
-seo-title: 非SWFアプリケーションの許可リスト
 title: 非SWFアプリケーションの許可リスト
-uuid: d4f93b15-e556-4749-95ab-f7f58b1061d7
+description: 非SWFアプリケーションの許可リスト
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -30,4 +30,4 @@ AIRは、アプリケーションのリスト表示を特集した最初のプ�
 
 >[!NOTE]
 >
->iOSアプリケーションのリストを許可するには、特別な方法が必要です。 「](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md)TVSDK for iOSプログラマーガイド&#x200B;*」の「iOSアプリケーション[の許可リスト」を参照してください。*
+>iOSアプリケーションのリストを許可するには、特別な方法が必要です。 「*TVSDK for iOSプログラマーガイド*」の「iOSアプリケーション](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md)の許可リスト」を参照してください。[

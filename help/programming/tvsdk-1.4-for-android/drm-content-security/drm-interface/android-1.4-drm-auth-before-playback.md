@@ -1,13 +1,10 @@
 ---
 description: ビデオのDRMメタデータがメディアストリームとは別になっている場合は、再生を開始する前に認証を実行します。
-seo-description: ビデオのDRMメタデータがメディアストリームとは別になっている場合は、再生を開始する前に認証を実行します。
-seo-title: 再生前のDRM認証
 title: 再生前のDRM認証
-uuid: 326ef93d-53b0-4e3a-b16d-f3b886837cc0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '338'
 ht-degree: 1%
 
 ---

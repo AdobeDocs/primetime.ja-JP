@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、メソッド、メタデータ、通知など、ブラックアウトの実装に役立つAPIエレメントを提供します。
-seo-description: TVSDKは、メソッド、メタデータ、通知など、ブラックアウトの実装に役立つAPIエレメントを提供します。
-seo-title: ブラックアウトAPI要素
 title: ブラックアウトAPI要素
-uuid: 65e1668c-6a19-4910-83a2-46d364e94e5f
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---

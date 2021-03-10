@@ -1,13 +1,12 @@
 ---
 title: Adobe Primetimeプログラミングヘルプ
-seo-title: Adobe Primetimeプログラミングヘルプ
-description: 'null'
-seo-description: 'null'
+description: Adobe Primetimeプログラミングヘルプ
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 242b5a2875ebc0e0020296ce9489dd54438b5ad0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 37%
+source-wordcount: '220'
+ht-degree: 38%
 
 ---
 

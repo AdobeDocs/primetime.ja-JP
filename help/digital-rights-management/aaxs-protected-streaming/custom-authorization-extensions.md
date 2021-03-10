@@ -1,13 +1,10 @@
 ---
-seo-title: カスタム認証拡張
 title: カスタム認証拡張
 description: ライセンスの取得中にカスタム認証ロジックを呼び出して、要求元のクライアントにライセンスを発行するかどうかを決定できます。
-seo-description: ライセンスの取得中にカスタム認証ロジックを呼び出して、要求元のクライアントにライセンスを発行するかどうかを決定できます。
-uuid: fb40db6f-30aa-46e3-9eeb-faff3cfedab1
 translation-type: tm+mt
-source-git-commit: fe9493d610bc6fb97d30351c707b73cda92c67a0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: MediaResourceクラスは、MediaPlayerインスタンスによって読み込まれるコンテンツを表します。
-seo-description: MediaResourceクラスは、MediaPlayerインスタンスによって読み込まれるコンテンツを表します。
-seo-title: メディアリソースの作成
 title: メディアリソースの作成
-uuid: 3d03d92f-69b3-4da8-9b16-25a264115ae5
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
@@ -72,6 +69,6 @@ MediaResourceクラスは、MediaPlayerインスタンスによって読み込�
 
    * MediaPlayerインスタンス。
 
-      詳しくは、[Mediaplayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md)でのメディアリソースの読み込みを参照してください。
+      詳しくは、[Mediaplayerでのメディアリソースの読み込み](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md)を参照してください。
    * `MediaPlayerItemLoader`詳しくは、[Mediaplayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md)でのメディアリソースの読み込みを参照してください。
 

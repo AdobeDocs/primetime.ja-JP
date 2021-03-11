@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、VODおよびライブ/リニアストリームの広告の解決と挿入をサポートしています。
-seo-description: TVSDKは、VODおよびライブ/リニアストリームの広告の解決と挿入をサポートしています。
-seo-title: Primetime広告サーバーメタデータ
 title: Primetime広告サーバーメタデータ
-uuid: 61e224dd-551a-438f-8560-e64915087fef
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---

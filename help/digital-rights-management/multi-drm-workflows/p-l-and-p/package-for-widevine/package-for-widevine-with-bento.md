@@ -1,13 +1,10 @@
 ---
 description: Bento4 PackagerとAdobeOffline Packagerの両方を使用して、暗号化されたDASHコンテンツを作成します。 Bento4は、暗号化されていないmp4コンテンツを入力として受け取ります。
-seo-description: Bento4 PackagerとAdobeOffline Packagerの両方を使用して、暗号化されたDASHコンテンツを作成します。 Bento4は、暗号化されていないmp4コンテンツを入力として受け取ります。
-seo-title: Bento4でコンテンツをパッケージ化する
 title: Bento4でコンテンツをパッケージ化する
-uuid: 88323a4e-d0b5-4a41-acec-7126d3e0c90b
 translation-type: tm+mt
-source-git-commit: 75702ea2a524d7b38bb9ac83cb094c8482b1098f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---

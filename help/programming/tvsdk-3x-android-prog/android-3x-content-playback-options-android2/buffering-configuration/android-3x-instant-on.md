@@ -1,13 +1,10 @@
 ---
 description: 即時オンを有効にすると、1つ以上のチャネルがプリロードされます。 ユーザーがチャネルを選択するかチャネルを切り替えると、コンテンツは直ちに再生されます。 バッファリングは、ユーザーが開始を監視するまでに完了します。
-seo-description: 即時オンを有効にすると、1つ以上のチャネルがプリロードされます。 ユーザーがチャネルを選択するかチャネルを切り替えると、コンテンツは直ちに再生されます。 バッファリングは、ユーザーが開始を監視するまでに完了します。
-seo-title: 即時オン
 title: 即時オン
-uuid: 5b1ceace-cae7-44c7-b4b9-d45078d58cc3
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -50,7 +47,7 @@ TVSDKは、メディアリソースでインスタントオンを使用できる
 
 >[!NOTE]
 >
->Adobeでは、InstantOnに`MediaPlayerItemLoader`を使用することを推奨します。 `MediaPlayer`ではなく`MediaPlayerItemLoader`を使用するには、[MediaPlayerItemLoaderを使用したメディアリソースの読み込み](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md)を参照してください。
+>Adobeでは、InstantOnに`MediaPlayerItemLoader`を使用することを推奨します。 `MediaPlayer`ではなく`MediaPlayerItemLoader`を使用するには、[MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md)を使用したメディアリソースの読み込みを参照してください。
 
 1. リソースが読み込まれ、プレイヤーがリソースを再生する準備ができていることを確認します。
 1. `play`を呼び出す前に、各`MediaPlayer`インスタンスに対して`prepareBuffer`を呼び出します。

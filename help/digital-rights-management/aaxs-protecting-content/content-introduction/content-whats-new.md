@@ -1,13 +1,10 @@
 ---
 description: 'Adobe® Access™は、高価値のオーディオビジュアルコンテンツを実現する高度なデジタル著作権管理およびコンテンツ保護ソリューションです。 Java APIを使用して作成したツールを使用して、ポリシーを作成し、オーディオおよびビデオコンテンツを含むファイルにポリシーを適用し、それらのファイルを暗号化できます。 これらのタスクを実行するための高レベルの手順は次のとおりです。 '
-seo-description: 'Adobe® Access™は、高価値のオーディオビジュアルコンテンツを実現する高度なデジタル著作権管理およびコンテンツ保護ソリューションです。 Java APIを使用して作成したツールを使用して、ポリシーを作成し、オーディオおよびビデオコンテンツを含むファイルにポリシーを適用し、それらのファイルを暗号化できます。 これらのタスクを実行するための高レベルの手順は次のとおりです。 '
-seo-title: 概要
 title: 概要
-uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---

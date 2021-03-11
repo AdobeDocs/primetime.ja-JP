@@ -1,13 +1,10 @@
 ---
 description: Primetime ad insertionは、内部目的や、ストリームおよび広告サーバーの操作を容易にする目的でcookieを使用します。
-seo-description: Primetime ad insertionは、内部目的や、ストリームおよび広告サーバーの操作を容易にする目的でcookieを使用します。
-seo-title: Cookie
 title: Cookie
-uuid: 514ca7bd-e5ef-41be-ac63-52ef2d2a60bb
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: リプレイ保護は、攻撃者がライセンス要求メッセージを再生するのを防ぎ、場合によってはクライアントに対するサービス拒否(DoS)攻撃を引き起こすのを防ぎます。
-seo-description: リプレイ保護は、攻撃者がライセンス要求メッセージを再生するのを防ぎ、場合によってはクライアントに対するサービス拒否(DoS)攻撃を引き起こすのを防ぎます。
-seo-title: 再生保護
 title: 再生保護
-uuid: 93749dd3-a42c-4866-ac54-1b20d6683c42
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---

@@ -1,9 +1,9 @@
 ---
-seo-title: コンテンツの取得
 title: コンテンツの取得
-uuid: f3d8b4ef-bc45-4c2d-962b-638512ca0ef3
+description: コンテンツの取得
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 0%
@@ -42,5 +42,5 @@ ht-degree: 0%
 
    ![](assets/FMRMS_fig01_web.png)
 
-   前の例は、1つのワークフローのみを示しています。 または、ライセンスの取得が非常に後で行われるコンテンツのプロアクティブなダウンロードで、ワークフローを使用することもできます。 別の方法として、コンテンツにアクセスする前にライセンスの取得が行われる、注文前のワークフローを実装する方法があります。
+   前の例は、1つのワークフローのみを示しています。 または、ライセンスの取得が非常に後で行われるコンテンツのプロアクティブなダウンロードで、ワークフローを使用することもできます。 別の方法として、コンテンツにアクセスする前にライセンスの取得が発生する、注文前のワークフローを実装する方法があります。
 

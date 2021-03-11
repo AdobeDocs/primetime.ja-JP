@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: DRMContentDataを使用したライセンスのプリロード
 title: DRMContentDataを使用したライセンスのプリロード
-uuid: 5cedd077-0613-4677-8fb0-81237d7ac61a
+description: DRMContentDataを使用したライセンスのプリロード
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
@@ -19,7 +17,7 @@ ht-degree: 0%
 
 1. パッケージ化されたコンテンツのバイナリDRMメタデータを取得します。
 
-   Primetime DRM Java Reference Implementations Packagerを使用する場合、このメタデータファイルは[!DNL .metadata]拡張子が付いて自動的に生成されます。 例えば、`URLLoader`クラスを使用して、このメタデータをダウンロードできます。 HLSまたはHDSコンテンツを使用する場合、メタデータはコンテンツマニフェストファイル（[!DNL .m3u8]または[!DNL .f4m]）で参照されるか、**&#x200B;内に&lt;a2/>含まれます（使用前にBase64エンコードされた文字列にする必要があります）。
+   Primetime DRM Java Reference Implementations Packagerを使用する場合、このメタデータファイルは[!DNL .metadata]拡張子が付いて自動的に生成されます。 例えば、`URLLoader`クラスを使用して、このメタデータをダウンロードできます。 HLSまたはHDSコンテンツを使用する場合、メタデータはコンテンツマニフェストファイル（[!DNL .m3u8]または[!DNL .f4m]）で参照されるか、**&#x200B;内に含まれます（使用前にBase64エンコードされた文字列にする必要があります）。
 1. `DRMContentData`オブジェクトを作成し、メタデータをコンストラクタ関数に渡します。
 
    ```

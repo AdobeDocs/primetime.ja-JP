@@ -1,13 +1,10 @@
 ---
 description: ビデオオンデマンド(VOD)の広告挿入プロセスは、広告解決、広告挿入、広告再生の各フェーズで構成されます。 広告トラッキングの場合、TVSDKは、各広告の再生進行状況をリモートトラッキングサーバーに通知する必要があります。 予期しない状況が発生した場合は、適切なアクションが必要です。
-seo-description: ビデオオンデマンド(VOD)の広告挿入プロセスは、広告解決、広告挿入、広告再生の各フェーズで構成されます。 広告トラッキングの場合、TVSDKは、各広告の再生進行状況をリモートトラッキングサーバーに通知する必要があります。 予期しない状況が発生した場合は、適切なアクションが必要です。
-seo-title: VOD用の広告挿入とフェイルオーバー
 title: VOD用の広告挿入とフェイルオーバー
-uuid: b7fbc3f9-9c38-4026-a54a-45ebc528c5f5
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---

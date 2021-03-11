@@ -1,9 +1,9 @@
 ---
-seo-title: 帯域外ライセンスの概要
 title: 帯域外ライセンスの概要
-uuid: 82e4529a-ee1b-4c0c-8885-e0e68319d1a0
+description: 帯域外ライセンスの概要
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 0%
@@ -45,7 +45,7 @@ ht-degree: 0%
 1. サーバーは、「成功」メッセージを使用してリクエストに応答します。
 1. 生成されたIDはアプリケーションによって保存されます。
 
-デバイスの登録後、アプリケーションは、前のスキームで使用した場合と同じ方法で、生成されたIDを使用します。
+デバイスの登録後、アプリケーションは、前のスキームで使用したのと同じ方法で、生成されたIDを使用します。
 1. 生成されたIDの検索が試行されます。
 1. 生成されたIDが見つかった場合、アプリケーションは、生成済みのライセンスをダウンロードする際に、生成されたIDを使用します。 アプリケーションは、`DRMManager.storeVoucher()`メソッドを使用して使用するためにPrimetime DRMクライアントにライセンスを送信します。.
 1. 生成されたIDが見つからない場合、アプリケーションはデバイス登録手順を実行します。

@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 匿名ドメインロジック
 title: 匿名ドメインロジック
-uuid: bd0e8e51-27dc-4ccf-b285-a80c2ab9e260
+description: 匿名ドメインロジック
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
@@ -37,7 +35,7 @@ ht-degree: 0%
    1. これが新しいマシンの場合は、`DomainMembership`テーブルにエントリを追加します。
    1. 新しいデバイスで`Max Membership`値に達した場合は、エラー`DOM_LIMIT_REACHED (502)`を返します。
 
-1. `DomainKeys`テーブルで、このドメインのすべてのドメインキーを調べます。
+1. `DomainKeys`テーブルで、このドメインのすべてのドメインキーを検索します。
 
    1. `DomainServerInfo`がキーをロールオーバーする必要があることを示している場合は、新しいキーペアを生成します。
    1. 既存のキーの上位より1つ大きいキーバージョンのキーを`DomainKeys`テーブルに保存します。

@@ -1,13 +1,10 @@
 ---
 description: このガイドは、Javaに実装されているAndroid向けTVSDKを使用して、ビデオプレーヤーアプリケーションを開発する方法について説明します。
-seo-description: このガイドは、Javaに実装されているAndroid向けTVSDKを使用して、ビデオプレーヤーアプリケーションを開発する方法について説明します。
-seo-title: 製品の概要、オーディエンス、および本ガイド
 title: 製品の概要、オーディエンス、および本ガイド
-uuid: 638bafbe-e518-4891-b792-29f765c3c0d7
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---

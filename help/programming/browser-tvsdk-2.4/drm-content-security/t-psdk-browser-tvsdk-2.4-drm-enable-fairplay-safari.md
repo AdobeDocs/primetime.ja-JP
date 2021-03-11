@@ -1,13 +1,10 @@
 ---
 description: Primetime DRM Cloud（ExpressPlayを利用）を使用する場合は、FairPlayをSafari向けに有効にすることができます。
-seo-description: Primetime DRM Cloud（ExpressPlayを利用）を使用する場合は、FairPlayをSafari向けに有効にすることができます。
-seo-title: FairPlayをSafari HLSで有効にする
 title: FairPlayをSafari HLSで有効にする
-uuid: 6a250a31-cc4b-4c4b-b1e9-893ee3ca5d78
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: ユーザーが広告または関連するボタンをクリックした場合、アプリは応答する必要があります。 TVSDKは、クリック時のリンク先URLに関する情報を提供します。
-seo-description: ユーザーが広告または関連するボタンをクリックした場合、アプリは応答する必要があります。 TVSDKは、クリック時のリンク先URLに関する情報を提供します。
-seo-title: 広告のクリックに対するレスポンス
 title: 広告のクリックに対するレスポンス
-uuid: 58efaba5-d0f6-4ddd-9628-6bc065cc95d8
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---

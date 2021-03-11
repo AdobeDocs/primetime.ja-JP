@@ -1,13 +1,10 @@
 ---
 description: ブラウザーTVSDKは、クリック可能な広告に対するユーザーのクリックに応答するために必要な情報をビデオアプリに提供します。
-seo-description: ブラウザーTVSDKは、クリック可能な広告に対するユーザーのクリックに応答するために必要な情報をビデオアプリに提供します。
-seo-title: クリック可能な広告
 title: クリック可能な広告
-uuid: 493c3199-b5ba-4809-86eb-e80f10eb957b
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---

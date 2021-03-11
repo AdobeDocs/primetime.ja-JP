@@ -1,13 +1,10 @@
 ---
 description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
-seo-description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
-seo-title: Adobeクリエイティブ再パッケージ化サービス(CRS)を使用して、互換性のない広告を再パッケージ化する
 title: Adobeクリエイティブ再パッケージ化サービス(CRS)を使用して、互換性のない広告を再パッケージ化する
-uuid: c3961628-39aa-444c-9c93-9f1e267d9cd4
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: MediaResourceが正常に読み込まれると、Browser TVSDKは、MediaPlayerItemクラスのインスタンスを作成して、そのリソースへのアクセスを提供します。
-seo-description: MediaResourceが正常に読み込まれると、Browser TVSDKは、MediaPlayerItemクラスのインスタンスを作成して、そのリソースへのアクセスを提供します。
-seo-title: MediaPlayerItemクラスについて
 title: MediaPlayerItemクラスについて
-uuid: 5226d3ad-2438-44fe-a8ef-bcc0da8331b8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---

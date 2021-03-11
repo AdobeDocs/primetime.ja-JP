@@ -1,13 +1,10 @@
 ---
 description: クローズドキャプショントラックのスタイル情報は、TextFormatクラスを使用して指定できます。このクラスは、プレイヤーが表示するクローズドキャプションのスタイルを設定します。
-seo-description: クローズドキャプショントラックのスタイル情報は、TextFormatクラスを使用して指定できます。このクラスは、プレイヤーが表示するクローズドキャプションのスタイルを設定します。
-seo-title: クローズドキャプションのスタイル設定を制御する
 title: クローズドキャプションのスタイル設定を制御する
-uuid: b5d9c783-755f-47a2-acb1-966df9d6116e
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -180,7 +177,7 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> フォント </td> 
-   <td colname="2"> <p>フォントタイプ。 </p> <p><span class="codeph"> TextFormat.Font </span>定義済みリストで定義され、例えばserifsのある（またはない）等幅を表す値にのみ設定できます。 </p> <p>ヒント： デバイスで使用できる実際のフォントは異なる場合があり、必要に応じて代替フォントが使用されます。 serifsを持つ等幅スペースは、通常、代替として使用されますが、システムに固有の置き換えである場合もあります。 </p> </td> 
+   <td colname="2"> <p>フォントタイプ。 </p> <p><span class="codeph"> TextFormat.Font </span>定義済みリストで定義され、例えばserifsのある（またはない）等幅を表す値にのみ設定できます。 </p> <p>ヒント： デバイスで使用できる実際のフォントは異なる場合があり、必要に応じて代替フォントが使用されます。 serifsを持つ等幅スペースは、通常、代替として使用されますが、システム固有の置換である場合もあります。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> サイズ </td> 

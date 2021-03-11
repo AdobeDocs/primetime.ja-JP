@@ -1,13 +1,10 @@
 ---
 description: TVSDKの機能は、設定によって動作し、MediaPlayerを介して実装されます。
-seo-description: TVSDKの機能は、設定によって動作し、MediaPlayerを介して実装されます。
-seo-title: 設定情報をMediaPlayerに渡して機能マネージャを作成する
 title: 設定情報をMediaPlayerに渡して機能マネージャを作成する
-uuid: 106ececd-a670-4360-b000-a31fec65233c
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
@@ -25,7 +22,7 @@ TVSDKの機能は、設定によって動作し、MediaPlayerを介して実装�
 
 * `MediaPlayer` は、ビデオリソースを含むTVSDKのメディアプレイヤーオブジェクトです。
 
-   機能マネージャーは、TVSDKイベントリスナーをこのプレーヤーオブジェクトに登録し、再生セッションからデータを取得して、TVSDK機能を再生セッションにトリガーします。
+   機能マネージャーは、TVSDKイベントリスナーをこのプレイヤーオブジェクトに登録し、再生セッションからデータを取得し、トリガーTVSDK機能を再生セッションに追加します。
 
 各機能には、対応する設定インターフェイスがあります。 例えば、`CCManager`は`ICCConfig`を使用して設定を取得します。 `ICCConfig` には、クローズドキャプションに関連する設定情報のみを取得するメソッドが含まれます。
 

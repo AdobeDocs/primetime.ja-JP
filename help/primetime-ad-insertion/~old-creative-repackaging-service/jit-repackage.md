@@ -1,13 +1,10 @@
 ---
 description: クライアントビデオプレーヤーまたはマニフェストサーバーがCRSとやり取りし、JITの再パッケージ化を実現できます。 どちらも同じ広告選択ロジックを使用します。
-seo-description: クライアントビデオプレーヤーまたはマニフェストサーバーがCRSとやり取りし、JITの再パッケージ化を実現できます。 どちらも同じ広告選択ロジックを使用します。
-seo-title: JIT再パッケージの詳細ワークフロー
 title: JIT再パッケージの詳細ワークフロー
-uuid: 11b6eb3c-f6aa-4018-9b20-ab6f5910508b
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---

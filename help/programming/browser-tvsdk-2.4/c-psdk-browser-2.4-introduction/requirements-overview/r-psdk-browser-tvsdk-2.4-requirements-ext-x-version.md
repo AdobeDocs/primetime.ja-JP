@@ -1,13 +1,10 @@
 ---
 description: .m3u8ファイル内の#EXT-X-VERSIONのバージョンは、アプリケーションで使用できる機能と、プレイリスト/マニフェストで有効なEXTタグに影響します。
-seo-description: .m3u8ファイル内の#EXT-X-VERSIONのバージョンは、アプリケーションで使用できる機能と、プレイリスト/マニフェストで有効なEXTタグに影響します。
-seo-title: '#EXT-X-VERSIONの要件'
 title: '#EXT-X-VERSIONの要件'
-uuid: 8d22930f-4faf-4a40-b1f0-507886cd8938
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '176'
 ht-degree: 0%
 
 ---

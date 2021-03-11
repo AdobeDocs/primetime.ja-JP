@@ -1,13 +1,10 @@
 ---
 description: MediaResourceは、MediaPlayerインスタンスが読み込もうとしているコンテンツを表します。
-seo-description: MediaResourceは、MediaPlayerインスタンスが読み込もうとしているコンテンツを表します。
-seo-title: MediaPlayerおよびMediaResourceクラス
 title: MediaPlayerおよびMediaResourceクラス
-uuid: 7393c320-7dbb-4580-9425-a735f9d03ef5
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---

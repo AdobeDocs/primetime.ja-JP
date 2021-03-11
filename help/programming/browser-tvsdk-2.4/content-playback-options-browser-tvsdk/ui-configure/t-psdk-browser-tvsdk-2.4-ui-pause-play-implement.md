@@ -1,13 +1,10 @@
 ---
 description: 一時停止ボタンと再生ボタンに、ブラウザーTVSDKの動作を追加できます。
-seo-description: 一時停止ボタンと再生ボタンに、ブラウザーTVSDKの動作を追加できます。
-seo-title: ビデオの再生と一時停止
 title: ビデオの再生と一時停止
-uuid: 4053ea9e-6b74-41e9-ad04-087ad13e3698
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
@@ -33,5 +30,5 @@ ht-degree: 0%
 
 1. `AdobePSDK.MediaPlayerStatusChangeEvent`イベントをリッスンして、エラーを確認したり、その他の適切な処置を取ったりします。
 
-   ブラウザーTVSDKは、pauseまたはplayメソッドが呼び出され、`MediaPlayerStatus.PLAYING`や`MediaPlayerStatus.PAUSED`などの新しい状態を含むイベントオブジェクトに関する情報を渡すときに、このイベントをトリガーします。
+   ブラウザーTVSDKは、pauseまたはplayメソッドが呼び出されるとこのイベントをトリガーし、`MediaPlayerStatus.PLAYING`や`MediaPlayerStatus.PAUSED`などの新しい状態を含むイベントオブジェクトに関する情報を渡します。
 

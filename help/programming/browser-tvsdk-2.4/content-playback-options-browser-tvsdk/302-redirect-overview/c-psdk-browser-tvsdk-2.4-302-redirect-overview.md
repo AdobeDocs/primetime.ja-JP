@@ -1,13 +1,10 @@
 ---
 description: 302リダイレクトの最適化は、302リダイレクト応答の数を最小限に抑え、アプリケーションのロードバランシングをより効果的に行うことができます。
-seo-description: 302リダイレクトの最適化は、302リダイレクト応答の数を最小限に抑え、アプリケーションのロードバランシングをより効果的に行うことができます。
-seo-title: HTTP 302リダイレクトの最適化
 title: HTTP 302リダイレクトの最適化
-uuid: d3009c6c-320a-4c0f-b6ba-bf6473049823
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '149'
 ht-degree: 1%
 
 ---

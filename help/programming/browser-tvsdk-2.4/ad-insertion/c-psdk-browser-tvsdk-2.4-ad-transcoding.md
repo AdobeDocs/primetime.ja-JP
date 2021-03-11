@@ -1,13 +1,10 @@
 ---
 description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLS/DASHと互換性がないので、HTTPライブストリーミング(HLS)/DASH(DASH)コンテンツストリームに繋ぎ合わせることができません。 Adobe Primetime広告挿入とブラウザーTVSDKは、オプションで、互換性のないビデオを互換性のあるm3u8/mpdビデオに再パッケージ化（コード変換）できます。
-seo-description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLS/DASHと互換性がないので、HTTPライブストリーミング(HLS)/DASH(DASH)コンテンツストリームに繋ぎ合わせることができません。 Adobe Primetime広告挿入とブラウザーTVSDKは、オプションで、互換性のないビデオを互換性のあるm3u8/mpdビデオに再パッケージ化（コード変換）できます。
-seo-title: 互換性のない広告の再パッケージ化（コード変換）
 title: 互換性のない広告の再パッケージ化（コード変換）
-uuid: f414d133-2d04-462c-ae2c-75158a577fc5
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---

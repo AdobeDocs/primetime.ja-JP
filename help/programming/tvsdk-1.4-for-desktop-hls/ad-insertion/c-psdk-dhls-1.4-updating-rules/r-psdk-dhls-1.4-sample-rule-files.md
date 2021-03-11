@@ -1,13 +1,10 @@
 ---
 description: AdobeTVSDKConfig.jsonでは、特定のゾーンのルールと同様に、デフォルトのルールを指定できます。
-seo-description: AdobeTVSDKConfig.jsonでは、特定のゾーンのルールと同様に、デフォルトのルールを指定できます。
-seo-title: クリエイティブ選択ルールの例
 title: クリエイティブ選択ルールの例
-uuid: 4e5fd912-6f87-4fa2-9bf7-7185a5d434e1
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---

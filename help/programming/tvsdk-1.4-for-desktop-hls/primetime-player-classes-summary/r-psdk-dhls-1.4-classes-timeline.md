@@ -1,13 +1,10 @@
 ---
 description: 広告の配置など、特定のメディアのタイムラインに関する情報を提供するクラスです。
-seo-description: 広告の配置など、特定のメディアのタイムラインに関する情報を提供するクラスです。
-seo-title: Timelineクラス
 title: Timelineクラス
-uuid: 9c06fec1-d725-4fe8-9cf5-1e3ade2b7d27
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---

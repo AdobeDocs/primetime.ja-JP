@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Policy Managerコマンドラインの使用
 title: Policy Managerコマンドラインの使用
-uuid: 9b17bc9a-0b1b-405f-a62b-0310c43c9255
+description: Policy Managerコマンドラインの使用
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
@@ -152,7 +150,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> <span class="codeph"> -opOTAホワイトリスト=&lt;connection types=""&gt; </span> </span> </td> 
-   <td colname="2" class="- topic/entry "> 大気(OTA)の出力保護の制約を超えています。 <span class="codeph">ホワイトリスト</span>フィールドは、許可リストに対する接続の種類と&lt;connection types&gt;の形式を指定します。<span class="codeph"> [type(,type)*] </span>は&lt;a0/&gt;です。typeは次のいずれかです。ミラカスト、エアプレイ、WIDI、DLNA </td> 
+   <td colname="2" class="- topic/entry "> 大気(OTA)の出力保護の制約を超えています。 <span class="codeph">ホワイトリスト</span>フィールドは、許可リストに対する接続の種類と&lt;connection types&gt;の形式を指定します。<span class="codeph"> [type(,type)*] </span>はです。typeは次のいずれかです。ミラカスト、エアプレイ、WIDI、DLNA </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -opResolution  &lt;filename&gt; </span> </td> 

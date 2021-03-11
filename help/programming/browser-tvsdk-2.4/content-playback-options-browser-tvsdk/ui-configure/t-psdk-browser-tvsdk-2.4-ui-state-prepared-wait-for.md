@@ -1,13 +1,10 @@
 ---
 description: ブラウザーTVSDKプレイヤーのほとんどのメソッドを使用する前に、プレイヤーが有効な状態にある必要があります。
-seo-description: ブラウザーTVSDKプレイヤーのほとんどのメソッドを使用する前に、プレイヤーが有効な状態にある必要があります。
-seo-title: 有効な状態を待つ
 title: 有効な状態を待つ
-uuid: 0add29a8-fbd8-483a-8c99-e4bc6de9e3d3
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
-seo-title: 前提条件となるソフトウェアのダウンロードと設定
 title: 前提条件となるソフトウェアのダウンロードと設定
 description: インストールプロセスは簡単です。 システムにJDKが既にインストールされている場合は、この手順をスキップできますが、JDK、Eclipse IDE、OSに互換性が必要であることに注意してください。
-seo-description: インストールプロセスは簡単です。 システムにJDKが既にインストールされている場合は、この手順をスキップできますが、JDK、Eclipse IDE、OSに互換性が必要であることに注意してください。
-uuid: ca29144f-8088-4c8d-93cf-aa59007da034
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: Primetime DRMを設定する場合は、DVDからファイルをコピーします。 これらのファイルには、コード、証明書、およびサードパーティクラスを含むJARファイルが含まれます。 また、IncorporatedのAdobe Systemsに証明書を要求する必要があります。 次に、Adobeは、パッケージ化されたコンテンツ、ライセンス、およびクライアントとサーバー間の通信の整合性を保護するために使用する複数の資格情報を発行します。
-seo-description: Primetime DRMを設定する場合は、DVDからファイルをコピーします。 これらのファイルには、コード、証明書、およびサードパーティクラスを含むJARファイルが含まれます。 また、IncorporatedのAdobe Systemsに証明書を要求する必要があります。 次に、Adobeは、パッケージ化されたコンテンツ、ライセンス、およびクライアントとサーバー間の通信の整合性を保護するために使用する複数の資格情報を発行します。
-seo-title: 開発環境のセットアップ
 title: 開発環境のセットアップ
-uuid: 68afefe8-7ec6-466e-89a8-bc0da8afb4c8
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---

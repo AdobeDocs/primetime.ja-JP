@@ -1,13 +1,10 @@
 ---
 description: TVSDKアプリにFairPlay Streamingを実装するには、Resource Loaderを作成する必要があります。このResource Loaderは、FairPlay Streamingサーバーにライセンス取得要求を送信します。
-seo-description: TVSDKアプリにFairPlay Streamingを実装するには、Resource Loaderを作成する必要があります。このResource Loaderは、FairPlay Streamingサーバーにライセンス取得要求を送信します。
-seo-title: TVSDKアプリケーションでのApple FairPlay
 title: TVSDKアプリケーションでのApple FairPlay
-uuid: 5796d5af-0018-4c69-a755-65e4819ee838
 translation-type: tm+mt
-source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: pttrackingmode=simpleまたはptplayer=ios-mobilewebの場合、マニフェストサーバーは、マスターM3U8を含むJSON形式のファイルを返します。このファイルは、クライアントがコンテンツを記述するM3U8ファイルを要求する際に使用するURLです。
-seo-description: pttrackingmode=simpleまたはptplayer=ios-mobilewebの場合、マニフェストサーバーは、マスターM3U8を含むJSON形式のファイルを返します。このファイルは、クライアントがコンテンツを記述するM3U8ファイルを要求する際に使用するURLです。
-seo-title: バリアントマニフェストプレイリストを要求するURLのJSON形式
 title: バリアントマニフェストプレイリストを要求するURLのJSON形式
-uuid: 9f9693d0-3c93-4555-b20c-7f4576742f41
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '91'
 ht-degree: 0%
 
 ---

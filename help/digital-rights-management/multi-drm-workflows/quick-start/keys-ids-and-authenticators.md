@@ -1,13 +1,10 @@
 ---
 description: DRMを実装するには、コンテンツを暗号化するコンテンツ暗号化キーやCEK、ExpressPlayサーバーとの通信を保護するためのユーザー認証子、コンテンツ暗号化キーを識別するためのCEKSIDなど、特定の証明書とキーがキー管理システムに保存されている必要があります。
-seo-description: DRMを実装するには、コンテンツを暗号化するコンテンツ暗号化キーやCEK、ExpressPlayサーバーとの通信を保護するためのユーザー認証子、コンテンツ暗号化キーを識別するためのCEKSIDなど、特定の証明書とキーがキー管理システムに保存されている必要があります。
-seo-title: キー、ID、認証子
 title: キー、ID、認証子
-uuid: 9e5b1a64-b4e9-442f-ac15-26831aaf585d
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---

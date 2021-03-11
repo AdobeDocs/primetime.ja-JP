@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、現在、TVSDK広告、ダイレクト広告の時間、カスタム広告マーカーに対して、組み込みの広告プロバイダーメタデータのサポートを提供しています。
-seo-description: TVSDKは、現在、TVSDK広告、ダイレクト広告の時間、カスタム広告マーカーに対して、組み込みの広告プロバイダーメタデータのサポートを提供しています。
-seo-title: 広告挿入タイプ
 title: 広告挿入タイプ
-uuid: 6b5c3555-1ddd-4215-8bb2-03d16bb818c5
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---

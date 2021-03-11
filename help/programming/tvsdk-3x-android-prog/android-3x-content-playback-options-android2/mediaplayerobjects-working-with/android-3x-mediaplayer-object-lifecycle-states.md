@@ -1,13 +1,10 @@
 ---
 description: メディアプレイヤーのステータスによって、どのアクションが有効かが決まります。
-seo-description: メディアプレイヤーのステータスによって、どのアクションが有効かが決まります。
-seo-title: MediaPlayerオブジェクトのライフサイクルとステータス
 title: MediaPlayerオブジェクトのライフサイクルとステータス
-uuid: a2866f84-a722-46ed-b4cb-36664db5be82
 translation-type: tm+mt
-source-git-commit: 56dc79e5b4df11ff730d7d8f23dea8d0f4712077
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -65,7 +62,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"> 休止 </td> 
-   <td colname="col2"> <p>再生中または一時停止中に、アプリケーションが再生から離れたり、デバイスをシャットダウンしたり、アプリケーションを切り替えたりした場合、メディアプレイヤーは停止され、リソースは解放されます。 </p> <p><span class="codeph"> MediaPlayer.restore() </span>を呼び出すと、プレイヤーがSUSPENDEDの前の状態に戻ります。 例外は、休止状態が呼び出されたときにプレイヤーがSEEKINGを行っている場合、プレイヤーはPAUSEDの後、SUSPENDEDになります。 </p> <p>重要：  <p>次の情報を覚えておいてください。 
+   <td colname="col2"> <p>再生中または一時停止中に、アプリケーションが再生から離れたり、デバイスをシャットダウンしたり、アプリケーションを切り替えたりした場合、メディアプレイヤーは中断され、リソースは解放されます。 </p> <p><span class="codeph"> MediaPlayer.restore() </span>を呼び出すと、プレイヤーがSUSPENDEDの前の状態に戻ります。 例外は、休止状態が呼び出されたときにプレイヤーがSEEKINGを行っている場合、プレイヤーはPAUSEDの後、SUSPENDEDになります。 </p> <p>重要：  <p>次の情報を覚えておいてください。 
       <ul id="ul_1B21668994D1474AAA0BE839E0D69B00"> 
        <li id="li_08459A3AB03C45588D73FA162C27A56C"><span class="codeph"> MediaPlayer </span>は、<span class="codeph"> MediaPlayerView </span>で使用されるサーフェスオブジェクトが破棄された場合にのみ、<span class="codeph"> suspend </span>を自動的に呼び出します。 </li> 
        <li id="li_B9926AA2E7B9441490F37D24AE2678A1"><span class="codeph"> MediaPlayer </span>は、<span class="codeph"> MediaPlayerView </span>で使用される新しいサーフェスオブジェクトが作成された場合にのみ、<span class="codeph"> restore() </span>を自動的に呼び出します。 </li> 

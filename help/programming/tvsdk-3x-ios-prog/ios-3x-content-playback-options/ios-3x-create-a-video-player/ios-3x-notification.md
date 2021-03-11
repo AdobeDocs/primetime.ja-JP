@@ -1,13 +1,10 @@
 ---
 description: プレイヤーは、プレイヤーの状態を示す一連のイベントをリッスンできます。
-seo-description: プレイヤーは、プレイヤーの状態を示す一連のイベントをリッスンできます。
-seo-title: 通知の設定
 title: 通知の設定
-uuid: b178b2eb-da40-456b-997a-46ae18d635fa
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---

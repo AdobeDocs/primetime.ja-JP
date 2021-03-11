@@ -1,13 +1,10 @@
 ---
 description: PTNotificationオブジェクトは、プレイヤーの状態、警告およびエラーの変更に関する情報を提供します。 ビデオの再生を停止させるエラーは、プレイヤーのステータスが変化する原因にもなります。
-seo-description: PTNotificationオブジェクトは、プレイヤーの状態、警告およびエラーの変更に関する情報を提供します。 ビデオの再生を停止させるエラーは、プレイヤーのステータスが変化する原因にもなります。
-seo-title: プレイヤーのステータス、アクティビティ、エラーおよびログの通知
 title: プレイヤーのステータス、アクティビティ、エラーおよびログの通知
-uuid: 59716a66-3736-4076-8011-8104bfe3a83a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---

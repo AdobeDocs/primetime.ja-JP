@@ -1,13 +1,10 @@
 ---
 description: ブラウザーTVSDKは、ビデオアプリケーションに機能を追加するために実装できる多数のHLS機能をサポートしています。
-seo-description: ブラウザーTVSDKは、ビデオアプリケーションに機能を追加するために実装できる多数のHLS機能をサポートしています。
-seo-title: サポートされるHLS機能
 title: サポートされるHLS機能
-uuid: 033d81f8-cea4-4687-b2fb-1524d9164d39
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---

@@ -1,9 +1,9 @@
 ---
-seo-title: 保護されたストリーミング用のDRMサーバーの実行
 title: 保護されたストリーミング用のDRMサーバーの実行
-uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
+description: 保護されたストリーミング用のDRMサーバーの実行
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Tomcatとライセンスサーバを開始する場合は、Tomcatの[!DNL bin]�
 
 ### グローバルログファイル{#section_1CFA90748142439C9F3BE380969539DA}
 
-グローバルログファイル[!DNL flashaccess-global.log]は、*LicenseServer.LogRoot*&#x200B;にあります。 ログには、サーバーが初期化された際に、Adobe PrimetimeDRM Java SDKまたはログメッセージが生成したログメッセージが含まれる場合があります。
+グローバルログファイル[!DNL flashaccess-global.log]は、*LicenseServer.LogRoot*&#x200B;にあります。 ログには、サーバーが初期化された際に、Adobe PrimetimeDRM Java SDKまたはログメッセージで生成されたログメッセージが含まれる場合があります。
 
 ### パーティションログファイル{#section_5660137CD6AA40519E72A4315534846B}
 

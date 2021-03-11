@@ -1,13 +1,10 @@
 ---
 description: クリエイティブの再パッケージ化サービス(CRS)は、HLS以外の広告クリエイティブをHLSストリームで正しく再生できるようにします。 マニフェストサーバーは、非HLS広告に遭遇すると、CRSで呼び出します。
-seo-description: クリエイティブの再パッケージ化サービス(CRS)は、HLS以外の広告クリエイティブをHLSストリームで正しく再生できるようにします。 マニフェストサーバーは、非HLS広告に遭遇すると、CRSで呼び出します。
-seo-title: CRSの概要
 title: CRSの概要
-uuid: 3ae75fa7-397f-47ba-8e3d-50543ca25458
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---

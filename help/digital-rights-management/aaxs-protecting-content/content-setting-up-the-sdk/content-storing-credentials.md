@@ -1,9 +1,9 @@
 ---
-seo-title: 秘密鍵証明書の保存
 title: 秘密鍵証明書の保存
-uuid: dbce523c-32d9-423f-bc95-39786f85fc29
+description: 秘密鍵証明書の保存
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%

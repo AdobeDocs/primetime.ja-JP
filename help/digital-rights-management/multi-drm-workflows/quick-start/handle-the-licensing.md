@@ -1,13 +1,10 @@
 ---
 description: ライセンスは、保護されたビデオコンテンツの再生をユーザーが許可または拒否する主なメカニズムです。 正当な（権利付与済みの）ユーザーに、ライセンス（キー）を発行して、コンテンツプロバイダーの暗号化されたコンテンツの特定の部分を復号化し、再生することができます。
-seo-description: ライセンスは、保護されたビデオコンテンツの再生をユーザーが許可または拒否する主なメカニズムです。 正当な（権利付与済みの）ユーザーに、ライセンス（キー）を発行して、コンテンツプロバイダーの暗号化されたコンテンツの特定の部分を復号化し、再生することができます。
-seo-title: ライセンス
 title: ライセンス
-uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---

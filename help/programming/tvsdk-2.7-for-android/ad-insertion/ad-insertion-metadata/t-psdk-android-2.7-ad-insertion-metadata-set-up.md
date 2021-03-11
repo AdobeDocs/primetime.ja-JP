@@ -1,13 +1,10 @@
 ---
 description: MetadataNodeクラスを拡張するヘルパークラスAuditudeSettingsを使用して、Adobe PrimetimeAd Decisioningメタデータを設定します。
-seo-description: MetadataNodeクラスを拡張するヘルパークラスAuditudeSettingsを使用して、Adobe PrimetimeAd Decisioningメタデータを設定します。
-seo-title: 広告挿入メタデータの設定
 title: 広告挿入メタデータの設定
-uuid: 5c807fad-4927-4547-b58c-f37e505e651c
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---

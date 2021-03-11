@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、QoS(QoS)イベントをディスパッチして、バッファリングやシークなど、QoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
-seo-description: TVSDKは、QoS(QoS)イベントをディスパッチして、バッファリングやシークなど、QoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
-seo-title: QoSイベント
 title: QoSイベント
-uuid: fd657cf0-c6d4-4e9a-b212-7d09d483cae9
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---

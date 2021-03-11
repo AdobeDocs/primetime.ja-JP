@@ -1,9 +1,9 @@
 ---
-seo-title: 個別化CA CRLの作成
 title: 個別化CA CRLの作成
-uuid: f722f3d1-517f-43e3-b892-f9287527fbe6
+description: 個別化CA CRLの作成
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->CRL配布ポイントのURLを設定するには、[!DNL AdobeInitial.properties] `cert.machine.crldp`フィールドを設定する必要があります。 この配布ポイントは、Primetime DRMによって有効性がチェックされ&#x200B;*まだ*&#x200B;されていません。 このURLが有効であることを確認する必要があります。 無効なURLによるエラーは、検証エラーがライセンスサーバーから表示されるまで表示されません。
+>CRL配布ポイントのURLを設定するには、[!DNL AdobeInitial.properties] `cert.machine.crldp`フィールドを設定する必要があります。 この配布ポイントは、Primetime DRMによって有効性の確認が&#x200B;*行われません*。 このURLが有効であることを確認する必要があります。 無効なURLによるエラーは、検証エラーがライセンスサーバーから表示されるまで表示されません。
 
 以下に、OpenSSLを使用してライセンスサーバーで使用できるCRLを作成する場合のサンプル手順を示します。 Production Indivicalization CAの秘密鍵証明書が取得されたら、これらの手順を安全な方法と環境で実行することをお勧めします。
 

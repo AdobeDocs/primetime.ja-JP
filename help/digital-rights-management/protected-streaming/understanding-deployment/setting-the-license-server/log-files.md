@@ -1,13 +1,10 @@
 ---
 description: 保護されたストリーミングアプリケーション用のAdobe PrimetimeDRMサーバーによって生成されるログファイルは、LicenseServer.LogRootで指定されたディレクトリにあります。
-seo-description: 保護されたストリーミングアプリケーション用のAdobe PrimetimeDRMサーバーによって生成されるログファイルは、LicenseServer.LogRootで指定されたディレクトリにあります。
-seo-title: ログファイル
 title: ログファイル
-uuid: 4498fe60-65af-4f99-8f9b-e85013d0c9e9
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -42,7 +39,7 @@ ht-degree: 0%
 
 ## グローバルログファイル{#section_1CFA90748142439C9F3BE380969539DA}
 
-グローバルログファイル`flashaccess-global.log`は、*LicenseServer.LogRoot*&#x200B;にあります。 ログには、サーバーが初期化された際に、Adobe PrimetimeDRM Java SDKまたはログメッセージが生成したログメッセージが含まれる場合があります。
+グローバルログファイル`flashaccess-global.log`は、*LicenseServer.LogRoot*&#x200B;にあります。 ログには、サーバーが初期化された際に、Adobe PrimetimeDRM Java SDKまたはログメッセージで生成されたログメッセージが含まれる場合があります。
 
 ## パーティションログファイル{#section_5660137CD6AA40519E72A4315534846B}
 

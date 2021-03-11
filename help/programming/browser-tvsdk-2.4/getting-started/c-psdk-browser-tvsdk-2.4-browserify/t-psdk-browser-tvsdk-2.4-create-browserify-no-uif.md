@@ -1,13 +1,10 @@
 ---
 description: ブラウザーTVSDKが提供するBrowserifyライブラリファイルをアプリで使用して、Browserify互換のプレイヤーを作成します。
-seo-description: ブラウザーTVSDKが提供するBrowserifyライブラリファイルをアプリで使用して、Browserify互換のプレイヤーを作成します。
-seo-title: UIフレームワークを使用しないブラウズ互換プレーヤーの作成
 title: UIフレームワークを使用しないブラウズ互換プレーヤーの作成
-uuid: c4315bc8-c75d-4dd9-8680-946c1197be1e
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---

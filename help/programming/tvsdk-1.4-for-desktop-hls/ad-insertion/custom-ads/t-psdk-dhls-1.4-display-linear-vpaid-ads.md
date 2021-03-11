@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、広告の時間内でのリニアVideo Player-Ad Interface Definition(VPAID)広告の表示をサポートしています。 VPAIDバージョン1.0はFlashが必要ですが、バージョン2.0はBrowser TVSDKおよびJavaScriptとも連携します。
-seo-description: TVSDKは、広告の時間内でのリニアVideo Player-Ad Interface Definition(VPAID)広告の表示をサポートしています。 VPAIDバージョン1.0はFlashが必要ですが、バージョン2.0はBrowser TVSDKおよびJavaScriptとも連携します。
-seo-title: 広告の時間にリニアVPAID広告を表示する
 title: 広告の時間にリニアVPAID広告を表示する
-uuid: 1f3a5426-79f5-49a1-a913-923708c09ade
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---

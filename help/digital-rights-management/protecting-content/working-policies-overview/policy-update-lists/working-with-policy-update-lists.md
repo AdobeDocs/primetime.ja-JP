@@ -1,9 +1,9 @@
 ---
-seo-title: DRMポリシーの更新リストの操作
 title: DRMポリシーの更新リストの操作
-uuid: 41f89671-81c6-4d3d-ac31-9c2a1980517a
+description: DRMポリシーの更新リストの操作
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%
@@ -41,13 +41,13 @@ DRMポリシーの更新リストを使用するには：
 1. `PolicyUpdateListFactory.generatePolicyUpdateList()`を呼び出して、新しいDRMポリシー更新リストを生成します。
 
    同様に、`PolicyUpdateEntry`を使用して、リストに対するDRMポリシーを更新できます。
-1. DRMポリシーの更新リストが既に存在する場合は、`PolicyUpdateList.getBytes()`を呼び出して、読み込み用にシリアル化できます。
+1. DRMポリシーの更新リストが既に存在する場合は、`PolicyUpdateList.getBytes()`を呼び出して、読み込むためにシリアル化できます。
 
    リストを読み込むには、`PolicyUpdateListFactory.loadPolicyUpdateList()`を呼び出し、シリアライズされたリストで渡します。
 1. 署名が有効で、リストが正しいライセンスサーバー証明書によって署名されていることを確認するには、`PolicyUpdateList.verifySignature()`を呼び出します。
 1. DRMポリシーID `String`を`PolicyUpdateList.isRevoked()`に渡して、エントリが失効したことを確認します。
 
-   または、リストを`HandlerConfiguration`に渡して、ライセンスが発行されるたびに&lt;a0/>に適用することもできます。
+   または、リストを`HandlerConfiguration`に渡して、ライセンスが発行されるたびにに適用することもできます。
 既存の`PolicyUpdateList`にさらにエントリを追加する場合は、既存のDRMポリシー更新リストを読み込む必要があります。 したがって、新しいDRM `PolicyUpdateListFactory`インスタンスを作成する必要があります。 `PolicyUpdateListFactory.addEntries`を呼び出して、古いリストのすべてのエントリを新しいリストに追加します。 `PolicyUpdateListFactory.addRevocationEntry`または`addUpdatedEntry`を呼び出して、新しい失効エントリまたは更新エントリをDRM PolicyUpdateListに追加します。
 
 DRMポリシーの更新リストの作成方法を示すサンプルコードについては、*リファレンス実装のコマンドラインツール* [!DNL samples]ディレクトリの`com.adobe.flashaccess.samples.policyupdatelist` `.CreatePolicyUpdateList`を参照してください。

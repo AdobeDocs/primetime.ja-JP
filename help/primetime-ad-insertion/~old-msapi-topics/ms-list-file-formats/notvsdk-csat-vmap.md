@@ -1,13 +1,10 @@
 ---
 description: クライアントがトラッキング情報を要求すると、マニフェストサーバーはフォーマットされたファイルを返します。 その形式と内容は、クエリパラメーターpttrackingversionの値に依存します
-seo-description: クライアントがトラッキング情報を要求すると、マニフェストサーバーはフォーマットされたファイルを返します。 その形式と内容は、クエリパラメーターpttrackingversionの値に依存します
-seo-title: 追跡URLのVMAP形式
 title: 追跡URLのVMAP形式
-uuid: e3173fad-caa2-49cb-9a65-631573812e52
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---

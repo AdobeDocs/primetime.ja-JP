@@ -1,9 +1,9 @@
 ---
-seo-title: 保護されたストリーミング用のAdobe PrimetimeDRMサーバーのアップグレード
 title: 保護されたストリーミング用のAdobe PrimetimeDRMサーバーのアップグレード
-uuid: 5c507ae3-d1d9-40ad-ba97-501ec92b45dc
+description: 保護されたストリーミング用のAdobe PrimetimeDRMサーバーのアップグレード
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%

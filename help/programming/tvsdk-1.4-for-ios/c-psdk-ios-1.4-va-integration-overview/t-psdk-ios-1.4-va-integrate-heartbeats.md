@@ -1,13 +1,10 @@
 ---
 description: ビデオの使用を追跡および分析するようにプレイヤーを設定できます。
-seo-description: ビデオの使用を追跡および分析するようにプレイヤーを設定できます。
-seo-title: ビデオ分析の初期化と設定
 title: ビデオ分析の初期化と設定
-uuid: 99c65d0b-ec3b-4a93-8dae-ef612112e510
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---

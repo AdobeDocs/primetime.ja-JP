@@ -1,13 +1,10 @@
 ---
 description: FlashランタイムTVSDKは、署名付きトークンを必要とします。このトークンを使用して、アプリケーションが存在するドメインでTVSDK APIを呼び出す権限があることを検証します。
-seo-description: FlashランタイムTVSDKは、署名付きトークンを必要とします。このトークンを使用して、アプリケーションが存在するドメインでTVSDK APIを呼び出す権限があることを検証します。
-seo-title: 署名付きトークンの読み込み
 title: 署名付きトークンの読み込み
-uuid: 8760eab3-3d6d-47c6-9aa7-f64f6aa5ddcf
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---

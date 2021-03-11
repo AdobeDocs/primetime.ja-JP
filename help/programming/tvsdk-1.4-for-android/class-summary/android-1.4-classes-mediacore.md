@@ -1,13 +1,10 @@
 ---
 description: Primetime Player APIを使用して、プレイヤーの動作をカスタマイズできます。
-seo-description: Primetime Player APIを使用して、プレイヤーの動作をカスタマイズできます。
-seo-title: Mediacoreクラス
 title: Mediacoreクラス
-uuid: 2d4e41e6-e689-4f79-9021-1ab8ce0fe40d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---

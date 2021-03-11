@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、VODストリーム内の広告コンテンツのプログラムによる削除および置換をサポートしています。
-seo-description: TVSDKは、VODストリーム内の広告コンテンツのプログラムによる削除および置換をサポートしています。
-seo-title: VODストリーム内の広告の削除と置換
 title: VODストリーム内の広告の削除と置換
-uuid: a1d0a8d3-7275-4d64-8996-6af257d5516a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '73'
 ht-degree: 0%
 
 ---

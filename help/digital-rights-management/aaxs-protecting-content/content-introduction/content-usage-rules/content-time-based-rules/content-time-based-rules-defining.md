@@ -1,9 +1,9 @@
 ---
-seo-title: 時間型ルールの定義
 title: 時間型ルールの定義
-uuid: 17c69869-ac81-4561-9fb6-b1c5c9c4006d
+description: 時間型ルールの定義
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Adobeアクセスでは、時間ベースのライセンス制限の「ソフト
 デフォルトの動作はソフト強制ですが、次のいずれかのタスクを実行してハード強制を有効にすることもできます。
 
 * ビデオプレーヤーで定期的にライセンスをポーリングし、時間制限がいずれも期限切れになっていないことを確認します。 これは、`DRMManager.loadVoucher(LOCAL_ONLY).`を呼び出すことで実現できます。エラーコードは、ローカルに保存されたライセンスが無効になったことを示します。
-* ユーザーが一時停止ボタンをクリックするたびに、現在のビデオタイムスタンプを記録し、`Netstream.stop().`再生ボタンをクリックしたときに、記録された場所をシークしてから、`Netstream.play()`を呼び出すことができます。
+* ユーザーが一時停止ボタンをクリックするたびに、現在のビデオタイムスタンプを記録し、`Netstream.stop().`再生ボタンをクリックしたときに、記録された場所を探して、`Netstream.play()`を呼び出すことができます。
 
 ## 開始日{#start-date}
 
@@ -32,7 +32,7 @@ Adobeアクセスでは、時間ベースのライセンス制限の「ソフト
 
 使用例：配布権限の終了を反映するには、絶対的な有効期限を使用します。
 
-## 相対終了日{#relative-end-date}
+## 相対的な終了日{#relative-end-date}
 
 ライセンスの有効期限をパッケージ化の日付を基準に指定します。
 

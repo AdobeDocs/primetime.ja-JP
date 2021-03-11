@@ -1,9 +1,9 @@
 ---
-seo-title: 設定ファイルのプロパティ
 title: 設定ファイルのプロパティ
-uuid: aec5fee7-4d77-4299-8d85-3e9042b2bbd1
+description: 設定ファイルのプロパティ
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1121'
 ht-degree: 0%
@@ -93,7 +93,7 @@ ht-degree: 0%
       <li id="li_25CAF96C27F34848A95B2E3693847C71"><span class="codeph"> 開始</span> （必須） -開始間隔は、最後の同期から数分間、クライアントが開始とサーバと同期する必要があることを指定します。 </li> 
       <li id="li_CC9068CFE75645029C947C9E1B53351F"><span class="codeph"> force</span> （オプション） — 強制同期の確率は、クライアントが再生中に強制的に同期メッセージを送信する確率(0 ～ 100)です。 </li> 
       <li id="li_C31A6250F19348FBB8B7569D00C6314E"><span class="codeph"> hardStop</span> （オプション） — ハードストップ間隔は、同期できない場合にクライアントの再生が失敗するまでの時間（分単位）です。設定する場合は、開始間隔より大きい値を指定する必要があります。 </li> 
-     </ul>更新中に、残りの引数を指定せずに<span class="codeph"> -sync</span>を使用し、同期要件を削除します。 </p> </td> 
+     </ul>更新時に、残りの引数を指定せずに<span class="codeph"> -sync</span>を使用し、同期要件を削除します。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.useRootLicense</span> </td> 

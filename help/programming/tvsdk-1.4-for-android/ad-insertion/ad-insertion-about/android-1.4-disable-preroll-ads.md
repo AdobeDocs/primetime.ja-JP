@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: プリロール広告の無効化
 title: プリロール広告の無効化
-uuid: 2e307a58-49f2-43d6-908b-97684ad6e3d3
+description: プリロール広告の無効化
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '45'
+source-wordcount: '43'
 ht-degree: 0%
 
 ---

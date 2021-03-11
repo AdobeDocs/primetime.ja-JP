@@ -1,13 +1,10 @@
 ---
 description: '環境を反映するようにサーバーのプロパティを設定する必要があります。 これを行うには、次のいずれかを使用します '
-seo-description: '環境を反映するようにサーバーのプロパティを設定する必要があります。 これを行うには、次のいずれかを使用します '
-seo-title: サーバー環境へのプロパティの適用
 title: サーバー環境へのプロパティの適用
-uuid: a1ee0d6c-b5e7-4689-b7c8-b155176faf1c
 translation-type: tm+mt
-source-git-commit: d8e4c39c297d69b154baf0b4d67cf09b5cf0a9d4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -28,7 +25,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >[!DNL AdobeInitial.properties]ファイルは、[!DNL flashaccess-i15n.properties]ファイルで行った以前のプロパティ設定を失うことなく、アプリケーションのWARファイルを更新できるので、Adobeでは&lt;a0/>ファイルを使用することをお勧めします。
+   >[!DNL AdobeInitial.properties]ファイルは、[!DNL flashaccess-i15n.properties]ファイルで行った以前のプロパティ設定を失うことなく、アプリケーションのWARファイルを更新できるので、Adobeではファイルを使用することをお勧めします。
 
 * Java Systemプロパティのメカニズム。
 

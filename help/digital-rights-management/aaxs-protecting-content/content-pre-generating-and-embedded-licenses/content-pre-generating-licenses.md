@@ -1,9 +1,9 @@
 ---
-seo-title: 事前生成ライセンス
 title: 事前生成ライセンス
-uuid: 31430753-11f1-4ce5-b402-cf4279119a05
+description: 事前生成ライセンス
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Rootライセンスを生成する際に、コンテンツのメタデータを�
 
 ポリシーにドメインバインドライセンスが必要な場合は、`setDomainCAs()`を使用して、ライセンスサーバーがドメイントークンを受け入れるドメイン発行者を指定します。 ライセンス受信者を検証するには、1つ以上のドメインCA証明書を指定する必要があります。
 
-iOSデバイスに対してリモートキー配信がポリシーで必要な場合、Chained Leafが生成されていない限り、`setKeyServerCertificate()`を使用してキーサーバー証明書を指定する必要があります。
+iOSデバイスに対してリモートキー配信がポリシーで必要な場合、Chained Leafが生成されない限り、`setKeyServerCertificate()`を使用してキーサーバー証明書を指定する必要があります。
 
 ライセンスを生成するには、`generateLicense()`を呼び出し、ライセンスの種類（リーフまたはルート）と1つ以上の受信者証明書を指定します。 受信者証明書は、ポリシーで指定されている要件に応じて、コンピューター証明書またはドメイン証明書になります。 Chained Leafを生成する場合、受信者は不要です。 ライセンスが生成された後は、ポリシーで指定された使用規則を上書きできます。 最後に、`signLicense()`を呼び出してライセンスに署名し、`PreGeneratedLicense`のインスタンスを取得します。 ライセンスをファイルに保存（`getBytes()`を使用してシリアライズされたライセンスを取得）したり、暗号化されたコンテンツに埋め込んだりできるようになりました。 「[ライセンスの埋め込み](../../aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-embedding-licenses.md)」を参照してください。
 

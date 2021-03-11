@@ -1,9 +1,9 @@
 ---
-seo-title: パフォーマンスの調整
 title: パフォーマンスの調整
-uuid: db8889c7-ecf5-4551-a6fc-1d3ab992b9ff
+description: パフォーマンスの調整
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 * Adobe PrimetimeDRMライセンスサーバーの起動
 * [!DNL AdobePolicyManager]ユーティリティを使用したポリシーの生成
-* DRM保護されたコンテンツをAdobeメディアサーバーまたはPrimetime OfflinePackagerでパッケージ化する
+* DRM保護されたコンテンツをAdobe MediumサーバーまたはPrimetime OfflinePackagerでパッケージ化する
 
 これらの処理の遅延は、多くの場合、Linuxサーバ上の低エントロピープールの結果です。
 

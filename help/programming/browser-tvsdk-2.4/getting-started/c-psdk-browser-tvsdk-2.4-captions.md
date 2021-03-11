@@ -1,13 +1,10 @@
 ---
 description: ビデオコンテンツの再生時にキャプションを表示できます。
-seo-description: ビデオコンテンツの再生時にキャプションを表示できます。
-seo-title: キャプション
 title: キャプション
-uuid: 4dedcedc-50e5-4983-bb09-3f316337117e
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '55'
 ht-degree: 3%
 
 ---

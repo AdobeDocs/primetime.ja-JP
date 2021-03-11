@@ -1,13 +1,11 @@
 ---
 title: Adobe PrimetimeAPIリファレンス
-seo-title: Adobe PrimetimeAPIリファレンス
 description: APIを使用すると、機能的なアプリケーションや統合をすばやく簡単に作成できます。
-seo-description: APIを使用すると、機能的なアプリケーションや統合をすばやく簡単に作成できます。
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: 1841f64e6f7a839f997b0710661898fda0d69bd6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---

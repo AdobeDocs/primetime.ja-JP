@@ -1,14 +1,11 @@
 ---
 description: デバイス画面がオフになっていて、オンになっている場合は、アプリケーションでTVSDK MediaPlayerを一時停止および復元する必要があります。
 keywords: SurfaceView;Suspend;Restore;BroadcastReceiver
-seo-description: デバイス画面がオフになっていて、オンになっている場合は、アプリケーションでTVSDK MediaPlayerを一時停止および復元する必要があります。
-seo-title: MediaPlayerの中断と復元
 title: MediaPlayerの中断と復元
-uuid: 624a87df-df65-4358-915b-c09a3a4fa224
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: クローズドキャプションは、サウンドが聞こえない場合、またはビューアが耳に不自由な場合に、ビデオのオーディオ部分をテキストとして画面に表示します。
-seo-description: クローズドキャプションは、サウンドが聞こえない場合、またはビューアが耳に不自由な場合に、ビデオのオーディオ部分をテキストとして画面に表示します。
-seo-title: 使用可能なトラックの中から現在のキャプショントラックを選択
 title: 使用可能なトラックの中から現在のキャプショントラックを選択
-uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
-source-git-commit: 53924aa8ba90555d58d15ee10fb14221c7dffaff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '230'
 ht-degree: 1%
 
 ---

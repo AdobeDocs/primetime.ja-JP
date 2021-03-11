@@ -1,12 +1,10 @@
 ---
-description: 'null'
-keywords: hard stop
-seo-description: 'null'
-seo-title: 設定プロパティ
+keywords: ハードストップ
 title: 設定プロパティ
-uuid: 216921d1-a9c1-4650-9dce-c025836986e5
+description: 設定プロパティ
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 0%
@@ -106,7 +104,7 @@ ht-degree: 0%
      <ul id="ul_a5j_q4t_44"> 
       <li id="li_FD2C0C6DA19E455AA1917A56E09A7F84">（必須）<span class="codeph">開始</span>は、クライアントが最後の同期から指定された分間に開始と同期する必要があることを示します。 </li> 
       <li id="li_9DEBC57385A442C3929AE3D0E3FA8992">（オプション）<span class="codeph"> force</span>は、再生中にクライアントが強制的に同期メッセージを送信する必要がある確率(0 ～ 100)です。 </li> 
-     </ul>更新中に、残りの引数を指定せずに<span class="codeph"> -sync</span>を使用し、同期要件を削除します。 </p> </td> 
+     </ul>更新時に、残りの引数を指定せずに<span class="codeph"> -sync</span>を使用し、同期要件を削除します。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.useRootLicense</span> </td> 

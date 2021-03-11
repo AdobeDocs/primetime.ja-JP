@@ -1,13 +1,10 @@
 ---
 description: Adobe Primetimeソフトウェア開発キット(TVSDK)は、アプリケーションに高度なビデオ再生機能を追加できるツールキットです。
-seo-description: Adobe Primetimeソフトウェア開発キット(TVSDK)は、アプリケーションに高度なビデオ再生機能を追加できるツールキットです。
-seo-title: 概要
 title: 概要
-uuid: 0b3fb26c-f3d1-4cf2-9859-89b052501eb3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---

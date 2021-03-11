@@ -1,13 +1,10 @@
 ---
 description: AppleのDRMソリューションであるApple FairPlay StreamingをTVSDKアプリケーションに実装できます。
-seo-description: AppleのDRMソリューションであるApple FairPlay StreamingをTVSDKアプリケーションに実装できます。
-seo-title: TVSDKアプリケーションでのApple FairPlayの有効化
 title: TVSDKアプリケーションでのApple FairPlayの有効化
-uuid: fafffdb9-09f9-45fb-9957-3c6e95ed55f9
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---

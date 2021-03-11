@@ -1,13 +1,10 @@
 ---
 description: フラグメントやトラックなど、ダウンロードされたリソースに関するQoS(Quality of Service)情報を、LoadInformationクラスから読み取ることができます。
-seo-description: フラグメントやトラックなど、ダウンロードされたリソースに関するQoS(Quality of Service)情報を、LoadInformationクラスから読み取ることができます。
-seo-title: 読み込み情報を使用したフラグメントレベルでの追跡
 title: 読み込み情報を使用したフラグメントレベルでの追跡
-uuid: 41fb2b90-3531-4cc5-bf9b-01ccae04d2fd
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---

@@ -1,9 +1,9 @@
 ---
-seo-title: 個別のサーバー証明書の取得
 title: 個別のサーバー証明書の取得
-uuid: ae1e848e-0a19-4ec3-8419-ce5fd783c279
+description: 個別のサーバー証明書の取得
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%

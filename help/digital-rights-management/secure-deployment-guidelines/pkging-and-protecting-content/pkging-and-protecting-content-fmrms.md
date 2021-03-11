@@ -1,13 +1,10 @@
 ---
 description: FlashメディアRights ManagementServer 1.xとAdobe PrimetimeDRMは、異なるメタデータを使用してコンテンツをパッケージ化し、ライセンスを要求します。 Primetime DRMでFMRMSバージョン1.xコンテンツを使用するには、メタデータを変換する必要があります。
-seo-description: FlashメディアRights ManagementServer 1.xとAdobe PrimetimeDRMは、異なるメタデータを使用してコンテンツをパッケージ化し、ライセンスを要求します。 Primetime DRMでFMRMSバージョン1.xコンテンツを使用するには、メタデータを変換する必要があります。
-seo-title: FlashメディアRights Managementサーバー1.xとの互換性の確保
 title: FlashメディアRights Managementサーバー1.xとの互換性の確保
-uuid: dd70941e-9015-4fb0-b265-557b6252e051
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---

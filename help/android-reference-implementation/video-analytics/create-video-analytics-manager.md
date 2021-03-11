@@ -1,13 +1,10 @@
 ---
 description: ビデオ分析マネージャーの作成
-seo-description: ビデオ分析マネージャーの作成
-seo-title: ビデオ分析マネージャーの作成
 title: ビデオ分析マネージャーの作成
-uuid: d72e1dfe-df70-47cc-9e00-bd09017d6127
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---

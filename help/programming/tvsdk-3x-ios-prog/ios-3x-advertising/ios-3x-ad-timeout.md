@@ -1,13 +1,10 @@
 ---
 description: Adobe Primetimeのad decisioningインターフェイスを使用して、VODおよびライブ/リニアコンテンツに広告を挿入できます。
-seo-description: Adobe Primetimeのad decisioningインターフェイスを使用して、VODおよびライブ/リニアコンテンツに広告を挿入できます。
-seo-title: 広告の要件
 title: 広告の要件
-uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
-source-git-commit: 48ad8aad89701f8414e752a4d4e41da252d28d62
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '123'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオブジェクトに以下のビデオ再生通知を返します。
-seo-description: AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオブジェクトに以下のビデオ再生通知を返します。
-seo-title: NATIVE_ERRORビデオ再生値
 title: NATIVE_ERRORビデオ再生値
-uuid: 4916f96c-857a-4e15-8d91-9c2f949ce783
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1339'
 ht-degree: 6%
 
 ---
@@ -37,7 +34,7 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
    <td colname="col3"> 操作が成功しました。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 1 </td> 
+   <td colname="col1"> 3 </td> 
    <td colname="col2"> <span class="codeph"> ASYNC_OPERATION_IN_PROGRESS</span> </td> 
    <td colname="col3"> 非同期操作。 操作の要求が行われました。 成功/失敗に関する情報は、後で入手できます。 </td> 
   </tr> 
@@ -342,7 +339,7 @@ AVEのVideo Encoderインターフェイスは、NATIVE_ERRORメタデータオ�
    <td colname="col3"> ポストロール挿入は、ライブメディアでは使用できません。 ただし、サーバーがメディアを完了とマークした後でも使用できます。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 81 </td> 
+   <td colname="col1"> 61 </td> 
    <td colname="col2"><span class="codeph"> INTERNAL_ERROR</span> </td> 
    <td colname="col3"> 非常にまれな問題であり、常に発生しないはずです。 </td> 
   </tr> 

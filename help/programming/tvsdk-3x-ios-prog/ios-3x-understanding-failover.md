@@ -1,13 +1,10 @@
 ---
 description: バリアントプレイリストに同じビットレートの複数のレンディションがあり、そのうちの1つのレンディションが機能を停止すると、フェイルオーバー処理が発生します。 TVSDKは、レンディションを切り替えます。
-seo-description: バリアントプレイリストに同じビットレートの複数のレンディションがあり、そのうちの1つのレンディションが機能を停止すると、フェイルオーバー処理が発生します。 TVSDKは、レンディションを切り替えます。
-seo-title: フェイルオーバー
 title: フェイルオーバー
-uuid: 064886ab-afa2-4afc-b795-d094b31934b8
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: イベントリスナーをBrowser TVSDKに登録する場合、リスンするイベントタイプとコールバックの名前を指定します。 イベントが発生すると、Browser TVSDKがコールバックを呼び出し、適切な型のイベントオブジェクトを渡します。
-seo-description: イベントリスナーをBrowser TVSDKに登録する場合、リスンするイベントタイプとコールバックの名前を指定します。 イベントが発生すると、Browser TVSDKがコールバックを呼び出し、適切な型のイベントオブジェクトを渡します。
-seo-title: コールバックのイベントタイプとクラス
 title: コールバックのイベントタイプとクラス
-uuid: 13d7e939-ff45-4a52-bcbe-70abb56ac205
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---

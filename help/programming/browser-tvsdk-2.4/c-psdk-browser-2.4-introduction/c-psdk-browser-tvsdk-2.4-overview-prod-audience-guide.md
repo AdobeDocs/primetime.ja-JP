@@ -1,13 +1,10 @@
 ---
 description: このガイドは、ブラウザーTVSDKを使用したビデオプレーヤーアプリケーションの開発方法に関する情報を提供します。
-seo-description: このガイドは、ブラウザーTVSDKを使用したビデオプレーヤーアプリケーションの開発方法に関する情報を提供します。
-seo-title: 製品の概要とオーディエンス
 title: 製品の概要とオーディエンス
-uuid: 902baabf-5e85-4d9c-8b5a-70ec0842e1bc
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---

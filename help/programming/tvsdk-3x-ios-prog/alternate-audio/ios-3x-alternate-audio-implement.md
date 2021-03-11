@@ -1,13 +1,10 @@
 ---
 description: 遅延バインディングオーディオは、PTMediaPlayerを使用して、M3U8 HLSプレイリストで指定され、複数の代替オーディオストリームを含むことができるビデオを再生します。
-seo-description: 遅延バインディングオーディオは、PTMediaPlayerを使用して、M3U8 HLSプレイリストで指定され、複数の代替オーディオストリームを含むことができるビデオを再生します。
-seo-title: 代替オーディオトラックへのアクセス
 title: 代替オーディオトラックへのアクセス
-uuid: 2915a74f-5ec3-457e-890d-5c79be39f37a
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---

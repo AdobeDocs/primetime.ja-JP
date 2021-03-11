@@ -1,17 +1,13 @@
 ---
 title: TVSDK 1.4 for Androidリリースノート
-seo-title: TVSDK 1.4 for Androidリリースノート
 description: Android向けTVSDK 1.4リリースノートでは、TVSDK Android 1.4の新機能や変更点、解決済みで既知の問題、デバイスの問題について説明します。
-seo-description: Android向けTVSDK 1.4リリースノートでは、TVSDK Android 1.4の新機能や変更点、解決済みで既知の問題、デバイスの問題について説明します。
-uuid: 8bd8ee42-7a1b-4c14-aad9-22804743e505
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: f1ebc1a8-185a-493a-9c00-a6102dffb128
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '7830'
+source-wordcount: '7802'
 ht-degree: 0%
 
 ---
@@ -317,7 +313,7 @@ Adobeビデオエンジン(AVE)がSUSPENDED状態から再開された場合、D
 **バージョン1.4.31 (1675)**
 
 * Zendesk #21974 - Nullオブジェクトによる例外
-   * AdIndexがnullの場合に増加することはまれです。 これは、プリロールadBreakに対して誤ったAPI呼び出しが受け取られたことが原因の可能性があります。 このような例外が発生しないようにデータ型を修正しました
+   * AdIndexがnullの場合に増加することはまれです。 これは、プリロールadBreakに対して誤ったAPI呼び出しが受け取られたことが原因の可能性があります。 このような例外を避けるためにデータ型を修正しました
 
 * Zendesk #24714 — 無関係なログを無効にする
    * TVSDKを更新し、無関係なログを無効にしました
@@ -342,7 +338,7 @@ Adobeビデオエンジン(AVE)がSUSPENDED状態から再開された場合、D
 **バージョン1.4.29 (1653)**
 
 * Zendesk #21200 — アプリがバックグラウンドにある場合、プレイヤーは中断状態から回復しません。
-ストリーム切り替えがシグナル化された後にプレイヤーが停止した場合、解像度は、プレイヤーが停止状態から復帰する際に、以前の位置に復元する代わりに、ストリーム切り替えを行うことを可能にする。
+ストリーム切り替えがシグナル化された後にプレイヤーが停止した場合、解像度は、プレイヤーが停止状態から復帰する際に、以前の位置に復元する代わりに、ストリーム切り替えを実行することを可能にする。
 
 * Zendesk #23412 — 広告の時間の最後の3秒以内に広告をクリックして表示すると、プレイヤーが黒いボックスで動かなくなる
 この問題はZendesk #21200と同じ問題です。

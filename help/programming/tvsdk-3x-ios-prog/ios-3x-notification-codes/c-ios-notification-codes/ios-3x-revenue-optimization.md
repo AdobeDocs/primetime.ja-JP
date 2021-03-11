@@ -1,12 +1,10 @@
 ---
 description: '次の表に、売上高最適化通知の詳細を示します。 '
-seo-description: '次の表に、売上高最適化通知の詳細を示します。 '
-seo-title: 売上高最適化コード
 title: 売上高最適化コード
 translation-type: tm+mt
-source-git-commit: df3d60874701383325be1afdd1ec5fe036f855f8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -37,7 +35,7 @@ ht-degree: 0%
 | **AD_OPPORTUNITY_RESOLVE_** FAILED広告リゾルバーがMediaPlayerClient::notifyFailed()を呼び出したときにTVSDK内で検出されます。データを入力する必要がある | opportunityId、notificationAD |
 | **AD_RESOURCE_** LOADispatchedは、広告リソースがURLで取得された場合に発生します。responseStartTime：リクエストが最初に開始された時のUNIXタイムスタンプ。 responseTotalTime：応答の読み込みに要した合計時間（秒）です。 responseStatus：リソースのフェッチ中に発生したステータスコード。 ステータス：「error」または「success」 referrerAdId：このリソースのフェッチを要求した参照元広告id（存在する場合）。 referrerUrl：このリソースの取得を要求した参照URL。 errorMessage：ステータスが「error」の場合、エラーの理由はここにあります。 | opportunityId, resourceType, responseTotalTime, responseStatus, responseStartTime, status, errorMessage, url, referrerURL, referrerAdId |
 | **CRSがアセットに適用された場合にAD_RESOURCE_LOAD_** CRSDispatched in TVSDK、およびm3u8の応答。resourceType:always &quot;crs&quot;. responseStartTime：リクエストが最初に開始された時のUNIXタイムスタンプ。 responseTotalTime：応答の読み込みに要した合計時間（秒）です。 responseStatus：リソースのフェッチ中に発生したステータスコード。 ステータス：「error」または「success」。 errorMessage：ステータスが「error」の場合、エラーの理由はここにあります。 mediaFileUrl：選択された元のメディアファイルのURL。 mediaFileBitrate：選択されたメディアファイルのビットレート。 mediaFileMimeType:選択されたメディアファイルのMIMEタイプ。 url：最終的なアセットのURL。 | opportunityId、resourceType、responseTotalTime、responseStatus、responseStartTime、status、errorMessage、url、mediaFileURL、mediaFileBitrate、mediaFileMimeType、url |
-| **TVSDKで、adBreakがタイムラインに配置された後にAD_TIMELINE_** PLACEDispatchedを実行します。このイベントは、広告の時間ごとに1回発生します。 proposedTime：広告の時間が配置されるようにリクエストされた時間。 actualTime：広告の時間が実際に配置された時間。 proposedDuration：挿入用に要求された広告の時間の長さ。 ライブコンテンツの場合は、これがキュー期間になります。 VODコンテンツの場合、通常は —1になります。 actualDuration：挿入される広告の時間の実際の時間。 元のストリームタイムラインで追加または置き換えられた、すべての広告の合計継続時間（各セグメントの継続時間で定義）として計算されます。 proposedAds：提案された広告の時間内の広告の数。 totalAds：正常に配置された広告の数。 広告…n：広告が正常に挿入されると、ここに挿入されます。 広告マニフェスト全体の情報をAD_OPPORTUNITY_RESOLVE_PROCESSから取得できる | opportunityId, status, errorMessage, proposedTime, proposedDuration, actualTime, proposedAds, totalAds, ads_id, ads_type, ads_duration, ads_url |
+| **TVSDKで、adBreakがタイムラインに配置された後にAD_TIMELINE_** PLACEDispatchedを実行します。このイベントは、広告の時間ごとに1回発生します。 proposedTime：広告の時間が配置されるようにリクエストされた時間。 actualTime：広告の時間が実際に配置された時間。 proposedDuration：挿入用に要求された広告の時間の長さ。 ライブコンテンツの場合は、これがキュー期間になります。 VODコンテンツの場合、通常は —1になります。 actualDuration：挿入される広告の時間の実際の時間。 元のストリームタイムラインで追加または置き換えられた、すべての広告の合計継続時間（各セグメントの継続時間で定義）として計算されます。 proposedAds：提案された広告の時間内の広告の数。 totalAds：正常に配置された広告の数。 広告…n：広告が正常に挿入されると、ここに挿入されます。 広告マニフェスト全体の情報をAD_OPPORTUNITY_RESOLVE_PROCESSから取得できる | opportunityId, status, errorMessage, proposedTime, proposedDuration, actualTime, proposedDuration, proposedAds, totalAds, ads_id, ads_type, ads_duration, ads_url |
 | **AD_PLAYBACK_** STARTD広告の再生開始後にTVSDKにディスパッチされます。 | clientTimestamp,イベント, id, url, duration, type, opportunityId, clientId |
 | **AD_PLAYBACK_** COMPLETED広告の再生完了後にTVSDKでディスパッチされる。 | clientTimestamp,イベント, id, url, duration, type, opportunityId, clientId |
 | **ADBREAK_PLAYBACK_** STARTDadbreak開始の再生時にTVSDKでディスパッチされます。 | clientTimestamp,イベント, opportunityId, duration, time, clientId |

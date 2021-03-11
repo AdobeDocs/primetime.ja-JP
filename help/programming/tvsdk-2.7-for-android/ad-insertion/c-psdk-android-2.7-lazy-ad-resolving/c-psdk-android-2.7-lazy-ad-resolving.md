@@ -1,14 +1,11 @@
 ---
 description: 広告の解決と広告の読み込みによって、開始への再生を待つユーザーに許容できない遅延が発生する可能性があります。 遅延広告読み込み機能と遅延広告解決機能を使用すると、この起動遅延を減らすことができます。
-keywords: Lazy;Ad resolving;Ad loading
-seo-description: 広告の解決と広告の読み込みによって、開始への再生を待つユーザーに許容できない遅延が発生する可能性があります。 遅延広告読み込み機能と遅延広告解決機能を使用すると、この起動遅延を減らすことができます。
-seo-title: 遅延広告解決
+keywords: 遅延；広告解決；広告読み込み
 title: 遅延広告解決
-uuid: cf9ba788-b83f-43aa-94c4-db391d92a77b
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---

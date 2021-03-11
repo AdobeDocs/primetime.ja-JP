@@ -1,13 +1,10 @@
 ---
 description: TVSDKベースの送信者アプリから任意のストリームをキャストし、そのストリームをブラウザーTVSDKのChromecastで再生できます。
-seo-description: TVSDKベースの送信者アプリから任意のストリームをキャストし、そのストリームをブラウザーTVSDKのChromecastで再生できます。
-seo-title: Google Castアプリ（ブラウザーTVSDK用）
 title: Google Castアプリ（ブラウザーTVSDK用）
-uuid: 018143e2-143a-4f88-97c6-4b10a2083f9e
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---

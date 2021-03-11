@@ -1,13 +1,10 @@
 ---
 description: HLSストリームの設定と再生操作を処理するPlaybackManagerを作成します。 その他の設定は不要です。
-seo-description: HLSストリームの設定と再生操作を処理するPlaybackManagerを作成します。 その他の設定は不要です。
-seo-title: ビデオ再生の有効化
 title: ビデオ再生の有効化
-uuid: ddc0defa-c40f-4ee6-a69f-d5eeca6c2fce
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---

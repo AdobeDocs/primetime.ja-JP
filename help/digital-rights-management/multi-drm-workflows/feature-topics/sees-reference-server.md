@@ -1,13 +1,10 @@
 ---
 description: ライセンス認証とポリシーの適用を調整する1つの方法は、エンタイトルメントサーバーにこれらの機能を組み込むことです。 Adobeは、独自のサーバーを構築する際に使用できるSEES参照エンタイトルメントサーバーを提供します。
-seo-description: ライセンス認証とポリシーの適用を調整する1つの方法は、エンタイトルメントサーバーにこれらの機能を組み込むことです。 Adobeは、独自のサーバーを構築する際に使用できるSEES参照エンタイトルメントサーバーを提供します。
-seo-title: リファレンスサーバーのサンプルExpressPlayエンタイトルメントサーバー(SEE)
 title: リファレンスサーバーのサンプルExpressPlayエンタイトルメントサーバー(SEE)
-uuid: 99e42f76-7730-42fc-a9a9-f6396ac12c02
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---

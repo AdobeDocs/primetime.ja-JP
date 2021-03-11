@@ -1,13 +1,10 @@
 ---
 description: PTSDKConfigクラスを使用して、TVSDK内でグローバルにカスタムタグ名を設定できます。
-seo-description: PTSDKConfigクラスを使用して、TVSDK内でグローバルにカスタムタグ名を設定できます。
-seo-title: タグのConfigクラスメソッド
 title: タグのConfigクラスメソッド
-uuid: 1d3651a0-3b70-4d3a-8ced-663a9dad7205
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---

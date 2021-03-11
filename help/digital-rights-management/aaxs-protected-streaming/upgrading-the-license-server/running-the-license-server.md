@@ -1,13 +1,10 @@
 ---
 description: 保護されたストリーミング用にAdobe Access Serverを実行しているサーバーをアップグレードするには、アプリケーションサーバーにデプロイされているflashaccessserver.warファイルを、最新のAdobeアクセスに含まれているファイルに置き換えます。 上記の新しい設定オプションを使用する場合は、サーバーのflashaccess-tenant.xmlを更新します。 また、jsafe.dllまたはlibjsafe.soを最新のAdobeアクセスに含まれるバージョンに更新する必要があります。
-seo-description: 保護されたストリーミング用にAdobe Access Serverを実行しているサーバーをアップグレードするには、アプリケーションサーバーにデプロイされているflashaccessserver.warファイルを、最新のAdobeアクセスに含まれているファイルに置き換えます。 上記の新しい設定オプションを使用する場合は、サーバーのflashaccess-tenant.xmlを更新します。 また、jsafe.dllまたはlibjsafe.soを最新のAdobeアクセスに含まれるバージョンに更新する必要があります。
-seo-title: 保護されたストリーミング用にAdobe Access Serverを実行する
 title: 保護されたストリーミング用にAdobe Access Serverを実行する
-uuid: 3819500d-ad2f-49eb-8aa4-e50a55461608
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---

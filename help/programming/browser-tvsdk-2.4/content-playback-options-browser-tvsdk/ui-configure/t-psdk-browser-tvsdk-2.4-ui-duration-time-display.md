@@ -1,13 +1,10 @@
 ---
 description: ブラウザーTVSDKを使用して、シークバーに表示できるメディアに関する情報を取得できます。
-seo-description: ブラウザーTVSDKを使用して、シークバーに表示できるメディアに関する情報を取得できます。
-seo-title: ビデオの長さ、現在時間および残り時間の表示
 title: ビデオの長さ、現在時間および残り時間の表示
-uuid: 58341c5f-1d53-4f65-92c8-5bde22f61519
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---

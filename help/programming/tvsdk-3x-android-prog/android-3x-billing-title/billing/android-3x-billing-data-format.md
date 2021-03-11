@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、請求指標をXML形式でAdobeに送信します。
-seo-description: TVSDKは、請求指標をXML形式でAdobeに送信します。
-seo-title: 請求指標の送信
 title: 請求指標の送信
-uuid: c925800c-0fb7-4781-94e8-7e7ad94bb965
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---

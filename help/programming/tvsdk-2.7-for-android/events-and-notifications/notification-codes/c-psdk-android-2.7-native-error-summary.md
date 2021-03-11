@@ -1,9 +1,9 @@
 ---
-seo-title: NATIVE_ERROR通知の詳細
 title: NATIVE_ERROR通知の詳細
-uuid: 750ee0e2-15d4-4602-9574-94015a6e1b57
+description: NATIVE_ERROR通知の詳細
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '6888'
 ht-degree: 2%
@@ -308,7 +308,7 @@ AdobeビデオエンジンのVideo Encoderインターフェイスは、以下�
   <tr> 
    <td colname="col1"> 3314 </td> 
    <td colname="col2"><span class="codeph"> AAXS_CorruptedDRMMetadata  </span> </td> 
-   <td colname="col3"> <p>このエラーは、多くの場合、コンテンツがテストPKI証明書でパッケージ化され、プレイヤーが実稼働用PKIで構築されているか、その逆であることを示しています。 subErrorIdには、クライアント固有のエラーまたは行エラーが含まれます。 </p> 
+   <td colname="col3"> <p>このエラーは、多くの場合、コンテンツがテストPKI証明書でパッケージ化され、プレイヤーが実稼働用PKIで構築されているか、その逆であることを示します。 subErrorIdには、クライアント固有のエラーまたは行エラーが含まれます。 </p> 
     <ul id="ul_A122EF304CAF48A8B4DA1E3F4413E29B"> 
      <li id="li_A9A1A5B23E884C22A71E2DE7535FEB3B">ディストリビューターのソフトウェアは、エラーの原因となったコンテンツの部分をログに記録する必要があります。 </li> 
      <li id="li_7AD7F13A4B1B4998A7E49664E7645815">配布者は、エラーが特定のコンテンツで再現できることを確認する必要があります。 <p>破損したコンテンツを再パッケージ化する必要がある場合があります。 </p> </li> 
@@ -371,8 +371,8 @@ AdobeビデオエンジンのVideo Encoderインターフェイスは、以下�
    <td colname="col2"><span class="codeph"> AAXS_DeviceBindingFailed  </span> </td> 
    <td colname="col3"> <p>デバイスが、初期化時に存在した構成と一致していないようです。 subErrorIdには、クライアント固有または行エラーが含まれます。 </p> <p>ディストリビュータのソフトウェアは、次のタスクのいずれかを完了する必要があります。 
      <ul id="ul_444401051A2E407B95BC44491E9BB71C"> 
-      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>デバイスがFlash Playerを使用せず、AIR、iOSなどを使用している場合は、<span class="codeph"> DRMManager.resetDRMVouchers()</span>を呼び出します。 </p> <p>この問題が開発段階のiOSで発生する場合は、開発者に、サードパーティ製のプレリリース配布システム（HockeyAppなど）からダウンロードしたビルドとXcodeからローカルビルドを切り替えた場合に、この問題が発生するかどうかを確認してください。 HockeyAppから配布されたビルドとXcodeからのビルドを切り替えた場合、以前のインストールの属性が完全に上書きされるわけではありません。 この状況では、3322エラーが発生する可能性があります。 </p> <p>この問題を解決するには、開発者は新しいビルドをインストールする前に、デバイスから古いビルドを削除する必要があります。 </p> </li> 
-      <li id="li_A5C9633F11584C788A2D9A23CC18FA6D">Flash Playerを使用していて、3322または3346のエラーコードで使用できない場合は、Adobeの説明を参照して、<a href="https://forums.adobe.com/message/5535907#5535907" format="https" scope="external"> DRM Error 3322/3346/3368 on Chrome (Info-Bar Problems)&lt;a1&gt;.</a> </li> 
+      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>デバイスがFlash Playerを使用せず、AIR、iOSなどを使用している場合は、<span class="codeph"> DRMManager.resetDRMVouchers()</span>を呼び出します。 </p> <p>この問題が開発段階のiOSで発生する場合は、開発者に、サードパーティ製のプレリリース配布システム（HockeyAppなど）からダウンロードしたビルドとXcodeからローカルビルドを切り替えた場合に、この問題が発生するかどうかを確認してください。 HockeyAppから配布されたビルドとXcodeからのビルドを切り替えた場合、以前のインストールの属性が完全に上書きされるわけではありません。 この状況では、3322エラーがトリガーする可能性があります。 </p> <p>この問題を解決するには、開発者は新しいビルドをインストールする前に、デバイスから古いビルドを削除する必要があります。 </p> </li> 
+      <li id="li_A5C9633F11584C788A2D9A23CC18FA6D">Flash Playerを使用していて、3322または3346のエラーコードで使用できない場合は、Adobeの説明を参照して、<a href="https://forums.adobe.com/message/5535907#5535907" format="https" scope="external"> DRM Error 3322/3346/3368 on Chrome (Info-Bar Problems)</a>. </li> 
      </ul> </p> <p>このエラーは頻繁に発生するとは想定されていません。 ローミングプロファイルを使用する企業環境では、ユーザがDRMで保護されたコンテンツを表示している場合、ユーザが別のマシンからログインするとエラー3322が発生する可能性が高くなります。 可能な場合、ディストリビュータは、この情報をユーザから取得しようとします。 </p> <p>エラーが頻繁に発生する場合は、Adobeにエスカレーションします。 ライセンスストアをリセットした場合に問題が解決したかどうかをAdobeに通知し、エラーが発生しているブラウザをAdobeに通知する必要があります。 </p> <p>詳しくは、次の記事を参照してください。 
      <ul id="ul_C468409D1EA046178CA7F54DCDCB84EA"> 
       <li id="li_20C8CA3853574CE486F21E7A3667DAB9"><a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> https://forums.adobe.com/message/5520902</a> </li> 
@@ -666,7 +666,7 @@ AdobeビデオエンジンのVideo Encoderインターフェイスは、以下�
   <tr> 
    <td colname="col1"> 3364 </td> 
    <td colname="col2"><span class="codeph"> AAXS_NoDeviceId  </span> </td> 
-   <td colname="col3"> <p>フレームワークはデバイスIDを要求しましたが、返された値が空でした。 </p> <p>ユーザーは、Chrome設定の「保護されたコンテンツ<span class="uicontrol">の識別子を許可」チェックボックスを選択しないでください。</span> </p> </td> 
+   <td colname="col3"> <p>フレームワークはデバイスIDを要求しましたが、返された値が空でした。 </p> <p>ユーザーは、Chrome設定の「保護されたコンテンツ</span>の識別子を許可」チェックボックスを選択しないでください。<span class="uicontrol"> </span></p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3365 </td> 
@@ -745,7 +745,7 @@ AVEのVideo Encoderインターフェイスは、以下のビデオ再生通知�
    <td colname="col3"> 操作が成功しました。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 1 </td> 
+   <td colname="col1"> 3 </td> 
    <td colname="col2"> <span class="codeph"> ASYNC_OPERATION_IN_PROGRESS</span> </td> 
    <td colname="col3"> 非同期操作。 操作の要求が行われました。 成功/失敗に関する情報は、後で入手できます。 </td> 
   </tr> 
@@ -755,7 +755,7 @@ AVEのVideo Encoderインターフェイスは、以下のビデオ再生通知�
    <td colname="col3"> ファイルの終了(EOF)条件が原因で、操作を実行できません。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 1 </td> 
+   <td colname="col1"> 3 </td> 
    <td colname="col2"><span class="codeph"> DECODER_FAILED</span> </td> 
    <td colname="col3"> デコーダーが実行時に失敗しました。 </td> 
   </tr> 
@@ -1035,7 +1035,7 @@ AVEのVideo Encoderインターフェイスは、以下のビデオ再生通知�
    <td colname="col3"> Flash PlayerでHLS再生が有効になっていません。 AuthorizedFeatures.enableHLSPlaybackを参照してください。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 78 </td> 
+   <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_SAMPLE_FOUND</span> </td> 
    <td colname="col3"> デコーダーが、デコードできない不正なサンプルを受け取りました。 通常、これは致命的なエラーではありませんが、オーディオ/ビデオに問題がある可能性を示しています。 このエラーのインスタンスが多すぎる場合は、不正なエンコードまたは不正なファイルを示しています。 </td> 
   </tr> 
@@ -1050,7 +1050,7 @@ AVEのVideo Encoderインターフェイスは、以下のビデオ再生通知�
    <td colname="col3"> ポストロール挿入は、ライブメディアでは使用できません。 ただし、サーバーがメディアを完了とマークした後でも使用できます。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 81 </td> 
+   <td colname="col1"> 61 </td> 
    <td colname="col2"><span class="codeph"> INTERNAL_ERROR</span> </td> 
    <td colname="col3"> 非常にまれな問題であり、常に発生しないはずです。 </td> 
   </tr> 
@@ -1135,7 +1135,7 @@ AVEのVideo Encoderインターフェイスは、以下のビデオ再生通知�
    <td colname="col3"> 内部データ構造にオーディオシンクがありません。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 78 </td> 
+   <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> ファイルを開けません。 </td> 
   </tr> 

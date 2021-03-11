@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、FreeWheelや、VASTレスポンスを提供する他の広告サーバーから情報を取得します。 FreeWheelはVAST応答内でMorthサービスから情報を提供します。 Mortuサービスは、オーディエンスの利益を捕らえるか無視するかをより正確に示すため、広告インプレッション数を数えます。
-seo-description: TVSDKは、FreeWheelや、VASTレスポンスを提供する他の広告サーバーから情報を取得します。 FreeWheelはVAST応答内でMorthサービスから情報を提供します。 Mortuサービスは、オーディエンスの利益を捕らえるか無視するかをより正確に示すため、広告インプレッション数を数えます。
-seo-title: 堀からの広告測定
 title: 堀からの広告測定
-uuid: 4de4ea5e-ef52-4b6b-b215-7601a2dfdb96
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerNotificationオブジェクトは、プレイヤーのステータス、警告およびエラーの変更に関する情報を提供します。 ビデオの再生を停止させるエラーは、プレイヤーのステータスが変化する原因にもなります。
-seo-description: MediaPlayerNotificationオブジェクトは、プレイヤーのステータス、警告およびエラーの変更に関する情報を提供します。 ビデオの再生を停止させるエラーは、プレイヤーのステータスが変化する原因にもなります。
-seo-title: プレイヤーのステータス、アクティビティ、エラーおよびログに関する通知
 title: プレイヤーのステータス、アクティビティ、エラーおよびログに関する通知
-uuid: 7ce5bed0-f312-437e-a82f-b1d4a8e1926c
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '109'
 ht-degree: 0%
 
 ---

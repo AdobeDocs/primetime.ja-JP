@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerStatusオブジェクトは、プレイヤーのステータスの変更に関する情報を提供します。 通知オブジェクトは、警告およびエラーに関する情報を提供します。 ビデオの再生を停止させるエラーは、プレイヤーのステータスが変化する原因にもなります。 イベントリスナーを実装して、イベント（MediaPlayerEventオブジェクト）を取得し、応答します。
-seo-description: MediaPlayerStatusオブジェクトは、プレイヤーのステータスの変更に関する情報を提供します。 通知オブジェクトは、警告およびエラーに関する情報を提供します。 ビデオの再生を停止させるエラーは、プレイヤーのステータスが変化する原因にもなります。 イベントリスナーを実装して、イベント（MediaPlayerEventオブジェクト）を取得し、応答します。
-seo-title: プレイヤーのステータス、アクティビティ、エラーおよびログに関する通知とイベント
 title: プレイヤーのステータス、アクティビティ、エラーおよびログに関する通知とイベント
-uuid: ec840f14-38d1-4f43-b119-e1326515fc63
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---

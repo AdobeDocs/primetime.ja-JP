@@ -1,9 +1,9 @@
 ---
-seo-title: DRMポリシーの操作の概要
 title: DRMポリシーの操作の概要
-uuid: 32423448-013c-4183-bea8-e14b6690abdb
+description: DRMポリシーの操作の概要
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%

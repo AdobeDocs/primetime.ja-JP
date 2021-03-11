@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerItemLoaderを使用すると、MediaPlayerインスタンスをインスタンス化することなく、メディアストリームに関する情報を取得できます。 これは、再生を遅延なく開始できるように、バッファリング前のストリームで特に便利です。
-seo-description: MediaPlayerItemLoaderを使用すると、MediaPlayerインスタンスをインスタンス化することなく、メディアストリームに関する情報を取得できます。 これは、再生を遅延なく開始できるように、バッファリング前のストリームで特に便利です。
-seo-title: MediaPlayerItemLoaderを使用したメディアリソースの読み込み
 title: MediaPlayerItemLoaderを使用したメディアリソースの読み込み
-uuid: 504063af-1dd4-4268-88e7-ad5a247fdff7
 translation-type: tm+mt
-source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---

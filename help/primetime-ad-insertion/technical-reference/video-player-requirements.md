@@ -1,12 +1,10 @@
 ---
 description: すべてのビデオプレーヤーは、マニフェストサーバーが広告の挿入と広告トラッキングの有効化に依存する機能を提供する必要があります。
-seo-description: すべてのビデオプレーヤーは、マニフェストサーバーが広告の挿入と広告トラッキングの有効化に依存する機能を提供する必要があります。
-seo-title: ビデオプレーヤーの要件
 title: ビデオプレーヤーの要件
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---

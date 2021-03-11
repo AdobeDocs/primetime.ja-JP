@@ -1,13 +1,10 @@
 ---
 description: コンテンツをパッケージ化する前に、1つ以上のポリシーを作成する必要があります。 ポリシーで指定できる使用ルールの概要については、AdobeアクセスSDKの概要の使用ルールを参照してください。
-seo-description: コンテンツをパッケージ化する前に、1つ以上のポリシーを作成する必要があります。 ポリシーで指定できる使用ルールの概要については、AdobeアクセスSDKの概要の使用ルールを参照してください。
-seo-title: 新しいポリシーの作成
 title: 新しいポリシーの作成
-uuid: 972f8645-b695-49d5-a5e6-7e8c53fc34c4
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---

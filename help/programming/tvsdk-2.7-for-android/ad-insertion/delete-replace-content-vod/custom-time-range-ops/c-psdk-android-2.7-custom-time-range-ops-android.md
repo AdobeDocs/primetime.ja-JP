@@ -1,13 +1,10 @@
 ---
 description: CustomRangeMetadataクラスは、VODストリームマーク、削除および置換の様々なタイプの時間範囲を識別します。 これらのカスタム時間範囲タイプごとに、広告コンテンツの削除や置換など、対応する操作を実行できます。
-seo-description: CustomRangeMetadataクラスは、VODストリームマーク、削除および置換の様々なタイプの時間範囲を識別します。 これらのカスタム時間範囲タイプごとに、広告コンテンツの削除や置換など、対応する操作を実行できます。
-seo-title: カスタム時間範囲操作
 title: カスタム時間範囲操作
-uuid: e9c6a135-124e-44d4-adf2-dc9d671e2483
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---

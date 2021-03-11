@@ -1,13 +1,10 @@
 ---
 description: メディアを早送りまたは巻き戻しする場合は、トリック再生モードになります。 トリック再生モードに入るには、MediaPlayerの再生速度を1以外の値に設定する必要があります。
-seo-description: メディアを早送りまたは巻き戻しする場合は、トリック再生モードになります。 トリック再生モードに入るには、MediaPlayerの再生速度を1以外の値に設定する必要があります。
-seo-title: 早送りと巻き戻しの実装
 title: 早送りと巻き戻しの実装
-uuid: bd190534-c871-4673-b79d-1413277f480f
 translation-type: tm+mt
-source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---

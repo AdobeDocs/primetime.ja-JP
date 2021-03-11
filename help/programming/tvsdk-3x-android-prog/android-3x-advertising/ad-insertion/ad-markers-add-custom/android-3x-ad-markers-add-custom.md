@@ -1,13 +1,10 @@
 ---
 description: カスタム広告マーカーを使用して、メインコンテンツの特定のセクションを広告関連コンテンツ期間としてマークできます。
-seo-description: カスタム広告マーカーを使用して、メインコンテンツの特定のセクションを広告関連コンテンツ期間としてマークできます。
-seo-title: カスタム広告マーカー
 title: カスタム広告マーカー
-uuid: 47b08d5e-8d99-4048-a579-77804a5edcdd
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---

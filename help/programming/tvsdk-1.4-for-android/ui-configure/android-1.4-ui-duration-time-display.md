@@ -1,13 +1,10 @@
 ---
 description: TVSDKを使用して、シークバーに表示できるメディアに関する情報を取得できます。
-seo-description: TVSDKを使用して、シークバーに表示できるメディアに関する情報を取得できます。
-seo-title: ビデオの長さ、現在時間および残り時間の表示
 title: ビデオの長さ、現在時間および残り時間の表示
-uuid: afb43169-2d82-4137-ba38-27caef3d8c21
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -80,7 +77,7 @@ TVSDKを使用して、シークバーに表示できるメディアに関する
 
 1. タイマーを使用して、定期的に現在時間を取得し、SeekBarを更新します。
 
-   次の例では、`Clock.java`ヘルパークラスをタイマーとして使用します。このタイマーは、参照プレーヤーPrimetimeReferenceで使用できます。 このクラスは、イベントリスナーを設定し、1秒ごとに`onTick`イベントをトリガーします。また、別のタイムアウト値を指定することもできます。
+   次の例では、`Clock.java`ヘルパークラスをタイマーとして使用します。このタイマーは、参照プレーヤーPrimetimeReferenceで使用できます。 このクラスは、イベントリスナーとトリガーに対して、1秒ごとに`onTick`イベントを設定するか、別のタイムアウト値を指定します。
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 

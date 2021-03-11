@@ -1,14 +1,11 @@
 ---
 description: 正規化ルールは、VAST/VMAPの応答から取得したソースクリエイティブURLに適用するURL変換を定義します。
-keywords: normalize rule;creative selection rules
-seo-description: 正規化ルールは、VAST/VMAPの応答から取得したソースクリエイティブURLに適用するURL変換を定義します。
-seo-title: ルールの標準化
+keywords: ルールの標準化；クリエイティブ選択ルール
 title: ルールの標準化
-uuid: eccae85b-907e-4e16-9bb8-6c2be6cb0ab6
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---

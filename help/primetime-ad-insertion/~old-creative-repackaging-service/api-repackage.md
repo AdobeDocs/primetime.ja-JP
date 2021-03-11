@@ -1,13 +1,10 @@
 ---
 description: CRS再パッケージ化APIを使用して、非HLS広告クリエイティブを事前にトランスコードできるので、HLSバージョンを実行する必要がある場合にHLSバージョンを利用でき、ジャストインタイム(JIT)再パッケージ化に伴う2 ～ 4分の遅延を解消できます。
-seo-description: CRS再パッケージ化APIを使用して、非HLS広告クリエイティブを事前にトランスコードできるので、HLSバージョンを実行する必要がある場合にHLSバージョンを利用でき、ジャストインタイム(JIT)再パッケージ化に伴う2 ～ 4分の遅延を解消できます。
-seo-title: 再パッケージ化API
 title: 再パッケージ化API
-uuid: 03cd2428-510a-4b99-8496-059a48d5abba
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
@@ -81,7 +78,7 @@ Body内の`RepackageList`ブロックには、1 ～ 300個の`Repackage`ブロ�
    * `clientside` - TVSDKがCDNとの通信に使用するURLとの互換性がある出力を生成します。
    >[!IMPORTANT]
    >
-   >再パッケージ化した広告をクライアント側Ad Insertionと互換性を持たせる場合は、このパラメーターを指定する必要があります。 これを指定しない場合、再パッケージ化された広告は、サーバー側Ad Insertionとのみ互換性があります。
+   >再パッケージ化された広告をクライアント側Ad Insertionと互換性を持たせる場合は、このパラメーターを指定する必要があります。 これを指定しない場合、再パッケージ化された広告は、サーバー側Ad Insertionとのみ互換性があります。
 
    * `hls` - HLS互換のトランスコードされた広告クリエイティブを生成します。
    * `dash` - DASH互換のトランスコードされた広告クリエイティブを生成します。

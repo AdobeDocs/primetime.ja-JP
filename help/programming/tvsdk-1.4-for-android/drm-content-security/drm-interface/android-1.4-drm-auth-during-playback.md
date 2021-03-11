@@ -1,13 +1,10 @@
 ---
 description: ビデオのDRMメタデータがメディアストリームに含まれている場合、再生中に認証を実行します。
-seo-description: ビデオのDRMメタデータがメディアストリームに含まれている場合、再生中に認証を実行します。
-seo-title: 再生中のDRM認証
 title: 再生中のDRM認証
-uuid: a1a63e3e-be34-49e1-96c4-ae266003b3d1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---

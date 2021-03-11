@@ -1,14 +1,11 @@
 ---
 description: TVSDKは、広告サーバーの応答で壊れたVMAPを検出すると、1109(NETWORK_AD_URL_FAILED)エラーをディスパッチします。
-keywords: 1109;NETWORK_AD_URL_FAILED;broken VMAP
-seo-description: TVSDKは、広告サーバーの応答で壊れたVMAPを検出すると、1109(NETWORK_AD_URL_FAILED)エラーをディスパッチします。
-seo-title: 壊れたVMAPのクライアントエラー処理
+keywords: 1109;NETWORK_AD_URL_FAILED；壊れたVMAP
 title: 壊れたVMAPのクライアントエラー処理
-uuid: 7cc68c86-bb49-4a1b-a1ec-65ca4c94d75d
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -18,11 +15,11 @@ ht-degree: 0%
 
 TVSDKは、広告サーバーの応答で壊れたVMAPを検出すると、1109(NETWORK_AD_URL_FAILED)エラーをディスパッチします。
 
-広告サーバーのレスポンスの性質と、広告の読み込み設定によっては、TVSDKが広告サーバーのレスポンス内で壊れたVMAPに遭遇した場合、プレイヤーは異なる数の1109エラーを受け取る場合があります。
+広告サーバーのレスポンスの性質と、広告の読み込み設定によっては、TVSDKが広告サーバーのレスポンス内で壊れたVMAPを検出した場合に、プレイヤーは異なる数の1109エラーを受け取る場合があります。
 
 広告サーバーの応答がVMAP XMLを指すシナリオを考えてみましょう。 また、広告サーバーの応答に4つの使用可能な広告スロットがあり、それぞれが同じVMAPを指すとします。 最後に、このVMAPが壊れているとします。
 
-このシナリオでは、遅延広告解決が有効な場合（[遅延広告解決を有効にする](../../../tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/t-psdk-android-2.7-enable-lazy-ad-resolving.md)）、TVSDKは、2つの1109エラーをディスパッチします（予期したものではありません）。タイムライン上の解析パスごとに1つのエラーがディスパッチされます。 これは、遅延広告解決が有効な場合、TVSDKは2パスで広告を解析するからです。最初のパスは、プリロール広告のコンテンツ再生開始の直前に発生し、2番目のパスは再生開始の後（ミッドロール広告とポストロール広告の後）に発生します。
+このシナリオでは、遅延広告解決が有効な場合（[遅延広告解決を有効にする](../../../tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/t-psdk-android-2.7-enable-lazy-ad-resolving.md)）、TVSDKは、2つの1109エラーをディスパッチします（予期したとおりではありません）。タイムライン上の解析パスごとに1つのエラーがディスパッチされます。 これは、遅延広告解決が有効な場合、TVSDKは2パスで広告を解析するからです。最初のパスは、プリロール広告のコンテンツ再生開始の直前に発生し、2番目のパスは再生開始の後（ミッドロール広告とポストロール広告の後）に発生します。
 
 >[!NOTE]
 >

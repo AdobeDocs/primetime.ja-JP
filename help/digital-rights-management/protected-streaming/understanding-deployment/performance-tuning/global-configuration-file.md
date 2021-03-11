@@ -1,13 +1,10 @@
 ---
 description: ここでは、パフォーマンスに関する考慮事項について説明します。 グローバル設定ファイル内のflashaccess-global.xmlという設定は、パフォーマンスに影響します。
-seo-description: ここでは、パフォーマンスに関する考慮事項について説明します。 グローバル設定ファイル内のflashaccess-global.xmlという設定は、パフォーマンスに影響します。
-seo-title: グローバル設定ファイル
 title: グローバル設定ファイル
-uuid: 254925b5-d441-4a35-ad6f-f99db5de7591
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---

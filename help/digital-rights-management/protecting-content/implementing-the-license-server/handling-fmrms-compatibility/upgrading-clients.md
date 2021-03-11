@@ -1,13 +1,10 @@
 ---
 description: FlashメディアRights Managementサーバー1.xの互換性に関する要求には2種類あります。 1つのタイプのリクエストを使用して、1.xクライアントに対して、Adobe PrimetimeDRM 2.0以降をサポートするランタイムへのアップグレードを促します。 ライセンスを要求する前に、1.xメタデータをPrimetime DRM形式に更新する場合にもう1つ使用します。 これらの要求のサポートは、FMRMS 1.0または1.5を使用するコンテンツを以前にデプロイした場合にのみ必要です。
-seo-description: FlashメディアRights Managementサーバー1.xの互換性に関する要求には2種類あります。 1つのタイプのリクエストを使用して、1.xクライアントに対して、Adobe PrimetimeDRM 2.0以降をサポートするランタイムへのアップグレードを促します。 ライセンスを要求する前に、1.xメタデータをPrimetime DRM形式に更新する場合にもう1つ使用します。 これらの要求のサポートは、FMRMS 1.0または1.5を使用するコンテンツを以前にデプロイした場合にのみ必要です。
-seo-title: FMRMS互換性の処理
 title: FMRMS互換性の処理
-uuid: c32ee087-2edf-4d11-be36-e2b31f3769de
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---

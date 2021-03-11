@@ -1,13 +1,10 @@
 ---
 description: 許可リストとは、信頼されたエンティティのリストです。
-seo-description: 許可リストとは、信頼されたエンティティのリストです。
-seo-title: 信頼できるコンテンツパッケージャーの許可リストの管理
 title: 信頼できるコンテンツパッケージャーの許可リストの管理
-uuid: 9a132ef9-eb56-408a-939e-1acd32d83a33
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---

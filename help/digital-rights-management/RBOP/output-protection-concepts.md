@@ -1,13 +1,10 @@
 ---
 description: この節では、出力保護に関連する設定、オプション、意味の概念的概要を説明します。
-seo-description: この節では、出力保護に関連する設定、オプション、意味の概念的概要を説明します。
-seo-title: RBOPの概念
 title: RBOPの概念
-uuid: fc19c3c9-39a1-4b62-b763-101e5454a01f
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---

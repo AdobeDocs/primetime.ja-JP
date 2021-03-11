@@ -1,13 +1,10 @@
 ---
 description: 通知をリッスンしたり、独自の通知を通知履歴に追加したりできます。
-seo-description: 通知をリッスンしたり、独自の通知を通知履歴に追加したりできます。
-seo-title: 通知システムのセットアップ
 title: 通知システムのセットアップ
-uuid: caa6a306-dea9-45ee-b0b3-569b5f2527a1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---

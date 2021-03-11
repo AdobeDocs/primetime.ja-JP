@@ -1,9 +1,9 @@
 ---
-seo-title: HSMの設定
 title: HSMの設定
-uuid: da4d7118-65a8-460d-a796-b7bf5c28b208
+description: HSMの設定
+copied-description: true
 translation-type: tm+mt
-source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%

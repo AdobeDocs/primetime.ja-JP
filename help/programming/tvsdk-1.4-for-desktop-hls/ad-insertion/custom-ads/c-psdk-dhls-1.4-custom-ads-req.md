@@ -1,13 +1,10 @@
 ---
 description: ビデオプレーヤー広告配信インターフェイス定義(VPAID)は、ビデオ広告を再生するための共通のインターフェイスです。 VPAIDは、ユーザーにリッチメディアの操作性を提供し、発行者は、ターゲット広告の改善、広告インプレッションの追跡、ビデオコンテンツの収益化を行うことができます。
-seo-description: ビデオプレーヤー広告配信インターフェイス定義(VPAID)は、ビデオ広告を再生するための共通のインターフェイスです。 VPAIDは、ユーザーにリッチメディアの操作性を提供し、発行者は、ターゲット広告の改善、広告インプレッションの追跡、ビデオコンテンツの収益化を行うことができます。
-seo-title: カスタム広告要件
 title: カスタム広告要件
-uuid: 6d4ba87b-ffe5-467d-8ab5-9795928c2f69
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---

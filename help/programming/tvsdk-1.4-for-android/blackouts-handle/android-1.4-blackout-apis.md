@@ -1,13 +1,10 @@
 ---
 description: ライブビデオストリームのブラックアウトを処理し、ブラックアウト中に代替コンテンツを提供できます。
-seo-description: ライブビデオストリームのブラックアウトを処理し、ブラックアウト中に代替コンテンツを提供できます。
-seo-title: ブラックアウトAPI要素
 title: ブラックアウトAPI要素
-uuid: 263a8987-0c85-493a-9352-9605c877ba65
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---

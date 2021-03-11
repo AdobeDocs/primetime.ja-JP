@@ -1,13 +1,10 @@
 ---
 description: メディアプレイヤーが現在のプロファイルを新しいプロファイルに切り替えると、いつ切り替えられたか、幅と高さの情報、異なるビットレートが使用された理由など、切り替えに関する情報を取得できます。
-seo-description: メディアプレイヤーが現在のプロファイルを新しいプロファイルに切り替えると、いつ切り替えられたか、幅と高さの情報、異なるビットレートが使用された理由など、切り替えに関する情報を取得できます。
-seo-title: プロファイルスイッチに関する情報の取得
 title: プロファイルスイッチに関する情報の取得
-uuid: e26ad9fb-6c54-450e-ab62-784d9033d214
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---

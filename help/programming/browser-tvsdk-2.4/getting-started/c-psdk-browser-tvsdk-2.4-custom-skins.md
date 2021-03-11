@@ -1,13 +1,10 @@
 ---
 description: カスタムスキンを使用するには、default-video-controls.cssと同様のカスタマイズを作成し、この新しいカスタマイズをプレーヤーで参照する必要があります。
-seo-description: カスタムスキンを使用するには、default-video-controls.cssと同様のカスタマイズを作成し、この新しいカスタマイズをプレーヤーで参照する必要があります。
-seo-title: カスタムスキン
 title: カスタムスキン
-uuid: bc71926e-0dec-4628-8248-911224a7a6c2
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---

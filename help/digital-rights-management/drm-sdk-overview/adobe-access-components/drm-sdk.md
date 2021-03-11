@@ -1,13 +1,10 @@
 ---
 description: Primetime DRMの主なコンポーネントは、Java SDK、Flash PlayerおよびAdobe AIRクライアントランタイム環境で構成されます。
-seo-description: Primetime DRMの主なコンポーネントは、Java SDK、Flash PlayerおよびAdobe AIRクライアントランタイム環境で構成されます。
-seo-title: Java SDK、Flash Player、Adobe AIRクライアント
 title: Java SDK、Flash Player、Adobe AIRクライアント
-uuid: e6daed27-3803-4ef7-ba25-4a180af7502f
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---

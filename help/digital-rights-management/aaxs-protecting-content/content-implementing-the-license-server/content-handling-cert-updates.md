@@ -1,9 +1,9 @@
 ---
-seo-title: Adobeが発行した証明書の期限が切れた場合の証明書の更新処理
 title: Adobeが発行した証明書の期限が切れた場合の証明書の更新処理
-uuid: 5151ef15-daf6-4fb3-bf83-25ebac1d003b
+description: Adobeが発行した証明書の期限が切れた場合の証明書の更新処理
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%

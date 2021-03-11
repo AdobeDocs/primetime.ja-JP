@@ -1,13 +1,10 @@
 ---
 description: HTMLオーバーレイとStageVideoを使用して、Flash表示リストのビデオ面にUI要素を表示できます。 この平面はStageVideo平面の上にあるので、StageVideoは常にFlash表示リスト要素の背後に表示されます。
-seo-description: HTMLオーバーレイとStageVideoを使用して、Flash表示リストのビデオ面にUI要素を表示できます。 この平面はStageVideo平面の上にあるので、StageVideoは常にFlash表示リスト要素の背後に表示されます。
-seo-title: StageVideoとHTMLオーバーレイ
 title: StageVideoとHTMLオーバーレイ
-uuid: 84e862ab-4c35-47a2-9c4e-f792d3ef5363
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---

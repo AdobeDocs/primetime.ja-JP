@@ -1,13 +1,10 @@
 ---
 description: AES-128暗号化方式は、ヘッダを含むトランスポートストリーム(TS)コンテナ全体を暗号化しますが、SAMPLE-AES暗号化は、ビデオデータのオーディオと一部のみを暗号化します。
-seo-description: AES-128暗号化方式は、ヘッダを含むトランスポートストリーム(TS)コンテナ全体を暗号化しますが、SAMPLE-AES暗号化は、ビデオデータのオーディオと一部のみを暗号化します。
-seo-title: AESで暗号化されたHLSストリームの例
 title: AESで暗号化されたHLSストリームの例
-uuid: 32c1f87b-eb81-4e1c-92ea-ec37260a7ecb
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---

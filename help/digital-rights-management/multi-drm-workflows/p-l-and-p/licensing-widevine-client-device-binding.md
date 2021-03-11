@@ -1,13 +1,10 @@
 ---
 description: 場合によっては、コンテンツの購入やレンタルを行う際に、エンドユーザーが複数のデバイスでコンテンツを再生するのを制限したい場合があります。 お客様がExpressplayを使用している場合は、Expressplay APIを使用してユーザーのExpressplayトークンをユーザーのマシンにバインドすることで、これを行うことができます。
-seo-description: 場合によっては、コンテンツの購入やレンタルを行う際に、エンドユーザーが複数のデバイスでコンテンツを再生するのを制限したい場合があります。 お客様がExpressplayを使用している場合は、Expressplay APIを使用してユーザーのExpressplayトークンをユーザーのマシンにバインドすることで、これを行うことができます。
-seo-title: デバイスバインディング
 title: デバイスバインディング
-uuid: 351fa33c-4226-4ed5-829c-56b563166fec
 translation-type: tm+mt
-source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -25,7 +22,7 @@ APIは次の方法で使用できます。
 
    このダミーライセンスリクエストが成功すると、ユーザーのdevice_id（ユーザーのデバイス上のDRM実装によって計算または生成される）がExpressplayバックエンドのcookieに関連付けられます。 このcookieは次の方法で使用されます。
 
-   * コンテンツの購入時/レンタル時に、コードクエリは関連するcookie([https://www.expressplay.com/developer/restapi/#record-retrieval](https://www.expressplay.com/developer/restapi/#record-retrieval))を送信することで、ユーザーのdevice_idに対してExpressplayバックエンドを再生します。
+   * コンテンツの購入時/レンタル時に、コードクエリは関連するcookie([https://www.expressplay.com/developer/restapi/#record-retrieval](https://www.expressplay.com/developer/restapi/#record-retrieval))を送信することで、ユーザーのdevice_idに対して式がバックエンドを再生します。
    * 購入したコンテンツのキー(CEK)、keyID(CEKSID)、ポリシー、その他の情報と共に、`cookie`相関パラメーターと`deviceid`トークン制限パラメーターのそれぞれに上記のcookieとdevice_idを割り当てて、トークン生成リクエストを送信します。
 
    * このトークンをユーザーに提供します。

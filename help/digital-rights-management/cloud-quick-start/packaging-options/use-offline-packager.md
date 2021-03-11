@@ -1,9 +1,9 @@
 ---
-seo-title: 付属のPrimetime Offline Packagerの使用
 title: 付属のPrimetime Offline Packagerの使用
-uuid: 16b535a9-81b5-43bc-9e42-a64eb6649d9a
+description: 付属のPrimetime Offline Packagerの使用
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%

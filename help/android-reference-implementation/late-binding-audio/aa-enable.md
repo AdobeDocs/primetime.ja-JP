@@ -1,13 +1,10 @@
 ---
 description: 代替オーディオ機能マネージャーを作成して、遅延バインディングまたは代替オーディオストリームをプレーヤーに統合できます。
-seo-description: 代替オーディオ機能マネージャーを作成して、遅延バインディングまたは代替オーディオストリームをプレーヤーに統合できます。
-seo-title: 遅延バインディングオーディオの統合
 title: 遅延バインディングオーディオの統合
-uuid: cd2e259a-2af4-4d7b-a856-79bd087e8ca6
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---

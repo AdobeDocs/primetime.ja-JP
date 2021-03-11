@@ -1,13 +1,10 @@
 ---
 description: ConfigProviderクラスを使用して最初にDVRストリームに入るときのデフォルトの動作の代わりに、いつDVRストリームに入るかのカスタム開始ポイントを選択できます。
-seo-description: ConfigProviderクラスを使用して最初にDVRストリームに入るときのデフォルトの動作の代わりに、いつDVRストリームに入るかのカスタム開始ポイントを選択できます。
-seo-title: DVRのカスタム開始ポイントの選択
 title: DVRのカスタム開始ポイントの選択
-uuid: a7e13865-2b86-4234-ac4c-9a5320b293db
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---

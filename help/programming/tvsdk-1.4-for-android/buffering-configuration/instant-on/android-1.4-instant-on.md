@@ -1,13 +1,10 @@
 ---
 description: 即時オンという用語は、1つ以上のチャネルをプリロードすることを指し、チャネルを選択したり、チャネルを切り替えたりした場合に、コンテンツがすぐに再生されるのを目的とします。 バッファリングは、ユーザー開始が視聴している時間までに既に行われています。
-seo-description: 即時オンという用語は、1つ以上のチャネルをプリロードすることを指し、チャネルを選択したり、チャネルを切り替えたりした場合に、コンテンツがすぐに再生されるのを目的とします。 バッファリングは、ユーザー開始が視聴している時間までに既に行われています。
-seo-title: 即時オン
 title: 即時オン
-uuid: 4cb4d221-170f-46e8-af26-32f259377617
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---

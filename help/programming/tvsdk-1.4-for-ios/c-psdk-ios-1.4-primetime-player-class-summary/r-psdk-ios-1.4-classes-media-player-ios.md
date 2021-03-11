@@ -1,13 +1,10 @@
 ---
 description: メディアプレイヤーとそのリソースを記述するクラスです。
-seo-description: メディアプレイヤーとそのリソースを記述するクラスです。
-seo-title: Media Playerクラス
 title: Media Playerクラス
-uuid: 6b59dcff-9722-4a84-9049-f6f10f7b3e82
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -60,7 +57,7 @@ Primetime Player Objective-C APIを使用して、プレイヤーの動作をカ
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaSelectionOption.html" format="html" scope="external"> PTMediaSelectionOption</a></span> </td> 
-   <td colname="2">様々な言語設定、アクセシビリティ要件またはカスタムアプリケーション設定に対応するためのオーディオビジュアルメディアリソースを表します。 有効なオプションの種類： 
+   <td colname="2">様々な言語設定、アクセシビリティ要件またはカスタムアプリケーション設定に対応するオーディオビジュアルメディアリソースを表します。 有効なオプションの種類： 
     <ul id="ul_p2q_gn2_2m"> 
      <li id="li_46BE5AE49732481FB6D336FFF896E5AD">サブタイトル(<span class="codeph"> PTMediaSelectionOptionTypeSubtitle</span>) </li> 
      <li id="li_6CEADCA12D4A48B7AE4A539985F32119">代替オーディオ(<span class="codeph"> PTMediaSelectionOptionTypeAudio</span>) </li> 

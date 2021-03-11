@@ -1,13 +1,10 @@
 ---
 description: 次の手順は、クローズドキャプショントラックを選択するためのボタンの作成方法の例です。
-seo-description: 次の手順は、クローズドキャプショントラックを選択するためのボタンの作成方法の例です。
-seo-title: キャプショントラックの変更を許可する
 title: キャプショントラックの変更を許可する
-uuid: 5a6d33f2-cece-48f6-8a68-fe76d9d2a950
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---

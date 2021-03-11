@@ -1,13 +1,10 @@
 ---
 description: DRMAuthenticateEventオブジェクトは、再生前に認証用のユーザー資格情報を必要とする保護されたコンテンツをPrimetimeオブジェクトが再生しようとするとき（ただし、認証はまだ実行されていません）にディスパッチされます。 DRMAuthenticateEventハンドラーは、必要な資格情報（ユーザー名、パスワード、およびタイプ）を収集し、検証のために.setDRMAuthenticationCredentials()メソッドに値を渡す役割を持ちます。
-seo-description: DRMAuthenticateEventオブジェクトは、再生前に認証用のユーザー資格情報を必要とする保護されたコンテンツをPrimetimeオブジェクトが再生しようとするとき（ただし、認証はまだ実行されていません）にディスパッチされます。 DRMAuthenticateEventハンドラーは、必要な資格情報（ユーザー名、パスワード、およびタイプ）を収集し、検証のために.setDRMAuthenticationCredentials()メソッドに値を渡す役割を持ちます。
-seo-title: DRMAuthenticateEventハンドラーの作成
 title: DRMAuthenticateEventハンドラーの作成
-uuid: 58330691-d0b5-46bd-9b1d-8dc597580d31
 translation-type: tm+mt
-source-git-commit: 5749142d42f7d7b36c96592955d1f71f6a7956fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---

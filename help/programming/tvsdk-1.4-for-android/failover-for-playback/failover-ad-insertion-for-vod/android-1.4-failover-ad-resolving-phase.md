@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、Adobe Primetimead decisioningなどの広告配信サービスと通信し、その広告のビデオストリームに対応するプライマリプレイリストファイルを取得しようとします。 広告解決フェーズ中に、TVSDKはリモート広告配信サーバーに対してHTTP呼び出しを行い、サーバーの応答を解析します。
-seo-description: TVSDKは、Adobe Primetimead decisioningなどの広告配信サービスと通信し、その広告のビデオストリームに対応するプライマリプレイリストファイルを取得しようとします。 広告解決フェーズ中に、TVSDKはリモート広告配信サーバーに対してHTTP呼び出しを行い、サーバーの応答を解析します。
-seo-title: 広告解決フェーズ
 title: 広告解決フェーズ
-uuid: b3e62a57-7e62-4e4e-8fa6-0d416785db67
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: 広告リゾルバーが機能するようにするには、Adobe Primetimead decisioningなどの広告プロバイダーがプロバイダーへの接続を有効にするために設定値を必要とします。
-seo-description: 広告リゾルバーが機能するようにするには、Adobe Primetimead decisioningなどの広告プロバイダーがプロバイダーへの接続を有効にするために設定値を必要とします。
-seo-title: 広告挿入メタデータ
 title: 広告挿入メタデータ
-uuid: 8848c939-1f12-4145-8025-453b4fe79aae
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---

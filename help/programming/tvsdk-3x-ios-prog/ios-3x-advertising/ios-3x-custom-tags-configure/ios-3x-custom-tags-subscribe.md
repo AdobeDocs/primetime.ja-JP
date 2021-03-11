@@ -1,14 +1,11 @@
 ---
 description: TVSDKは、サブスクライブされたタグがコンテンツマニフェスト内で検出されるたびに、サブスクライブされたタグのPTTimedMetadataオブジェクトを準備します。
-seo-description: TVSDKは、サブスクライブされたタグがコンテンツマニフェスト内で検出されるたびに、サブスクライブされたタグのPTTimedMetadataオブジェクトを準備します。
-seo-title: カスタムタグのサブスクライブ
 title: カスタムタグのサブスクライブ
-uuid: e47076b2-6184-4c20-bae4-ba7ae62cf198
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 1%
+source-wordcount: '91'
+ht-degree: 2%
 
 ---
 

@@ -1,13 +1,10 @@
 ---
 description: メディアストリームは、メディアプレゼンテーション説明(MPD)ファイル内のタグの形式で追加のメタデータを伝達できます。このファイルは広告の配置を示します。 カスタムタグ名を指定し、特定のタグがマニフェストファイルに出現したら通知を受けることができます。
-seo-description: メディアストリームは、メディアプレゼンテーション説明(MPD)ファイル内のタグの形式で追加のメタデータを伝達できます。このファイルは広告の配置を示します。 カスタムタグ名を指定し、特定のタグがマニフェストファイルに出現したら通知を受けることができます。
-seo-title: カスタムタグ
 title: カスタムタグ
-uuid: d1e34288-545b-440f-a262-2fb853f0e3c4
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---

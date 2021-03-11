@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerItem.timedMetadataプロパティを使用すると、プレイリスト/マニフェストタグまたはメディアストリーム内のID3タグから作成されたすべてのTimedMetadataオブジェクトにアクセスできます。 MediaPlayerItem.hasTimedMetadataプロパティは、サブスクライブされたカスタムタグが現在のメディアに存在するかどうかを示します。
-seo-description: MediaPlayerItem.timedMetadataプロパティを使用すると、プレイリスト/マニフェストタグまたはメディアストリーム内のID3タグから作成されたすべてのTimedMetadataオブジェクトにアクセスできます。 MediaPlayerItem.hasTimedMetadataプロパティは、サブスクライブされたカスタムタグが現在のメディアに存在するかどうかを示します。
-seo-title: マニフェストタグに関する通知
 title: マニフェストタグに関する通知
-uuid: 87bee41b-b44e-4d12-afd2-7a63023f992c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---

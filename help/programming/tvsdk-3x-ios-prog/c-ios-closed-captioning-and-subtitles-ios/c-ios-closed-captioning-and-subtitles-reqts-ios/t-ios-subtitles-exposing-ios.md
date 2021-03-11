@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、PTMediaPlayerMediaSelectionOptionsAvailableNotification通知を使用して、プレイヤークライアントに内部AVAssetのavailableMediaCharacteristicsWithMediaSelectionOptionsの可用性を知らせます。
-seo-description: TVSDKは、PTMediaPlayerMediaSelectionOptionsAvailableNotification通知を使用して、プレイヤークライアントに内部AVAssetのavailableMediaCharacteristicsWithMediaSelectionOptionsの可用性を知らせます。
-seo-title: サブタイトルを表示する
 title: サブタイトルを表示する
-uuid: 1cd8761f-6e6f-4017-9852-fa61f36197c5
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---

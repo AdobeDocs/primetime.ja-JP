@@ -1,13 +1,10 @@
 ---
 description: 初期設定では、DVRがサポートされるライブストリームは、視聴者が一時停止およびシークできるシーク可能な範囲を公開します。
-seo-description: 初期設定では、DVRがサポートされるライブストリームは、視聴者が一時停止およびシークできるシーク可能な範囲を公開します。
-seo-title: 広告挿入なしのDVR
 title: 広告挿入なしのDVR
-uuid: e516be00-bb18-4119-ae0d-a79a35f4bd20
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---

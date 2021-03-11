@@ -1,13 +1,10 @@
 ---
 description: マニフェスト内のタグに関する通知を受け取るには、適切な通知リスナーを実装します。
-seo-description: マニフェスト内のタグに関する通知を受け取るには、適切な通知リスナーを実装します。
-seo-title: 時間指定メタデータ追加通知のリスナー
 title: 時間指定メタデータ追加通知のリスナー
-uuid: dcd1bd92-0617-4eab-8b06-7301aaff42f3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---

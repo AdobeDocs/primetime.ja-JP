@@ -1,13 +1,10 @@
 ---
 description: タイムライン更新に関する通知を受け取るには、適切なイベントリスナーを登録します。
-seo-description: タイムライン更新に関する通知を受け取るには、適切なイベントリスナーを登録します。
-seo-title: TimelineUpdatedEvent追加のリスナー
 title: TimelineUpdatedEvent追加のリスナー
-uuid: 7d742e15-5a55-4155-93a7-7b79f21c1472
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---

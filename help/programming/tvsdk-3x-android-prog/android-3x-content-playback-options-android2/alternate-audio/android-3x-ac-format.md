@@ -1,13 +1,10 @@
 ---
 description: オーディオコーデック3(AC-3、Dolby Digital®) 5.1形式を使用すると、コンテンツプロバイダーはマルチチャネルオーディオファイルのサイズを圧縮でき、音質を損なうことはありません。 AC-3は5.1形式で、5つのフル帯域幅チャネルを提供し、ユーザーの操作性を向上します。
-seo-description: オーディオコーデック3(AC-3、Dolby Digital®) 5.1形式を使用すると、コンテンツプロバイダーはマルチチャネルオーディオファイルのサイズを圧縮でき、音質を損なうことはありません。 AC-3は5.1形式で、5つのフル帯域幅チャネルを提供し、ユーザーの操作性を向上します。
-seo-title: AC-3 5.1形式
 title: AC-3 5.1形式
-uuid: 9d1adf33-4c9b-4d31-8212-ac301f3e44c5
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '397'
 ht-degree: 0%
 
 ---

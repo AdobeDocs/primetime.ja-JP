@@ -1,13 +1,10 @@
 ---
 description: 代替（遅延バインディング）オーディオを使用すると、ビデオトラックで使用可能なオーディオトラックを切り替えることができます。 これにより、ビデオをいつ再生するかをユーザーが選択できます。
-seo-description: 代替（遅延バインディング）オーディオを使用すると、ビデオトラックで使用可能なオーディオトラックを切り替えることができます。 これにより、ビデオをいつ再生するかをユーザーが選択できます。
-seo-title: 代替オーディオ
 title: 代替オーディオ
-uuid: 0abd727c-7036-49c5-a4b7-8945711fecc8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---

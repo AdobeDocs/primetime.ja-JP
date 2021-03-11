@@ -1,13 +1,10 @@
 ---
 description: Flash15以降では、StageVideoを使用したハードウェアレンダリングを使用できない場合、StageVideoはソフトウェアStageVideoオブジェクトにシームレスにフォールバックされます。
-seo-description: Flash15以降では、StageVideoを使用したハードウェアレンダリングを使用できない場合、StageVideoはソフトウェアStageVideoオブジェクトにシームレスにフォールバックされます。
-seo-title: StageVideoのFlash15のサポート
 title: StageVideoのFlash15のサポート
-uuid: 49bd8703-016e-4fda-8773-5254d4774ec6
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: イベントハンドラーを使用すると、TVSDKイベントに応答できます。
-seo-description: イベントハンドラーを使用すると、TVSDKイベントに応答できます。
-seo-title: イベントリスナーとコールバックの実装
 title: イベントリスナーとコールバックの実装
-uuid: f186b39e-e634-4f64-977d-279147d76c5c
 translation-type: tm+mt
-source-git-commit: 1034a0520590777cc0930d2f732741202bc3bc04
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---

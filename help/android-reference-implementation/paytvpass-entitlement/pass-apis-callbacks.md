@@ -1,13 +1,10 @@
 ---
 description: Entitlement Managerは、これらのクラスを公開して、Adobe Primetime認証をプレイヤーに統合します。
-seo-description: Entitlement Managerは、これらのクラスを公開して、Adobe Primetime認証をプレイヤーに統合します。
-seo-title: 関連するAPIドキュメント
 title: 関連するAPIドキュメント
-uuid: 7b37b965-6048-45e9-ad5a-2026a5a9e105
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---

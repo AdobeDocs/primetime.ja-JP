@@ -1,13 +1,10 @@
 ---
 description: Adobe PrimetimeDRM SDKによって生成されるすべての認証トークンには、アプリケーションのセキュリティを保護するためのタイムアウト間隔があります。
-seo-description: Adobe PrimetimeDRM SDKによって生成されるすべての認証トークンには、アプリケーションのセキュリティを保護するためのタイムアウト間隔があります。
-seo-title: 認証トークンのタイムアウト
 title: 認証トークンのタイムアウト
-uuid: 2c2b0dad-0979-4d49-b109-2700ceb4d722
 translation-type: tm+mt
-source-git-commit: 5749142d42f7d7b36c96592955d1f71f6a7956fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '110'
 ht-degree: 0%
 
 ---

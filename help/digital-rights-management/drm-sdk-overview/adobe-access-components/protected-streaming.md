@@ -1,9 +1,9 @@
 ---
-seo-title: 保護されたストリーミング用のAdobe PrimetimeDRMサーバ
 title: 保護されたストリーミング用のAdobe PrimetimeDRMサーバ
-uuid: 74049b6e-668e-4d98-aa26-a1738961e173
+description: 保護されたストリーミング用のAdobe PrimetimeDRMサーバ
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%

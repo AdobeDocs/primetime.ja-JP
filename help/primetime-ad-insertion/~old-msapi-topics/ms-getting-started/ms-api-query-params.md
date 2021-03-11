@@ -1,13 +1,10 @@
 ---
 title: マニフェストサーバークエリパラメーター
 description: クエリパラメーターは、マニフェストサーバーに対して、リクエストを送信したクライアントの種類と、そのクライアントがマニフェストサーバーに何を求めているかを伝えます。 必須の形式や値が必要な場合もあります。
-seo-title: マニフェストサーバークエリパラメーター
-seo-description: クエリパラメーターは、マニフェストサーバーに対して、リクエストを送信したクライアントの種類と、そのクライアントがマニフェストサーバーに何を求めているかを伝えます。 必須の形式や値が必要な場合もあります。
-uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: MediaPlayer表示を使用してビデオを再生した後、TVSDKメソッドを使用するか、手動で非表示にして再び表示することができます。
-seo-description: MediaPlayer表示を使用してビデオを再生した後、TVSDKメソッドを使用するか、手動で非表示にして再び表示することができます。
-seo-title: ビデオ表示の非表示
 title: ビデオ表示の非表示
-uuid: 7cc02bf4-41ee-4af0-98ba-df070b50b88d
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '156'
 ht-degree: 1%
 
 ---

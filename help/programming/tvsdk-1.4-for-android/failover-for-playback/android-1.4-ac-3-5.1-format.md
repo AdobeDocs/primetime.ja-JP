@@ -1,13 +1,10 @@
 ---
 description: インターネット経由でのストリーミングには、リモートサーバーからストリームを再生するために、常に安定した接続が必要です。 ただし、ビューアのインターネット接続またはストリーミング再生は多様なので、リモート再生の品質はローカルで再生されるメディアの品質と同じでない場合があります。
-seo-description: インターネット経由でのストリーミングには、リモートサーバーからストリームを再生するために、常に安定した接続が必要です。 ただし、ビューアのインターネット接続またはストリーミング再生は多様なので、リモート再生の品質はローカルで再生されるメディアの品質と同じでない場合があります。
-seo-title: AC-3 5.1形式
 title: AC-3 5.1形式
-uuid: d5e77bb5-ed51-4f9f-b34f-e9082f5ee4de
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---

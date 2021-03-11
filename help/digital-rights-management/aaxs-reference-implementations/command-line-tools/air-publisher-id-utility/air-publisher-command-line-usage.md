@@ -1,9 +1,9 @@
 ---
-seo-title: コマンドラインの使用
 title: コマンドラインの使用
-uuid: 54b1e867-c6cc-4355-b8e6-a7ec910bd33d
+description: コマンドラインの使用
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%

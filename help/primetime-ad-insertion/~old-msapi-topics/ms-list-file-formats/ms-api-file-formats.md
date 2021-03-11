@@ -1,13 +1,10 @@
 ---
 description: クライアントがトラッキング情報を要求すると、マニフェストサーバーはフォーマットされたファイルを返します。 その形式と内容は、クエリパラメーターpttrackingversionの値に依存します
-seo-description: クライアントがトラッキング情報を要求すると、マニフェストサーバーはフォーマットされたファイルを返します。 その形式と内容は、クエリパラメーターpttrackingversionの値に依存します
-seo-title: ファイル形式
 title: ファイル形式
-uuid: 1d54b24c-ceb3-4f05-a12e-b38334a68547
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '57'
 ht-degree: 0%
 
 ---

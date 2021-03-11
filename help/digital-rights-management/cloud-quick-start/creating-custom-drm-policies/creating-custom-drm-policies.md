@@ -1,9 +1,9 @@
 ---
-seo-title: カスタムDRMポリシーの作成（オプション）
 title: カスタムDRMポリシーの作成（オプション）
-uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
+description: カスタムDRMポリシーの作成（オプション）
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
@@ -29,7 +29,7 @@ java -jar libs/AdobePolicyManager.jar new myPolicy.pol
 
 ## カスタム認証/エンタイトルメント{#create-policies-dynamically-for-custom-auth-entitlement}のポリシーを動的に作成
 
-Primetime Cloud DRMのカスタム認証/権利付与を使用し、（事前に生成されたプールからポリシーを取り込むのではなく）各ライセンスリクエストに対して新しいDRMポリシーを動的に作成する場合、AdobeではPrimetime DRM Java SDKを直接使用することをお勧めします。 Java SDKを直接使用する方が[!DNL AdobePolicyManager.jar]ツールより高速です。&lt;a0/>ツールを使用すると、ポリシーファイルが自動的にディスクに出力され、ディスクI/Oのオーバーヘッドが発生します。
+Primetime Cloud DRMのカスタム認証/権利付与を使用し、（事前に生成されたプールからポリシーを取り込むのではなく）各ライセンスリクエストに対して新しいDRMポリシーを動的に作成する場合、AdobeではPrimetime DRM Java SDKを直接使用することをお勧めします。 Java SDKを直接使用する方が[!DNL AdobePolicyManager.jar]ツールより高速です。ツールを使用すると、ポリシーファイルが自動的にディスクに出力され、ディスクI/Oのオーバーヘッドが発生します。
 
 Java SDKを使用したサンプルコードは、[!DNL CreatePolicy.java]および[!DNL CreatePolicyWithOutputProtection.java]という[!DNL /Primetime DRM PolicyManager/sampleCode/]ディレクトリにあります。 JavaDocおよびJava SDKに関するドキュメントは、[Adobe PrimetimeDRM SDKの概要](../../../digital-rights-management/drm-sdk-overview/overview.md)で参照できます。
 

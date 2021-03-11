@@ -1,13 +1,10 @@
 ---
 description: このリファレンスの実装は、広告用のプレイヤーの設定方法を示しています。広告挿入用のビデオメタデータの設定、プリロール広告、ミッド広告、ポストロール広告のVODまたはライブ/リニアビデオストリームへの解決などがあります。 また、クリック可能な広告の処理方法も説明します。
-seo-description: このリファレンスの実装は、広告用のプレイヤーの設定方法を示しています。広告挿入用のビデオメタデータの設定、プリロール広告、ミッド広告、ポストロール広告のVODまたはライブ/リニアビデオストリームへの解決などがあります。 また、クリック可能な広告の処理方法も説明します。
-seo-title: 広告挿入
 title: 広告挿入
-uuid: 75c1d77a-a7ff-4cb6-ad7f-7c83a950b7cb
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---

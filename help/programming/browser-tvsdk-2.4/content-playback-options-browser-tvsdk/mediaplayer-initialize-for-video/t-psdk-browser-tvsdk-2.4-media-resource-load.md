@@ -1,13 +1,10 @@
 ---
 description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。
-seo-description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。
-seo-title: メディアリソースをMediaPlayerに読み込む
 title: メディアリソースをMediaPlayerに読み込む
-uuid: ac31ccfe-161d-41a2-9a6e-38fae11ceab5
 translation-type: tm+mt
-source-git-commit: 7d61a6cd8cb2c381f85a19d9ccac3d235ffceaf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---

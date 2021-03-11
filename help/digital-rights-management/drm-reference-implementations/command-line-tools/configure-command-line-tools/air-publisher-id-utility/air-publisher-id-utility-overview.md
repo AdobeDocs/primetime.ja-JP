@@ -1,9 +1,9 @@
 ---
-seo-title: 概要
 title: 概要
-uuid: f45c6b58-53c5-41e0-be3d-590231dd214a
+description: 概要
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 AIRファイルを構築すると、AIR Developer Tool(ADT)によって自動的に発行者IDが生成されます。 AIR発行者IDユーティリティ([!DNL AdobePublisherIDUtility.jar])は、AIRアプリケーションの発行者IDを計算します。
 
-発行者IDは、AIRファイルの作成に使用する証明書に固有です。 同じ証明書を複数のAIRアプリケーションに再利用する場合、すべてのAIRアプリケーションで同じPublisher IDが使用されます。 リリース1.5.2に成功したAIRリリースでは、生成された発行者IDはファイルに追加されません。 したがって、AIRアプリケーション許可リストを使用する場合は、このツールを使用して発行者IDを決定します。
+発行者IDは、AIRファイルの作成に使用する証明書に固有です。 同じ証明書を複数のAIRアプリケーションに再利用する場合、すべてのAIRアプリケーションで同じ発行者IDが使用されます。 リリース1.5.2に成功したAIRリリースでは、生成された発行者IDはファイルに追加されません。 したがって、AIRアプリケーション許可リストを使用する場合は、このツールを使用して発行者IDを決定します。
 
 >[!NOTE]
 >

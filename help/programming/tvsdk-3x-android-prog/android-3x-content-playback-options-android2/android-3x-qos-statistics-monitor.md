@@ -1,13 +1,10 @@
 ---
 description: サービス品質(QoS)は、ビデオエンジンの動作状況に関する詳細な表示を提供します。 TVSDKは、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
-seo-description: サービス品質(QoS)は、ビデオエンジンの動作状況に関する詳細な表示を提供します。 TVSDKは、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
-seo-title: サービス品質統計
 title: サービス品質統計
-uuid: 3d66ed44-9d4a-4162-962f-e238575ff2dd
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---

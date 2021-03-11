@@ -1,14 +1,11 @@
 ---
 description: Adobeビデオエンジンの暗号化モジュールは、NATIVE_ERRORメタデータオブジェクトに以下の通知を返します。
-seo-description: Adobeビデオエンジンの暗号化モジュールは、NATIVE_ERRORメタデータオブジェクトに以下の通知を返します。
-seo-title: NATIVE_ERROR暗号化値
 title: NATIVE_ERROR暗号化値
-uuid: 6f5cea7d-688f-421e-bba6-62aeae1ec9ee
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 6%
+source-wordcount: '83'
+ht-degree: 8%
 
 ---
 

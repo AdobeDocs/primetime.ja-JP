@@ -1,12 +1,10 @@
 ---
 description: TVSDKは、HTTPS経由の安全な配信を導入しています。
-seo-description: TVSDKは、HTTPS経由の安全な配信を導入しています。
-seo-title: HTTPS経由の安全な配信
 title: HTTPS経由の安全な配信
 translation-type: tm+mt
-source-git-commit: 4a2271fc481b37bb0a437091de6efe98fcb348d9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '81'
 ht-degree: 0%
 
 ---

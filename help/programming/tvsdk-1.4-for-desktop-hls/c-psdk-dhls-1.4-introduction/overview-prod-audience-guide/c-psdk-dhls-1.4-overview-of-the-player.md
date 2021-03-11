@@ -1,13 +1,10 @@
 ---
 description: 'TVSDK for Desktop HLSは、様々な機能を備え、次の主な機能を提供します '
-seo-description: 'TVSDK for Desktop HLSは、様々な機能を備え、次の主な機能を提供します '
-seo-title: Primetime TVSDKの機能
 title: Primetime TVSDKの機能
-uuid: 0a7ebb05-7da5-49ff-928a-4d2124eaa115
 translation-type: tm+mt
-source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---

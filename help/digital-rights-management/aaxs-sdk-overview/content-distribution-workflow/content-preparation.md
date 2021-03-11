@@ -1,13 +1,10 @@
 ---
 description: Adobeアクセスを使用する場合は、ワークフローの異なるポイントで2つの主要な手順を実行します。 コンテンツの準備はアセットごとに1回行う必要があり、その結果、保護されたコンテンツが作成されます。 コンテンツの取得は、その保護されたアセットを見たい顧客ごとに1回ずつ、複数回行われます。
-seo-description: Adobeアクセスを使用する場合は、ワークフローの異なるポイントで2つの主要な手順を実行します。 コンテンツの準備はアセットごとに1回行う必要があり、その結果、保護されたコンテンツが作成されます。 コンテンツの取得は、その保護されたアセットを見たい顧客ごとに1回ずつ、複数回行われます。
-seo-title: コンテンツの準備
 title: コンテンツの準備
-uuid: 7a3562c6-6033-4e28-8f0a-18e3cb8987b9
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---

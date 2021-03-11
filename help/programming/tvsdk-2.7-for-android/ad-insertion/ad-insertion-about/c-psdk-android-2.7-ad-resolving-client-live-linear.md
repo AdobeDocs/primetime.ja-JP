@@ -1,13 +1,10 @@
 ---
 description: ライブ/リニアコンテンツの場合、TVSDKは、メインストリームコンテンツのチャンクを同じ継続時間の広告の時間で置き換えるので、タイムラインの継続時間は同じままです。
-seo-description: ライブ/リニアコンテンツの場合、TVSDKは、メインストリームコンテンツのチャンクを同じ継続時間の広告の時間で置き換えるので、タイムラインの継続時間は同じままです。
-seo-title: ライブ/リニア広告を解決して挿入する
 title: ライブ/リニア広告を解決して挿入する
-uuid: c9d54fc9-1d54-41c3-a872-d27afdd16314
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---

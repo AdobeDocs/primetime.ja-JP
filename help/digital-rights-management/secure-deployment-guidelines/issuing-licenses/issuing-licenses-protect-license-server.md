@@ -1,13 +1,10 @@
 ---
 description: 'ライセンスを安全に発行していることを確認する必要があります。 License Serverを保護するには、以下のベストプラクティスを検討します。 '
-seo-description: 'ライセンスを安全に発行していることを確認する必要があります。 License Serverを保護するには、以下のベストプラクティスを検討します。 '
-seo-title: ライセンスサーバの保護
 title: ライセンスサーバの保護
-uuid: 7b5de17d-d0a7-41df-9651-4ff51c9965c6
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1178'
 ht-degree: 0%
 
 ---
@@ -59,7 +56,7 @@ rollbackカウンタは、クライアントからの要求の大部分で、サ
 
 マシンIDを追跡する最も強力な方法は、データベース内の[MachineId.getBytes()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getBytes())メソッドから返された値を格納することです。 新しい要求を受け取ったら、[MachineId.matches()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#matches(com.adobe.flashaccess.sdk.cert.MachineId))を使用して、要求内のマシンIDと既知のマシンIDを比較します。
 
-[MachineId.matches()は、IDの比較を](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#matches(com.adobe.flashaccess.sdk.cert.MachineId)) 実行して、IDが同じマシンを表しているかどうかを判断します。この比較は、マシンIDの数が少ない場合にのみ実用的です。 例えば、ドメインに5台のマシンを許可している場合、データベースでそのユーザーのユーザー名に関連付けられているマシンIDを検索し、比較用に小さなデータセットを取得できます。
+[MachineId.matches()は、IDの比較を](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#matches(com.adobe.flashaccess.sdk.cert.MachineId)) 実行して、IDが同じマシンを表しているかどうかを判断します。この比較は、マシンIDの数が少ない場合にのみ実用的です。 例えば、ドメインに5台のマシンを許可されている場合、データベースでそのユーザーのユーザー名に関連付けられているマシンIDを検索し、比較用に小さなデータセットを取得できます。
 
 この比較は、匿名アクセスを許可するデプロイメントでは実用的ではありません。 この場合、[MachineId.getUniqueID()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId())を使用できます。 ただし、ユーザーがFlashおよびAdobe AIR®ランタイムからコンテンツにアクセスする場合、このIDを同じにすることはできません。
 

@@ -1,13 +1,10 @@
 ---
 description: プレイヤーのパフォーマンスを判断するのに役立つ情報を提供するクラスです。
-seo-description: プレイヤーのパフォーマンスを判断するのに役立つ情報を提供するクラスです。
-seo-title: QoSクラス
 title: QoSクラス
-uuid: c1f0218d-4a79-4141-9a74-e70ac4f70aa5
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---

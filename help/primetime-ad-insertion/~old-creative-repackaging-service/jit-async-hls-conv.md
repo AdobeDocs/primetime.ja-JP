@@ -1,13 +1,10 @@
 ---
 description: CRSは、ジャストインタイム(JIT)と非同期の再パッケージングおよびHLSからHLSへの変換を提供します。 再パッケージ化の結果、元の広告クリエイティブがHLS形式にフォーマットされたバージョンになります。 CRSは、HLS形式のバージョンをコンテンツ配信ネットワーク(CDN)サーバーに配置し、必要に応じて使用します。
-seo-description: CRSは、ジャストインタイム(JIT)と非同期の再パッケージングおよびHLSからHLSへの変換を提供します。 再パッケージ化の結果、元の広告クリエイティブがHLS形式にフォーマットされたバージョンになります。 CRSは、HLS形式のバージョンをコンテンツ配信ネットワーク(CDN)サーバーに配置し、必要に応じて使用します。
-seo-title: CRSの主な使用方法
 title: CRSの主な使用方法
-uuid: df2caa67-bc94-4146-9b93-14edc060c3d5
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---

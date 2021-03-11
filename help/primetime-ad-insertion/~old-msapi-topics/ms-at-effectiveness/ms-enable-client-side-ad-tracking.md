@@ -1,14 +1,11 @@
 ---
 description: BootstrapURLリクエストにpttrackingmodeパラメーターとpttrackingversionパラメーターを追加することで、クライアント側の広告トラッキングを有効にできます。
-seo-description: BootstrapURLリクエストにpttrackingmodeパラメーターとpttrackingversionパラメーターを追加することで、クライアント側の広告トラッキングを有効にできます。
-seo-title: クライアント側の広告トラッキングの有効化
 title: クライアント側の広告トラッキングの有効化
-uuid: 0a825756-1d9a-43c5-bc22-9b366f39fdbb
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '110'
-ht-degree: 1%
+source-wordcount: '88'
+ht-degree: 2%
 
 ---
 

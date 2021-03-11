@@ -1,19 +1,16 @@
 ---
 description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
-seo-description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
-seo-title: Adobeクリエイティブの再パッケージングサービスを使用して、互換性のない広告を再パッケージ化する
 title: Adobeクリエイティブの再パッケージングサービスを使用して、互換性のない広告を再パッケージ化する
-uuid: eea3651f-2598-4efa-ba4d-dbd7afa7cb95
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
 
-# Adobeクリエイティブ再パッケージ化サービス{#repackage-incompatible-ads-using-adobe-creative-repackaging-service}を使用して、互換性のない広告を再パッケージ化する
+# Adobeクリエイティブ再パッケージングサービス{#repackage-incompatible-ads-using-adobe-creative-repackaging-service}を使用して、互換性のない広告を再パッケージ化する
 
 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
 

@@ -1,9 +1,9 @@
 ---
-seo-title: サーバーのプロパティファイル
 title: サーバーのプロパティファイル
-uuid: 3d3a0ee3-009f-4d62-9587-7e487ecdcafd
+description: サーバーのプロパティファイル
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 0%

@@ -1,13 +1,10 @@
 ---
 description: マニフェストサーバは、提案されたHTTPライブストリーミング標準に準拠したM3U8形式のマスター再生リストを返します。 TS（バリアントトランスポートストリーム）のセットで構成され、各TSには、異なるビットレートとフォーマットに対する同じコンテンツのレンディションが含まれます。 Adobe Primetime広告挿入は、クライアントビデオプレーヤーが解釈するEXT-X-MARKERディレクティブタグを追加します。
-seo-description: マニフェストサーバは、提案されたHTTPライブストリーミング標準に準拠したM3U8形式のマスター再生リストを返します。 TS（バリアントトランスポートストリーム）のセットで構成され、各TSには、異なるビットレートとフォーマットに対する同じコンテンツのレンディションが含まれます。 Adobe Primetime広告挿入は、クライアントビデオプレーヤーが解釈するEXT-X-MARKERディレクティブタグを追加します。
-seo-title: EXT-X-MARKER指令
 title: EXT-X-MARKER指令
-uuid: e349bf89-b196-47b4-a362-9913fa28b2c6
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---

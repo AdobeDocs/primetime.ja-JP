@@ -1,13 +1,10 @@
 ---
 description: 次の表に、INFOタイプの通知に関する詳細情報を示します。
-seo-description: 次の表に、INFOタイプの通知に関する詳細情報を示します。
-seo-title: INFO通知コード
 title: INFO通知コード
-uuid: 27117707-be3d-4935-a193-85776edd26ce
 translation-type: tm+mt
-source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '431'
 ht-degree: 4%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: VODコンテンツに広告を挿入できます。
-seo-description: VODコンテンツに広告を挿入できます。
-seo-title: 時間範囲の広告への置換
 title: 時間範囲の広告への置換
-uuid: 50cdcc06-7df5-414b-95d4-c684bc68dce3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '94'
 ht-degree: 0%
 
 ---

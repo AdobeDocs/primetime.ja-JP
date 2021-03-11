@@ -1,9 +1,9 @@
 ---
-seo-title: サーバープロパティリファレンス
 title: サーバープロパティリファレンス
-uuid: 24a187fe-9b7d-411f-a358-d10c70a5dd0e
+description: サーバープロパティリファレンス
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 0%
@@ -55,15 +55,15 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td> コンテンツキャッシュ </td> 
-   <td>これらの設定は、個別化サーバーがコンテンツをダウンロードする場所と、コンテンツをディスク上のキャッシュする場所を制御します。 個別化サーバーは、起動時に1度コンテンツサーバーで新しいコンテンツがないかを確認し、次に、これらのプロパティで指定された頻度/時間で確認します。 <p>オンプレミス個別化サーバーの場合、コンテンツキャッシュデータの初期セットを含めました。 （キャッシュフォルダー自体ではなく）キャッシュフォルダーの<i>CONTENTS</i>を、設定済みの<span class="filepath"> AdobeInitial.properties</span> <span class="codeph"> contentServer.localDirectory</span>の場所にコピーしてください。 </p> </td> 
+   <td>これらの設定は、個別化サーバーがコンテンツをダウンロードする場所と、コンテンツをディスク上のキャッシュする場所を制御します。 個別化サーバーは、起動時に1回コンテンツサーバーで新しいコンテンツがないかを確認し、次にこれらのプロパティで指定された頻度/時間で確認します。 <p>オンプレミス個別化サーバーの場合、コンテンツキャッシュデータの初期セットを含めました。 （キャッシュフォルダー自体ではなく）キャッシュフォルダーの<i>CONTENTS</i>を、設定済みの<span class="filepath"> AdobeInitial.properties</span> <span class="codeph"> contentServer.localDirectory</span>の場所にコピーしてください。 </p> </td> 
    <td> 
     <ul id="ul_r4n_1r2_jr"> 
-     <li id="li_CA5F562577B04B4A9966EF46E039A137"><span class="codeph"> contentServer.localDirectory =</span> [ローカルコンテンツを保存するディレクトリ（通常はtomcat/temp）] </li> 
+     <li id="li_CA5F562577B04B4A9966EF46E039A137"><span class="codeph"> contentServer.localDirectory =</span> [ローカルコンテンツを格納するディレクトリ（通常はtomcat/temp）] </li> 
      <li id="li_9A78FBD6C54D47708226378340B46E8E"><span class="codeph"> contentServer.server =</span> [ECI情報に接続するWebサーバー(このリリースでは<i>サポートされていません</i>)] </li> 
      <li id="li_4E7D7F76085D411688B5003E855F860B"><span class="codeph"> contentServer.timeout =</span> [接続タイムアウト（秒単位）] </li> 
      <li id="li_4B751F238A1643A7AC730CD9354887B6"><span class="codeph"> contentServer.pollFrequency =</span> [サーバーのポーリング頻度（日単位）（最小は1日）] </li> 
      <li id="li_8E23C3C6E7EF46B0AFDD7993DE79F142"><span class="codeph"> contentServer.pollTime =</span> [真夜中からの分単位で、サーバーをポーリングする時刻] </li> 
-    </ul> <p>キャッシュを最新の状態に維持する方法については、<i>CRLとECIファイル</i>を必ずお読みください。 </p> </td> 
+    </ul> <p>キャッシュを最新の状態に維持する方法については、<i>CRL and ECI Files</i>の節を必ずお読みください。 </p> </td> 
   </tr> 
   <tr> 
    <td> 個別化CA CRL </td> 
@@ -75,7 +75,7 @@ ht-degree: 0%
     <p> <code>
       cert.machine.crldp__DEV=<span>tps://onprem-individualization.com</span>CRL/onprem-individualization-ca.crl
      </code></p>
-     <p>ライセンス要求が処理されると、License ServerはこのCRLを自動的にダウンロードする必要があります。 </p> <p importance="high">注意：この配布ポイントは、Primetime DRMによって有効性がチェックされ<i>まだ</i>されていません。 このURLが有効であることを確認する必要があります。 無効なURLによるエラーは、検証エラーがライセンスサーバーから表示されるまで表示されません。 </p> </td> 
+     <p>ライセンス要求が処理されると、License ServerはこのCRLを自動的にダウンロードする必要があります。 </p> <p importance="high">注意：この配布ポイントは、Primetime DRMによって有効性の確認が<i>行われません</i>。 このURLが有効であることを確認する必要があります。 無効なURLによるエラーは、検証エラーがライセンスサーバーから表示されるまで表示されません。 </p> </td> 
   </tr> 
   <tr> 
    <td> ログ </td> 
@@ -96,7 +96,7 @@ ht-degree: 0%
    <td></td> 
    <td> 
     <ul id="ul_b3b_g1f_jr"> 
-     <li id="li_FACF07CB332D416E91FD34DE48152FAA"><span class="codeph"> deviceinfo.key =</span> [暗号化されたBase64エンコードされたキー。マシントークンに含める前に、HMACデバイス情報をHMACデバイスに対して使用します。開発/ステージング/実稼働環境ではキーを異ならせることができますが、特定の環境のすべてのサーバーで同じにする必要があります。] </li> 
+     <li id="li_FACF07CB332D416E91FD34DE48152FAA"><span class="codeph"> deviceinfo.key =</span> [暗号化されたBase64エンコードされたキー。マシントークンに含める前に、HMACデバイス情報をHMACデバイスに対して使用します。開発/ステージング/実稼働環境とキーは異なる場合がありますが、特定の環境のすべてのサーバーで同じにする必要があります。] </li> 
      <li id="li_B19C77FD6F91496294DBF836A1922EE1"><span class="codeph"> keys.kgs.server =</span> [キー生成サーバーの場所（キーサーバーのプールを表す単一のホスト/ポート）] </li> 
      <li id="li_5DA3C89770804B148EF6FAF01A5AD958"><span class="codeph"> keys.MinQueueSize =</span> [キューに多数のキーが残っている場合に、KGSから別のキーのバッチを取得する] </li> 
      <li id="li_0C2E5F2FDB824182A6BE418B041D2F28"><span class="codeph"> status.Timeout =</span> [ステータスページでKGSにpingを実行し、サーバーに到達できるかどうかを確認します。指定した時間内に応答が返されない場合はタイムアウトします。] </li> 

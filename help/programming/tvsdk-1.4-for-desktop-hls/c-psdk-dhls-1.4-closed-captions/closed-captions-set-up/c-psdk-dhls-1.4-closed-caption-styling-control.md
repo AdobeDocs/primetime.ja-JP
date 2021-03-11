@@ -1,13 +1,10 @@
 ---
 description: ClosedCaptionStylesクラスを使用して、クローズドキャプショントラックのスタイル情報を指定できます。 プレイヤーが表示するクローズドキャプションのスタイルを設定します。
-seo-description: ClosedCaptionStylesクラスを使用して、クローズドキャプショントラックのスタイル情報を指定できます。 プレイヤーが表示するクローズドキャプションのスタイルを設定します。
-seo-title: クローズドキャプションのスタイル設定を制御する
 title: クローズドキャプションのスタイル設定を制御する
-uuid: 506c06d3-8fe0-46c9-9ed6-5b35d21c021c
 translation-type: tm+mt
-source-git-commit: b67a9dcb0abb07f4fdff4e03d9d6c0b07ff45127
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -77,7 +74,7 @@ public function TextFormat(
       &nbsp;AVCaptionStyle.CURSIVE, 
       &nbsp;AVCaptionStyle.SMALL_CAPITALS 
       &nbsp;]; 
-     </code> </p> <p>ヒント： デバイスで使用できる実際のフォントは異なる場合があり、必要に応じて代替フォントが使用されます。 serifsを持つ等幅スペースは、通常、代替として使用されますが、システムに固有の置き換えである場合もあります。 </p> </td> 
+     </code> </p> <p>ヒント： デバイスで使用できる実際のフォントは異なる場合があり、必要に応じて代替フォントが使用されます。 serifsを持つ等幅スペースは、通常、代替として使用されますが、システム固有の置換である場合もあります。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> サイズ </td> 

@@ -1,13 +1,10 @@
 ---
 description: Adobeアクセスの主なコンポーネントは、Java SDK、Flash PlayerおよびAdobe AIRクライアントランタイム環境で構成されます。
-seo-description: Adobeアクセスの主なコンポーネントは、Java SDK、Flash PlayerおよびAdobe AIRクライアントランタイム環境で構成されます。
-seo-title: Java SDK、Flash Player、Adobe AIRクライアント
 title: Java SDK、Flash Player、Adobe AIRクライアント
-uuid: 6b6c5aa2-56ee-4476-a05b-dcbbe3b9001e
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---

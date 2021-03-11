@@ -1,13 +1,10 @@
 ---
 description: リファレンス実装サーバーは、Adobe PrimetimeDRM Java SDKのすべての機能を使用する完全な機能を備えたライセンスサーバーの作成に役立ちます。
-seo-description: リファレンス実装サーバーは、Adobe PrimetimeDRM Java SDKのすべての機能を使用する完全な機能を備えたライセンスサーバーの作成に役立ちます。
-seo-title: ライセンスサーバー
 title: ライセンスサーバー
-uuid: 39cb0d0f-f3dc-48e9-b6fd-6960a9ade291
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 リファレンス実装サーバーは、Adobe PrimetimeDRM Java SDKのすべての機能を使用する完全な機能を備えたライセンスサーバーの作成に役立ちます。
 
-この実装では、ユーザーはデータベース内のユーザーエントリに基づいて認証されます。 サーバには、ライセンス発行のためのデモビジネスロジックが含まれ、FlashメディアRights Managementサーバ1.0および1.5の互換性サポートが提供されます。
+この実装では、ユーザーはデータベース内のユーザーエントリに基づいて認証されます。 サーバには、ライセンス発行のためのデモビジネスロジックが含まれ、FlashメディアRights Managementサーバ1.0および1.5の互換性サポートを提供します。
 
 ## ライセンスサーバの要件{#license-server-requirements}
 

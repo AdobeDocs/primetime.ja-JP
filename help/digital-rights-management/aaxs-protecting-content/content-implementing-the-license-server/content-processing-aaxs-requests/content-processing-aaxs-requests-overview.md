@@ -1,9 +1,9 @@
 ---
-seo-title: 概要
 title: 概要
-uuid: 870c32f5-1119-4fec-abed-25e51dd1ebe3
+description: 概要
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # 概要{#overview}
 
-リクエストを処理する一般的な方法は、ハンドラーの作成、リクエストの解析、応答データまたはエラーコードの設定、およびハンドラーの終了です。
+リクエストを処理する一般的な方法は、ハンドラーの作成、リクエストの解析、応答データまたはエラーコードの設定、ハンドラーの終了です。
 
 単一のリクエスト/応答のインタラクションを処理するために使用される基本クラスは`com.adobe.flashaccess.sdk.protocol.MessageHandlerBase`です。 `HandlerConfiguration`クラスのインスタンスを使用してハンドラーが初期化されます。 `HandlerConfiguration` トランスポート資格情報、タイムスタンプの許容値、ポリシーの更新リスト、失効リストなどのサーバー構成情報を格納します。このハンドラーは、要求データを読み取り、要求を解析して、のインスタンスに渡 `RequestMessageBase`します。呼び出し元は、要求内の情報を調べ、エラーを返すか、応答を成功させるかを判断できる（`RequestMessageBase`のサブクラスが応答データを設定する方法を提供する）。
 
-リクエストが成功した場合は、応答データを設定します。それ以外の場合は、失敗時に`RequestMessageBase.setErrorData()`を呼び出します。 必ず`close()`メソッドを呼び出して実装を終了してください（`try`ステートメントの`finally`ブロック内で`close()`を呼び出すことをお勧めします）。 ハンドラーの呼び出し方法の例については、`MessageHandlerBase` APIリファレンスドキュメントを参照してください。
+リクエストが成功した場合は、応答データを設定します。それ以外の場合は、失敗時に`RequestMessageBase.setErrorData()`を呼び出します。 必ず`close()`メソッドを呼び出して実装を終了します（`try`ステートメントの`finally`ブロック内で`close()`を呼び出すことをお勧めします）。 ハンドラーの呼び出し方法の例については、`MessageHandlerBase` APIリファレンスドキュメントを参照してください。
 
 >[!NOTE]
 >

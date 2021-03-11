@@ -1,9 +1,9 @@
 ---
-seo-title: 非対称キーの暗号化
 title: 非対称キーの暗号化
-uuid: 0aae25f1-a609-4c73-9aef-13f8ae63f6e1
+description: 非対称キーの暗号化
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -17,6 +17,6 @@ ht-degree: 0%
 
 コンテンツをパッケージ化する場合、License Serverの公開鍵を使用して、DRMメタデータのコンテンツ暗号化キー(CEK)が暗号化されます。 License ServerだけがLicense Serverの秘密鍵にアクセスできることを確認する必要があります。他の誰かが鍵を持っていれば、その中身を復号し、表示することができる。
 
-***注意：License Serverの証明書（公開鍵を含む）を信頼できるソースから取得し、不正な公開鍵ではなくLicense Serverの鍵であることを確認できるように&#x200B;**してください。攻撃者がLicense Serverの鍵に公開鍵を置き換えた場合、そのユーザの内容を復号化できます。*
+***注意：License Serverの証明書（公開鍵を含む）は、信頼できるソースから取得して&#x200B;**ください。これにより、不正な公開鍵ではなく、License Serverの鍵であることが確実にわかります。攻撃者がLicense Serverの鍵に公開鍵を置き換えた場合、そのユーザの内容を復号化できます。*
 
 コンテンツのパッケージ化について詳しくは、*AdobeアクセスSDKを使用したコンテンツの保護*&#x200B;を参照してください。

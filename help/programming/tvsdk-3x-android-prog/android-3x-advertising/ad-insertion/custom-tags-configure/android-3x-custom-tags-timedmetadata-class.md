@@ -1,13 +1,10 @@
 ---
 description: TVSDKがプレイリスト/マニフェスト内にサブスクライブされたタグを検出すると、プレイヤーは自動的にそのタグを処理し、TimedMetadataオブジェクトの形式で公開しようとします。
-seo-description: TVSDKがプレイリスト/マニフェスト内にサブスクライブされたタグを検出すると、プレイヤーは自動的にそのタグを処理し、TimedMetadataオブジェクトの形式で公開しようとします。
-seo-title: 時間指定メタデータクラス
 title: 時間指定メタデータクラス
-uuid: c7b1c1d7-48b3-43c7-aa21-f800d894976d
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: TVSDKを最も効果的に使用するには、操作の特定の詳細を考慮し、特定のベストプラクティスに従う必要があります。
-seo-description: TVSDKを最も効果的に使用するには、操作の特定の詳細を考慮し、特定のベストプラクティスに従う必要があります。
-seo-title: 考慮事項とベストプラクティス
 title: 考慮事項とベストプラクティス
-uuid: e698ae09-280b-4406-a9b8-4f468b7a6b9c
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---

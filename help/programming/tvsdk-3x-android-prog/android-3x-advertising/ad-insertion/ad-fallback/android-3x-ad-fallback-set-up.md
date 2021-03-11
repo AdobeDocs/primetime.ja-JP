@@ -1,13 +1,10 @@
 ---
 description: VMAPインライン広告に無効なメディアタイプが含まれる場合、フォールバックを有効にできます。
-seo-description: VMAPインライン広告に無効なメディアタイプが含まれる場合、フォールバックを有効にできます。
-seo-title: VMAPインライン広告のフォールバック広告動作の定義
 title: VMAPインライン広告のフォールバック広告動作の定義
-uuid: bc8cb0b4-5ea9-429b-ab5d-746c6f03e74b
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---

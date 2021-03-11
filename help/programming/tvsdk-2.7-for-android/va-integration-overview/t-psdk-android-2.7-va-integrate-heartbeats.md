@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: ビデオ分析の初期化と設定
 title: ビデオ分析の初期化と設定
-uuid: 98017a20-4997-42f7-9b03-fd9c4b6ccd92
+description: ビデオ分析の初期化と設定
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---

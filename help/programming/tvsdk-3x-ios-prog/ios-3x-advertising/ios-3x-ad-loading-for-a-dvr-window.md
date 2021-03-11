@@ -1,13 +1,10 @@
 ---
 description: ユーザーの現在のライブポイントより後に発生する広告のみを解決するか、現在のライブポイントより前に発生する広告も解決するかを決定できます。
-seo-description: ユーザーの現在のライブポイントより後に発生する広告のみを解決するか、現在のライブポイントより前に発生する広告も解決するかを決定できます。
-seo-title: DVR時間に対する広告の読み込み
 title: DVR時間に対する広告の読み込み
-uuid: 3ae1fbf6-deae-4f39-a17d-43d1fe3cb975
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---

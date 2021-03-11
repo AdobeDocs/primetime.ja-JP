@@ -1,13 +1,10 @@
 ---
 description: Flash Playerを使用するには、環境が必要な要件を満たしていることを確認します。
-seo-description: Flash Playerを使用するには、環境が必要な要件を満たしていることを確認します。
-seo-title: Flash Player要件
 title: Flash Player要件
-uuid: f181457b-2bb4-4baa-b2b7-d787f65fab75
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '142'
 ht-degree: 1%
 
 ---

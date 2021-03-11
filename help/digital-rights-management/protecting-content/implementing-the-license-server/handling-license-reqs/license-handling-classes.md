@@ -1,9 +1,9 @@
 ---
-seo-title: 概要
 title: 概要
-uuid: 2bbf0aa1-df35-429d-84df-db357fa53e47
+description: 概要
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%

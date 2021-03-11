@@ -1,13 +1,10 @@
 ---
 description: ビデオ分析レポートは、Adobe Analyticsレポートプラットフォームに送信されます。
-seo-description: ビデオ分析レポートは、Adobe Analyticsレポートプラットフォームに送信されます。
-seo-title: ビデオ分析レポートへのアクセス
 title: ビデオ分析レポートへのアクセス
-uuid: fa913061-5063-4605-bf72-674b5321bbd1
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '59'
 ht-degree: 0%
 
 ---

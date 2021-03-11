@@ -1,13 +1,10 @@
 ---
 description: ブラウザーTVSDKでは、ストリーム内の特定の位置（時間）をシークできます。 ストリームは、スライディングウィンドウプレイリストまたはビデオオンデマンド(VOD)コンテンツにすることができます。
-seo-description: ブラウザーTVSDKでは、ストリーム内の特定の位置（時間）をシークできます。 ストリームは、スライディングウィンドウプレイリストまたはビデオオンデマンド(VOD)コンテンツにすることができます。
-seo-title: シークバーを使用する場合にシークを処理する
 title: シークバーを使用する場合にシークを処理する
-uuid: a7c74141-581f-40a3-9d28-ce56ba56773c
 translation-type: tm+mt
-source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
@@ -25,7 +22,7 @@ ht-degree: 0%
 
    有効な状態は、PREPARED、COMPLETE、PAUSEDおよびPLAYINGです。 有効な状態にあると、メディアリソースは正常に読み込まれたことを確認できます。 プレイヤーがシーク可能な状態になっていない場合に、以下のメソッドを呼び出そうとすると、`IllegalStateException`がスローされます。
 
-   例えば、ブラウザーTVSDKが`AdobePSDK.MediaPlayerStatusChangeEvent`をトリガーするまで待つことができます（`event.status`は`AdobePSDK.MediaPlayerStatus.PREPARED`）。
+   例えば、ブラウザーTVSDKがトリガー`AdobePSDK.MediaPlayerStatusChangeEvent`を`event.status`で`AdobePSDK.MediaPlayerStatus.PREPARED`するのを待つことができます。
 
 1. 要求されたシーク位置をミリ秒単位のパラメーターとして`MediaPlayer.seek`メソッドに渡します。
 
@@ -39,7 +36,7 @@ ht-degree: 0%
    void seek(long position) throws IllegalStateException;
    ```
 
-1. Browser TVSDKが`AdobePSDK.PSDKEventType.SEEK_END`イベントをトリガーするのを待ちます。これにより、イベントの`actualPosition`属性に調整された位置が返されます。
+1. ブラウザーTVSDKが`AdobePSDK.PSDKEventType.SEEK_END`イベントをトリガーするまで待ちます。これにより、イベントの`actualPosition`属性に調整された位置が返されます。
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 

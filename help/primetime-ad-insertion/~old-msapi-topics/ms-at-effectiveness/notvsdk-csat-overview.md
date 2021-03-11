@@ -1,13 +1,10 @@
 ---
 description: 発行者は、Primetimeマニフェストサーバーのクライアント側の広告トラッキングワークフローで機能するHLS準拠のビデオプレーヤーを作成できます。 ライブストリーム用のマニフェストサーバーとビデオオンデマンド(VOD)の場合のインターフェイスは、若干異なります。
-seo-description: 発行者は、Primetimeマニフェストサーバーのクライアント側の広告トラッキングワークフローで機能するHLS準拠のビデオプレーヤーを作成できます。 ライブストリーム用のマニフェストサーバーとビデオオンデマンド(VOD)の場合のインターフェイスは、若干異なります。
-seo-title: TVSDK以外のクライアント側トラッキングの概要
 title: TVSDK以外のクライアント側トラッキングの概要
-uuid: fb23be01-3327-443d-82c4-fb0993e7fec1
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '727'
 ht-degree: 1%
 
 ---

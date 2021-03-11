@@ -1,13 +1,10 @@
 ---
 description: 広告挿入は、広告をビデオオンデマンド(VOD)、ライブストリーミング、および広告トラッキングと広告再生を含むリニアストリーミング用に解決します。 TVSDKは、広告サーバーに必要なリクエストを行い、指定されたコンテンツの広告に関する情報を受信し、コンテンツ内の広告を各フェーズで配置します。
-seo-description: 広告挿入は、広告をビデオオンデマンド(VOD)、ライブストリーミング、および広告トラッキングと広告再生を含むリニアストリーミング用に解決します。 TVSDKは、広告サーバーに必要なリクエストを行い、指定されたコンテンツの広告に関する情報を受信し、コンテンツ内の広告を各フェーズで配置します。
-seo-title: 広告の挿入
 title: 広告の挿入
-uuid: 25c79822-a861-427b-b6a8-24714b21aae4
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '157'
 ht-degree: 0%
 
 ---

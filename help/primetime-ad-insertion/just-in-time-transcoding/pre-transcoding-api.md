@@ -1,13 +1,10 @@
 ---
 title: トランスコード前のAPI
 description: ジャストインタイム再パッケージ化APIを使用して事前に広告クリエイティブをトランスコードできるので、コンテンツ互換のバージョンを必要に応じて利用でき、ジャストインタイム(JIT)再パッケージ化に伴う2 ～ 4分の遅延が解消されます。
-seo-description: ジャストインタイム再パッケージ化APIを使用して事前に広告クリエイティブをトランスコードできるので、コンテンツ互換のバージョンを必要に応じて利用でき、ジャストインタイム(JIT)再パッケージ化に伴う2 ～ 4分の遅延が解消されます。
-seo-title: トランスコード前のAPI
-uuid: 03cd2428-510a-4b99-8496-059a48d5abba
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -81,7 +78,7 @@ Body内の`RepackageList`ブロックには、1 ～ 300個の`Repackage`ブロ�
    * `clientside` - TVSDKがCDNとの通信に使用するURLとの互換性がある出力を生成します。
    >[!IMPORTANT]
    >
-   >再パッケージ化した広告をクライアント側Ad Insertionと互換性を持たせる場合は、このパラメーターを指定する必要があります。 これを指定しない場合、再パッケージ化された広告は、サーバー側Ad Insertionとのみ互換性があります。
+   >再パッケージ化された広告をクライアント側Ad Insertionと互換性を持たせる場合は、このパラメーターを指定する必要があります。 これを指定しない場合、再パッケージ化された広告は、サーバー側Ad Insertionとのみ互換性があります。
 
    * `hls` - HLS互換のトランスコードされた広告クリエイティブを生成します。
    * `dash` - DASH互換のトランスコードされた広告クリエイティブを生成します。

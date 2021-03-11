@@ -1,13 +1,10 @@
 ---
 description: サービス品質(QoS)は、ビデオエンジンの動作状況に関する詳細な表示を提供します。 TVSDKは、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
-seo-description: サービス品質(QoS)は、ビデオエンジンの動作状況に関する詳細な表示を提供します。 TVSDKは、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
-seo-title: サービス品質統計
 title: サービス品質統計
-uuid: 8e990461-065b-4efa-b77c-b2b832f86f7d
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
@@ -32,7 +29,7 @@ TVSDKは、以下のダウンロードされたリソースに関する情報も
 
    >[!NOTE]
    >
-   >`LoadInformation`について詳しくは、[Android向け](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html) APIドキュメント&lt;a1/>2.7(Java)を参照してください。
+   >`LoadInformation`について詳しくは、[Android向け](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html) APIドキュメント2.7(Java)を参照してください。
 
 ## 再生、バッファリング、デバイスに関するQOS統計を読み取ります{#section_D21722600F324E67A9F06234D338B243}
 

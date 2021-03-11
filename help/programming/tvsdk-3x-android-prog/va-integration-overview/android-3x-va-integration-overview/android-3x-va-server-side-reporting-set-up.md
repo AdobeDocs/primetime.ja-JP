@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: サーバー側でのビデオ分析レポートの設定
 title: サーバー側でのビデオ分析レポートの設定
-uuid: c3e6ed33-bf33-4e42-b692-a9579deced40
+description: サーバー側でのビデオ分析レポートの設定
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '110'
 ht-degree: 0%
 
 ---

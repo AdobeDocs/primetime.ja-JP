@@ -1,13 +1,10 @@
 ---
 description: 再生中のコンテンツの現在時間と残り時間を表示できます。
-seo-description: 再生中のコンテンツの現在時間と残り時間を表示できます。
-seo-title: 現在時間と残り時間の表示
 title: 現在時間と残り時間の表示
-uuid: b96ade8b-1c81-4367-ba37-fc41a92d7cbc
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '84'
 ht-degree: 0%
 
 ---

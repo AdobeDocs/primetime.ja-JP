@@ -1,13 +1,10 @@
 ---
 description: 'com.adobe.mediacore.timeline.TimelineMarkerインターフェイスに、新しいメソッドが含まれるようになりました '
-seo-description: 'com.adobe.mediacore.timeline.TimelineMarkerインターフェイスに、新しいメソッドが含まれるようになりました '
-seo-title: '2.5.xの遅延広告解決から3.0.0の遅延広告解決へのアップグレード（API/ワークフローの変更） '
 title: '2.5.xの遅延広告解決から3.0.0の遅延広告解決へのアップグレード（API/ワークフローの変更） '
-uuid: 5870ceb4-93a8-4c8b-b716-673396122644
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---

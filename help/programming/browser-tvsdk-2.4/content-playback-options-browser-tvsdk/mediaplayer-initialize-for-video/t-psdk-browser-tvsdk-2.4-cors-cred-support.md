@@ -1,14 +1,11 @@
 ---
 description: XMLHttpRequestsのwithCredentials属性がサポートされるようになりました。クロス接触チャネルリソース共有(CORS)リクエストでは、様々なリクエストタイプに対するターゲットドメインのcookieを含めることができます。
-keywords: CORS;cross origin;resource sharing;cookies;withCredentials
-seo-description: XMLHttpRequestsのwithCredentials属性がサポートされるようになりました。クロス接触チャネルリソース共有(CORS)リクエストでは、様々なリクエストタイプに対するターゲットドメインのcookieを含めることができます。
-seo-title: 接触チャネル間のリソース共有
+keywords: CORS；クロス接触チャネル；リソース共有；cookie;withCredentials
 title: 接触チャネル間のリソース共有
-uuid: e788b542-d4ac-48aa-91e2-1e88068cbba1
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---

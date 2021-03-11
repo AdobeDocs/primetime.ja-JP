@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、スライディングウィンドウプレイリストのストリームである特定の位置（時間）のシークを、ビデオオンデマンド(VOD)とライブストリームの両方でサポートしています。
-seo-description: TVSDKは、スライディングウィンドウプレイリストのストリームである特定の位置（時間）のシークを、ビデオオンデマンド(VOD)とライブストリームの両方でサポートしています。
-seo-title: シークスクラブバーに現在の再生位置を表示
 title: シークスクラブバーに現在の再生位置を表示
-uuid: f940b305-4893-4531-9a79-53670f5fd23f
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---

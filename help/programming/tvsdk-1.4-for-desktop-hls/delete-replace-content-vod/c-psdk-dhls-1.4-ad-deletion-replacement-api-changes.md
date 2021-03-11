@@ -1,13 +1,10 @@
 ---
 description: TVSDKに加えられた以下の変更は、広告の削除と置換をサポートします。
-seo-description: TVSDKに加えられた以下の変更は、広告の削除と置換をサポートします。
-seo-title: 広告削除および置換APIの変更
 title: 広告削除および置換APIの変更
-uuid: 9d208d3b-6459-4aaf-bc56-53c405ccc1b6
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: 実際の使用量に関係なく固定率ではなく、使用した分のみの支払いを希望する顧客に対応するために、Adobeは使用状況指標を収集し、これらの指標を使用して顧客の請求額を決定します。
-seo-description: 実際の使用量に関係なく固定率ではなく、使用した分のみの支払いを希望する顧客に対応するために、Adobeは使用状況指標を収集し、これらの指標を使用して顧客の請求額を決定します。
-seo-title: 課金の使用状況指標
 title: 課金の使用状況指標
-uuid: e792cc72-b1ae-42ce-8b71-f9f9f1de0614
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '355'
 ht-degree: 0%
 
 ---

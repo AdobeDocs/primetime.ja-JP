@@ -1,9 +1,9 @@
 ---
-seo-title: 要求証明書の概要
 title: 要求証明書の概要
-uuid: 3a4e79d7-1832-49d8-bcf2-a029b3729e6d
+description: 要求証明書の概要
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%

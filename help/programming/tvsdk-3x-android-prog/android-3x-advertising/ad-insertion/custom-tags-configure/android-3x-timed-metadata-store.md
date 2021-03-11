@@ -1,13 +1,10 @@
 ---
 description: アプリケーションは、適切なTimedMetadataオブジェクトを適切なタイミングで使用する必要があります。
-seo-description: アプリケーションは、適切なTimedMetadataオブジェクトを適切なタイミングで使用する必要があります。
-seo-title: ディスパッチ時の時間指定メタデータオブジェクトの格納
 title: ディスパッチ時の時間指定メタデータオブジェクトの格納
-uuid: 3d0ed022-829d-474e-83a9-152caeb5b317
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---

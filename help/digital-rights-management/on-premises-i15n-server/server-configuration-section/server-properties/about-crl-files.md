@@ -1,9 +1,9 @@
 ---
-seo-title: CRLファイルについて
 title: CRLファイルについて
-uuid: 672c3ca0-5c5d-4ec7-83b1-f0f8e34c8d09
+description: CRLファイルについて
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
    * URL:[!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl>]
    * ファイル：[!DNL http___crl2.adobe.com_Adobe_FlashAccessIntermediateCA.crl]
-   * 有効性：作成から約12ヶ月間有効
+   * 有効性：作成から約12ヶ月は有効
 
 * **Root CRL:**
 

@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: IDベースのドメイン登録ロジック
 title: IDベースのドメイン登録ロジック
-uuid: bc13f7c2-9a20-4f80-b96f-05f7a0fcc343
+description: IDベースのドメイン登録ロジック
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -42,7 +40,7 @@ ht-degree: 0%
    1. 新しいデバイスで、`Max Membership`値に達した場合は、エラーを返します。
 
 
-1. `DomainKeys`テーブルで、このドメインのすべてのドメインキーを調べます。
+1. `DomainKeys`テーブルで、このドメインのすべてのドメインキーを検索します。
 
    1. `DomainServerInfo`がキーをロールオーバーする必要があると示した場合は、新しいキーペアを生成します。
    1. ペアを`DomainKeys`テーブルに保存し、既存の最も高いキーよりも1つ高いキーバージョンを使用します。

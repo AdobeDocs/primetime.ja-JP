@@ -1,13 +1,10 @@
 ---
 description: デフォルトの広告動作を使用するように選択できます。
-seo-description: デフォルトの広告動作を使用するように選択できます。
-seo-title: デフォルトの再生動作の使用
 title: デフォルトの再生動作の使用
-uuid: 7139384c-167a-4cab-816a-c02fb723a5cb
 translation-type: tm+mt
-source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---

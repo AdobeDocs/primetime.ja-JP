@@ -1,13 +1,10 @@
 ---
 description: コンテンツのパッケージ化によるDASHコンテンツを再生するには、TVSDKクライアントは、キー取得ワークフローでのパッケージ化プロセス中に渡されたコンテンツ復号キーを取得する必要があります。 クライアントコンテンツの復号キーは、通常、クライアントからの1つ以上のHTTP/HTTPS投稿に応答して、Widevine/PlayReadyライセンスサーバーによってクライアントに配信されます。
-seo-description: コンテンツのパッケージ化によるDASHコンテンツを再生するには、TVSDKクライアントは、キー取得ワークフローでのパッケージ化プロセス中に渡されたコンテンツ復号キーを取得する必要があります。 クライアントコンテンツの復号キーは、通常、クライアントからの1つ以上のHTTP/HTTPS投稿に応答して、Widevine/PlayReadyライセンスサーバーによってクライアントに配信されます。
-seo-title: クライアントキーリクエストワークフローの概要
 title: クライアントキーリクエストワークフローの概要
-uuid: 2f01f0ae-adbf-42fa-a908-4b5b9410a26d
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---

@@ -1,9 +1,9 @@
 ---
-seo-title: データベースの設定とJNDIデータソースの設定
 title: データベースの設定とJNDIデータソースの設定
-uuid: 1326523f-c053-4169-a934-1b2d3907b1f4
+description: データベースの設定とJNDIデータソースの設定
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%
@@ -38,7 +38,7 @@ ht-degree: 0%
 
    * 古いMySQLインストールフォルダーを削除します。例えば、*システムドライブ：* [!DNL \Program Files\MySQL\MySQL Server 5.1]です。
 
-次に、MySQL JDBC Driver 5.1.7をインストールする必要があります。これを行うには、[!DNL mysql-connector-java-5.1.7-bin.jar] （DVDの[!DNL Third Party\MySQL\Installer\5.1]フォルダーにあります）をTomcat Server libディレクトリにコピーします。[!DNL ...\Tomcat6.0\lib]。
+次に、MySQL JDBC Driver 5.1.7をインストールする必要があります。これを行うには、[!DNL mysql-connector-java-5.1.7-bin.jar]（DVDの[!DNL Third Party\MySQL\Installer\5.1]フォルダーにある）をTomcat Server libディレクトリにコピーします。[!DNL ...\Tomcat6.0\lib]。
 
 >[!NOTE]
 >

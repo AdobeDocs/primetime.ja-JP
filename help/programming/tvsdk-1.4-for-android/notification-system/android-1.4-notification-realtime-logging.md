@@ -1,13 +1,10 @@
 ---
 description: 通知を使用して、ビデオアプリケーションにリアルタイムログを実装できます。
-seo-description: 通知を使用して、ビデオアプリケーションにリアルタイムログを実装できます。
-seo-title: リ追加アルタイムログとデバッグ
 title: リ追加アルタイムログとデバッグ
-uuid: 037daf57-a1b3-4b42-ac51-81179fb36915
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---

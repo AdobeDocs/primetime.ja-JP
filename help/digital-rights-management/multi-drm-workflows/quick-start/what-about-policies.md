@@ -1,13 +1,10 @@
 ---
 description: ポリシーの設定は、保護されたビデオコンテンツの再生をユーザーに許可するタイミングと方法の条件を指定するプロセスです。
-seo-description: ポリシーの設定は、保護されたビデオコンテンツの再生をユーザーに許可するタイミングと方法の条件を指定するプロセスです。
-seo-title: ポリシーの設定
 title: ポリシーの設定
-uuid: 2d2672ce-5ed4-4868-aa5e-0a9e21a809b3
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---

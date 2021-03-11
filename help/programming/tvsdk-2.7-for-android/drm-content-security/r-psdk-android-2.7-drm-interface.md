@@ -1,13 +1,10 @@
 ---
 description: Primetime DRMソリューションのクライアント側の主要要素はDRMマネージャーです。 Android SDKに含まれるサンプルアプリケーションには、特定のDRM操作をより簡単に実装できるようにするためのDRMHelperクラスも含まれています。
-seo-description: Primetime DRMソリューションのクライアント側の主要要素はDRMマネージャーです。 Android SDKに含まれるサンプルアプリケーションには、特定のDRM操作をより簡単に実装できるようにするためのDRMHelperクラスも含まれています。
-seo-title: Primetime DRMインターフェイスの概要
 title: Primetime DRMインターフェイスの概要
-uuid: d77a98c8-c1f5-4fe3-8d0b-3d21e288f228
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---

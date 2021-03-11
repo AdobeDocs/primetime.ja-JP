@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、不適切に定義された時間範囲を結合または順序変更することで、特定の問題に従って時間範囲エラーを処理します。
-seo-description: TVSDKは、不適切に定義された時間範囲を結合または順序変更することで、特定の問題に従って時間範囲エラーを処理します。
-seo-title: 広告の削除と置換のエラー処理
 title: 広告の削除と置換のエラー処理
-uuid: ab153591-0011-44b4-87f9-be0302c2295e
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---

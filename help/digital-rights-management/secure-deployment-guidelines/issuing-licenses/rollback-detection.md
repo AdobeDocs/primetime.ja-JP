@@ -1,13 +1,10 @@
 ---
 description: Adobe PrimetimeDRMの実装で、クライアントの状態の維持を必要とするビジネスルール（例えば、再生ウィンドウの間隔）を使用する場合、Adobeでは、ロールバックカウンターを追跡し、AIRまたはSWFで許可リストを使用することを推奨します。
-seo-description: Adobe PrimetimeDRMの実装で、クライアントの状態の維持を必要とするビジネスルール（例えば、再生ウィンドウの間隔）を使用する場合、Adobeでは、ロールバックカウンターを追跡し、AIRまたはSWFで許可リストを使用することを推奨します。
-seo-title: ロールバックの検出
 title: ロールバックの検出
-uuid: f161ed41-488a-478a-b6a8-468cf6d11e89
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---

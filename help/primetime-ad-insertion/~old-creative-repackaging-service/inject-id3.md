@@ -1,13 +1,10 @@
 ---
 description: CRSは、ID3時間指定メタデータをHLS形式の広告クリエイティブに挿入して、クライアント側の広告追跡を容易にできます。
-seo-description: CRSは、ID3時間指定メタデータをHLS形式の広告クリエイティブに挿入して、クライアント側の広告追跡を容易にできます。
-seo-title: CRSを使用したID3時間指定メタデータタグの挿入
 title: CRSを使用したID3時間指定メタデータタグの挿入
-uuid: 491bbb9e-15de-4871-baa1-f7bb0ea0dde2
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerインスタンスを作成した瞬間から終了（再利用または削除）した瞬間まで、このインスタンスは状態間の一連のトランジションを完了します。
-seo-description: MediaPlayerインスタンスを作成した瞬間から終了（再利用または削除）した瞬間まで、このインスタンスは状態間の一連のトランジションを完了します。
-seo-title: MediaPlayerオブジェクトのライフサイクル
 title: MediaPlayerオブジェクトのライフサイクル
-uuid: 6670a30c-7053-4754-bc36-6bb8590c001d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -66,7 +63,7 @@ MediaPlayerインスタンスを作成した瞬間から終了（再利用また
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> 再生中  </span> </td> 
-   <td colname="col2"> <p>アプリケーションが<span class="codeph"> play </span>を呼び出したので、TVSDKはビデオの再生を試みています。 ビデオが実際に再生される前に、バッファリングが発生する場合があります。 </p> </td> 
+   <td colname="col2"> <p>アプリケーションが<span class="codeph"> play </span>を呼び出したので、TVSDKはビデオを再生しようとしています。 ビデオが実際に再生される前に、バッファリングが発生する場合があります。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> PAUSED  </span> </td> 

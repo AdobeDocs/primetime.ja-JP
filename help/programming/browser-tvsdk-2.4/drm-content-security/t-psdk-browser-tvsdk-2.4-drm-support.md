@@ -1,13 +1,10 @@
 ---
 description: ブラウザーTVSDKは、暗号化されたメディア拡張(EME)に対するW3C仕様を使用する複数のデジタル著作権管理(DRM)システムをサポートしています。 DRM機能は、統合されたAPIとワークフローを通じてアプリケーションで使用できるようになります。
-seo-description: ブラウザーTVSDKは、暗号化されたメディア拡張(EME)に対するW3C仕様を使用する複数のデジタル著作権管理(DRM)システムをサポートしています。 DRM機能は、統合されたAPIとワークフローを通じてアプリケーションで使用できるようになります。
-seo-title: サポートされるDRMシステム
 title: サポートされるDRMシステム
-uuid: 7dd30633-ab28-4fca-a662-c84e95f6ef16
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---

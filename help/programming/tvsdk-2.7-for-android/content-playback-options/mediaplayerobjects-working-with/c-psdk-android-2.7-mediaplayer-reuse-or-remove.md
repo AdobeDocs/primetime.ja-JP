@@ -1,13 +1,10 @@
 ---
 description: 不要になったMediaPlayerインスタンスは、リセット、再利用または解放できます。
-seo-description: 不要になったMediaPlayerインスタンスは、リセット、再利用または解放できます。
-seo-title: MediaPlayerインスタンスの再利用または削除
 title: MediaPlayerインスタンスの再利用または削除
-uuid: da7b3468-3f0f-4025-927b-d47764a053af
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---

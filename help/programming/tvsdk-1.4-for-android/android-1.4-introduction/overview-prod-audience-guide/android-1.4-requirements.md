@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、メディアコンテンツ、マニフェストコンテンツ、DRM、ソフトウェアバージョンに固有の要件を満たす必要があります。
-seo-description: TVSDKは、メディアコンテンツ、マニフェストコンテンツ、DRM、ソフトウェアバージョンに固有の要件を満たす必要があります。
-seo-title: 要件
 title: 要件
-uuid: d5671444-cc83-48d4-8ce6-735d5f373795
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---

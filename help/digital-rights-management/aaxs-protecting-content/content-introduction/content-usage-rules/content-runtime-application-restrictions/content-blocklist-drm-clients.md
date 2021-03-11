@@ -1,9 +1,9 @@
 ---
-seo-title: 保護されたコンテンツへのアクセスが制限されたDRMクライアントのブロックリスト
 title: 保護されたコンテンツへのアクセスが制限されたDRMクライアントのブロックリスト
-uuid: c05aa6f8-32d9-42aa-a9c5-0d0629d49778
+description: 保護されたコンテンツへのアクセスが制限されたDRMクライアントのブロックリスト
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%

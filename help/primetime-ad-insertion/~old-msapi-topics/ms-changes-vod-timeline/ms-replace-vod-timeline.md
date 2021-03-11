@@ -1,13 +1,10 @@
 ---
 description: VODコンテンツの1つの再生に適した広告タイムラインは、後続の再生には不適切な場合があります。 VODタイムラインは、コンテンツを変更せずに置き換えることができます。
-seo-description: VODコンテンツの1つの再生に適した広告タイムラインは、後続の再生には不適切な場合があります。 VODタイムラインは、コンテンツを変更せずに置き換えることができます。
-seo-title: VODの変更
 title: VODの変更
-uuid: e734aacd-b42e-4c8e-a16a-c7a0739a0492
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: フルイベント再生(FER)は、ライブ/DVRアセットとして機能するVODアセットなので、広告が正しく配置されていることを確認する手順をアプリケーションで実行する必要があります。
-seo-description: フルイベント再生(FER)は、ライブ/DVRアセットとして機能するVODアセットなので、広告が正しく配置されていることを確認する手順をアプリケーションで実行する必要があります。
-seo-title: フルイベント再生での広告の有効化
 title: フルイベント再生での広告の有効化
-uuid: 70e463bd-332c-4f91-ac05-03e79c0939a4
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: TVSDKプレイヤーのほとんどのメソッドを使用する前に、プレイヤーのステータスが有効である必要があります。
-seo-description: TVSDKプレイヤーのほとんどのメソッドを使用する前に、プレイヤーのステータスが有効である必要があります。
-seo-title: 有効な状態を待つ
 title: 有効な状態を待つ
-uuid: ad9df366-c443-4e6b-a7ab-658d5691eb94
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---

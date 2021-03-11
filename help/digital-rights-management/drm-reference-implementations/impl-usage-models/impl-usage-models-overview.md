@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 概要
 title: 概要
-uuid: 5f82f603-6e2d-4c9d-a49f-7b07f30a29e4
+description: 概要
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
@@ -32,6 +30,6 @@ ht-degree: 0%
 4つの使用モデルすべてを有効にするには、2つのDRMポリシーのみ含める必要があります。
 
 * 広告出資のモデルに対して匿名アクセスを許可する1つのDRMポリシー
-* 他の3つの使用モデルに対するユーザー名とパスワードの認証を必要とする1つのDRMポリシー。
+* 他の3つの使用モデルに対してユーザー名とパスワードの認証を必要とする1つのDRMポリシー。
 
 ユーザーがライセンスを要求すると、クライアントアプリケーションは、DRMポリシーの認証情報に基づいて、ユーザーに認証を促すかどうかを決定できます。

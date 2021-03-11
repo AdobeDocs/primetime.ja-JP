@@ -1,13 +1,10 @@
 ---
 description: 再生が広告の時間に到達する、広告の時間を渡す、または広告の時間で終わる場合、TVSDKは、現在の再生ヘッドの位置に関するデフォルトの動作を定義します。
-seo-description: 再生が広告の時間に到達する、広告の時間を渡す、または広告の時間で終わる場合、TVSDKは、現在の再生ヘッドの位置に関するデフォルトの動作を定義します。
-seo-title: 広告の再生をカスタマイズする
 title: 広告の再生をカスタマイズする
-uuid: e7c9f4b1-15c9-43a2-be00-1ca4bfd17e43
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---

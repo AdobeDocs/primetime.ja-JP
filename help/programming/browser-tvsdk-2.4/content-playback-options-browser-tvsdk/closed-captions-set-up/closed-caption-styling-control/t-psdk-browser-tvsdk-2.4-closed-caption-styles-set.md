@@ -1,13 +1,10 @@
 ---
 description: クローズドキャプションテキストのフォント、サイズ、色、端、不透明度などの形式を設定できます。
-seo-description: クローズドキャプションテキストのフォント、サイズ、色、端、不透明度などの形式を設定できます。
-seo-title: クローズドキャプションのスタイルの設定
 title: クローズドキャプションのスタイルの設定
-uuid: 906ed22c-e673-4211-a14b-d95d176aad21
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---

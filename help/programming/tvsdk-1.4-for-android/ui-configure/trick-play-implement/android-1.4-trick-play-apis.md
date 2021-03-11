@@ -1,14 +1,11 @@
 ---
 description: TVSDKには、有効な速度、現在の速度、トリック再生がサポートされているかどうか、および早送りと巻き戻しに関するその他の機能を決定するためのメソッド、プロパティ、イベントが含まれています。
-seo-description: TVSDKには、有効な速度、現在の速度、トリック再生がサポートされているかどうか、および早送りと巻き戻しに関するその他の機能を決定するためのメソッド、プロパティ、イベントが含まれています。
-seo-title: レート変更APIエレメント
 title: レート変更APIエレメント
-uuid: 0040d35c-f9cb-4066-9bee-828ed5541194
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 2%
+source-wordcount: '127'
+ht-degree: 3%
 
 ---
 

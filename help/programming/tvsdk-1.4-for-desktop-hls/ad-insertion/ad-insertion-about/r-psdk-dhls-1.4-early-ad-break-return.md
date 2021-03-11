@@ -1,13 +1,10 @@
 ---
 description: ライブストリーム広告の挿入の場合、広告の時間内のすべての広告が最後まで再生される前に、広告の時間を終了する必要がある場合があります。
-seo-description: ライブストリーム広告の挿入の場合、広告の時間内のすべての広告が最後まで再生される前に、広告の時間を終了する必要がある場合があります。
-seo-title: 早い広告の時間のリターンの実装
 title: 早い広告の時間のリターンの実装
-uuid: 984b6ed0-c929-49a3-9553-e30d1a7758ed
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -33,7 +30,7 @@ ht-degree: 0%
 
    ライブストリームでは、先頭の`EXT-X-CUE-OUT`マーカーがウィンドウ外に移動した直後の場合、TVSDKはそれに応答しません。
 
-* 広告の時間から早い時間が戻った場合、`adBreak`は、広告の時間が終了すると想定されていたときに再生ヘッドが元の位置に戻り、その位置からメインコンテンツの再生を再開するまで再生します。
+* 広告の時間から早いリターンがある場合、`adBreak`は、広告の時間が終了すると想定されていた時点で再生ヘッドが元の位置に戻り、その位置からメインコンテンツの再生を再開するまで再生します。
 
 ## SpliceOutとSpliceIn {#section_36DD55BA58084E21BD3DC039BB245C82}
 

@@ -1,13 +1,10 @@
 ---
 description: TVSDK通知システムは、診断メタデータを提供する様々なエラー、警告および情報通知を生成します。
-seo-description: TVSDK通知システムは、診断メタデータを提供する様々なエラー、警告および情報通知を生成します。
-seo-title: 'null'
-title: 'null'
-uuid: 20828188-817a-471c-acbc-aeb5f336356b
+title: ERROR通知コード
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '448'
 ht-degree: 5%
 
 ---
@@ -243,7 +240,7 @@ ht-degree: 5%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170010  </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_エラー  </span> </td> 
+   <td colname="2"><span class="codeph"> SiteCatalyst_エラー  </span> </td> 
    <td colname="3"> なし </td> 
    <td colname="4"><span class="codeph"> 説明  </span> </td> 
    <td colname="5"> <p>SiteCatalystエラー。 「説明」を参照してください。 </p> </td> 

@@ -1,13 +1,10 @@
 ---
 description: カスタム広告マーカーを使用する場合、TVSDKが広告をスキップするシークをどのように処理するかに関するデフォルトの動作を上書きできます。
-seo-description: カスタム広告マーカーを使用する場合、TVSDKが広告をスキップするシークをどのように処理するかに関するデフォルトの動作を上書きできます。
-seo-title: カスタム広告マーカーのシークオーバーに対する再生動作の制御
 title: カスタム広告マーカーのシークオーバーに対する再生動作の制御
-uuid: ec95a22f-0143-4c80-826f-d6b40e77cf26
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---

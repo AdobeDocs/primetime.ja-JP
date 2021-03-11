@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、時間指定メタデータイベントをディスパッチし、デフォルトタグやカスタムタグが検出された場合、またはプレイリストがマニフェスト内で変更された場合に、時間指定メタデータを生成します。 イベントは、マニフェストに表示される順序でディスパッチされます。
-seo-description: TVSDKは、時間指定メタデータイベントをディスパッチし、デフォルトタグやカスタムタグが検出された場合、またはプレイリストがマニフェスト内で変更された場合に、時間指定メタデータを生成します。 イベントは、マニフェストに表示される順序でディスパッチされます。
-seo-title: 時間指定メタデータイベント
 title: 時間指定メタデータイベント
-uuid: 69c43701-6ffa-45fe-a104-fe81391222e7
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---

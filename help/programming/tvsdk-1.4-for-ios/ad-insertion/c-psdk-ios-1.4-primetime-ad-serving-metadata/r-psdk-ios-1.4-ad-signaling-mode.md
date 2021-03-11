@@ -1,13 +1,10 @@
 ---
 description: 広告シグナリングモードは、ビデオストリームが広告情報を取得する必要がある場所を指定します。
-seo-description: 広告シグナリングモードは、ビデオストリームが広告情報を取得する必要がある場所を指定します。
-seo-title: 広告シグナリングモード
 title: 広告シグナリングモード
-uuid: 46f919f9-8ca1-46ff-b7a4-c9a03b5f1ccd
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---

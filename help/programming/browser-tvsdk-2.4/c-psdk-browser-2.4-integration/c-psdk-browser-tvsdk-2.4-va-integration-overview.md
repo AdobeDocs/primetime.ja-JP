@@ -1,13 +1,10 @@
 ---
 description: Browser TVSDKとAdobe Analyticsを統合することで、ビデオの使用を追跡できます。
-seo-description: Browser TVSDKとAdobe Analyticsを統合することで、ビデオの使用を追跡できます。
-seo-title: ビデオ分析
 title: ビデオ分析
-uuid: 6351933b-c0f3-4e3e-ad27-bedc8eecc312
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 Browser TVSDKとAdobe Analyticsを統合することで、ビデオの使用を追跡できます。
 
-ブラウザーTVSDKのビデオトラッキングでは、**Adobe AnalyticsVideo Essentials**&#x200B;サービスを使用して、ビデオ表示、ビデオ完了、広告インプレッション、ビデオ滞在時間などのビデオエンゲージメント指標を提供します。 このサービスの詳細については、Adobeの担当者にお問い合わせください。
+ブラウザーTVSDKのビデオトラッキングは、**Adobe AnalyticsVideo Essentials**&#x200B;サービスを使用して、ビデオ表示、ビデオ完了、広告インプレッション、ビデオ滞在時間などのビデオエンゲージメント指標を提供します。 このサービスの詳細については、Adobeの担当者にお問い合わせください。
 
 以下の手順は、プレイヤーでビデオトラッキングをアクティブにする手順をまとめたものです。
 

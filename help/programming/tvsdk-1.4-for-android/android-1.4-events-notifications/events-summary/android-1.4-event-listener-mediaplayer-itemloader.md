@@ -1,13 +1,10 @@
 ---
-description: TVSDKは、メディア項目の読み込みに応じて、メディアプレイヤー項目イベントをディスパッチします。
-seo-description: TVSDKは、メディア項目の読み込みに応じて、メディアプレイヤー項目イベントをディスパッチします。
-seo-title: Loaderイベント
+description: TVSDKは、メディア項目の読み込みに応答して、メディアプレイヤー項目イベントをディスパッチします。
 title: Loaderイベント
-uuid: 1b401ff5-4313-4c64-8be9-99bdeb58ba2a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # ローダイベント{#loader-events}
 
-TVSDKは、メディア項目の読み込みに応じて、メディアプレイヤー項目イベントをディスパッチします。
+TVSDKは、メディア項目の読み込みに応答して、メディアプレイヤー項目イベントをディスパッチします。
 
 これらのイベントは、代替ワークフローを提供します。 MediaPlayerの作成時に、このインターフェイスを実装する必要はありません。 `MediaPlayerItemLoader`を使いたい場合に使用します。
 

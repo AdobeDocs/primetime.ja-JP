@@ -1,13 +1,10 @@
 ---
 description: UIフレームワークは、ブラウザーTVSDKの上部にあるUIレイヤーです。このレイヤーは、初期設定の状態で様々なビデオプレーヤー関連のUI構成を提供します。 環境に適したポイントの変更を行うことで、高度にカスタマイズ可能なプレイヤーを作成できます。
-seo-description: UIフレームワークは、ブラウザーTVSDKの上部にあるUIレイヤーです。このレイヤーは、初期設定の状態で様々なビデオプレーヤー関連のUI構成を提供します。 環境に適したポイントの変更を行うことで、高度にカスタマイズ可能なプレイヤーを作成できます。
-seo-title: UIフレームワーク
 title: UIフレームワーク
-uuid: 8460d65c-b9aa-40d0-9e68-771b9f73a7b4
 translation-type: tm+mt
-source-git-commit: 2399515edaad49341cfa406a13887bcc8a3562be
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -803,5 +800,5 @@ var player = ptp.videoPlayer('.videoHolder', {
 
       `customBehavior`は、`adBreakStyling`が公開するすべてのメソッド（この例では`manageAdBreakStyle`）を使用できます。 その他の使用例として、mixinがイベントリスナーを追加でき、ハンドラーでmixinが何らかの方法で要素を変更できる場合があります。 その後、このミックスインを使用するコンポーネントは、自動的にこの機能を持ちます。
 
-   * **ユーティリ** ティ設定の節とで使用されるユーティリティな `ptp.elementGetter`ど、一部のユーティリティは、動作の作成 `ptp.deepmerge`や拡張に役立ちます。詳しくは、[UIフレームワーク](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) APIドキュメントを参照してください。
+   * **ユーティ** リティ設定セクションやで使用されるユーティリティ `ptp.elementGetter`など、動作の作成や拡張 `ptp.deepmerge`に役立つユーティリティがあります。詳しくは、[UIフレームワーク](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) APIドキュメントを参照してください。
 

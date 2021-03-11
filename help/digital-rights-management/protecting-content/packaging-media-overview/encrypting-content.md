@@ -1,9 +1,9 @@
 ---
-seo-title: コンテンツの暗号化
 title: コンテンツの暗号化
-uuid: 03f33473-bcd4-4e06-a823-e944897cb28e
+description: コンテンツの暗号化
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%

@@ -1,16 +1,12 @@
 ---
 title: Primetime Streaming Serverのリリース
-seo-title: Primetime Streaming Server 1.xのリリース
 description: Primetime Streaming Server 1.3および1.4リリースの新機能。
-seo-description: Primetime Streaming Server 1.3および1.4リリースの新機能。
-uuid: be05db6b-713f-4406-940d-9f3a805f967b
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: baec714e-9d41-4e8b-b134-13a736885cbd
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1916'
 ht-degree: 0%
 
 ---
@@ -127,7 +123,7 @@ Primetime接触チャネルのJITパッケージ化機能には、大規模なVO
 
 **ネットワーク要件**
 
-* MPEG-TSストリームをエンコーダーからLive Packagerに送信するには、ネットワークをマルチキャストに対応させる必要があります。 Live Packagerは、マルチキャストネットワークを必要としないエンコーダーからもRTMPストリームを受け入れます。
+* MPEG-TSストリームをエンコーダーからLive Packagerに送信するには、ネットワークをマルチキャストに対応させる必要があります。 Live Packagerは、マルチキャストネットワークを必要としないエンコーダーからもRTMPストリームを受け付けます。
 
 **サポートされるオペレーティングシステム**
 
@@ -204,7 +200,7 @@ Refer the Primetime Streaming Server Getting Started document for the configurat
 
 **ネットワーク要件**
 
-* MPEG-TSストリームをエンコーダーからLive Packagerに送信するには、ネットワークをマルチキャストに対応させる必要があります。 Live Packagerは、マルチキャストネットワークを必要としないエンコーダーからもRTMPストリームを受け入れます。
+* MPEG-TSストリームをエンコーダーからLive Packagerに送信するには、ネットワークをマルチキャストに対応させる必要があります。 Live Packagerは、マルチキャストネットワークを必要としないエンコーダーからもRTMPストリームを受け付けます。
 
 **サポートされるオペレーティングシステム**
 
@@ -320,7 +316,7 @@ HTTP接触チャネルサーバーをアンインストールするには、HTTP
 
 Offline Packagerをインストールするには、次の手順に従います。
 
-1. [Oracleのサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html)からJava SEソフトウェアをダウンロードし、インストール手順に従います。
+1. [Oracleサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html)からJava SEソフトウェアをダウンロードし、インストール手順に従います。
 1. Adobe Primetime- Offline Packager 1.4アーカイブファイル`Primetime- OfflinePackager-1-4-0-b206-12042014.zip`をディスクに展開します。
 
 [ここ](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)で利用可能な設定の詳細については、Primetime Offline Packager使用の手引きドキュメントを参照してください。

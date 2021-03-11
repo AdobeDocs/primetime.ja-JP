@@ -1,13 +1,10 @@
 ---
 description: PTMediaPlayerインターフェイスには、メディアプレイヤーオブジェクトの機能と動作がカプセル化されています。
-seo-description: PTMediaPlayerインターフェイスには、メディアプレイヤーオブジェクトの機能と動作がカプセル化されています。
-seo-title: PTMediaPlayerの設定
 title: PTMediaPlayerの設定
-uuid: 78549406-7e33-4bca-a25e-1e433f6a75d7
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: プレイヤーにXSTSトークンを設定する
 title: プレイヤーにXSTSトークンを設定する
-uuid: 8995e029-deee-4e23-9cda-a50de8c4f2c0
+description: プレイヤーにXSTSトークンを設定する
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c37061c116b8a6bc8ce085dc89dc8aadd0a2e490
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
@@ -24,7 +22,7 @@ Xbox用のPrimetime DRMポリシーの権限は次のとおりです。
 * ライセンスの終了日
 * 再生時間（秒）
 
-iOS、Android、デスクトップなど、別のPrimetimeプラットフォーム用にパッケージ済みのコンテンツがXbox360にストリーミングされる場合は、そのコンテンツをXbox360に再パッケージする必要はありません。
+iOS、Android、デスクトップなど、別のPrimetimeプラットフォーム用にパッケージ済みのコンテンツがXbox360にストリーミングされている場合は、そのコンテンツをXbox360に再パッケージする必要はありません。
 
 Xbox360の注意点の1つは、M3U8でEXT-X-KEYタグを検出するたびに、キーサーバーに常に接続する必要があるということです。 DRMポリシーの設定(policy.requireKeyServer)によってiOS PrimetimeビデオプレーヤーがlocalhostからAES復号キーを取得するiOSとは異なり、Xboxは常にリモートキーサーバーから復号キーを取得しようとします。 XboxアプリにAES暗号化解除を取得するよう指示するDRMポリシーがありません
 キーをlocalhostから取得します。 この要件のため、EXT-X-KEYエントリは、Primetime Cloud DRMエンドポイントを指すM3U8内に存在する必要があります。 このURLは、OfflinePackager.jar構成ファイルのconfig_hls.xmlの&lt;key_url>を介して設定されます。

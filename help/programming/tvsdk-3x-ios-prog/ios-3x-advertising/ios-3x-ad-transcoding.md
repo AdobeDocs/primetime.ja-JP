@@ -1,19 +1,16 @@
 ---
 description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
-seo-description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
-seo-title: Adobeクリエイティブの再パッケージングサービスを使用して、互換性のない広告を再パッケージ化する
 title: Adobeクリエイティブの再パッケージングサービスを使用して、互換性のない広告を再パッケージ化する
-uuid: 56a2405d-b395-4fea-820d-343590be7c19
 translation-type: tm+mt
-source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
 
 
-# Adobeクリエイティブ再パッケージ化サービス{#repackage-incompatible-ads-using-adobe-creative-repackaging-service}を使用して、互換性のない広告を再パッケージ化する
+# Adobeクリエイティブ再パッケージングサービス{#repackage-incompatible-ads-using-adobe-creative-repackaging-service}を使用して、互換性のない広告を再パッケージ化する
 
 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
 
@@ -38,7 +35,7 @@ TVSDKに追加されたAPIを次に示します。
 
 * `PTURLTransformer` TVSDKがリクエストするCRS広告URLの変換に必要なメソッドを記述するプロトコル。アプリケーションはこのプロトコルを実装し、必要なメソッドの実装を提供できます。
 
-* `PTDefaultURLTransformer` TVSDKで作成され、 `PTURLTransformer` プロトコルを実装する、デフォルトのURLトランスフォーマインスタンスです。アプリケーションは、このクラスを上書きしたり、URL後の変換ハンドラーを追加したりできます。 このハンドラーは、デフォルトの変換が適用された後に、アプリケーションがURLリクエストに変更を加える場合に役立ちます。
+* `PTDefaultURLTransformer` TVSDKで作成され、 `PTURLTransformer` プロトコルを実装する、デフォルトのURLトランスフォーマーインスタンスです。アプリケーションは、このクラスを上書きしたり、URL後の変換ハンドラーを追加したりできます。 このハンドラーは、デフォルトの変換が適用された後に、アプリケーションがURLリクエストに変更を加える場合に役立ちます。
 
 * `PTNetworkConfiguration setURLTransformer:defaultTransformer`  `PTNetworkConfiguration` 実装を設定するために `PTURLTransformer` メタデータインスタンスで提供されるsetterメソッド。
 

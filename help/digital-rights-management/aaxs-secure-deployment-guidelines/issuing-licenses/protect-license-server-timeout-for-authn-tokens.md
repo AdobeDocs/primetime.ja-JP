@@ -1,9 +1,9 @@
 ---
-seo-title: 認証トークンのタイムアウト
 title: 認証トークンのタイムアウト
-uuid: 41b0fbf5-a567-4118-bec1-c05e6e0b6d1f
+description: 認証トークンのタイムアウト
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%

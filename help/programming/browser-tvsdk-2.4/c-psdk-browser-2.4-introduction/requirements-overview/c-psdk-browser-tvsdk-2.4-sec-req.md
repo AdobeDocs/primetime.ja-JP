@@ -1,13 +1,10 @@
 ---
 description: ブラウザーTVSDKについて、セキュリティに関する考慮事項がいくつかあります。
-seo-description: ブラウザーTVSDKについて、セキュリティに関する考慮事項がいくつかあります。
-seo-title: セキュリティに関する考慮事項
 title: セキュリティに関する考慮事項
-uuid: 78edf2b0-363c-4ab6-b588-ab4748ee6096
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---

@@ -1,16 +1,13 @@
 ---
 title: DRM 5.3.1リリースノート
-seo-title: DRM 5.3.1リリースノート
 description: DRM 5.3.1リリースノートでは、DRM 5.3.1の新機能と既知の問題について説明します。
-seo-description: DRM 5.3.1リリースノートでは、DRM 5.3.1の新機能と既知の問題について説明します。
-uuid: bb61b79f-a5b3-42ed-8016-495b1ac99ea6
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---

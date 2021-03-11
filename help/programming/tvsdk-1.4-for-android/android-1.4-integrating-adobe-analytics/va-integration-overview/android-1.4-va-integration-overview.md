@@ -1,13 +1,10 @@
 ---
 description: TVSDKとAdobe Analyticsを統合することで、ビデオの使用を追跡できます。
-seo-description: TVSDKとAdobe Analyticsを統合することで、ビデオの使用を追跡できます。
-seo-title: ビデオ分析
 title: ビデオ分析
-uuid: 4cb589fd-7b29-4f43-870d-17430ff309f7
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---

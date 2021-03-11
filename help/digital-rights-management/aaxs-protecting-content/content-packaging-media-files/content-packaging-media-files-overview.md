@@ -1,9 +1,9 @@
 ---
-seo-title: 概要
 title: 概要
-uuid: 11cf1f1f-a4b2-4ac2-aae7-e925d96729d2
+description: 概要
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 概要{#overview}
 
-** パッケージ化とは、ポリシーを暗号化し、FLVまたはF4Vファイルに適用するプロセスです。メディアパッケージAPIを使用してファイルをパッケージ化します。 AdobeアクセスJava SDKでパッケージ化できるのは、プログレッシブダウンロードFlashおよびAIRコンテンツ（FLV、F4V、MP4など）のみです。 AdobeHTTP Dynamic Streaming(HDS)やApple HTTP Live Streaming(HLS)など、他のコンテンツ形式用にAdobeアクセスDRMを使用してコンテンツをパッケージ化するには、Adobeメディアサーバー([https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html))や、AdobeブロードキャストSDKを実装するエンコーダー([https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf&lt;a3)などのツールを使用する必要があります>)。 ](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf)また、お客様は、AdobeのJava Primetime Packagerツールセットを使用して、HDS、HLS、DASHなどの様々なターゲット形式にコンテンツをパッケージ化できます。
+** パッケージ化とは、ポリシーを暗号化し、FLVまたはF4Vファイルに適用するプロセスです。メディアパッケージAPIを使用してファイルをパッケージ化します。 AdobeアクセスJava SDKでパッケージ化できるのは、プログレッシブダウンロードFlashおよびAIRコンテンツ（FLV、F4V、MP4など）のみです。 AdobeHTTP Dynamic Streaming(HDS)やApple HTTP Live Streaming(HLS)など、他のコンテンツ形式用にAdobeアクセスDRMを使用してコンテンツをパッケージ化するには、Adobe Mediumサーバー([https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html))や、AdobeブロードキャストSDK([https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf))を実装するエンコーダーなどのツールを使用する必要があります。 また、お客様は、AdobeのJava Primetime Packagerツールセットを使用して、HDS、HLS、DASHなどの様々なターゲット形式にコンテンツをパッケージ化できます。
 
 パッケージは、ライセンスサーバーから分離されます。 パッケージャーがライセンスサーバーに接続してコンテンツに関する情報を交換する必要はありません。 ライセンスの発行に必要なライセンスサーバーの知識がすべて、コンテンツのメタデータに含まれます。
 

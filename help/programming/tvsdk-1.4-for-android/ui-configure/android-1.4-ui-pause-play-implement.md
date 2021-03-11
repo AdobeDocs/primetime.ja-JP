@@ -1,13 +1,10 @@
 ---
 description: TVSDKの動作を追加して、一時停止ボタンと再生ボタンを追加できます。
-seo-description: TVSDKの動作を追加して、一時停止ボタンと再生ボタンを追加できます。
-seo-title: ビデオの再生と一時停止
 title: ビデオの再生と一時停止
-uuid: 24b26364-5cb8-4a95-9574-cc52ddfa876b
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---

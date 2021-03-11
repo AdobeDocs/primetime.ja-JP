@@ -1,13 +1,10 @@
 ---
 description: 適切なExpressplayトークンサーバーにトークンリクエストを送信することで、暗号化されたコンテンツに対するExpressplayトークンを生成できます。
-seo-description: 適切なExpressplayトークンサーバーにトークンリクエストを送信することで、暗号化されたコンテンツに対するExpressplayトークンを生成できます。
-seo-title: Expressplayトークン
 title: Expressplayトークン
-uuid: 6103e1b2-127d-4758-a589-15f0f3c73db1
 translation-type: tm+mt
-source-git-commit: d0ba1f98b16f6350ae842ca2ce1261bf49dd8a66
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---

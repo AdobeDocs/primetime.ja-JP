@@ -1,13 +1,10 @@
 ---
 description: メディアリソースを解決する別の方法は、MediaPlayerItemLoaderを使用する方法です。 これは、MediaPlayerインスタンスをインスタンス化せずに、特定のメディアストリームに関する情報を取得する場合に役立ちます。
-seo-description: メディアリソースを解決する別の方法は、MediaPlayerItemLoaderを使用する方法です。 これは、MediaPlayerインスタンスをインスタンス化せずに、特定のメディアストリームに関する情報を取得する場合に役立ちます。
-seo-title: MediaPlayerItemLoaderを使用したメディアリソースの読み込み
 title: MediaPlayerItemLoaderを使用したメディアリソースの読み込み
-uuid: b2311ddc-f059-4775-8553-fc354ec2636b
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerItemConfigクラスを使用して、TVSDK内でグローバルにカスタムタグ名を設定できます。
-seo-description: MediaPlayerItemConfigクラスを使用して、TVSDK内でグローバルにカスタムタグ名を設定できます。
-seo-title: タグのConfigクラスメソッド
 title: タグのConfigクラスメソッド
-uuid: f2758085-8e49-4eaf-82bb-4a2e4dd8accb
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---

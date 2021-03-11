@@ -1,13 +1,10 @@
 ---
 description: Primetimeリファレンスの実装では、応答にJSONベースのフィード形式が使用されます。 この形式は、IFeedItemAdapterインターフェイスの実装を使用して解析されます。
-seo-description: Primetimeリファレンスの実装では、応答にJSONベースのフィード形式が使用されます。 この形式は、IFeedItemAdapterインターフェイスの実装を使用して解析されます。
-seo-title: カタログ形式
 title: カタログ形式
-uuid: 6e1a526f-c0bb-403d-a792-666caf5479a5
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -141,7 +138,7 @@ Primetimeリファレンスの実装では、応答にJSONベースのフィー�
 | プロパティ | 説明 |
 |--- |--- |
 | ad | 広告関連のメタデータ。 |
-| type | 値には、Primetime広告、ダイレクト広告の時間またはカスタム広告マーカーを使用できます。 <br/><br/>PSDKは、次のタイプのメタデータに対する組み込みのサポートを提供します。Primetime広告配信(Primetime Ads)用のAuditude関連のメタデータ、広告URLを使用する直接広告の時間(Direct Ad Breaks)、および各広告マーカー（カスタム広告マーカー）のTimeRangeを提供するカスタム広告マーカー。各型には、メタデータを処理するPSDKに組み込まれているAdProviderがあります。  <br/><br/>これらの各JSON形式は、次のように定義されています。 |
+| type | 値には、Primetime広告、ダイレクト広告の時間またはカスタム広告マーカーを使用できます。 <br/><br/>PSDKは、次のタイプのメタデータを組み込みでサポートします。Primetime広告配信(Primetime Ads)用のAuditude関連のメタデータ、広告URLを使用する直接広告の時間(Direct Ad Breaks)、および各広告マーカー（カスタム広告マーカー）のTimeRangeを提供するカスタム広告マーカー。各型には、メタデータを処理するPSDKに組み込まれているAdProviderがあります。  <br/><br/>これらの各JSON形式は、次のように定義されています。 |
 | details | 広告メタデータ属性が含まれます。 広告メタデータの両方のタイプには、以下に定義する独自の属性セットがあります。 組み込み型の場合、含まれる属性は、その型に対してPSDKが予期するデータを定義します。 |
 | 権利付与 | エンタイトルメント関連のメタデータ |
 | id | Adobe Primetime有料テレビパスサービスに対する承認要求に使用されるメディアリソースID。 IDは、テキスト文字列またはHTMLエンコードされたmRSS文字列のいずれかです。 認証が必要なメディアコンテンツには、有効なリソースIDが含まれている必要があります。 |

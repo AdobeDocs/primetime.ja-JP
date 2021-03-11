@@ -1,13 +1,10 @@
 ---
 description: ジャストインタイムトランスコードは、ID3時間指定メタデータを広告クリエイティブに挿入して、クライアント側の広告追跡を容易にできます。
-seo-description: ジャストインタイムトランスコードでは、ID3時間指定メタデータをHLS形式の広告クリエイティブに挿入して、クライアント側の広告追跡を容易にできます。
-seo-title: ジャストインタイムトランスコードを使用したID3時間指定メタデータタグの挿入
 title: ジャストインタイムトランスコードを使用したID3時間指定メタデータタグの挿入
-uuid: 491bbb9e-15de-4871-baa1-f7bb0ea0dde2
 translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---

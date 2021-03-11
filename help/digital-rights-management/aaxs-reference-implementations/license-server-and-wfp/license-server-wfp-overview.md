@@ -1,9 +1,9 @@
 ---
-seo-title: ライセンスサーバーと監視フォルダーパッケージャーの概要
 title: ライセンスサーバーと監視フォルダーパッケージャーの概要
-uuid: 3dd6f699-a5c0-44c4-897a-34e06abe3d71
+description: ライセンスサーバーと監視フォルダーパッケージャーの概要
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 0%
@@ -37,7 +37,7 @@ ht-degree: 0%
    * ライセンスサーバーへの要求を許可するDRM/Runtimeバージョンの制限
    * クライアントクロックウィンドバックの環境設定の指定
    * リクエスト時間とサーバー時間の間で許容される時間差の制限（リプレイ攻撃の防止）
-   * FMRMS 1.xクライアントからの要求の処理(FMRMS 1.xクライアントがAdobeアクセス2.0以降にアップグレードするようにトリガー)
+   * FMRMS 1.xクライアントからの要求の処理(トリガーFMRMS 1.xクライアントでAdobeアクセス2.0以降にアップグレードする場合)
    * データベースに格納されたFMRMS 1.xライセンス情報を使用して、FMRMS 1.xメタデータをその場でAdobeアクセスメタデータに変換する
    * FMRMS 1.xポリシーをAdobeアクセスポリシーに変換するためのサンプルコード
    * 既存のデータベースからFMRMS 1.xライセンス情報を読み込むためのサンプルスクリプト

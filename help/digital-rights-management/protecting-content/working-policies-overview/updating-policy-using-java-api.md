@@ -1,9 +1,9 @@
 ---
-seo-title: Java APIを使用したDRMポリシーの更新
 title: Java APIを使用したDRMポリシーの更新
-uuid: ec21351c-900e-48f5-845a-c0b430c210d7
+description: Java APIを使用したDRMポリシーの更新
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Java APIを使用してDRMポリシーを更新するには：
    Policy policy = new Policy(policyBytes);
    ```
 
-1. DRM `Policy`オブジェクトのプロパティ（名前や使用ルールなど）を設定して、DRM &lt;a0/>オブジェクトを更新します。
+1. DRM `Policy`オブジェクトのプロパティ（名前や使用ルールなど）を設定して、DRM オブジェクトを更新します。
 
    ```java
    // Change the DRM policy name.  

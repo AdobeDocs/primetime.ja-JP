@@ -1,13 +1,10 @@
 ---
 description: TVSDKを使用して、メディア内でのプレイヤーの位置に関する情報を取得し、シークバーに表示できます。
-seo-description: TVSDKを使用して、メディア内でのプレイヤーの位置に関する情報を取得し、シークバーに表示できます。
-seo-title: ビデオの長さ、現在時間および残り時間の表示
 title: ビデオの長さ、現在時間および残り時間の表示
-uuid: 13627fa2-8cd8-4336-bc4b-7e3226330389
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -80,7 +77,7 @@ TVSDKを使用して、メディア内でのプレイヤーの位置に関する
 
    ![](assets/seek-bar.jpg){width=&quot;477.000pt&quot;}
 
-   次の例では、`ReferencePlayer`で使用できる`Clock.java`ヘルパークラスをタイマーとして使用します。 このクラスは、イベントリスナーを設定し、1秒ごとに`onTick`イベントをトリガーします。また、別のタイムアウト値を指定することもできます。
+   次の例では、`ReferencePlayer`で使用できる`Clock.java`ヘルパークラスをタイマーとして使用します。 このクラスは、イベントリスナーとトリガーに対して、1秒ごとに`onTick`イベントを設定するか、別のタイムアウト値を指定します。
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 

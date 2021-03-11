@@ -1,13 +1,10 @@
 ---
 description: ブラウザーTVSDKを使用するには、基本プレイヤーを作成し、設定する必要があります。 ビデオコンテンツを再生する場合は、ブラウザーTVSDKを使用する方法と、UIフレームワークを使用する方法のどちらかで、基本プレーヤーを作成できます。
-seo-description: ブラウザーTVSDKを使用するには、基本プレイヤーを作成し、設定する必要があります。 ビデオコンテンツを再生する場合は、ブラウザーTVSDKを使用する方法と、UIフレームワークを使用する方法のどちらかで、基本プレーヤーを作成できます。
-seo-title: 基本プレーヤー
 title: 基本プレーヤー
-uuid: 44a27458-be12-452f-92b9-3cef79439257
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---

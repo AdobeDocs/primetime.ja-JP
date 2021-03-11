@@ -1,13 +1,10 @@
 ---
 description: エンタイトルメントのリクエストと応答は、ライセンスサーバーとお客様のエンタイトルメントサービスの間の相互に認証されたSSL接続を介して渡されます。
-seo-description: エンタイトルメントのリクエストと応答は、ライセンスサーバーとお客様のエンタイトルメントサービスの間の相互に認証されたSSL接続を介して渡されます。
-seo-title: パブリックAPIを参照
 title: パブリックAPIを参照
-uuid: f3a17d61-04ee-4bdb-9d64-a98066c6d1c8
 translation-type: tm+mt
-source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---

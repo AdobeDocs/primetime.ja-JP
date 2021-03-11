@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、ライブストリーミング用のマスターm3u8マニフェスト内で変更された再生情報を検出し、ストリームの再生中に再生情報を更新できます。 TVSDKは、更新間で重複しないプロファイルビットレートなど、マスターマニフェストにプロファイルが出現したり、出現しなくなったりする際のビットレートプロファイルの動的セットをサポートしています。
-seo-description: TVSDKは、ライブストリーミング用のマスターm3u8マニフェスト内で変更された再生情報を検出し、ストリームの再生中に再生情報を更新できます。 TVSDKは、更新間で重複しないプロファイルビットレートなど、マスターマニフェストにプロファイルが出現したり、出現しなくなったりする際のビットレートプロファイルの動的セットをサポートしています。
-seo-title: ライブマスターマニフェストの更新
 title: ライブマスターマニフェストの更新
-uuid: 44f8adc2-0538-4c5d-8e39-55f661d8540b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---

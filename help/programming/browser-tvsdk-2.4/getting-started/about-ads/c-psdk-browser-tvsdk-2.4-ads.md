@@ -1,13 +1,10 @@
 ---
 description: コンテンツの再生中に、Browser TVSDKは、MediaResourceオブジェクトの作成時に広告を表示し、広告に関する情報を渡すことができます。
-seo-description: コンテンツの再生中に、Browser TVSDKは、MediaResourceオブジェクトの作成時に広告を表示し、広告に関する情報を渡すことができます。
-seo-title: 広告
 title: 広告
-uuid: 9a5e8c83-18ce-41e8-9cb1-fdc9da903faf
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '100'
 ht-degree: 0%
 
 ---

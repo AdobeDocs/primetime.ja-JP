@@ -1,13 +1,10 @@
 ---
 description: 独自のオポチュニティディテクターを実装できます。
-seo-description: 独自のオポチュニティディテクターを実装できます。
-seo-title: カスタムオポチュニティディテクターの実装
 title: カスタムオポチュニティディテクターの実装
-uuid: 18fb431b-4585-4293-92a7-b77ab7f9b7db
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -26,7 +23,7 @@ ht-degree: 0%
        カスタムオポチュニティジェネレーターが&#39;TimedMetadata&#39;オブジェクトに基づいている場合は、&#39;TimedMetadataOpportunityGenerator&#39;を拡張し、以下のメソッドをオーバーライドします。
    
    * `doConfigure`  — このメソッドは、メディアプレイヤーアイテムが作成された後に呼び出され、必要に応じてオポチュニティの初期セットを作成するオポチュニティジェネレーターを提供します
-   * `doProcess`  — このメソッドは、新しい情報 `TimedMetadata` が検出されるたびに呼び出されます（例えば、ライブ/リニアストリームの場合は、プレイリスト/マニフェストが更新されるたび）
+   * `doProcess`  — このメソッドは、新しい情報 `TimedMetadata` が検出されるたびに呼び出されます（例えば、ライブ/リニアストリームの場合は、プレイリスト/マニフェストが更新されるたびに）
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 

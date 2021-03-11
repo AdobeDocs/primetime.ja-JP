@@ -1,13 +1,10 @@
 ---
 description: 'Android向けTVSDKは、様々な機能を備え、次の主な機能を提供します '
-seo-description: 'Android向けTVSDKは、様々な機能を備え、次の主な機能を提供します '
-seo-title: Primetime TVSDKの機能
 title: Primetime TVSDKの機能
-uuid: 7a9218c7-a67c-49ac-83b0-fe40650a3625
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---

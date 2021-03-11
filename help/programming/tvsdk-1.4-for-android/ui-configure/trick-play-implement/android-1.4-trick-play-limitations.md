@@ -1,13 +1,10 @@
 ---
 description: トリック再生モードの動作には、いくつかの制限事項といくつかの問題があります。
-seo-description: トリック再生モードの動作には、いくつかの制限事項といくつかの問題があります。
-seo-title: トリック再生の制限事項と動作
 title: トリック再生の制限事項と動作
-uuid: 0e84c9ef-fc18-4667-ad17-7f4777b552ba
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---

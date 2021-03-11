@@ -1,13 +1,10 @@
 ---
 description: iOSアプリは、AdobeのMachotoolsツールを使用して許可リストできます。
-seo-description: iOSアプリは、AdobeのMachotoolsツールを使用して許可リストできます。
-seo-title: iOSアプリケーションの許可リスト
 title: iOSアプリケーションの許可リスト
-uuid: 52ce1dd7-5f10-418e-9916-cec60eae874e
 translation-type: tm+mt
-source-git-commit: 0d3d74cb2b36acb3682304122ab61ba8636f640f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---

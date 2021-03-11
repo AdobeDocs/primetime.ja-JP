@@ -1,13 +1,10 @@
 ---
 description: 新しいビデオコンテンツごとに、ビデオコンテンツに関する情報でMediaResourceインスタンスを初期化し、メディアリソースを読み込みます。 MediaResourceクラスは、MediaPlayerインスタンスによって読み込まれるコンテンツを表します。
-seo-description: 新しいビデオコンテンツごとに、ビデオコンテンツに関する情報でMediaResourceインスタンスを初期化し、メディアリソースを読み込みます。 MediaResourceクラスは、MediaPlayerインスタンスによって読み込まれるコンテンツを表します。
-seo-title: メディアリソースの作成
 title: メディアリソースの作成
-uuid: d9fe982a-bedf-445c-b5be-f7918693782a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---

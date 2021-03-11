@@ -1,13 +1,10 @@
 ---
 description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
-seo-description: 一部のサードパーティの広告（またはクリエイティブ）は、ビデオ形式がHLSと互換性がないので、HTTP Live Streaming(HLS)コンテンツストリームに繋ぎ合わせることができません。 Primetime広告の挿入とTVSDKは、オプションで、互換性のない広告を互換性のあるM3U8ビデオに再パッケージ化することができます。
-seo-title: Adobeクリエイティブの再パッケージングサービスを使用して、互換性のない広告を再パッケージ化する
 title: Adobeクリエイティブの再パッケージングサービスを使用して、互換性のない広告を再パッケージ化する
-uuid: e8be1ed2-3ee3-4ee7-a75c-b804ab398568
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
@@ -40,7 +37,7 @@ TVSDKに追加されたAPIを次に示します。
 
 * `PTURLTransformer` TVSDKがリクエストするCRS広告URLの変換に必要なメソッドを記述するプロトコル。アプリケーションはこのプロトコルを実装し、必要なメソッドの実装を提供できます。
 
-* `PTDefaultURLTransformer` TVSDKで作成され、 `PTURLTransformer` プロトコルを実装する、デフォルトのURLトランスフォーマインスタンスです。アプリケーションは、このクラスを上書きしたり、URL後の変換ハンドラーを追加したりできます。 このハンドラーは、デフォルトの変換が適用された後に、アプリケーションがURLリクエストに変更を加える場合に役立ちます。
+* `PTDefaultURLTransformer` TVSDKで作成され、 `PTURLTransformer` プロトコルを実装する、デフォルトのURLトランスフォーマーインスタンスです。アプリケーションは、このクラスを上書きしたり、URL後の変換ハンドラーを追加したりできます。 このハンドラーは、デフォルトの変換が適用された後に、アプリケーションがURLリクエストに変更を加える場合に役立ちます。
 
 * `PTNetworkConfiguration setURLTransformer:defaultTransformer`  `PTNetworkConfiguration` 実装を設定するために `PTURLTransformer` メタデータインスタンスで提供されるsetterメソッド。
 

@@ -1,13 +1,10 @@
 ---
 description: Adobe® Access™を使用するように設定するには、DVDからファイルをコピーします。 これらのファイルには、コード、証明書、およびサードパーティクラスを含むJARファイルが含まれます。 また、Adobe Systems Incorporatedに証明書を要求する。 パッケージ化されたコンテンツ、ライセンス、およびクライアントとサーバー間の通信の整合性を保護するために使用される複数の資格情報が発行されます。
-seo-description: Adobe® Access™を使用するように設定するには、DVDからファイルをコピーします。 これらのファイルには、コード、証明書、およびサードパーティクラスを含むJARファイルが含まれます。 また、Adobe Systems Incorporatedに証明書を要求する。 パッケージ化されたコンテンツ、ライセンス、およびクライアントとサーバー間の通信の整合性を保護するために使用される複数の資格情報が発行されます。
-seo-title: 開発環境の設定
 title: 開発環境の設定
-uuid: 1f192783-9c9a-4342-909a-4881248a85ad
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---

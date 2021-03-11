@@ -1,13 +1,10 @@
 ---
 description: コンテンツをパッケージ化する場合は、ライセンスサーバーのURLを指定する必要があります。
-seo-description: コンテンツをパッケージ化する場合は、ライセンスサーバーのURLを指定する必要があります。
-seo-title: コンテンツのパッケージ化
 title: コンテンツのパッケージ化
-uuid: 2e47a9a2-bbc6-4995-8ce5-6ca6b116349b
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---

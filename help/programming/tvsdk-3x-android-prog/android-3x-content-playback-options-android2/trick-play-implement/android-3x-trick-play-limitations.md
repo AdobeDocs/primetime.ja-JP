@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: トリック再生の制限事項と動作
 title: トリック再生の制限事項と動作
-uuid: c28cc8db-3f45-488e-ab72-b102b3a1fab2
+description: トリック再生の制限事項と動作
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---

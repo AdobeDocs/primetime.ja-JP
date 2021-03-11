@@ -1,13 +1,10 @@
 ---
 description: コンテンツのパッケージ化と保護に関する情報により、コンテンツを保護できます。
-seo-description: コンテンツのパッケージ化と保護に関する情報により、コンテンツを保護できます。
-seo-title: コンテンツのパッケージ化と保護
 title: コンテンツのパッケージ化と保護
-uuid: 9bf89f86-082e-40f9-8deb-c9774a9d8e02
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---

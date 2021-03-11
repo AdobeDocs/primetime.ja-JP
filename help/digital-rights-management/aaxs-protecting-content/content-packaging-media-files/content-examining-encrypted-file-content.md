@@ -1,9 +1,9 @@
 ---
-seo-title: 暗号化されたファイルの内容を調べる
 title: 暗号化されたファイルの内容を調べる
-uuid: 2132fac7-5f11-4308-b511-ed4f216527a6
+description: 暗号化されたファイルの内容を調べる
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%

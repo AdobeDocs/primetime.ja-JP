@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、スライディングウィンドウプレイリストのストリームである特定の位置（時間）のシーク、ビデオオンデマンド(VOD)およびライブストリームをサポートしています。
-seo-description: TVSDKは、スライディングウィンドウプレイリストのストリームである特定の位置（時間）のシーク、ビデオオンデマンド(VOD)およびライブストリームをサポートしています。
-seo-title: シークスクラブバーに現在の再生位置を表示
 title: シークスクラブバーに現在の再生位置を表示
-uuid: 30a9237c-bbd5-457e-a93c-662570711986
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -43,7 +40,7 @@ TVSDKは、スライディングウィンドウプレイリストのストリー
 
    >[!TIP]
    >
-   >このステップでは、再生ヘッドがストリーム内の新しい位置に移動しますが、計算された最後の位置は、指定されたシーク位置と異なる場合があります。
+   >このステップでは、再生ヘッドをストリーム内の新しい位置に移動しますが、計算された最後の位置は、指定されたシーク位置と異なる場合があります。
 
 1. `MediaPlayerEvent.OPERATION_FAILED`をリッスンし、適切な処置を取ります。
 

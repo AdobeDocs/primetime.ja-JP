@@ -1,13 +1,10 @@
 ---
 description: ビデオのプレイリストでは、メインビデオコンテンツに対して無制限に数の代替オーディオトラックを指定できます。 例えば、ビデオコンテンツに異なる言語を追加したり、コンテンツの再生中にユーザーがデバイス上で異なるトラックを切り替えられるようにしたい場合があります。
-seo-description: ビデオのプレイリストでは、メインビデオコンテンツに対して無制限に数の代替オーディオトラックを指定できます。 例えば、ビデオコンテンツに異なる言語を追加したり、コンテンツの再生中にユーザーがデバイス上で異なるトラックを切り替えられるようにしたい場合があります。
-seo-title: プレイリスト内の代替オーディオトラック
 title: プレイリスト内の代替オーディオトラック
-uuid: 47289392-ae4e-44b9-8d54-6ccee8fe1446
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---

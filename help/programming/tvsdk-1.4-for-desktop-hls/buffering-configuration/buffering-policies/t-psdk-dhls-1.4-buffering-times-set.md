@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerは、初期バッファリング時間と再生バッファリング時間を設定および取得するメソッドを提供します。
-seo-description: MediaPlayerは、初期バッファリング時間と再生バッファリング時間を設定および取得するメソッドを提供します。
-seo-title: バッファリング時間の設定
 title: バッファリング時間の設定
-uuid: 25142b01-5381-49c9-b89a-24c858faaf13
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---

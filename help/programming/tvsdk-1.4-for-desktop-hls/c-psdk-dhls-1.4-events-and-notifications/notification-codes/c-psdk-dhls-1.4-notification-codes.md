@@ -1,13 +1,10 @@
 ---
 description: TVSDK通知システムは、診断メタデータを提供する様々なエラー、警告および情報通知を生成します。
-seo-description: TVSDK通知システムは、診断メタデータを提供する様々なエラー、警告および情報通知を生成します。
-seo-title: 通知コード
 title: 通知コード
-uuid: a7b77a5c-9873-45cf-8499-aa00270a7ad6
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---

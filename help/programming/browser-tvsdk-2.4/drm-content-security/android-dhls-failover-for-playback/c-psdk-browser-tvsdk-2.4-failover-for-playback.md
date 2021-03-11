@@ -1,13 +1,10 @@
 ---
 description: インターネット経由でのストリーミングには、リモートサーバーからストリームを再生するために、常に安定した接続が必要です。 ただし、ビューアのインターネット接続またはストリーミング再生は多様なので、リモート再生の品質はローカルで再生されるメディアの品質と同じでない場合があります。
-seo-description: インターネット経由でのストリーミングには、リモートサーバーからストリームを再生するために、常に安定した接続が必要です。 ただし、ビューアのインターネット接続またはストリーミング再生は多様なので、リモート再生の品質はローカルで再生されるメディアの品質と同じでない場合があります。
-seo-title: 再生とフェイルオーバー
 title: 再生とフェイルオーバー
-uuid: 5d75e55d-9c01-4a36-9bdf-891289821c6b
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---

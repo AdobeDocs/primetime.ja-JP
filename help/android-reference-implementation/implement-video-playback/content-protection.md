@@ -1,13 +1,10 @@
 ---
 description: Primetimeプレイヤーは、カスタムDRMワークフローとしてPrimetime DRM統合をサポートします。 つまり、ストリームを再生する前に、アプリケーションでDRM認証ワークフローを実装する必要があります。
-seo-description: Primetimeプレイヤーは、カスタムDRMワークフローとしてPrimetime DRM統合をサポートします。 つまり、ストリームを再生する前に、アプリケーションでDRM認証ワークフローを実装する必要があります。
-seo-title: DRMコンテンツの保護
 title: DRMコンテンツの保護
-uuid: 95c446f6-8304-4d70-9bef-7368b9364025
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---

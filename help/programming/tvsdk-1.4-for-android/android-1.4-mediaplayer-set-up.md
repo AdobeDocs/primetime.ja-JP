@@ -1,13 +1,10 @@
 ---
 description: Android用のMediaPlayerインターフェイスには、メディアプレイヤーの機能と動作がカプセル化されています。
-seo-description: Android用のMediaPlayerインターフェイスには、メディアプレイヤーの機能と動作がカプセル化されています。
-seo-title: MediaPlayerの設定
 title: MediaPlayerの設定
-uuid: 492b4693-acdf-4213-98e5-d6f0f1ae086d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---

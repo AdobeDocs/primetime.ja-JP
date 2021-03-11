@@ -1,9 +1,9 @@
 ---
-seo-title: 概要 — リファレンス実装の使用
 title: 概要 — リファレンス実装の使用
-uuid: 4009b6d1-b315-4117-8c26-c2f6ee0cefc2
+description: 概要 — リファレンス実装の使用
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%

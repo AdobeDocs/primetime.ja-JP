@@ -1,13 +1,10 @@
 ---
 description: プレイヤーのUIロジックは、広告クリックを管理するプロセスと分離する必要があります。 これを行う1つの方法は、1つのアクティビティに対して複数のフラグメントを実装することです。
-seo-description: プレイヤーのUIロジックは、広告クリックを管理するプロセスと分離する必要があります。 これを行う1つの方法は、1つのアクティビティに対して複数のフラグメントを実装することです。
-seo-title: クリック可能な広告プロセスの分離
 title: クリック可能な広告プロセスの分離
-uuid: c37f5916-eb25-41ec-b5f4-efb82ec56371
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---

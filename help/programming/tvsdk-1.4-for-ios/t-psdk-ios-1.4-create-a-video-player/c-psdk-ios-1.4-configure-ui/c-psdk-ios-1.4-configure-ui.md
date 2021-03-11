@@ -1,13 +1,10 @@
 ---
 description: TVSDKを使用して、ライブおよびビデオオンデマンド(VOD)の基本的な再生エクスペリエンスを制御できます。 TVSDKは、プレイヤーを自分用に設定する代わりに、プレイヤーインスタンスに対してメソッドとプロパティを提供します。このメソッドとプロパティを使用して、プレイヤーユーザーインターフェイスを設定できます。
-seo-description: TVSDKを使用して、ライブおよびビデオオンデマンド(VOD)の基本的な再生エクスペリエンスを制御できます。 TVSDKは、プレイヤーを自分用に設定する代わりに、プレイヤーインスタンスに対してメソッドとプロパティを提供します。このメソッドとプロパティを使用して、プレイヤーユーザーインターフェイスを設定できます。
-seo-title: プレイヤーのユーザーインターフェイスの設定
 title: プレイヤーのユーザーインターフェイスの設定
-uuid: d71d3a53-c2a4-4192-b16a-988d538b42e3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---

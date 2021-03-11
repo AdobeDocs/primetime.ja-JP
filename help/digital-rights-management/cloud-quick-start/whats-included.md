@@ -1,13 +1,10 @@
 ---
 description: Adobeは、独自のPrimetime DRMライセンスサーバーの開発と保守を希望しないAdobe PrimetimeDRMのお客様に対して、Cloud DRMサービスを提供します。 このサービスを利用することで、DRMライセンスの発行に関連する運用と開発の複雑さを軽減できます。 Primetime Cloud DRMは、PrimetimeブラウザーTVSDK対応のビデオアプリケーション（iOS、Android、デスクトップ、Xbox360など）を実行できるすべてのデバイスにDRMライセンスを発行できます。 このDRMサービスは、24時間365日稼働状態で、Adobeがホストし、保守します。
-seo-description: Adobeは、独自のPrimetime DRMライセンスサーバーの開発と保守を希望しないAdobe PrimetimeDRMのお客様に対して、Cloud DRMサービスを提供します。 このサービスを利用することで、DRMライセンスの発行に関連する運用と開発の複雑さを軽減できます。 Primetime Cloud DRMは、PrimetimeブラウザーTVSDK対応のビデオアプリケーション（iOS、Android、デスクトップ、Xbox360など）を実行できるすべてのデバイスにDRMライセンスを発行できます。 このDRMサービスは、24時間365日稼働状態で、Adobeがホストし、保守します。
-seo-title: 背景
 title: 背景
-uuid: 11a5b9ea-ebd2-47e0-b078-af2a3e1f7bf6
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---

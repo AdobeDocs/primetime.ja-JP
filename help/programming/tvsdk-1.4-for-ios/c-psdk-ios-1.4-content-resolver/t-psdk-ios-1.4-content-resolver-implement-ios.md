@@ -1,13 +1,10 @@
 ---
 description: デフォルトのリゾルバーに基づいてリゾルバーを実装できます。
-seo-description: デフォルトのリゾルバーに基づいてリゾルバーを実装できます。
-seo-title: カスタムオポチュニティ/コンテンツリゾルバーの実装
 title: カスタムオポチュニティ/コンテンツリゾルバーの実装
-uuid: bfc14318-ca4b-46cc-8128-e3743af06d9a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -65,7 +62,7 @@ ht-degree: 0%
 
       * `PTAdBreak`は次のものです。
 
-         * ブレークの開始時間と継続時間を示す`CMTimeRange`。
+         * 開始時間と時間の長さの`CMTimeRange`。
 
             これは`PTAdBreak`の範囲プロパティとして設定されます。
 

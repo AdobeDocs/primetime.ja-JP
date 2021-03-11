@@ -1,13 +1,10 @@
 ---
 description: この例では、再生タイムラインにTimeRange指定を含めるための推奨される方法を示します。
-seo-description: この例では、再生タイムラインにTimeRange指定を含めるための推奨される方法を示します。
-seo-title: タイムラインへのTimeRange広告マーカーの配置
 title: タイムラインへのTimeRange広告マーカーの配置
-uuid: cbcc4c84-0d56-4331-b555-b8e59f7d52d4
 translation-type: tm+mt
-source-git-commit: fd21a29bb186238142d43e0277bbf92f8406f6f7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---

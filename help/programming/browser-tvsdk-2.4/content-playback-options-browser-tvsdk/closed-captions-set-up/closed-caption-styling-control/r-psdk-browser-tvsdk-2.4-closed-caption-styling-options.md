@@ -1,13 +1,10 @@
 ---
 description: 複数のキャプションのスタイル設定オプションを指定できます。これらのオプションは、元のキャプションのスタイル設定オプションよりも優先されます。
-seo-description: 複数のキャプションのスタイル設定オプションを指定できます。これらのオプションは、元のキャプションのスタイル設定オプションよりも優先されます。
-seo-title: クローズドキャプションのスタイル設定オプション
 title: クローズドキャプションのスタイル設定オプション
-uuid: 0e2fd9f3-e569-4b5d-9b78-86f8ee6230ee
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
@@ -47,7 +44,7 @@ new TextFormat(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> フォント </td> 
-   <td colname="2"> <p>フォントタイプ。 </p> <p><span class="codeph"> TextFormat.Font </span>定義済みリストで定義され、例えばserifsのある（またはない）等幅を表す値にのみ設定できます。 </p> <p>ヒント： デバイスで使用できる実際のフォントは異なる場合があり、必要に応じて代替フォントが使用されます。 serifsを持つ等幅スペースは、通常、代替として使用されますが、システムに固有の置き換えである場合もあります。 </p> </td> 
+   <td colname="2"> <p>フォントタイプ。 </p> <p><span class="codeph"> TextFormat.Font </span>定義済みリストで定義され、例えばserifsのある（またはない）等幅を表す値にのみ設定できます。 </p> <p>ヒント： デバイスで使用できる実際のフォントは異なる場合があり、必要に応じて代替フォントが使用されます。 serifsを持つ等幅スペースは、通常、代替として使用されますが、システム固有の置換である場合もあります。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> サイズ </td> 

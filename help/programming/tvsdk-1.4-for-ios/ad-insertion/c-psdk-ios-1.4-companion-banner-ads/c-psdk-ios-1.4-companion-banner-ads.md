@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、コンパニオンバナー広告をサポートしています。これは、リニア広告に付随する広告で、多くの場合、リニア広告の終了後もページ上に残ります。 アプリケーションは、リニア広告と共に提供されるコンパニオンバナーを表示する必要があります。
-seo-description: TVSDKは、コンパニオンバナー広告をサポートしています。これは、リニア広告に付随する広告で、多くの場合、リニア広告の終了後もページ上に残ります。 アプリケーションは、リニア広告と共に提供されるコンパニオンバナーを表示する必要があります。
-seo-title: コンパニオンバナー広告
 title: コンパニオンバナー広告
-uuid: 6f38f6ec-bc8b-4ea1-845f-90031b3d8a00
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---

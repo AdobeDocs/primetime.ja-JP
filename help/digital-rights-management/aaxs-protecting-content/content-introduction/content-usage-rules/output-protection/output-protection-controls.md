@@ -1,9 +1,9 @@
 ---
-seo-title: 出力保護の制御
 title: 出力保護の制御
-uuid: 1f4cc617-7f14-4952-8e61-6acbdf01d10e
+description: 出力保護の制御
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%

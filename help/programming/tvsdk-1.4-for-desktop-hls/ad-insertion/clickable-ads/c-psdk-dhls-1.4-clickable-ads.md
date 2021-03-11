@@ -1,13 +1,10 @@
 ---
 description: TVSDKは、クリックスルー広告に対してアクションを実行できるように情報を提供します。 プレイヤーUIを作成する際、ユーザーがクリック可能な広告をクリックしたときの応答方法を決定する必要があります。
-seo-description: TVSDKは、クリックスルー広告に対してアクションを実行できるように情報を提供します。 プレイヤーUIを作成する際、ユーザーがクリック可能な広告をクリックしたときの応答方法を決定する必要があります。
-seo-title: クリック可能な広告
 title: クリック可能な広告
-uuid: edefbc66-2d30-441d-9c30-256588504463
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: VODコンテンツの時間間隔を広告の時間として指定できます。
-seo-description: VODコンテンツの時間間隔を広告の時間として指定できます。
-seo-title: 範囲をマーク
 title: 範囲をマーク
-uuid: fa6047dc-9a12-42fa-9e58-8ee3a55fa866
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '81'
 ht-degree: 0%
 
 ---

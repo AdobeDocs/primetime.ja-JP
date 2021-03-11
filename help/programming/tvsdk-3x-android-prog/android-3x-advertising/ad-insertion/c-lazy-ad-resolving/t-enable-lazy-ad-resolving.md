@@ -1,14 +1,11 @@
 ---
 description: 遅延広告解決機能は、既存の遅延広告読み込みメカニズムを使用して有効または無効にできます（遅延広告解決はデフォルトで無効です）。
-keywords: Lazy;Ad resolving;Ad loading;delayLoading
-seo-description: 遅延広告解決機能は、既存の遅延広告読み込みメカニズムを使用して有効または無効にできます（遅延広告解決はデフォルトで無効です）。
-seo-title: 遅延広告解決の有効化
+keywords: 遅延；広告解決；広告読み込み；遅延読み込み
 title: 遅延広告解決の有効化
-uuid: 91884eea-a622-4f5d-b6a8-36bb0050ba1d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---

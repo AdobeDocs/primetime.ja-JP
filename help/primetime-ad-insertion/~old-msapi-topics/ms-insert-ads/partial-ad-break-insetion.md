@@ -1,13 +1,10 @@
 ---
 description: 部分的な広告ブレーク挿入(PABI)機能は、テレビのようなエクスペリエンスを模倣したもので、ユーザーがミッドロールブレーク内のライブストリームに加入すると、ユーザーにはプリロール広告やスレートではなくミッドロール広告が表示されます。
-seo-description: 部分的な広告ブレーク挿入(PABI)機能は、テレビのようなエクスペリエンスを模倣したもので、ユーザーがミッドロールブレーク内のライブストリームに加入すると、ユーザーにはプリロール広告やスレートではなくミッドロール広告が表示されます。
-seo-title: 広告の時間の部分挿入
 title: 広告の時間の部分挿入
-uuid: a0c1ae34-0f8d-4401-97fe-45a2ea40d08d
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---

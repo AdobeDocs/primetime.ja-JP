@@ -1,13 +1,10 @@
 ---
 description: この例は、カスタム広告マーカーを再生タイムラインに含めるための推奨される方法を示しています。
-seo-description: この例は、カスタム広告マーカーを再生タイムラインに含めるための推奨される方法を示しています。
-seo-title: カスタム広告マーカーをタイムラインに配置する
 title: カスタム広告マーカーをタイムラインに配置する
-uuid: 47e31a97-e5da-46f3-bdcc-327c159c4355
 translation-type: tm+mt
-source-git-commit: 2a6ea34968ee7085931f99a24dfb23d097721b89
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
@@ -27,7 +24,7 @@ ht-degree: 0%
 
 次に、この例でタスクを完了した結果を示します。
 
-* 例えば、`ReplaceTimeRange`が再生タイムライン上で別の`ReplaceTimeRange`と重なる場合、&lt;a1/>の開始位置が既に配置されている終了位置より前にあると、TVSDKは、競合を回避するために、問題の`ReplaceTimeRange`の開始を静かに調整します。
+* 例えば、`ReplaceTimeRange`が再生タイムライン上で別の`ReplaceTimeRange`と重なる場合、の開始位置が既に配置されている終了位置より前にあると、TVSDKは、競合を回避するために、問題の`ReplaceTimeRange`の開始を静かに調整します。
 
    これにより、調整された`ReplaceTimeRange`が、元々指定された値より短くなります。 調整の結果、長さが0になると、TVSDKは問題の`ReplaceTimeRange`を黙ってドロップします。
 

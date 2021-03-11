@@ -1,13 +1,10 @@
 ---
 description: メディアストリームは、プレイリスト/マニフェストファイル内のタグの形式で追加のメタデータを伝達できます。このファイルは広告の配置を示します。 カスタムタグ名を指定し、特定のタグがマニフェストファイルに出現したら通知を受けることができます。
-seo-description: メディアストリームは、プレイリスト/マニフェストファイル内のタグの形式で追加のメタデータを伝達できます。このファイルは広告の配置を示します。 カスタムタグ名を指定し、特定のタグがマニフェストファイルに出現したら通知を受けることができます。
-seo-title: カスタムタグ
 title: カスタムタグ
-uuid: 2892712f-bb01-4112-baee-6dcafd4fb923
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---

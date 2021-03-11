@@ -1,13 +1,10 @@
 ---
 description: Adobe PrimetimeDRMを使用する場合は、ワークフローの異なるポイントで2つの主要な手順から構成されます。 コンテンツの準備はアセットごとに1回行う必要があり、その結果、保護されたコンテンツが作成されます。 コンテンツの取得は、その保護されたアセットを見たい顧客ごとに1回ずつ、複数回行われます。
-seo-description: Adobe PrimetimeDRMを使用する場合は、ワークフローの異なるポイントで2つの主要な手順から構成されます。 コンテンツの準備はアセットごとに1回行う必要があり、その結果、保護されたコンテンツが作成されます。 コンテンツの取得は、その保護されたアセットを見たい顧客ごとに1回ずつ、複数回行われます。
-seo-title: コンテンツの準備
 title: コンテンツの準備
-uuid: edb633f0-b623-41ea-a52a-19017d45fb18
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---

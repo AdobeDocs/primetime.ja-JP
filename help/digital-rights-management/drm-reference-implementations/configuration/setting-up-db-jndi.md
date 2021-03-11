@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: ライセンスサーバーデータベースのセットアップ
 title: ライセンスサーバーデータベースのセットアップ
-uuid: aa6185f2-8e9d-4b65-971a-b7534d910580
+description: ライセンスサーバーデータベースのセットアップ
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---

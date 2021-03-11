@@ -1,13 +1,10 @@
 ---
 description: VODおよびライブストリーミング用のDVRサポートを備えたコントロールバーを実装できます。 DVRのサポートには、シーク可能な時間枠の概念や、クライアントのライブポイントが含まれます。
-seo-description: VODおよびライブストリーミング用のDVRサポートを備えたコントロールバーを実装できます。 DVRのサポートには、シーク可能な時間枠の概念や、クライアントのライブポイントが含まれます。
-seo-title: DVR用に拡張されたコントロールバーの作成
 title: DVR用に拡張されたコントロールバーの作成
-uuid: 83c56def-a454-4f26-bdfc-2ef2497ef9bd
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -28,4 +25,4 @@ VODおよびライブストリーミング用のDVRサポートを備えたコ�
 
 1. 再生範囲を表すコントロールバー追加へのオーバーレイ。
 
-1. ユーザーがシークする開始がある場合、目的のシーク位置がシーク可能な範囲内にあるかどうかを確認します。
+1. ユーザーがシークを開始したら、目的のシーク位置がシーク可能な範囲内にあるかどうかを確認します。

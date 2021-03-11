@@ -1,13 +1,10 @@
 ---
 description: 次の手順を実行して、ブラウザーTVSDKを使用して基本プレーヤーを作成します。
-seo-description: 次の手順を実行して、ブラウザーTVSDKを使用して基本プレーヤーを作成します。
-seo-title: TVSDKを使用した基本プレイヤーの作成
 title: TVSDKを使用した基本プレイヤーの作成
-uuid: ec15cf53-197f-4190-a6b2-600a57815390
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---

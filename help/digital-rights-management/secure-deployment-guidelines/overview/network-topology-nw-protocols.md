@@ -1,13 +1,10 @@
 ---
 description: セキュリティで保護されたネットワークアーキテクチャを設定する場合、企業ネットワーク内のAdobe PrimetimeDRMと他のシステムとのやり取りに、ネットワークプロトコルが必要です。
-seo-description: セキュリティで保護されたネットワークアーキテクチャを設定する場合、企業ネットワーク内のAdobe PrimetimeDRMと他のシステムとのやり取りに、ネットワークプロトコルが必要です。
-seo-title: Adobe PrimetimeDRMネットワークプロトコル
 title: Adobe PrimetimeDRMネットワークプロトコル
-uuid: 8954e33c-83ac-4b40-9e45-005d4954b44e
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
@@ -33,7 +30,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">HTTPS（オプション） </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Flash Player、Adobe AIR、Adobe Primetimeの各クライアントは、HTTPSを使用してPrimetime DRMと通信できます。HTTPS(SSL)は、FMRMS 1.xクライアントをサポートしていない場合は不要です。 詳しくは、<a href="../../secure-deployment-guidelines/overview/network-topology-firewall-rules.md" format="dita" scope="local">着信URL </a>およびSSLの設定を参照してください。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Flash Player、Adobe AIR、Adobe Primetimeの各クライアントは、HTTPSを使用してPrimetime DRMと通信できます。HTTPS(SSL)は、FMRMS 1.xクライアントをサポートしていない場合は不要です。 詳しくは、<a href="../../secure-deployment-guidelines/overview/network-topology-firewall-rules.md" format="dita" scope="local">受信URL </a>およびSSLの設定を参照してください。 </p> </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,13 +1,10 @@
 ---
 description: Primetime ad decisioningは、空のVAST広告（クリエイティブ）、またはHLSに対して無効なメディアタイプを持つVAST広告（クリエイティブ）を検出すると、フォールバック広告を評価して、何を返すかを決定します。
-seo-description: Primetime ad decisioningは、空のVAST広告（クリエイティブ）、またはHLSに対して無効なメディアタイプを持つVAST広告（クリエイティブ）を検出すると、フォールバック広告を評価して、何を返すかを決定します。
-seo-title: VASTおよびVMAPに対する広告のフォールバック動作
 title: VASTおよびVMAPに対する広告のフォールバック動作
-uuid: 612416b9-d070-42e2-b68b-74ba52023345
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---

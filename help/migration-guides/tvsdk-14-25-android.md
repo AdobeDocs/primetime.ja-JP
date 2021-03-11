@@ -1,17 +1,13 @@
 ---
 title: Android向けTVSDK 1.4 ～ 2.5(Java)
-seo-title: Android向けTVSDK 1.4 ～ 2.5(Java)
 description: TVSDK 2.5では、パフォーマンス、セキュリティ、統合の向上などの点で、バージョン1.4と比べて複数のメリットがオファーされます。
-seo-description: TVSDK 2.5では、パフォーマンス、セキュリティ、統合の向上などの点で、バージョン1.4と比べて複数のメリットがオファーされます。
-uuid: aaab7aec-cb5b-4840-82e8-7112a8d98a8a
 contentOwner: vishgupt
 products: SG_PRIMETIME
 topic-tags: migration
-discoiquuid: 8d9136bf-b3ae-450c-bd8a-0bb246527886
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '2343'
+source-wordcount: '2323'
 ht-degree: 0%
 
 ---
@@ -102,7 +98,7 @@ APIの使用例は、TVSDKで配布されるリファレンス実装で複数説
 | MediaPlayerException、IllegalStateExceptionまたはIllegalArgumentException | MediaPlayerException | 2.5では、APIはMediaPlayerExceptionのみを生成します。 |
 | MediaPlayer.PlayerState(MediaPlayer.イベント.PLAYBACK) | MediaPlayerStatus (MediaPlayerEvent.STATUS_CHANGED) | v2.5では、MediaPlayer.PlayerStateは、別の列挙MediaPlayerStatusに名前が変更されました。 |
 | DefaultMediaPlayer.create (getActivity().getApplicationContext()) | MediaPlayer mediaPlayer = new MediaPlayer(getActivity(). getApplicationContext(); | オブジェクトの作成に使用する静的メソッドは、パブリックコンストラクタで置き換えられます。 |
-| MediaPlayer.seekToLocalTime() | MediaPlayer.seekToLocal() | MediaPlayer.seekToLocalTime()メソッドは、現在はMediaPlayer.seekToLocal()と呼ばれます。 |
+| MediaPlayer.seekToLocalTime() | MediaPlayer.seekToLocal() | MediaPlayer.seekToLocalTime()メソッドは、現在はMediaPlayer.seekToLocal()と呼ばれています。 |
 | closedCaptionsTrack.isActive() |  | 使用不可 |
 | MetadataNode | メタデータ | v2.5では、Metadataクラスがv1.4 MetadataNodeクラスの使用を置き換えます。 |
 | DefaultMetadataKeys | MetadataKeys | v1.4のDefaultMetadataKeysはv2.5 enum MetadataKeysにあります。 |
@@ -293,7 +289,7 @@ public void adClick() { mediaPlayer.notifyClick();
 ```
 
 * 以前の`MediaPlayer.MediaPlayer.getNotificationHistory()`メソッドは、現在は削除され、置き換えられません。
-* 前者の`MediaPlayer.replaceCurrentItem()`は、次の2つの方法に分かれます。`replaceCurrentResource()`は`MediaResource`のインスタンスを取り、`MediaPlayerItem`のインスタンスを取ります。`replaceCurrentItem()`は&lt;a4/>のインスタンスを取ります。 例：
+* 前者の`MediaPlayer.replaceCurrentItem()`は、次の2つの方法に分かれます。`replaceCurrentResource()`は`MediaResource`のインスタンスを取り、`MediaPlayerItem`のインスタンスを取ります。`replaceCurrentItem()`はのインスタンスを取ります。 例：
 
 ```java
 //TVSDK v1.4

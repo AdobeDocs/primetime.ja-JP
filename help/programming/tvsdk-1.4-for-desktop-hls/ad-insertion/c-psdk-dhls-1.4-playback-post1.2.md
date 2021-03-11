@@ -1,13 +1,10 @@
 ---
 description: メディア再生の動作は、シーク、一時停止、早送りまたは巻き戻し（トリック再生モード）、広告の組み込みの影響を受けます。
-seo-description: メディア再生の動作は、シーク、一時停止、早送りまたは巻き戻し（トリック再生モード）、広告の組み込みの影響を受けます。
-seo-title: 広告のデフォルトおよびカスタマイズされた再生動作
 title: 広告のデフォルトおよびカスタマイズされた再生動作
-uuid: 45e6b0cd-fb0b-4896-b53a-d3bd78a3c1f3
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---

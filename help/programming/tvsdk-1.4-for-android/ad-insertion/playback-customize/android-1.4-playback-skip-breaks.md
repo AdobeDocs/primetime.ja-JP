@@ -1,13 +1,10 @@
 ---
 description: デフォルトでは、ユーザーが広告の時間をシークオーバーすると、TVSDKは広告の時間を強制的に再生します。 この動作をカスタマイズして、前の広告の時間の完了からの経過時間が一定の分数以内である場合に、広告の時間をスキップするように設定できます。
-seo-description: デフォルトでは、ユーザーが広告の時間をシークオーバーすると、TVSDKは広告の時間を強制的に再生します。 この動作をカスタマイズして、前の広告の時間の完了からの経過時間が一定の分数以内である場合に、広告の時間をスキップするように設定できます。
-seo-title: 広告の時間を一定の期間スキップ
 title: 広告の時間を一定の期間スキップ
-uuid: f07d838b-3c1d-4cea-a3aa-dba33964ac81
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---

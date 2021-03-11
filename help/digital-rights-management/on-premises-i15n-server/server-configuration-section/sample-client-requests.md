@@ -1,9 +1,9 @@
 ---
-seo-title: クライアントリクエストの例
 title: クライアントリクエストの例
-uuid: 330d5e3c-1711-4375-bd11-e7702f0cde31
+description: クライアントリクエストの例
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 1%
@@ -22,4 +22,4 @@ curl https://<<yourindivserver:port>>/flashaccess/i15n/v5 -­data-binary
 
 サーバー設定が変更されたり、ECI/CRLが更新された場合は、これらの要求を再度送信することもできます。
 
-個別化の統計ページを適切に更新し、個別化トランザクションを正常に完了させる必要もあります。
+個別化トランザクションを正常に完了させ、個別化の統計ページを適切に更新する必要もあります。

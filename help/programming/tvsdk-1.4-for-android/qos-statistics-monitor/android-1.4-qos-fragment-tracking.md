@@ -1,13 +1,10 @@
 ---
 description: サービス品質(QoS)オファーは、ビデオエンジンの動作状況に関する詳細な表示です。 TVSDKは、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
-seo-description: サービス品質(QoS)オファーは、ビデオエンジンの動作状況に関する詳細な表示です。 TVSDKは、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
-seo-title: 読み込み情報を使用したフラグメントレベルでの追跡
 title: 読み込み情報を使用したフラグメントレベルでの追跡
-uuid: a6572823-d525-4ce0-806a-3feb20678cb0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,10 @@
 ---
 description: ブラウザーTVSDKが再生する、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 この説明は、広告コンテンツに対応するコンテンツセクションが識別されるカスタムスクラブバーコントロールをアプリケーションが表示する場合に役立ちます。
-seo-description: ブラウザーTVSDKが再生する、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 この説明は、広告コンテンツに対応するコンテンツセクションが識別されるカスタムスクラブバーコントロールをアプリケーションが表示する場合に役立ちます。
-seo-title: 再生タイムラインのInspect
 title: 再生タイムラインのInspect
-uuid: b2049e53-7c78-40f9-a43f-7ff7ee5581d0
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '109'
 ht-degree: 0%
 
 ---

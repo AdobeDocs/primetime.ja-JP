@@ -1,13 +1,10 @@
 ---
 description: ブラウザーTVSDKが更新されたマスターマニフェストをどのように受け入れるかに関する情報と例を以下に示します。
-seo-description: ブラウザーTVSDKが更新されたマスターマニフェストをどのように受け入れるかに関する情報と例を以下に示します。
-seo-title: ライブマスターマニフェストの更新アーキテクチャ
 title: ライブマスターマニフェストの更新アーキテクチャ
-uuid: 6f253502-8dec-4b42-9ee1-99ad9bfd6080
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '540'
 ht-degree: 1%
 
 ---

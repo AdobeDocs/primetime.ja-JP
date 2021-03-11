@@ -1,13 +1,10 @@
 ---
 description: PTMediaPlayerオブジェクトは、使用するメディアプレイヤーを表します。 PTMediaPlayerItemは、プレイヤー上のオーディオまたはビデオを表します。
-seo-description: PTMediaPlayerオブジェクトは、使用するメディアプレイヤーを表します。 PTMediaPlayerItemは、プレイヤー上のオーディオまたはビデオを表します。
-seo-title: MediaPlayerオブジェクトの操作
 title: MediaPlayerオブジェクトの操作
-uuid: 0c33ebd6-b11a-4e62-8c1c-880cfceff474
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---

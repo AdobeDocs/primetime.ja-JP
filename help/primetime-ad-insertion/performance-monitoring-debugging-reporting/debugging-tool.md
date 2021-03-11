@@ -1,21 +1,17 @@
 ---
 title: マニフェストサーバーデバッグツール
-seo-title: マニフェストサーバーデバッグツール
 description: マニフェストサーバーデバッグツール
-seo-description: マニフェストサーバーデバッグツール
-uuid: 0b4f06f5-4b1f-4f88-980a-5b4df28e0094
 products: SG_PRIMETIME
 topic-tags: ad-insertion
-discoiquuid: 00b49659-ce56-4b5c-87cd-c357a0936641
-donotlocalize: false
+discoiqdonotlocalize: false
 moreHelpPaths: /content/help/en/primetime/morehelp/ad-insertion;/content/help/en/primetime/morehelp/ad-insertion
 pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '2422'
+source-wordcount: '2414'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 0%
 
 # マニフェストサーバーデバッグツール{#manifest-server-debugging-tool}
 
-デバッグツールを使用すると、発行者は、HTTPヘッダーでマニフェストサーバーからリアルタイムに返されるデバッグ情報を調べたり、より詳細な情報が必要な場合は、その後セッションログを調べたりして、コストのかかる広告挿入の問題を調査できます。 AkamaiなどのAdobeパートナーは、このツールを使用して、Primetime ad decisioningとの統合をデバッグできます。
+デバッグツールを使用すると、発行者は、HTTPヘッダーでマニフェストサーバーからリアルタイムに返されるデバッグ情報を調べたり、より詳細な情報が必要な場合は、その後にセッションログを調べたりして、コストのかかる広告挿入の問題を調査できます。 AkamaiなどのAdobeパートナーは、このツールを使用して、Primetime ad decisioningとの統合をデバッグできます。
 
 このツールは、主要なマニフェストサーバー広告トラッキング設定での広告挿入の問題のデバッグをサポートします。
 
@@ -264,7 +260,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 
 ### TRACE_TRANSCODING_REQUESTEDレコード{#trace-transcoding-requested-records}
 
-このタイプのレコードは、マニフェストサーバーがCRSに送信するトランスコード要求の結果を記録します。 TRACE_TRANSCODING_REQUESTEDの後のフィールドは、表に示す順序でタブで区切って表示されます。
+このタイプのレコードは、マニフェストサーバーがCRSに送信するトランスコード要求の結果を記録します。 TRACE_TRANSCODING_REQUESTED以外のフィールドは、表に示す順序でタブで区切って表示されます。
 
 | フィールド | タイプ | 説明 |
 |--- |--- |--- |

@@ -1,14 +1,11 @@
 ---
 description: 現在の再生時間が開始時間と一致する場合は、TimedMetadataを使用できます。
-seo-description: 現在の再生時間が開始時間と一致する場合は、TimedMetadataを使用できます。
-seo-title: 時間指定メタデータの使用
 title: 時間指定メタデータの使用
-uuid: 9bbdaefa-4ac5-4e08-92b4-15ebe5c46864
 translation-type: tm+mt
-source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 1%
+source-wordcount: '100'
+ht-degree: 2%
 
 ---
 

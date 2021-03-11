@@ -1,13 +1,10 @@
 ---
 description: 即時オンは、1つ以上のチャネル上にメディアの一部をプリロードします。 ユーザーがチャネルを選択または切り替えた後、一部のバッファリングが既に完了しているので、コンテンツ開始が短時間で終了します。
-seo-description: 即時オンは、1つ以上のチャネル上にメディアの一部をプリロードします。 ユーザーがチャネルを選択または切り替えた後、一部のバッファリングが既に完了しているので、コンテンツ開始が短時間で終了します。
-seo-title: 即時オン
 title: 即時オン
-uuid: 98a5ef79-51e4-474e-a6e8-ca449c430b5e
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---

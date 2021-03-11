@@ -1,13 +1,10 @@
 ---
 description: Adobeでは、設定ファイルに変更を加える場合、サーバを開始する前にConfiguration Validatorユーティリティを実行することをお勧めします。 このユーティリティは、ほとんどの設定エラーを早期に検出してから、要求処理中にエラーが発生します。
-seo-description: Adobeでは、設定ファイルに変更を加える場合、サーバを開始する前にConfiguration Validatorユーティリティを実行することをお勧めします。 このユーティリティは、ほとんどの設定エラーを早期に検出してから、要求処理中にエラーが発生します。
-seo-title: 設定バリデーター
 title: 設定バリデーター
-uuid: 7b44919a-0319-4675-95e2-ad1ad72ec0cb
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---

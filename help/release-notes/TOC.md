@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Primetime リリースノート
 user-guide-description: リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を示します。
 translation-type: tm+mt
-source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
+source-git-commit: d1cf8a05172c04655c8a7c76ce116c8f7be61ec9
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 14%
@@ -21,7 +21,7 @@ ht-degree: 14%
    + [PTAI 20.12.1リリースノート](ptai-20x-release-notes.md)
    + [PTAI 19.11.1リリースノート](ptai-19x-release-notes.md)
 + TVSDK for iOS {#tvsdk-ios}
-   + [TVSDK 3.12 iOS向けリリースノート](tvsdk-3x-ios.md)
+   + [TVSDK 3.13 for iOSリリースノート](tvsdk-3x-ios.md)
    + [TVSDK 1.4 iOS向けリリースノート](tvsdk-1-4-ios.md)
 + Android向けTVSDK {#tvsdk-android}
    + [TVSDK 3.13 for Androidリリースノート](tvsdk-3x-android.md)

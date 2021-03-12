@@ -3,10 +3,10 @@ title: Primetime リリースノート
 description: Primetime リリースノート
 copied-description: true
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 28%
+source-wordcount: '378'
+ht-degree: 26%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 28%
 # Primetime リリースノート
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントは、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を提供します。
+
+## TVSDK 3.13 iOSの機能強化および修正点
+
+このリリースでは、LIVE、VODおよびFERストリーム用のDEMUXED &#39;HLS/CMAF&#39;（プリロール、ミッドロールおよびポストロール）広告のサポートが導入されています。
+
+その他の修正点および詳細については、[TVSDK for iOSリリースノート](../release-notes/tvsdk-3x-ios.md)を参照してください
 
 ## PTAI 21.2.2の機能強化および修正点
 

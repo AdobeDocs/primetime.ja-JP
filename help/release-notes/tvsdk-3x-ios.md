@@ -1,16 +1,16 @@
 ---
-title: TVSDK 3.12 iOS向けリリースノート
-description: TVSDK 3.12 for iOSリリースノートでは、TVSDK iOS 3.12の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
+title: TVSDK 3.13 for iOSリリースノート
+description: TVSDK 3.13 for iOSリリースノートでは、TVSDK iOS 3.13の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: d1cf8a05172c04655c8a7c76ce116c8f7be61ec9
 workflow-type: tm+mt
-source-wordcount: '7665'
+source-wordcount: '7713'
 ht-degree: 0%
 
 ---
 
 
-# TVSDK 3.12 iOS向けリリースノート{#tvsdk-for-ios-release-notes}
+# TVSDK 3.13 iOS向けリリースノート{#tvsdk-for-ios-release-notes}
 
 TVSDK 3.12 for iOSリリースノートでは、TVSDK iOS 3.12の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します。
 
@@ -20,13 +20,17 @@ iOS 3.12をダウンロードする前に、ハードウェア、オペレーテ
 
 オペレーティングシステム：iOS 8.0以降。
 
-## iOS TVSDK 3.12
+## iOS TVSDK 3.13
 
-15分間の再生後にライブストリームが失敗する問題を修正しました。
+このリリースでは、LIVE、VODおよびFERストリーム用のDEMUXED &#39;HLS/CMAF&#39;（プリロール、ミッドロールおよびポストロール）広告のサポートが導入されています。
 
-現在のリリースの修正点については、[修正されたお客様の問題](#resolved-issues)を参照し、制限については、[既知の問題と制限](#known-issues-and-limitations)の節を参照してください。
+お客様から報告された問題の修正については、[解決された問題](#resolved-issues)を参照してください。 制限については、[既知の問題と制限](#known-issues-and-limitations)を参照してください。
 
 ### 以前のリリース{#whats-new-previous}の新機能および修正点
+
+**iOS TVSDK 3.12**
+
+15分間の再生後にライブストリームが失敗する問題を修正しました。
 
 **iOS TVSDK 3.11**
 
@@ -301,6 +305,14 @@ Comment Type: draft
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
 -->
 
+**iOS TVSDK 3.13**
+
+* (ZD 42085)- CMAFストリームでの再生に関する問題。
+
+* (ZD-43215) — 広告の処理中にプレイヤーを消すとクラッシュします。
+
+* (ZD 43210) - WebVTT字幕が有効な場合、iOS HLS再生がフリーズします。
+
 **iOS TVSDK 3.12**
 
 * TVSDK for iOS 3.10を使用している場合、ライブストリームは15分の再生後に失敗します。
@@ -446,7 +458,7 @@ Comment Type: draft
 
    広告が有効で、AirPlayが有効になっている場合、ビデオの再生は開始されず、エラーも表示されません。
 
-* (ZD#33341) - `DRMInterface.h`は、Xcode 9でビルドの警告をトリガーします。
+* (ZD#33341) - `DRMInterface.h`トリガーは、Xcode 9で警告を作成します。
 
    `DRMInterface.h`内の2つのブロックプロトタイプを修正しました。このプロトタイプのパラメータリストに「void」という単語が含まれていませんでした。
 
@@ -468,7 +480,7 @@ Comment Type: draft
 
 * (ZD #32465) — プレイヤーは、結合された再生リストを処理できません。
 
-   `finishLoadingWithError`を呼び出す（次を含む）:エラー) AVファンデーションが代替ストリームを試行し、フェイルオーバーをトリガーする場合。
+   `finishLoadingWithError`を呼び出す（次を含む）:エラー) AVファンデーションが代替ストリーム/トリガーのフェイルオーバーを試行するためのエラー。
 
 * (ZD #31951) — ライセンスの循環中にTVSDKエラーが発生しました。
 
@@ -780,7 +792,7 @@ IPv6との互換性に関してAppleが推奨しなかったシンボルは削�
 
 * (ZD #20784) - Analytics:ライブビデオトランジションのコンテンツ完了のトリガー
 
-この問題は、ビデオトラッキングセッション中に手動でコンテンツの完了をトリガーするロジックを追加することで解決されました。
+この問題は、ビデオトラッキングセッション中に、コンテンツの完了を手動でトリガーするロジックを追加することで解決されました。
 
 次のライブラリが更新されました。
 
@@ -1161,11 +1173,11 @@ PTPlaybackInformationが更新され、更新されたindicatedBitrateが公開�
 
 ## 既知の問題と制限{#known-issues-and-limitations}
 
-* iOS UIWebViewクラスの廃止により、iOS TVSDK 3.6以降では次の処理が行われません。
+* iOS UIWebViewクラスの非推奨のため、iOS TVSDK 3.6以降では次の処理が行われます。
    * iPad 13では、VPAID広告は期待どおりに再生されません。
    * コンパニオン広告は期待どおりに再生されません。
 
-* iOS TVSDKでは、すべての広告がコンテンツマニフェストに繋ぎ合わされます。 広告動作は、コンテンツおよび広告セグメントの長さに基づいてシークすることで実装されます。 したがって、セグメントの継続時間が正確でない場合、シークは広告の時間の開始と終了の正確なフレームで終わるとは限りません。 フレームに継続時間が設定されている場合でも、プラットフォーム自体がシークに影響し、数フレーム、広告またはコンテンツが表示される場合があります。 これは、プラットフォームの制限と、iOS上のTVSDKでの広告挿入の動作方法に関するものです。
+* iOS TVSDKでは、すべての広告がコンテンツマニフェストに繋ぎ合わされます。 広告動作は、コンテンツおよび広告セグメントの長さに基づいてシークすることで実装されます。 したがって、セグメントの継続時間が正確でない場合、シークは広告の時間の開始と終了の正確なフレームで終わるとは限りません。 フレームに継続時間が設定されている場合でも、プラットフォーム自体がシークに影響し、数フレーム、広告またはコンテンツが表示される場合があります。 これは、プラットフォームの制限事項であり、iOS上のTVSDKでの広告挿入の動作方法が異なります。
 * スキップの決定は、この場合のシークイベントで発生します。 ただし、マニフェスト内の広告セグメントの継続時間が広告の実際の継続時間を正確に表していないので、シークはフレーム精度ではありません。 したがって、広告ポリシーが適用されると、広告のフレームが数フレーム表示されます。
 * iOS 11ではライセンスローテーションビデオは再生されず、iOS 9.xおよびiOS 10.xでは正常に再生されます。
 * VPAID 2.0サポートでは、AirPlay上で再生がアクティブな場合、VPAID広告はスキップされます。

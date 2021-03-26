@@ -2,7 +2,7 @@
 title: Adobe PrimetimeAd Insertionのお知らせ
 description: 最近の機能リリースおよびPrimetimeAd Insertionに関するその他の関連ニュースに関するお知らせ
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d8fde0d03bea85b3fefcfa5dcbfddee76b17de03
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## 広告解決タイムアウトを使用したプログラム的な広告エラーの低減
 
-2000年12月1日発行
+2020年12月1日発行
 
 Adobeは、PrimetimeAd Insertionのお客様が広告インベントリの収益化を最大限に活かすのを支援することに重点を置いています。 特に、eMarketerによる米国のデジタルビデオ広告費の4分の3を超える割合を占めるプログラム的な需要の充実の複雑さを軽減することに注意しています。 プログラム的な販売により、出版社は広告インベントリの需要を最大限に活用でき、充填率と利益を高めることができます。 ただし、無効な形式のVAST応答、HTTPエラーなど、売上高の低下やビューアの使用感の低下を招く可能性のある広告エラーにさらに影響を及ぼします。
 

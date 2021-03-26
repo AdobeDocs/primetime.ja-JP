@@ -3,15 +3,18 @@ title: Adobe PrimetimeAPIリファレンス
 description: APIを使用すると、機能的なアプリケーションや統合をすばやく簡単に作成できます。
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d8fde0d03bea85b3fefcfa5dcbfddee76b17de03
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
 
 
 # Adobe PrimetimeAPIリファレンス{#api-references}
+
++ Primetime動的Ad Insertion{#server-side}
+   + [BootstrapAPIリファレンス](../primetime-ad-insertion/technical-reference/bootstrap-api.md)
 
 + TVSDK 3.12 {#tvsdk-312}
    + [Android向けTVSDK 3.12](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)

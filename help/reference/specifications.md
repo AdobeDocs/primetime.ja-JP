@@ -5,15 +5,15 @@ description: Adobe Primetime仕様
 seo-description: Adobe Primetime仕様
 topic-tags: Adobe Primetime Specifications
 translation-type: tm+mt
-source-git-commit: 53014028cf1a9cb48f93781cbbb4aec3e2bcc523
+source-git-commit: 0bd926b510cd23268b6374ef81a09efcc5d1371a
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# Adobe PrimetimeAPI仕様
+# Adobe Primetime仕様
 
 Adobe Primetimeは、IP接続されたすべての画面にTVを配信します。 デスクトップやデバイスにまたがるビデオのストリーミング、保護、分析、収益化を行うための、プログラマーやオペレーターのモジュラー機能を提供します。 これらのエクスペリエンスの強化は、Primetimeビデオプレーヤーにコンテンツや広告を配信するために使用される多数のストリーミングテクノロジーです。
 

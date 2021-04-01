@@ -1,30 +1,29 @@
 ---
-cloud: experience-cloud
-solution-title: 学習とサポート
-solution-hub-url: https://helpx.adobe.com/support/primetime.html
-solution-image: https://www.adobe.com
-getting-started-title: はじめに
-getting-started-url: https://www.adobe.com/devnet/primetime.html
-tutorials-title: チュートリアル
-tutorials-url: https://www.adobe.com/devnet/primetime.html
-git-repo: https://github.com/AdobeDocs/primetime.en
+cloud: Experience Cloud
+type: ドキュメント
+product: adobe primetime
+solution: Primetime
+git-repo: https://git.corp.adobe.com/AdobeDocs/primetime.ja-JP
 index: y
 translation-type: tm+mt
-source-git-commit: a648b6c9dd606304328dc6b5bed4c847e54813eb
+source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 0%
 
 ---
 
 
-# 内部使用のためのメタデータ
+# 内部使用用のメタデータ
 
-metadata.mdファイルにはリポジトリ内のユーザガイドTOC.mdファイルに渡すリポジトリレベルのメタデータが含まれます。 任意のユーザガイドのmetadata.mdコンテンツを変更する場合は、任意のTOC.mdファイルで変更します。
+metadata.mdファイルには、リポジトリ内のユーザガイドTOC.mdファイルに渡されるリポジトリレベルのメタデータが含まれます。 ユーザガイドのmetadata.mdコンテンツを変更する場合は、任意のTOC.mdファイルで変更します。
 
-| メタデータ | 役割 |
+| metadata | 何をするか |
 |--- |--- |
-| solution-title | 記事のヘッダーでリンクとして使用 |
+| ソリューションタイトル | 記事のヘッダーにリンクとして使用 |
 | solution-hub-url | ヘルプハブページを開きます |
-| 溶液のアイコン | ソリューションタイトルの横にソリューションアイコンを表示します。 未実装 |
+| 解決策 | ソリューションタイトルの横にソリューションアイコンを表示します。 未実装 |
 | getting-started-url | ヘルプの「はじめに」ページへのリンク |
-| tutorials-url | ビデオチュートリアルへのリンク（ヘルプxチュートリアルまたはKTチュートリアル） |
-| ミニ目次レベル | 右側のレールに表示する見出しレベルの数を指定します。 デフォルトは2です。 |
+| tutorials-url | ビデオチュートリアルへのリンク（ヘルプクリックスチュートリアルまたはKTチュートリアル） |
+| ミニ目次レベル | 右側のレールに表示される見出しレベルの数を指定します。 デフォルトは2です。 |
 | ギットレポ | 内部で使用するマスターレポートの場所を指定します |

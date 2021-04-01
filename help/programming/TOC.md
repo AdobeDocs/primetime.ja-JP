@@ -1,11 +1,9 @@
 ---
-cloud: experience-cloud
-product: adobe primetime
 audience: end-user
 user-guide-title: Primetime プログラミングのヘルプ
 user-guide-description: Android デバイスでは Java、iOS デバイスでは Objective-C を使用したアプリケーションやビデオプレーヤーの開発を学習できます。
 translation-type: tm+mt
-source-git-commit: aab96dcf5107be90534350156ee66a88de80613e
+source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '4342'
 ht-degree: 0%

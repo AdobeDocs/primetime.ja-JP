@@ -3,9 +3,9 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime Ad Insertion のヘルプ
 translation-type: tm+mt
-source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
+source-git-commit: 9cf1312024ee755e0c99213899c89c015731b66f
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '176'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 + [Adobe PrimetimeAd Insertion](home.md)
 + PrimetimeAd Insertionのお知らせ{#announcements}
    + [お知らせ](announcements/overview.md)
-   + [リリースノート](/help/release-notes/ptai-21x-release-notes.md)
+   + [リリースノート](https://experienceleague.adobe.com/docs/primetime/release-notes/ptai/ptai-21x-release-notes.html)
 + PrimetimeAd Insertionの使用を開始する{#get-started}
    + [概要](getting-started/get-started-overview.md)
    + [PrimetimeAd Insertionを使用するための準備](getting-started/setup-ptai.md)
@@ -28,7 +28,7 @@ ht-degree: 4%
 + ジャストインタイムトランスコード{#just-in-time-transcoding}
    + [概要](just-in-time-transcoding/jit-transcoding-overview.md)
    + [トランスコードと正規化](just-in-time-transcoding/transcoding-and-normalization.md)
-   + [配信とストレージ](just-in-time-transcoding/delivery-and-storage.md)
+   + [配信とストレージ](https://experienceleague.adobe.com/docs/primetime/ad-insertion/technical-reference/delivery-and-storage.html)
    + [トランスコード前のAPI](just-in-time-transcoding/pre-transcoding-api.md)
    + [ID3挿入のサポート](just-in-time-transcoding/id3-injection-support.md)
 + 高度な機能{#advanced-features}

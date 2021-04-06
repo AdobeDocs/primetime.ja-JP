@@ -1,14 +1,15 @@
 ---
 title: 配信とストレージ
-description: null
+description: 配信とストレージ
+copied-description: true
+exl-id: 84ccc140-02e6-4293-b087-13f87aee355b,8af58261-9277-4f46-9349-10b641238e1d
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: f0e58c59e5f71ff79861dc634d9c9b3364e49db6
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
-
 
 # 配信とストレージ{#delivery-and-storage}
 
@@ -16,7 +17,7 @@ PrimetimeAd Insertionは、顧客のCDNまたはAdobeがホストするCDNで広
 
 ## マルチCDNのサポート{#multi-cdn-support}
 
-PrimetimeAd Insertionは、デフォルトで、AdobeがホストするCDN(Akamai)からトランスコードされた広告クリエイティブを提供します。  トランスコードされたアセットをホストするために、追加のCDNの場所を選択するか、AdobeがホストするCDNを独自のCDNの接触チャネルとして使用することができます。  どちらの場合も、コンテンツや広告クリエイティブを同じCDNやホスト名から提供できます。
+PrimetimeAd Insertionは、デフォルトで、AdobeがホストするCDN(Akamai)からトランスコードされた広告クリエイティブを提供します。  CDNの場所を追加して、トランスコードされたアセットをホストするか、AdobeがホストするCDNを独自のCDNの接触チャネルとして使用するかを選択できます。  どちらの場合も、コンテンツや広告クリエイティブを同じCDNやホスト名から提供できます。
 
 マルチCDN配信の場合、PrimetimeAd InsertionをCDN接触チャネルとして使用するには、次を参照してください。[マニフェストの書き換え](../technical-reference/manifest-rewriting.md)
 

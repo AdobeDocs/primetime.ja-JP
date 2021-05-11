@@ -1,14 +1,14 @@
 ---
 description: ビデオの使用を追跡および分析するようにプレイヤーを設定できます。
 title: ビデオ分析の初期化と設定
+exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d884836a2a585bd3540b085de1098cf6ae3de46b
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
 
 ---
-
 
 # ビデオ分析の初期化と設定{#initialize-and-configure-video-analytics}
 
@@ -133,6 +133,7 @@ ht-degree: 0%
           videoAnalyticsProvider.detachMediaPlayer();
           videoAnalyticsProvider = null;
       ```
+
    4. 手動でライブ/リニアストリームを完了としてマークします。
 1つのライブストリームに様々なエピソードがある場合、完了APIを使用して、手動でエピソードを完了とマークできます。 これにより、現在のビデオエピソードのビデオトラッキングセッションが終了し、次のエピソードの新しいトラッキングセッションを開始できます。
       >[!TIP]
@@ -146,5 +147,5 @@ ht-degree: 0%
       videoAnalyticsProvider.detachMediaPlayer();
       videoAnalyticsProvider = null;
       // Create a new instance of VideoAnalyticsProvider to continue tracking.
-      } 
+      }
       ```

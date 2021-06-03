@@ -3,8 +3,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime リリースノート
 user-guide-description: リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を示します。
-translation-type: tm+mt
-source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
+source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 14%
@@ -14,28 +13,28 @@ ht-degree: 14%
 
 # Primetime リリースノート  {#release-notes}
 
-+ [リリースノートの概要](home.md)
++ [リリースノート：概要](home.md)
 + PrimetimeAd Insertion{#ptai}
-   + [PTAI 21.2.2リリースノート](ptai-21x-release-notes.md)
+   + [PTAI 21.5.1リリースノート](ptai-21x-release-notes.md)
    + [PTAI 20.12.1リリースノート](ptai-20x-release-notes.md)
    + [PTAI 19.11.1リリースノート](ptai-19x-release-notes.md)
-+ TVSDK for iOS {#tvsdk-ios}
++ iOS向けTVSDK {#tvsdk-ios}
    + [TVSDK 3.13 for iOSリリースノート](tvsdk-3x-ios.md)
-   + [TVSDK 1.4 iOS向けリリースノート](tvsdk-1-4-ios.md)
+   + [TVSDK 1.4 for iOSリリースノート](tvsdk-1-4-ios.md)
 + Android向けTVSDK {#tvsdk-android}
-   + [TVSDK 3.13 for Androidリリースノート](tvsdk-3x-android.md)
-   + [TVSDK 2.7 for Androidリリースノート](tvsdk-27-android.md)
-   + [TVSDK 2.4.1 for Androidリリースノート](tvsdk-24-android.md)
-   + [TVSDK 1.4 for Androidリリースノート](tvsdk-1-4-android.md)
-+ Browser TVSDK {#browser-tvsdk}
-   + [Browser TVSDK 2.4リリースノート](tvsdk-24-browser.md)
-+ TVSDK for Desktop HLS {tvsdk-desktop-hls}
+   + [Android向けTVSDK 3.13のリリースノート](tvsdk-3x-android.md)
+   + [Android向けTVSDK 2.7リリースノート](tvsdk-27-android.md)
+   + [Android向けTVSDK 2.4.1リリースノート](tvsdk-24-android.md)
+   + [Android向けTVSDK 1.4リリースノート](tvsdk-1-4-android.md)
++ ブラウザーTVSDK {#browser-tvsdk}
+   + [ブラウザーTVSDK 2.4リリースノート](tvsdk-24-browser.md)
++ デスクトップHLS用TVSDK {tvsdk-desktop-hls}
    + [TVSDK 1.4 for Desktop HLSリリースノート](tvsdk-1-4-desktop-hls.md)
 + Primetime Offline Packager {#offline-packager}
    + [Primetime Offline Packagerバージョン2リリース](offline-packager-2x-release-note.md)
 + Primetimeストリーミングサーバ{#streaming-server}
    + [Primetime Streaming Serverバージョン1リリース](primetime-streaming-server-1x.md)
-+ TVSDK for Playstation 4 {#tvsdk-playstation}
++ Playstation 4用TVSDK {#tvsdk-playstation}
    + [TVSDK 2.1 PlayStation 4リリースノート](tvsdk-21-ps4.md)
 + Digital Rights Management{#drm}
    + [DRM 5.3.1リリースノート](drm-531-release-notes.md)

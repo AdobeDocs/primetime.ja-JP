@@ -3,17 +3,17 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime リリースノート
 user-guide-description: リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を示します。
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 2b7f0e3202107320168e5b0b37b3a9296029a0cd
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 14%
+source-wordcount: '113'
+ht-degree: 16%
 
 ---
 
 
-# Primetime リリースノート  {#release-notes}
+# Primetime リリースノート {#release-notes}
 
-+ [リリースノート：概要](home.md)
++ [リリースノート 概要](home.md)
 + PrimetimeAd Insertion{#ptai}
    + [PTAI 21.5.1リリースノート](ptai-21x-release-notes.md)
    + [PTAI 20.12.1リリースノート](ptai-20x-release-notes.md)
@@ -28,7 +28,7 @@ ht-degree: 14%
    + [Android向けTVSDK 1.4リリースノート](tvsdk-1-4-android.md)
 + ブラウザーTVSDK {#browser-tvsdk}
    + [ブラウザーTVSDK 2.4リリースノート](tvsdk-24-browser.md)
-+ デスクトップHLS用TVSDK {tvsdk-desktop-hls}
++ Desktop HLS用TVSDK {#tvsdk-desktop-hls}
    + [TVSDK 1.4 for Desktop HLSリリースノート](tvsdk-1-4-desktop-hls.md)
 + Primetime Offline Packager {#offline-packager}
    + [Primetime Offline Packagerバージョン2リリース](offline-packager-2x-release-note.md)

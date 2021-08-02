@@ -28,8 +28,7 @@ java -jar AdobePublisherIDUtility.jar
 </i class="+ topic>
 ```
 
-* 
-   * `signaturefile`*は、applications [!DNL META-INF] ディレクトリ内にあるAIRアプリケーションのsignatures.xmlファイルへのパスを指定します。
+* `signaturefile` は、applications [!DNL META-INF] ディレクトリ内にあるAIRアプリケーションのsignatures.xmlファイルへのパスを指定します。
 
 * `signingcert` は、AIRアプリケーションへの署名に使用する証明書を指定します
 

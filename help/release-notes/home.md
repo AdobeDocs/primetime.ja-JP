@@ -3,10 +3,10 @@ title: Primetime リリースノート
 description: Primetime リリースノート
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 28%
+source-wordcount: '340'
+ht-degree: 29%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 28%
 
 このたびは、Adobe Primetimeリリースノートをご利用いただき、誠にありがとうございます。 左側のナビゲーションに示すドキュメントには、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題が記載されています。
 
-## PTAI 21.5.1の機能強化および修正点
+## PTAI 21.8.1の機能強化および修正点
 
-このリリースには、今後のダッシュボード変更に関する新しい遠隔測定機能が含まれています。また、SCTEベースのキュー形式に対する非推奨のセグメント化タイプ0x01(UPID)のサポートも含まれています。
+このリリースでは、DASHライブ/リニアストリームがサポートされています。
 
 その他の修正および詳細については、[Ad Insertionリリースノート](/help/release-notes/ptai-21x-release-notes.md)を参照してください。
 

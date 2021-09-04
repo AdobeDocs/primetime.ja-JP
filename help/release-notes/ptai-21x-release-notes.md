@@ -1,27 +1,56 @@
 ---
-title: PTAI 21.5.1リリースノート
+title: PTAI 21.8.1リリースノート
 description: PTAIリリースノートでは、2021年のPrimetimeAd Insertionの新機能と変更点、解決された既知の問題について説明します。
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
 
-# PrimetimeAd Insertion21.5.1のリリースノート
+# PrimetimeAd Insertion21.8.1のリリースノート
 
-PrimetimeAd Insertion21.x.xのリリースノートでは、2021年のPrimetimeAd Insertionの新機能と変更点、解決された問題、既知の問題について説明します。
+PrimetimeAd Insertion21.x.xのリリースノートでは、2021年のPrimetimeAd Insertionの新機能と変更点、解決された問題、既知の問題について説明します
 
-## PTAI 21.5.1の新機能
+<!---
+Primetime Ad Insertion 21.9.1
+When: Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM EASTERN
+
+
+
+
+
+
+
+
+
+What:  Primetime Ad Insertion 21.9.1
+
+When:  Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM Eastern Time
+
+Changes:
+
+* Updates to infrastructure components behind PTAI’s mediation and reporting components (Primetime Ads GUI)
+-->
+
+## PTAI 21.8.1の新機能
+
+When:2021年8月24日（火）午前2:00 ～ 05:00（東部時間）
+
+* DASHライブ/リニアストリームのサポートが追加されました（VODは既にサポートされています）。
+
+## 以前のリリースバージョンの機能強化および修正点
+
+### バージョン21.5.1
 
 When: 2021年5月26日（水）午前3:30 ～ 06:30（東部時間）
+
+**変更点**
 
 * SCTEベースのキュー形式での非推奨のセグメントタイプ0x01(UPID)のサポートを追加しました。
 
 * 今後のダッシュボードの変更に備えた新しい遠隔測定機能を追加しました。
-
-## 以前のリリースバージョンの機能強化および修正点
 
 ### バージョン21.4.1
 

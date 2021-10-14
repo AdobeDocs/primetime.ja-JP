@@ -1,40 +1,37 @@
 ---
-description: TVSDKのイベントは、プレイヤーの状態、発生するエラー、再生を開始するビデオ、広告の完了など、リクエストしたアクションの完了、暗黙的に発生するアクションを示します。
-title: Primetime Playerイベントのリッスン
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK のイベントは、プレーヤーの状態、発生するエラー、再生を開始するビデオなど、リクエストしたアクションの完了、広告完了など、暗黙的に発生するアクションを示します。
+title: Primetime Player イベントのリッスン
+exl-id: 3a740245-a9e1-4e36-8761-f9f4b4e85b93
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
 
+# 概要 {#implement-event-listeners-and-callbacks-overview}
 
-# 概要{#implement-event-listeners-and-callbacks-overview}
+イベントハンドラーを使用すると、 TVSDK はイベントに応答できます。 イベントが発生すると、 TVSDK のイベントメカニズムが登録されたイベントハンドラーを呼び出し、イベント情報をハンドラーに渡します。
 
-イベントハンドラーを使用すると、TVSDKはイベントに応答できます。 イベントが発生すると、TVSDKのイベントメカニズムは、登録されたイベントハンドラーを呼び出し、イベント情報をハンドラーに渡します。
+Flashランタイムは、一連のカスタムイベントを使用および定義する汎用のイベントメカニズムを提供します。 アプリケーションは、アプリケーションに影響を与える TVSDK イベント用のイベントリスナーを実装する必要があります。
 
-Flashランタイムには、汎用的なイベントメカニズムが用意されています。このメカニズムは、TVSDKが使用し、一連のカスタムイベントを定義する場合にも使用されます。 アプリケーションは、アプリケーションに影響を与えるTVSDKイベント用のイベントリスナーを実装する必要があります。
-
-ビデオ分析のイベントの完全なリストについては、[コアビデオ再生の追跡](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/c_vhl_track-core-vid-playback.html)を参照してください。
-
-1. アプリケーションがリッスンする必要があるイベントを決定します。
+1. アプリケーションがリッスンするイベントを決定します。
 
    * **必須イベント**:すべての再生イベントをリッスンします。
 
       >[!IMPORTANT]
       >
-      >再生イベント`MediaPlayerStatusChangeEvent.STATUS_CHANGE`は、エラーを含むプレイヤーのステータスを提供します。 状態によっては、プレイヤーの次のステップに影響を与える可能性があります。
+      >再生イベント `MediaPlayerStatusChangeEvent.STATUS_CHANGE` は、エラーを含むプレーヤーのステータスを示します。 どの状態も、プレーヤーの次のステップに影響を与える可能性があります。
 
    * **その他のイベント**:アプリケーションに応じて、オプションです。
 
-      例えば、再生に広告を組み込む場合は、すべての`AdBreakPlaybackEvent`および`AdPlaybackEvent`イベントをリッスンします。
+      例えば、再生に広告を組み込む場合は、すべての `AdBreakPlaybackEvent` イベントと `AdPlaybackEvent` イベントをリッスンします。
 
-1. 各イベントにイベントリスナーを実装します。
+1. 各イベントのイベントリスナーを実装します。
 
-   TVSDKは、イベントリスナーコールバックにパラメーター値を返します。 これらの値は、リスナーで使用して適切なアクションを実行できるイベントに関する関連情報を提供します。
+   TVSDK は、イベントリスナーコールバックにパラメーター値を返します。 これらの値は、適切なアクションを実行するためにリスナーで使用できるイベントに関する関連情報を提供します。
 
-   `Event`クラスは、すべてのコールバックインターフェイスをリストします。 各インターフェイスには、そのインターフェイスに対して返されるパラメーターが表示されます。
+   `Event` クラスは、すべてのコールバックインターフェイスをリストします。 各インターフェイスには、そのインターフェイスに対して返されるパラメータが表示されます。
 
    例：
 
@@ -46,14 +43,12 @@ Flashランタイムには、汎用的なイベントメカニズムが用意さ
                    error:MediaError = null) 
    ```
 
-1. `MediaPlayer.addEventListener`を使用して、`MediaPlayer`オブジェクトにコールバックリスナーを登録します。
+1. `MediaPlayer.addEventListener` を使用して、`MediaPlayer` オブジェクトにコールバックリスナーを登録します。
 
-   `MediaPlayer` は、 `flash.events.IEventDispatcher`Flashプレーヤーのコアファイルの一部で、関数 `addEventListener` と関数を含み `removeEventListener`ます。
+   `MediaPlayer` は、 `flash.events.IEventDispatcher`Player のコアファイルの一部で、関数と関数を含むFlashを拡 `addEventListener` 張しま `removeEventListener`す。
 
    ```
    mediaPlayer.addEventListener( 
      MediaPlayerStatusChangeEvent.STATUS_CHANGED,  
      onStatusChanged);
    ```
-
-

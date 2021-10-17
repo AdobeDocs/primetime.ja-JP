@@ -3,7 +3,7 @@ title: Primetime リリースノート
 description: Primetime リリースノート
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
+source-git-commit: 6621a42d859cb872569123c175764e577bb46b9a
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 32%
@@ -13,6 +13,12 @@ ht-degree: 32%
 # Primetime リリースノート
 
 このたびは、Adobe Primetimeリリースノートをご利用いただき、誠にありがとうございます。 左側のナビゲーションに示すドキュメントは、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を示しています。
+
+## TVSDK 3.14 Android の修正点
+
+このリリースでは、[!UICONTROL VAST] 応答の [!UICONTROL ClickTracking]、[!UICONTROL CustomClick]、[!UICONTROL CompanionClickTracking] 要素のいずれかで [!UICONTROL CDATA] ノードが空の場合にアプリケーションがクラッシュする問題を修正しました。
+
+詳しくは、[TVSDK for Android リリースノート ](../release-notes/tvsdk-3x-android.md) を参照してください。
 
 ## PTAI 21.8.1 の機能強化および修正点
 
@@ -25,12 +31,6 @@ ht-degree: 32%
 このリリースでは、LIVE、VOD、FER ストリーム用の DEMUXED「HLS/CMAF」（プリロール、ミッドロール、ポストロール）広告のサポートが導入されています。
 
 その他の修正および詳細については、[TVSDK for iOSリリースノート ](../release-notes/tvsdk-3x-ios.md) を参照してください。
-
-## TVSDK 3.14 Android の修正点
-
-このリリースでは、[!UICONTROL VAST] 応答の [!UICONTROL ClickTracking]、[!UICONTROL CustomClick]、[!UICONTROL CompanionClickTracking] 要素のいずれかで [!UICONTROL CDATA] ノードが空の場合にアプリケーションがクラッシュする問題を修正しました。
-
-詳しくは、[TVSDK for Android リリースノート ](../release-notes/tvsdk-3x-android.md) を参照してください。
 
 ## 関連トピック
 

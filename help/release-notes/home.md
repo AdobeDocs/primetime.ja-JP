@@ -3,9 +3,9 @@ title: Primetime リリースノート
 description: Primetime リリースノート
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 6621a42d859cb872569123c175764e577bb46b9a
+source-git-commit: 21695ad15f1dcbbfa33211efd0fb3ab282fefbeb
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '306'
 ht-degree: 32%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 32%
 
 詳しくは、[TVSDK for Android リリースノート ](../release-notes/tvsdk-3x-android.md) を参照してください。
 
-## PTAI 21.8.1 の機能強化および修正点
+## PTAI 21.10.1の機能強化および修正点
 
-このリリースでは、DASH Live/Linear ストリームがサポートされています。
+このリリースでは、サーバの統合に重点を置き、本番以外のサーバと非役立つサーバを削除します。
 
 その他の修正および詳細については、[Ad Insertionリリースノート ](/help/release-notes/ptai-21x-release-notes.md) を参照してください。
 

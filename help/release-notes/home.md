@@ -3,42 +3,42 @@ title: Primetime リリースノート
 description: Primetime リリースノート
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 21695ad15f1dcbbfa33211efd0fb3ab282fefbeb
+source-git-commit: 3b2495960cb4f5c625069415977596b5f6632bc4
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '305'
 ht-degree: 32%
 
 ---
 
 # Primetime リリースノート
 
-このたびは、Adobe Primetimeリリースノートをご利用いただき、誠にありがとうございます。 左側のナビゲーションに示すドキュメントは、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を示しています。
+Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントには、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題が記載されています。
 
-## TVSDK 3.14 Android の修正点
+## TVSDK 3.15 Android の修正点
 
-このリリースでは、[!UICONTROL VAST] 応答の [!UICONTROL ClickTracking]、[!UICONTROL CustomClick]、[!UICONTROL CompanionClickTracking] 要素のいずれかで [!UICONTROL CDATA] ノードが空の場合にアプリケーションがクラッシュする問題を修正しました。
+このリリースでは、クリエイティブタグが見つからない場合や、クリエイティブタグが見つからない場合にアプリケーションがクラッシュする問題を修正しました [!UICONTROL url CDATA] 次の項目が空 [!UICONTROL VAST] 応答。
 
-詳しくは、[TVSDK for Android リリースノート ](../release-notes/tvsdk-3x-android.md) を参照してください。
+以下を確認します。 [Android 向け TVSDK リリースノート](../release-notes/tvsdk-3x-android.md) を参照してください。
 
 ## PTAI 21.10.1の機能強化および修正点
 
-このリリースでは、サーバの統合に重点を置き、本番以外のサーバと非役立つサーバを削除します。
+このリリースでは、サーバの統合に焦点を当て、非実稼働サーバと非有用なサーバを削除します。
 
-その他の修正および詳細については、[Ad Insertionリリースノート ](/help/release-notes/ptai-21x-release-notes.md) を参照してください。
+その他の修正および詳細については、 [Ad Insertionリリースノート](/help/release-notes/ptai-21x-release-notes.md).
 
 ## TVSDK 3.13 iOSの機能強化および修正点
 
 このリリースでは、LIVE、VOD、FER ストリーム用の DEMUXED「HLS/CMAF」（プリロール、ミッドロール、ポストロール）広告のサポートが導入されています。
 
-その他の修正および詳細については、[TVSDK for iOSリリースノート ](../release-notes/tvsdk-3x-ios.md) を参照してください。
+その他の修正および詳細については、 [TVSDK for iOSリリースノート](../release-notes/tvsdk-3x-ios.md).
 
 ## 関連トピック
 
 | ユーザーガイド | 説明 |
 |--- |--- |
 | [Primetime プログラミングのヘルプ](/help/programming/home.md) | Android デバイスでは Java、iOS デバイスでは Objective-C を使用したアプリケーションやビデオプレイヤーの開発を学習できます。 |
-| [Primetime の移行とコンバージョンのヘルプ](/help/migration-guides/home.md) | 既存の Primetime TVSDK Suite から次世代のスイートに移行するためのコンバージョンと移行のプロセスについて説明します。 |
-| [リファレンス実装](/help/android-reference-implementation/home.md) | TVSDK を理解し、機能マネージャーを変更して、個人用プレイヤーをカスタマイズします。 |
+| [Primetime 移行およびコンバージョンのヘルプ](/help/migration-guides/home.md) | 既存の Primetime TVSDK Suite から次世代のスイートに移行するためのコンバージョンと移行のプロセスについて説明します。 |
+| [参照実装](/help/android-reference-implementation/home.md) | TVSDK を理解し、機能マネージャーを変更して、個人用プレイヤーをカスタマイズします。 |
 | [Primetime API リファレンス](/help/reference/api-references.md) | TVSDK 関数、データ構造、および他のプログラミング構成に関する詳細な情報を提供します。 |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Digital Rights Management(DRM) の様々なユーザーシナリオの詳細を学ぶのに役立ちます |
 | [Primetime Ad Insertion のヘルプ](/help/primetime-ad-insertion/home.md) | ユーザーをターゲットに設定した動的な広告をサーバーに挿入してコンテンツを収益化し、パーソナライズされた広告をオーディエンスに提供する方法について説明します。 |
@@ -46,9 +46,9 @@ ht-degree: 32%
 
 ## 参考リソース
 
-* [知るAdobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
+* [Adobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
 
-* [同時実行性の監視](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
+* [同時実行監視](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
 
 * [Primetime 認証](https://tve.helpdocsonline.com/home)
 

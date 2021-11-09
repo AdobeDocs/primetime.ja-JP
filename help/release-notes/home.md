@@ -3,10 +3,10 @@ title: Primetime リリースノート
 description: Primetime リリースノート
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 3b2495960cb4f5c625069415977596b5f6632bc4
+source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 32%
+source-wordcount: '286'
+ht-degree: 34%
 
 ---
 
@@ -14,15 +14,13 @@ ht-degree: 32%
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントには、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題が記載されています。
 
+## PTAI 21.11.1の機能強化および修正点
+
+この [!UICONTROL EXT-X-IMAGE-STREAM-INF] は、ゾーンごとに設定できるようになりました。
+
 ## TVSDK 3.15 Android の修正点
 
 このリリースでは、クリエイティブタグが見つからない場合や、クリエイティブタグが見つからない場合にアプリケーションがクラッシュする問題を修正しました [!UICONTROL url CDATA] 次の項目が空 [!UICONTROL VAST] 応答。
-
-以下を確認します。 [Android 向け TVSDK リリースノート](../release-notes/tvsdk-3x-android.md) を参照してください。
-
-## PTAI 21.10.1の機能強化および修正点
-
-このリリースでは、サーバの統合に焦点を当て、非実稼働サーバと非有用なサーバを削除します。
 
 その他の修正および詳細については、 [Ad Insertionリリースノート](/help/release-notes/ptai-21x-release-notes.md).
 

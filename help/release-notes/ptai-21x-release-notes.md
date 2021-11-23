@@ -2,9 +2,9 @@
 title: PTAI 21.11.1リリースノート
 description: PTAI リリースノートでは、2021 年の PrimetimeAd Insertionの新機能や変更点、解決された問題および既知の問題について説明します。
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: b58fea35be528c4c030eab39fde9dd642d90cb58
+source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,8 @@ PrimetimeAd Insertion21.xx.x のリリースノートでは、2021 年の Primet
 条件：2021 年 11 月 9 日（火）午前 1 時 30 分～午前 4 時 30 分（東部時間）
 
 * [!UICONTROL EXT-X-IMAGE-STREAM-INF] は、ゾーンごとに設定できるようになりました。
+
+* Roku トリック再生は完全にサポートされています。
 
 ## 以前のリリースバージョンの機能強化および修正点
 

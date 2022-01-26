@@ -4,9 +4,9 @@ description: Android™向け TVSDK 2.7 リリースノートでは、TVSDK Andr
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: d2c8133f126db44b9c505dc0a21ba208fd6c01c8
+source-git-commit: 3891ea44775899c1e0d43c4ac74bbc4b07d7962e
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4070'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ TVSDK は、必要に応じて進行中のセグメントのダウンロード�
 * **部分的な広告ブレーク挿入**
 
    部分的に視聴された広告のトラッキングを実行せずに、広告の途中で参加する TV のようなエクスペリエンス。\
-   例**:**ユーザーは、3 つの 30 秒の広告で構成される 90 秒の広告ブレークの中間（40 秒）に結合します。 ブレークの 2 番目の広告から 10 秒経過します。
+   例：ユーザーは、3 つの 30 秒の広告で構成される 90 秒の広告ブレークの中間（40 秒）に結合します。 ブレークの 2 番目の広告から 10 秒経過します。
    * 2 番目の広告は、残りの期間（20 秒）に続いて 3 番目の広告を再生します。
    * 部分的な広告再生（2 番目の広告）の広告トラッカーは起動されません。 3 番目の広告のトラッカーのみが実行されます。
 
@@ -71,7 +71,7 @@ TVSDK は、必要に応じて進行中のセグメントのダウンロード�
 
 * **CRS リクエストに AdSystem およびクリエイティブ ID が追加されました**
 
-   * 1401 および 1403 リクエストに新しいパラメーターとして「AdSystem」および「CreativeId」を含めるようになりました。
+   * 次を含む： `AdSystem` および `CreativeId` を 1401 リクエストと 1403 リクエストの新しいパラメーターとして追加しました。
 
 * **NetworkConfiguration クラスの API setEncodeUrlForTracking が削除されました** を使用します。
 
@@ -81,7 +81,8 @@ Android™ TVSDK v2.5.4 では、次の更新と API の変更が提供されて
 
 * のデフォルト値の変更 `WebViewDebbuging`
 
-   `WebViewDebbuging` の値は、デフォルトでは false に設定されています。 有効にするには、アプリケーションで setWebCon&#39;tentsDebuggingEnabled(true) を呼び出します。
+   この `WebViewDebbuging` の値は次の値に設定されます。 _False_ デフォルトでは。 有効にするには、 `setWebContentsDebuggingEnabled` から _True_ （アプリケーション内）
+
 * OpenSSL および Curl バージョンのアップグレード更新 `libcurl` を v7.57.0に、OpenSSL を v1.0.2k に変更した場合。
 * VAST 応答オブジェクトのアプリレベルアクセス VAST 応答オブジェクトをアプリケーションにアクセスできる新しい API NetworkAdInfo::getVastXml() が導入されました。
 

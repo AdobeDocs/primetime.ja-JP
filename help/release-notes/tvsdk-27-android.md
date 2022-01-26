@@ -1,167 +1,166 @@
 ---
-title: TVSDK 2.7 for Androidリリースノート
-description: Android向けTVSDK 2.7リリースノートでは、TVSDK Android 2.7の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します
+title: Android™向け TVSDK 2.7 リリースノート
+description: Android™向け TVSDK 2.7 リリースノートでは、TVSDK Android™ 2.7 の新機能や変更点、解決された既知の問題、およびデバイスの問題について説明します。
 products: SG_PRIMETIME
 topic-tags: release-notes
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
+source-git-commit: d2c8133f126db44b9c505dc0a21ba208fd6c01c8
 workflow-type: tm+mt
-source-wordcount: '4095'
+source-wordcount: '4072'
 ht-degree: 0%
 
 ---
 
+# Android™向け TVSDK 2.7 リリースノート {#tvsdk-for-android-release-notes}
 
-# Android向けTVSDK 2.7リリースノート{#tvsdk-for-android-release-notes}
+Android™向け TVSDK 2.7 リリースノートでは、TVSDK Android™ 2.7 の新機能や変更点、解決された既知の問題、およびデバイスの問題について説明します。
 
-Android向けTVSDK 2.7リリースノートでは、TVSDK Android 2.7の新機能や変更点、解決済みおよび既知の問題、デバイスの問題について説明します
+## TVSDK Android™ 2.7 {#tvsdk-android}
 
-## TVSDK Android 2.7 {#tvsdk-android}
-
-Androidリファレンスプレイヤーは、Android TVSDKと共に、配布物のsamples/ディレクトリに含まれています。 付属のREADME&lt;.mdファイルでは、リファレンスプレイヤーの構築方法が説明されています。
+Android™リファレンスプレーヤーは、ディストリビューションの samples/ディレクトリに Android™ TVSDK に付属しています。 付属の README&lt;.md ファイルでは、参照プレーヤーの構築方法を説明しています。
 
 >[!NOTE]
 >
->リファレンスプレーヤーを正常に構築するには、リリースと共に配布されているREADME.mdに記載されているとおり、次の操作を行います。
+>リファレンスプレーヤーを正常に構築するには、リリースと共に配布される README.md に記載されているように、必ず次の操作を行ってください。
 >
->1. [https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases)からVideoHeartbeat.jarをダウンロードします（Android v2.0.0用VideoHeartbeatライブラリ）
->1. libs/フォルダーにVideoHeartbeat.jarを抽出します。
+>1. から VideoHeartbeat.jar をダウンロードします。 [https://github.com/Adobe-Marketing-Cloud/media-sdks/releases](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases) (Android™ v2.0.0 用 VideoHeartbeat ライブラリ )
+>1. libs/フォルダーに VideoHeartbeat.jar を抽出します。
 
 >
 
 
+## 新機能 {#new-features}
 
-## 新機能{#new-features}
+Android™向け TVSDK 2.7 には、バージョン 1.4 のすべての機能が含まれています。ただし、以下に示すサポート対象外の機能は除きます。 [機能マトリックス](#feature-matrix).
 
-Android向けTVSDK 2.7には、[機能マトリクス](#feature-matrix)に記載されていない機能を除き、バージョン1.4のすべての機能が含まれています。
-
-**Android TVSDK 2.7**
+**Android™ TVSDK 2.7**
 
 * **並列広告解決のサポート**
 
-TVSDK 2.7は、順次解決ではなく、広告の時間内のすべての広告リクエストの同時解決をサポートします。
+TVSDK 2.7 では、順次解決ではなく、広告の時間内のすべての広告リクエストの同時解決がサポートされます。
 
-### 以前のリリースの新機能{#new-features-previous-releases}
+### 以前のリリースの新機能 {#new-features-previous-releases}
 
-**バージョン2.5.6**
+**バージョン 2.5.6**
 
-* **TVSDK 2.5はAndroid Pをサポート**
+* **TVSDK 2.5 は、Android™ P をサポートしています**
 * **バックグラウンドオーディオの有効化**
 
-   アプリが前景から背景に移動したときのオーディオ再生を有効にするには、プレイヤーがPREPARED状態のときに、アプリはMediaPlayerのenableAudioPlaybackInBackground APIを引数として呼び出す必要があります。
+   アプリがフォアグラウンドからバックグラウンドに移動したときにオーディオ再生を有効にするには、プレーヤーが PREPARED 状態のときに、引数として true を使用して MediaPlayer の enableAudioPlaybackInBackground API を呼び出す必要があります。
 
-* **alwaysUseAudioOutputLatency(boolean val) in MediaPlayerクラス**
+* **MediaPlayer クラスの alwaysUseAudioOutputLatency(boolean val)**
 
-設定する場合、オーディオタイムスタンプの計算に出力待ち時間を使用します。
-ブール型パラメーターval - trueを指定すると、オーディオのタイムスタンプの計算にオーディオ出力遅延が使用されます。
+設定した場合、オーディオタイムスタンプの計算で出力待ち時間を使用します。
+ブール型パラメーター val - True は、オーディオタイムスタンプの計算でオーディオ出力待ち時間を使用します。
 
-* **帯域幅の速度が急に低下した場合でも、最高の再生エクスペリエンスを得るために最適化。**
-TVSDKは、必要に応じて、継続中のセグメントのダウンロードをキャンセルし、適切なレンディションに動的に切り替えるようになりました。これは、割り込みなくビットレートをシームレスに切り替えることで行われます。
+* **帯域幅の速度が急に低下した場合でも、最高の再生エクスペリエンスを得るために最適化されています。**
+TVSDK は、必要に応じて進行中のセグメントのダウンロードをキャンセルし、適切なレンディションに動的に切り替えるようになりました。 これは、中断のないビットレート間をシームレスに切り替えることでおこなわれます。
 
-**バージョン2.5.5**
+**バージョン 2.5.5**
 
-* **部分的な広告ブレークの挿入**
+* **部分的な広告ブレーク挿入**
 
-   部分的に視聴された広告のトラッキングを実行せずに、広告の途中に参加するTVのようなエクスペリエンス。\
-   例**:**ユーザーが、30秒の広告を3つ含む90秒の広告の時間の途中（40秒）に参加します。 時間の2番目の広告から10秒経過します。
-   * 2番目の広告は残りの時間（20秒）再生され、次に3番目の広告が続きます。
-   * 部分的な広告再生（2番目の広告）用の広告トラッカーは起動されません。 3番目の広告のみのトラッカーが起動されます。
+   部分的に視聴された広告のトラッキングを実行せずに、広告の途中で参加する TV のようなエクスペリエンス。\
+   例**:**ユーザーは、3 つの 30 秒の広告で構成される 90 秒の広告ブレークの中間（40 秒）に結合します。 ブレークの 2 番目の広告から 10 秒経過します。
+   * 2 番目の広告は、残りの期間（20 秒）に続いて 3 番目の広告を再生します。
+   * 部分的な広告再生（2 番目の広告）の広告トラッカーは起動されません。 3 番目の広告のトラッカーのみが実行されます。
 
-* **HTTPS経由のセキュアな広告読み込み**
+* **HTTPS を介したセキュアな広告読み込み**
 
-   Adobe Primetimeには、https経由でPrimetime広告サーバーとCRSへの最初の呼び出しをリクエストするオプションが用意されています。
+   Adobe Primetimeには、primetime 広告サーバーおよび CRS over https への最初の呼び出しをリクエストするオプションが用意されています。
 
-* **CRSリクエストに追加されたAdSystemおよびCreative ID**
+* **CRS リクエストに AdSystem およびクリエイティブ ID が追加されました**
 
-   * 1401および1403のリクエストに、新しいパラメーターとして「AdSystem」および「CreativeId」が追加されました。
+   * 1401 および 1403 リクエストに新しいパラメーターとして「AdSystem」および「CreativeId」を含めるようになりました。
 
-* **URL内の安全でない文字をエンコードする必要があるため、** 削除されるNetworkConfigurationクラスのAPI setEncodeUrlForTracking。
+* **NetworkConfiguration クラスの API setEncodeUrlForTracking が削除されました** を使用します。
 
-**バージョン2.5.4**
+**バージョン 2.5.4**
 
-Android TVSDK v2.5.4オファーには、次の更新とAPIの変更が含まれています。
+Android™ TVSDK v2.5.4 では、次の更新と API の変更が提供されています。
 
-* WebViewDebuggingのデフォルト値の変更
-WebViewDebugging値は、デフォルトでFalseに設定されています。 有効にするには、アプリケーションでsetWebContentsDebuggingEnabled(true)を呼び出します。
-* OpenSSLおよびCurlバージョンのアップグレード
-libcurlをv7.57.0に、OpenSSLをv1.0.2kに更新しました。
-* VAST応答オブジェクトのアプリレベルアクセス
-VAST応答オブジェクトのアプリケーションへのアクセスを提供する新しいAPI NetworkAdInfo::getVastXml()が導入されました。
+* のデフォルト値の変更 `WebViewDebbuging`
 
-**バージョン2.5.3**
+   `WebViewDebbuging` の値は、デフォルトでは false に設定されています。 有効にするには、アプリケーションで setWebCon&#39;tentsDebuggingEnabled(true) を呼び出します。
+* OpenSSL および Curl バージョンのアップグレード更新 `libcurl` を v7.57.0に、OpenSSL を v1.0.2k に変更した場合。
+* VAST 応答オブジェクトのアプリレベルアクセス VAST 応答オブジェクトをアプリケーションにアクセスできる新しい API NetworkAdInfo::getVastXml() が導入されました。
 
-Android TVSDK v2.5.3オファーには、次の更新とAPIの変更が含まれています。
+**バージョン 2.5.3**
 
-* CRSを使用するTVSDKユーザーは、すべて、AndroidのTVSDK 2.5.3.85または最新のバージョンを使用して、アプリをアップグレードすることをお勧めします。 これは、既存のアプリの実装に対するドロップインの置き換えとなります。 TVSDKのアップグレード後、プロキシツールでCRSクリエイティブURLリクエストを確認します(例：Charlesを参照)、パス内のホスト名とバージョンが、以下のサンプルURL構造のように反映されていることを確認します。
+Android™ TVSDK v2.5.3 では、次の更新と API の変更が提供されています。
+
+* CRS を使用する TVSDK のすべてのお客様は、Android™の TVSDK 2.5.3.85（最新）を使用してアプリをアップグレードすることをお勧めします。 これは、既存のアプリケーション実装に対するドロップインの置き換えです。 TVSDK のアップグレード後、プロキシツールで CRS クリエイティブ URL リクエストを確認します ( 例：Charles) を参照し、パス内のホスト名とバージョンが、以下のサンプル URL 構造と同様に反映されていることを確認します。
 
    `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
 
-* TVSDKのユーザーエージェントのカスタマイズ可能：ユーザーエージェントをカスタマイズする新しいAPIが追加されました。
+* TVSDK のユーザーエージェントをカスタマイズ可能：ユーザーエージェントをカスタマイズする新しい API が追加されました。
 
-   * setCustomUserAgent(String value)
-   * getCustomUserAgent()
+   * `setCustomUserAgent`（文字列値）
+   * `getCustomUserAgent`()
 
-* AndroidアプリケーションとTVSDK間でCookieを共有する：Android TVSDKは、（AndroidアプリケーションのCookieStoreに保存される）JAVAレイヤーとC++ TVSDKレイヤーの間のcookieへのアクセスをサポートするようになりました。 これで、ネイティブC++レイヤーのcookieがJava Cookie Storeに公開されるので、cookieの設定や変更が可能になりました。
-* APIの変更：
+* Android™ Application と TVSDK の間で Cookie を共有します。Android™ TVSDK で、(Android™アプリケーションの CookieStore に格納された )Java™レイヤーと C++ TVSDK レイヤーの間の cookie へのアクセスがサポートされるようになりました。 これで、Java™ Cookie ストアに公開される際に、ネイティブの C++層で cookie を設定または変更できるようになりました。
+* API の変更点は次のとおりです。
 
-   * 新しいイベントCookiesUpdatedEventが追加されます。 Cookieが更新されると、メディアプレイヤーによってディスパッチされます。
-   * カスタムユーザーエージェントを使用するために、新しいAPIがNetworkConfiguration::set/ getCustomUserAgent()に追加されました。
-   * 安全でない文字のエンコードを強制するために、新しいAPIがNetworkConfiguration::set/ getEncodedUrlForTrackingに追加されました。
-   * フェールオーバー時にネットワーク検証URLを設定するための新しいAPIがNetworkConfiguration::getNetworkDownVerificationUrl()に追加されました。
-   * キャプションを表示する際にスペースを英数字として扱うかどうかを定義するTextFormat::treatSpaceAsAlphaNumに新しいプロパティが追加されます。
+   * 新しいイベント CookiesUpdatedEvent が追加されます。 Cookie が更新されると、メディアプレーヤーによってディスパッチされます。
+   * 新しい API が `NetworkConfiguration::set/ getCustomUserAgent()` カスタムユーザーエージェントを使用する場合。
+   * 新しい API が `NetworkConfiguration::set/ getEncodedUrlForTracking` 安全でない文字のエンコードを強制的に行う場合。
+   * 新しい API が `NetworkConfiguration::getNetworkDownVerificationUrl()` ：フェイルオーバーが発生した場合にネットワーク検証 URL を設定します。
+   * キャプションの表示時にスペースを英数字として扱うかどうかを定義する TextFormat::treatSpaceAsAlphaNum に新しいプロパティが追加されました。
 
-* SizeAvailableEventの変更点：以前は、2.5.2のSizeAvailableEventのgetHeight()メソッドとgetWidth()メソッドは、メディア形式で返されたフレームの高さとフレームの幅を返すのに使用されていました。 現在は、デコーダーが返す出力の高さと出力の幅を返します。
-* バッファリング動作の変更：バッファリング動作が変更されました。 バッファーが空の場合の処理をアプリケーション開発者に任せます。 2.5.3は、バッファーが空の場合に再生バッファーサイズを使用します。
+* 変更点 `SizeAvailableEvent`:以前は、 `SizeAvailableEvent` 2.5.2 では、フレームの高さとフレーム幅を返します。これはメディア形式で返されます。 現在は、デコーダーから返される出力の高さと出力の幅を返します。
+* バッファリング動作の変更：バッファリング動作が変更されました。 バッファが空の場合に何をしたいかに関しては、App 開発者に任せられます。 2.5.3 は、バッファが空の場合に再生バッファのサイズを使用します。
 
-**バージョン2.5.2**
+**バージョン 2.5.2**
 
-Android TVSDK v2.5.2オファーの重要なバグ修正とAPIの変更点です。
+Android™ TVSDK v2.5.2 では、重要なバグ修正と API の変更がいくつかおこなわれています。
 
-**バージョン2.5.1**
+**バージョン 2.5.1**
 
-Android 2.5.1でリリースされた重要な新機能。
+Android™ 2.5.1 でリリースされた重要な新機能。
 
-* **パフォーマンス**&#x200B;の向上新しいTVSDK 2.5.1アーキテクチャにより、パフォーマンスが多数改善されました。サードパーティのベンチマーク調査による統計に基づき、新しいアーキテクチャは、起動時間を5分の1に短縮し、ドロップフレーム数を業界平均よりも3.8分の1に削減します。
+* **パフォーマンスの向上**&#x200B;新しい TVSDK 2.5.1 アーキテクチャでは、パフォーマンスがいくつか向上しました。 サードパーティのベンチマーク調査の統計に基づく新しいアーキテクチャでは、起動時間が 5 倍、ドロップフレーム数は業界平均に比べて 3.8 倍も短縮されています。
 
-   * **VODおよびliveの即時オン — 即時オンを有効に** すると、TVSDKは、再生開始の前にメディアを初期化し、バッファリングします。複数のMediaPlayerItemLoaderインスタンスをバックグラウンドで同時に起動できるので、複数のストリームをバッファリングできます。 ユーザーがチャネルを変更し、ストリームが正しくバッファリングされた場合、新しいチャネル開始で直ちに再生されます。 TVSDK 2.5.1は、**ライブ**&#x200B;ストリームのインスタントオンもサポートします。 ライブストリームは、ライブ時間が移動すると再バッファリングされます。
+   * **VOD およびライブの即時オン —** 即時オンを有効にすると、 TVSDK は、再生が開始する前にメディアを初期化し、バッファリングします。 複数の MediaPlayerItemLoader インスタンスをバックグラウンドで同時に起動できるので、複数のストリームをバッファリングできます。 ユーザーがチャネルを変更し、ストリームが適切にバッファリングされると、新しいチャネルでの再生が直ちに開始します。 TVSDK 2.5.1 は、 **live** ストリームも同様です。 ライブストリームは、ライブウィンドウが移動すると再バッファリングされます。
 
-      * **ABRロジックの改善 —** 新しいABRロジックは、バッファー長、バッファー長の変化率、測定された帯域幅に基づいています。これにより、ABRは帯域幅が変動する場合に適切なビットレートを選択し、バッファー長が変化するレートを監視することで、ビットレートの切り替えが実際に発生する回数を最適化します。
-      * **部分セグメントのダウンロード/サブセグメント —** TVSDKは、各フラグメントのサイズをさらに小さくして、可能な限り早く開始を再生します。tsフラグメントには、2秒ごとにキーフレームが必要です。
-      * **遅延広告の解決 —** TVSDKは、非プリロール広告の解決を待たずに再生を開始するので、起動時間が短くなります。シークやトリック再生などのAPIは、すべての広告が解決されるまで許可されません。 これは、CSAIで使用されるVODストリームに適用されます。 シークや早送りなどの操作は、広告の解決が完了するまで許可されません。 ライブストリームの場合、ライブイベント中は、この機能を広告解決に対して有効にすることはできません。
-      * **永続的なネットワーク接続 —** この機能を使用すると、TVSDKは永続的なネットワーク接続の内部リストを作成および保存できます。これらの接続は、複数の要求に対して再利用され、各ネットワーク要求に対して新しい接続を開き、その後破棄するのではなくなります。 これにより、効率が向上し、ネットワークコードの遅延が減少し、再生パフォーマンスが向上します。
-TVSDKは、接続を開くと、*キープアライブ*&#x200B;接続をサーバーに要求します。 一部のサーバーでは、このタイプの接続がサポートされていない場合があります。サポートされていない場合、TVSDKは、再度リクエストごとに接続を行うためにフォールバックされます。 また、永続的な接続はデフォルトでオンになりますが、TVSDKには、アプリが必要に応じて永続的な接続をオフにできるように設定オプションが追加されました。
-      * **並行ダウンロード — ビデオとオーディオをシリーズではなく並行して** ダウンロードすると、起動の遅延が減少します。この機能を使用すると、HLS LiveファイルとVODファイルの再生、サーバーからの使用可能な帯域幅の使用の最適化、バッファーの実行不足状況に陥る確率の低下、ダウンロードと再生の間の遅延の最小化を行うことができます。
-      * **並行的な広告ダウンロード —** TVSDKは、広告の時間をヒットする前に、コンテンツ再生と並行して広告をプリフェッチします。これにより、広告とコンテンツのシームレスな再生を実現します。
+      * **ABR ロジックの改善 —** 新しい ABR ロジックは、バッファ長、バッファ長の変化率、測定された帯域幅に基づいています。 これにより、ABR は帯域幅が変動する際に適切なビットレートを選択し、また、バッファ長の変化率を監視することで、ビットレート切り替えが実際に発生する回数を最適化します。
+      * **部分セグメントのダウンロード/サブセグメント化 —** TVSDK は、可能な限り早く再生を開始するために、各フラグメントのサイズをさらに縮小します。 ts フラグメントには、2 秒ごとにキーフレームが必要です。
+      * **遅延広告解決 —** TVSDK は、再生を開始する前に、非プリロール広告の解決を待たずに、起動時間を短縮します。 シークやトリック再生などの API は、すべての広告が解決されるまで、引き続き使用できません。 これは、CSAI で使用される VOD ストリームに適用されます。 シークや早送りなどの操作は、広告の解決が完了するまで許可されません。 ライブストリームの場合、この機能は、ライブイベント中の広告の解決に対して有効にすることはできません。
+      * **永続的なネットワーク接続 —** この機能を使用すると、 TVSDK は、永続的なネットワーク接続の内部リストを作成して保存できます。 これらの接続は、複数の要求に対して再利用されます。ネットワーク要求ごとに新しい接続を開き、その後破棄する必要はありません。 これにより、効率が向上し、ネットワークコードの待ち時間が短縮され、再生パフォーマンスが向上します。
+TVSDK は、接続を開くと、サーバーに *キープアライブ* 接続。 一部のサーバーでは、このタイプの接続がサポートされていない場合があります。その場合、 TVSDK は、リクエストごとに接続を再び確立することにフォールバックします。 また、永続的な接続がデフォルトでオンになっている間、 TVSDK には設定オプションが追加され、アプリで永続的な接続を必要に応じてオフにすることができます。
+      * **並列ダウンロード —** ビデオとオーディオをシリーズではなく並行してダウンロードすると、起動時の遅延が軽減されます。 この機能を使用すると、HLS Live ファイルと VOD ファイルの再生、サーバーからの使用可能な帯域幅の使用量の最適化、バッファーの実行中の確率の低下、ダウンロードと再生の間の遅延の最小化が可能です。
+      * **並列の広告ダウンロード —** TVSDK は、広告の時間をヒットする前に、コンテンツの再生と並行して広告をプリフェッチするので、広告とコンテンツをシームレスに再生できます。
 
 * **再生**
 
-   * **MP4コンテンツ再生 —** MP4短いクリップは、TVSDK内で再生するために再トランスコードする必要はありません。注意：ABRの切り替え、トリック再生、広告挿入、遅延オーディオバインディングおよびサブセグメントは、MP4再生ではサポートされません。
-   * **可変ビットレート(ABR)を使用したトリック再生 —** この機能を使用すると、トリック再生モード中にTVSDKがiFrameストリームを切り替えることができます。iFrame以外のプロファイルを使用して、低速でトリック再生を行うことができます。
-   * **トリックの再生がスムーズになりま** した。以下の改善により、ユーザーエクスペリエンスが向上します。
+   * **MP4 コンテンツ再生 —** TVSDK 内で再生するために、MP4 の短いクリップを再変換する必要はありません。
+注意：ABR 切り替え、トリック再生、広告挿入、遅延オーディオバインディング、サブセグメント化は、MP4 再生ではサポートされません。
+   * **可変ビットレート (ABR) を使用したトリック再生 —** この機能を使用すると、 TVSDK は、トリック再生モード時に iFrame ストリームを切り替えることができます。 iFrame 以外のプロファイルを使用して、低速でトリック再生を実行できます。
+   * **よりスムーズなトリック再生 —** 以下の改善により、ユーザーエクスペリエンスが向上します。
 
-          *帯域幅とバッファーのプロファイルに基づく、トリック再生中の可変ビットレートとフレームレートの選択
-          * IDRストリームではなくメインストリームを使用して、最大30 fpsの高速再生を実現します。
+          *トリック再生中の適応ビットレートおよびフレームレートの選択（帯域幅とバッファプロファイルに基づく）
+          *最大 30 fps の高速再生を実現するには、IDR ストリームの代わりにメインストリームを使用します。
       
 * **コンテンツ保護**
 
-   * **解像度ベースの出力保護 —** この機能は、再生制限を特定の解像度に関連付け、DRMコントロールをきめ細かく指定します。
+   * **解像度ベースの出力保護 —** この機能は、再生の制限を特定の解像度に結び付け、DRM コントロールをより詳細に設定します。
 
 * **ワークフローのサポート**
 
-   * **ダイレクト請求の統合 —** これは、請求指標をAdobe Analyticsバックエンドに送信します。バックエンドは、Adobe Primetimeによって、お客様が使用するストリームに関して認定されています。TVSDKは、顧客の販売契約に従って自動的に指標を収集し、課金の目的で必要な定期的な使用状況レポートを生成します。 TVSDKは、すべてのストリーム開始イベントで、Adobe Analyticsデータ挿入APIを使用して、コンテンツタイプ、広告挿入有効フラグ、drm有効フラグなどの請求指標（請求対象ストリームの長さに基づく）をAdobe AnalyticsPrimetimeが所有するレポートスイートに送信します。 これは、お客様独自のAdobe Analyticsレポートスイートやサーバーコールに影響を与えたり、含めたりすることはありません。 リクエストに応じて、この請求の使用状況レポートが定期的に顧客に送信されます。 これは、利用状況の請求のみをサポートする請求機能の最初のフェーズです。 ドキュメントで説明されているAPIを使用して、販売契約に基づいて設定できます。 この機能はデフォルトで有効になっています。 この機能をオフにするには、リファレンスプレイヤーのサンプルを参照してください。
-   * **フェイルオーバーのサポートの強化 — ホストサーバー、プレイリストファイル、セグメントに障害が発生した場合でも、中断されない再生を継続するために実装された** 追加の戦略。
+   * **直接請求の統合 —** これにより、請求指標がAdobe Analyticsバックエンドに送信されます。このバックエンドは、お客様が使用するストリームに関してAdobe Primetimeで認定されています。
+TVSDK は、顧客の販売契約に従って自動的に指標を収集し、課金のために必要な定期的な使用状況レポートを生成します。 TVSDK は、すべてのストリーム開始イベントで、Adobe Analytics Data Insertion API を使用して、コンテンツタイプ、広告挿入有効フラグ、drm 有効フラグなどの請求指標を請求可能なストリームの期間に基づいてAdobe Analytics Primetime 所有のレポートスイートに送信します。 これは、お客様独自のAdobe Analyticsレポートスイートやサーバー呼び出しに干渉したり、含まれたりすることはありません。 この請求使用状況レポートは、リクエストに応じて定期的にお客様に送信されます。 これは、使用状況の請求のみをサポートする請求機能の第 1 段階です。 ドキュメントに記載されている API を使用して、販売契約に基づいて設定できます。 この機能は、デフォルトで有効になっています。 この機能をオフにするには、リファレンスプレーヤーのサンプルを参照してください。
+   * **フェイルオーバーのサポートの向上 —** ホストサーバー、プレイリストファイル、セグメントに障害が発生した場合でも、再生を中断せずに続行するための追加戦略が実装されました。
 
 * **広告**
 
-   * **堀の統合 — 堀からの広告視認性測定の** サポート
-   * **コンパニオンバナー —** コンパニオンバナーはリニア広告と共に表示され、多くの場合、広告が終了しても表示に引き続き表示されます。これらのバナーは、html（HTMLスニペット）またはiframe（iframeページのURL）のタイプにすることができます。
+   * **Mort 統合 —** Mort からの広告視認性測定のサポート。
+   * **コンパニオンバナー —** コンパニオンバナーはリニア広告と一緒に表示され、多くの場合、広告が終了した後もビューに表示され続けます。 これらのバナーのタイプは、html(HTMLスニペット ) または iframe（iframe ページへの URL）です。
 
-* **解析**
+* **Analytics**
 
-   * **VHL 2.0 -** これは、Adobe Analytics用の使用データの自動収集のための、最新の最適化されたビデオハートビートライブラリ(VHL)統合です。APIの複雑さが減少し、導入が容易になりました。 Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases)用のVHLライブラリ[v2.0.0をダウンロードし、libsフォルダーにJARファイルを抽出します。
+   * **VHL 2.0 -** これは、Adobe Analyticsの使用状況データを自動収集するための、最新の最適化されたビデオハートビートライブラリ (VHL) 統合です。 API の複雑さが軽減され、実装が簡単になりました。 VHL ライブラリのダウンロード [Android™用 v2.0.0](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases) をクリックし、libs フォルダーに JAR ファイルを抽出します。
 
-* **SizeAvalableEventListener**
-   * SizeAvailableEventのgetHeight()メソッドとgetWidth()メソッドは、それぞれ高さと幅で出力を返すようになりました。 表示縦横比は次のように計算できます。
+* **SizeAvaliableEventListener**
+   * SizeAvailableEvent の getHeight() メソッドと getWidth() メソッドは、それぞれ高さと幅で出力を返すようになりました。 表示縦横比は次のように計算できます。
 
       ```
       SizeAvailableEvent e;
@@ -179,258 +178,256 @@ TVSDKは、接続を開くと、*キープアライブ*&#x200B;接続をサー�
 
 * **Cookie**
 
-   * Android TVSDKは、AndroidアプリケーションのCookieStoreに保存されたJAVA cookieへのアクセスをサポートするようになりました。 新しいCookieが「Set-Cookie」応答ヘッダーの一部として提供されるたびに記録するコールバックAPI(onCookiesUpdated)が提供されます。 これらのcookieは、CookieStoreを使用して特定のURI/ドメインに対してこれらのcookie値を設定することで、別のURI/ドメインに使用されるHttpCookieのリストとして使用できます。 同様に、TVSDKのcookieの値も、CookieStore追加APIを使用して更新されます。
+   * Android™ TVSDK は、Android™アプリケーションの CookieStore に保存された Java™ Cookie へのアクセスをサポートするようになりました。 新しい Cookie が「Set-Cookie」応答ヘッダーの一部として含まれる場合は常に記録するコールバック API(onCookiesUpdated) が提供されます。 CookieStore を使用して特定の URI/ドメインに対してこれらの cookie の値を設定することで、これらの cookie を別の URI/ドメインで使用する HttpCookie のリストとして使用できます。 同様に、 TVSDK 内の cookie の値は、 CookieStore add API を使用して更新されます。
 
-## 機能マトリックス{#feature-matrix}
+## 機能マトリックス {#feature-matrix}
 
-Android向けTVSDKは、ビデオアプリケーションに機能を追加するために実装できる多数の機能をサポートしています。
+Android™向け TVSDK は、ビデオアプリケーションに機能を追加するために実装できる様々な機能をサポートしています。
 
-以下の機能の表では、「Y」はこの機能が現在のリリースでサポートされていることを示しています。
+以下の機能表では、「Y」は、この機能が現在のリリースでサポートされていることを示します。
 
 | 機能 | コンテンツタイプ | HLS |
 |---|---|---|
-| 一般再生（再生、一時停止、シーク） | VOD + Live | Y |
-| FER — 一般再生（再生、一時停止、シーク） | FER VOD | Y |
-| 広告の再生中にシークする | VOD + Live | 非対応 |
-| AC3 | VOD + Live | 非対応 |
-| MP3 | VOD | 非対応 |
-| MP4コンテンツ再生 | VOD | Y |
-| 可変ビットレート切り替えロジック | VOD + Live | Y |
-| オーディオのみの再生 | VOD + Live | Y |
-| マルチCDNのサポート | VOD + Live | 非対応 |
-| オーディオ専用メディアを含む広告の再生 | VOD + Live | 非対応 |
+| 一般的な再生（再生、一時停止、シーク） | VOD + Live | Y |
+| FER — 一般的な再生（再生、一時停止、シーク） | FER VOD | Y |
+| 広告再生中にシーク | VOD + Live | サポートなし |
+| AC3 | VOD + Live | サポートなし |
+| MP3 | VOD | サポートなし |
+| MP4 コンテンツ再生 | VOD | Y |
+| 適応ビットレート切り替えロジック | VOD + Live | Y |
+| オーディオのみ再生 | VOD + Live | Y |
+| マルチ CDN サポート | VOD + Live | サポートなし |
+| オーディオ専用メディアを使用した広告の再生 | VOD + Live | サポートなし |
 | クローズドキャプション — 608/708 | VOD + Live | Y |
 | クローズドキャプション — WebVTT | VOD + Live | Y |
 | マニフェストのフェイルオーバー | VOD + Live | Y |
 | 高度なフェイルオーバー | VOD + Live | Y |
-| QoSおよびプレイヤー通知 | VOD + Live | Y |
-| cookieヘッダーのサポート | VOD + Live | Y |
-| カスタムHTTPヘッダーのサポート | VOD + Live | Y（リストを必須にする） |
-| バッファ制御パラメータの設定 | VOD + Live | Y |
-| 可変ビットレートコントロールの設定 | VOD + Live | Y |
+| QoS とプレーヤーの通知 | VOD + Live | Y |
+| cookie ヘッダーのサポート | VOD + Live | Y |
+| カスタム HTTP ヘッダーのサポート | VOD + Live | Y（許可リストへの登録が必要） |
+| バッファ制御パラメータを設定 | VOD + Live | Y |
+| アダプティブビットレートコントロールの設定 | VOD + Live | Y |
 | カスタムマニフェストタグ | VOD + Live | Y |
 | 遅延オーディオバインディング | VOD + Live | Y |
-| 302リダイレクト | VOD + Live | Y |
-| オフセットのある再生 | VOD + Live | Y |
-| オーディオのみの再生 | VOD + Live | Y |
+| 302 リダイレクト | VOD + Live | Y |
+| オフセットの再生 | VOD + Live | Y |
+| オーディオのみ再生 | VOD + Live | Y |
 | トリック再生 | VOD + Live | Y |
-| トリック再生でのスローモーション | VOD + Live | 非対応 |
-| スムーズなトリック再生（ABRを使用） | VOD + Live | Y |
-| ID3の解析 | VOD + Live | Y |
-| 広告のブラックアウト | VOD + Live | 非対応 |
-| 即時オン | VOD + Live | 非対応 |
-| 不連続マーカのサポート | VOD + Live | Y |
-| 302リダイレクトの定着度 | VOD + Live | Y |
+| トリック再生でのスローモーション | VOD + Live | サポートなし |
+| スムーズなトリック再生（ABR を使用） | VOD + Live | Y |
+| ID3 解析 | VOD + Live | Y |
+| 広告のブラックアウト | VOD + Live | サポートなし |
+| 即時オン | VOD + Live | サポートなし |
+| Discontinuity マーカーのサポート | VOD + Live | Y |
+| 302 リダイレクトの定着 | VOD + Live | Y |
 
 | 機能 | コンテンツタイプ | HLS |
 |---|---|---|
-| 一般的な再生、有効な広告 | VOD + Live | Y |
-| 広告が有効なFERコンテンツ | VOD | Y |
+| 一般再生、広告有効 | VOD + Live | Y |
+| 広告が有効な FER コンテンツ | VOD | Y |
 | デフォルトの広告動作 | VOD + Live | Y |
 | VAST 2.0/3.0 | VOD + Live | Y |
 | VMAP 1.0 | VOD + Live | Y |
-| MP4広告 | VOD + Live | Y（CRSから） |
+| MP4 広告 | VOD + Live | Y（CRS から） |
 | 広告を有効にしたトリック再生 | VOD + Live | Y |
 | 広告のみ | VOD | Y |
-| ターゲット設定パラメーター | VOD + Live | Y |
+| ターゲティングパラメーター | VOD + Live | Y |
 | カスタムパラメーター | VOD + Live | Y |
 | カスタム広告動作 | VOD + Live | Y |
 | カスタム広告タグ | ライブ | Y |
 | カスタム広告リゾルバー | VOD + Live | Y |
-| フリーホイールカスタム広告リゾルバー | VOD | Y |
-| C3 | VOD + Live | 非対応 |
-| 遅延広告の解決 | VOD | Y |
-| 不連続マーカのサポート — SSAI | VOD + Live | Y |
-| コンパニオン広告、バナー広告、クリック可能広告 | VOD + Live | Y |
+| Freewheel Custom Ad Resolver | VOD | Y |
+| C3 | VOD + Live | サポートなし |
+| 遅延広告解決 | VOD | Y |
+| Discontinuity マーカーのサポート — SSAI | VOD + Live | Y |
+| コンパニオン広告、バナー広告、クリック可能な広告 | VOD + Live | Y |
 | VPAID 2.0 | VOD + Live | Y(JS) |
 | 早期広告出口 | ライブ | Y |
-| ルールベースのクリエイティブの優先順位付け | VOD + Live | Y |
-| CRSルール | VOD + Live | Y |
-| JSON広告リゾルバー | VOD + Live | 非対応 |
-| 堀の統合 | VOD + Live | Y |
+| ルールベースのクリエイティブ優先順位付け | VOD + Live | Y |
+| CRS ルール | VOD + Live | Y |
+| JSON Ad Resolver | VOD + Live | サポートなし |
+| Mort 統合 | VOD + Live | Y |
 
 | 機能 | コンテンツタイプ | HLS |
 |---|---|---|
-| AES暗号化 | VOD + Live | Y |
-| AES暗号化の例 | VOD + Live | Y |
-| トークン化されたストリーム | VOD + Live | Y |
-| DRM | VOD + Live | Primetime DRMのみ(将来：Widevine) |
-| 外部再生(RBOP) | VOD + Live | Primetime DRMのみ |
-| ライセンスのローテーション | VOD + Live | Primetime DRMのみ |
-| キーの回転 | VOD + Live | Primetime DRMのみ |
+| AES 暗号化 | VOD + Live | Y |
+| AES 暗号化の例 | VOD + Live | Y |
+| トークン化ストリーム | VOD + Live | Y |
+| DRM | VOD + Live | Primetime DRM のみ ( 今後：Widevine) |
+| 外部再生 (RBOP) | VOD + Live | Primetime DRM のみ |
+| ライセンスのローテーション | VOD + Live | Primetime DRM のみ |
+| キーの回転 | VOD + Live | Primetime DRM のみ |
 
 | 機能 | コンテンツタイプ | HLS |
 |---|---|---|
-| Adobe AnalyticsVHL統合 | VOD + Live | Y |
+| Adobe Analytics VHL 統合 | VOD + Live | Y |
 | 請求 | VOD + Live | Y |
 
-## 解決された問題{#resolved-issues}
+## 解決された問題 {#resolved-issues}
 
-解決が報告された問題に関連付けられている場合、Zendesk参照が表示されます（ZD#xxxxなど）。
+解決が報告された問題に関連付けられている場合は、Zendesk 参照が表示されます（例： ZD#xxxxx）。
 
-**Android TVSDK 2.7**
+**Android™ TVSDK 2.7**
 
-この節では、TVSDK 2.7のリリースで解決された問題の概要を示します。
+この節では、 TVSDK 2.7 のリリースで解決された問題の概要を示します。
 
-* ZD#37166 — 広告が正常に再生された場合でも、エラートラッキング呼び出しが呼び出されます。
-* ZD#37134 - VMAP応答でwrapper(3P)Adに複数の広告が存在する場合、誤った広告IDが返されます。
+* ZD#37166 — 広告が正常に再生された場合でもエラートラッキングコールが実行されます。
+* ZD#37134 - VMAP 応答に複数の広告が存在する wrapper(3P) Ad が返される場合、間違った広告 ID が返されます。
 
-**Android TVSDK 2.5.6**
+**Android™ TVSDK 2.5.6**
 
 * ZD #34992 — クローズドキャプションの言語が空です。
-   * TVSDKが、キャプショントラックの詳細を取得するために、メインマニフェストから#EXT-X-MEDIA:TYPE=CLOSED-CAPTIONSを解析していなかった問題を修正しました。
-* ZD #35078 - Android P検証。
-   * TVSDK 2.5.6は、最新のAndroid Pベータ版ビルドで検証されています。 新しいAndroid OSが原因で問題は見つかりませんでした。
-* ZD #34149 — エラーが発生した場合でも、プレイヤーは引き続き要求を表示します。
-   * すべてのプロファイルがダウンした場合（404エラー）も、TVSDKが繰り返し呼び出しを行っていた問題を修正しました。
-* ZD #31533 — アプリがバックグラウンドに送信された後、Androidでオーディオを再生します。
-   * アプリがバックグラウンドにある場合にオーディオを再生できるように、MediaPlayerの`enableAudioPlaybackInBackground` APIを追加しました。このAPIは、引数として「True」を指定して（プレイヤーがPREPARED状態の場合）呼び出す必要があります。
+   * TVSDK がメインマニフェストからキャプショントラックの詳細を取得するために#EXT-X-MEDIA:TYPE=CLOSED-CAPTIONS を解析しない問題を修正しました。
+* ZD #35078 - Android P の検証。
+   * TVSDK 2.5.6 は、最新の Android™ P ベータビルドで検証されました。 新しい Android™ OS により、問題は見つかりませんでした。
+* ZD #34149 — エラーが発生した場合でも、プレーヤーは引き続きリクエストのマニフェストを表示します。
+   * すべてのプロファイルがダウンした場合（404 エラー）も TVSDK が繰り返し呼び出しをおこなっていた問題を修正しました。
+* ZD #31533 — アプリがバックグラウンドに送信された後、Android™でオーディオを再生します。
+   * 追加済み `enableAudioPlaybackInBackground` アプリがバックグラウンドになっているときにオーディオの再生を有効にするために、引数として「True」を指定して呼び出す必要がある MediaPlayer の API です（プレーヤーが PREPARED 状態のとき）。
 
-**Android TVSDK 2.5.5**
+**Android™ TVSDK 2.5.5**
 
-* ZD #21647 — 実際のビデオサイズが640x360の場合、Android TVSDKは640x368と通知します。
-   * 変数m_nOutputHeight （AndroidMCVideoDecoder内）が原因で、実際の出力高さではなくフレーム高さで更新されています。 m_nOutputHeightを正しく計算するために、関数getVideoFrameに関連する変更を行いました。
-* ZD #26614 — 緊急、サードパーティの広告提供/プログラム — インプレッションを提供できません。
-   * &lt;VAST version =&quot;2.0&quot;>のように「等号」記号の前に「スペース」がある場合に問題が再現される、XML解析での問題の処理により、以前の修正を強化しました。
-* ZD #29296 - Android:CRS追加リクエストに対するAdSystemおよびクリエイティブID。
-   * 1401および1403のリクエストに、新しいパラメーターとして「AdSystem」および「CreativeId」が追加されました。
-* ZD #33062 - CDATAノード下のVAST応答でパイプ文字が発生すると、TVSDKがクラッシュします。
-   * NetworkConfigurationクラスのAPI setEncodeUrlForTrackingは、エンコードするURL内の安全でない文字として削除されました。
-* ZD #33063 - CRSファイル選択ロジックが壊れていました。TVSDKは、CRSリクエストをwebm形式で送信せず、3gppファイルで送信していました。
-   * ロジックを修正しました。 webmおよび3gpp形式のメディアファイルを使用する場合、Web用に送信するCRSリクエスト。 また、3gpp形式の両方のメディアファイルを使用する場合、最も高いビットレートの3gppファイルに対してCRSリクエストが送信されます。
-* ZD #33125 - VMAP内で特定のDoubleClickタグが使用されると、Androidアプリがクラッシュします。
-   * クラッシュが発生しないようにシナリオを修正しました。
-* ZD #32256 — ライセンスのローテーションとキーのローテーションに関する問題 —Adobeアクセス
-   * SampleAESコンテンツのDRMメタデータを使用したセグメントの初期化を修正しました。 AES128コンテンツで正常に機能します。
-* ZD #33619 — ライブポイントの近くでバッファリング状態に留まって増加するプレイリストコンテンツの高速転送。
-   * トリック再生モードでライブポイントを越える場合に、ケースを処理しました。
-* ZD #34151 - TimedMetadataオブジェクトが正しくありません。
-   * 2つのTimedMetadataイベントが、タイムライン内で同じ時間に属している場合、ランダムな順序で現れていました。 マニフェスト内で元の順序を維持。
-* ZD #34189 — 広告の時間の開始をシークする場合に発生します。
-   * この問題は、不連続性を使用して繋ぎ合わされるSSAI広告に関するものでした。 その原因は、このような広告の始まりを探すとき、キーフレームを探しても見つからないときの行動でした。 その理由は、広告の最小オーディオタイムスタンプが、最小ビデオタイムスタンプの前にあったためです。 したがって、間違ったfragmentDumpデータでキーフレームを検索することになります。 修正されました。
-* ZD #34528 - FireTV 3rd genドングルの640 x 360以上のビデオ解像度はアップグレードできません。
-   * 最新のファームウェアの更新が含まれるように修正が強化されました。
-* ZD #34793 - VideoEngineでauditudeSettingsが使用可能であり、使用されていないと想定していた場合に、カスタムコンテンツリゾルバーでクラッシュするために使用されるTVSDK 2.5.x。
-   * Null共有ポインタ(auditudeSettings)に対する関数呼び出しが原因でクラッシュが発生していました。 VideoEngineTimeline::placeToSourceTimeline()に条件付きチェックを追加し、そのオブジェクトに対する何も呼び出す前にauditudeSettingsが使用可能であることを確認しました。
-* ZD #32584 - VAST応答の&lt;拡張子>ノードにある完全な情報にアクセスできません。
-   * XML解析に関する問題を修正し、現在は、NetworkAdInfoが&lt;拡張子>ノードに存在する完全な情報を提供するようになりました。
-* ZD #35086 — 特定のVMAP応答の場合、プレーヤーから拡張データを完全に取得できません。
-   * 拡張XMLの属性値内に重複引用符が含まれている場合、XMLの解析が機能しなかったため、拡張XMLに固有の問題でした。 問題を修正しました。
+* ZD #21647 — 実際のビデオサイズが 640 x 360 の場合、Android TVSDK は 640 x 368 を通知します。
+   * 変数 m_nOutputHeight （AndroidMCVideoDecoder 内）が実際の出力の高さではなくフレームの高さで更新されるので、 m_nOutputHeight を正しく計算するために、関数 getVideoFrame に関連する変更を加えました。
+* ZD #26614 — 至急 — サードパーティの広告提供/プログラム — インプレッションを提供できない。
+   * 「スペース」が「等しい」記号の前にある場合に問題が再現可能な XML 解析でのケースの処理により、以前の修正を強化しました。 &lt;vast version=&quot;2.0&quot;>
+* ZD #29296 - Android:CRS リクエストに AdSystem およびクリエイティブ ID を追加します。
+   * 1401 および 1403 リクエストに新しいパラメーターとして「AdSystem」および「CreativeId」を含めるようになりました。
+* ZD #33062 - CDATA ノード下の VAST 応答でパイプ文字が発生すると、 TVSDK がクラッシュする
+   * NetworkConfiguration クラスの API setEncodeUrlForTracking は、エンコードする URL 内の安全でない文字として削除されました。
+* ZD #33063 - CRS ファイル選択ロジックが壊れました。 TVSDK が webm 形式の CRS リクエストを送信せず、代わりに 3gpp ファイル用に送信していました。
+   * ロジックを修正しました。 Webm および 3gpp 形式のメディアファイルを使用する場合、CRS リクエストが Webm 用に送信されます。 また、3gpp 形式の両方のメディアファイルを使用する場合、最も高いビットレート 3gpp ファイルに対して送信される CRS リクエストが返されます。
+* ZD #33125 - Android アプリが VMAP 内の特定の DoubleClick タグでクラッシュする。
+   * クラッシュを回避するためにシナリオを修正しました。
+* ZD #32256 — ライセンスのローテーションとキーのローテーションの問題 —Adobeアクセス。
+   * SampleAES コンテンツの DRM メタデータを使用してセグメントの初期化を修正しました。 AES128 コンテンツで正常に機能します。
+* ZD #33619 — ライブポイント近くのバッファリング状態でスタックした成長中のプレイリストコンテンツの高速転送。
+   * トリック再生モードでライブポイントを越える際にケースを処理します。
+* ZD #34151 - TimedMetadata オブジェクトが正しくありません。
+   * タイムライン内で同じ時刻に属している 2 つの TimedMetadata イベントが、ランダムな順序で表示されていました。 マニフェスト内の元の順序を維持しました。
+* ZD #34189 — 広告ブレークの開始をシークする際の問題。
+   * この問題は、SSAI 広告が不連続を使用して繋がっている場合に発生しました。 その原因は、このような広告の始まりを目指すときの行動で、キーフレームを検索しても見つからないということです。 この理由は、広告の最小オーディオタイムスタンプが、最小ビデオタイムスタンプの前にあるためです。 したがって、間違った fragmentDump データでキーフレームを検索することになります。 今すぐ修正しました。
+* ZD #34528 - FireTV 第 3 世代ドングルで、640x360 以降にアップグレードしないビデオ解像度。
+   * 最新のファームウェアアップデートを含むように修正を強化。
+* ZD #34793 - TVSDK 2.5.x は、VideoEngine が auditudeSettings が使用可能で、使用されていないと仮定していた場合に、カスタムコンテンツリゾルバーでクラッシュするために使用されていました。
+   * Null 共有ポインタ (auditudeSettings) に対する関数呼び出しが原因でクラッシュが発生していました。 VideoEngineTimeline::placeToSourceTimeline() 内に条件付きチェックが追加され、そのオブジェクトに対する何らかの呼び出しをおこなう前に auditudeSettings が使用可能であることを確認できるようになりました。
+* ZD #32584 — 内に存在する完全な情報にアクセスできません &lt;extensions> VAST 応答のノード。
+   * XML 解析に関する問題を修正し、NetworkAdInfo が &lt;extensions> ノード。
+* ZD #35086 — 特定の VMAP 応答がある場合、プレーヤーから完全な拡張データを取得しません。
+   * この問題は、属性値内に二重引用符が含まれている拡張 xml の場合、XML 解析が機能しなかったので、拡張 xml に固有でした。 問題を修正しました。
 
-**Android TVSDK 2.5.4**
+**Android™ TVSDK 2.5.4**
 
-* ZenDesk#33659 - Webビューのリモートデバッグを有効にする再生セッション。
-   * WebViewDebuggingはデフォルトでFalseに設定されています。 デバッグを有効にするには、setWebContentsDebuggingEnabled(true)を使用して、アプリケーションを介してtrueに設定します。
-* ZenDesk#33011 - CRS要求が失敗した場合、広告タイムラインは解決されません。
-   * 広告に対するCRSリクエストが失敗すると、タイムラインが解決され、残りの広告が再生されます。
-* ZenDesk#34528 - FireTV第3世代ドングルのビデオ解像度が640 x 360以上にアップグレードされない。
-   * ビデオ解像度はビットレートスイッチとして切り替わります。
-* ZenDesk#33192 - AudioUpdatedEventListener::onAudioUpdatedを使用してトラックを取得すると、AudioTrackにNULLの名前が付けられます。
-   * FireTV Stickのいくつかのシナリオでは、実際のオーディオ更新がない場合にonAudioUpdateイベントが発生していました。 この問題は修正されました。
+* ZenDesk#33659 - Web ビューリモートデバッグを有効にする再生セッション。
+   * WebViewDebugging はデフォルトで False に設定されています。 デバッグを有効にするには、setWebContentsDebuggingEnabled(true) を使用して、アプリケーションから true に設定します。
+* ZenDesk#33011 - CRS リクエストに失敗した場合、広告タイムラインは解決されません。
+   * 広告に対する CRS リクエストが失敗すると、タイムラインが解決され、残りの広告が再生されます。
+* ZenDesk#34528 - FireTV 3 世代ドングルの 640x360 以降では、ビデオの解像度がアップグレードされない。
+   * ビデオ解像度は、ビットレートスイッチとして上に切り替わります。
+* ZenDesk#33192 - AudioTrack が AudioUpdatedEventListener::onAudioUpdated を介してトラックを取得する場合、AudioTrack に null の名前が付けられます。
+   * FireTV Stick のいくつかのシナリオでは、実際のオーディオ更新がない場合に onAudioUpdate イベントが発生していました。 現在は修正されています。
 
-**Android TVSDK 2.5.3**
+**Android™ TVSDK 2.5.3**
 
-* Zendesk#32216 - TimedMetadataカスタムタグ購読が機能しません。
-   * 1.4では文字列を返すのに対して、ID3データをバイト配列（APICまたは汎用データをサポート）としてクライアントに返します。 バイト配列は、ヌル終了文字自体を処理しないので、クライアントに特殊文字を表示していました。 この問題は修正されました。
-* Zendesk#32670 — プレイヤーが冗長プレイリストにフェイルオーバーしない
-   * これは正常に動作するようになり、setNetworkDownVerificationUrlは期待どおりに動作します。
-* Zendesk#32369 — クローズドキャプションに、異なる色のガベージまたは加工品が表示されます。
-   * 最新のビルドで、CCの問題が修正されました
-* Zendesk#25590 - Enhance:TVSDKのCookieストア（C++からJAVA）
-   * Android TVSDKは、（AndroidアプリケーションのCookieStoreに保存される）JAVAレイヤーとC++ TVSDKレイヤーの間のcookieへのアクセスをサポートするようになりました。
-* Zendesk#32252 - TVSDK_Android_2.5.2.12には、PTPLAY-20269の修正がないようです。
-この問題は修正され、2.5.2ブランチに統合されました。
-* Zendesk#31806 - PREPARINGでオーディチュードが表示されます。
-応答xmlに空のタグが含まれていたので、プレイヤーは「準備中」の状態で停止していました。 問題が修正されました。
-* Zendesk#31727 - TVSDK 2.5のクローズドキャプション文字がドロップされるか、スペルミスになる。
-   * 問題が修正され、どの文字もスペルを落としたりスペルを間違えたりすることはありません。
-* Zendesk#31485 - DrmManager 2.5（日本未発売）
-   * 新しいDrmManager（コンテキストコンテキスト）を使用したDrmManagerの作成で問題が発生しました。 DRMManagerを提供するDRMServiceクラスを実装しました。
-* Zendesk#32794- 1080P解像度ストリームがAndroidで再生されない。
-   * 2.5では、SizeAvailableEventメソッドとPreviouslyメソッド、SizeAvailableEventのgetHeight()メソッドとgetWidth()メソッドが変更され、フレームの高さとフレームの幅が返されました。これはメディア形式で返されます。 デコーダーが返す出力の高さと出力の幅を返すようになりました。
-* 設定レベルのマニフェストでの#EXT-X-FAXS-CM属性の位置が原因で、Zendesk #19359Flash Playerがクラッシュする。
+* Zendesk#32216 - TimedMetadata カスタムタグ配信登録が機能していません。
+   * 1.4 の戻り文字列では、ID3 データをバイト配列（APIC または汎用データをサポートするため）としてクライアントに返すのに対して、 バイト配列は NULL 終端文字自体を処理しないので、クライアントに特殊文字を表示していた。 この問題は現在修正されています。
+* Zendesk#32670 - Player が冗長プレイリストにフェールオーバーしない
+   * 現在、正常に動作しており、setNetworkDownVerificationUrl が期待どおりに動作しています。
+* Zendesk#32369 — クローズドキャプションは、異なる色のごみ箱やアーティファクトを表示します。
+   * 最新のビルドで CC の問題が修正されました
+* Zendesk#25590 - Enhance:TVSDK Cookie ストア (C++から Java™)
+   * Android™ TVSDK で、(Android™アプリケーションの CookieStore に格納された )Java™レイヤーと C++ TVSDK レイヤーの間の cookie へのアクセスがサポートされるようになりました。
+* Zendesk#32252 - TVSDK_Android_2.5.2.12 に PTPLAY-20269の修正がないようです。この問題は修正され、2.5.2 ブランチに統合されました。
+* Zendesk#31806 — 応答 xml のタグが空のため、PREPARING Player の Auditude スティックが「準備中」の状態で動かなくなりました。 問題が修正されました。
+* Zendesk#31727 - TVSDK 2.5 のクローズドキャプション文字は、ドロップされたり、スペルミスが発生したりします。
+   * 問題が修正され、文字をドロップまたはスペルミスすることはありません。
+* Zendesk#31485 - 2.5 の DrmManager
+   * 新しい DrmManager（コンテキストコンテキスト）を使用した DrmManager の作成で問題が発生しました。 DRMManager を提供する DRMService クラスを実装しました。
+* Zendesk#32794- 1080P 解像度ストリームが Android™で再生されない。
+   * SizeAvailableEvent が変更されました。 以前は、 `getHeight()` および `getWidth()` 2.5 の SizeAvailableEvent のメソッドは、Frame の高さとフレーム幅を返します。これはメディア形式で返されます。 現在は、デコーダーから返される出力の高さと出力の幅を返します。
+* Zendesk #19359Flash Playerは、設定レベルのマニフェスト内の#EXT-X-FAXS-CM属性の位置が原因でクラッシュします。
    * #EXT-X-FAXS-CMタグは、個々のビットレートまたはセグメントがプレイリストに表示される前に、常に最上位のプレイリストに表示される必要があります。
 
-**Android TVSDK 2.5.2**
+**Android™ TVSDK 2.5.2**
 
-* Zendesk#17305背景が不透明でないクローズドキャプションのアーティファクト。
-TextFormatのsetTreatSpaceAsAlphaNumプロパティが公開されます。 デフォルトでは、このプロパティはFalseです。 クライアントでこのプロパティをTrueに設定すると、暗い領域の問題が解決します。
+* Zendesk#17305不透明な背景を持つクローズドキャプションのアーティファクト。
+TextFormat の setTreatSpaceAsAlphaNum プロパティが公開されます。 既定では、このプロパティは False です。 クライアントでプロパティを True に設定して、ダークスペースの問題を解決します。
 
-* Zendesk#25097 CCディスプレイには、CC設定で視覚的なアーティファクトが表示されます。
-TextFormatのsetTreatSpaceAsAlphaNumプロパティが公開されます。 デフォルトでは、このプロパティはFalseです。 クライアントでこのプロパティをTrueに設定すると、暗い領域の問題が解決します。
+* Zendesk#25097 CC ディスプレイには、CC 設定のビジュアルアーティファクトが表示されます。
+TextFormat の setTreatSpaceAsAlphaNum プロパティが公開されます。 既定では、このプロパティは False です。 クライアントでプロパティを True に設定して、ダークスペースの問題を解決します。
 
-* Zendesk #31620 TVSDKプレイヤーから出るユーザーエージェント文字列が切り捨てられます。
-ユーザーエージェント文字列は、128文字以降で切り捨てられなくなります。
-Adobe Primetime版の文字列がシステムユーザーエージェントに追加されます。
+* Zendesk #31620 TVSDK プレーヤーから出るユーザーエージェント文字列が切り捨てられます。
+ユーザーエージェント文字列は、128 文字以下に切り捨てられなくなります。
+Adobe Primetimeのバージョン文字列がシステムユーザーエージェントに追加されます。
 
-* Zendesk #30809 SEEK_ENDイベントが見つからないため、アプリは再生中の状態に移行できません。
-* Zendesk #30415クローズドキャプションの「シアン」カラーが、以前のPrimetime TVSDKリリースと比較して、より濃い青（青緑色）になりました。
+* Zendesk #30809 SEEK_END イベントが見つからないと、アプリが再生状態に移行しなくなります。
+* Zendesk #30415 Closed Caption の「Cyan」の色は、以前の Primetime TVSDK リリースと比較して、より濃い青色（ターコイズ）になりました。
 
-   色がDarkCyanからCyanに変更されます。
+   色が DarkCyan から Cyan に変更されます。
 
-* Zendesk #30727 VOD広告がダウンロード/解決されていません。
+* Zendesk #30727 VOD 広告がダウンロード/解決されていません。
 
-   VMAP XMLで、明示的な終了タグ(‘&lt;/VAST>&#39;)のない空のVASTタグがあり、その後に改行文字がない場合、VMAP XMLは正しく解析されず、広告が再生されない場合があります。
+   VMAP XML で、明示的な終了タグ (&#39;&lt;/vast>&#39;) で、その後に改行文字がない場合、VMAP XML は適切に解析されず、広告が再生されない可能性があります。
 
-**Android TVSDK 2.5.1**
+**Android™ TVSDK 2.5.1**
 
-* デバイス固有(Samsung Galaxy Tab 4)のクラッシュ。AuditudeのVOD DRM LBAを使用し、広告をクリックします。
-* VHL — オフセットからコンテンツを開始する際に、正しくないハートビート呼び出しが送信されます。
-* VPAID広告が再生されるとき、イベント:type:play広告に対するVHLハートビート呼び出しが見つかりません。
-* プレイヤーは、完了ステータスになった後、ポストロール広告に対してはSKIP adBreakPolicyを使用してPLAYINGステータスに戻ります。
-* Cookieが送信広告コールバックに添付されていません。
-* 広告キューポイントは表示されません。
-* EAC3 SAPトラックが別々に割り当てられたHLSが読み込まれません。
-* メディアプレイヤーが復元された後に、TVSDKが画面オンインテントを受け取ると、プレイヤーがクラッシュする。
+* デバイス固有 (Samsung Galaxy Tab 4) のクラッシュ。Auditude を使用する VOD DRM LBA で、広告をクリックします。
+* VHL — オフセットからコンテンツを開始する際に、誤ったハートビート呼び出しが送信されます。
+* VPAID 広告が再生されると、VHL ハートビートはイベントのを呼び出します:type:再生広告が見つかりません。
+* プレーヤーは、完了ステータスに移行した後、ポストロール広告の SKIP adBreakPolicy を含む PLAYING ステータスに戻ります。
+* 送信広告コールバックに cookie が添付されていません。
+* 広告キューポイントが表示されません。
+* 別の EAC3 SAP トラックを持つ HLS は読み込まれません。
+* メディアプレーヤーが復元された後に TVSDK がスクリーンオンインテントを受け取ると、プレーヤーがクラッシュします。
 
-## 既知の問題と制限{#known-issues-and-limitations}
+## 既知の問題と制限事項 {#known-issues-and-limitations}
 
-**Android TVSDK 2.7**
+**Android™ TVSDK 2.7**
 
-* TVSDK 2.7は、最大5つの広告を同時に解決できます。
-* VMAP応答の場合、1つの広告ブレーク内のAd呼び出しは同時に行われ、広告ブレークは順番に解決されます。
-* FERの場合、各オポチュニティのAd呼び出しは、同時に解決されます。
+* TVSDK 2.7 では、最大 5 つの広告を同時に解決できます。
+* VMAP 応答の場合、単一の広告ブレークの Ad 呼び出しは同時に実行され、広告ブレークは順番に解決されます。
+* FER の場合、各オポチュニティの Ad 呼び出しは同時に解決されます。
 
-### 以前のリリースでの既知の問題と制限事項{#known-issues-limitations-previous-releases}
+### 以前のリリースの既知の問題と制限事項{#known-issues-limitations-previous-releases}
 
-**Android TVSDK 2.5.6**
+**Android™ TVSDK 2.5.6**
 
-* 複数のVMAP広告の時間が同時にサポートされません。
+* 同時に複数の VMAP 広告の時間はサポートされていません。
 
-**Android TVSDK 2.5.3**
-
-このバージョンには次の問題があります。
-
-* ライブビデオ再生時に、ローエンドデバイスでオーディオビデオの同期の問題が発生したり、ネットワークの状態が低下したりする場合があります。
-* FERストリームの場合、virtualTimeとlocalTimeは異なる場合があります。 また、オフセット付きのFERは機能しません。
-* 遅延バインディングオーディオのコンテンツがシークされると、再生が停止する場合があります。
-* WebVTTのキャプションが断続的に、LIVEコンテンツで同期されない場合があります。
-* 断続的に、広告の時間から外れた後に、少数のフレームの高速再生が見られる場合があります。
-* 広告が再生されているにもかかわらず、303エラーが3つのラッパー広告の時間に発生することがあります。
-
-**Android TVSDK 2.5.2**
+**Android™ TVSDK 2.5.3**
 
 このバージョンには次の問題があります。
 
-* ライブビデオ再生で、ローエンドデバイスでのオーディオビデオの同期の問題が発生する場合があります。
-* VODメディアの終わりまでシークすると、再生が停止する場合があります。
-* FERストリームの場合、virtualTimeとlocalTimeは異なる場合があります。 また、オフセット付きのFERは機能しません。
+* ライブビデオ再生中に、ローエンドデバイスでのオーディオビデオの同期の問題や、ネットワーク状態の低下が発生する場合があります。
+* FER ストリームの場合、virtualTime と localTime は異なる場合があります。 また、オフセット付きの FER は機能しません。
+* 遅延バインディングオーディオコンテンツがシークされると、再生が停止する場合があります。
+* LIVE コンテンツで、WebVTT キャプションが断続的に同期しなくなる場合があります。
+* 断続的に、広告ブレークから出た後に、数個のフレームの高速再生が見られることがあります。
+* Ads が再生されている場合でも、Triple Wrapper Ad Breaks に対して 303 エラーがスローされることがあります。
 
-**Android TVSDK 2.5.1**
+**Android™ TVSDK 2.5.2**
 
-このバージョンのTVSDKには、次の問題があります。
+このバージョンには次の問題があります。
+
+* ライブビデオ再生で、ローエンドデバイスでのオーディオビデオ同期の問題が発生する場合があります。
+* VOD メディアの終わりまでのシーク時に再生が停止することがあります。
+* FER ストリームの場合、virtualTime と localTime は異なる場合があります。 また、オフセット付きの FER は機能しません。
+
+**Android™ TVSDK 2.5.1**
+
+このバージョンの TVSDK には、次の問題があります。
 
 * ライブビデオ再生で、ローエンドデバイスでオーディオビデオの同期の問題が発生する場合があります。
-* FERストリームの場合、virtualTimeとlocalTimeは異なる場合があります。 また、オフセット付きのFERは機能しません。
-* VMAP XMLで、明示的な終了タグ(&lt;/VAST>)のない空のVASTタグがあり、その後に改行がない場合、VMAP XMLは正しく解析されず、広告が再生されない場合があります。
-* VPAIDポストロールはサポートされていません。
+* FER ストリームの場合、virtualTime と localTime は異なる場合があります。 また、オフセット付きの FER は機能しません。
+* VMAP XML で、明示的な終了タグ (&lt;/vast>) の後に改行がない場合、VMAP XML は適切に解析されず、広告が再生されない可能性があります。
+* VPAID ポストロールはサポートされていません。
 
-## 役立つリソース{#helpful-resources}
+## 参考リソース {#helpful-resources}
 
-* [必要システム構成](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2_7-requirements.html)
-* [TVSDK 2.7 for Androidプログラマーガイド](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2_7-overview-prod-audience-guide.html)
-* [APIリファレンス用のTVSDK Android Javadoc](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html)
-* [TVSDK Android C++ APIドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/cpp/namespaces.html)  — 各Javaクラスには対応するC++クラスがあり、C++ドキュメントにはJavadocsよりも詳しい説明が記載されています。Java APIの詳しい理解については、C++のドキュメントを参照してください。
-* [Android向けTVSDK 1.4から2.5(Java)への移行ガイド](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
-* 画面のオン/オフシナリオの処理については、ビルドに含まれている`Application_Changes_for_Screen_On_Off.pdf`ファイルを参照してください。
-* [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html)のページにある完全なヘルプドキュメントを参照してください。
+* [必要システム構成](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2.7-requirements.html?lang=en)
+* [Android™用 TVSDK 2.7 プログラマーガイド](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2.7-overview-prod-audience-guide.html?lang=en)
+* [API リファレンス用 TVSDK Android™ Javadoc](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html)
+* [TVSDK Android™ C++ API ドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/cpp/namespaces.html)  — 各 Java™クラスには対応する C++クラスがあり、C++ドキュメントには Java™のドキュメントよりも説明的な内容が含まれています。Java™ API の詳細については、C++のドキュメントを参照してください。
+* [Android™(Java™) 向け TVSDK 1.4 から 2.5 への移行ガイド](https://experienceleague.adobe.com/docs/primetime/migration/tvsdk-14-25-android.html?lang=en)
+* 画面のオン/オフシナリオの処理については、 `Application_Changes_for_Screen_On_Off.pdf` ファイルがビルドに含まれています。
+* 完全なヘルプドキュメントは、 [Adobe Primetimeラーニングとサポート](https://experienceleague.adobe.com/docs/primetime.html) ページ。

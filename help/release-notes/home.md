@@ -3,10 +3,10 @@ title: Primetime リリースノート
 description: Primetime リリースノート
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
+source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 34%
+source-wordcount: '320'
+ht-degree: 30%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 34%
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントには、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題が記載されています。
 
-## PTAI 21.11.1の機能強化および修正点
+## PTAI 22.2.2 の機能強化および修正点
 
-この [!UICONTROL EXT-X-IMAGE-STREAM-INF] は、ゾーンごとに設定できるようになりました。 [!UICONTROL Roku Trick] play は完全にサポートされています。
+このリリースでは、広告クリエイティブ呼び出し、広告サーバー呼び出し、Avail 解決イベントなど、新しい広告パフォーマンスイベントのキャプチャに重点を置いています。 これらのイベントは、今後のリリースで、Primetime イベントの新しいグラフィカルAd Insertionインターフェイスを通じて公開されます。
 
 ## TVSDK 3.15 Android の修正点
 

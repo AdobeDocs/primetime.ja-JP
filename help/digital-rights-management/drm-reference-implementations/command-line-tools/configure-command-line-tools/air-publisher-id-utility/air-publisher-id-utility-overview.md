@@ -2,26 +2,25 @@
 title: 概要
 description: 概要
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 07f2ef0b-c6aa-4574-a3ae-18685a090cf2
+source-git-commit: a1fc67b708f3d5821532d3827639adbadf15f6b4
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
+# AIR Publisher ID ユーティリティ {#air-publisher-id-utility}
 
-# AIRパブリッシャーIDユーティリティ{#air-publisher-id-utility}
+AIRファイルを作成すると、AIR Developer Tool(ADT) によって Publisher ID が自動的に生成されます。 AIR Publisher ID ユーティリティ ( [!DNL AdobePublisherIDUtility.jar]) は、AIRアプリケーションの Publisher ID を計算します。
 
-AIRファイルを構築すると、AIR Developer Tool(ADT)によって自動的に発行者IDが生成されます。 AIR発行者IDユーティリティ([!DNL AdobePublisherIDUtility.jar])は、AIRアプリケーションの発行者IDを計算します。
-
-発行者IDは、AIRファイルの作成に使用する証明書に固有です。 同じ証明書を複数のAIRアプリケーションに再利用する場合、すべてのAIRアプリケーションで同じ発行者IDが使用されます。 リリース1.5.2に成功したAIRリリースでは、生成された発行者IDはファイルに追加されません。 したがって、AIRアプリケーション許可リストを使用する場合は、このツールを使用して発行者IDを決定します。
+Publisher ID は、AIRファイルの作成に使用する証明書に対して一意です。 複数のAIRアプリケーションで同じ証明書を再利用する場合、すべてのAIRアプリケーションの Publisher ID は同じになります。 リリース 1.5.2 に成功したAIRリリースでは、生成された Publisher ID がファイルに追加されません。 したがって、AIRアプリケーション許可リストを使用する予定がある場合は、このツールを使用して Publisher ID を特定します。
 
 >[!NOTE]
 >
->AIR許可リストの適用に使用される発行者IDは、アプリケーションの発行者がアプリケーションの[!DNL application.xml]ファイルで指定する発行者IDとは異なります。
+>AIR許可リストの適用に使用される Publisher ID は、アプリケーションの Publisher ID とは異なります。 [!DNL application.xml] ファイル。
 
-## AIR Publisher IDユーティリティのコマンドラインでの使用{#air-publisher-id-utility-command-line-usage}
+## AIR Publisher ID ユーティリティのコマンドラインの使用 {#air-publisher-id-utility-command-line-usage}
 
 ```
 java -jar AdobePublisherIDUtility.jar 
@@ -36,11 +35,10 @@ java -jar AdobePublisherIDUtility.jar
 </i class="+ topic>
 ```
 
-* 
-   * `signaturefile`*は、applicationsディレクトリ内にあるAIRアプリケーションの [!DNL signatures.xml] ファイルへのパスを指定し [!DNL META-INF] ます
+* `signaturefile` AIRアプリケーションの [!DNL signatures.xml] ファイル，アプリケーション内にある [!DNL META-INF] directory
 
-* `signingcert` は、AIRアプリケーションへの署名に使用する証明書を指定します
+* `signingcert` AIRアプリケーションの署名に使用する証明書を指定します
 
 >[!NOTE]
 >
->Androidアプリケーションの発行者IDを特定するには、`-s`オプションを使用して、Androidアプリケーションパッケージ(APK)の署名に使用する証明書を指定する必要があります。 Primetime DRMで保護されたコンテンツを再生できるAndroidアプリケーションを作成するには、Primetime DRMが必要です。
+>Android アプリケーションの発行者 ID を判断するには、 `-s` オプションを使用して、Android アプリケーションパッケージ (APK) への署名に使用する証明書を指定します。 Primetime DRM で保護されたコンテンツを再生できる Android アプリケーションを構築するには、Primetime DRM が必要です。

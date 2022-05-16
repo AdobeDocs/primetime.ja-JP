@@ -1,27 +1,26 @@
 ---
-description: 現在アクティブなコンテンツの長さを表示できます。
-title: ビデオの長さの表示
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 現在アクティブなコンテンツの期間を表示できます。
+title: ビデオのデュレーションを表示
+exl-id: a41cb291-9355-44cf-80bb-9c3cf6628b81
+source-git-commit: 85818281390b68522da2663496be025acf8f8675
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
+# ビデオのデュレーションを表示 {#display-the-duration-of-the-video}
 
-# ビデオの長さの表示{#display-the-duration-of-the-video}
-
-現在アクティブなコンテンツの長さを表示できます。
+現在アクティブなコンテンツの期間を表示できます。
 
 以下のサンプルコードを使用して、ビデオの長さの表示を実装します。
 
-    &#39;PTMediaPlayer&#39;プロパティ&#39;[seekableRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange)&#39;には、現在のシーク可能な時間範囲が含まれます。
-    
-    * VODの場合、この範囲は、広告を含むVODコンテンツ全体です。
-    *ライブ/リニアの場合、この範囲はシーク可能な時間を表します。
-    
-    APIについて詳しくは、[TVSDK 3.4 for iOS API Reference](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v3/index.html)を参照してください。
+この `PTMediaPlayer` プロパティ [seekableRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange)は、現在のシーク可能な範囲を含みます。
+
+* VOD の場合、この範囲は広告を含む VOD コンテンツ範囲全体です。
+* ライブ/リニアの場合、この範囲はシーク可能な時間を表します。
+
+API について詳しくは、 [iOS API リファレンス用 TVSDK 3.4](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v3/index.html)
 
 <!--<a id="example_A153BE3AC03F43C6BF3A156316A08CD3"></a>-->
 

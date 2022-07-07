@@ -3,10 +3,10 @@ title: Primetime リリースノート
 description: Primetime リリースノート
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
+source-git-commit: 9f218bddddeab52480bbdcd41e8f0e6fd0fab0f8
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 30%
+source-wordcount: '301'
+ht-degree: 32%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 30%
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントには、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題が記載されています。
 
-## PTAI 22.2.2 の機能強化および修正点
+## PTAI 22.6.2 の機能強化および修正点
 
-このリリースでは、広告クリエイティブ呼び出し、広告サーバー呼び出し、Avail 解決イベントなど、新しい広告パフォーマンスイベントのキャプチャに重点を置いています。 これらのイベントは、今後のリリースで、Primetime イベントの新しいグラフィカルAd Insertionインターフェイスを通じて公開されます。
+このリリースでは、広告パフォーマンスログの機能強化に重点を置いており、CRS の利用不可および追加のネットストレージオリジンに関する詳細が記載されています。
 
 ## TVSDK 3.15 Android の修正点
 

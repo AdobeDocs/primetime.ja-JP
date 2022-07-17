@@ -1,135 +1,134 @@
 ---
-title: Browser TVSDK 2.4リリースノート
-description: Browser TVSDK 2.4リリースノートでは、Browser TVSDK 2.4の新しい、サポートされている機能およびサポートされていない機能と既知の問題について説明します。
+title: ブラウザー TVSDK 2.4 リリースノート
+description: ブラウザー TVSDK 2.4 リリースノートでは、Browser TVSDK 2.4 の新機能、サポートされる機能、サポートされない機能、および既知の問題について説明します。
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: 83fdf530-5cbb-41d9-ab2a-28e117f04488
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
 source-wordcount: '6812'
 ht-degree: 0%
 
 ---
 
+# ブラウザー TVSDK 2.4 リリースノート {#browser-tvsdk-release-notes}
 
-# ブラウザーTVSDK 2.4リリースノート{#browser-tvsdk-release-notes}
+ブラウザー TVSDK 2.4 リリースノートでは、Browser TVSDK 2.4 の新機能、サポートされる機能、サポートされない機能、および既知の問題について説明します。
 
-Browser TVSDK 2.4リリースノートでは、Browser TVSDK 2.4の新しい、サポートされている機能およびサポートされていない機能と既知の問題について説明します。
+## はじめに {#introduction}
 
-## はじめに{#introduction}
+ブラウザー TVSDK は、高度なビデオ再生機能、コンテンツ保護、広告をブラウザーベースのビデオプレーヤーアプリケーションに追加できるツールキットです。
 
-ブラウザーTVSDKは、高度なビデオ再生機能、コンテンツ保護、広告をブラウザーベースのビデオプレーヤーアプリケーションに追加できるツールキットです。
+ブラウザー TVSDK 2.4 は、ブラウザーベースのビデオアプリケーションを構築するための JavaScript API を提供し、次のモードでの再生のサポートを含みます。
 
-Browser TVSDK 2.4は、ブラウザーベースのビデオアプリケーションを構築するためのJavaScript APIを提供し、次のモードでの再生のサポートを含みます。
-
-* HTML5のみ
-* 自動フラッシュフォールバックを伴うHTML5
+* HTML5 のみ
+* HTML5 （自動フラッシュフォールバックを使用）
 * Flashが常に
 
 このリリースには、次の情報が含まれています。
 
-・ [ブラウザーTVSDK APIドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)。
+・ [ブラウザー TVSDK API ドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
-・ [ブラウザーTVSDKプログラミングガイド](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_browser-tvsdk.pdf)
+・ [ブラウザー TVSDK プログラミングガイド](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_browser-tvsdk.pdf).
 
-・ [1.4 DHLS用のTVSDK for 1.4からブラウザーTVSDK 2.4への移行ガイド](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html)
+・ [1.4 DHLS 用 TVSDK からブラウザー TVSDK 2.4 への移行ガイド](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
 
-・ [ブラウザーTVSDK 2.4.6からバージョン2.4.7](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-246-to-247-for-javascript.html)に変換しています。
+・ [ブラウザー TVSDK 2.4.6 からバージョン 2.4.7 への変換](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-246-to-247-for-javascript.html).
 
 ・ビルドに含まれる参照実装。
 
 >[!NOTE]
 >
->*このリリースのセキュリティに関する考慮事項のリストについては、セキュリティに関する考慮事項を参照してください。
+>*このリリースのセキュリティに関する考慮事項の完全なリストについては、セキュリティに関する考慮事項を参照してください。
 
-## 新機能とサポートされる機能{#what-s-new-and-supported-features}
+## 新機能とサポートされる機能 {#what-s-new-and-supported-features}
 
-このリリースのBrowser TVSDKは、ビデオアプリケーションを強化するために使用できる新機能を提供します。
+このリリースの Browser TVSDK は、ビデオアプリケーションを拡張するために使用できる新機能を提供します。
 
-**2.4.12アップデートの新機能（ビルド204）**
+**2.4.12 の新機能更新（ビルド 204）**
 
-以下の追加機能は、Browser TVSDK 2.4.12 Update(Build 204)の一部として利用できます。
+Browser TVSDK 2.4.12 の更新（ビルド 204）の一部として、次の追加が使用できます。
 
-* 再生がミュートされているときにiOSで自動再生が可能になるように、AdobePSDK.MediaPlayerのボリュームAPIの実装が変更されました。
+* AdobePSDK.MediaPlayer のボリューム API の実装が変更され、再生がミュートされたときにiOSで自動再生できるようになりました。
 
-・新しいAPI `auditudeSettings.ignoreVPAIDAds`が追加され、Auditudeサーバーから受信したVPAID広告を無視できるようになりました。 このAPIはFlashのフォールバックでは動作しません。
+・新しい API、 `auditudeSettings.ignoreVPAIDAds`は、Auditude サーバーから受信した VPAID 広告を無視できるようにするために追加されます。 この API は、Flashフォールバックでは機能しません。
 
-**バージョン2.4.11**
+**バージョン 2.4.11**
 
-Browser TVSDK 2.4.11リリースの一部として、次の機能強化および追加が行われました。
+Browser TVSDK 2.4.11 リリースの一部として、次の機能強化および追加が可能です。
 
-・ HLSライブセグメントフェイルオーバーは、MSEとFlashのフォールバックモードでサポートされています。
+・ HLS ライブセグメントフェールオーバーは、MSE およびFlashのフォールバックモードでサポートされます。
 
-・ `AuditudeSettings.creativeRepackagingDomain` APIもMSEでサポートされるようになりました。 以前は、Flashのフォールバックモードでのみサポートされていました。
+・のサポート `AuditudeSettings.creativeRepackagingDomain` MSE でも API を利用できるようになりました。 以前は、フォールバックモードでのみFlashされていました。
 
-・このリリースには、お客様の重要な問題に対する修正が含まれています。 *リストを修正した問題*&#x200B;を参照してください。
+・このリリースには、お客様の重大な問題に対する修正が含まれています。 詳しくは、 *修正された問題* リスト。
 
-**バージョン2.4.10**
+**バージョン 2.4.10**
 
-Browser TVSDK 2.4.10リリースの一部として、次の機能強化および追加が行われました。
+Browser TVSDK 2.4.10 リリースの一部として、次の機能強化および追加が可能です。
 
-・ TVSDKは、ログを有効または無効にするenableLogging()を提供します。 使用方法については、[APIドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)を参照してください。
+・ TVSDK は、ログを有効または無効にする enableLogging() を提供します。 詳しくは、 [API ドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)を参照してください。
 
-・ TVSDKは、Adobe Analyticsを使用している場合、デフォルトチャプターをサポートしなくなりました。 アプリケーションを使用して、チャプターを定義および管理します。
+・ TVSDK は、Adobe Analyticsを使用する際に、デフォルトのチャプターをサポートしなくなりました。 アプリケーションを使用してチャプターを定義および管理します。
 
-・このリリースには、お客様の重要な問題に対する修正が含まれています。 「*修正された問題*aリスト」を参照してください。
+・このリリースには、お客様の重大な問題に対する修正が含まれています。 リストの「修正された問題」を参照してください。
 
-**バージョン2.4.9**
+**バージョン 2.4.9**
 
-Browser TVSDK 2.4.9リリースの一部として、次の機能強化および追加が行われました。
+Browser TVSDK 2.4.9 リリースの一部として、次の機能強化および追加が可能です。
 
-・時間の不連続性があるが、不連続マーカーがないHLS VODおよびLiveストリームがサポートされています。
+・時間不連続のある HLS VOD と Live ストリーム（不連続マーカーなし）がサポートされています。
 
-・ ID3 v2.4.0フレームは、HLS VODおよびライブストリーム用のSafariビデオタグでサポートされています。
+・ ID3 v2.4.0 フレームは、HLS VOD およびライブストリーム用の Safari ビデオタグでサポートされています。
 
-・セキュア広告読み込みの実装は、API設定に基づいてセキュアなHTTPにアップグレードされる広告サーバー呼び出しを保証します。 詳しくは、AdobePSDK.AdvertisingMetadataおよびAdobePSDK.ForceHttpsAdConfigurationクラスを参照してください。 この機能は、Flashのフォールバックモードではサポートされていません。
+・セキュアな広告の読み込み実装では、広告サーバー呼び出しが API 設定に基づいてセキュアな HTTP にアップグレードされます。 詳しくは、 AdobePSDK.AdvertisingMetadata クラスと AdobePSDK.ForceHttpsAdConfiguration クラスを参照してください。 この機能は、Flashフォールバックモードではサポートされていません。
 
-・ VAST 3.0応答に関連付けられた広告ID情報と拡張情報は、TVSDKがアプリケーションで使用できるようになり、広告の測定にMort統合を実装する際に使用できます。 詳しくは、AdobePSDK.NetworkAdInfo APIを参照してください。 これは、Flashのフォールバックモードではサポートされていません。
+・ VAST 3.0 応答に関連する広告 ID 情報と拡張情報が、 TVSDK によってアプリケーションで使用できるようになり、広告の測定に Mort 統合を実装するために使用できます。 詳しくは、 AdobePSDK.NetworkAdInfo API を参照してください。 これは、Flashフォールバックモードではサポートされていません。
 
-・ AdobePSDK.ForceHttpsConfigurationクラスは使用できなくなりました。 それは次の方法で成功する
+・ AdobePSDK.ForceHttpsConfiguration クラスは使用できなくなりました。 これは次の方法で成功します。
 
-AdobePSDK.ForceHttpsAdConfigurationクラス。
+AdobePSDK.ForceHttpsAdConfiguration クラス。
 
-・新しいAPI、AdobePSDK.optimizeFlashCallsを使用して、呼び出しを最適化し、FlashのフォールバックモードでのHLS再生エクスペリエンスを改善できるようになりました。 これはデフォルトで無効です。
+・新しい API AdobePSDK.optimizeFlashCalls を使用して呼び出しを最適化し、Flashのフォールバックモードでの HLS 再生エクスペリエンスを改善できるようになりました。 これはデフォルトでは無効になっています。
 
-**2.4.8アップデートの新機能（ビルド6002）**
+**2.4.8 の新機能の更新（ビルド 6002）**
 
-このアップデートには、お客様の重要な問題に対する修正が含まれています。 リストについては、*修正された問題*&#x200B;を参照してください。
+この更新には、お客様の重大な問題に対する修正が含まれています。 詳しくは、 *修正された問題*（リスト）。
 
-**バージョン2.4.8**
+**バージョン 2.4.8**
 
-Browser TVSDK 2.4.8リリースの一部として、次の機能強化および追加が行われました。
+Browser TVSDK 2.4.8 リリースの一部として、次の機能強化および追加が可能です。
 
-・ SDKはChrome EMEに準拠するようになり、Chrome v58以降のベストプラクティスに関する変更が加えられました。 詳しくは、[https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf](https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf)**を参照してください。
+・ SDK は現在 Chrome EME に準拠しており、Chrome v58 以降で利用可能なベストプラクティスの変更に対応しています。 詳しくは、 [https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf](https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf)**
 
-・ UIフレームワークで、Flash、広告のみ、ターゲット情報のワークフローでHLS Access DRMがサポートされるようになりました。
+・ UI フレームワークは、Flash、広告のみ、ターゲティング情報ワークフローで HLS Access DRM をサポートするようになりました。
 
-・ setDRMAuthenticateData APIがUIフレームワークに追加されます。 AdobeアクセスDRMで保護されたストリームを再生するには、このAPIを呼び出します。 または、drmAuthenticateData属性をプレイヤーで指定できます。 詳しくは、[AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)を参照してください。
+・ setDRMAuthenticateData API が UI フレームワークに追加されます。 AdobeAccess DRM で保護されたストリームを再生するには、この API を呼び出します。 または、 drmAuthenticateData 属性をプレーヤーで指定できます。 詳しくは、 [AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)」を参照してください。
 
-**バージョン2.4.7**
+**バージョン 2.4.7**
 
-バージョン2.4.7の新機能：
+バージョン 2.4.7 の新機能は次のとおりです。
 
-・ UIフレームワークにUIコンフィギュレータを追加
+・ UI フレームワークに UI コンフィギュレータを追加
 
-プレイヤーは、次のいずれかの方法で設定できます。
+プレーヤーは、次のいずれかの方法で設定できます。
 
-・ JSONオブジェクトの使用
+・ JSON オブジェクトの使用
 
-・ APIの使用
+・ API の使用
 
-JSONオブジェクトの生成に役立つように、Browser TVSDKは、**UI Configurator **toolを提供します。
+JSON オブジェクトの生成に役立つよう、Browser TVSDK は、**UI Configurator **ツールを提供します。
 
-このツールでは、様々な設定を選択できます。「**テスト設定**」をクリックして設定を確認し、「**設定をダウンロード**」をクリックして設定をダウンロードします。 ファイルをダウンロードした後、このファイルのコンテンツをJSONオブジェクトとしてptp.videoPlayer APIに渡すことができます。
+このツールでは、様々な設定を選択し、「**設定をテスト**」をクリックして設定を確認し、「**設定をダウンロード**」をクリックして設定をダウンロードできます。 ファイルをダウンロードした後、このファイルの内容を JSON オブジェクトとして、ptp.videoPlayer API に渡すことができます。
 
-・ MediaPlayerItemConfig APIをUIフレームワークに追加
+・ UI フレームワークへの MediaPlayerItemConfig API の追加
 
-advertisingMetadata、advertisingFactory、adSignalingMode、networkConfiguration、customRangeMetadata、useHardwareDecoder、subscribeTags、adTags、thumbnailScrubber、billingMetricsConfigurationなど、様々な機能をMediaPlayerItemConfigを使用して設定できます。 詳しくは、[ブラウザーTVSDK API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* * [ドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)のAdobePSDK.MediaPlayerItemConfigドキュメントを参照してください。
+advertisingMetadata、advertisingFactory、adSignalingMode、networkConfiguration、customRangeMetadata、useHardwareDecoder、subscribeTags、adTags、thumbnailScrubber、billingMetricsConfiguration などの様々な機能は、MediaPlayerPPe を使用して設定できます。 詳しくは、 [ブラウザー TVSDK API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* * [ドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
-UIフレームワークでは、ネットワーク設定をプレイヤー設定に渡す方法が変更されました。
+UI フレームワークでは、プレーヤー設定を通じてネットワーク設定を渡す方法が変更されています。
 
-**バージョン2.4.6**
+**バージョン 2.4.6**
 
 `var player = ptp.videoPlayer(‘#videoHolder', {`
 
@@ -141,7 +140,7 @@ UIフレームワークでは、ネットワーク設定をプレイヤー設定
 
 `};`
 
-**バージョン2.4.7**
+**バージョン 2.4.7**
 
 `var player = ptp.videoPlayer(‘#videoHolder', {`
 
@@ -157,158 +156,158 @@ UIフレームワークでは、ネットワーク設定をプレイヤー設定
 
 `};`
 
-* UIフレームワークでのDRMおよびAnalyticsワークフローのサポート
+* UI フレームワークでの DRM および Analytics ワークフローのサポート
 
-DRM設定とAnalytics追跡は、UIフレームワークを通じて有効にできます。
+DRM 設定と Analytics のトラッキングは、UI フレームワークを通じて有効にできます。
 
-* `AdobePSDK.embedSWFinFullScreenDiv` APIの追加
+* の追加 `AdobePSDK.embedSWFinFullScreenDiv` API
 
-この新しいAPIは、プレーヤーアプリケーションがFlashFallback.swfファイルを埋め込むことのできるdivを選択する柔軟性を提供します。
+この新しい API は、プレーヤーアプリケーションが FlashFallback.swf ファイルを埋め込むことのできる div を柔軟に選択できるようにします。
 
-* TVSDKバージョン関連情報の`getVersion`APIを`AdobePSDK.MediaPlayer`クラスから`AdobePSDK.Version`クラスに置き換えました。 詳しくは、`AdobePSDK.Version` API [ここ](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html)を参照してください。
+* 置換済み `getVersion`からの API `AdobePSDK.MediaPlayer` クラス `AdobePSDK.Version` TVSDK バージョン関連情報用のクラス。 詳しくは、 `AdobePSDK.Version` API [ここ](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html).
 
-**バージョン2.4.6**
+**バージョン 2.4.6**
 
-バージョン2.4.6の新機能は次のとおりです。
+バージョン 2.4.6 の新機能は次のとおりです。
 
-* **Browserifyのサポート**
+* **サポートを参照**
 
-Browserifyを使用すると、ブラウザーでnode.jsスタイルモジュールを使用できます。 依存関係を定義し、すべてを1つのJavaScriptファイルにバンドルできます。
+Browserify を使用すると、ブラウザーで node.js スタイルモジュールを使用できます。 依存関係を定義し、バンドルを 1 つの JavaScript ファイルに参照できます。
 
 * **請求**
 
-課金の支援を受けて、ブラウザーTVSDKは、Primetimeのお客様に課金するためのプレイヤー使用状況指標を収集できます。
+課金の助けを借りて、ブラウザー TVSDK は、プレーヤー使用指標を収集し、Primetime の顧客に請求することができます。
 
 >[!NOTE]
 >
->Enum PSDKErrorCodeの非推奨の列挙MediaPlayer.イベントおよび非推奨の定数は、バージョン2.4.6で削除されました。詳しくは、[ブラウザーTVSDK 2.4.5からバージョン2.4.6](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-245-to-246-for-javascript.html)への変換を参照してください。
+>Enum PSDKErrorCode の非推奨の enum MediaPlayer.Events と非推奨の定数は、バージョン 2.4.6 で削除されました。詳しくは、 [ブラウザー TVSDK 2.4.5 からバージョン 2.4.6 への変換](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-245-to-246-for-javascript.html).
 
-**バージョン2.4.5**
+**バージョン 2.4.5**
 
-バージョン2.4.5の新機能：
+バージョン 2.4.5 の新機能は次のとおりです。
 
-* **フルイベントの再生と広告**
+* **完全なイベント再生と広告**
 
-   HLS完全なイベント再生(FER)ストリームで、広告の解決と広告の動作がサポートされるようになりました。 このサポートを有効にするには、`MediaPlayerItemConfig`オブジェクトの作成時に広告シグナリングモードを`MANIFEST_CUES`に設定します。
+   HLS フルイベント再生 (FER) ストリームで、広告の解像度と広告の動作がサポートされるようになりました。 このサポートを有効にするには、広告シグナリングモードをに設定します。 `MANIFEST_CUES` 作成時 `MediaPlayerItemConfig` オブジェクト。
 
-* **MediaplayerView ScalePolicyのサポート**
+* **MediaplayerView ScalePolicy のサポート**
 
-   アプリケーション開発者は、MediaplayerView scalePolicyプロパティを使用して、表示に対して異なるscalePolicyを指定できるようになりました。
+   アプリケーション開発者は、 MediaplayerView scalePolicy プロパティを使用して、ビューに別の scalePolicy を指定できるようになりました。
 
 * **アナモルフィックコンテンツのサポート**
 
-   MSEおよびFlash再生を使用する場合に、アナモルフィックコンテンツの再生がサポートされるようになりました。
+   MSE とFlash再生を使用した場合、アナモフィックコンテンツの再生がサポートされるようになりました。
 
 * **選択的適用`withCredentials`**
 
-`withCredentials`をtrueに設定した場合、`Access-Control-Allow-Origin`ヘッダーをワイルドカードに設定することはできません。 サーバーの応答に応じて、ブラウザーTVSDKは選択的に`withCredentials`属性を設定します。 このサポートについて詳しくは、[ブラウザーTVSDK APIドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)を参照してください。
+条件 `withCredentials` が true に設定されている場合、 `Access-Control-Allow-Origin` ヘッダーをワイルドカードに設定することはできません。 サーバーの応答に応じて、Browser TVSDK は、 `withCredentials` 属性。 このサポートの詳細については、 [ブラウザー TVSDK API ドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
-**バージョン2.4.4**
+**バージョン 2.4.4**
 
-バージョン2.4.4で追加された新機能：
+バージョン 2.4.4 では、次の新機能が追加されました。
 
-* **Chromecastサンプルアプリケーション**
+* **Chromecast サンプルアプリ**
 
-このリリースでは、DASH VODストリームおよびDASH Widevineストリームの再生とクライアント側の広告挿入を示す、送信者アプリケーションと受信者アプリケーションのサポートが提供されます。
+このリリースでは、クライアントサイド広告を挿入した DASH VOD ストリームと DASH Widevine ストリームの再生を示す、送信者と受信者のアプリがサポートされます。
 
 * **高度なフェイルオーバーのサポート**
 
-このリリースでは、HLS VODストリームの高度なフェイルオーバーの使用例（セグメントおよびサーバーのフェイルオーバー）がサポートされています。
+このリリースでは、HLS VOD ストリームの高度なフェイルオーバー使用例（セグメントおよびサーバーのフェイルオーバー）をサポートしています。
 
-**バージョン2.4.3**
+**バージョン 2.4.3**
 
-バージョン2.4.3で追加された新機能：
+バージョン 2.4.3 では、次の新機能が追加されました。
 
-* **DASH VODのカスタムタグ**
+* **DASH VOD のカスタムタグ**
 
-   インラインカスタムタグ(イベント)は、TimedMetadataオブジェクトとしてサブスクライブし、受け取ることができます。
+   インラインカスタムタグ (Events) は、TimedMetadata オブジェクトとしてサブスクライブし、受け取ることができます。
 
-* **拡張子のないストリームの再生**
+* **拡張機能のないストリームの再生**
 
-   拡張子のないHLSストリームとDASHストリームがサポートされるようになりました。 マニフェストファイルの場合、リソースの読み込み時にresourceTypeを指定する必要があります。 セグメントおよびVTTファイルの場合、Content-Type応答ヘッダーを使用してコンテンツタイプが決定されます。
+   拡張子のない HLS および DASH ストリームがサポートされるようになりました。 マニフェストファイルの場合、リソースの読み込み時に resourceType を指定する必要があります。 セグメントおよび VTT ファイルの場合、 Content-Type 応答ヘッダーを使用してコンテンツタイプが決定されます。
 
-**バージョン2.4.2**
+**バージョン 2.4.2**
 
-バージョン2.4.2で追加された新機能：
+バージョン 2.4.2 で追加された新機能は次のとおりです。
 
-* **APIパリティ**
+* **API パリティ**
 
-APIパリティの完全なリストについては、[TVSDK for 1.4 DHLS to Browser TVSDK 2.4 Migration Guide](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html)を参照してください。
+API パリティの完全なリストについては、 [1.4 DHLS 用 TVSDK からブラウザー TVSDK 2.4 への移行ガイド](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
 
-* **サンプル — AESのサポート**
+* **Sample-AES のサポート**
 
-   このリリースでは、MSEでのSample-AES暗号化コンテンツ再生とFlashのフォールバックのサポートが追加されます。 Google Chromeで安全な接触チャネルでAESコンテンツをホストする必要はなくなりました。
+   このリリースでは、MSE での Sample-AES 暗号化コンテンツ再生およびFlashフォールバックのサポートが追加されました。 Google Chrome 上で安全なオリジンで AES コンテンツをホストするための要件は削除されました。
 
-* **AACコンテナのサポート**
+* **AAC コンテナのサポート**
 
-   .aac拡張子が付いたファイルの再生がサポートされるようになりました。 オーディオ専用ストリームまたは代替オーディオを使用できます。
+   拡張子が.aac のファイルの再生がサポートされるようになりました。 これは、音声のみのストリームまたは代替オーディオです。
 
    >[!NOTE]
    >
-   >AC3および拡張AC3コーデックは、まだサポートされていません。
+   >AC3 および拡張 AC3 コーデックは、まだサポートされていません。
 
 * **トークン化されたストリーム再生**
 
-コンテンツ配信ネットワーク(CDN)経由で配信されるHLSストリームは、マニフェストおよびセグメントリクエストで認証トークンを使用して検証できる場合があります。また、これらのトークンはURLパラメーターまたはcookieヘッダーとして提供できます。 このようなストリームの再生がサポートされるようになりました。
+コンテンツ配信ネットワーク (CDN) を通じて配信される HLS ストリームでは、マニフェストとセグメントリクエストで認証トークンを使用して検証をおこなうことができます。また、これらのトークンは URL パラメーターとして、または cookie ヘッダーとして提供できます。 このようなストリームの再生がサポートされるようになりました。
 
-**バージョン2.4.1**
+**バージョン 2.4.1**
 
-バージョン2.4.1では、次の機能が新たに追加されました。
+バージョン 2.4.1 では、次の新機能が追加されました。
 
-* **UIフレームワーク**
+* **UI フレームワーク**
 
-このフレームワークは、再生/一時停止やボリュームなどの基本的なコントロールを含め、スクラブバーの状態やクローズドキャプションの設定などの要素を簡単に追加または削除するためのAPIで構成され、JavaScriptベースのビデオプレーヤーアプリケーションのUI開発を高速化します。 コントロールに関連付けられた動作を指定したり、カスタムコントロールを作成したり、プレイヤーUIにスキンを適用したりできます。 これはすべてフレームワークを通じて行われ、DOM構造を直接操作する必要はありません。
+このフレームワークは、再生/一時停止や音量などの基本的なコントロールを含め、スクラブバーの状態やクローズドキャプション設定などの要素を簡単に追加または削除するための API で構成されています。 コントロールに関連付けられた動作を指定し、カスタムコントロールを作成して、プレーヤー UI をスキンにすることができます。 これらはすべてフレームワークを通じておこなわれ、DOM 構造を直接操作する必要はありません。
 
-* **ライブストリームのHLS再生の強化**
+* **ライブストリームの HLS 再生の強化**
 
-このリリースでは、広告挿入による不連続性をサポートしています。 スムーズな再生を実現するために、EXT-プログラム-DATE-TIMEタグの後にEXT-MEDIA-SEQUENCEタグを使用して、アダプティブビットレートプロファイル間で同期します。
+このリリースでは、広告挿入による継続性の低下がサポートされます。 アダプティブビットレートプロファイル間で同期を行い、再生をスムーズにおこなうために、 EXT-PROGRAM-DATE-TIME タグと EXT-MEDIA-SEQUENCE タグを使用します。
 
-* **VPAID 2.0のサポート**
+* **VPAID 2.0 のサポート**
 
-ビデオプレーヤー広告配信インターフェイス定義(VPAID)バージョン2.0は、ユーザーにリッチメディアの操作性を提供し、発行者は、ターゲット広告の改善、広告インプレッションの追跡、ビデオコンテンツの収益化を実現します。 このリリースでは、ビデオオンデマンド(VOD)コンテンツ用のリニアJavaScript VPAID広告がサポートされています。
+ビデオプレーヤー広告配信インターフェイス定義 (VPAID) バージョン 2.0 は、ユーザーにリッチメディアエクスペリエンスを提供し、発行者が広告のターゲット設定、広告インプレッションの追跡、ビデオコンテンツの収益化を改善できます。 このリリースでは、ビデオオンデマンド (VOD) コンテンツ用のリニア JavaScript VPAID 広告がサポートされています。
 
-* **カスタムHLSタグ**
+* **カスタム HLS タグ**
 
-メディアストリームは、プレイリスト/マニフェストファイル内のタグの形式で追加のメタデータを伝達できます。 ブラウザーTVSDKを使用すると、追加のタグを指定およびサブスクライブして、それらのタグがマニフェストに出現したら通知を受けることができます。
+メディアストリームは、プレイリスト/マニフェストファイル内のタグの形式で追加のメタデータを伝達できます。 ブラウザー TVSDK を使用すると、追加のタグを指定してサブスクライブし、それらのタグがマニフェストに表示されたら通知を受け取ることができます。
 
-* **プレイヤータイムラインに表示される広告マーカー**
+* **プレーヤータイムラインに表示される広告マーカー**
 
-このリリースでは、VODコンテンツとLiveコンテンツの両方のプレーヤータイムラインでの広告マーカーの表示がサポートされています。 この動作は、参照プレーヤーで確認できます。
+このリリースでは、VOD コンテンツと Live コンテンツのプレーヤータイムラインへの広告マーカーの表示がサポートされています。 この動作は、リファレンスプレーヤーで確認できます。
 
-**2.4でサポート**
+**2.4 でサポート**
 
-バージョン2.4では、次の機能が使用できます。
+バージョン 2.4 では、次の機能が使用できました。
 
-* **MP3オーディオ再生**
+* **MP3 オーディオ再生**
 
-   このリリースでは、Media Source Extensions(MSE)が設定されたブラウザーとSafariビデオタグでのMP3オーディオ再生がサポートされています。
+   このリリースでは、メディアソース拡張機能 (MSE) と Safari ビデオタグが設定されたブラウザーでの MP3 オーディオ再生がサポートされます。
 
-* **MP4ビデオ再生**
+* **MP4 ビデオ再生**
 
    次の機能がサポートされています。
 
    * 単一ストリーム再生
-   * 広告動作とトラッキングを含むプリロールおよびポストロールMP4広告
-   * 広告動作と追跡を含むプリロールおよびポストロールHLS広告
-   * 広告動作と追跡を含むプリロールおよびポストロールDASH広告
+   * 広告動作と追跡を含むプリロールおよびポストロール MP4 広告
+   * 広告動作と追跡を含むプリロールおよびポストロール HLS 広告
+   * 広告動作と追跡機能を備えたプリロールおよびポストロール DASH 広告
 
-## サポートされるプラットフォーム{#supported-platforms}
+## サポートされるプラットフォーム {#supported-platforms}
 
-ブラウザーTVSDKには、実行する必要があるプラットフォームとソフトウェアのレベルに固有の要件があります。 次のプラットフォームとソフトウェアレベルがサポートされています。
+ブラウザー TVSDK には、実行する必要のあるプラットフォームとソフトウェアのレベルに固有の要件があります。 次のプラットフォームとソフトウェアレベルがサポートされています。
 
-### デスクトップ構成{#desktop-configurations}
+### デスクトップ設定 {#desktop-configurations}
 
 * Microsoft Windows 7:
 
-   * Internet Explorer 11+
-   * Chrome 33+
-   * Firefox 38+
+   * Internet Explorer 11 以降
+   * Chrome 33 以降
+   * Firefox 38 以降
 
 * Microsoft Windows 8.1
 
-   * Internet Explorer 11+
-   * Chrome 33+
-   * Firefox 38+
+   * Internet Explorer 11 以降
+   * Chrome 33 以降
+   * Firefox 38 以降
 
 * Microsoft Windows 10
 
@@ -316,50 +315,50 @@ APIパリティの完全なリストについては、[TVSDK for 1.4 DHLS to Bro
 
 * Apple OS X
 
-   * Safari 9+
-   * Chrome 33+
-   * Firefox 38+
+   * Safari 9 以降
+   * Chrome 33 以降
+   * Firefox 38 以降
 
-### モバイルWeb設定{#mobile-web-configurations}
+### モバイル Web 設定 {#mobile-web-configurations}
 
 * Android 4.4
 
    * ネイティブブラウザー
-   * Chrome 33+
+   * Chrome 33 以降
 
 * Android 5.0
 
    * ネイティブブラウザー
-   * Chrome 33+
+   * Chrome 33 以降
 
 * Android 6.0
 
-   * ・ Chrome 33+
+   * ・ Chrome 33 以降
 
 * Apple iOS 9
 
-   * Safari 9+
-   * Chrome 33+
+   * Safari 9 以降
+   * Chrome 33 以降
 
 * Apple iOS 10
 
-   * Safari 9+
-   * Chrome 33+
+   * Safari 9 以降
+   * Chrome 33 以降
 
-**Google Chromecast(第2世代、（DASH再生のみ）**
+**Google Chromecast( 第 2 世代；（DASH 再生のみ）**
 
 <table> 
  <tbody> 
   <tr> 
    <td><p><strong>技術</strong> </p> </td> 
-   <td><p><strong>ブラウザーTVSDKビデオタグ</strong><sup>1</sup></p> </td> 
-   <td><p><strong>ブラウザーTVSDK MSE</strong></p> </td> 
+   <td><p><strong>Browser TVSDK ビデオタグ</strong><sup>1</sup></p> </td> 
+   <td><p><strong>Browser TVSDK MSE</strong></p> </td> 
    <td><p><strong>Flash</strong></p> </td> 
    <td><p><strong>デフォルトの技術</strong></p> </td> 
   </tr> 
   <tr> 
    <td><p>iOS</p> </td> 
-   <td><p>MP4とHLS</p> </td> 
+   <td><p>MP4 および HLS</p> </td> 
    <td><p>-</p> </td> 
    <td><p>-</p> </td> 
    <td><p>ビデオタグ</p> </td> 
@@ -367,109 +366,109 @@ APIパリティの完全なリストについては、[TVSDK for 1.4 DHLS to Bro
   <tr> 
    <td><p>Android</p> </td> 
    <td><p>MP4</p> </td> 
-   <td><p>HLSとDASH</p> </td> 
+   <td><p>HLS および DASH</p> </td> 
    <td><p>-</p> </td> 
    <td><p>MSE</p> </td> 
   </tr> 
   <tr> 
    <td><p>Apple Safari 8</p> </td> 
-   <td><p>MP4とHLS</p> </td> 
+   <td><p>MP4 および HLS</p> </td> 
    <td><p>-</p> </td> 
-   <td><p>MP4とHLS</p> </td> 
+   <td><p>MP4 および HLS</p> </td> 
    <td><p>ビデオタグ</p> </td> 
   </tr> 
   <tr> 
    <td><p>Google Chrome</p> </td> 
    <td><p>MP4</p> </td> 
-   <td><p>HLSとDASH</p> </td> 
-   <td><p>MP4とHLS</p> </td> 
+   <td><p>HLS および DASH</p> </td> 
+   <td><p>MP4 および HLS</p> </td> 
    <td><p>MSE</p> </td> 
   </tr> 
   <tr> 
    <td><p>Mozilla Firefox</p> </td> 
    <td><p>MP4</p> </td> 
-   <td><p>HLSとDASH</p> </td> 
-   <td><p>MP4とHLS</p> </td> 
+   <td><p>HLS および DASH</p> </td> 
+   <td><p>MP4 および HLS</p> </td> 
    <td><p>MSE<sup>2</sup></p> </td> 
   </tr> 
   <tr> 
    <td><p>Internet Explorer 11</p> <p>(Windows 7)</p> </td> 
    <td><p>MP4</p> </td> 
    <td><p>-</p> </td> 
-   <td><p>MP4とHLS</p> </td> 
+   <td><p>MP4 および HLS</p> </td> 
    <td><p>Flash</p> </td> 
   </tr> 
   <tr> 
    <td><p>Internet Explorer 11</p> <p>(Windows 8.1)</p> </td> 
    <td><p>MP4</p> </td> 
    <td><p>HLS、DASH</p> </td> 
-   <td><p>MP4とHLS</p> </td> 
+   <td><p>MP4 および HLS</p> </td> 
    <td><p>MSE</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## 機能マトリックス{#feature-matrix}
+## 機能マトリックス {#feature-matrix}
 
-このリリースでサポートされる機能とサポートされない機能のリストを次に示します。
+このリリースでサポートされる機能とサポートされない機能の一覧を次に示します。
 
-* *MP3オーディオ機能 — コア再生*
-* *MP4ビデオ機能 — コア再生*
-* *MP4ビデオ機能 — コアAd Insertion*
-
->[!NOTE]
->
->*以下の機能マトリックスの表で「Y」は、この機能が現在のリリースでサポートされていることを意味します。*
-
-### MP3オーディオ機能{#mp-audio-features}
-
-**表1:コア再生{#table-core-playback}**
-
-| カテゴリ | コンテンツタイプ | 機能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari、iOS Safari |
-|--- |--- |--- |--- |--- |--- |
-| 再生 | MP3 VOD | 一般再生（再生、一時停止、シーク） | 非対応 | Y | Y |
-
-1ブラウザーTVSDKのビデオタグは、ストリーミングとDRMをサポートしていません。 コーデックとコンテナのサポートは、すべてのブラウザで同じではありません。
-
-2 Firefoxのデフォルトでは、バージョン41以前のFlash Playerが使用されます。
-
-### MP4オーディオ機能{#mp-audio-features-1}
-
-**表2:コア再生**
-
-| カテゴリ | コンテンツタイプ | 機能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari、iOS Safari |
-|--- |--- |--- |--- |--- |--- |
-| 再生 | MP4 VOD | 一般再生（再生、一時停止、シーク） | 非対応 | Y | Y |
-
-**表3:コアAd Insertion**
-
-| カテゴリ | コンテンツタイプ | 機能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari、iOS Safari |
-|--- |--- |--- |--- |--- |--- |
-| Ad Insertion | MP4 VOD | プリロール(MP4) | 非対応 | Y | Y |
-| Ad Insertion | MP4 VOD | ポストロール(MP4) | 非対応 | Y | Y |
-
-HLSまたはDASH機能のサポートについて詳しくは、以下を参照してください。
-
-## HLS機能マトリクス{#hls-feature-matrix}
-
-Browser TVSDKのHLS機能に関する機能一覧を示します。
-
-* *HLSコア再生*
-* *HLS高度な再生機能*
-* *HLSコンテンツ保護機能*
-* *HLSコア広告挿入機能*
-* *HLSの高度な広告挿入機能*
-* *HLS統合*
+* *MP3 オーディオ機能 — コア再生*
+* *MP4 ビデオ機能 — コア再生*
+* *MP4 ビデオ機能 — コアAd Insertion*
 
 >[!NOTE]
 >
->*以下の機能マトリックスの表で「Y」は、この機能が現在のリリースでサポートされていることを意味します。*
+>*以下の機能マトリックステーブルでは、「Y」は、この機能が現在のリリースでサポートされていることを意味します。*
 
-### HLS機能{#hls-features}
+### MP3 オーディオ機能 {#mp-audio-features}
+
+**表 1:コア再生{#table-core-playback}**
+
+| カテゴリ | コンテンツタイプ | 機能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari、iOS Safari |
+|--- |--- |--- |--- |--- |--- |
+| 再生 | MP3 VOD | 一般再生（再生、一時停止、シーク） | サポート対象外 | Y | Y |
+
+1 Browser TVSDK Video タグは、ストリーミングと DRM をサポートしていません。 コーデックとコンテナのサポートは、すべてのブラウザーで同じではありません。
+
+2 Firefox のデフォルトは、Flash Player41 以前のバージョンです。
+
+### MP4 オーディオ機能 {#mp-audio-features-1}
+
+**表 2:コア再生**
+
+| カテゴリ | コンテンツタイプ | 機能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari、iOS Safari |
+|--- |--- |--- |--- |--- |--- |
+| 再生 | MP4 VOD | 一般再生（再生、一時停止、シーク） | サポート対象外 | Y | Y |
+
+**表 3:コアAd Insertion**
+
+| カテゴリ | コンテンツタイプ | 機能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari、iOS Safari |
+|--- |--- |--- |--- |--- |--- |
+| Ad Insertion | MP4 VOD | プリロール (MP4) | サポート対象外 | Y | Y |
+| Ad Insertion | MP4 VOD | ポストロール (MP4) | サポート対象外 | Y | Y |
+
+HLS または DASH の機能のサポートの詳細については、以下を参照してください。
+
+## HLS 機能マトリックス {#hls-feature-matrix}
+
+Browser TVSDK の HLS 機能の機能一覧を示します。
+
+* *HLS コア再生*
+* *HLS の高度な再生機能*
+* *HLS コンテンツ保護機能*
+* *HLS コア広告挿入機能*
+* *HLS の高度な広告挿入機能*
+* *HLS 統合*
+
+>[!NOTE]
+>
+>*以下の機能マトリックステーブルでは、「Y」は、この機能が現在のリリースでサポートされていることを意味します。*
+
+### HLS 機能 {#hls-features}
 
 次の機能がサポートされています。
 
-**表4:HLSコア再生**
+**表 4:HLS コア再生**
 
 <table> 
  <tbody> 
@@ -492,7 +491,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>FER VOD</p> </td> 
-   <td><p>一般再生（再生、一時停止、シーク）</p> </td> 
+   <td><p>一般的な再生（再生、一時停止、シーク）</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
@@ -500,7 +499,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>可変ビットレート</p> </td> 
+   <td><p>適応ビットレート</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
@@ -518,8 +517,8 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
    <td><p>VOD + Live</p> </td> 
    <td><p>WebVTT</p> </td> 
    <td><p>Y</p> </td> 
-   <td><p>VODのみ</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>VOD のみ</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
@@ -540,15 +539,15 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>QoSおよびプレイヤー通知</p> </td> 
+   <td><p>QoS とプレーヤーの通知</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
-   <td><p>限定的なQoSサポート</p> </td> 
+   <td><p>QoS の制限のサポート</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>cookieヘッダーのサポート</p> </td> 
+   <td><p>cookie ヘッダーのサポート</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>プラットフォームの制限</p> </td> 
@@ -556,7 +555,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>バッファー制御パラメーターの設定</p> </td> 
+   <td><p>バッファ制御パラメータの設定</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p>プラットフォームの制限</p> </td> 
@@ -564,7 +563,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>アダプティブの設定</p> <p>ビットレート制御</p> </td> 
+   <td><p>アダプティブを設定</p> <p>ビットレート制御</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>プラットフォームの制限</p> </td> 
@@ -588,7 +587,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>302リダイレクト</p> </td> 
+   <td><p>302 リダイレクト</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>プラットフォームの制限</p> </td> 
@@ -596,7 +595,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
  </tbody> 
 </table>
 
-**表5:HLS高度な再生機能**
+**表 5:HLS の高度な再生機能**
 
 <table> 
  <tbody> 
@@ -635,7 +634,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD</p> </td> 
-   <td><p>スムーズトリック再生</p> </td> 
+   <td><p>スムーズなトリック再生</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>プラットフォームの制限</p> </td> 
@@ -643,7 +642,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>ID3の解析</p> </td> 
+   <td><p>ID3 の解析</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
@@ -651,7 +650,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>不連続マーカのサポート</p> </td> 
+   <td><p>Discontinuity マーカーのサポート</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
@@ -659,7 +658,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>トークン化されたストリーム</p> </td> 
+   <td><p>トークン化ストリーム</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>プラットフォームの制限</p> </td> 
@@ -675,7 +674,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
  </tbody> 
 </table>
 
-**表6:HLSコンテンツ保護機能**
+**表 6:HLS コンテンツ保護機能**
 
 <table> 
  <tbody> 
@@ -708,13 +707,13 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
    <td><p>VOD</p> </td> 
    <td><p>DRM</p> </td> 
    <td><p>Adobeアクセス</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>サポート対象外</p> </td> 
    <td><p>FairPlay</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-**表7:HLSコア広告挿入機能**
+**表 7:HLS コア広告挿入機能**
 
 <table> 
  <tbody> 
@@ -729,7 +728,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>プリロール(MP4/HLS)</p> </td> 
+   <td><p>プリロール (MP4/HLS)</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
@@ -737,7 +736,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>ミッドロール(HLS)</p> </td> 
+   <td><p>ミッドロール (HLS)</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>プラットフォームの制限</p> </td> 
@@ -745,7 +744,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
-   <td><p>ポストロール(MP4/HLS)</p> </td> 
+   <td><p>ポストロール (MP4/HLS)</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
@@ -785,7 +784,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>クリエイティブの再パッケージ化（MP4からHLS）</p> </td> 
+   <td><p>クリエイティブの再パッケージ化（MP4 から HLS）</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
@@ -793,7 +792,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
  </tbody> 
 </table>
 
-**表8:HLSの高度な広告挿入機能**
+**表 8:HLS の高度な広告挿入機能**
 
 <table> 
  <tbody> 
@@ -809,14 +808,14 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>広告のみ</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>サポート対象外</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>ターゲット設定パラメーター</p> </td> 
+   <td><p>ターゲティングパラメーター</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
@@ -842,13 +841,13 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
    <td><p>VOD + Live</p> </td> 
    <td><p>遅延広告読み込み</p> </td> 
    <td><p>Y</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>サポート対象外</p> </td> 
    <td><p>プラットフォームの制限</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
-   <td><p>コンパニオン広告，バナー広告，クリック可能な広告</p> </td> 
+   <td><p>コンパニオン広告、バナー広告、クリック可能な広告</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
@@ -864,7 +863,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
  </tbody> 
 </table>
 
-**表9:HLS統合{#table-hls-integrations}**
+**表 9:HLS 統合{#table-hls-integrations}**
 
 <table> 
  <tbody> 
@@ -879,7 +878,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>統合</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>Adobe AnalyticsVHL統合</p> </td> 
+   <td><p>Adobe Analytics VHL 統合</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
@@ -887,31 +886,31 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
  </tbody> 
 </table>
 
-## DASH機能マトリックス{#dash-feature-matrix}
+## DASH 機能マトリックス {#dash-feature-matrix}
 
-ブラウザーTVSDKのDASH機能の機能一覧を示します。
+以下に、ブラウザー TVSDK の DASH 機能の機能マトリックスを示します。
 
-・ *DASHコア再生機能*
+・ *DASH コア再生機能*
 
-・ *DASH高度な再生機能*
+・ *DASH 高度な再生機能*
 
-・ *DASHコンテンツ保護機能*
+・ *DASH コンテンツ保護機能*
 
-・ *DASHコア広告挿入機能*
+・ *DASH コア広告挿入機能*
 
-・ *DASH高度な広告挿入機能*
+・ *DASH の高度な広告挿入機能*
 
-・ *DASH統合*
+・ *DASH 統合*
 
 >[!NOTE]
 >
->以下の機能マトリックスの表では、Yは、この機能が現在のリリースでサポートされていることを意味します。
+>以下の機能マトリックスの表では、Y は、現在のリリースで機能がサポートされていることを意味します。
 
-### DASH機能{#dash-features}
+### DASH 機能 {#dash-features}
 
 次の機能がサポートされています。
 
-**表10:DASHコア再生機能**
+**表 10:DASH コア再生機能**
 
 <table> 
  <tbody> 
@@ -930,13 +929,13 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>FER VOD</p> </td> 
-   <td><p>一般再生（再生、一時停止、シーク）</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>一般的な再生（再生、一時停止、シーク）</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>可変ビットレート</p> </td> 
+   <td><p>適応ビットレート</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
@@ -949,60 +948,60 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>WebVTT</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>フェイルオーバー</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>QoSおよびプレイヤー通知</p> </td> 
+   <td><p>QoS とプレーヤーの通知</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>cookieヘッダーのサポート</p> </td> 
+   <td><p>cookie ヘッダーのサポート</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>バッファー制御パラメーターの設定</p> </td> 
+   <td><p>バッファ制御パラメータの設定</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>可変ビットレートコントロールの設定</p> </td> 
+   <td><p>アダプティブビットレートコントロールの設定</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>カスタムタグ(EventStream)</p> </td> 
-   <td><p>VODのみ（インライン）</p> </td> 
+   <td><p>カスタムタグ (EventStream)</p> </td> 
+   <td><p>VOD のみ（インライン）</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>遅延したオーディオ</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>遅延バインドオーディオ</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>302リダイレクト</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>302 リダイレクト</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-**表11:DASH高度な再生機能**
+**表 11:DASH 高度な再生機能**
 
 <table> 
  <tbody> 
@@ -1033,26 +1032,26 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD</p> </td> 
-   <td><p>スムーズトリック再生</p> </td> 
+   <td><p>スムーズなトリック再生</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>ID3の解析</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>ID3 の解析</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>複数期間のサポート</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>トークン化されたストリーム</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>トークン化ストリーム</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr> 
   <tr> 
    <td><p>再生</p> </td> 
@@ -1063,7 +1062,7 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
  </tbody> 
 </table>
 
-**表12:DASHコンテンツ保護機能**
+**表 12:DASH コンテンツ保護機能**
 
 <table> 
  <tbody> 
@@ -1077,24 +1076,24 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
    <td><p>コンテンツ保護</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>AES-128</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr> 
   <tr> 
    <td><p>コンテンツ保護</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Sample-AES</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr> 
   <tr> 
    <td><p>コンテンツ保護</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>DRM</p> </td> 
-   <td><p>・ Chrome、Firefox 47以降、およびChromecast上のWidevine</p> <p>・ Windows 8.1およびEdge上のInternet ExplorerでのPlayReady</p> <p>・ Windows Firefox用のPrimetime DRM（ビデオのみ）</p> </td> 
+   <td><p>・ Widevine（Chrome、Firefox 47 以降、Chromecast）</p> <p>・ Windows 8.1 および Edge 上の Internet Explorer での PlayReady</p> <p>・ Windows Firefox 用の Primetime DRM（ビデオのみ）</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-**表13:DASHコア広告挿入機能**
+**表 13:DASH コア広告挿入機能**
 
 <table> 
  <tbody> 
@@ -1107,55 +1106,55 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>プリロール(MP4/DASH)</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>プリロール (MP4/DASH)</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>ミッドロール(DASH)</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>ミッドロール (DASH)</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
-   <td><p>ポストロール(MP4/DASH)</p> </td> 
+   <td><p>ポストロール (MP4/DASH)</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>FER VOD</p> </td> 
    <td><p>広告の解像度と動作</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>デフォルトの広告ポリシー</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>VAST 2.0/3.0</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>VMAP 1.0</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>クリエイティブの再パッケージング（MP4からDASH）</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>クリエイティブの再パッケージ化（MP4 から DASH）</p> </td> 
+   <td><p>サポートなし</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-**表14:DASH Advanced広告挿入機能**
+**表 14:DASH の高度な広告挿入機能**
 
 <table> 
  <tbody> 
@@ -1174,43 +1173,43 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
-   <td><p>ターゲット設定パラメーター</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>ターゲティングパラメーター</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>カスタムパラメーター</p> </td> 
-   <td><p>VODのみ</p> </td> 
+   <td><p>VOD のみ</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>カスタム広告ポリシー</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>遅延広告読み込み</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>コンパニオン広告，バナー広告，クリック可能な広告</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr> 
   <tr> 
    <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>VPAID 2.0</p> </td> 
-   <td><p>非対応</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-**表15:DASH統合**
+**表 15:DASH 統合**
 
 <table> 
  <tbody> 
@@ -1223,209 +1222,209 @@ Browser TVSDKのHLS機能に関する機能一覧を示します。
   <tr> 
    <td><p>統合</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>Adobe AnalyticsVHL統合</p> </td> 
+   <td><p>Adobe Analytics VHL 統合</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## 修正された問題{#issues-fixed}
+## 修正された問題 {#issues-fixed}
 
-**2.4.12アップデート（ビルド204）で修正された問題**
+**2.4.12 の更新（ビルド 204）で修正された問題**
 
-ブラウザーTVSDKバージョン2.4.12の更新（ビルド204）で、次の問題が修正されました。
+Browser TVSDK version 2.4.12 Update（ビルド 204）で、以下の問題を修正しました。
 
-・ **21647**- TVSDKは、オーディオがミュートになっている場合、iOSデバイスでのビデオの自動再生を許可する必要があります。
+・ **21647** — オーディオがミュートされている場合、iOSデバイスでのビデオの自動再生を TVSDK で許可する必要があります。
 
-・ **21465**- DRM保護されたDASHストリームをDASHライブストリームの再生後に再生すると、エラーキーシステムアクセス拒否が受信されました。
+・ **21465**- DRM で保護された DASH ストリームを DASH ライブストリームの再生後に再生すると、エラーキーシステムアクセス拒否が受信されました。
 
-・ **21442** — ユーザーのジェスチャーでプリロール広告を再生した後、iOS Webでコンテンツの自動再生を有効にします。
+・ **21442** — プリロール広告がユーザージェスチャーで再生された後、iOS Web でコンテンツの自動再生を有効にします。
 
-・ **21240**- Auditude/VMAPから解析したVPAID広告をフィルターするAPIを提供。
+・ **21240**— Auditude/VMAP から解析された VPAID 広告をフィルタリングする API が提供されました。
 
-**バージョン2.4.11で修正された問題**
+**バージョン 2.4.11 で修正された問題**
 
-Browser TVSDKバージョン2.4.11では、次の問題が修正されました。
+Browser TVSDK バージョン 2.4.11 では、以下の問題が修正されました。
 
-**コア再生機能：**
+**コア再生の機能：**
 
-・ **19192**:TVSDKは、TextFormat:bottomInsetとTextFormat:safeAreaを実装するようになりました。 これらの機能強化により、コントロールバーが画面に表示されている場合は、クローズドキャプションの位置を変更できます。
+・ **19192**:TVSDK は、 TextFormat:bottomInset と TextFormat:safeArea を実装するようになりました。 これらの機能強化により、コントロールバーが画面に表示されている場合、クローズドキャプションの位置を変更できます。
 
-・ **21009**:クローズドキャプションは、新しいキャプションが表示されるまで、不連続部分を越えてシークする場合に、画面上に残ります。
+・ **21009**:クローズドキャプションは、新しいキャプションが表示されるまで、不連続を越えてシークした場合に、画面上で保持されます。
 
-・ **21141**:セグメントの追加中に競合条件が発生したため、シークバックが拒否されました。
+・ **21141**:セグメント追加中の競合状態が原因で、シークバックが拒否されます。
 
-・ **21142**:プレイヤーがINITIALIZED状態の場合に、シーク可能な再生範囲を利用できるようにする。 これらの変更により、位置での開始セッションがサポートされるようになりました。
+・ **21142**:プレーヤーが INITIALIZED 状態のときに、シーク可能な再生範囲を使用できるようにします。 これらの変更により、位置でのセッションの開始がサポートされるようになりました。
 
-・ **21363**:DASHストリームに広告を挿入した後、608/708クローズドキャプションが同期されなくなる。
+・ **21363**:608/708 DASH ストリームの広告挿入後にクローズドキャプションが同期されない。
 
 **広告挿入機能：**
 
-・ **21179**:ad.primaryAsset.adParametersプロパティを正しく設定することで、VODコンテンツを含むミッドロール関連の問題（長い一時停止、黒いフレーム）が解決されるようになりました。
+・ **21179**:VOD コンテンツを含むミッドロール関連の問題（長い一時停止、黒いフレーム）は、 ad.primaryAsset.adParameters プロパティを正しく設定することで解決されるようになりました。
 
-・ **21257**:MP4が有効なMIMEタイプではなく、クリエイティブの再パッケージ化機能が有効な場合は、ビットレートが最も高いMP4ファイルがトランスコード用に選択されます。
+・ **21257**:MP4 が有効な MIME タイプではなく、クリエイティブの再パッケージ化機能が有効な場合は、最もビットレートの高い MP4 ファイルがトランスコード用に選択されます。
 
-・ **21361**:追加の正規化ルールをサポートするために、TVSDKは、広告システムとクリエイティブIDをクリエイティブパッケージングリクエストのクエリパラメーターとしてVAST応答から渡すようになりました。
+・ **21361**:追加の正規化ルールをサポートするために、 TVSDK は、広告システムとクリエイティブ ID をクリエイティブパッケージ化リクエストのクエリパラメーターとして VAST 応答から渡すようになりました。
 
-**バージョン2.4.10で修正された問題**
+**バージョン 2.4.10 で修正された問題**
 
-Browser TVSDKバージョン2.4.10では、次の問題が修正されました。
+Browser TVSDK バージョン 2.4.10 では、以下の問題が修正されました。
 
-**コア再生機能：**
+**コア再生の機能：**
 
-・ **21060**:不連続を含むHLSストリームと、ISO BMFFボックスがストリームの終わりに対して実行されるHLSストリームで、無効なコーデックエラーが発生しました。
+・ **21060**:不連続を含む HLS ストリームと ISO BMFF ボックスがストリームの最後まで実行されると、無効なコーデックエラーがスローされます。
 
-・ **21045**:プレイリストの最初のビデオ再生が完了した後、iOSで自動再生が機能しない。
+・ **21045**:プレイリスト内の最初のビデオ再生が完了した後、iOSで自動再生が機能しない。
 
-・ **20975**:フレームレートは、ChromeブラウザーのQoSプロバイダーからNaNとして返されます。
+・ **20975**:Chrome ブラウザーの QoS プロバイダーは、フレームレートを NaN として返します。
 
-・ **20823**:データのないセグメントが発生した場合にサポートされていないコーデックエラーが発生しました。
+・ **20823**:データのないセグメントが発生した場合に、サポートされていないコーデックエラーがスローされました。
 
-・ **20769**:SDKは、ABRポリシーに基づいて即座に切り替える代わりに、シーク時に現在のビットレートで開始するようになりました。
+・ **20769**:ABR ポリシーに基づいて即座に切り替える代わりに、SDK はシーク時に現在のビットレートで開始するようになりました。
 
-・ **20031**:IE11(Windows 8.1)で縦置きモードの場合、ビデオ画面は小さくなります。 コンテンツ保護機能：
+・ **20031**:IE11(Windows 8.1) で縦向きモードの場合、ビデオ画面は小さくなります。 コンテンツ保護機能：
 
-・ **19316**:HLS AES-128ストリームの場合、復号化に失敗したセグメントをスキップします。
+・ **19316**:HLS AES-128 ストリームの場合に復号に失敗したセグメントをスキップします。
 
-**バージョン2.4.9で修正された問題**
+**バージョン 2.4.9 で修正された問題**
 
-Browser TVSDKバージョン2.4.9では、次の問題が修正されました。
+Browser TVSDK バージョン 2.4.9 では、以下の問題が修正されました。
 
-**コア再生機能：**
+**コア再生の機能：**
 
-・ **13407**:Firefoxが再生中に「ontimeupdate」イベントの送信を停止すると、DASHストリームが停止する場合があります。
+・ **13407**:Firefox が再生中に「ontimeupdate」イベントの送信を停止すると、DASH ストリームが停止する場合があります。
 
-・ **16380**:MSEを介した開始時間が一致しないセグメントのMuxed Audio Video Content Playback中に、表現間のオーディオ同期エラーがABRスイッチに蓄積され、最終的にエラーが発生します（Chrom問題#663686）。
+・ **16380**:MSE を介した非一致の開始時間を持つセグメントの Muxed Audio Video コンテンツ再生中に、表現間の Audio Sync Error が ABR スイッチに蓄積され、最終的に Error(Chromium の問題#663686) が発生します。
 
-・ **17985**:Firefoxブラウザーで特定のISO-BMFFストリームを再生すると、再生が停止する（Firefoxの問題#1342913）。 これはFirefox v53以降で修正されました。
+・ **17985**:Firefox ブラウザーで特定の ISO-BMFF ストリームを再生すると、再生が停止する (Firefox の問題#1342913)。 これは Firefox v53 以降で修正されました。
 
-・ **19141**:Uncaught (in promise) ReferenceError:幅が定義されていません。
+・ **19141**:Uncaught (in promise) ReferenceError :幅が定義されていません。
 
-・ **18997, 19299**:セグメント境界でのビデオのちらつきの問題。 これは、SDKが最後のサンプルのコンポジションの時間オフセットを正しく計算していないために発生していました。
+・ **18997, 19299**:セグメントの境界でのビデオのちらつきの問題。 この問題は、SDK が最後のサンプルのコンポジション時間オフセットを正しく計算しなかったために発生していました。
 
-・ **19780**:Firefox v53でのHLSコンテンツとHLS Adの再生に関する開始が発生しない（Firefoxの問題#354653）。
+・ **19780**:Firefox v53 で HLS コンテンツと HLS 広告の再生が開始されない (Firefox の問題#354653)。
 
-・ **20046**:プログラム日時は、時間指定メタデータオブジェクトとして受け取った場合、値ではなくキーとして受け取られます。
+・ **20046**:時間指定メタデータオブジェクトとして受け取った場合、プログラムの日時は値ではなくキーとして受け取られます。
 
-・ **20047**:useDefaultResizeHandlerは、Flashのフォールバックでエラーをスローします。
+・ **20047**:useDefaultResizeHandler は、エラーのフォールバックをスローし、Flashをスローします。
 
-・ **20179**:Flash Playerv25.0.0.171でFlashフォールバックが機能しない。
+・ **20179**:FlashフォールバックがFlash Playerv25.0.0.171 で機能しない。
 
-・ **20293**:Firefoxは、一部のHLSストリームが停止するとデータのバッファリングを停止します。
+・ **20293**:Firefox が、停止につながる特定の HLS ストリームのデータのバッファリングを停止します。
 
-・ **20626**:プレイヤーが、時間がゼロのビデオサンプルの誤った処理により、Chromeでメディアデコードエラーをスローします。
+・ **20626**:再生時間がゼロのビデオサンプルの処理が正しく処理されないため、プレーヤーが Chrome でメディアデコードエラーをスローする。
 
-・ **20078**:再生がブラウザーエラー「QuotaExceeded」で停止する。
+・ **20078**:ブラウザーエラー「QuotaExceeded」で再生が停止した。
 
-・ **18639**:HLS Liveストリーム608 CCでは、テキストがスペルミスとして表示されることがあります。
+・ **18639**:HLS Live stream 608 CC では、テキストがスペルミスとして表示される場合があります。
 
-・ **20028**:ClosedCaptionsのサイズパラメーターでは、フォントサイズは変更されません。
+・ **20028**:ClosedCaptions のサイズパラメーターは、フォントサイズを変更しません。
 
-・ **20613**:クローズドキャプションのボックスは互いに重なり合うので、読みにくくなります。
+・ **20613**:クローズドキャプションボックスは互いに重なり合っているので、読みにくくなります。
 
-**コアAd Insertion(CSAI)の機能：**
+**コアAd Insertion(CSAI) の機能：**
 
-・ **20043**:複数の広告とサードパーティのリダイレクトを伴う広告インプレッション呼び出しと広告トラッキング呼び出しがない。
+・ **20043**:複数の広告とサードパーティのリダイレクトを伴う広告インプレッションおよび広告トラッキングコールが見つかりません。
 
-・ **20044**:クリエイティブの再パッケージングを使用する場合、広告の時間内のすべての広告を正常に再パッケージ化する必要があります。正常にパッケージ化されないと、広告の時間は完全に破棄されます。
+・ **20044**:クリエイティブの再パッケージ化を使用する場合、広告ブレーク内のすべての広告を正常に再パッケージ化する必要があります。そうしないと、広告ブレークは完全に破棄されます。
 
-・ **20097**:広告のマニフェストが使用できない場合、広告の再生がスキップされ、メインコンテンツが20秒のタイムアウトを待たずに即座に再開されます。
+・ **20097**:広告マニフェストが使用できない場合は、20 秒のタイムアウトを待つのではなく、広告再生がスキップされ、メインコンテンツが直ちに再開されます。
 
-**バージョン2.4.8アップデートで修正された問題（ビルド6002）**
+**バージョン 2.4.8 の更新（ビルド 6002）で修正された問題**
 
-ブラウザーTVSDKバージョン2.4.8の更新（ビルド6002）で、次の問題が修正されました。
+Browser TVSDK version 2.4.8 Update (Build 6002) で、以下の問題を修正しました。
 
-・ **14126:** MSEソースバッファーの内部的なギャップが原因で、Firefoxでの再生が停止する場合があります（問題#1316024）。 再生を再開するには、シークを試みます。
+・ **14126:** MSE ソースバッファの内部ギャップが原因で、Firefox( 問題#1316024) で再生が停止する場合があります。 再生を再開するには、シークを試してみてください
 
-・ **19608:** Auditude VMAP応答からのタイムオフセット値に従うように修正しました。
+・ **19608:** Auditude VMAP 応答の timeoffset 値を尊重するよう修正しました。
 
-・ **19635:** Windows 10上のInternet Explorer 11でのビデオの停止を修正しました。
+・ **19635:** Windows 10 での Internet Explorer 11 でのビデオの停止を修正しました。
 
-・ **19761:** HLSのABRの問題を修正しました。
+・ **19761:** HLS での ABR の問題を修正しました。
 
-・ **19780:** Mozilla Firefox v53で破損していたHLSコンテンツでの広告再生を修正しました。
+・ **19780:** Mozilla Firefox v53 で壊れていた HLS コンテンツを含む広告再生を修正しました。
 
-・ **19877および19744:**&#x200B;この問題により、シーク操作後のビットレート選択の矛盾が修正されました。 シーク時のビットレート選択は、現在のビットレートの低い値になり、開始アップ時のビットレートが低くなります。
+・ **19877および19744:** この問題により、シーク操作後にビットレートを選択する際の不整合が修正されます。 これで、シーク時のビットレート選択が、現在のビットレートの低い値と、起動時のビットレートになります。
 
-・ **19881:**&#x200B;再生が停止し、シークが3 ～ 4回実行された後、無限に長い時間バッファリングオーバーレイが表示されます。
+・ **19881:** 再生が停止し、バッファリングオーバーレイが、シークが 3 ～ 4 回実行された後、無限の時間表示されます。
 
-・ **19884:** Chrome 59 Beta Verified Media Path(VMP)要件への準拠を確認します。 bTVSDKは、Chrome 59ベータ版でWidevine DRMコンテンツを再生できました。
+・ **19884:** Chrome 59 Beta 検証済みメディアパス (VMP) 要件のコンプライアンスを確認します。 bTVSDK は、Chrome 59 ベータ版で Widevine DRM コンテンツを再生できました。
 
-・ **19916:** UI-FrameworkでのDRM再生が壊れました。 現在は、メタデータにポリシーがない場合でも、acquireLicenseを呼び出します。
+・ **19916:** UI-Framework での DRM 再生が壊れました。 現在は、メタデータにポリシーがない場合でも、 acquireLicense を呼び出します。
 
-**バージョン2.4.8で修正された問題**
+**バージョン 2.4.8 で修正された問題**
 
-Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
+Browser TVSDK 2.4.8 リリースでは、次の問題が修正されました。
 
-・ **10075**:タイムラインを前にシークする際に、FirefoxとChromeで再生完了イベントが受信されず、Firefoxでシークイベントが受信されなかった問題を修正しました。
+・ **10075**:タイムラインの前のシーク時に、Firefox および Chrome で再生完了イベントが受信されず、Firefox でシークイベントが受信されなかった問題を修正しました。
 
-・ **15775**:Windows 8.1 Internet ExplorerでPlay Completeイベントが受信されない。
+・ **15775**:Windows 8.1 Internet Explorer で Play Complete イベントを受け取っていません。
 
-・ **17306**:SSAIストリームの場合、再生がサポートされます。 ステッチ広告のトラッキングはサポートされていません。
+・ **17306**:SSAI ストリームでは、再生がサポートされます。 ステッチされた広告のトラッキングはサポートされていません。
 
-・ **19142**:時には、巻き戻しによってビデオプレーヤーが永久にバッファリング状態を維持する。
+・ **19142**:時には巻き戻しによって、ビデオプレーヤーが永久にバッファリング状態のままになる。
 
-・ **19218**:広告マーカーは、UIフレームワークを通じては使用できません。
+・ **19218**:広告マーカーは、UI フレームワークを通じては使用できません。
 
-・ **19219**:広告のみの再生は、UIフレームワークを通じては機能しません。
+・ **19219**:広告のみの再生は、UI フレームワークを通じては機能しません。
 
-・ **19222**:AES-128キーはプレイリストに対して1回要求され、以降の要求はキャッシュから供給されます。 以前は、各セグメントに対してリクエストが行われていました。
+・ **19222**:AES-128 キーはプレイリストに対して 1 回リクエストされ、以降のリクエストはキャッシュから提供されます。 以前は、各セグメントに対してリクエストが受け取られていました。
 
-・ **19597**:&quot;Uncaught TypeError:Chrome Canaryビルドで「未定義のログ」プロパティを読み取れません。
+・ **19597**:&quot;Uncaught TypeError:Chrome のカナリアビルドで、「log」（未定義の）プロパティを読み取れませんでした。
 
-・ **19605**:Flashのフォールバックモードでは、adRequestDomainが使用できませんでした。
+・ **19605**:adRequestDomain は、フォールバックモードでは使用できませんでしたFlash。
 
-・ **19608**:HLSライブストリームにVMAP広告が挿入されませんでした。 SDKは、キューマーカーを考慮し、VMAP応答の時間オフセット値に依存しなくなりました。
+・ **19608**:HLS ライブストリームに VMAP 広告が挿入されませんでした。 SDK は、キューマーカーを考慮し、VMAP 応答の時間オフセット値に依存しなくなりました。
 
 ・ **19637**:広告のみ再生すると、広告の最後にスクリプトエラーが発生します。
 
-・ **19732**:CRSプレイリストの要求が404エラーで失敗していた問題を修正しました。 Browser TVSDKからの1401および1403のリクエストが更新され、この問題が解決されました。
+・ **19732**:CRS プレイリストのリクエストが 404 エラーで失敗していました。 ブラウザー TVSDK からの 1401 および 1403 リクエストが更新され、この処理がおこなわれるようになりました。
 
-・ **19762**:acquireLicenseは、setAuthenticationTokenの前に呼び出され、トークンの有効性に関係なく有効なライセンスが返されたために使用されていました。 この問題は現在修正され、acquireLicenseはsetAuthenticationToken応答の後でのみ呼び出されます。
+・ **19762**:acquireLicense setAuthenticationToken の前に呼び出されたので、トークンの有効性に関係なく有効なライセンスが返されました。 これが修正され、 setAuthenticationToken 応答の後でのみ acquireLicense が呼び出されます。
 
-**バージョン2.4.7で修正された問題**
+**バージョン 2.4.7 で修正された問題**
 
-バージョン2.4.7では、次の問題が修正されました。
+バージョン 2.4.7 で修正された問題を次に示します。
 
-・ **8397**:セグメントがキーフレームと開始しない場合、Adobe Mediumサーバーで生成されたHLSライブストリームが再生されないことがあります。
+・ **8397**:Adobe Mediumサーバーで生成された HLS ライブストリームは、セグメントがキーフレームで開始しない場合、再生されない可能性があります。
 
-・ **13606**:Chromeブラウザー上のHLSストリームに関する複数のSeek関連の問題が修正されました。
+・ **13606**:Chrome ブラウザーの HLS ストリームに関する複数の Seek 関連の問題を修正しました。
 
-・ **14807**:Chromeブラウザーで、play()の直後にシークまたは一時停止がトリガーされると、再生が次のエラーで停止する場合があります。DOMException:play()要求は呼び出しによって中断されました…（Chromの問題# 593273）
+・ **14807**:Chrome ブラウザーで、play() の直後にシークまたは一時停止がトリガーされた場合、再生がエラー DOMException で停止することがあります。play() リクエストが呼び出しによって中断されました…(Chromium の問題# 593273)。
 
-・ **19085**:volume、abrControlParameters、ccStyleなどのMediaPlayerパラメーターは、プレイヤーのリセット時にデフォルトに設定されません。
+・ **19085**:MediaPlayer Params（volume、abrControlParameters、ccStyle など）は、Resetting 時に Defaults に設定されません。
 
-**バージョン2.4.6で修正された問題**
+**バージョン 2.4.6 で修正された問題**
 
-バージョン2.4.6では、次の問題が修正されました。
+バージョン 2.4.6 で修正された問題：
 
-・ **18093**:Flash Playerバージョン24をFlashフォールバックモードで使用すると、サブスクライブされたタグの横のタグのTimedMetadataが返されます。
+・ **18093**:サブスクライブされたタグの横にあるタグの TimedMetadata は、Flash PlayerフォールバックモードでFlashバージョン 24 を使用すると返されます。
 
-**バージョン2.4.4で修正された問題**
+**バージョン 2.4.4 で修正された問題**
 
-バージョン2.4.4では、次の問題が修正されました。
+バージョン 2.4.4 では、次の問題が修正されました。
 
-・ **8711**:MSEの場合、608/708のキャプションはデフォルトで左揃えになります。
+・ **8711**:MSE では、608/708キャプションはデフォルトで両端揃えされます。
 
-・ **13934**:広告のABR設定は、HLSライブストリームを再生する場合には適用されません。
+・ **13934**:広告の ABR 設定は、HLS ライブストリームを再生する際には適用されません。
 
-・ **14079**:DVR時間の短いHLSライブストリームの長さは、ネットワークの遅延の問題が原因で再生が遅れる可能性があるので、失敗する場合があります。 再生を再開するには、ライブポイントをクリックします。
+・ **14079**:DVR の少ない HLS ライブストリームの場合、ネットワークの遅延の問題が原因で再生が遅れる可能性があるので、長期間の再生が失敗する可能性があります。 再生を再開するには、ライブポイントをクリックします。
 
-・ **15037**:プレイヤーUIフレームワークに付属のサンプルは、Windows 7上のMicrosoft Internet Explorer 10では動作しません。
+・ **15037**:プレーヤー UI フレームワークに付属のサンプルは、Windows 7 上のMicrosoft Internet Explorer 10 では機能しません。
 
-・ **15913**:HLS VODストリームの場合、Chromeでは、マニフェストの応答が304未変更の場合、ストリームは再生されません。 これは、Chrome v55（Chromiumの問題633696）以降に修正されました。
+・ **15913**:HLS VOD ストリームの場合、Chrome で、マニフェストの応答が 304 未変更の場合、ストリームは再生されません。 これは、Chrome v55 以降 (Chromium の問題633696) で修正されました。
 
-・ **16103**:Android Chromeでは、低帯域幅の条件では、Uncaught TypeErrorが発生して再生が停止する場合があります。未定義のエラーのプロパティ&#39;programDateTime&#39;を読み取れません。
+・ **16103**:Android Chrome では、低帯域幅の条件下で、Uncaught TypeError が発生して再生が停止する場合があります。未定義エラーのプロパティ「programDateTime」を読み取れません。
 
-・ **16265**:HLS VODおよびライブストリームの場合、不連続間のシークは機能しません。
+・ **16265**:HLS VOD およびライブストリームの場合、不連続を越えたシークは機能しません。
 
-・ **16709**:PDTと不連続マーカーを使用してHLS Liveストリームを再開すると、プレイヤーがバッファリングで動かなくなる可能性があります。
+・ **16709**:PDT と不連続マーカーを使用して HLS ライブストリームを再開すると、プレーヤーがバッファリングで動かなくなる場合があります。
 
-## 既知の問題と制限{#known-issues-and-limitations}
+## 既知の問題と制限事項 {#known-issues-and-limitations}
 
-ブラウザーTVSDKの制限事項と既知の問題を以下に示します。
+Browser TVSDK の制限事項と既知の問題については、以下で説明します。
 
-**表16:コア再生機能**
+**表 16:コア再生機能**
 
 <table> 
  <tbody> 
@@ -1433,39 +1432,39 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
    <td><strong>コンテンツタイプ</strong></td> 
    <td><strong>機能</strong></td> 
    <td><strong>Flash</strong></td> 
-   <td><strong>Firefox、IE、Chrome、Android ChromeのHTML5</strong></td> 
-   <td><strong>SafariのHTML5、iOS Safari</strong></td> 
-   <td><strong>Chromecast（DASH再生のみ）</strong></td> 
+   <td><strong>Firefox のHTML5、IE、Chrome、Android Chrome</strong></td> 
+   <td><strong>Safari でのHTML5、iOS Safari</strong></td> 
+   <td><strong>Chromecast（DASH 再生のみ）</strong></td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
    <td>一般再生（再生、一時停止、シーク）</td> 
-   <td><p>・ HLS以外のメディア形式はサポートされていません。</p> <p>8799:Flashのフォールバックでは混合コンテンツは扱われないので、コンテンツ、広告および他のURLが混在コンテンツ（安全なコンテンツと安全でないコンテンツを一緒に）に結び付けないようにする必要があります。</p> <p>・ 19271:UIフレームワークを介したマルチビュー再生は、Flashのフォールバックモードではサポートされていません。</p> <p>・ Windows 7上のMicrosoft Internet Explorer 8および9では、これらのバージョンはSDKでサポートされていないので、Flashのフォールバックは機能しません。</p> <p>・ 20262:Flashのフォールバックにより、ターゲティング情報リストにカスタムパラメータが追加されます。 また、FlashとMSEの場合、カスタムパラメータの優先順位も異なります。</p> <p>・ 20653：ブラウザーTVSDKのFlashフォールバックは、Creators Updateを使用するWin10では動作しません。</p> <p>・Flashフォールバックは、Flash Playerバージョン23以降で機能します。</p> <p>・ 20087 - Chrome 59ベータ版（日本未発売）</p> <p>Flash25.0.0.171</p> <p>ベータ版（デフォルト）では、HLS再生がFlashのフォールバックモードで動作しません。 カナリアではうまくいっています。</p> </td> 
-   <td><p>・ 12563:オーディオコーデックmp4a.40.02を含むダッシュストリームは、MPDのオーディオコーデック文字列がサポートされていないため、Firefoxで再生されません。 オーディオコーデックmp4a.40.2がサポートされます。</p> <p>15029:UIフレームワークのmultiViewでビデオを切り替える場合、再生/一時停止ボタンは、それに応じて更新されません。</p> <p>・ 16034:Windows 8.1 IEでは、reset()を呼び出すと、不明なMIMEタイプエラーが発生します。 再生を再開するには、メディアを再読み込みしてください。</p> <p>・ 18235:広告を含むDASH VODストリームでは、シークの問題が発生する場合があります。</p> <p>・ 18727:エラーAPIはMSEではサポートされていません</p> <p>18750:SDKとUIの両方のフレームワークおよびUIフレームワークで、リソースの読み込み後に追加されたイベントリスナーのIDLE操作とInitializing StatusChangeイベントが欠けている場合があります。</p> <p>・ 18889:MediaPlayerがERROR状態の場合、表示オブジェクトは返されません。</p> <p>・ 19039:AdobePSDKの場合。 MediaPlayer. seekToLocal()はEOFより大きい値で使用され、MSEの場合は最初から再生開始が使用されます。</p> <p>・ 19049:再生中にビデオがブロックされた場合、Chrome、IE、FirefoxのFlash Playerでエラー状態が報告されません。</p> <p>・ 17205:オーディオの再生が続行する間、ビデオ再生が数時間、ミュックスされていないストリームの再生で停止する（Chromiumの問題# 664033）。</p> <p>・ 12308:composition_time_offsetが指定されたDASHストリームに、timeStampOffsetがChromeブラウザーで適用されている場合があり、その結果、負のデコード時間が発生するので、MEDIA_ERR_ SRC_NOT_ SUPPORTEDエラーが発生する（Chrom問題#398141）。</p> <p>・ 14126:MSEソースバッファーの内部的なギャップが原因で、Firefoxでの再生が停止する場合がある（問題番号1316024）。 再生を再開するには、シークを試みます。</p> <p>・ 19115:MS EdgeおよびIE 11（Win 8.1および10）では、CORSリダイレクトで接触チャネルがnullに設定されず、ヘッダーがnullでないため再生エラーが発生するのに失敗します。</p> <p>・ 19861：既に再生されたメディアのソースバッファに追加動作が発生する問題 Chromeは、追加されたフラグメント（moovを含む）を拒否し、その後のデコードエラーを引き起こします。 （Chromiumの問題#735335）</p> <p>19921:正常にバッファーされた場合でも、特定のHLSコンテンツの再生が停止する（Chromiumの問題#713540）</p> <p>・ 20444:IEとEdgeでバッファー範囲の終わりをシークすると、再生が停止する場合があります。</p> <p>・ 20511:広告のある場合もない場合も、HLSストリームではシーク拒否が観察されることがあります。</p> <p>・ 20743:Windows 10 Chromeでは、HLS Liveストリームは、MP4プリロール再生の前に数秒間再生されます。</p> <p>・ 21043:メタデータがないため、初回の読み込み時にビデオディメンションが正しくない可能性があります。</p> <p>・ 21115:プリロール広告がプレイリストのビデオに使用できる場合、開始の再生にはAndroidユーザージェスチャーが必要です。</p> <p>・ HLS Liveはタイムスタンプのロールオーバーをサポートしていません。</p> <p>・ AAC-SSRオーディオはサポートされていません。</p> <p>オーディオコーデックAC3および拡張AC3はサポートされていません。</p> <p>・タイムスタンプの不連続性があるが、不連続マーカーがないストリームの場合</p> <p>・ジャンプが原因で、再生に問題が発生し、シーク操作が正しくない可能性があります。</p> <p>・コンテンツの長さと再生時間が一致しない場合があります。</p> <p>・表現とレンディション間の不連続性は、他の条件と一致すると、同期と停止の問題を引き起こす可能性があります。</p> <p>・キャプションとWebVTTは、ストリームの終わりの近くに表示されない場合があります。</p> <p>・オーディオコーデックの変更は、タイムスタンプのジャンプに対してはサポートされません。</p> <p>・広告挿入はサポートされていません。</p> <p>・早送りトリックモードが原因で、Win 8.1 IE 11で再生ループが発生する場合があります（MSの問題#12446268）。</p> <p>DASH:</p> <p>・ライブストリームの場合 — 動的タイプのライブプロファイルがサポートされます。</p> <p>・ VoDストリームの場合 — 静的タイプのライブプロファイルがサポートされます。</p> <p>VoDストリームの場合 — オンデマンドプロファイルは広告ワークフローに対して認証されていません。</p> </td> 
-   <td><p>・ DASHライブおよびDASH Video on Demandストリームはサポートされていません。</p> <p>・ PIP（ピクチャインピクチャ）ビデオ再生は、フルスクリーンモードのiOSではサポートされていません。</p> <p>Safari（ビデオタグ）の拡張では、正しいコンテンツタイプのヘッダーがないとマニフェストが少なくなります。</p> </td> 
-   <td><p>・送信者アプリのapplicationIDは、受信者のURLをカスタム受信者アプリとして登録する際に生成されるものと同じである必要があります。</p> <p>・ DASHワークフローに対しては、リファレンスプレイヤが認証されています。 UIフレームワークが認証されていません。</p> <p>サポートされるメディアコーデックのリストについては、<a href="https://developers.google.com/cast/docs/media"><em>ここ</em></a>を参照してください。</p> </td> 
+   <td><p>・ HLS 以外のメディア形式はサポートされていません。</p> <p>8799:Flashのフォールバックでは混合コンテンツは処理されないので、コンテンツ、広告および他の URL で混合コンテンツ（安全なコンテンツと安全でないコンテンツを組み合わせて）が生じないようにする必要があります。</p> <p>・ 19271:UI フレームワークを使用したマルチビュー再生は、Flashフォールバックモードではサポートされていません。</p> <p>・ Windows 7 上のMicrosoft Internet Explorer 8 および 9 では、Flashのフォールバックが機能しません。これらのバージョンは、SDK ではサポートされていません。</p> <p>・ 20262:Flashのフォールバックは、ターゲット情報リストにカスタムパラメータを追加します。 また、カスタムパラメーターの優先順位も、Flashと MSE の場合は異なります。</p> <p>・ 20653:Browser TVSDKFlashフォールバックは、Creators Update を使用する Win10 では機能しません。</p> <p>・Flashフォールバックは、Flash Playerバージョン 23 以降で機能します。</p> <p>・ 20087 - Chrome 59 Beta（を使用）</p> <p>Flash25.0.0.171</p> <p>ベータ版（デフォルト）の場合、HLS 再生はFlashフォールバックモードで動作しません。 カナリアでは問題なく機能しています。</p> </td> 
+   <td><p>・ 12563:オーディオコーデック mp4a.40.02 のダッシュストリームは、MPD でサポートされていないオーディオコーデック文字列が原因で、Firefox で再生されません。 オーディオコーデック mp4a.40.2 がサポートされています。</p> <p>15029:UI-Framework の multiView でビデオを切り替える際に、再生/一時停止ボタンがそれに応じて更新されない。</p> <p>・ 16034:Windows 8.1 IE で reset() を呼び出すと、不明な MIME タイプエラーが発生します。 再生を再開するには、メディアを再読み込みしてください。</p> <p>・ 18235:広告を含む DASH VOD ストリームでは、特定のシークの問題が発生していました。</p> <p>・ 18727:エラー API は MSE ではサポートされていません</p> <p>18750:ステータス変更イベントが、SDK と UI の両方のフレームワークと UI フレームワークで、リソースの読み込み後に追加されたイベントの IDLE イベントと Initializing StatusChange イベントが欠落する場合があります。</p> <p>・ 18889:MediaPlayer が ERROR 状態の場合、 view オブジェクトは返されません。</p> <p>・ 19039:AdobePSDK の場合。 MediaPlayer. seekToLocal() を EOF より大きい値で使用すると、MSE の場合は最初から再生が開始されます。</p> <p>・ 19049:再生中にビデオがブロックされた場合、Chrome、IE、Firefox のFlash Playerでエラー状態が報告されませんでした。</p> <p>・ 17205:オーディオの再生が続く間、ビデオの再生が数時間停止し、無音のストリームの再生が停止する (Chromium の問題# 664033)。</p> <p>・ 12308:composition_time_offset が指定された DASH ストリームは、Chrome ブラウザーで timeStampOffset が適用され、負のデコード時間になる可能性があり、その結果、MEDIA_ERR_ SRC_NOT_SUPPORTED エラー (Chromium の問題#398141) になる。</p> <p>・ 14126:MSE ソースバッファの内部ギャップが原因で、Firefox( 問題# 1316024) で再生が停止する場合があります。 再生を再開するには、シークを試してみます。</p> <p>・ 19115:MS Edge および IE 11（Win 8.1 および 10）では、CORS リダイレクトで Origin が null に設定されず、再生エラーを引き起こすヘッダーが null でないので、失敗します。</p> <p>・ 19861：メディアが既に再生されている場合に、ソースバッファに追加動作が発生する問題。 Chrome は moov を含む追加されたフラグメントを拒否し、その後のデコードエラーが発生します。 (Chromium の#735335号 )</p> <p>19921:特定の HLS コンテンツが正常にバッファーされた場合でも再生が停止する (Chromium の問題#713540)</p> <p>・ 20444:IE および Edge 上でバッファー範囲の終わりまでシークすると、再生が停止する場合があります。</p> <p>・ 20511:広告のある場合もない場合もある HLS ストリームでは、シーク拒否が見られることがあります。</p> <p>・ 20743:Windows 10 Chrome では、HLS ライブストリームは、MP4 プリロール再生の数秒前に再生されます。</p> <p>・ 21043:メタデータがないので、初回の読み込み時にビデオのサイズが正しくない可能性があります。</p> <p>・ 21115:プリロール広告がプレイリスト内のビデオで使用可能な場合、再生を開始するには Android のユーザージェスチャーが必要です。</p> <p>・ HLS Live はタイムスタンプのロールオーバーをサポートしていません。</p> <p>・ AAC-SSR オーディオはサポートされていません。</p> <p>オーディオコーデック AC3 および拡張 AC3 はサポートされていません。</p> <p>・タイムスタンプの不連続性を持つが、不連続マーカーを持たないストリームの場合</p> <p>・ジャンプが原因で、再生の異常や誤ったシークが発生する可能性があります。</p> <p>・コンテンツの再生時間と再生時間が一致しない可能性があります。</p> <p>・表示域とレンディション間の不連続性は、他の条件と一致する必要がある場合、同期と停止の問題が発生する可能性があります。</p> <p>・キャプションと WebVTT は、ストリームの終わりの近くに表示されない場合があります。</p> <p>・オーディオコーデックの変更は、タイムスタンプジャンプをまたいではサポートされません。</p> <p>・広告の挿入はサポートされていません。</p> <p>・早送りトリックモードが原因で、Win 8.1 IE 11 で再生ループが発生する場合があります (MS の問題#12446268)。</p> <p>ダッシュ：</p> <p>・ライブストリームの場合 — 動的タイプのライブプロファイルがサポートされます。</p> <p>・ VoD ストリームの場合 — 静的タイプのライブプロファイルがサポートされます。</p> <p>VoD ストリームの場合 — OnDemand プロファイルは、広告ワークフローに対して認定されていません。</p> </td> 
+   <td><p>・ DASH Live および DASH Video on Demand ストリームはサポートされていません。</p> <p>・ PIP(Picture in Picture) ビデオの再生は、フルスクリーンモードのiOSではサポートされていません。</p> <p>Safari（ビデオタグ）では、正しいコンテンツタイプヘッダーを持たない拡張機能ではマニフェストが少なく機能しません。</p> </td> 
+   <td><p>・送信者アプリの applicationID は、受信者の URL をカスタム受信者アプリとして登録する際に生成されたものと同じである必要があります。</p> <p>・リファレンスプレーヤーは、DASH ワークフローに対して認定されています。 UI フレームワークが認証されていません。</p> <p>サポートされるメディアコーデックのリストについては、 <a href="https://developers.google.com/cast/docs/media"><em>ここ</em></a>.</p> </td> 
   </tr> 
   <tr> 
    <td>FER VOD</td> 
    <td>一般再生（再生、一時停止、シーク）</td> 
    <td> </td> 
-   <td>18098:HLS LBA FERストリームで、一部のシークの問題が観察されます。</td> 
+   <td>18098:HLS LBA FER ストリームで、特定のシーク問題が発生していました。</td> 
    <td> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
    <td>アダプティブビットレート</td> 
-   <td><p>・ 20079:バッファ範囲内のシーク時にバッファーを書き直し</p> <p>20080:FlashABRの動作はMSEと一致しません。</p> </td> 
-   <td><p>・ ABRストリーム内のオーディオ専用のフォールバックバリアントは、バッファーに関する制限のため無視されます。</p> <p>・ 12289:ABR制御パラメーターは、ミュークス化されていないHLS/DASHストリームの場合、オーディオには適用されません。</p> </td> 
+   <td><p>・ 20079:バッファー範囲内のシーク時にバッファーを書き換えます。</p> <p>20080:FlashABR の動作は MSE と一致しません。</p> </td> 
+   <td><p>・ ABR ストリーム内のオーディオのみのフォールバックバリアントは、バッファ関連の制限のため無視されます。</p> <p>・ 12289:ABR 制御パラメーターは、HLS/DASH ストリームが無変の場合、オーディオには適用されません。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
-   <td>608/708キャプション</td> 
+   <td>608/708 Captions</td> 
    <td> </td> 
-   <td><p>・ 7810:Android 4.4.4 Chromeでは、プレイヤーが使用する基本的なCSSフォントファミリーがサポートされていないので、フォントスタイル変更機能が動作しません。</p> <p>・ 608キャプションの場合、CCチャネルは変更できません。</p> <p>・高度なスタイル設定機能は、608キャプションに対してはサポートされていません。</p> <p>埋め込みキャプション(608/708)。アクセシビリティタグを介して署名されます。</p> </td> 
+   <td><p>・ 7810:Android 4.4.4 では、Chrome はプレーヤーで使用される基本的な CSS フォントファミリをサポートしていないようで、フォントスタイル変更機能が動作しません。</p> <p>・ 608 キャプションの場合、CC チャネルは変更できません。</p> <p>・ 608 キャプションの高度なスタイル設定機能はサポートされていません。</p> <p>埋め込みキャプション(608/708)は、アクセシビリティタグを介して通知されます。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1473,47 +1472,47 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
    <td>VOD + Live</td> 
    <td>WebVTT</td> 
    <td> </td> 
-   <td><p>・ 5206:WebVTTファイルの領域タグは、キャプションを表示する際にプレーヤーで無視されます。</p> <p>・ DASH:フラグメント化/セグメント化されたVTTファイルはサポートされていません。</p> </td> 
+   <td><p>・ 5206:WebVTT ファイルの領域タグは、キャプションの表示時にプレーヤーでは無視されます。</p> <p>・ DASH:断片化/セグメント化 VTT ファイルはサポートされていません。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
    <td>マニフェストのフェイルオーバー</td> 
-   <td>21056:Flashフォールバックを使用した場合、プライマリストリームが再生中に404エラーを返す場合、ライブストリームに対してフェイルオーバーは発生しません。</td> 
-   <td>マニフェストのフェイルオーバーは、コンテンツに対してのみ適用され、広告には適用されません。</td> 
-   <td>プレイリストのフェイルオーバーが見つからない場合、SafariではHTTPエラーコード404に対してのみ機能します。</td> 
+   <td>21056:Flashフォールバックを使用すると、再生中にプライマリストリームが 404 エラーを返した場合、ライブストリームでフェイルオーバーは発生しません。</td> 
+   <td>マニフェストのフェイルオーバーは、コンテンツにのみ適用でき、広告には適用されません。</td> 
+   <td>プレイリストのフェイルオーバーが見つからない場合、Safari では HTTP エラーコード 404 に対してのみ機能します。</td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
    <td>高度なフェイルオーバー</td> 
    <td> </td> 
-   <td><p>・セグメントのフェイルオーバーでは、使用できないセグメントのスキップと再生の継続はサポートされません。</p> <p>20533:プレイリストに見つからないセグメントはDiscontinuityとして扱われ、次に使用可能なセグメントから再生が再開されます。</p> <p>21267:フェールオーバーによるストリームの切り替えは、古いセグメントのダウンロードの原因になる場合があります。</p> </td> 
+   <td><p>・セグメントのフェイルオーバーは、使用できないセグメントのスキップや再生の続行をサポートしていません。</p> <p>20533:プレイリスト内の欠落したセグメントは Discontinuity として扱われ、次に使用可能なセグメントから再生が再開されます。</p> <p>21267:フェールオーバーによるストリームの切り替えにより、古いセグメントがダウンロードされる場合があります。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
-   <td>QoSおよびプレイヤー通知</td> 
-   <td>21129:Flashフォールバックの場合、フレームレートは使用できません。</td> 
-   <td><p>・ 11170:</p> <p>Timed_イベントは、MSEを使用するBrowser TVSDKでは、Flashのフォールバックを使用するBrowser TVSDKとは異なり、使用できません。</p> <p>21129:ライブストリームのフレームレートは計算されません。</p> </td> 
+   <td>QoS とプレーヤーの通知</td> 
+   <td>21129:フレームレートは、Flashフォールバックの場合は使用できません。</td> 
+   <td><p>・ 11170:</p> <p>Timed_Event は、MSE を備えたブラウザー TVSDK では、Flashフォールバックを備えたブラウザー TVSDK とは異なり、使用できません。</p> <p>21129:ライブストリームのフレームレートは計算されません。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
-   <td>cookieヘッダーのサポート</td> 
+   <td>cookie ヘッダーのサポート</td> 
    <td> </td> 
    <td> </td> 
-   <td><p>withCredentialsフラグとcookieヘッダーはSafariではサポートされていません。</p> <p>21051:SafariでCookieを許可するには、環境設定/プライバシーから「CookieとWebサイトのデータ」設定を有効にします。</p> </td> 
+   <td><p>Safari では、withCredentials フラグと cookie ヘッダーはサポートされていません。</p> <p>21051:Safari で cookie を許可するには、環境設定/プライバシーで「Cookie と Web サイトのデータ」設定を有効にします。</p> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
    <td>カスタムタグ</td> 
-   <td>14763:#で始まるカスタムタグ以外はサポートされません。 現在、Flashのフォールバック中に、このようなタグに対してTimedMetadataオブジェクトが作成され、レポートされます。</td> 
-   <td>インバンドカスタムタグを持つストリームは認証されません。</td> 
+   <td>14763:#で始まる以外のカスタムタグはサポートしないでください。 現在、Flashのフォールバック中に TimedMetadata オブジェクトが作成され、そのタグに関してレポートされます。</td> 
+   <td>インバンドカスタムタグを含むストリームは認定されていません。</td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1521,22 +1520,22 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
    <td>VOD + Live</td> 
    <td>遅延バインディングオーディオ</td> 
    <td> </td> 
-   <td><p>・広告挿入は、HLSライブLBAストリームではサポートされていません。</p> <p>・ 17273:HLS VOD LBAストリームは、フェイルオーバー時にデフォルトのレンディションに切り替わります。最後に選択した状態に戻すことはできません。</p> <p>・ 20251:HLSライブLBAストリームは、シーク時に停止する場合があります。</p> <p>・ 20497:HLS LBA無音ストリームで、オーディオまたはビデオのフレームがストリームの終わり近くにない場合、プレイヤーはバッファリング状態のままです。</p> </td> 
+   <td><p>・広告の挿入は、HLS Live LBA ストリームではサポートされていません。</p> <p>・ 17273:HLS VOD LBA ストリームは、フェイルオーバーの場合はデフォルトのレンディションに切り替わり、最後に選択したレンディションに戻すことはできません。</p> <p>・ 20251:HLS Live LBA ストリームは、シーク時に停止する場合があります。</p> <p>・ 20497:HLS LBA の無音ストリームで、オーディオまたはビデオフレームが欠落していてストリームの終わりに近い場合、プレーヤーはバッファリング状態のままになります。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
-   <td>302リダイレクト</td> 
+   <td>302 リダイレクト</td> 
    <td> </td> 
-   <td><p>15787:302</p> <p>リダイレクトの最適化は、windows EdgeおよびIEブラウザーでは、XMLHttpRequestオブジェクトのresponseURLプロパティをサポートしていないので、サポートされていません。</p> </td> 
+   <td><p>15787:302</p> <p>リダイレクトの最適化は、windows Edge および IE ブラウザーでは、XMLHttpRequest オブジェクトの responseURL プロパティをサポートしていないので、サポートされていません。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
  </tbody> 
 </table>
 
-**表17:高度な再生機能**
+**表 17:高度な再生機能**
 
 <table> 
  <tbody> 
@@ -1544,14 +1543,14 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
    <td>コンテンツタイプ</td> 
    <td>機能</td> 
    <td>Flash</td> 
-   <td><strong>Firefox、IE、Chrome、Android ChromeのHTML5</strong></td> 
-   <td><strong>SafariのHTML5、iOS Safari</strong></td> 
-   <td><strong>Chromecast（DASH再生のみ）</strong></td> 
+   <td><strong>Firefox のHTML5、IE、Chrome、Android Chrome</strong></td> 
+   <td><strong>Safari でのHTML5、iOS Safari</strong></td> 
+   <td><strong>Chromecast（DASH 再生のみ）</strong></td> 
   </tr> 
   <tr> 
    <td>VOD</td> 
    <td>オフセットでの再生</td> 
-   <td><p>特定のオフセット値での再生の開始は、MP4コンテンツをサポートしていません。</p> </td> 
+   <td><p>特定のオフセット値で再生を開始することは、MP4 コンテンツをサポートしていません。</p> </td> 
    <td>20492:オフセットの前のミッドロール広告は、コンテンツがオフセット値から再開される前に再生されます。</td> 
    <td>オフセット機能を使用した再生は、iOSではサポートされていません。</td> 
    <td> </td> 
@@ -1559,31 +1558,31 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
   <tr> 
    <td>VOD</td> 
    <td>トリック再生</td> 
-   <td>iFrameレンディションのないストリームでは、スムーズなトリックプレイが機能しません。</td> 
-   <td><p>・トリック再生アダプティブはFirefoxおよびInternet Explorerではサポートされていないので、これらのブラウザーでは逆トリックモードを使用できません。</p> <p>・広告と共にコンテンツを再生する場合、トリック再生は利用できません。</p> <p>・ 10435:DASH再生中に、Internet Explorerで前方トリック再生時にビデオがフリーズする(Win 8.1)</p> <p>断続的に これは、トリック再生の適合なしでビデオ要素playbackRateプロパティを使用しているためです。</p> <p>14182:Chromeブラウザーで巻き戻し中に、シークイベントが受け取られない場合があり、トリックモードが機能しないことがあります。</p> <p>・ 14942:非トリック再生ストリームの場合でも、Chrome for Androidでは再生速度を設定できますが、設定は適用されず、通常の速度で再生が続行されます。</p> <p>・ 17308:シークはトリック再生モードでは機能しません。</p> <p>・ 17309:Chromeブラウザーでは、リバーストリックモードを2秒以上維持することはできません。</p> <p>19272:DASHストリームの場合、Windows 10 Edgeブラウザーでトリック再生がバッファリングから回復しない場合がある。</p> </td> 
+   <td>スムーズなトリックプレイは、iFrame レンディションがないストリームでは機能しません。</td> 
+   <td><p>・ Firefox および Internet Explorer では Trick Play アダプテーションがサポートされていないので、これらのブラウザーでは逆トリックモードを使用できません。</p> <p>・広告と共にコンテンツを再生する場合は、トリック再生を使用できません。</p> <p>・ 10435:DASH 再生中に、Internet Explorer でのフォワードトリック再生でビデオがフリーズする (Win 8.1)</p> <p>断続的に これは、トリック再生適応なしでビデオ要素 playbackRate プロパティを使用しているので発生しています。</p> <p>14182:Chrome ブラウザーで巻き戻し中に、シークイベントが受信されない場合があり、トリックモードが機能しない場合があります。</p> <p>・ 14942:非トリック再生ストリームの場合でも、Android 向け Chrome で再生率を設定できますが、設定は適用されず、通常の速度で再生が続行されます。</p> <p>・ 17308:シークは、トリック再生モードでは機能しません。</p> <p>・ 17309:Chrome ブラウザーでは、逆トリックモードを 2 秒以上維持できません。</p> <p>19272:DASH ストリームの場合、Windows 10 Edge ブラウザーでバッファリングからトリック再生が回復しない場合がある。</p> </td> 
    <td>巻き戻しトリックモードはサポートされていません。</td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
-   <td>ID3の解析</td> 
-   <td>20346:ID3フレームのテキストエンコードバイトも、SDKから返されます。</td> 
-   <td><p>オーディオデータトランスポートストリーム(ADTS)で使用できるID3タグは、SDKでは無視されます。</p> <p>・ 12378:ID3時間指定メタデータは、MSEをサポートするFlashーとブラウザーで別々の時間に解析されるので、参照プレイヤーのタイムラインでの表示動作も異なります。</p> <p>・ 19247:ID3の解析はUIフレームワークではサポートされていません。</p> </td> 
-   <td><p>・ 20323:AACセグメントの最初のサンプルのタイムスタンプを伝えるために使用するPRIV ID3タグがSafariで解析されない（Safariの問題#32422733）</p> <p>・ 20350:特定のデバイス（MAC OS X 10.1、iPad10など）では、Safariはトリックモードの場合にキュー変更イベントを提供しないので、ID3フレームを受け取りません。 （Safariの問題#32450526）</p> </td> 
+   <td>ID3 解析</td> 
+   <td>20346:ID3 フレームのテキストエンコーディングバイトも、SDK から返す必要があります。</td> 
+   <td><p>オーディオデータトランスポートストリーム (ADTS) で使用できる ID3 タグは、SDK では無視されます。</p> <p>・ 12378:ID3 時間指定メタデータは、MSE がサポートされているFlashとブラウザーで別の時間に解析されるので、参照プレーヤータイムラインでの表示動作も異なります。</p> <p>・ 19247:ID3 の解析は、UI フレームワークではサポートされていません。</p> </td> 
+   <td><p>・ 20323:AAC セグメントの最初のサンプルのタイムスタンプを伝えるために使用される PRIV ID3 タグは、Safari で解析されません (Safari の問題#32422733)</p> <p>・ 20350:特定のデバイス (MAC OS X 10.1、iPad10 など ) では、Safari は、トリックモードではキュー変更イベントを提供しないので、ID3 フレームを受け取りません。 (Safari の問題#32450526)</p> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
-   <td>不連続マーカのサポート</td> 
+   <td>Discontinuity マーカーのサポート</td> 
    <td> </td> 
-   <td><p>・クライアント側の広告挿入は、不連続性を含むHLSストリームではサポートされません。</p> <p>・オーディオコーデックの変更は、HLSストリームの不連続部分を超えて行うことはできません。</p> <p>・オーディオトラックスイッチは、不連続マーカーを持つHLSストリームに対してはサポートされていません</p> </td> 
-   <td>不連続シーケンス番号は、Safariでの再生に不連続なHLSストリームに対する要件です。</td> 
+   <td><p>・不連続を含む HLS ストリームでは、クライアント側の広告挿入はサポートされません。</p> <p>・ HLS ストリームの不連続部分では、オーディオコーデックの変更は許可されません。</p> <p>・不連続マーカーを持つ HLS ストリームでは、Audio Track スイッチはサポートされていません。</p> </td> 
+   <td>Safari での再生には、不連続性のある HLS ストリームに対する不連続シーケンス番号が必要です。</td> 
    <td> </td> 
   </tr> 
  </tbody> 
 </table>
 
-**表18:コンテンツ保護機能**
+**表 18:コンテンツ保護機能**
 
 <table> 
  <tbody> 
@@ -1591,30 +1590,30 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
    <td><strong>コンテンツタイプ</strong></td> 
    <td><strong>機能</strong></td> 
    <td><strong>Flash</strong></td> 
-   <td><strong>Firefox、IE、Chrome、Android ChromeのHTML5</strong></td> 
-   <td><strong>SafariのHTML5、iOS Safari</strong></td> 
-   <td><strong>Chromecast（DASH再生のみ）</strong></td> 
+   <td><strong>Firefox のHTML5、IE、Chrome、Android Chrome</strong></td> 
+   <td><strong>Safari でのHTML5、iOS Safari</strong></td> 
+   <td><strong>Chromecast（DASH 再生のみ）</strong></td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
    <td>AES-128</td> 
    <td> </td> 
-   <td>バイト範囲は、AES-128暗号化されたコンテンツではサポートされません。</td> 
-   <td>12324:IVタグが指定されていない場合、HLS AES-128暗号化されたストリームはSafariでの再生に失敗します。</td> 
+   <td>バイト範囲は、AES-128 で暗号化されたコンテンツではサポートされていません。</td> 
+   <td>12324:HLS AES-128 で暗号化されたストリームは、IV タグが指定されていない場合、Safari で再生に失敗します。</td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD</td> 
    <td>DRM</td> 
    <td> </td> 
-   <td><p>・ 12660:HTML5プレーヤーが、期限切れのPlayReady暗号化ダッシュコンテンツに対して内部サーバーエラーをスローする。</p> <p>・ 16720:ピリオドタグの開始属性がない場合、DASH DRMで暗号化されたコンテンツが機能しません。</p> <p>・ 18589:DRM保護されたDash VoD MultiperiodストリームのXlinkでの再生はサポートされていません。</p> <p>・ 18653:複数のキーを持つWidevine MultiPeriodコンテンツの再生は、最初の期間で停止し、次の期間に切り替えることはできません。</p> <p>・ 18656:再生可能な複数期間のストリーム。異なるキーで暗号化され、再生は行われません。</p> <p>Dash用のPlayready 2.0は認証されていません。</p> <p> </p> <p> </p> </td> 
-   <td>12602:HLS Fairplay DRMメタデータが、SafariのHTML5プレイヤーによって繰り返し更新される</td> 
-   <td><p>Bento4でパッケージ化されたDASH Widevine DRMコンテンツを再生できます。 Offline PackagerとShaka Packagerでパッケージ化されたコンテンツが再生されません。 DASH PlayReady DRMはサポートされていません。</p> </td> 
+   <td><p>・ 12660:HTML5 プレーヤーが、期限切れの PlayReady で暗号化されたダッシュコンテンツに対して内部サーバーエラーをスローする。</p> <p>・ 16720:期間タグの start 属性が見つからない場合、DASH DRM で暗号化されたコンテンツは機能しません。</p> <p>・ 18589:DRM 保護された Dash VoD Multiperiod ストリーム（Xlink を使用）では、再生はサポートされていません。</p> <p>・ 18653:複数のキーを持つ Widevine MultiPeriod コンテンツの再生は、最初の期間で停止し、次の期間に切り替えることはできません。</p> <p>・ 18656:異なるキーで暗号化された再生可能な MultiPeriod ストリームは、再生されません。</p> <p>Dash 用の Playready 2.0 は認定されていません。</p> <p> </p> <p> </p> </td> 
+   <td>12602:HLS Fairplay DRM メタデータが Safari 上の FairPlayer で繰り返しHTML5 によって更新される</td> 
+   <td><p>Bento4 でパッケージ化された DASH Widevine DRM コンテンツを再生できます。 Offline Packager と Shaka Packager を使用してパッケージ化されたコンテンツは再生されません。 DASH PlayReady DRM はサポートされていません。</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-**表19:コアAd Insertion機能(CSAI)**
+**表 19:コアAd Insertion機能 (CSAI)**
 
 <table> 
  <tbody> 
@@ -1622,17 +1621,17 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
    <td><strong>コンテンツタイプ</strong></td> 
    <td><strong>機能</strong></td> 
    <td><strong>Flash</strong></td> 
-   <td><strong>Firefox、IE、Chrome、Android ChromeのHTML5</strong></td> 
-   <td><strong>SafariのHTML5、iOS Safari</strong></td> 
-   <td><strong>Chromecast（DASH再生のみ）</strong></td> 
+   <td><strong>Firefox のHTML5、IE、Chrome、Android Chrome</strong></td> 
+   <td><strong>Safari でのHTML5、iOS Safari</strong></td> 
+   <td><strong>Chromecast（DASH 再生のみ）</strong></td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
-   <td>前/中/後</td> 
+   <td>Pre/Mid/Post</td> 
    <td> </td> 
-   <td><p>・ HLSライブコンテンツを含むプリロール広告は、デュアルプレイヤーモードで再生されます。</p> <p>・ HLSコンテンツを含むDASH広告とDASHコンテンツを含むHLS広告はサポートされていません。</p> <p>・ 19002:MSE adBreakを含むHTML5プレイヤーの場合。 insertionTypeは、正しい挿入タイプ（例：クライアントの挿入やサーバーの挿入）を表す正しい値を返しません。</p> <p>7794:デフォルトのコントロールバーがフルスクリーンモードで表示されるモバイルデバイス（iOS、Chrome 33以前またはネイティブブラウザー搭載のAndroid）では、広告を再生時にシークバーボタンと早送りボタンを使用できます。</p> <p>・ 11048:広告からHLS Liveコンテンツへの切り替えは、メディアソースの拡張機能の場合にはスムーズではありません。</p> <p>・ 16083:Android 4.4 Chrome v52では、HLSコンテンツを含むHLS広告が、再生を停止した後にパイプラインデコードエラーになる場合があります。</p> <p>・ 16097:広告の時間中に発生したエラーは処理されません。メインストリームの再生が停止する場合があります。</p> <p>・ 18095:MP4広告は、HLSライブコンテンツではサポートされません。</p> <p>19120:HLSコンテンツを含むHLS広告に対して複数のシークを行うと、ストリームの再生が停止する場合があります。</p> <p>・ 19131:プリロール広告の時間からコンテンツに切り替える際に、バッファリングオーバーレイが表示される場合があります。</p> <p>・ 20296:HLSライブストリームの場合、DVR時間内でシークバックし、解決されたミッドロールをシークオーバーすると、再生が停止する場合があります。</p> <p>・ 20298：ミッドロールを含むHLSライブストリームは、最初のミッドロールが停止し、DVRウィンドウから移動します。</p> <p>・ 20317:広告の時間に複数の広告が含まれる場合、次の広告に切り替えるとHLSライブストリームが停止する場合や、広告からコンテンツに切り替えるとHLSライブストリームが停止する場合があります。</p> 
+   <td><p>・ HLS ライブコンテンツを使用したプリロール広告は、デュアルプレーヤーモードで再生されます。</p> <p>・ HLS コンテンツを含む DASH 広告と DASH コンテンツを含む HLS 広告はサポートされていません。</p> <p>・ 19002:MSE adBreak を使用するHTML5 プレーヤー。 insertionType は、正しい挿入タイプを表す正しい値を返しません。つまり、クライアントが挿入されたか、サーバーが挿入されたかを返します。</p> <p>7794:デフォルトのコントロールバーがフルスクリーンモードで表示されるモバイルデバイス (iOS、Chrome 33 以前またはネイティブブラウザー搭載の Android) では、広告再生時にシークバーおよび早送りボタンを使用できます。</p> <p>・ 11048:メディアソース拡張機能の場合、広告から HLS ライブコンテンツに切り替えることはスムーズではありません。</p> <p>・ 16083:Android 4.4 Chrome v52 では、再生を停止した後に、HLS コンテンツを含む HLS 広告がパイプラインデコードエラーにつながる場合があります。</p> <p>・ 16097:広告ブレーク中に発生したエラーは処理されず、メインストリームの再生が停止する可能性があります。</p> <p>・ 18095:MP4 広告は、HLS ライブコンテンツではサポートされていません。</p> <p>19120:HLS コンテンツを含む HLS 広告に対して複数のシークがあると、ストリームの再生が停止する場合があります。</p> <p>・ 19131:プリロール広告ブレークからコンテンツに切り替える際に、バッファリングオーバーレイが表示される場合があります。</p> <p>・ 20296:HLS ライブストリームの場合、DVR ウィンドウでシークバックし、解決されたミッドロールをシークオーバーした後に再生が停止する可能性があります。</p> <p>・ 20298:HLS ミッドロールを含むライブストリームは、最初のミッドロール広告が DVR ウィンドウから出ると、モーメントを停止します。</p> <p>・ 20317:広告ブレークに複数の広告が含まれている場合、次の広告に切り替えたり、広告からコンテンツに切り替えたりすると、HLS ライブストリームが停止することがあります。</p> 
     <ul> 
-     <li>HLSライブストリームのDVR時間枠内の広告は解決されません。</li> 
+     <li>HLS ライブストリームの DVR ウィンドウ内の広告は解決されません。</li> 
     </ul> </td> 
    <td> </td> 
    <td> </td> 
@@ -1641,7 +1640,7 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
    <td>VOD + Live</td> 
    <td>VAST 2.0/3.0</td> 
    <td> </td> 
-   <td>SDKは、VAST adSourceに対するVMAP応答内のシーケンス属性を無視します。</td> 
+   <td>SDK は、VAST adSource に対する VMAP 応答内のシーケンス属性を保持しません。</td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1649,7 +1648,7 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
    <td>VOD + Live</td> 
    <td>VAST 2.0/3.0</td> 
    <td> </td> 
-   <td>20779:SDKは、VAST adSourceに対するVMAP応答内のシーケンス属性を順守しません。</td> 
+   <td>20779:SDK は、VAST adSource に対する VMAP 応答内の sequence 属性を保持しません。</td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1657,22 +1656,22 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
    <td>VOD + Live</td> 
    <td>VMAP 1.0</td> 
    <td> </td> 
-   <td>12014:VMAPの繰り返し属性はサポートされていません。</td> 
+   <td>12014:VMAP 繰り返し属性はサポートされていません。</td> 
    <td> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + Live</td> 
-   <td>クリエイティブの再パッケージング</td> 
+   <td>クリエイティブの再パッケージ</td> 
    <td> </td> 
-   <td>21464:広告の時間に含まれる広告の1つに対してクリエイティブの再パッケージングが失敗した場合、広告の応答は完全に破棄されます。</td> 
+   <td>21464:広告ブレーク内の広告の 1 つに対してクリエイティブの再パッケージ化が失敗すると、広告の応答は完全に破棄されます。</td> 
    <td> </td> 
    <td> </td> 
   </tr> 
  </tbody> 
 </table>
 
-**表20:高度なAd Insertion機能(CSAI)**
+**表 20:高度なAd Insertion機能 (CSAI)**
 
 <table> 
  <tbody> 
@@ -1680,15 +1679,15 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
    <td><strong>コンテンツタイプ</strong></td> 
    <td><strong>機能</strong></td> 
    <td><strong>Flash</strong></td> 
-   <td><strong>Firefox、IE、Chrome、Android ChromeのHTML5</strong></td> 
-   <td><strong>SafariのHTML5、iOS Safari</strong></td> 
-   <td><strong>Chromecast（DASH再生のみ）</strong></td> 
+   <td><strong>Firefox のHTML5、IE、Chrome、Android Chrome</strong></td> 
+   <td><strong>Safari でのHTML5、iOS Safari</strong></td> 
+   <td><strong>Chromecast（DASH 再生のみ）</strong></td> 
   </tr> 
   <tr> 
    <td>VOD</td> 
    <td>広告のみ</td> 
    <td> </td> 
-   <td>20056:Playerのテクノロジーのプロパティは、広告のみの再生の場合は空のメインコンテンツに基づいているので、関連しません</td> 
+   <td>20056:プレーヤーテクノロジープロパティは、広告のみ再生の場合は空のメインコンテンツに基づいているので、関連しません</td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1696,7 +1695,7 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
    <td>VOD + Live</td> 
    <td>カスタム広告ポリシー</td> 
    <td> </td> 
-   <td><p>・広告動作は、MP4広告とMP4コンテンツではサポートされていません。</p> <p>・ 13973:カスタム広告動作 — MSEで使用する場合、SKIPポリシーは完全なイベントをスローしません。</p> <p>・ 14939:カスタム広告動作ポリシーのスキップとスキップ広告の時間がDASHコンテンツで機能しません。</p> <p>・ 17131:広告の最初のフレームが表示され、SKIP広告ブレークポリシーの場合はコンテンツが再開されます。</p> </td> 
+   <td><p>・広告の動作は、MP4 広告と MP4 コンテンツではサポートされていません。</p> <p>・ 13973:カスタム広告動作 — MSE と共に使用すると、SKIP ポリシーが complete イベントをスローしない。</p> <p>・ 14939:スキップ広告およびスキップ広告ブレークが DASH コンテンツに対して機能しないカスタム広告動作ポリシー。</p> <p>・ 17131:広告の最初のフレームが表示され、次に SKIP 広告ブレークポリシーの場合にコンテンツが再開されます。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1706,26 +1705,26 @@ Browser TVSDK 2.4.8リリースでは、次の問題が修正されました。
    <td> </td> 
    <td> </td> 
    <td> </td> 
-   <td>リファレンスプレイヤーを使用している場合、バナー広告は表示されません。</td> 
+   <td>リファレンスプレーヤーを使用している場合、バナー広告が表示されません。</td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td>VPAID 2.0</td> 
    <td> </td> 
-   <td><p>・広告動作は、VPAID広告に対してはサポートされていません。</p> <p>・ 15032:広告の時間内にMP4またはHLS広告と組み合わせたVPAID広告はサポートされていません。</p> <p>・ 19001:AndroidおよびiOSで、VPAID広告がメインコンテンツ重複オーディオトラックとして再生されるときに、メインコンテンツの1つと広告の1つが可聴になります。</p> <p>・ 20762:VPAID広告は、ピクチャインピクチャ(PIP)ではサポートされません。</p> <p>・ 21172:VPAID広告を含むHLS VODコンテンツに対して、再生完了のイベントが受信されません。</p> <p>・ 21173:HLS VODコンテンツおよびポストロールVPAID広告に対して、onAdBreakCompleteEventを受け取りません。</p> </td> 
-   <td>プレイヤーは、VPAID広告とメインコンテンツを切り替えながら、通常モードとフルスクリーンモードを切り替えます。</td> 
+   <td><p>・広告の動作は、VPAID 広告ではサポートされていません。</p> <p>・ 15032:広告ブレーク内の MP4 または HLS 広告と組み合わせた VPAID 広告はサポートされていません。</p> <p>・ 19001:Android とiOSで、VPAID 広告が MP4 で再生されたときに、メインコンテンツのダブルオーディオトラックが可聴になると、メインコンテンツの 1 つと広告の 1 つが再生されます。</p> <p>・ 20762:VPAID 広告は、ピクチャーインピクチャー (PIP) ではサポートされていません。</p> <p>・ 21172:VPAID 広告を含む HLS VOD コンテンツに対する再生完了イベントを受信しない。</p> <p>・ 21173:HLS VOD コンテンツおよびポストロール VPAID 広告に対して onAdBreakCompleteEvent を受信しません。</p> </td> 
+   <td>VPAID 広告とメインコンテンツを切り替える際に、プレーヤーは通常モードとフルスクリーンモードを切り替えます。</td> 
    <td> </td> 
    <td> </td> 
   </tr> 
  </tbody> 
 </table>
 
-**表21:統合**
+**表 21:統合**
 
-| **コンテンツタイプ** | **機能** | **Flash** | **Firefox、IE、Chrome、Android ChromeのHTML5** | **SafariのHTML5、iOS Safari** | **Chromecast（DASH再生のみ）** |
+| **コンテンツタイプ** | **機能** | **Flash** | **Firefox のHTML5、IE、Chrome、Android Chrome** | **Safari でのHTML5、iOS Safari** | **Chromecast（DASH 再生のみ）** |
 |---|---|---|---|---|---|
-| VOD + Live | Adobe AnalyticsVHL統合 |  | 19004:Video Analyticsのトラッキングは、UIコンフィギュレーターツールでは使用できません。 |  |  |
+| VOD + Live | Adobe Analytics VHL 統合 |  | 19004:ビデオ分析のトラッキングは、UI コンフィギュレーターツールでは使用できません。 |  |  |
 
-## 役立つリソース{#helpful-resources}
+## 参考リソース {#helpful-resources}
 
-* [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html)のページにある完全なヘルプドキュメントを参照してください。
+* 完全なヘルプドキュメントは、 [Adobe Primetimeラーニングとサポート](https://experienceleague.adobe.com/docs/primetime.html) ページ。

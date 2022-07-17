@@ -1,142 +1,140 @@
 ---
-title: TVSDK 2.1 PlayStation 4リリースノート
-description: TVSDK 2.1 for PlayStation 4リリースノートでは、TVSDK 2.1 PlayStation 4でサポートされる機能と既知の問題について説明します。
+title: TVSDK 2.1 PlayStation 4 リリースノート
+description: PlayStation 4 向け TVSDK 2.1 リリースノートでは、 TVSDK 2.1 PlayStation 4 でサポートされる機能と既知の問題について説明します。
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: 32af3fe4-c730-41f6-a558-987bd14c9bae
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
 
 ---
 
+# TVSDK 2.1 PlayStation 4 リリースノート {#tvsdk-playstation-release-notes}
 
-# TVSDK 2.1 PlayStation 4リリースノート{#tvsdk-playstation-release-notes}
+PlayStation 4 向け TVSDK 2.1 リリースノートでは、 TVSDK 2.1 PlayStation 4 でサポートされる機能と既知の問題について説明します。
 
-TVSDK 2.1 for PlayStation 4リリースノートでは、TVSDK 2.1 PlayStation 4でサポートされる機能と既知の問題について説明します。
+## 解決された問題 {#resolved-issues}
 
-## 解決された問題{#resolved-issues}
+以下は、PlayStation 4 向けの TVSDK 2.1 で解決された問題です。
 
-TVSDK 2.1 for PlayStation 4で解決された問題を次に示します。
+**バージョン 2.1.0.638**
 
-**バージョン2.1.0.638**
-
-* **PTPLAY-10439:VMAPラッパー広告リンクが壊れた**
-とき、プレイヤーが準備中の状態で停止していた（送信されていなかった） 
-`onComplete` を呼び出し元に送信する)。
+* **PTPLAY-10439:**
+VMAP ラッパー広告リンクが壊れた場合、プレーヤーは準備状態で停止していました（送信されていませんでした）。 
+`onComplete` を呼び出し元に送信する )。
 
 * **PTPLAY-10179:**
 
-   `creativeRepackaging` と `fallbackOnInvalidCreative` 値がデフォルトでオフになりました。また、`creativeRepackaging`フラグが設定されたが`creativeRepackaging`形式が指定されなかった場合、`onRepackagingComplete`は広告の時間に広告がある回数だけ呼び出され、広告の時間が複数回作成されていました。
+   `creativeRepackaging` および `fallbackOnInvalidCreative` の値は、デフォルトでオフになりました。 また、 `creativeRepackaging` フラグは設定されましたが、何もありません `creativeRepackaging` 形式が指定された場合、 `onRepackagingComplete` が広告ブレーク内の広告と同じ回数呼び出され、広告ブレークが複数回作成されました。
 
-* **Zendesk #10304**:広告の有効性のオン/オフ変数が初期化されませんでした。ここで、`DataSetEntry's`ベクトルから変数を初期化します。
+* **Zendesk #10304**:広告活性のオン/オフ変数が初期化されませんでした。 ここでは、から変数を初期化します。 `DataSetEntry's` ctor.
 
-* **PTPLAY-10318：バックグラウンドモードの**
-サポートが導入されました。
-* **Zendesk #17409：トリック再生モードに**
-入り、通常再生モードに戻り、再びトリック再生モードに戻ると、再生位置がジャンプしていた問題を修正しました。
-* **PTPLAY-9552：応答XMLファイルを解析**
-した後、広告がない場合にエラーコード1108がpingされるようになりました。
-* **PTPLAY-9551:Auditudeの処理**
-後に広告の時間がない場合、CRSが呼び出されます。 
-**onPrefetchCompleteはgroupCount** を減らします。広告の時間がないので、**groupCount**&#x200B;は0で、1ずつデクリメントされます。 以前は&#x200B;**groupCount**&#x200B;は&#x200B;**uint32_t**&#x200B;でしたが、このため最大値に変更されていました。 現在は&#x200B;**int32_t**&#x200B;です。
+* **PTPLAY-10318:**
+バックグラウンドモードのサポートが導入されました。
+* **Zendesk # 17409:**
+トリック再生モードに入り、通常再生モードに戻り、再びトリック再生モードに入ると、再生位置がジャンプしていました。
+* **PTPLAY-9552:**
+応答 XML ファイルを解析した後、広告が存在しない場合は常にエラーコード 1108 が ping されるようになりました。
+* **PTPLAY-9551:**
+Auditude 処理の後に広告ブレークがない場合、 CRS は 
+**onPrefetchComplete** groupCount を減らします。 広告ブレークがないので、 **groupCount** は 0 で、1 ずつ減らされます。 以前は **groupCount** が **uint32_t** その理由は、以前は最大値に変更されていたからです。 これは、 **int32_t**.
 
-**バージョン2.1.0.621**
+**バージョン 2.1.0.621**
 
 * **Zendesk #4555**
- Instant on Memory issues leading-Loading errors - 
-`MediaItemLoader` リリース中に発生するクラッシュに関する修正  `mediaitemloader`
+メモリ上の即時実行時の問題のリーディング — ロードエラー — 
+`MediaItemLoader` リリース時にクラッシュが発生する問題を修正 `mediaitemloader`
 
 * **Zendesk #17223**
-2.x CSAI:一部の広告トラッキングURLが発生しない
-   * インライン広告を指すVAST広告に、追跡URLが含まれていない場合がありました。
-   * VAST XMLの広告に複数のインプレッションタグがある場合、最初のインプレッションURLのみが保存され、残りは無視されました。 これで、すべてのインプレッションURLが保存され、後でピンジングされます。
+2.x CSAI:一部の広告トラッキング URL が実行されません
+   * 次にインライン広告を指す一部の VAST 広告に、トラッキング URL が欠落していました。
+   * VAST XML の広告に複数のインプレッションタグがある場合、最初のインプレッション URL のみが保存され、残りは無視されました。 これで、すべてのインプレッション URL が保存され、後で ping が送信されます。
 * **Zendesk #17224**
-PS4ユーザーエージェントがPrimetime情報をUAStringの最後に移動
+PS4 ユーザーエージェントが UAString の最後に primetime 情報を移動
 * **Zendesk #17226**
-2.x CSAI:一部の広告が繋がっているわけではありません。
+2.x CSAI:すべての広告が関連付けられているわけではありません。
 \
-   修正は、insertBy操作またはeraseBy操作によってタイムラインが変更されたことを示し、それに応じて期間を切り替えることです。
+   修正は、insertBy 操作または eraseBy 操作によってタイムラインが変更されたことを示し、それに応じて期間切り替えを行うことです。
 
-* **ゼンデスク#17284**
-   [すべての] platformsクローズドキャプションは表示されません。\
-   HLS - VTTキャプションファイル用の`EXT-X-MEDIA-TIME`タグをサポートします。
+* **Zendesk #17284**
+   [すべてのプラットフォーム] クローズドキャプションは表示されません。\
+   HLS — のサポート `EXT-X-MEDIA-TIME` タグを使用して、VTT キャプションファイルにアクセスできます。
 
-* **Zendesk #17889 PS4での「Milky」**
-再生
+* **Zendesk #17889**
+PS4 で再生「乳の状態」
 \
-   適用された正しいyoffset（カラー変換用）
+   適用された正しいオフセット（カラー変換用）
 
 * **Zendesk #17954**
-広告のフォールバックロジック+空のvastの処理
+広告のフォールバックロジック+空の vast の処理
 \
-   Vastラッパーの1つが空の場合、Vastパーサーを使用してラッパーの処理が続行される問題を修正しました。
+   Vast ラッパーの 1 つが空の場合、Vast パーサーがラッパーの処理を続行するために使用されていた問題を修正しました。
 
 * **Zendesk #17807**
- Zendesk #3103と同じ空き領域を越えることはできません。
+Zendesk #3103と同じ空の広大を過去に取得できません
 
-* **Zendesk #17865 PS4およびXBox Oneの**
-フォールバックロジック
+* **Zendesk #17865**
+PS4 および XBox One のフォールバックロジック
 \
    Zendesk #3103と同じ
 
-**バージョン2.1.0.591**
+**バージョン 2.1.0.591**
 
 * **Zendesk #3767**
-PS4広告コードスニペット。VMAPリダイレクトを処理すると、広告解決に失敗します。
+PS4 広告コードスニペットで、VMAP リダイレクトを処理する際に広告解決が失敗します。
 * **Zendesk #4096**
-PS4 CSAI:セグメント化障害広告ライブラリがVMAP応答を処理する際に、TVSDKがセグメント化障害をスローした場合に発生するクラッシュを修正しました。
+PS4 CSAI:セグメント化障害：広告ライブラリが VMAP 応答を処理しているときに TVSDK がセグメント化障害をスローした場合に、クラッシュが修正されました。
 
 * **Zendesk #4161**
-Trickplay 16xがムービーの最後でフリーズするトリック再生が通常の再生に戻ったときに行われるデッドロックが修正されました。
+映画の最後に 16 倍のトリックプレイがフリーズトリックプレイが通常の再生に戻ったときに発生するデッドロックの修正
 
-* **Zendesk #4208クローズドキャプションがオンの場合の**
-ランダムクラッシュクローズドキャプションが有効な場合の固定メモリリーク
+* **Zendesk #4208**
+クローズドキャプションがオンの場合のランダムクラッシュクローズドキャプションが有効な場合の固定メモリリーク
 
 * **Zendesk #4213**
-PS4 CSAI:すべての広告関連呼び出しに対するデフォルトのユーザーエージェント文字列の変更ブラウザーが使用しているのと同じUA文字列を使用してユーザーエージェント文字列が作成され、+ Primetime文字列を追加します。
+PS4 CSAI:すべての広告関連呼び出しのデフォルトのユーザーエージェント文字列を変更ユーザーエージェント文字列は、ブラウザーが使用している+ Primetime 文字列を追加するのと同じ UA 文字列を使用して作成されます
 
-* **PTPLAY-7675** （内部）トランスコードされた広告がVMAPまたはVAST応答内で呼び出されたときに、Creative Repackagingを再生できませんでした。修正は、広告が大量の場合にアセットから読み取るのではなく、広告からメディアファイルを読み取るだけです。
+* **PTPLAY-7675** （内部）トランスコードされた広告が、VMAP または VAST 応答内で呼び出された場合、クリエイティブの再パッケージングに失敗していた問題を再生しませんでした。 修正では、広告が大きい場合、アセットから読み取るのではなく、広告から mediafile を読み取るだけです。
 
-* **PTPLAY-7895** (internal): `allowMultipleAds=false` `allowMultipleAds` パラメーターが正しく従っていない場合に、広告が再生されないバグが修正されました。
+* **PTPLAY-7895** （内部） `allowMultipleAds=false`、広告が再生されない場合、 `allowMultipleAds` パラメーターが正しく追跡されていませんでした。
 
-* **PTPLAY-7896** (internal) PS4で広告が順番どおりに再生されない問題を修正しました。広告がXML応答に表示された順番とは異なる場合がありました。
+* **PTPLAY-7896** （内部）PS4 で広告が順不同で再生されています XML 応答で広告が表示された順序に広告がない問題を修正しました。
 
-* PS4 TVSDKは、ゲームではなくミニアプリで再テストしました。
+* PS4 TVSDK は、ゲームの代わりにミニアプリ内で再テストしました。
 
-**バージョン2.1.0.563**
+**バージョン 2.1.0.563**
 
 * **Zendesk #3868**
- TVSDKは、Playstation SDK 2.5をサポートします。TVSDKは、2.5 Playstation SDKを使用して構築されました。
+TVSDK は Playstation SDK 2.5 をサポートしていますか。 TVSDK は、2.5 Playstation SDK を使用して構築されました。
 
 * **Zendesk #4093**
- targetingPt広告リクエストの情報キーと値のペア。
+Pt Ads リクエストの targetingInfo キーと値のペア。
 \
-   キー/値のペアを区切る改行文字が追加されました。
+   キーと値のペアを区切る改行文字が追加されました。
 
-## サポートされる機能{#supported-features}
+## サポートされる機能 {#supported-features}
 
-TVSDK 2.1 for PlayStation 4では、以下の機能がサポートされています。
+TVSDK 2.1 for PlayStation 4 では、次の機能がサポートされています。
 
-**バージョン2.1.0.621**
+**バージョン 2.1.0.621**
 
-* 広告のフォールバック、広告選択ロジックのデイジーチェーン(Zendesk #3103)
-フォールバックルールが有効になっているVAST広告（クリエイティブ）の場合、TVSDKは、無効なMIMEタイプを持つ広告を空として扱い、その場所でフォールバック広告を使用しようとします。フォールバック動作の一部を設定できます
+* Ad Fallback, Daisy chaining in ad selection logic (Zendesk #3103) フォールバックルールが有効な VAST 広告（クリエイティブ）の場合、 TVSDK は無効な MIME タイプの広告を空の広告として扱い、代わりにフォールバック広告を使用しようとします。フォールバック動作の側面を設定できます
 
-**バージョン2.1.0.538**
+**バージョン 2.1.0.538**
 
-* 再生、一時停止、シークを含むHLS VOD再生
+* HLS VOD 再生（再生、一時停止、シークを含む）
 * アダプティブビットレートストリーミング
-* Primetime DRMおよびVanilla AESで保護されたコンテンツを使用した暗号化されたコンテンツ再生
-* デフォルトの広告動作と広告の許可を持つクライアント側の広告挿入
-* クリエイティブの再パッケージング
-* WebVTTクローズドキャプション
-* カスタム開始の位置で即時オン
-* 早送りと巻き戻しによるトリック再生
-* 302リダイレクト
+* Primetime DRM と Vanilla AES で保護されたコンテンツを使用した暗号化されたコンテンツ再生
+* デフォルトの広告動作と許容度を備えたクライアントサイド広告の挿入
+* クリエイティブの再パッケージ
+* WebVTT クローズドキャプション
+* カスタムの開始位置ですぐにオン
+* 早送りと巻き戻しでのトリック再生
+* 302 リダイレクト
 
-## 役立つリソース{#helpful-resources}
+## 参考リソース {#helpful-resources}
 
-* [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html)のページにある完全なヘルプドキュメントを参照してください。
+* 完全なヘルプドキュメントは、 [Adobe Primetimeラーニングとサポート](https://experienceleague.adobe.com/docs/primetime.html) ページ。

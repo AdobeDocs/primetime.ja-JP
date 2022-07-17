@@ -4,9 +4,9 @@ description: TVSDK 3.15 for Android リリースノートでは、 TVSDK Android
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: cd2c64ef-dd42-4dc2-805f-eeb64a8a53d9
-source-git-commit: f266b93281a290a8c2f19ac6869287d6480f49e5
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
-source-wordcount: '5540'
+source-wordcount: '5516'
 ht-degree: 0%
 
 ---
@@ -608,7 +608,7 @@ WebViewDebugging はデフォルトで False に設定されています。 デ�
 
    ビデオ解像度は、ビットレートスイッチとして上に切り替わります。
 
-* ZenDesk#33192 - AudioTrack が AudioUpdatedEventListener::onAudioUpdated を介してトラックを取得する場合、AudioTrack の名前が null になります。
+* ZenDesk#33192 - AudioTrack が AudioUpdatedEventListener::onAudioUpdated を介してトラックを取得する場合、AudioTrack に null の名前が付けられます。
 
    FireTV Stick のいくつかのシナリオでは、実際のオーディオ更新がない場合に onAudioUpdate イベントが発生していました。 現在は修正されています。
 
@@ -772,8 +772,8 @@ WebViewDebugging はデフォルトで False に設定されています。 デ�
 
 ## 参考リソース {#helpful-resources}
 
-* [必要システム構成](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-requirements.html)
-* [Android 向け TVSDK 3.10 プログラマーガイド](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-overview-prod-audience-guide.html)
+* [必要システム構成](/help/programming/tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md)
+* [Android 向け TVSDK 3.10 プログラマーガイド](/help/programming/tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-prod-audience-guide.md)
 * [API リファレンス用の TVSDK Android Javadoc](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html)
 * [TVSDK Android C++ API ドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html)  — 各 Java クラスには対応する C++クラスがあり、C++ドキュメントには Javadoc よりも説明が多い資料が含まれています。Java API の詳細については、C++のドキュメントを参照してください。
 * [TVSDK 1.4 から 2.5 for Android(Java) 移行ガイド](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)

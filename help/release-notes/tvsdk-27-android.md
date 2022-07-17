@@ -4,9 +4,9 @@ description: Android™向け TVSDK 2.7 リリースノートでは、TVSDK Andr
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: 3891ea44775899c1e0d43c4ac74bbc4b07d7962e
+source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
 workflow-type: tm+mt
-source-wordcount: '4070'
+source-wordcount: '4037'
 ht-degree: 0%
 
 ---
@@ -425,10 +425,10 @@ Adobe Primetimeのバージョン文字列がシステムユーザーエージ�
 
 ## 参考リソース {#helpful-resources}
 
-* [必要システム構成](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2.7-requirements.html?lang=en)
-* [Android™用 TVSDK 2.7 プログラマーガイド](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2.7-overview-prod-audience-guide.html?lang=en)
+* [必要システム構成](/help/programming/tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md)
+* [Android™用 TVSDK 2.7 プログラマーガイド](/help/programming/tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-prod-audience-guide.md)
 * [API リファレンス用 TVSDK Android™ Javadoc](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html)
 * [TVSDK Android™ C++ API ドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/cpp/namespaces.html)  — 各 Java™クラスには対応する C++クラスがあり、C++ドキュメントには Java™のドキュメントよりも説明的な内容が含まれています。Java™ API の詳細については、C++のドキュメントを参照してください。
-* [Android™(Java™) 向け TVSDK 1.4 から 2.5 への移行ガイド](https://experienceleague.adobe.com/docs/primetime/migration/tvsdk-14-25-android.html?lang=en)
+* [Android™(Java™) 向け TVSDK 1.4 から 2.5 への移行ガイド](/help/migration-guides/tvsdk-14-25-android.md)
 * 画面のオン/オフシナリオの処理については、 `Application_Changes_for_Screen_On_Off.pdf` ファイルがビルドに含まれています。
 * 完全なヘルプドキュメントは、 [Adobe Primetimeラーニングとサポート](https://experienceleague.adobe.com/docs/primetime.html) ページ。

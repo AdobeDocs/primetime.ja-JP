@@ -2,9 +2,9 @@
 title: TVSDK 3.13 for iOSリリースノート
 description: TVSDK 3.13 for iOSリリースノートでは、 TVSDK iOS 3.13 の新機能や変更点、解決された既知の問題、およびデバイスの問題について説明します。
 exl-id: adf8ab23-86d6-4113-b243-2709d5f7f829
-source-git-commit: 92defeee19a430c8b0b66696c527a6abe377f4b9
+source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
 workflow-type: tm+mt
-source-wordcount: '7587'
+source-wordcount: '7575'
 ht-degree: 0%
 
 ---
@@ -1205,6 +1205,6 @@ ZD #4279の修正で解決
 
 ## 参考リソース {#helpful-resources}
 
-* [TVSDK 3.4 for iOSプログラマーガイド](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-3x-ios-prog/introduction/ios-3x-overview.html?lang=en)
+* [TVSDK 3.4 for iOSプログラマーガイド](/help/programming/tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md)
 * [TVSDK iOS 3.4 API リファレンス](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v34/index.html)
 * 完全なヘルプドキュメントは、 [Adobe Primetimeラーニングとサポート](https://experienceleague.adobe.com/docs/primetime.html) ページ。

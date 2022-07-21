@@ -1,9 +1,10 @@
 ---
 title: セグメントと時間枠の定義
 description: セグメントと時間枠の定義
-source-git-commit: a23de698b073d271df9b04494ff59f5d5a194c9d
+exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
+source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
@@ -54,9 +55,8 @@ MVPD を選択するには **セグメント内の MVPD** オプション：
 
    次に示す、 **セグメント内のチャネル** が [プログラマ](/help/AccountIQ/product-concepts.md#programmer-def) プログラマー名の下の企業とリスト項目が、その企業名です [チャネル](/help/AccountIQ/product-concepts.md#channel-def). プログラマの下で個々のチャネルを選択するか、プログラマの下でのチャネルのすべてのアクティビティを選択してレポートとグラフの結果に含めることができます。
 
-   ![](assets/programmer-channels.png)
-
-   *図：チャネルセレクターに表示されるプログラマーとチャネル*
+   <!--![](assets/programmer-channels.png)
+   *Figure: Programmers and channels listed in channels selector*-->
 
    >[!IMPORTANT]
    >
@@ -95,9 +95,7 @@ MVPD を選択するには **セグメント内の MVPD** オプション：
 
 1. 次のいずれかを選択 **週** または **月** から **集計基準** オプションを使用して、評価の精度を設定します。
 
-   ![](assets/granularity-timeframe-weekwise.png)
-
-   *図：精度と時間枠を選択する日付選択*
+   <!--![](assets/granularity-timeframe-weekwise.png)   *Figure: Date picker to select Granularity and time frame*-->
 
 1. 精度を選択したら、前方向または後方向の矢印を使用して、時間の経過に合わせて前方または後方に移動できます。
 

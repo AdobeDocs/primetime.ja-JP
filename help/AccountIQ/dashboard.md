@@ -2,7 +2,7 @@
 title: アカウント IQ ダッシュボード
 description: ダッシュボードを使用すると、幅広いサブスクライバーデータを分析することで、パスワード共有のインスタンスを特定できます。
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 2ae03c61344b878c9cac268ad6e7e91b08810488
+source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -28,8 +28,6 @@ ht-degree: 0%
 
 
 *図：平均共有スコアパネル — 現在のセグメントの集計*
-
-![](assets/aggregate-sharing-score.svg)
 
 次の 3 つの指標は、平均共有スコアの構成要素です。
 

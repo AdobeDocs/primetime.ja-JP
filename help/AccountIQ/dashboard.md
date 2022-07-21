@@ -2,9 +2,9 @@
 title: アカウント IQ ダッシュボード
 description: ダッシュボードを使用すると、幅広いサブスクライバーデータを分析することで、パスワード共有のインスタンスを特定できます。
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
+source-git-commit: 2ae03c61344b878c9cac268ad6e7e91b08810488
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,9 @@ ht-degree: 0%
 
 ![アカウント IQ のダッシュボード](assets/dashboard-capture.png)
 
+
+*図：ダッシュボード*
+
 ## 平均共有スコア — 現在のセグメントの集計 {#aggregated-sharing}
 
 集計共有スコアパネルには、アカウントとストリーミングのボリュームに関する共有の量と影響を要約した上部の行が表示されます。
@@ -23,9 +26,12 @@ ht-degree: 0%
 
 ![](assets/aggregate-sharing-score.png)
 
+
+*図：平均共有スコアパネル — 現在のセグメントの集計*
+
 ![](assets/aggregate-sharing-score.svg)
 
-次の 3 つの指標は、集計共有スコアのコンポーネントです。
+次の 3 つの指標は、平均共有スコアの構成要素です。
 
 ### 共有レベル {#sharing-level}
 
@@ -34,6 +40,9 @@ ht-degree: 0%
 選択した期間に選択したプログラマチャネルの 1 つからストリーミングされた、選択した MVPD のセット内の各アカウントに対して計算された共有確率の平均に基づいて計算された値。
 
 ![](assets/sharing-level.png)
+
+
+*図：共有レベル*
 
 トレンドインジケーターは、の前の期間からの指標の値の変化の割合を示します。
 
@@ -45,6 +54,9 @@ ht-degree: 0%
 
 ![](assets/usage-4mshared-accounts.png)
 
+
+*図：共有アカウントからの使用*
+
 ### 全体的な共有スコア {#overall-sharing-score}
 
 全体的な共有スコアは、「共有レベル」や「共有アカウントの z 使用量」などの共有スコアの複合です。
@@ -52,6 +64,9 @@ ht-degree: 0%
 業界と比較した場合の共有の相対的な影響を反映した値が提供されます。 目的はクレジットスコアと似ており、状況を 1 つの数字でまとめます。 しかし、この場合、数が多いほど、潜在的な害が大きくなります。
 
 ![](assets/overall-sharing-score.png)
+
+
+*図：全体的な共有スコア*
 
 <!--### MVPDs in segment {#mvpd-in-segment}
 
@@ -69,11 +84,17 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ![](assets/top-mvpds.png)
 
+
+*図：全体スコア別のセグメントで上位の MVPD*
+
 ### チャネルおよび MVPD によるスコアの共有 {#sharin-score-by-channels-and-mvpds}
 
 次の表は、現在のセグメント内の MVPDs に対して選択したチャネルの共有スコアの比較ビューを示しています。
 
 ![](assets/sharing-scores-by-channels-mvpds.png)
+
+
+*図：チャネルおよび MVPD によるスコアの共有*
 
 ### アカウント共有の確率 {#accounts-sharing-probability}
 
@@ -86,8 +107,15 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ![](assets/dashboard-ac-sharing-prob.png)
 
+
+*図：異なる共有確率範囲の購読者アカウントの数と割合*
+
 ### 共有の確率レベル別のアカウント数と使用状況 {#number-of-accounts-usage-sharing-probability}
 
 このパネルは、共有アカウントからの各キンタイルの関連使用量を使用して、共有確率の極めて低い (0 ～ 20 %) から非常に高い (80 = 100 %) までの範囲に分割されたアカウントの表形式の表示を提供します。
 
 ![](assets/no-acc-usage-prob-level.png)
+
+
+*図：様々な確率範囲に該当するアカウント、トレンドおよび使用の数*
+

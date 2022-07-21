@@ -1,13 +1,13 @@
 ---
 title: アカウント IQ ダッシュボード
-description: 'ダッシュボードを使用すると、幅広いサブスクライバーデータを分析することで、パスワード共有のインスタンスを特定できます。  '
-source-git-commit: f6f1769d86a98d3a545bf986e41e9ba2252a36ff
+description: ダッシュボードを使用すると、幅広いサブスクライバーデータを分析することで、パスワード共有のインスタンスを特定できます。
+exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
+source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
-
 
 # ダッシュボード {#dashboard}
 
@@ -15,13 +15,15 @@ ht-degree: 0%
 
 ![アカウント IQ のダッシュボード](assets/dashboard-capture.png)
 
-## 集計共有スコア {#aggregated-sharing}
+## 平均共有スコア — 現在のセグメントの集計 {#aggregated-sharing}
 
 集計共有スコアパネルには、アカウントとストリーミングのボリュームに関する共有の量と影響を要約した上部の行が表示されます。
 
 値は、購読者による秘密鍵証明書の共有の規模を把握するのに役立ち、それに基づいて行動する必要性の尺度を提供します。
 
 ![](assets/aggregate-sharing-score.png)
+
+![](assets/aggregate-sharing-score.svg)
 
 次の 3 つの指標は、集計共有スコアのコンポーネントです。
 

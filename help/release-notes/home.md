@@ -3,10 +3,10 @@ title: Primetime リリースノート
 description: Primetime リリースノート
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 9f218bddddeab52480bbdcd41e8f0e6fd0fab0f8
+source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 32%
+source-wordcount: '298'
+ht-degree: 33%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 32%
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントには、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題が記載されています。
 
-## PTAI 22.6.2 の機能強化および修正点
+## PTAI 22.7.1 の機能強化および修正点
 
-このリリースでは、広告パフォーマンスログの機能強化に重点を置いており、CRS の利用不可および追加のネットストレージオリジンに関する詳細が記載されています。
+このリリースでは、広告パフォーマンスログの機能強化に重点を置いており、DASH ワークフロー用の利用可能な関連指標が導入されました。
 
 ## TVSDK 3.15 Android の修正点
 

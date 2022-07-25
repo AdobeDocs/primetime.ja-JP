@@ -2,7 +2,7 @@
 title: アカウント IQ ダッシュボード
 description: ダッシュボードを使用すると、幅広いサブスクライバーデータを分析することで、パスワード共有のインスタンスを特定できます。
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
+source-git-commit: 32ba300ce729eab7a6906d8fb0875e8f2bbe2d1d
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -110,7 +110,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ### 共有の確率レベル別のアカウント数と使用状況 {#number-of-accounts-usage-sharing-probability}
 
-このパネルは、共有アカウントからの各キンタイルの関連使用量を使用して、共有確率の極めて低い (0 ～ 20 %) から非常に高い (80 = 100 %) までの範囲に分割されたアカウントの表形式の表示を提供します。
+このパネルは、共有アカウントからの各キンタイルの関連使用量を使用して、共有確率の極めて低い (0 ～ 20 %) から非常に高い (80 ～ 100 %) までの範囲に分割されたアカウントの表形式の表示を提供します。
 
 ![](assets/no-acc-usage-prob-level.png)
 

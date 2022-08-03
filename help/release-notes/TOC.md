@@ -5,8 +5,8 @@ user-guide-title: Primetime リリースノート
 user-guide-description: リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を示します。
 source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 16%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

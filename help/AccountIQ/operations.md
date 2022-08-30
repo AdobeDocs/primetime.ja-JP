@@ -1,13 +1,13 @@
 ---
 title: アカウント IQ の操作
 description: アカウント IQ の操作には、購読者アカウントに対して自動化と一括操作を実行し、その効果を追跡するアクションを実行する必要があります。
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
+source-git-commit: 40239b6715d8eab95bc2564fb19eb6832387ad3e
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
-
 
 # 運用 {#operations-tab-next-steps}
 
@@ -55,19 +55,30 @@ ht-degree: 0%
 
 1. メインの操作ページで操作名を選択します。
 
-   レポートは積み重ね棒グラフの形式で表示されます。
+   レポートは、積み重ね棒グラフの形式で表示されます。
 
    ![](assets/operation-impact-report.png)
 
    *図：運用レポートを開いて、運用の影響を確認*
 
-   x 軸には評価期間がプロットされ、y 軸には操作の影響を測定する変数がプロットされます。
+   X 軸は評価期間を表し、y 軸は操作の影響（評価期間中のセグメント内のアカウント数）を示します。 各バーは 3 つの部分に分かれています。
 
-   例えば、上の画像では、y 軸の変数はアカウント数です。 グラフを見ると、特定の時間（操作評価期間の第 2 週など）に、操作セグメントに含まれるアカウント数と、その時間に含まれる操作セグメントの外部に含まれるアカウント数を比較できます。 したがって、評価期間中に操作セグメント内およびセグメント外でアカウント数がどのように変化するかを分析できます。
+   * 1 つの部分は、操作セグメントの条件を満たすアカウントの数を表します。
 
-   したがって、疑うアカウントに警告 E メールを送信し、操作セグメントのアカウントが確率 90 を超え、コンテンツのストリーミングに 5 台以上のデバイスを使用する場合、セグメントの評価期間の最初のアカウントは 700 万を超えます。 この数は、グラフに示すように、評価期間中に変化し、操作の影響を示します。 評価に基づいて、アカウントの疑問に対する是正措置を講じたり、操作を続行したり、より良い結果を得るために戦略を調整して、資格情報の共有を抑えたりできます。
+   * 別の部分は、元々セグメント内にあったが、操作セグメントの基準を満たさなくなった、その期間のアクティブなアカウントの数を表します。
 
-2. レポートを閉じて、メインの操作ページに戻るには、「 **運用** のオプション **アクション** をクリックします。
+   * 3 番目の部分は、その期間にアクティブでなかったアカウントを表します。
+   >[!NOTE]
+   >
+   >最初のバーは、評価期間の最初に操作セグメントの条件を満たすアカウント数を表します。
+
+   時間の経過と共に、元の条件に対する行動を変更した（例えば、共有の確率が 90 を超え、5 台以上のデバイスを使用する）アカウントの数、または非アクティブになったアカウントの数を示すことで、（操作を通じて）アクションの効果がグラフに表示されます。
+
+<!--For example, in the above image the variable on the y-axis is number of accounts. Looking at the graph you can compare the number of accounts that are in the operations' segment versus the number of accounts that are outside the operations segment at a particular time (such as week 2nd of the operations evaluation period). Therefore, you can analyze how over the evaluation period do number of accounts vary within the operation segment and outside the segment.
+
+So, if your operation was to send out warning emails to suspecting accounts, and accounts in operations segment were those with sharing probability more than 90 and using more than 5 devices to stream content, then in the beginning of the evaluation period accounts in segment are more than 17 thousand. This number changes over the evaluation period as shown in the graph, thereby indicating the impact of operation. Based on the evaluation, you can take remedial measures on suspecting accounts, or continue with the operation, or adjust your strategy for better outcomes to curb credential sharing.-->
+
+1. レポートを閉じて、メインの操作ページに戻るには、「 **運用** のオプション **アクション** をクリックします。
 
 <!--
 

@@ -2,9 +2,9 @@
 title: アカウント IQ ダッシュボード
 description: ダッシュボードを使用すると、幅広いサブスクライバーデータを分析することで、パスワード共有のインスタンスを特定できます。
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 7706d5fcafdcfb9c0d4cc69936681c6223b0739d
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # ダッシュボード {#dashboard}
 
 ダッシュボードは、アカウント共有の範囲と影響を大まかに把握できるように設計されたグラフとレポートの集まりにデータをまとめて集計します。 アカウント IQ の主要なレポートと指標を含む単一のページが提供されます。
-
-<table><tr><th>
-
-+++プログラマ向けのダッシュボード
 
 ![アカウント IQ のダッシュボード](assets/dashboard-capture.png)
 
@@ -121,29 +117,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 *図：様々な確率範囲に該当するアカウント、トレンドおよび使用の数*
 
-+++
 
-</th><th>
-
-+++MVPD 用のダッシュボード MVPD ユーザ用のダッシュボードは、プログラマユーザ用のダッシュボードとは少し異なります。
-
-![](assets/dashboard-mvpd.png)
-
-
-*図：MVPD のダッシュボード*
-
-## 全体的な共有スコア別のセグメントで上位のプログラマー {#}
-
-![](assets/top-programmers-panel.png)
-
-
-*図：セグメント内の上位のプログラマーを示すパネル*
-+++
-
-</th>
-</tr>
-
-</table>
 
 <!--
 +++Dashboard for programmers

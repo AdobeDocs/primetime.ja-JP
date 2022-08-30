@@ -2,9 +2,9 @@
 title: アカウント IQ の操作
 description: アカウント IQ の操作には、購読者アカウントに対して自動化と一括操作を実行し、その効果を追跡するアクションを実行する必要があります。
 exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
-source-git-commit: 40239b6715d8eab95bc2564fb19eb6832387ad3e
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 1. メインの操作ページで操作名を選択します。
 
-   レポートは、積み重ね棒グラフの形式で表示されます。
+   レポートは、積み重ね列グラフの形式で表示されます。
 
    ![](assets/operation-impact-report.png)
 

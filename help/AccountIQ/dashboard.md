@@ -2,9 +2,9 @@
 title: アカウント IQ ダッシュボード
 description: ダッシュボードを使用すると、幅広いサブスクライバーデータを分析することで、パスワード共有のインスタンスを特定できます。
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
+source-git-commit: a015cf059c599c043f03b981eed640fbdbffc27b
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ![](assets/mvpds-in-segment.png)-->
 
-### MVPDs の業界全体の共有スコア {#top-mvpds}
+## MVPDs の業界全体の共有スコア {#top-mvpds}
 
 次の表は、セグメント内の MVPD の異なる集計共有スコアの比較ビューを示しています。
 
@@ -85,7 +85,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 *図：全体スコア別のセグメントで上位の MVPD*
 
-### チャネルおよび MVPD によるスコアの共有 {#sharin-score-by-channels-and-mvpds}
+## チャネルおよび MVPD によるスコアの共有 {#sharin-score-by-channels-and-mvpds}
 
 次の表は、現在のセグメント内の MVPDs に対して選択したチャネルの共有スコアの比較ビューを示しています。
 
@@ -94,7 +94,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 *図：チャネルおよび MVPD によるスコアの共有*
 
-### アカウント共有の確率 {#accounts-sharing-probability}
+## アカウント共有の確率 {#accounts-sharing-probability}
 
 このグラフは、共有確率 5 分割の範囲を非常に低い (0 ～ 20 %) から非常に高い (80 = 100 %) に分割します。
 
@@ -108,7 +108,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 *図：異なる共有確率範囲の購読者アカウントの数と割合*
 
-### 共有の確率レベル別のアカウント数と使用状況 {#number-of-accounts-usage-sharing-probability}
+## 共有の確率レベル別のアカウント数と使用状況 {#number-of-accounts-usage-sharing-probability}
 
 このパネルは、共有アカウントからの各キンタイルの関連使用量を使用して、共有確率の極めて低い (0 ～ 20 %) から非常に高い (80 ～ 100 %) までの範囲に分割されたアカウントの表形式の表示を提供します。
 

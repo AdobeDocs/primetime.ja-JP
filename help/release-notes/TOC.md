@@ -3,10 +3,10 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime リリースノート
 user-guide-description: リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を示します。
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: a29715b0ef833f795760094fd0eb9161462dabb7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '116'
+ht-degree: 16%
 
 ---
 
@@ -15,8 +15,7 @@ ht-degree: 0%
 
 + [リリースノート 概要](home.md)
 + PrimetimeAd Insertion {#ptai}
-
-   + [PTAI 22.7.1 リリースノート](ptai-22x-release-notes.md)
+   + [PTAI 22.9.2 リリースノート](ptai-22x-release-notes.md)
    + [PTAI 21.11.1リリースノート](ptai-21x-release-notes.md)
    + [PTAI 20.12.1リリースノート](ptai-20x-release-notes.md)
    + [PTAI 19.11.1リリースノート](ptai-19x-release-notes.md)

@@ -3,10 +3,10 @@ title: Primetime リリースノート
 description: Primetime リリースノート
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 33%
+source-wordcount: '309'
+ht-degree: 32%
 
 ---
 
@@ -14,15 +14,17 @@ ht-degree: 33%
 
 Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントには、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題が記載されています。
 
-## PTAI 22.7.1 の機能強化および修正点
+## PTAI 22.9.2 の機能強化および修正点
 
-このリリースでは、広告パフォーマンスログの機能強化に重点を置いており、DASH ワークフロー用の利用可能な関連指標が導入されました。
+このリリースでは、広告呼び出しと Avail ログデータを含む広告パフォーマンステレメトリデータの機能強化に重点を置いています。
+
+その他の修正および詳細については、 [Ad Insertionリリースノート](/help/release-notes/ptai-22x-release-notes.md).
 
 ## TVSDK 3.15 Android の修正点
 
 このリリースでは、クリエイティブタグが見つからない場合やクリエイティブタグが見つからない場合にアプリケーションがクラッシュする問題を修正しました [!UICONTROL url CDATA] 次の項目が空 [!UICONTROL VAST] 応答。
 
-その他の修正および詳細については、 [Ad Insertionリリースノート](/help/release-notes/ptai-21x-release-notes.md).
+その他の修正および詳細については、 [Android 向け TVSDK リリースノート](/help/release-notes/tvsdk-3x-android.md)
 
 ## TVSDK 3.13 iOSの機能強化および修正点
 

@@ -4,7 +4,7 @@ user-guide-title: Primetime プログラミングのヘルプ
 user-guide-description: Android デバイスでは Java、iOS デバイスでは Objective-C を使用したアプリケーションやビデオプレイヤーの開発を学習できます。
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '4342'
 ht-degree: 0%
 
 ---

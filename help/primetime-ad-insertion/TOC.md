@@ -2,9 +2,9 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Primetime Ad Insertion のヘルプ
-source-git-commit: 79cdd0b7ae33d7c1d2bec970ecd3654aea4fdab0
+source-git-commit: 2b8aa2d4d20dac0f6f8467043dd2e55a88e9e9f1
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '176'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 + [Adobe PrimetimeAd Insertion](home.md)
 + PrimetimeAd Insertionのお知らせ{#announcements}
    + [お知らせ](announcements/overview.md)
-   + [リリースノート](/help/release-notes/ptai-22x-release-notes.md)
+   + [リリースノート](https://experienceleague.adobe.com/docs/primetime/release-notes/ptai/ptai-22x-release-notes.html)
 + PrimetimeAd Insertionの概要{#get-started}
    + [概要](getting-started/get-started-overview.md)
    + [PrimetimeAd Insertionを使用する準備](getting-started/setup-ptai.md)

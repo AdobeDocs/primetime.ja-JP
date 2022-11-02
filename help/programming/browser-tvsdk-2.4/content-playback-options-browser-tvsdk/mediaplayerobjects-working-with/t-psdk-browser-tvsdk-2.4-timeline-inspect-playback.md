@@ -1,21 +1,19 @@
 ---
-description: ブラウザーTVSDKが再生する、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 この説明は、広告コンテンツに対応するコンテンツセクションが識別されるカスタムスクラブバーコントロールをアプリケーションが表示する場合に役立ちます。
-title: 再生タイムラインのInspect
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: ブラウザー TVSDK が再生している、現在選択されているアイテムに関連付けられているタイムラインの説明を取得できます。 この説明は、広告コンテンツに対応するコンテンツセクションが識別されるカスタムスクラブバーコントロールがアプリケーションに表示される場合に役立ちます。
+title: Inspect再生タイムライン
+exl-id: 729ae345-378e-4771-a31b-375872e94262
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
+# Inspect再生タイムライン{#inspect-the-playback-timeline}
 
-# 再生タイムラインのInspect{#inspect-the-playback-timeline}
+ブラウザー TVSDK が再生している、現在選択されているアイテムに関連付けられているタイムラインの説明を取得できます。 この説明は、広告コンテンツに対応するコンテンツセクションが識別されるカスタムスクラブバーコントロールがアプリケーションに表示される場合に役立ちます。
 
-ブラウザーTVSDKが再生する、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 この説明は、広告コンテンツに対応するコンテンツセクションが識別されるカスタムスクラブバーコントロールをアプリケーションが表示する場合に役立ちます。
-
-実装例を次に示します。
+以下に実装例を示します。
 <!--<a id="fig_9CB8AF44F122405C9B78006ADC10F5B1"></a>-->
 
-![](assets/timeline.png){width=&quot;676pt&quot;}
-
+![](assets/timeline.png){width="676pt"}

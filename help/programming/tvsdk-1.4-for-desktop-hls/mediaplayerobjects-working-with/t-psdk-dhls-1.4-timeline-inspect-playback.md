@@ -1,31 +1,30 @@
 ---
-description: TVSDKが再生中の、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 これは、広告コンテンツに対応するコンテンツセクションを識別するカスタムスクラブバーコントロールをアプリケーションが表示する場合に最も役立ちます。
-title: 再生タイムラインのInspect
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK が再生中の、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 これは、広告コンテンツに対応するコンテンツセクションが識別されるカスタムスクラブバーコントロールをアプリケーションが表示する場合に最も役に立ちます。
+title: Inspect再生タイムライン
+exl-id: 38b5ce0e-5554-462e-986f-f3864f7cf879
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
+# Inspect再生タイムライン{#inspect-the-playback-timeline}
 
-# 再生タイムラインのInspect{#inspect-the-playback-timeline}
+TVSDK が再生中の、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 これは、広告コンテンツに対応するコンテンツセクションが識別されるカスタムスクラブバーコントロールをアプリケーションが表示する場合に最も役に立ちます。
 
-TVSDKが再生中の、現在選択されているアイテムに関連付けられたタイムラインの説明を取得できます。 これは、広告コンテンツに対応するコンテンツセクションを識別するカスタムスクラブバーコントロールをアプリケーションが表示する場合に最も役立ちます。
-
-以下のスクリーンショットに示す実装例を示します。
+次のスクリーンショットに示す実装例を次に示します。
 <!--<a id="fig_6D9FB3764F3947A38B8E7726187BD461"></a>-->
 
-![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
+![](assets/inspect-playback.jpg){width="368.641pt"}
 
-1. `get`メソッドを使用して、`MediaPlayer`の`Timeline`オブジェクトにアクセスします。
+1. 次にアクセス： `Timeline` オブジェクトを `MediaPlayer` の使用 `get` メソッド。
 
-   `Timeline`クラスは、`MediaPlayer`インスタンスによって現在読み込まれているメディア項目に関連付けられているタイムラインのコンテンツに関連する情報をカプセル化します。 `Timeline`クラスは、基になるタイムラインの読み取り専用表示へのアクセスを提供します。 `Timeline`クラスは、配置されたすべての`TimelineMarker`オブジェクトを取得するためのgetterメソッドを提供します。
+   この `Timeline` クラスは、現在 `MediaPlayer` インスタンス。 この `Timeline` クラスは、基になるタイムラインの読み取り専用ビューにアクセスできます。 この `Timeline` クラスは、配置されたすべての `TimelineMarker` オブジェクト。
 
-1. `TimelineMarkers`のリストを繰り返し処理し、返された情報を使用してタイムラインを実装します。
+1. 次のリストを繰り返し処理： `TimelineMarkers` 返された情報を使用してタイムラインを実装します。
 
-       &#39;TimelineMarker&#39;オブジェクトには、次の2つの情報が含まれます。
+       「TimelineMarker」オブジェクトには、次の 2 つの情報が含まれます。
    
    * タイムライン上のマーカーの位置（ミリ秒）
    * タイムライン上のマーカーの時間（ミリ秒）
@@ -51,4 +50,3 @@ markers.forEach(function(item:TimelineMarker,
     // draw the marker on the scrub-bar 
 }
 ```
-

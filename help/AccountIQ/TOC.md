@@ -2,10 +2,10 @@
 product: adobe primetime
 audience: end-user
 user-guide-description: Primetime アカウント IQ のヘルプは、アカウント IQ コンポーネントに関する情報を提供し、様々なコンポーネントを使用するためのユーザージャーニーについて説明します。
-source-git-commit: 6ae9c8651a47e2f458d69c078ba1f314a0227c00
+source-git-commit: 24838ba51683b04894149ae55bcabfb7bf2e8095
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 20%
+source-wordcount: '141'
+ht-degree: 16%
 
 ---
 
@@ -25,14 +25,21 @@ ht-degree: 20%
       + [運用](/help/AccountIQ/operations.md)
 + 操作方法 {#use-aiq}
    + [セグメントと時間枠の定義](/help/AccountIQ/howto-select-segment-timeframe.md)
-   + アカウント共有レポートを表示 {#view-account-sharing-reports}
-      + [特定の MVPD のレポート](/help/AccountIQ/reports-for-specific-mvpds.md)
-      + [上位 10 件の MVPD のレポート](/help/AccountIQ/top-10-mvpd-reports.md)
-      + [複数の MVPD のレポート](viewrep-multiple-mvpd-channel.md)
-      + [分離モードと共有動作](/help/AccountIQ/isolation-mode.md)
-   + [MVPD およびチャネルレポートの書き出し](/help/AccountIQ/export-segment-metrics.md)
+   + レポートの書き出し {#export-reports}
+      + [プログラマー — レポートの書き出し](/help/AccountIQ/export-segment-metrics-progr.md)
+      + [MVPD — レポートを書き出し](/help/AccountIQ/export-segment-metrics-mvpd.md)
    + [高い共有アカウントをエクスポート](/help/AccountIQ/export-acc-information.md)
    + [ユーザーセグメントに対する操作の作成](/help/AccountIQ/operation-affecting-user-segment.md)
+   + アカウント共有レポートを表示 {#view-account-sharing-reports}
+      + プログラマー — アカウント共有レポートを表示 {#view-programmer-reports}
+         + [特定の MVPD のレポート](/help/AccountIQ/reports-for-specific-mvpds.md)
+         + [上位 10 件の MVPD のレポート](/help/AccountIQ/top-10-mvpd-reports.md)
+         + [複数の MVPD のレポート](viewrep-multiple-mvpd.md)
+         + [分離モードと共有動作](/help/AccountIQ/isolation-mode.md)
+      + MVPD — アカウント共有レポートを表示 {#view-mvpd-reports}
+         + [特定のプログラマーまたはチャネルのレポート](/help/AccountIQ/reports-for-specific-programmers.md)
+         + [上位 10 のプログラマーに関するレポート](/help/AccountIQ/top-10-programmer-reports.md)
+         + [複数のプログラマーおよびチャネルに関するレポート](viewrep-multiple-programmer.md)
 + [ベストプラクティス](/help/AccountIQ/best-practices.md)
 + [制限事項](/help/AccountIQ/limitations.md)
 + [トラブルシューティング](/help/AccountIQ/troubleshoot.md)

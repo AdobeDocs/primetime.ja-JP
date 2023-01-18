@@ -1,15 +1,15 @@
 ---
 title: プログラマーのペルソナによる上位 10 件の MVPD のレポートを表示する方法。
 description: 上位 10 件の MVPD のレポートを表示します。
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: 76fd1af8-dd96-426b-b9c8-a356b53b491d
+source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
-
-# 上位 10 件の MVPD のレポートを表示する方法 <!--and Programmers--> {#view-top-10-mvpd-reports}
+# 上位 10 件の MVPD のアカウント共有レポートを表示 <!--and Programmers--> {#view-top-10-mvpd-reports}
 
 アカウント IQ は、( 定義済みの [セグメント](/help/AccountIQ/product-concepts.md#segmet-def)) の内容：
 

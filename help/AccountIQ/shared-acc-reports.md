@@ -1,13 +1,13 @@
 ---
-title: '共有アカウントレポート '
+title: 共有アカウントレポート
 description: 共有アカウントレポート
-source-git-commit: ead505dfa3e6569b7e349fa63170e5f8d90d759b
+exl-id: 16c5ded1-2a95-4373-8b90-b445131f333a
+source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
-
 
 # 共有アカウントレポート {#shared-accounts-reports}
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 ![](assets/threshold-selector-shared-accounts.png)
 
-しきい値を選択すると、パネルには、セグメントで選択された MVPD のすべての購読者アカウントのうち、アカウントの割合（および数）が表示されます。
+しきい値を選択すると、パネルに、選択したセグメント内のすべての購読者アカウントのうち、アカウントの割合（および数）が表示されます。
 
 ## セグメント — 合計からの再生リクエスト {#play-request-out-total}
 

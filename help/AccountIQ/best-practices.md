@@ -1,13 +1,13 @@
 ---
 title: ベストプラクティス
 description: アカウント IQ ツールの使用方法を理解します。
-source-git-commit: 3ee1620dad552c76545f5441ea8530a45143fc4b
+exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
+source-git-commit: dcd89849937f4893705423465be4003948739eeb
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
 
 ---
-
 
 # ベストプラクティス {#aiq-best-practices}
 
@@ -28,6 +28,7 @@ ht-degree: 0%
 ## ターゲットを絞った増分処理アクションを実行 {#incremental-targeted-action}
 
 定義済みのターゲットセグメントで、アクションを実行します。 明確に定義されたセグメントから小さなセグメントを開始すると、意図しない結果が生じるリスクを軽減し、結果をより深く理解できます。 パスのどこにいても、操作のターゲットを調整または拡張できます。
+
 小さく立ち上がるには、慎重なアプローチです。 以前に識別したセグメントを使用し、特定の目的に対して（実験として）アクションを実行します。
 
 操作ツールを使用して、ターゲットセグメントと運用期間を定義します。 これにより、次のフェーズでエフェクトを追跡できます。
@@ -98,7 +99,7 @@ How many additional ads were viewed?
 
 Did the number of borrowers decrease?
 
-Account IQ’s sophisticated machine learning based models help you analyze and measure the impacts of your experiments (or actions).
+Account IQ's sophisticated machine learning based models help you analyze and measure the impacts of your experiments (or actions).
 
 Improve and repeat
 Based on the outcomes of your experiments and targeted actions on small groups of users, you can expand the reach of your strategies to rest of the user segment or reset the strategy and audience to act on.

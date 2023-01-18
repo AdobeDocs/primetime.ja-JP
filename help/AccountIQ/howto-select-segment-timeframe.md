@@ -2,9 +2,9 @@
 title: セグメントと時間枠の定義
 description: セグメントと時間枠の定義
 exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: c17fb003d8c8103aac36696f696c9e3c7bb83c4f
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -80,10 +80,6 @@ MVPD を選択するには **セグメント内の MVPD** オプション：
 * の選択 **削除** アイコン (![アイコンを削除](assets/remove-icon.png)) が、選択した MVPD およびチャネルの名前に対してセグメントセレクターの下に表示されます。
 
 * また、 **選択をクリア** をクリックして、以前に選択したすべての MVPD またはチャネルを削除します。
-
-![](assets/segment-panel-selection1.png)
-
-*図：セグメントおよび期間パネルで選択された MVPD およびチャネル*
 
 ![](assets/segment-panel-selection.png)
 

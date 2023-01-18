@@ -1,28 +1,29 @@
 ---
 title: 特定の MVPD に対してアカウント IQ 指標を使用する方法
-description: 'アカウント IQ レポートの使用方法と理解方法。  '
-source-git-commit: a23de698b073d271df9b04494ff59f5d5a194c9d
+description: アカウント IQ レポートの使用方法と理解方法。
+exl-id: ada9a80a-b31b-4bdc-838c-dcd94a0a6c59
+source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---
 
+# 特定の MVPD のアカウント共有レポートを表示します <!--and programmer--> {#report-sp-mvpd}
 
-# アカウント共有レポートの表示：特定の MVPD の <!--and programmer--> {#report-sp-mvpd}
-
-Account IQ アプリケーションにチャネルとしてログインする場合 [プログラマ](/help/AccountIQ/product-concepts.md#programmer-def)その後、特定の [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) 購読しています。
+アカウント IQ アプリケーションに [プログラマ](/help/AccountIQ/product-concepts.md#programmer-def)その後、特定の [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) 購読者。
 
 Account IQ でレポートを表示するには、プログラマーとしてアプリケーションに正常にログインした後に、次の手順を実行します。
 
-1. の手順を使用して、分析および表示する購読者セグメントを定義します。 [セグメントの定義方法](/help/AccountIQ/howto-select-segment-timeframe.md).
+1. の手順を使用して、分析およびレポートの表示のための購読者セグメントを定義する際に、特定の MVPD を選択します。 [セグメントの定義方法](/help/AccountIQ/howto-select-segment-timeframe.md).
+
 
    >[!NOTE]
    >
-   >1 つ、2 つ、または複数の MVPD を選択することも、（スコア、使用状況、またはアカウントを共有することによって）上位 10 個の MVPD をデフォルトで選択することもできます。
+   >1 つ、2 つ、または複数のチャネルを選択することも、上位 10 個のチャネルのデフォルト選択（スコア、使用状況、アカウントの共有）を選択することもできます。
    >
    >
-   >ただし、 [最大 10 個の MVPD](/help/AccountIQ/limitations.md) ( [セグメントと時間枠パネル](/help/AccountIQ/segments-timeframe.md).
+   >ただし、 [最大 10 チャネル](/help/AccountIQ/limitations.md) を選択します。 [セグメントと時間枠パネル](/help/AccountIQ/segments-timeframe.md).
 
 1. 左側のナビゲーションから目的のレポートページを選択します。
 
@@ -40,19 +41,5 @@ Account IQ でレポートを表示するには、プログラマーとしてア
 
    ![](assets/specific-mvpd-dashboard.png)
 
-これらの各ページは、アクティビティを反映しています。
+これらの各ページは、選択したセグメントのアクティビティを反映します。
 
-<!--## If you are logged in as an MVPD {#report-sp-programmer}
-
-To view reports in Account IQ, once you have successfully logged in to the application as an MVPD:
-
-1. Select the desired programmer channel(s) from from the **Channels in segment** drop-down option.
-
-   ![select channels](assets/programmer-selection.png)
-
- 1. From the **Granularity and time frame** option, select the time interval to view reports. You can aggregate the time intervals week-wise or month-wise.
-
-1. Select a desired reports page from the left navigation-[General Usage](/help/AccountIQ/general-usage-reports.md), [Shared Accounts](/help/AccountIQ/shared-acc-reports.md), [Usage Patterns](/help/AccountIQ/usage-patterns.md), or even [Dashboard](/help/AccountIQ/dashboard.md) (dashboard gives a glimpse of the selected graphs from different reports pages).
-
-![reports for specific programmer](assets/report-forspecific-programmer.png)
--->

@@ -1,13 +1,13 @@
 ---
-title: 'ユーザーセグメントに対する操作の作成と効果の追跡 '
+title: ユーザーセグメントに対する操作の作成と効果の追跡
 description: 定義したユーザーセグメントに対する効果を効果的に追跡する操作を作成する方法。
-source-git-commit: 1d6beb69470fcf6a3193b4d2f508c503d4f957f1
+exl-id: ab74f857-e178-4120-8f9c-655ec921d096
+source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
-
 
 # ユーザーセグメントに対する操作の作成 {#operation-to-track-segment}
 
@@ -34,10 +34,21 @@ ht-degree: 0%
 
 ## 操作の詳細 {#operation-details}
 
++++プログラマ — 操作の詳細
+
 で新しい操作の名前を指定します。 **操作名** 「操作の詳細」の下のフィールド。 例：*MVPD X の購読者に対する多要素認証の影響をテストする。「同時実行監視でのストリーム数を制限する」または「20 台以上のデバイスからチャネル「N」を表示する MVPD D の購読者を制限する」*&quot;.
 
++++
+
++++MVPD — 操作の詳細
+
+で新しい操作の名前を指定します。 **操作名** 「操作の詳細」の下のフィールド。 例：*チャネル N のビューアに対する多要素認証の影響をテストする、「同時実行監視でのストリーム数を制限」または「20 台以上のデバイスからチャネル「N」を表示する購読者を制限」*&quot;.
+
++++
 
 ## ターゲットセグメント {#segment}
+
++++プログラマ — ターゲットセグメント
 
 この **セグメント** ここでは、この操作で操作するユーザーを定義します。または操作用のサンプルグループ。 デフォルトのセグメントは **セグメント** 次を使用して選択しました： [セグメントと期間パネル](/help/AccountIQ/howto-select-segment-timeframe.md) 上記の手順 1 のメインレポートまたはダッシュボードページ
 
@@ -47,7 +58,22 @@ ht-degree: 0%
 ![](assets/operations-segment-selection.png)
 *Figure: Segment and timeframe selection on the main page*-->
 
-このセグメントは、作成中の操作の影響を受ける MVPD およびチャネルの購読者を定義します。 例えば、（デフォルトの）セグメントには、次のものが含まれます *チャネル「N Sports」を表示する「C」という名前の MVPD のすべての購読者アカウント*.
+このセグメントは、作成される操作の影響を受ける購読者を定義します。 例えば、選択したセグメントで *チャネル「N Sports」を表示する「C」という名前の MVPD のすべての購読者アカウント*.
+
++++
+
++++MVPD — ターゲットセグメント
+
+この **セグメント** ここでは、この操作で操作するユーザーを定義します。または操作用のサンプルグループ。 デフォルトのセグメントは **セグメント** 次を使用して選択しました： [セグメントと期間パネル](/help/AccountIQ/howto-select-segment-timeframe.md) 上記の手順 1 のメインレポートまたはダッシュボードページ
+
+<!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
+
+* The **segment evaluation period** is the time period of analysis you selected in step 1 from **Granularity and Timeframe** option.
+![](assets/operations-segment-selection.png)
+*Figure: Segment and timeframe selection on the main page*-->
+
+このセグメントは、作成される操作の影響を受ける購読者（特定のチャネルの閲覧者）を定義します。 例えば、（デフォルトの）セグメントには、次のものが含まれます *チャネル「N Sports」を表示するすべての購読者アカウント*.
++++
 
 ### 追加のセグメント化 {#additional-segmentation}
 

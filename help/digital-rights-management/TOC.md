@@ -1,8 +1,8 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Digital Rights Management ヘルプ
-user-guide-description: Digital Rights Management（DRM）の様々なユーザーシナリオについての詳細を学ぶために役立ちます。
+user-guide-title: PrimetimeDigital Rights Managementヘルプ
+user-guide-description: Digital Rights Management(DRM) の様々なユーザーシナリオについての詳細を学ぶのに役立ちます。
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '2215'
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Digital Rights Management ヘルプ {#drm}
+# Digital Rights Managementヘルプ {#drm}
 
 + [DRM の概要](home.md)
 + 証明書登録ガイド {#certificate-enrollment-guide}

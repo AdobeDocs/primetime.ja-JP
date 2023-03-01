@@ -1,16 +1,16 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Ad Insertion のヘルプ
+user-guide-title: PrimetimeAd Insertionヘルプ
 source-git-commit: 2b8aa2d4d20dac0f6f8467043dd2e55a88e9e9f1
 workflow-type: tm+mt
 source-wordcount: '176'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
 
-# Primetime Ad Insertion のヘルプ {#ad-insertion}
+# PrimetimeAd Insertionヘルプ {#ad-insertion}
 
 + [Adobe PrimetimeAd Insertion](home.md)
 + PrimetimeAd Insertionのお知らせ{#announcements}

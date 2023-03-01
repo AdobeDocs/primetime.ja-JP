@@ -6,14 +6,14 @@ user-guide-description: リリース固有の情報、システム要件、制�
 source-git-commit: a29715b0ef833f795760094fd0eb9161462dabb7
 workflow-type: tm+mt
 source-wordcount: '116'
-ht-degree: 16%
+ht-degree: 0%
 
 ---
 
 
 # Primetime リリースノート {#release-notes}
 
-+ [リリースノート 概要](home.md)
++ [リリースノート：概要](home.md)
 + PrimetimeAd Insertion {#ptai}
    + [PTAI 22.9.2 リリースノート](ptai-22x-release-notes.md)
    + [PTAI 21.11.1リリースノート](ptai-21x-release-notes.md)

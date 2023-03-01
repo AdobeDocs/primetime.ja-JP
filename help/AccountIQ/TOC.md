@@ -1,11 +1,11 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-description: Primetime アカウント IQ のヘルプは、アカウント IQ コンポーネントに関する情報を提供し、様々なコンポーネントを使用するためのユーザージャーニーについて説明します。
+user-guide-description: Primetime アカウント IQ のヘルプは、 Account IQ コンポーネントに関する情報を提供し、様々なコンポーネントを使用するためのユーザージャーニーに関する情報を提供します。
 source-git-commit: 24838ba51683b04894149ae55bcabfb7bf2e8095
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 16%
+ht-degree: 0%
 
 ---
 

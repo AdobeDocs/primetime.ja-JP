@@ -2,16 +2,16 @@
 title: スコアの高いアカウントの情報を書き出し
 description: スコアの高いアカウントの情報を書き出します。
 exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
 
 # スコアの高いアカウントの情報を書き出し {#export-account-info-high-score}
 
-アカウント IQ には、上位 1000 件の購読者アカウントに関するアカウント共有の詳細を、それぞれのアカウントに基づいてエクスポートするオプションが用意されています [共有確率](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). 書き出された CSV ファイル内のデータは、 [セグメント](/help/AccountIQ/product-concepts.md#segment-def)（の場合） [指定された時間枠](/help/AccountIQ/product-concepts.md#time-frame-def).
+アカウント IQ には、上位 1000 件の購読者アカウントに関するアカウント共有の詳細を、それぞれのアカウントに基づいてエクスポートするオプションが用意されています [共有確率](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). 書き出された CSV ファイル内のデータは、サブスクライバアカウントの共有確率の低い順に並べ替えられます。 [セグメント](/help/AccountIQ/product-concepts.md#segment-def)（の場合） [指定された時間枠](/help/AccountIQ/product-concepts.md#time-frame-def).
 
 アカウント共有情報を書き出すオプションは、で使用できます。 [一般使用状況レポート](/help/AccountIQ/general-usage-reports.md) および [共有アカウントレポート](/help/AccountIQ/shared-acc-reports.md) ページ。
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 **MVPD**
 
-プログラマーユーザーの場合、この列には、サブスクライバーアカウントが属する MVPD が示されます。
+プログラマーユーザーの場合、列には、サブスクライバーアカウントが属する MVPD が示されます。
 
 **購読者 ID**
 
@@ -99,13 +99,13 @@ ht-degree: 1%
 
 MVPD がそのアカウントに対してストリームまたは（コンテンツへの）アクセスを許可した回数。
 
+>[!NOTE]
+>
+>この **# AuthZ OK** は **再生リクエスト数**;それはより小さい **再生リクエスト数** Adobeは、通常 24 時間 MVPD に対して提供される認証をキャッシュするからです。
+
 **再生リクエスト数**
 
 期間中の実際のストリーム数。
-
->[!NOTE]
->
->**# AuthZ OK** の値は通常、 **再生リクエスト数** Adobeは、MVPD からの認証を最大 24 時間キャッシュするからです。 この列は MVPD では使用できません。
 
 **チャネル数**
 
@@ -127,7 +127,7 @@ MVPD がそのアカウントに対してストリームまたは（コンテン
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 使用パターン | 通常のユーザー | 旅行者又は通勤者 | 大家族 | 親しい家族と友人 | ソーシャルグループ共有 | 多くの友人 | 同時ストリーミング | コミュニティの共有 | 不確実な動作 | 小家族 | セカンドホーム | 異常使用 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **共有の可能性**
 

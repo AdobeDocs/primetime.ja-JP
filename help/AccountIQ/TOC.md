@@ -2,7 +2,7 @@
 product: adobe primetime
 audience: end-user
 user-guide-description: Primetime アカウント IQ のヘルプは、 Account IQ コンポーネントに関する情報を提供し、様々なコンポーネントを使用するためのユーザージャーニーに関する情報を提供します。
-source-git-commit: 24838ba51683b04894149ae55bcabfb7bf2e8095
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
@@ -17,14 +17,15 @@ ht-degree: 0%
    + [セグメントと時間枠](/help/AccountIQ/segments-timeframe.md)
    + [ダッシュボード](/help/AccountIQ/dashboard.md)
    + レポート {#reports-account-iq}
-      + [一般使用状況レポート](/help/AccountIQ/general-usage-reports.md)
-      + [共有アカウントレポート](/help/AccountIQ/shared-acc-reports.md)
+   + [一般使用状況レポート](/help/AccountIQ/general-usage-reports.md)
+   + [共有アカウントレポート](/help/AccountIQ/shared-acc-reports.md)
    + コンポーネントの共有 {#sharing-components}
       + [使用パターン](/help/AccountIQ/usage-patterns.md)
    + アクション {#further-next-steps-actions}
       + [運用](/help/AccountIQ/operations.md)
 + 操作方法 {#use-aiq}
-   + [セグメントと時間枠の定義](/help/AccountIQ/howto-select-segment-timeframe.md)
+   + [セグメントの構築](/help/AccountIQ/build-segment.md)
+   + [セグメントと期間を選択](/help/AccountIQ/howto-select-segment-timeframe.md)
    + レポートの書き出し {#export-reports}
       + [プログラマー — レポートの書き出し](/help/AccountIQ/export-segment-metrics-progr.md)
       + [MVPD — レポートを書き出し](/help/AccountIQ/export-segment-metrics-mvpd.md)

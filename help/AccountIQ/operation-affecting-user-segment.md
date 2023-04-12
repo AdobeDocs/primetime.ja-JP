@@ -2,9 +2,9 @@
 title: ユーザーセグメントに対する操作の作成と効果の追跡
 description: 定義したユーザーセグメントに対する効果を効果的に追跡する操作を作成する方法。
 exl-id: ab74f857-e178-4120-8f9c-655ec921d096
-source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ if not fixed segment, then I won't initially evaluate or have initial set of 500
 
 次の 2 種類のアクションを実行できます。
 
-* Account IQ と統合されたシステムを使用したアクション例： [同時実行監視](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)<!--, or Adobe Target-->.
+* Account IQ と統合されたシステムを使用したアクション例： **同時実行監視** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
 
 * アカウント IQ システムと統合されていない、アカウント IQ の外部のワークフローを作成および処理するアクション。 例えば、チャネルプログラマー「N」が MVPD「C」のすべての購読者に一括メールを送信するアクション。
 

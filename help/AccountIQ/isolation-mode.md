@@ -1,13 +1,13 @@
 ---
 title: 分離モードでレポートを表示
-description: 'Xfinity の分離モードでレポートを表示します。 '
-source-git-commit: afa77dd0d7ffe38d353fed21dc9591b994b11193
+description: Xfinity の分離モードでレポートを表示します。
+exl-id: e7cf24c5-9bfa-48f6-b5c8-20443a976891
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
 
 ---
-
 
 # 分離モードで共有レポートを表示 {#report-isolation-mode}
 

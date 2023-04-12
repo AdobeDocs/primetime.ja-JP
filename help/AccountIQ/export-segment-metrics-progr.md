@@ -1,7 +1,7 @@
 ---
 title: プログラマーの指標と選択した MVPD をセグメント内にエクスポート
 description: プログラマーの指標と選択した MVPD をセグメント内にエクスポート
-source-git-commit: 1cf035c2c40c66cf4ba5052c9229bc76a903865d
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%

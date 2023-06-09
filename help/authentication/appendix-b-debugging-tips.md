@@ -1,13 +1,13 @@
 ---
 title: 付録 B「デバッグのヒント」
 description: 付録 B「デバッグのヒント」
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
-
 
 # 付録 B:デバッグのヒント {#appendix-b-debugging-tips}
 
@@ -22,7 +22,7 @@ Adobe Primetime認証は、一時データ（ブラウザーキャッシュ、LS
 
 - [ブラウザーのキャッシュと cookie のクリア](#clearing-the-browser-cache-and-cookies)
 - [LSO キャッシュのクリア](#clearing-lsos-cache)\
-    
+   
 
 ## ブラウザーのキャッシュと cookie のクリア {#clearing-the-browser-cache-and-cookies}
 
@@ -41,8 +41,7 @@ Adobe Primetime認証は、一時データ（ブラウザーキャッシュ、LS
 Adobe Primetime認証エンジニアは、次のデバッグツールを使用します。
 
 - Firebug - <http://www.getfirebug.com/>
-- Flashbug（Flash Player のデバッグバージョンで動作） <https://addons.mozilla.org/en-US/firefox/addon/14465/>
-- ライブ HTTP ヘッダー — <https://addons.mozilla.org/en-US/firefox/addon/3829/>
+- Flashbug（Flash Player のデバッグバージョンで動作）
 - Fiddler - <http://www.fiddler2.com/fiddler2/>
 - Charles - <http://www.charlesproxy.com/>
 - Wireshark - <http://www.wireshark.org/>

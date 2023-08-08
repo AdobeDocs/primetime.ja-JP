@@ -135,7 +135,7 @@ ht-degree: 0%
    + エラーレポート {#error-reportn}
       + [エラーレポート](error-reporting.md)
       + [エラーコードの強化](enhanced-error-codes.md)
-   + クライアント登録 {#client-regn}
+   + クライアントの登録 {#client-regn}
       + [動的クライアントの登録](dynamic-client-registration.md)
       + [動的クライアント登録 API](dynamic-client-registration-api.md)
       + [Dynamic Client Registration Management](dynamic-client-registration-management.md)
@@ -150,7 +150,7 @@ ht-degree: 0%
 + サポート {#support}
    + [エスカレーション手順](escalation-procedures.md)
    + [PrimetimeAdobePayTV パスの監視](monitoring-adobe-pay-tv-pass.md)
-   + [必要システム構成](minimum-system-requirements.md)
+   + [最小必要システム構成](minimum-system-requirements.md)
 + リリースノート {#release-notes}
    + [Adobe Pass Authentication 2.66 リリースノート](auth-rn-266.md)
    + [Adobe Pass Authentication 2.65.1リリースノート](auth-rn-2651.md)
@@ -185,7 +185,7 @@ ht-degree: 0%
    + クライアントレス API {#clientless-api}
       + [クライアントレス API 実装 — エラーコード/推定理由/原因を含むメッセージ](clientless-api-implementation-error-codes--messages-with-probable-reason--cause.md)
       + [デバイス ID がない場合のクライアントレス API フロー](clientless-api-flow-in-the-absence-of-device-id.md)
-      + [クライアントなし：/authenticate リクエストでの「&amp;&#39;reg_code」の使用の回避](clientless-avoid-using-reg-code-in-authenticate-request.md)
+      + [クライアントレス： /authenticate Request での&#39;&amp;&#39;reg_code の使用を避ける](clientless-avoid-using-reg-code-in-authenticate-request.md)
       + [Xbox 360 および XboxOne クライアントレスで、プログラマー向けの Primetime エンタイトルメントサービスを有効化](enabling-primetime-entitlement-services-for-a-programmer-on-xbox-360-and-xboxone-clientless-solution.md)
       + [クライアントレスのデバイスタイプと指標](benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)
    + ユーザーエクスペリエンス {#user-exp}

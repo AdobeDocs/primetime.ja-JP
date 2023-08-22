@@ -1,13 +1,13 @@
 ---
 title: 認証の開始
 description: 認証の開始
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
 
 ---
-
 
 # 認証の開始 {#initiate-authentication}
 
@@ -19,33 +19,33 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 
 ## 説明 {#description}
 
-MVPD 選択イベントを通知することで、認証プロセスを開始します。 Primetime 認証データベースにレコードを作成します。このレコードは、MVPD から正常な応答を受け取ったときに紐付けされます。 
+MVPD 選択イベントを通知することで、認証プロセスを開始します。 Primetime 認証データベースにレコードを作成します。このレコードは、MVPD から正常な応答を受け取ったときに紐付けされます。
 
 
 
-| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
+| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/authenticate | AuthN モジュール | 1.requestor_id（必須）</br>2.  mso_id（必須）</br>3.  reg_code（必須）</br>4.  domain_name（必須）</br>5.  noflash=true -  </br>    （必須、残余パラメータ）</br>6.  no_iframe=true（必須、残差パラメータ）</br>7.  追加のパラメーター（オプション）</br>8.  redirect_url（必須） | GET | Login Web App が MVPD ログインページにリダイレクトされます。 | 完全なリダイレクト実装の場合は 302 |
+| &lt;sp_fqdn>/api/v1/authenticate | AuthN モジュール | 1. requestor_id（必須）</br>2.  mso_id（必須）</br>3.  reg_code（必須）</br>4.  domain_name（必須）</br>5.  noflash=true -  </br>    （必須、残余パラメータ）</br>6.  no_iframe=true（必須、残差パラメータ）</br>7.  追加のパラメーター（オプション）</br>8.  redirect_url（必須） | GET | Login Web App が MVPD ログインページにリダイレクトされます。 | 完全なリダイレクト実装の場合は 302 |
 
 {style="table-layout:auto"}
 
 
 | 入力パラメーター | 説明 |
 | --- | --- |
-| requestor_id | この操作が有効なプログラマーリクエスト元。 |
+| requestor_id | この操作が有効なプログラマー要求元。 |
 | mso_id | この操作が有効な MVPD ID です。 |
 | reg_code | Reggie サービスによって生成された登録コード。 |
 | domain_name | 元のドメイン。 |
@@ -60,10 +60,9 @@ MVPD 選択イベントを通知することで、認証プロセスを開始し
 >**重要：必須のパラメーター —** クライアント側の実装に関係なく、上記のすべてのパラメーターは必須です。
 >
 >
->例：    
+>例：
 >
->
-```
+>```
 >domain_name=loginwebapp.com
 >mso_id=sampleMvpdId
 >reg_code=RO0885W
@@ -88,12 +87,10 @@ MVPD 選択イベントを通知することで、認証プロセスを開始し
 
 ### **メモ** {#notes}
 
-* の値 `domain_name` パラメーターは、Primetime 認証で登録されているドメイン名の 1 つに設定する必要があります。 詳しくは、 [登録と初期化](/help/authentication/programmer-overview.md).
+* の値 `domain_name` パラメーターは、Primetime 認証で登録されているドメイン名の 1 つに設定する必要があります。 詳しくは、 [登録と初期化](/help/authentication/programmer-overview.md).
 
 * [/authenticate request で&#39;&amp;&#39;reg\_code を使用しない（テクニカルノート）](/help/authentication/clientless-avoid-using-reg-code-in-authenticate-request.md)
 
-* この `redirect_url` パラメーターは、順序の最後のパラメーターである必要があります
+* The `redirect_url` パラメーターは、順序の最後のパラメーターである必要があります
 
-* の値 `redirect_url` パラメーターは URL エンコードされている必要があります
-
-
+* の値 `redirect_url` パラメーターは URL エンコードされている必要があります

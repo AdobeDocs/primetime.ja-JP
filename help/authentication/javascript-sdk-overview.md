@@ -1,13 +1,13 @@
 ---
 title: JavaScript SDK の概要
 description: JavaScript SDK の概要
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 8756c804-a4c1-4ee3-b2b9-be45f38bdf94
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
 
 ---
-
 
 # JavaScript SDK の概要 {#javascript-sdk-overview}
 
@@ -21,7 +21,7 @@ Adobeでは、AccessEnabler ライブラリの最新の JS v4.x に移行する�
 
 Adobe Primetime認証 JavaScript 統合により、使い慣れた JS Web アプリケーション開発環境で、プログラマー向けに TV-Everywhere ソリューションを提供します。 統合の主な構成要素は、「高レベル」のアプリケーション（ユーザーインタラクション、ビデオ表示）と、権限フローへのエントリを提供し、Adobe Primetime認証サーバとの通信を処理するAdobeが提供する「低レベル」の AccessEnabler ライブラリです。
 
-一般的なAdobe Primetime認証の使用権限付与フローについては、 [プログラマーエンタイトルメントフロー](/help/authentication/entitlement-flow.md)を参照し、「 JavaScript 統合クックブック」での実装手順を説明します。 次のセクションでは、JavaScript AccessEnabler 統合に固有の説明とサンプルを示します。
+一般的なAdobe Primetime認証の使用権限付与フローについては、 [プログラマーエンタイトルメントフロー](/help/authentication/entitlement-flow.md)を参照し、「 JavaScript 統合クックブック」では実装の手順を説明します。 次のセクションでは、JavaScript AccessEnabler 統合に固有の説明とサンプルを示します。
 
 >[!IMPORTANT]
 >
@@ -29,15 +29,15 @@ Adobe Primetime認証 JavaScript 統合により、使い慣れた JS Web アプ
 
 ## MVPD 選択ダイアログの作成 {#creating-the-mvpd-selection-dialog}
 
-ユーザーが MVPD にログインして認証を受けるには、ページまたはプレーヤーがユーザーが MVPD を識別する手段を提供する必要があります。 開発用に、MVPD 選択ダイアログのデフォルトバージョンが提供されます。 実稼動環境で使用する場合は、独自の MVPD セレクターを実装する必要があります。 
+ユーザーが MVPD にログインして認証を受けるには、ページまたはプレーヤーがユーザーが MVPD を識別する手段を提供する必要があります。 開発用に、MVPD 選択ダイアログのデフォルトバージョンが提供されます。 実稼動環境で使用する場合は、独自の MVPD セレクターを実装する必要があります。
 
-顧客のプロバイダーが既にわかっている場合は、 [MVPD をプログラムで設定する](/help/authentication/home.md)（ユーザーの操作なし） この方法は同じですが、プロバイダセレクタダイアログを呼び出し、顧客に MVPD の選択を求める手順を回避します。
+顧客のプロバイダーが既にわかっている場合は、 [MVPD をプログラムで設定する](/help/authentication/home.md)（ユーザーの操作なし） この方法は同じですが、プロバイダセレクタダイアログを呼び出し、顧客に MVPD の選択を求める手順を回避します。
 
 ## サービスプロバイダーの表示 {#displaying-the-service-provider}
 
 次のコードサンプルは、現在の顧客のサービスプロバイダーを検出して表示する方法を示しています。
 
- **HTML**  — このページには、顧客が既にログインしている場合に、選択したプロバイダーを表示するセクションがページに追加されます。
+**HTML**  — このページには、顧客が既にログインしている場合に、選択したプロバイダーを表示するセクションがページに追加されます。
 
 ```HTML
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
@@ -74,7 +74,7 @@ Adobe Primetime認証 JavaScript 統合により、使い慣れた JS Web アプ
     </body>
     </html>
 ```
- 
+
 
 **JavaScript** この JavaScript ファイルは、ユーザーが既にログインしている場合に、現在のプロバイダに対して Access Enabler を照会し、その結果を、そのために予約されているページ・セクションに表示します。 また、MVPD セレクターダイアログも実装します。
 
@@ -195,15 +195,15 @@ Adobe Primetime認証 JavaScript 統合により、使い慣れた JS Web アプ
     }
 ```
 
-## ログアウト {#logout}
+## ログアウト中 {#logout}
 
-呼び出し `logout()` ログアウトプロセスを開始する場合。 このメソッドは引数を取りません。 現在のユーザーをログアウトし、そのユーザーのすべての認証および認証情報を消去し、ローカルシステムからすべての AuthN および AuthZ トークンを削除します。
+通話 `logout()` ログアウトプロセスを開始する場合。 このメソッドは引数を取りません。 現在のユーザーをログアウトし、そのユーザーのすべての認証および認証情報を消去し、ローカルシステムからすべての AuthN および AuthZ トークンを削除します。
 
 プレーヤーがユーザーログアウトの処理を担当しない場合があります。
 
- 
 
-- **Adobe Primetime認証と統合されていないサイトからログアウトが開始されたとき。** この場合、MVPD は、ブラウザーのリダイレクトを通じてAdobe Primetime認証の Single Logout サービスを呼び出すことができます。 （backchannel 呼び出しを使用した SLO の呼び出しは、現在サポートされていません。）
+
+- **Adobe Primetime認証と統合されていないサイトからログアウトが開始されたとき。** この場合、MVPD は、ブラウザーのリダイレクトを通じてAdobe Primetime認証の Single Logout サービスを呼び出すことができます。 （backchannel 呼び出しを使用した SLO の呼び出しは、現在サポートされていません。）
 
 >[!NOTE]
 >

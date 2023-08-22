@@ -1,13 +1,13 @@
 ---
 title: 2 画面目の Web アプリによる認証フローの確認
 description: 2 画面目の Web アプリによる認証フローの確認
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 5807f372-a520-4069-b837-67ae41b7f79b
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
-
 
 # 2 画面目の Web アプリによる認証フローの確認 {#check-authentication-flow-by-second-screen-web-app}
 
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -34,9 +34,9 @@ ht-degree: 0%
 この API は、2 つ目の画面ログイン Web アプリで使用して、Adobe Primetime認証が MVPD からのログイン成功を確認したことを確認する必要があります。 この API を呼び出してからエンドユーザーに成功メッセージを表示し、ワークフローを続行するようにデバイスコンソールに進むように指示することをお勧めします。
 
 
-| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
+| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
 | --- | --- | --- | --- | --- | --- |
-| SP_FQDN/api/v1/checkauthn/{ 登録コード } | Web アプリにログイン | 1.登録コード  </br>    （パスコンポーネント）</br>2.  要求者  </br>    （必須） | GET | 失敗した場合は、エラーの詳細を含む XML または JSON。 | 200 — 成功   </br>403 — 禁止 |
+| SP_FQDN/api/v1/checkauthn/{ 登録コード } | Web アプリにログイン | (1) 登録番号  </br>    （パスコンポーネント）</br>2.  要求者  </br>    （必須） | GET | 失敗した場合は、エラーの詳細を含む XML または JSON。 | 200 — 成功   </br>403 — 禁止 |
 
 </br>
 
@@ -50,8 +50,8 @@ ht-degree: 0%
 
 ```JSON
     {
-        "status": 403,
-        "message": "Forbidden"
+        "status": 403,
+        "message": "Forbidden"
     }
 ```
 

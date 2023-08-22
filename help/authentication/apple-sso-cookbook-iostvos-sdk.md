@@ -1,14 +1,13 @@
 ---
 title: Apple SSO クックブック (iOS/tvOS SDK)
 description: Apple SSO クックブック (iOS/tvOS SDK)
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 2d59cd33-ccfd-41a8-9697-1ace3165bc44
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1867'
 ht-degree: 0%
 
 ---
-
-
 
 # Apple SSO クックブック (iOS/tvOS SDK) {#apple-sso-cookbook-iostvos-sdk}
 
@@ -38,19 +37,19 @@ Apple SSO のユーザーエクスペリエンスを最大限に活用するに�
 
 >[!TIP]
 >
-> **<u>ヒント：</u>** ユーザーのサブスクリプション情報にアクセスするには、デバイスのカメラまたはマイクへのアクセスを提供するのと同様に、ユーザーはアプリケーションに続行の権限を付与する必要があります。 この権限は、アプリケーションごとにリクエストする必要があります。デバイスは、ユーザーの選択内容を保存します。 ユーザーは、アプリケーション設定（TV Provider 権限のアクセス）または次のセクションに移動して、決定を変更できます。 *`Settings -> TV Provider`* iOS/iPadOS または *`Settings -> Accounts -> TV Provider`* tvOS の場合。
+> **<u>ヒント：</u>** ユーザーのサブスクリプション情報にアクセスするには、デバイスのカメラまたはマイクへのアクセスを提供するのと同様に、ユーザーはアプリケーションに続行の権限を付与する必要があります。 この権限は、アプリケーションごとにリクエストする必要があります。デバイスは、ユーザーの選択内容を保存します。 ユーザーは、アプリケーション設定（TV Provider 権限のアクセス）または次のセクションに移動して、決定を変更できます。 *`Settings -> TV Provider`* iOS/iPadOS または *`Settings -> Accounts -> TV Provider`* tvOS の場合。
 
 >[!TIP]
 >
-> **<u>ヒント：</u>** アプリケーションがフォアグラウンド状態になった場合は、ユーザーの権限をリクエストすることをお勧めしますが、アプリケーションはをチェックできるので、これは単なる提案です。 [アクセス権](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) ユーザー認証が必要になる前の任意の時点でのユーザーの購読情報。 また、AccessEnabler iOS/tvOS SDK API は、必要に応じて、ユーザーの権限を自動的に要求します。
+> **<u>ヒント：</u>** アプリケーションがフォアグラウンド状態になった場合は、ユーザーの権限をリクエストすることをお勧めしますが、アプリケーションはをチェックできるので、これは単なる提案です。 [アクセス権](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) ユーザー認証を必要とする前の任意の時点でのユーザーの購読情報。 また、AccessEnabler iOS/tvOS SDK API は、必要に応じて、ユーザーの権限を自動的に要求します。
 
 >[!TIP]
 >
-> **<u>ヒント：</u>** ユーザーがサブスクリプション情報へのアクセスを許可しない場合、またはビデオ加入者アカウントフレームワークとの通信に失敗した場合、AccessEnabler iOS/tvOS SDK は通常の認証フローにフォールバックします。
+> **<u>ヒント：</u>** ユーザーがサブスクリプション情報へのアクセスを許可しない場合、またはビデオ加入者アカウントフレームワークとの通信に失敗した場合、AccessEnabler iOS/tvOS SDK は通常の認証フローにフォールバックします。
 
 >[!TIP]
 >
-> **<u>ヒント：</u>** シングルサインオン (SSO) ユーザーエクスペリエンスの利点を説明することで、サブスクリプション情報へのアクセス権の付与を拒否するユーザーに対しては、その利点を説明することをお勧めします。 ユーザーは、アプリケーション設定（TV Provider 権限のアクセス）または次のセクションに移動して、決定を変更できます。 *`Settings -> TV Provider`* iOS/iPadOS または *`Settings -> Accounts -> TV Provider`* tvOS の場合。
+> **<u>ヒント：</u>** シングルサインオン (SSO) ユーザーエクスペリエンスの利点を説明し、サブスクリプション情報へのアクセス権の付与を拒否するユーザーに対しては、その利点を説明することをお勧めします。 ユーザーは、アプリケーション設定（TV Provider 権限のアクセス）または次のセクションに移動して、決定を変更できます。 *`Settings -> TV Provider`* iOS/iPadOS または *`Settings -> Accounts -> TV Provider`* tvOS の場合。
 
 
 ```swift
@@ -78,9 +77,9 @@ Apple SSO のユーザーエクスペリエンスを最大限に活用するに�
 
 >[!TIP]
 >
-> **<u>ヒント：</u>** 次の [コールバック](/help/authentication/iostvos-sdk-api-reference.md) これはApple SSO ワークフローに固有のものです。
+> **<u>ヒント：</u>** 次の [コールバック](/help/authentication/iostvos-sdk-api-reference.md) これはApple SSO ワークフローに固有のものです。
 
-- [*presentTVProviderDialog*](/help/authentication/iostvos-sdk-api-reference.md#presenttvproviderdialog-presenttvdialog) - Apple MVPD ピッカーが開くときにトリガーされるコールバック。
+- [*presentTVProviderDialog*](/help/authentication/iostvos-sdk-api-reference.md#presenttvproviderdialog-presenttvdialog) - Apple MVPD ピッカーが開くときにコールバックがトリガーされます。
 - [*dismissTVProviderDialog*](/help/authentication/iostvos-sdk-api-reference.md#dismisstvproviderdialog-dismisstvdialog) - Apple MVPD ピッカーが閉じられるときにコールバックがトリガーされます。
 
 </br>
@@ -96,8 +95,8 @@ Apple SSO のユーザーエクスペリエンスを最大限に活用するに�
 - ***N005***  — ユーザーは、通常の MVPD ピッカーまたはApple MVPD ピッカーをキャンセルすることにしました。
 - ***VSA403***  — ユーザーの TV Provider 権限がアプリケーションで拒否されました。
 - ***VSA404***  — ユーザーの TV Provider 権限が、アプリケーションに対して未確定です。
-- ***VSA503***  — ビデオ購読者のアカウントメタデータリクエストが失敗しました。 *メッセージ* フィールドに入力します。
-- ***AAPL / APPL_ERROR***  — ビデオ購読者のアカウントメタデータリクエストが失敗しました。 *詳細* フィールドに入力します。 
+- ***VSA503***  — ビデオ購読者のアカウントメタデータリクエストが失敗しました。 *メッセージ* フィールドに入力します。
+- ***AAPL / APPL_ERROR***  — ビデオ購読者のアカウントメタデータリクエストが失敗しました。 *詳細* フィールドに入力します。
 
 </br>
 
@@ -107,16 +106,16 @@ Apple SSO のユーザーエクスペリエンスを最大限に活用するに�
 >
 > **<u>ヒント：</u>** iOS/iPadOS/tvOS の実装については、以下の手順に従います。
 
-1. この申し込みは、 [初期化](/help/authentication/iostvos-sdk-api-reference.md#initsoftwarestatement-initwithsoftwarestatement) AccessEnabler iOS/tvOS SDK
+1. この申し込みは、 [initialize](/help/authentication/iostvos-sdk-api-reference.md#initsoftwarestatement-initwithsoftwarestatement) AccessEnabler iOS/tvOS SDK
 1. この申し込みは、 [現在の要求元識別子を設定](/help/authentication/iostvos-sdk-api-reference.md#setrequestorrequestorid-setrequestorrequestoridserviceproviders-setreqv3).
 
-   **重要：** この 2 番目の手順では、 [詳細なエラーコード](/help/authentication/error-reporting.md) ( 場合によってはApple SSO ワークフローに固有 ) **次のいずれかが真である**:
+   **重要：** この 2 番目の手順では、トリガーが [詳細なエラーコード](/help/authentication/error-reporting.md) ( 場合によってはApple SSO ワークフローに固有 ) **次のうちの 1 つが真である**:
 
    - ***VSA403***  — ユーザーの TV Provider 権限がアプリケーションで拒否されました。
    - ***VSA404***  — ユーザーの TV Provider 権限が、アプリケーションに対して未確定です。
    - ***APPL*** - AccessEnabler iOS/tvOS SDK とビデオ加入者アカウントフレームワーク間の通信でエラーが発生しました。
 
-   2 番目の手順では、場合によっては、Apple SSO プロファイルをAdobe認証トークンに対してサイレントに交換しようとします。 **上記のすべてが偽である** および **次のすべてが真**:
+   2 番目の手順では、場合によっては、Apple SSO プロファイルをAdobe認証トークンに対してサイレントに交換しようとします。 **上記のすべてが偽である** および **次のすべてが真**:
 
    - ユーザーの TV Provider 権限がアプリケーションに対して付与されます。
    - ユーザーは、デバイスのシステムレベルで TV Provider アカウントにサインインしています。
@@ -130,13 +129,13 @@ Apple SSO のユーザーエクスペリエンスを最大限に活用するに�
 
 1. この申し込みは、 [認証状態の確認](/help/authentication/iostvos-sdk-api-reference.md#checkauthentication-checkauthn).
 
-   **重要：** この 3 番目の手順では、 [詳細なエラーコード](/help/authentication/error-reporting.md) ( 場合によってはApple SSO ワークフローに固有 ) **次のいずれかが真である**:
+   **重要：** この 3 番目の手順では、 [詳細なエラーコード](/help/authentication/error-reporting.md) ( 場合によってはApple SSO ワークフローに固有 ) **次のうちの 1 つが真である**:
 
    - ***VSA403**  — ユーザーはデバイスのシステムレベルで TV Provider アカウントにサインインしていますが、ユーザーの TV Provider 権限がアプリケーションで拒否されています。
    - ***VSA404**  — ユーザーがデバイスのシステムレベルで TV Provider アカウントにサインインしていますが、そのアプリケーションに対するユーザーの TV Provider 権限が未確定です。
    - ***APPL\_ERROR**  — ユーザーがデバイスのシステムレベルで TV Provider アカウントにサインインしていますが、AccessEnabler iOS/tvOS SDK とビデオ加入者アカウントフレームワーク間の通信でエラーが発生しました。
 
-   **重要：** この 3 番目の手順では、 [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) を使用したコールバック *ステータス* 0 と等しい（場合に応じて） **次のいずれかが真である**:
+   **重要：** この 3 番目の手順では、 [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) を使用したコールバック *ステータス* 0 と等しい（場合に応じて） **次のうちの 1 つが真である**:
 
    - ユーザーは、デバイスのシステムレベルで、または通常の認証フローで、TV Provider アカウントにサインインしていません。
    - ユーザーは、デバイスシステムレベルまたは通常の認証フローで TV Provider アカウントにサインインしていますが、ユーザーの TV Provider 認証トークン TTL が過ぎています。
@@ -146,14 +145,14 @@ Apple SSO のユーザーエクスペリエンスを最大限に活用するに�
    - ユーザーがデバイスシステムレベルで TV Provider アカウントにサインインしていますが、アプリケーションに対するユーザーの TV Provider 権限が未確定です。
    - ユーザーがデバイスシステムレベルで TV Provider アカウントにサインインしていますが、AccessEnabler iOS/tvOS SDK と Video Subscriber Account Framework 間の通信でエラーが発生しました。
 
-   **重要：** この 3 番目の手順では、 [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) を使用したコールバック *ステータス* 1 と等しい（場合に応じて） **上記のすべては偽です。**
+   **重要：** この 3 番目の手順では、 [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) を使用したコールバック *ステータス* 1 と等しい（場合に応じて） **上記のすべては偽です。**
 
 
-1. この申し込みは、 [認証を初期化する](/help/authentication/iostvos-sdk-api-reference.md#getauthentication-getauthenticationwithdata-getauthn) 以前の認証ステータスチェックで [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) を使用したコールバック *ステータス* 0 と等しい。
+1. この申し込みは、 [認証を初期化する](/help/authentication/iostvos-sdk-api-reference.md#getauthentication-getauthenticationwithdata-getauthn) 以前の認証ステータスチェックで [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) を使用したコールバック *ステータス* 0 と等しい。
 
-   **<u>ヒント：</u>** 次の AccessEnabler iOS/tvOS SDK API のいずれかを実装します。 [getAuthentication](/help/authentication/iostvos-sdk-api-reference.md#getAuthN) または [getAuthentication:filter](/help/authentication/iostvos-sdk-api-reference.md#getAuthN_filter).
+   **<u>ヒント：</u>** 次の AccessEnabler iOS/tvOS SDK API のいずれかを実装します。 [getAuthentication](/help/authentication/iostvos-sdk-api-reference.md#getAuthN) または [getAuthentication:filter](/help/authentication/iostvos-sdk-api-reference.md#getAuthN_filter).
 
-   **重要：** この 4 つ目の手順では、次のトリガーを実行できます。 [詳細なエラーコード](/help/authentication/error-reporting.md) ( 場合によってはApple SSO ワークフローに固有 ) **次のいずれかが真である**:
+   **重要：** この 4 つ目の手順では、次のトリガーを実行できます。 [詳細なエラーコード](/help/authentication/error-reporting.md) ( 場合によってはApple SSO ワークフローに固有 ) **次のうちの 1 つが真である**:
 
    - ***VSA403***  — ユーザーの TV Provider 権限がアプリケーションで拒否されました。
    - ***VSA404***  — ユーザーの TV Provider 権限が、アプリケーションに対して未確定です。
@@ -162,13 +161,13 @@ Apple SSO のユーザーエクスペリエンスを最大限に活用するに�
    - ***N004***  — ユーザーがApple MVPD ピッカーから TV プロバイダーを選択しました。現在の要求者は、この TV プロバイダーをサポートしていません（統合またはシングルサインオンが無効になっています）。
    - ***N005***  — ユーザーは、通常の MVPD ピッカーまたはApple MVPD ピッカーをキャンセルすることにしました。
 
-   **重要：** この 4 つ目の手順は、 [displayProviderDialog](/help/authentication/iostvos-sdk-api-reference.md#dispProvDialog) コールバックと **1 つ** 上記の [詳細なエラーコード](/help/authentication/error-reporting.md)（場合） **上記の一つが真である**. 
+   **重要：** この 4 つ目の手順は、 [displayProviderDialog](/help/authentication/iostvos-sdk-api-reference.md#dispProvDialog) コールバックと **1 つ** 上記の [詳細なエラーコード](/help/authentication/error-reporting.md)（場合に応じて） **上記の一つが真である**.
 
-   **重要：** この 4 つ目の手順は、 [navigateToUrl](/help/authentication/iostvos-sdk-api-reference.md#nav2url) または [navigateToUrl:useSVC](/help/authentication/iostvos-sdk-api-reference.md#nav2urlSVC) コールバックと **なし** 上記の [詳細なエラーコード](/help/authentication/error-reporting.md)( ユーザーがApple SSO をサポートしないが、Apple MVPD ピッカーに存在する TV プロバイダーを選択した場合 )。
+   **重要：** この 4 つ目の手順は、 [navigateToUrl](/help/authentication/iostvos-sdk-api-reference.md#nav2url) または [navigateToUrl:useSVC](/help/authentication/iostvos-sdk-api-reference.md#nav2urlSVC) コールバックと **なし** 上記の [詳細なエラーコード](/help/authentication/error-reporting.md)( ユーザーがApple SSO をサポートしないが、Apple MVPD ピッカーに存在する TV プロバイダーを選択した場合 )。
 
    **<u>ヒント：</u>** AccessEnabler iOS/tvOS SDK は、 [setSelectedProvder](/help/authentication/iostvos-sdk-api-reference.md#setSelProv) ユーザーがApple SSO をサポートしないが、Apple MVPD ピッカーに存在する TV プロバイダーを選択した場合の API。
 
-   **重要：** 4 つ目の手順では、場合に応じて、Apple SSO プロファイルをAdobe認証トークンに対してサイレントに交換しようとします。 **上記のすべてが偽である** および **次のすべてが真**:
+   **重要：** 4 つ目の手順では、場合に応じて、Apple SSO プロファイルをAdobe認証トークンと無音で交換しようとします。 **上記のすべてが偽である** および **次のすべてが真**:
 
    - ユーザーの TV Provider 権限がアプリケーションに対して付与されます。
    - ユーザーは、デバイスのシステムレベルで TV Provider アカウントにサインインしているか、現在サインインしています。
@@ -179,7 +178,6 @@ Apple SSO のユーザーエクスペリエンスを最大限に活用するに�
    - AccessEnabler iOS/tvOS SDK は、Video Subscriber Account Framework からユーザーの TV Provider SAML 応答を受け取りました。
 
 
- 
 
 >**<u>ヒント：</u>** この 4 つ目の手順では、 [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setAuthNStatus) コールバック、 *ステータス* 結果、アプリケーションによって認証が明示的に開始されたため。
 
@@ -188,7 +186,7 @@ Apple SSO のユーザーエクスペリエンスを最大限に活用するに�
 
 ### メタデータ {#Metadata}
 
-アプリケーションには、「*tokenSource&quot;* [ユーザーメタデータ](/help/authentication/iostvos-sdk-api-reference.md#getMeta) AccessEnabler iOS/tvOS SDK からの API
+アプリケーションには、「*tokenSource&quot;* [ユーザーメタデータ](/help/authentication/iostvos-sdk-api-reference.md#getMeta) AccessEnabler iOS/tvOS SDK からの API
 
 ```swift
     ...
@@ -200,11 +198,11 @@ Apple SSO のユーザーエクスペリエンスを最大限に活用するに�
 
 ### ログアウト {#Logout}
 
-この [ビデオ購読者のアカウント](https://developer.apple.com/documentation/videosubscriberaccount) framework は、デバイスのシステムレベルで TV プロバイダーアカウントにサインインしたユーザーをプログラムでログアウトする API を提供しません。 したがって、ログアウトが完全に有効になるには、エンドユーザーは次の場所から明示的にログアウトする必要があります。 *`Settings -> TV Provider`* iOS/iPadOS または *`Settings -> Accounts -> TV Provider`* tvOS の場合。 ユーザーが持つもう 1 つのオプションは、特定のアプリケーション設定セクション（TV プロバイダーの権限アクセス）からユーザーの購読情報にアクセスする権限を撤回することです。
+The [ビデオ購読者のアカウント](https://developer.apple.com/documentation/videosubscriberaccount) framework は、デバイスのシステムレベルで TV プロバイダーアカウントにサインインしたユーザーをプログラムでログアウトする API を提供しません。 したがって、ログアウトが完全に有効になるには、エンドユーザーは次の場所から明示的にログアウトする必要があります。 *`Settings -> TV Provider`* iOS/iPadOS または *`Settings -> Accounts -> TV Provider`* tvOS の場合。 ユーザーが持つもう 1 つのオプションは、特定のアプリケーション設定セクション（TV プロバイダーの権限アクセス）からユーザーの購読情報にアクセスする権限を撤回することです。
 
 >[!TIP]
 >
-> **<u>ヒント：</u>** AccessEnabler iOS/tvOS SDK を使用して実装します。 [ログアウト](/help/authentication/iostvos-sdk-api-reference.md#logout) API
+> **<u>ヒント：</u>** AccessEnabler iOS/tvOS SDK を使用して実装します。 [ログアウト](/help/authentication/iostvos-sdk-api-reference.md#logout) API.
 
 
 >[!TIP]
@@ -212,14 +210,14 @@ Apple SSO のユーザーエクスペリエンスを最大限に活用するに�
 > **<u>ヒント：</u>** tvOS の実装については、以下の手順に従います。
 
 - この申し込みは、 [ログアウトの開始](/help/authentication/iostvos-sdk-api-reference.md#logout) AccessEnabler iOS/tvOS SDK から。 これは、MVPD 側でのセッションのクリーンアップを容易にしません。
-- アプリケーションは、ユーザーに対し、明示的にログアウトするように指示/プロンプトを表示する必要があります *`Settings -> Accounts -> TV Provider`* tvOS の場合のみ [*VSA203* ステータスコードがトリガーされました](/help/authentication/error-reporting.md).
+- アプリケーションは、ユーザーに対し、明示的にログアウトするように指示/プロンプトを表示する必要があります。 *`Settings -> Accounts -> TV Provider`* tvOS の場合のみ [*VSA203* ステータスコードがトリガーされました](/help/authentication/error-reporting.md).
 
 >[!TIP]
 >
 > **<u>ヒント：</u>** iOS/iPadOS の実装については、以下の手順に従います。
 
 - この申し込みは、 [ログアウトの開始](/help/authentication/iostvos-sdk-api-reference.md#logout) AccessEnabler iOS/tvOS SDK から。 これにより、MVPD 側でのセッションのクリーンアップが容易になります。
-- アプリケーションは、ユーザーに対し、明示的にログアウトするように指示/プロンプトを表示する必要があります *`Settings -> TV Provider`* (iOS/iPadOS の場合のみ ) [*VSA203* ステータスコードがトリガーされました](/help/authentication/error-reporting.md).
+- アプリケーションは、ユーザーに対し、明示的にログアウトするように指示/プロンプトを表示する必要があります。 *`Settings -> TV Provider`* (iOS/iPadOS の場合のみ ) [*VSA203* ステータスコードがトリガーされました](/help/authentication/error-reporting.md).
 
 
 <!--
@@ -230,5 +228,5 @@ Apple SSO のユーザーエクスペリエンスを最大限に活用するに�
 - [AccessEnabler iOS/tvOS SDK Cookbook](/help/authentication/iostvos-sdk-cookbook.md)
 - [AccessEnabler iOS/tvOS SDK API Reference](/help/authentication/iostvos-sdk-api-reference.md)
 - [Error Reporting](/help/authentication/error-reporting.md)
-- [Apple Developer Documentation - Video Subscriber Account Framework](https://developer.apple.com/documentation/videosubscriberaccount)
+- [Apple Developer Documentation - Video Subscriber Account Framework](https://developer.apple.com/documentation/videosubscriberaccount)
 -->

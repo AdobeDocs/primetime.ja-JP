@@ -1,13 +1,13 @@
 ---
 title: 保護されたリソースの識別
 description: 保護されたリソースの識別
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: e96aea02-54b2-491d-ba91-253c0d0e681c
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%
 
 ---
-
 
 # 保護されたリソースの識別 {#identifying-protected-resources}
 
@@ -23,15 +23,14 @@ ht-degree: 0%
    - チャネル
       - 表示
          - エピソード
-            - アセット\
-                
+            - アセット
 
 </br>
 
 ## メディア RSS 形式 {#media_rss}
 
-リソースは、単純な文字列（チャネルの一意の識別子）で識別できます。また、Adobe( またはAdobe Primetime認証の許可されたパートナー ) と参加する MVPD およびプログラマーとの間で合意されたとおりに、メディア RSS 形式 (MRSS) で表すこともできます。 リソース指定子として使用される RSS 文字列には、評価や親の制御メタデータなどの追加情報を含めることができます。\
- 
+リソースは、単純な文字列（チャネルの一意の識別子）で識別できます。また、Adobe( またはAdobe Primetime認証の許可されたパートナー ) と参加する MVPD およびプログラマーとの間で合意されたとおりに、メディア RSS 形式 (MRSS) で表すこともできます。 リソース指定子として使用される RSS 文字列には、評価や親の制御メタデータなどの追加情報を含めることができます。
+
 
 「TNT」などの単純なリソース識別子を使用する場合、チャネルを表すと見なされ、次の RSS リソース指定子に変換されます。
 
@@ -42,7 +41,7 @@ ht-degree: 0%
         </channel>
     </rss>
 ```
- 
+
 
 より複雑な指定子は、例えば追加の評価情報を含めることができます。 RSS 文字列全体を、リソース ID を必要とする Access Enabler 関数に渡すことができます。例えば、 [`getAuthorization()`](/help/authentication/rest-api-reference.md):
 
@@ -57,7 +56,7 @@ ht-degree: 0%
     getAuthorization(resource);
 ```
 
-リソース指定子はAdobe Primetime認証に対して不透明です。単に MVPD に渡されます。 MVPD がリソース指定子を認識しないか解析できない場合は、Adobe Primetime認証にエラーが返され、エラーが `tokenRequestFailed()` コールバック。
+リソース指定子はAdobe Primetime認証に対して不透明で、単に MVPD に渡されます。 MVPD がリソース指定子を認識しないか解析できない場合は、Adobe Primetime認証にエラーが返され、エラーが `tokenRequestFailed()` コールバック。
 
 <!--
 ## Related Information {#related}

@@ -1,13 +1,13 @@
 ---
 title: 登録レコードを返す
 description: 登録レコードを返す
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
 
 ---
-
 
 # 登録レコードを返す {#return-registration-record}
 
@@ -20,29 +20,29 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
- 
+</br>
+
 
 ## 説明 {#description}
 
-登録コード UUID、登録コード、ハッシュ化されたデバイス ID を含む登録コードレコードを返します。 
+登録コード UUID、登録コード、ハッシュ化されたデバイス ID を含む登録コードレコードを返します。
 
- 
+
 
 <div>
 
 
-| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
+| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>;/regige/v1/{requestorId}/regcode/{registrationCode}</br></br>例：</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | ストリーミングアプリ</br></br>または</br></br>プログラマーサービス | 1.要求者  </br>    （パスコンポーネント）</br>2.  登録コード  </br>    （パスコンポーネント） | GET | 登録コードと情報を含む XML または JSON。 以下のスキーマとサンプルを参照してください。 | 200 |
+| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>例：</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | ストリーミングアプリ</br></br>または</br></br>プログラマーサービス | (1) 請求者  </br>    （パスコンポーネント）</br>2.  登録コード  </br>    （パスコンポーネント） | GET | 登録コードと情報を含む XML または JSON。 以下のスキーマとサンプルを参照してください。 | 200 |
 
 {style="table-layout:auto"}
 

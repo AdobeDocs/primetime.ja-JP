@@ -1,13 +1,13 @@
 ---
 title: Amazon FireOS アプリケーションの登録
 description: Amazon FireOS アプリケーションの登録
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 650fd4a2-dfc3-4c74-9b5b-6bea832a28ca
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
 
 ---
-
 
 # Amazon FireOS アプリケーションの登録 {#amazon-fireos-application-registration}
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## はじめに {#intro}
 
-FireOS AccessEnabler SDK バージョン 3.0 以降では、Adobeのサーバを使用して認証メカニズムを変更しています。 公開鍵と秘密鍵システムを使用して requestorID に署名する代わりに、SDK がサーバーに対しておこなうすべての呼び出しに後で使用されるアクセストークンの取得に使用できる「ソフトウェアステートメント」文字列の概念を導入します。 ソフトウェアステートメントに加えて、アプリケーションのディープリンクを作成する必要もあります。
+FireOS AccessEnabler SDK のバージョン 3.0 以降では、Adobeのサーバを使用して認証メカニズムを変更します。 公開鍵と秘密鍵システムを使用して requestorID に署名する代わりに、SDK がサーバーに対しておこなうすべての呼び出しに後で使用されるアクセストークンの取得に使用できる「ソフトウェアステートメント」文字列の概念を導入します。 ソフトウェアステートメントに加えて、アプリケーションのディープリンクを作成する必要もあります。
 
 詳しくは、 [動的クライアントの登録](/help/authentication/dynamic-client-registration.md)
 
@@ -29,14 +29,14 @@ FireOS AccessEnabler SDK バージョン 3.0 以降では、Adobeのサーバを
 
 **注意：** ソフトウェアステートメントはアプリ固有で、個々のソフトウェアステートメントは複数のアプリケーションに対して使用できません。 これは、複数のチャネルへのアクセスを提供するアプリケーションにも当てはまります。
 
-## ソフトウェアステートメントの取得方法 {#how-to}
+## ソフトウェアステートメントを取得する方法 {#how-to}
 
 ### Adobeの TVE ダッシュボードにアクセスできる場合：
 
 - ブラウザーを開き、に移動します。 <https://console.auth.adobe.com>
 - に移動します。 `Channels` 」セクションで、チャネルを選択します。
 - に移動します。 `Registered Applications` タブ。
-- クリック `Add new application`.
+- クリック： `Add new application`.
 - アプリケーションの名前とバージョンを指定し、使用可能なプラットフォームを選択します（この例では Android）。
 - プログラマー用に既に構成されたドメインのリストから選択してドメイン名を指定します。
 - 変更をサーバーにプッシュし、チャネルの「登録済みアプリケーション」タブに戻ります。
@@ -55,8 +55,8 @@ FireOS AccessEnabler SDK バージョン 3.0 以降では、Adobeのサーバを
 
 ## ソフトウェア文の使用方法 {#use-both}
 
-アプリケーションのリソースファイル内 `strings.xml` 次のコードを追加します。
+アプリケーションのリソースファイル内 `strings.xml` 次のコードを追加します。
 
 ```XML
-<string name="software_statement">softwarestatement value</string>
+<string name="software_statement">softwarestatement value</string>
 ```

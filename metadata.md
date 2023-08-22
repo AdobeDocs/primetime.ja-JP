@@ -3,9 +3,10 @@ cloud: Experience Cloud
 type: Documentation
 product: adobe primetime
 solution: Primetime
+feature-set: Primetime
 git-repo: https://github.com/AdobeDocs/primetime.ja-JP
 index: y
-source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
+source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
@@ -19,7 +20,7 @@ metadata.md ファイルには、リポジトリ内のユーザーガイド TOC.
 
 | メタデータ | 説明 |
 |--- |--- |
-| solution-title | 記事のヘッダーでリンクとして使用されます |
+| solution-title | 記事のヘッダーでリンクとして使用されます。 |
 | solution-hub-url | helpx ハブページを開きます |
 | solution-icon | ソリューションタイトルの横にソリューションアイコンが表示されます。 未実装 |
 | getting-started-url | helpx の概要ページへのリンク |

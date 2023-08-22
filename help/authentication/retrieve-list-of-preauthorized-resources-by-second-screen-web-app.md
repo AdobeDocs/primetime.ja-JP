@@ -1,13 +1,13 @@
 ---
 title: 2 画面目の Web アプリで事前に認証されたリソースのリストを取得
 description: 2 画面目の Web アプリで事前に認証されたリソースのリストを取得
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 78eeaf24-4cc1-4523-8298-999c9effdb7a
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
 
 ---
-
 
 # 2 画面目の Web アプリで事前に認証されたリソースのリストを取得 {#retrieve-list-of-preauthorized-resources-by-second-screen-web-app}
 
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -33,10 +33,12 @@ ht-degree: 0%
 
 事前に認証されたリソースのリストを取得するためのAdobe Primetime認証へのリクエスト。
 
-API には次の 2 つのセットがあります。1 つはストリーミングアプリまたはプログラマーサービス用のセットで、もう 1 つは 2 つ目のスクリーン Web アプリ用のセットです。 このページでは、AuthN アプリの API について説明します。
+API には 2 つのセットがあります。1 つはストリーミングアプリ用のセット、もしくはプログラマーサービス用のセット、もう 1 つは 2 つ目のスクリーン Web アプリ用のセットです。 このページでは、AuthN アプリの API について説明します。
 
- \
-|エンドポイント |呼び出し済み  </br>作成者 |入力   </br>パラメーター | HTTP  </br>メソッド |応答 | HTTP  </br>応答 | | — | — | — | — | — | — | | &lt;sp_fqdn>/api/v1/preauthorize/{registration code} | AuthN モジュール | 1.  登録コード  </br>    （パスコンポーネント）</br>2.  requestor （必須）</br>3.  リソースリスト（必須） |GET |個々の事前認証の決定またはエラーの詳細を含む XML または JSON。 以下のサンプルを参照してください。 | 200 — 成功</br></br>400 — 無効なリクエスト</br></br>401 — 未認証</br></br>405 — 許可されていないメソッド  </br></br>412 — 事前条件に失敗しました</br></br>500 — 内部サーバーエラー |
+
+| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
+| --- | --- | --- | --- | --- | --- |
+| &lt;sp_fqdn>/api/v1/preauthorize/{registration code} | AuthN モジュール | (1) 登録番号  </br>    （パスコンポーネント）</br>2.  requestor （必須）</br>3.  リソースリスト（必須） | GET | 個々の事前認証の決定またはエラーの詳細を含む XML または JSON。 以下のサンプルを参照してください。 | 200 — 成功</br></br>400 — 無効なリクエスト</br></br>401 — 未認証</br></br>405 — 許可されていないメソッド  </br></br>412 — 事前条件に失敗しました</br></br>500 — 内部サーバーエラー |
 
 
 
@@ -58,23 +60,23 @@ Adobe-Response-Confidence : full
 Content-Type: application/xml; charset=utf-8
 
 <resources>
-    <resource>
-        <id>TestStream1</id>
-        <authorized>true</authorized>
-    </resource>
-    <resource>
-        <id>TestStream2</id>
-        <authorized>false</authorized>  
-        <error>
-            <status>403</status>
-            <code>authorization_denied_by_mvpd</code>
-            <message>User not authorized</message>
-            <details>Your subscription package does not include the "TestStream3" channel.</details>
-            <helpUrl>https://experienceleague-review.corp.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html#error-codes</helpUrl>
-            <trace>0453f8c8-167a-4429-8784-cd32cfeaee58</trace>
-            <action>none</action>
-        </error>
-    <resource>
+    <resource>
+        <id>TestStream1</id>
+        <authorized>true</authorized>
+    </resource>
+    <resource>
+        <id>TestStream2</id>
+        <authorized>false</authorized>  
+        <error>
+            <status>403</status>
+            <code>authorization_denied_by_mvpd</code>
+            <message>User not authorized</message>
+            <details>Your subscription package does not include the "TestStream3" channel.</details>
+            <helpUrl>https://experienceleague-review.corp.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html#error-codes</helpUrl>
+            <trace>0453f8c8-167a-4429-8784-cd32cfeaee58</trace>
+            <action>none</action>
+        </error>
+    <resource>
 </resources>
 ```
 
@@ -108,4 +110,3 @@ Content-Type: application/json; charset=utf-8
     ]
 }
 ```
-

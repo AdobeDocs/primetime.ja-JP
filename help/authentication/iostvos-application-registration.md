@@ -1,15 +1,15 @@
 ---
 title: iOS/tvOS のアプリ登録
 description: iOS/tvOS のアプリ登録
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 89ee6b5a-29fa-4396-bfc8-7651aa3d6826
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 0%
 
 ---
 
-
-# iOS/tvOS のアプリ登録 {#iostvos-application-registration}
+# iOS/tvOS のアプリ登録 {#iostvos-application-registration}
 
 >[!NOTE]
 >
@@ -27,14 +27,14 @@ iOS/tvOS AccessEnabler SDK のバージョン 3.0 以降は、Adobeのサーバ�
 
 **注意：** ソフトウェアステートメントは、アプリ固有で、同じソフトウェアステートメントを複数のアプリケーションで使用することはできません。 プログラマレベルのソフトウェアステートメントも同じに従うので、単一のチャネルとマルチチャネルのどちらでも、単一のアプリケーションに対してのみ使用できます。 この制限は、カスタムスキームにも適用されます。
 
-## ソフトウェアステートメントの取得方法 {#obtain}
+## ソフトウェアステートメントを取得する方法 {#obtain}
 
 ### Adobeの TVE ダッシュボードにアクセスできる場合：
 
 - ブラウザーを開き、に移動します。 <https://console.auth.adobe.com>
 - に移動します。 `Channels` 」セクションで、チャネルを選択します。
 - に移動します。 `Registered Applications` タブ。
-- クリック `Add new application`.
+- クリック： `Add new application`.
 - アプリケーションの名前とバージョンを指定し、使用可能なプラットフォームを選択します。 iOS/tvOS を使用しています。
 - 変更をサーバーにプッシュし、チャネルの「登録済みアプリケーション」タブに戻ります。
 - すべての登録済みアプリケーションのリストが表示されます。 次をクリック：   `Download` 」ボタンをクリックします。 ソフトウェアステートメントをダウンロードする準備が整うまで、数分待たなければならない場合があります。
@@ -57,7 +57,7 @@ iOS/tvOS AccessEnabler SDK のバージョン 3.0 以降は、Adobeのサーバ�
 - ブラウザーを開き、に移動します。 <https://console.auth.adobe.com>
 - に移動します。 `Channels` 」セクションで、チャネルを選択します。
 - に移動します。 `Custom Schemes` タブ。
-- クリック `Generate a new custom scheme`.
+- クリック： `Generate a new custom scheme`.
 - アプリケーション用に新しいカスタムスキームが生成されます。 例： `adbe.1JqxQsYhQOCIrwPjaooY8w://`
 - 変更をサーバーにプッシュします。
 

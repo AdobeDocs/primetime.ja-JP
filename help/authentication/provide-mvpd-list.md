@@ -1,13 +1,13 @@
 ---
 title: MVPD リストを提供
 description: MVPD リストを提供
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: db2d8f19-d0b9-4195-bf0b-f9de0d96062b
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
 
 ---
-
 
 # MVPD リストを提供 {#provide-mvpd-list}
 
@@ -19,21 +19,21 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
+</br>
 
 ## 説明 {#description}
 
 リクエスト元の設定済み MVPD のリストを返します。
 
-| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
+| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
 | --- | --- | --- | --- | --- | --- |
 | &lt;sp_fqdn>/api/v1/config/{requestorId}</br></br>例：</br></br>&lt;sp_fqdn>/api/v1/config/sampleRequestorId | Primetime 認証 | 1.請求者</br>    （パスコンポーネント）</br>_2.  deviceType（非推奨）_ | GET | MVPD のリストを含む XML または JSON。 | 200 |
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 既存の MVPD XML 応答/config サーブレットと同じ
 
-注意：Platform SSO を使用するように設定されたすべての MVPD は、対応するノード (JSON/XML) 内に次の追加のプロパティを持ちます。
+注意： Platform SSO を使用するように設定されたすべての MVPD は、対応するノード (JSON/XML) 内に次の追加のプロパティを持ちます。
 
 * **enablePlatformServices(boolean):** この MVPD が Platform SSO を介して統合されているかどうかを示すフラグ
 * **boardingStatus （文字列）:** MVPD が Platform SSO(SUPPORTED) を完全にサポートするか、MVPD がプラットフォームピッカー (PICKER) にのみ表示されるかを示すフラグ

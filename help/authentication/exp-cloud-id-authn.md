@@ -1,13 +1,13 @@
 ---
 title: Primetime 認証でのExperience CloudID の使用
 description: Primetime 認証でのExperience CloudID の使用
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 03354c01-5aad-4d81-beee-1c3834599134
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
-
 
 # Primetime 認証でのExperience CloudID の使用
 
@@ -21,11 +21,7 @@ Experience CloudID（短くは ECID）は、Adobe Experience Cloudがアプリ�
 
 訪問者 ID を提供するシステムが既にある場合、このドキュメントの範囲で同じ ID を使用する必要があります。
 
-ECID を取得する方法の 1 つは、Experience CloudID サービスを使用することです。 TDM、JS ライブラリ、サーバー側、直接統合、またはモバイルプラットフォーム用のネイティブライブラリに基づいて、好みの実装タイプを使用できます。 利用可能なサービス、ライブラリ、SDK および実装ガイドの包括的なビューについては、以下を参照してください。https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-implementation-guides.html
-
-
-
-
+ECID を取得する方法の 1 つは、Experience CloudID サービスを使用することです。 TDM、JS ライブラリ、サーバー側、直接統合、またはモバイルプラットフォーム用のネイティブライブラリに基づいて、好みの実装タイプを使用できます。 利用可能なサービス、ライブラリ、SDK および実装ガイドの包括的なビューについては、以下を参照してください。 <https://experienceleague.adobe.com/docs/id-service/using/implementation/implementation-guides.html>
 
 ## Primetime 認証でExperience CloudID を使用するメリットは何ですか。 {#benefit-ex-cloud-id}
 

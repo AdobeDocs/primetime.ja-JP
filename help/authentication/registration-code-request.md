@@ -1,13 +1,13 @@
 ---
 title: 登録ページ
 description: 登録ページ
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
 
 ---
-
 
 # 登録ページ {#registration-page}
 
@@ -19,23 +19,23 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
+</br>
 
 ## 説明 {#create-reg-code-svc}
 
 ランダムに生成された登録コードとログインページの URI を返します。
 
-| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメータ | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
+| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>/reggie/v1/{requestor}/regcode</br>例：</br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | ストリーミングアプリ</br>または</br>プログラマーサービス | 1.要求者  </br>    （パスコンポーネント）</br>2.  deviceId （ハッシュ化）   </br>    （必須）</br>3.  device_info/X-Device-Info （必須）</br>4.  mvpd （オプション）</br>5.  ttl （オプション）</br>6.  _deviceType_</br> 7.  _deviceUser_ （廃止）</br>8.  _appId_ （廃止） | POST | 登録コードと情報、またはエラーの詳細を含む XML または JSON が失敗した場合。 以下のスキーマとサンプルを参照してください。 | 201 |
+| &lt;reggie_fqdn>/reggie/v1/{requestor}/regcode</br>例：</br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | ストリーミングアプリ</br>または</br>プログラマーサービス | (1) 請求者  </br>    （パスコンポーネント）</br>2.  deviceId （ハッシュ化）   </br>    （必須）</br>3.  device_info/X-Device-Info （必須）</br>4.  mvpd （オプション）</br>5.  ttl （オプション）</br>6.  _deviceType_</br> 7.  _deviceUser_ （廃止）</br>8.  _appId_ （廃止） | POST | 登録コードと情報、またはエラーの詳細を含む XML または JSON が失敗した場合。 以下のスキーマとサンプルを参照してください。 | 201 |
 
 {style="table-layout:auto"}
 
@@ -43,12 +43,12 @@ ht-degree: 0%
 | --- | --- |
 | 要求者 | この操作が有効な ProgrammerRequestorId。 |
 | deviceId | デバイス ID バイト。 |
-| device_info/</br>X-Device-Info | デバイス情報のストリーミング。</br>**注意**:この INFO は URL パラメータとして渡すことができますが、このパラメータの潜在的なサイズとGETURL の長さの制限により、HTTP ヘッダーで X-Device-Info として渡す必要があります。 </br>詳しくは、 [デバイスと接続情報を渡す](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| device_info/</br>X-Device-Info | デバイス情報のストリーミング。</br>**注意**：この INFO は、URL パラメーターとして渡すことができますが、このパラメーターの潜在的なサイズとGETURL の長さの制限により、HTTP ヘッダーで X-Device-Info として渡す必要があります。 </br>詳しくは、 [デバイスと接続情報を渡す](/help/authentication/passing-client-information-device-connection-and-application.md). |
 | mvpd | この操作が有効な MVPD ID です。 |
-| ttl | この regcode の有効期間（秒）。</br>**注意**:ttl の最大値は36000秒（10 時間）です。 値が大きいと、400 HTTP 応答が発生します（無効なリクエストです）。 If `ttl` が空の場合、Primetime 認証ではデフォルト値の 30 分が設定されます。 |
-| _deviceType_ | デバイスタイプ（Roku、PC など）。</br>このパラメータが正しく設定されている場合、ESM は以下の指標を提供します。 [デバイスタイプ別に分類](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) クライアントレスを使用する場合に、Roku、AppleTV、Xbox など、様々な種類の分析を実行できます。</br>詳しくは、 [パス指標でクライアントレスデバイスタイプパラメーターを使用するメリット&#x200B;](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**注意**:device_info はこのパラメータを置き換えます。 |
-| _deviceUser_ | デバイスのユーザー識別子。 |
-| _appId_ | アプリケーション ID/名前。 </br>**注意**:device_info は、このパラメータを置き換えます。 |
+| ttl | この regcode の有効期間（秒）。</br>**注意**:ttl の最大値は36000秒（10 時間）です。 値が大きいと、400 HTTP 応答が発生します（無効なリクエストです）。 次の場合 `ttl` が空の場合、Primetime 認証ではデフォルト値の 30 分が設定されます。 |
+| _deviceType_ | デバイスタイプ（Roku、PC など）。</br>このパラメータが正しく設定されている場合、ESM は以下の指標を提供します。 [デバイスタイプ別に分類](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) クライアントレスを使用する場合に、Roku、AppleTV、Xbox など、様々な種類の分析を実行できます。</br>詳しくは、 [パス指標でクライアントレスデバイスタイプパラメーターを使用するメリット&#x200B;](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**注意**:device_info がこのパラメーターを置き換えます。 |
+| _deviceUser_ | デバイスのユーザー ID。 |
+| _appId_ | アプリケーション ID/名前。 </br>**注意**:device_info がこのパラメーターを置き換えます。 |
 
 {style="table-layout:auto"}
 
@@ -57,11 +57,10 @@ ht-degree: 0%
 >
 >**ストリーミングデバイスの IP アドレス**
 ></br>
->クライアント/サーバ間実装の場合、ストリーミングデバイスの IP アドレスはこの呼び出しで暗黙的に送信されます。  サーバー間実装の場合、 **regcode** の呼び出しは、ストリーミングデバイスではなく、プログラマーサービスになります。ストリーミングデバイスの IP アドレスを渡すには、次のヘッダーが必要です。
+>クライアント/サーバ間実装の場合、ストリーミングデバイスの IP アドレスはこの呼び出しで暗黙的に送信されます。  サーバー間実装の場合、 **regcode** の呼び出しは、ストリーミングデバイスではなく、プログラマーサービスになります。ストリーミングデバイスの IP アドレスを渡すには、次のヘッダーが必要です。
 >
 >
->
-```
+>```
 >X-Forwarded-For : <streaming_device_ip> 
 >```
 >
@@ -69,10 +68,10 @@ ht-degree: 0%
 ></br></br>
 >例：</br>
 >
->
-```
+>```
 >POST /reggie/v1/{req_id}/regcode HTTP/1.1</br>X-Forwarded-For:203.45.101.20
 >```
+>
 </br>
 
 ### 応答 XML スキーマ {#xml-schema}
@@ -112,7 +111,7 @@ ht-degree: 0%
     </xs:schema>
 ```
 
- </br>
+</br>
 
 | エレメント名 | 説明 |
 | --------------- | ------------------------------------------------------------------------------------ |
@@ -130,9 +129,9 @@ ht-degree: 0%
 | registrationURL | エンドユーザーに表示されるログイン Web アプリの URL |
 
 {style="table-layout:auto"}
- </br>
+</br>
 
- 
+
 
 ### エラーメッセージ XSD  {#error-message}
 
@@ -153,7 +152,7 @@ ht-degree: 0%
         </xs:element>
     </xs:schema>
 ```
- 
+
 
 ### レスポンスのサンプル {#sample-response}
 
@@ -178,7 +177,7 @@ ht-degree: 0%
         </info>
     </ns2:regcode>
 ```
- 
+
 **JSON:**
 
 ```JSON
@@ -199,4 +198,3 @@ ht-degree: 0%
         }
     }
 ```
-

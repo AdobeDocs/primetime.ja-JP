@@ -1,16 +1,15 @@
 ---
 title: プリフライト認証
 description: プリフライト認証
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 036b1a8e-f2dc-4e9a-9eeb-0787e40c00d9
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 0%
 
 ---
 
-
-
-# プリフライト認証 {#preflight-authorization}
+# プリフライト認証 {#preflight-authorization}
 
 >[!NOTE]
 >
@@ -22,15 +21,15 @@ ht-degree: 0%
 
 この機能は、複数のリソースに対する軽量な認証チェックを提供します。 このライトウェイトチェックの目的は、UI を装飾することです（例えば、ロックアイコンとロック解除アイコンでアクセスステータスを示す）。 プリフライト認証は、できるだけ軽量で効率的なもので、1 回の API 呼び出しでリソースのリストの認証ステータスが生成されます。 この機能は、リソースの認証に関して権限を持つものではありません。
 
-A `getAuthorization(resource)` または `checkAuthorization(resource)` 再生を許可する前に、呼び出しを実行する必要があります。
+A `getAuthorization(resource)` または `checkAuthorization(resource)` 再生を許可する前に、呼び出しを実行する必要があります。
 
 プリフライト認証は、別の使用例に対するサポートも提供します。この場合、プログラマーは、メディアコンテンツの 1 項目の再生を許可するために、複数のリソース ID に対する認証をリクエストする必要があります。 プログラマーは、必要なリソースに対して初期のプリフライトチェックを行うことができ、応答に応じて、ビジネス条件が満たされない場合は、早期に失敗する可能性があります。
 
-プリフライト認証をサポートする MVPD のリストについては、 [MVPD Preflight Authorization](/help/authentication/mvpd-preflight-authz.md#preflight_support_list) ページ。 
+プリフライト認証をサポートする MVPD のリストについては、 [MVPD Preflight Authorization](/help/authentication/mvpd-preflight-authz.md#preflight_support_list) ページに貼り付けます。
 
 >[!NOTE]
 >
-> 完全なプリフライト認証サポートを持たない MVPD に対するこの機能の使用は、Adobeおよび MVPD と事前に合意する必要があることに注意してください。 これらの MVPD でのプリフライト認証の使用は、説明されている「最悪のシナリオ」に該当します [ここ](/help/authentication/mvpd-preflight-authz.md#intro) とを使用すると、パフォーマンスの問題が発生し、応答時間が遅くなる可能性があります。 </br>
+> 完全なプリフライト認証サポートを持たない MVPD に対するこの機能の使用は、Adobeおよび MVPD と事前に合意する必要があることに注意してください。 これらの MVPD でのプリフライト認証の使用は、説明されている「最悪のシナリオ」に該当します。 [ここ](/help/authentication/mvpd-preflight-authz.md#intro) とを使用すると、パフォーマンスの問題が発生し、応答時間が遅くなる可能性があります。 </br>
 > また、 **Adobeによって 5 つ以上のリソースに対して明示的に合意が必要**.
 
 ## AccessEnabler Preflight API {#AE_pre_api}
@@ -41,7 +40,7 @@ AccessEnabler は、プリフライト認証を実装するための API/コー�
 
 AccessEnabler オブジェクトでこの関数を呼び出して、リソースの一覧の認証状態を要求します。
 
-resources パラメータは、承認を確認する必要があるリソースのリストです。 リスト内の各要素は、リソース ID を表す文字列である必要があります。 リソース ID には、 `getAuthorization()` 呼び出し、すなわち、プログラマと MVPD の間に確立された値、またはメディア RSS フラグメントに基づいて合意される。 Adobe Primetime認証では、MVPD が実際にサポートする内容に応じてリソース形式を変換できる薄い仲介レイヤーを除き、リソースを管理しません。
+resources パラメータは、承認を確認する必要があるリソースのリストです。 リスト内の各要素は、リソース ID を表す文字列である必要があります。 リソース ID には、 `getAuthorization()` 呼び出し、すなわち、プログラマーと MVPD の間に確立された値、またはメディア RSS フラグメントに基づいて合意される。 Adobe Primetime認証では、MVPD が実際にサポートする内容に応じてリソース形式を変換できる薄い仲介レイヤーを除き、リソースを管理しません。
 
 ### preauthorizedResources(Array:authorizedResources) {#preauthRes}
 
@@ -71,19 +70,19 @@ resources パラメータは、承認を確認する必要があるリソース�
 
 API 呼び出しは、現在のユーザーの許可されたリソースのキャッシュされたリストをクライアントのローカルストレージで検索しようとします。 キャッシュされたリストがない場合は、AdobePass サーバーに対して HTTPS 呼び出しがおこなわれ、リストが取得されます。
 
-キャッシュメカニズムは、ネットワーク呼び出しを完全にスキップすることで、後続の呼び出しでのパフォーマンス時間を改善します。 また、認証プロセスの一環として、キャッシュされたリストを事前に設定することもできます。  ( このシナリオの設定について詳しくは、 [プリフライト認証の統合](/help/authentication/authz-usecase.md#preflight_authz_int) （『MVPD 統合ガイド』の「認証」セクション）。
+キャッシュメカニズムは、ネットワーク呼び出しを完全にスキップすることで、後続の呼び出しでのパフォーマンス時間を改善します。 また、認証プロセスの一環として、キャッシュされたリストを事前に設定することもできます。  ( このシナリオの設定について詳しくは、 [プリフライト認証の統合](/help/authentication/authz-usecase.md#preflight_authz_int) （『MVPD 統合ガイド』の「認証」セクション）。
 
-また、キャッシュされたリソースのリストは、キャッシュされたリソースのリストが存在する場合、承認フローを最適化するために使用される可能性があります。 `checkAuthorization()` は、ネットワーク呼び出しを実行する前に確認できます。 リソースが事前に認証されたリソースのリストに含まれていない場合、Primetime 認証サーバーを呼び出す必要なく、このチェックが失敗する可能性があります。
+また、キャッシュされたリソースのリストは、キャッシュされたリソースのリストが存在する場合、承認フローを最適化するために使用される可能性があります。 `checkAuthorization()` は、ネットワーク呼び出しを実行する前に確認できます。 リソースが事前に認証されたリソースのリストに含まれていない場合、Primetime 認証サーバーを呼び出す必要なく、このチェックが失敗する可能性があります。
 
 
 ### ChannelID を使用したプリフライト {#preflight_using_channelID}
 
 Primetime 認証 2.4.1 リリース以降、Preflight フローは次のように機能します。
 
-1. 認証中、Primetime 認証は `channelIID` MVPD の SAML 応答からの要素。この値を使用して `authorizedResources` 要素を認証トークンに追加しました。
-1. 内部 `checkPreauthorizedResources()` API 関数、Primetime 認証は、 `authorizedResources` 要素が設定されている。
-1. この `authorizedResources` 要素が設定されている場合、Primetime 認証はその値を読み取り、 `authorizedResources` 要素と、から受け取ったリソースのリスト `checkPreauthorizedResources()` パラメーター。  この積集合の結果、事前に認証されたリソースの最後のリストが表示されます。
-1. この `authorizedResources` 要素が設定されていない場合は、以前に実装されたフローを実行します。このフローでは、 `checkPreauthorizedResources()` パラメーターが PreAuthorizationServlet に渡されます。 このサーブレットは、MVPD エンドポイントへの認証呼び出しを実行し、事前に認証されたリソースのリストを返します。
+1. 認証中、Primetime 認証は `channelIID` MVPD の SAML 応答からの要素。この値を使用して `authorizedResources` 要素を認証トークンに追加しました。
+1. 内部 `checkPreauthorizedResources()` API 関数、Primetime 認証は、 `authorizedResources` 要素が設定されている。
+1. 次の場合、 `authorizedResources` 要素が設定されている場合、Primetime 認証はその値を読み取り、 `authorizedResources` 要素と、から受け取ったリソースのリスト `checkPreauthorizedResources()` パラメーター。  この積集合の結果、事前に認証されたリソースの最後のリストが表示されます。
+1. 次の場合、 `authorizedResources` 要素が設定されていない場合は、以前に実装されたフローを実行します。このフローでは、 `checkPreauthorizedResources()` パラメーターが PreAuthorizationServlet に渡されます。 このサーブレットは、MVPD エンドポイントへの認証呼び出しを実行し、事前に認証されたリソースのリストを返します。
 
 ### ChannelID を使用したプリフライトの例
 
@@ -107,9 +106,9 @@ Primetime 認証 2.4.1 リリース以降、Preflight フローは次のよう�
         <saml:AttributeValue xsi:type="xs:string">SPEED-SPEED2</saml:AttributeValue>
     </saml:Attribute>
 ```
- 
 
-この `authorizedResources` 認証要素の要素は、次のように表示されます。
+
+The `authorizedResources` 認証要素の要素は、次のように表示されます。
 
 ```JSON
     <authorizedResources>
@@ -130,10 +129,10 @@ Primetime 認証 2.4.1 リリース以降、Preflight フローは次のよう�
     </authorizedResources>
 ```
 
-プログラマーは、 `checkPreauthorizedResources()` 次のパラメーターのリストを渡す API 呼び出し。</span>
+プログラマーは、 `checkPreauthorizedResources()` 次のパラメーターのリストを渡す API 呼び出し。</span>
 
-- &quot;MSNBC&quot; 
-- &quot;FBN&quot; 
+- &quot;MSNBC&quot;
+- &quot;FBN&quot;
 - &quot;TruTV&quot;
 - &quot;fbc-fox&quot;
 
@@ -143,26 +142,26 @@ Primetime 認証 2.4.1 リリース以降、Preflight フローは次のよう�
 - &quot;FBN&quot;
 - &quot;TruTV&quot;
 
- 
+
 
 **注意：** 積集合では大文字と小文字が区別されないことに注意してください。
 
- 
+
 
 ### POST/事前認証 {#post}
 
-この呼び出しは、キャッシュ、許可、リソース・リストが存在しない場合に、AccessEnabler によって自動的に実行されます。 
+この呼び出しは、キャッシュ、許可、リソース・リストが存在しない場合に、AccessEnabler によって自動的に実行されます。
 
 
 #### リクエスト {#req}
 
-| パラメータ | タイプ | 必須 | 説明 |
+| パラメーター | タイプ | 必須 | 説明 |
 | --- | --- | --- | --- |
 | `authentication_token` | 文字列 | はい | 認証トークン。 |
 | `resource_id` | 文字列 | はい | 単一のリソース。 これは、 `checkPreauthorizedResources()` API 呼び出し。 |
 
 
-**注意：** 要求されたリソースの最大数は設定可能です。
+**注意：** 要求されたリソースの最大数は設定可能です。
 **デフォルト値の最大値は 5 です。**
 
 
@@ -193,7 +192,7 @@ Primetime 認証 2.4.1 リリース以降、Preflight フローは次のよう�
 AccessEnabler がサービス・プロバイダから取得する、事前に認証されたリソースのリスト。 次のリソースのリスト：
 
 - AuthN および AuthZ トークンと共に保存されます。
-- ユーザーが同じ Web サイト上にいる限り、または AuthN トークンの有効期限が切れるまで有効です
+- ユーザーが同じ Web サイト上にいる限り、または AuthN トークンの有効期限が切れるまで有効です。
 - ユーザーが新しい Primetime 認証統合 Web サイトに到達するたびに再取得されます。
 
 各エントリには、ユーザーが事前に認証されているリソース ID が含まれます。
@@ -210,19 +209,19 @@ AccessEnabler がサービス・プロバイダから取得する、事前に認
 
 このリストは、「事前認証キャッシュ」という名前です。
 
-#### フロー {#flow}
+#### 流量 {#flow}
 
-1. プログラマーのアプリ/サイトが `checkPreauthorizedResources(resourceList)` 呼び出し。
+1. プログラマーのアプリ/サイトが `checkPreauthorizedResources(resourceList)` を呼び出します。
 1. AccessEnabler は、認証済みリソースの認証トークンを検証します。
-   1. 認証トークンに認証済みのリソースが含まれている場合。このリストは権限を持っており、この情報を取得するために呼び出しをおこなう必要はありません。 resourceList のリソースは、認証トークン上の許可されたリソースのリスト内で検索され、見つかったリソースのみが `preauthorizedResources()` コールバック。
-   1. 認証トークンに認証済みリソースが含まれていない場合 — `resourceList` は、事前認証キャッシュ内のリソースのリストと比較されます。
-      1. リストに同じリソースが含まれる場合（サーバーへの呼び出しが既におこなわれ、応答は既に事前認証キャッシュに含まれている）。 許可されたリソースのみが `preauthorizedResources()` コールバック。
-      1. リストに同じリソースが含まれていない場合 — クライアントは、resourceList 内のリソースの認証状態を取得するために、サーバーを呼び出す必要があります。 応答は取得され、事前認証キャッシュに保存され、古いリソースが完全に置き換えられます。 許可されたリソースのみが `preauthorizedResources()` コールバック。
+   1. 認証トークンに認証済みのリソースが含まれている場合。このリストは権限を持っており、この情報を取得するために呼び出しをおこなう必要はありません。 resourceList のリソースは、認証トークン上の許可されたリソースのリスト内で検索され、見つかったリソースのみが `preauthorizedResources()` コールバック。
+   1. 認証トークンに認証済みリソースが含まれていない場合 — `resourceList` は、事前認証キャッシュ内のリソースのリストと比較されます。
+      1. リストに同じリソースが含まれる場合（サーバーへの呼び出しが既におこなわれ、応答は既に事前認証キャッシュに含まれている）。 許可されたリソースのみが `preauthorizedResources()` コールバック。
+      1. リストに同じリソースが含まれていない場合 — クライアントは、resourceList 内のリソースの認証状態を取得するために、サーバーを呼び出す必要があります。 応答は取得され、事前認証キャッシュに保存され、古いリソースが完全に置き換えられます。 許可されたリソースのみが `preauthorizedResources()` コールバック。
 
 
 #### リスト取得 {#listRetrieve}
 
-常に `checkPreauthorizedResources()` が呼び出されると、認証を検証するリソースのリストが事前認証キャッシュと照合されます。 リストに同じリソースのセットが含まれる場合、サービスプロバイダーは呼び出されません。これは、 `preauthorizedResources()` コールバックは既にキャッシュに存在します。
+常に `checkPreauthorizedResources()` が呼び出されると、認証を検証するリソースのリストが事前認証キャッシュと照合されます。 リストに同じリソースのセットが含まれる場合、サービスプロバイダーは呼び出されません。これは、 `preauthorizedResources()` コールバックは既にキャッシュに存在します。
 
 
 #### logout() {#logout}
@@ -232,7 +231,7 @@ AccessEnabler がサービス・プロバイダから取得する、事前に認
 
 ## 依存関係 {#depends}
 
-プリフライト API のパフォーマンスは、特定の MVPD 実装に依存します。  実装オプションについては、 [プリフライト認証の統合](/help/authentication/authz-usecase.md#preflight_authz_int) （MVPD 統合ガイドの「認証」セクション）を参照してください。
+プリフライト API のパフォーマンスは、特定の MVPD 実装に依存します。  実装オプションについては、 [プリフライト認証の統合](/help/authentication/authz-usecase.md#preflight_authz_int) （MVPD 統合ガイドの「認証」セクション）を参照してください。
 
 
 ## セキュリティ {#security}
@@ -241,20 +240,20 @@ AccessEnabler がサービス・プロバイダから取得する、事前に認
 
 この実装はトランスポートとして HTTPS を使用しますが、より軽いコールを得るために、追加のセキュリティ対策は採用されません（署名なし、FAXS なし）。
 
-**注意：** 保護されたリソースへのアクセスをユーザーに許可する必要があるかどうかを判断するために、この API を正式な方法で使用しないでください。 この API の目的は、UI 装飾やビジネス上の意思決定の事前設定です。 この `getAuthorization()` および `checkAuthorization()` の呼び出しは、再生を許可する前におこなう必要があります。
+**注意：** 保護されたリソースへのアクセスをユーザーに許可する必要があるかどうかを判断するために、この API を正式な方法で使用しないでください。 この API の目的は、UI 装飾やビジネス上の意思決定の事前設定です。 The `getAuthorization()` および `checkAuthorization()` の呼び出しは、再生を許可する前におこなう必要があります。
 
 
 ## 互換性 {#compat}
 
-この機能は、AccessEnabler のすべての機能でサポートされます。AS、JS、AIR、iOS、Android、Xbox（第 2 画面の AuthN フロー）。
+この機能は、AS、JS、AIR、iOS、Android、Xbox（2 次画面 AuthN フロー）など、AccessEnabler のすべての機能でサポートされています。
 
-プリフライト認証では、CDATA セクションを含むリソースの事前認証はサポートされません。 現在のプリフライトシステムの焦点は、チャネルレベルのフィルタリングをサポートすることです。 CDATA セクションを持つリソースは、おそらくアセットレベルのリソースです。 プリフライトはシンプルをサポートしています `mrss` CDATA が含まれていない限り、チャネルレベルの事前認証のリソース。 
+プリフライト認証では、CDATA セクションを含むリソースの事前認証はサポートされません。 現在のプリフライトシステムの焦点は、チャネルレベルのフィルタリングをサポートすることです。 CDATA セクションを持つリソースは、おそらくアセットレベルのリソースです。 プリフライトはシンプルをサポートしています `mrss` CDATA が含まれていない限り、チャネルレベルの事前認証のリソース。
 
 ## 他の機能との統合 {#integ_w_other_features}
 
 リソースが事前に許可されたリソースのリストにない場合に失敗するために、承認フローで最適化が可能です。
 
-この最適化では、サーバのプリフライトエンドポイントは、[ 低下 ] メカニズムと統合されます。  
+この最適化では、サーバのプリフライトエンドポイントは、[ 低下 ] メカニズムと統合されます。
 
 MVPD および Requestor に対して「AuthN All」ルールが設定されている場合、プリフライトエンドポイントは単にリクエストで受け取ったすべてのリソースをミラーバックします。
 

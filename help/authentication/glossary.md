@@ -1,13 +1,13 @@
 ---
 title: 用語集
 description: 用語集
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: e64a94f6-7460-4aa8-8d6b-e0553ba1e4ec
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
 
 ---
-
 
 # 用語集 {#glossary}
 
@@ -60,7 +60,7 @@ Adobe Primetime認証に関するドキュメントで使用される用語は�
 
 ## IdP {#idp}
 
-プロバイダーの特定Adobe Primetime認証統合での MVPD の役割のコンテキストでの MVPD と同義です。 （お客様は、有料テレビプロバイダーのログインページを使用して、自分の ID を確認する必要があります。）
+Adobe Primetime認証統合での MVPD の役割のコンテキストで、プロバイダーを識別します。MVPD と同義です。 （お客様は、有料テレビプロバイダーのログインページを使用して、自分の ID を確認する必要があります。）
 
 ## メディアトークン検証ツール {#media-token-verifier}
 
@@ -68,17 +68,17 @@ Adobe Primetime認証に関するドキュメントで使用される用語は�
 
 ## MVPD {#mvpd}
 
-マルチチャネルビデオプログラミングディストリビュータ；「有料テレビプロバイダー」と同義です。
+マルチチャンネルビデオプログラミングディストリビュータ。「Pay TV Provider」と同義です。
 
 ## MVPD ID {#mvpd-id}
 
-詳しくは、 [ユーザー ID](#user-id).
+詳しくは、 [ユーザー ID](#user-id).
 
 ## パートナー ID {#partner-id}
 
 Adobeが MVPD に渡す識別子。Adobe Primetime認証をリクエストする代わりに、その識別子を使用して認証を識別します。 特定のプログラマーの UI を設定するために使用される場合もありますが、すべてのプログラマーで同じ場合もあります。MVPD のニーズによって異なります。
 
-## 有料テレビプロバイダ {#pay-tv-provider}
+## 有料テレビプロバイダー {#pay-tv-provider}
 
 と同義語 [MVPD](#mvpd).
 
@@ -88,7 +88,7 @@ Adobeが MVPD に渡す識別子。Adobe Primetime認証をリクエストする
 
 ## プロキシ MVPD {#proxy-mvpd}
 
-他の MVPD 用の ID サービスを提供する MVPD;Adobe Primetime認証と直接統合されている
+他の MVPD 用の ID サービスを提供する MVPD。Adobe Primetime認証と直接統合されます。
 
 ## プロキシ化 MVPD {#proxied-mvpd}
 
@@ -96,11 +96,11 @@ AdobeSP と直接統合されていないが、プロキシ MVPD を介して統
 
 ## 要求者 ID {#requestor-id}
 
-一意に [プログラマー](#programmer) Adobe Primetime認証内のアカウント、ブランド、チャネルまたはプロパティ。 この ID は、アカウントの初期設定時に、プログラマーとAdobeの間で決定されます。 Web 上では、要求者 ID はホワイトリストに登録された一連のドメインに関連付けられます。外部ドメインからの ID を使用する呼び出しは拒否されます。 プログラマーは、Analytics で要求者 ID も使用します。 通常、プログラマーごとに 1 つの要求者 ID しかありません。 リクエスト元 ID に関連する追加の機能の 1 つは、setRequestor API 呼び出しは、暗号化されたデータが送信され、Adobe Primetime認証システムでプログラマーを認証するために使用されるので、プログラマーが公開証明書をAdobeに提供する必要があることです。
+を一意に識別する [プログラマー](#programmer) Adobe Primetime認証内のアカウント、ブランド、チャネルまたはプロパティ。 この ID は、アカウントの初期設定時に、プログラマーとAdobeの間で決定されます。 Web 上では、要求者 ID はホワイトリストに登録された一連のドメインに関連付けられます。外部ドメインからの ID を使用する呼び出しは拒否されます。 プログラマーは、Analytics で要求者 ID も使用します。 通常、プログラマーごとに 1 つの要求者 ID しかありません。 リクエスト元 ID に関連する追加の機能の 1 つは、setRequestor API 呼び出しは、暗号化されたデータが送信され、Adobe Primetime認証システムでプログラマーを認証するために使用されるので、プログラマーが公開証明書をAdobeに提供する必要があることです。
 
 ## リソース ID {#resource-id}
 
-文字列または mRSS リソースで [プログラマー](#programmer) を MVPD に送信します。 これはプログラマーと MVPDs の間で合意されている。Adobe Primetime認証では、Resource ID が変更されない状態で渡されるので、すべての MVPD で同じである必要があります。 MVPD が各 ID が何を表すかを認識している限り、プログラマーは複数のリソース ID を使用できます。
+文字列または mRSS リソースで、 [プログラマー](#programmer) を MVPD に送信します。 これは、プログラマーと MVPD の間で合意されています。Adobe Primetime認証は、Resource ID を未変更で渡すので、すべての MVPD で同じである必要があります。 MVPD が各 ID が何を表すかを認識している限り、プログラマーは複数のリソース ID を使用できます。
 
 ## SessionGUID {#sessionGUID}
 
@@ -116,7 +116,7 @@ AdobeSP と直接統合されていないが、プロキシ MVPD を介して統
 
 ## SP{#sp}
 
-サービスプロバイダーこれは通常、 *役割* SP の、Adobe Primetime認証によって再生され、プログラマーの代わりに、 [MVPD](#mvpd).
+サービスプロバイダー。これは通常、 *役割* SP の、Adobe Primetime認証によって再生され、プログラマーの代わりに、 [MVPD](#mvpd).
 
 ## 一時パス {#temp-pass}
 

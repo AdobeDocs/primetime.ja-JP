@@ -1,13 +1,13 @@
 ---
 title: AccessEnabler iOS/tvOS 3.7.0 のアップグレードパス
 description: AccessEnabler iOS/tvOS 3.7.0 のアップグレードパス
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: f15c7414-ec9b-4e21-b457-1ecf59f47441
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
 
 ---
-
 
 # AccessEnabler iOS/tvOS 3.7.0 のアップグレードパス {#accessenabler-iostvos-370-upgrade-path}
 

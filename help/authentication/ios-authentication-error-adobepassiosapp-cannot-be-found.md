@@ -1,13 +1,13 @@
 ---
 title: iOS認証エラー — adobepass.ios.app が見つかりません
 description: iOS認証エラー — adobepass.ios.app が見つかりません
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: cd97c6fb-f0fa-45c2-82c1-f28aa6b2fd12
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
 
 ---
-
 
 # iOS認証エラー — adobepass.ios.app が見つかりません {#ios-authentication-error-adobepass.ios.app-cannot-be-found}
 
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 ## 問題 {#issue}
 
-ユーザーは認証フローを経て、プロバイダーに資格情報を入力すると、エラーページ、検索ページ、またはその他のカスタムページにリダイレクトされ、 `adobepass.ios.app` が見つからなかったか、解決されませんでした。
+ユーザーは認証フローを経て、プロバイダーに資格情報を入力すると、エラーページ、検索ページ、またはその他のカスタムページにリダイレクトされ、 `adobepass.ios.app` が見つからなかったか、解決されませんでした。
 
 ## 説明 {#explanation}
 
-iOS `adobepass.ios.app` は、AuthN フローが完了したことを示す最終的なリダイレクト URL として使用されます。 この時点で、アプリケーションは AuthN トークンを取得し、AuthN フローを最終処理するために、AccessEnabler にリクエストを送信する必要があります。
+iOS `adobepass.ios.app` は、AuthN フローが完了したことを示す最終的なリダイレクト URL として使用されます。 この時点で、アプリケーションは AuthN トークンを取得し、AuthN フローを最終決定するために、AccessEnabler にリクエストを送信する必要があります。
 
-問題は `adobepass.ios.app` が実際に存在しないので、 `webView`. iOS DemoApp の古いバージョンでは、このエラーは常に AuthN フローの最後にトリガーされ、それに応じて処理するように設定されていると想定していました (`indidFailLoadWithError`) をクリックします。
+問題は `adobepass.ios.app` は実際には存在せず、 `webView`. iOS DemoApp の古いバージョンでは、このエラーは常に AuthN フローの最後にトリガーされ、それに応じて処理するように設定されていると想定していました (`indidFailLoadWithError`) をクリックします。
 
 **注意：** この問題は、後のバージョンの DemoApp(iOS SDK ダウンロードに含まれる ) で修正されました。
 
-残念ながら、この想定は正しくありません。 いわゆる「スマート」DNS またはプロキシサーバーの中には、単に発生したエラーを渡すのではなく、次のいずれかを行うものがあります。 
+残念ながら、この想定は正しくありません。 いわゆる「スマート」DNS またはプロキシサーバーの中には、単に発生したエラーを渡すのではなく、次のいずれかを行うものがあります。
 
 - カスタムエラーページの作成
 - 検索ページ、またはその他のタイプの顧客ページやポータルに転送します。
@@ -36,7 +36,7 @@ iOS `adobepass.ios.app` は、AuthN フローが完了したことを示す最�
 
 ## 解決策 {#solution}
 
-DemoApp と同じ想定をしないでください。 代わりに、実行前にリクエストを切り取ります ( `shouldStartLoadWithRequest`) を参照し、適切に処理します。
+DemoApp と同じ想定をしないでください。 代わりに、実行前にリクエストを切り取ります ( `shouldStartLoadWithRequest`) を参照し、適切に処理します。
 
 実行前のリクエストの切断方法の例：
 
@@ -60,7 +60,6 @@ return YES;
 
 注意事項を以下に示します。
 
-- 使用しない `adobepass.ios.app` コードの任意の場所に直接配置できます。 代わりに、定数を使用します。 `ADOBEPASS_REDIRECT_URL`
-- この `return NO;` 文は、ページの読み込みを妨げます
-- 必ず `getAuthenticationToken` の呼び出しは、コード内で 1 回だけ呼び出されます。 への複数の呼び出し `getAuthenticationToken` は未定義の結果になります。
-
+- 使用しない `adobepass.ios.app` コードの任意の場所に直接配置できます。 代わりに、定数を使用します。 `ADOBEPASS_REDIRECT_URL`
+- The `return NO;` 文は、ページの読み込みを妨げます
+- 必ず `getAuthenticationToken` の呼び出しは、コード内で 1 回だけ呼び出されます。 への複数の呼び出し `getAuthenticationToken` は未定義の結果になります。

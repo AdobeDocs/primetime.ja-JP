@@ -1,13 +1,13 @@
 ---
 title: 認証トークンを取得
 description: 認証トークンを取得
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 0b010958-efa8-4dd9-b11b-5d10f51f5680
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
 
 ---
-
 
 # 認証トークンを取得 {#retrieve-authorization-token}
 
@@ -19,24 +19,24 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
-* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
+* ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 ## 説明 {#description}
 
-認証 (AuthZ) トークンを取得します。  
+認証 (AuthZ) トークンを取得します。
 
 
-| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
+| エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/tokens/authz</br></br>例：</br></br>&lt;sp_fqdn>/api/v1/tokens/authz | ストリーミングアプリ</br></br>または</br></br>プログラマーサービス | 1.requestor （必須）</br>2.  deviceId（必須）</br>3.  resource （必須）</br>4.  device_info/X-Device-Info （必須）</br>5.  _deviceType_</br> 6.  _deviceUser_ （廃止）</br>7.  _appId_ （廃止） | GET | 1.成功</br>2.  認証トークン  </br>    見つからないか期限切れです：   </br>    理由を説明する XML  </br>    （authn トークンが見つかりません）</br>3.  認証トークン  </br>    見つかりません：  </br>    XML の説明</br>4.  認証トークン  </br>    期限切れ：  </br>    XML の説明 | 200 — 成功  </br>412 - AuthN なし</br></br>404 - AuthZ なし</br></br>410 - AuthZ の期限切れ |
+| &lt;sp_fqdn>/api/v1/tokens/authz</br></br>例：</br></br>&lt;sp_fqdn>/api/v1/tokens/authz | ストリーミングアプリ</br></br>または</br></br>プログラマーサービス | 1.要求者（必須）</br>2.  deviceId（必須）</br>3.  resource （必須）</br>4.  device_info/X-Device-Info （必須）</br>5.  _deviceType_</br> 6.  _deviceUser_ （廃止）</br>7.  _appId_ （廃止） | GET | 1.成功</br>2.  認証トークン  </br>    見つからないか期限切れです：   </br>    理由を説明する XML  </br>    （authn トークンが見つかりません）</br>3.  認証トークン  </br>    見つかりません：  </br>    XML の説明</br>4.  認証トークン  </br>    期限切れ：  </br>    XML の説明 | 200 — 成功  </br>412 - AuthN なし</br></br>404 - AuthZ なし</br></br>410 - AuthZ の期限切れ |
 
 {style="table-layout:auto"}
 
@@ -47,17 +47,17 @@ ht-degree: 0%
 | 要求者 | この操作が有効な ProgrammerRequestorId。 |
 | deviceId | デバイス ID バイト。 |
 | リソース | resourceId（または MRSS フラグメント）を含む文字列。ユーザーが要求したコンテンツを識別し、MVPD 認証エンドポイントによって認識されます。 |
-| device_info/</br></br>X-Device-Info | デバイス情報のストリーミング。</br></br>**注意**:この INFO は URL パラメータとして渡すことができますが、このパラメータの潜在的なサイズとGETURL の長さの制限により、HTTP ヘッダーで X-Device-Info として渡す必要があります。 </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
-| _deviceType_ | デバイスタイプ（例：Roku、PC）。</br></br>このパラメータが正しく設定されている場合、ESM は以下の指標を提供します。 [デバイスタイプ別に分類](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) クライアントレスを使用する場合に、Roku、AppleTV、Xbox など、様々な種類の分析を実行できます。</br></br>詳しくは、 [パス指標でクライアントレスデバイスタイプパラメーターを使用するメリット&#x200B;](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**注意**:device_info はこのパラメータを置き換えます。 |
-| _deviceUser_ | デバイスのユーザー識別子。 |
-| _appId_ | アプリケーション ID/名前。 </br></br>**注意**:device_info は、このパラメータを置き換えます。 |
+| device_info/</br></br>X-Device-Info | デバイス情報のストリーミング。</br></br>**注意**：この INFO は、URL パラメーターとして渡すことができますが、このパラメーターの潜在的なサイズとGETURL の長さの制限により、HTTP ヘッダーで X-Device-Info として渡す必要があります。 </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
+| _deviceType_ | デバイスタイプ（例：Roku、PC）。</br></br>このパラメータが正しく設定されている場合、ESM は以下の指標を提供します。 [デバイスタイプ別に分類](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) クライアントレスを使用する場合に、Roku、AppleTV、Xbox など、様々な種類の分析を実行できます。</br></br>詳しくは、 [パス指標でクライアントレスデバイスタイプパラメーターを使用するメリット&#x200B;](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**注意**:device_info がこのパラメーターを置き換えます。 |
+| _deviceUser_ | デバイスのユーザー ID。 |
+| _appId_ | アプリケーション ID/名前。 </br></br>**注意**:device_info がこのパラメーターを置き換えます。 |
 
 {style="table-layout:auto"}
 
 
 ### レスポンスのサンプル {#response}
 
- 
+
 
 #### 成功
 
@@ -74,7 +74,7 @@ ht-degree: 0%
     </authorization>
 ```
 
- 
+
 
 **JSON:**
 
@@ -88,7 +88,7 @@ ht-degree: 0%
     }
 ```
 
- </br>
+</br>
 
 
 #### 認証トークンが見つからないか、期限切れです：
@@ -103,7 +103,7 @@ ht-degree: 0%
     </error>
 ```
 
- 
+
 
 **JSON:**
 
@@ -116,7 +116,7 @@ ht-degree: 0%
 ```
 
 </br>
- 
+
 
 #### 認証トークンが見つかりません：
 
@@ -130,7 +130,7 @@ ht-degree: 0%
     </error>
 ```
 
- 
+
 
 **JSON:**
 
@@ -144,7 +144,7 @@ ht-degree: 0%
 
 </br>
 
- 
+
 
 #### 期限切れの認証トークン：
 
@@ -158,7 +158,7 @@ ht-degree: 0%
     </error>
 ```
 
- 
+
 
 **JSON:**
 

@@ -1,7 +1,8 @@
 ---
 title: エラーコードの強化
 description: エラーコードの強化
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '2356'
 ht-degree: 2%
@@ -32,24 +33,24 @@ Primetime 認証 API は、エラーまたはエラーを示す 400～500 の範
 
 - 5xx エラーコードは、エラーがサーバーによって生成され、サーバーがエラーを修正するために追加の作業をおこなう必要があることを意味します。
 
-追加のエラー情報は、応答本文内の「エラー」フィールドに含まれます。 
+追加のエラー情報は、応答本文内の「エラー」フィールドに含まれます。
 
 
 
 
 | 名前 | タイプ | 例 | 説明 |
 | --- | --- | --- | --- |
-| **エラー** | _object_ | JSON <br>    {<br>        &quot;status&quot; :403,<br>        &quot;code&quot; :&quot;network_connection_failure&quot;,<br>        &quot;message&quot; :「TV プロバイダーサービスに連絡できません」<br>        &quot;helpUrl&quot; :「」<br>        &quot;trace&quot; :&quot;12f6fef9-d2e0-422b-a9d7-60d799abe353&quot;,<br>        &quot;action&quot; :&quot;retry&quot;<br>    }<br><br>—<br><br>XML<br><br>`<``error``>`<br><br>`<``status``>403</``status``>`<br><br>`<``code``>network_connection_failure</``code``>`<br><br>`<``message``>Unable to contact your TV provider services</``message``>   <``helpUrl``></``helpUrl``>`<br><br>`<``trace``>12f6fef9-d2e0-422b-a9d7-60d799abe353</``trace``>`<br><br>`<``action``>retry</``action``>`<br><br>`</``error``> ` | リクエストの完了中に収集されたコレクションまたはエラーオブジェクト。 |
+| **エラー** | _object_ | JSON <br>    {<br>        &quot;status&quot; : 403,<br>        &quot;code&quot; : &quot;network_connection_failure&quot;,<br>        &quot;message&quot; :&quot;TV プロバイダーサービスに接続できません&quot;,<br>        &quot;helpUrl&quot; : &quot;&quot;,<br>        &quot;trace&quot; : &quot;12f6fef9-d2e0-422b-a9d7-60d799abe353&quot;,<br>        &quot;action&quot; : &quot;retry&quot;<br>    }<br><br>—<br><br>XML<br><br>`<``error``>`<br><br>`<``status``>403</``status``>`<br><br>`<``code``>network_connection_failure</``code``>`<br><br>`<``message``>Unable to contact your TV provider services</``message``>   <``helpUrl``></``helpUrl``>`<br><br>`<``trace``>12f6fef9-d2e0-422b-a9d7-60d799abe353</``trace``>`<br><br>`<``action``>retry</``action``>`<br><br>`</``error``> ` | リクエストの完了中に収集されたコレクションまたはエラーオブジェクト。 |
 
 </br>
 
-複数の項目（事前認証 API など）を処理するAdobe Primetime API は、項目レベルのエラー情報を使用して、特定の項目の処理が失敗したかどうか、および他の項目の処理が成功したかどうかを示す場合があります。 この場合、 ***&quot;error&quot;*** オブジェクトが項目レベルに配置されており、応答本文に複数の ***&quot;errors&quot;*** オブジェクト — API ドキュメントを参照してください。
+複数の項目（事前認証 API など）を処理するAdobe Primetime API は、項目レベルのエラー情報を使用して、特定の項目の処理が失敗したかどうか、および他の項目の処理が成功したかどうかを示す場合があります。 この場合、 ***&quot;error&quot;*** オブジェクトが項目レベルに配置されており、応答本文に複数の ***&quot;errors&quot;*** オブジェクト — API ドキュメントを参照してください。
 
 </br>
 
 | 部分的な成功と項目レベルのエラーの例 |
 | ---------------------- |
-| <pre lang="json">JSON <br>{<br>  &quot;id&quot; :&quot;TestStream1&quot;,<br>  &quot;authorized&quot; :true <br>}, </br>{ </br>  &quot;id&quot; :&quot;TestStream2&quot;, <br>   &quot;authorized&quot; :false </br>   &quot;error&quot; :{ <br> </br>      &quot;status&quot; :403,<br>      &quot;code&quot; :&quot;network_connection_failure&quot;,<br>      &quot;message&quot; :「TV プロバイダーサービスに連絡できません」<br>      &quot;details&quot; :「」<br>      &quot;helpUrl&quot; :「」<br>      &quot;trace&quot; :&quot;8bcb17f9-b172-47d2-86d9-3eb146eba85e&quot;,<br>      &quot;action&quot; :&quot;retry&quot;</br>    }<br> </br>   }<br> ] </br>} </pre> |
+| <pre lang="json">JSON <br>{<br>  &quot;id&quot; : &quot;TestStream1&quot;,<br>  &quot;authorized&quot; : true <br>}, </br>{ </br>  &quot;id&quot; : &quot;TestStream2&quot;, <br>   &quot;authorized&quot; : false, </br>   &quot;error&quot; : { <br> </br>      &quot;status&quot; : 403,<br>      &quot;code&quot; : &quot;network_connection_failure&quot;,<br>      &quot;message&quot; :&quot;TV プロバイダーサービスに接続できません&quot;,<br>      &quot;details&quot; : &quot;&quot;,<br>      &quot;helpUrl&quot; : &quot;&quot;,<br>      &quot;trace&quot; : &quot;8bcb17f9-b172-47d2-86d9-3eb146eba85e&quot;,<br>      &quot;action&quot; : &quot;retry&quot;</br>    }<br> </br>   }<br> ] </br>} </pre> |
 
 </br>
 
@@ -59,35 +60,35 @@ Primetime 認証 API は、エラーまたはエラーを示す 400～500 の範
 |----|----|----|----|--------------|
 | ステータス | *整数* | 403 | ♦ | RFC 7231(https://tools.ietf.org/html/rfc7231#section-6) に記載されている応答 HTTP ステータスコード <br> - 400 無効なリクエスト <br> - 400 無効なリクエスト <br> - 400 無効なリクエスト <br> - 401 未認証 <br> - 403 Forbidden <br> - 404 Not found <br> - 405 メソッドは許可されていません <br> - 409 紛争 <br> - 410 消失 <br> - 412 事前条件に失敗しました <br> - 429 リクエストが多すぎます <br> - 500 Interval サーバエラー <br> - 503 サービスを利用できません |
 | コード | *文字列* | network_connection_failure | ♦ | 標準の Primetime 認証エラーコードです。 エラーコードの完全なリストは以下のとおりです。 |
-| メッセージ | *文字列* | TV プロバイダーサービスに連絡できません |  | エンドユーザーに表示できる、人間が読み取れるメッセージ。 |
-| 詳細 | *文字列* | サブスクリプションパッケージに「ライブ」チャネルが含まれていません |  | 場合によっては、詳細なメッセージが MVPD 認証エンドポイントによって、またはプログラマーによって、劣化ルールによって提供されることがあります。 <br> <br> パートナーサービスからカスタムメッセージが受信されなかった場合、このフィールドがエラーフィールドに表示されない可能性があります。 |
-| helpUrl | *url* | &quot;&quot; |  | このエラーが発生した理由と考えられる解決策の詳細にリンクする URL。 <br> <br>  URI は絶対 URL を表し、エラーコードから推論しないでください。 エラーコンテキストに応じて、異なる URL を指定できます。 例えば、同じ bad_request エラーコードを実行すると、認証サービスと認証サービスで異なる URL が生成されます。 |
-| trace | *文字列* | 12f6fef9-d2e0-422b-a9d7-60d799abe353 |  | より複雑なシナリオで特定の問題を識別するためにサポートに連絡する際に使用できる、この応答の一意の識別子です。 |
-| アクション | *文字列* | 再試行 | ♦ | *状況の修正に推奨されるアクション：* </br><br> -none — 残念ながら、この問題を修正するための事前定義済みのアクションはありません。 これは、パブリック API の不適切な呼び出しを示している可能性があります </br><br>-configuration - TVE ダッシュボードを通じて、またはサポートに問い合わせて、構成を変更する必要があります。 </br><br>-application-registration — アプリケーションは再度登録する必要があります。 </br><br>-authentication — ユーザーは認証または再認証が必要です。 </br><br>-authorization — ユーザーは、特定のリソースの認証を取得する必要があります。 </br><br>-dededration — 何らかの形式の劣化を適用する必要があります。 </br><br>-retry — リクエストを再試行すると問題が解決する場合があります</br><br>-retry-after — 指定された時間が経過した後にリクエストを再試行すると、問題が解決する場合があります。 |
+| メッセージ | *文字列* | TV プロバイダーサービスに連絡できません | | エンドユーザーに表示できる、人間が読み取れるメッセージ。 |
+| 詳細 | *文字列* | サブスクリプションパッケージに「ライブ」チャネルが含まれていません | | 場合によっては、詳細なメッセージが MVPD 認証エンドポイントによって、またはプログラマーによって、劣化ルールによって提供されることがあります。 <br> <br> パートナーサービスからカスタムメッセージが受信されなかった場合、このフィールドがエラーフィールドに表示されない可能性があります。 |
+| helpUrl | *url* | &quot;&quot; | | このエラーが発生した理由と考えられる解決策の詳細にリンクする URL。 <br> <br>  URI は絶対 URL を表し、エラーコードから推論しないでください。 エラーコンテキストに応じて、異なる URL を指定できます。 例えば、同じ bad_request エラーコードを実行すると、認証サービスと認証サービスで異なる URL が生成されます。 |
+| trace | *文字列* | 12f6fef9-d2e0-422b-a9d7-60d799abe353 | | より複雑なシナリオで特定の問題を識別するためにサポートに連絡する際に使用できる、この応答の一意の識別子です。 |
+| アクション | *文字列* | 再試行 | ♦ | *状況の修正に推奨されるアクション：* </br><br> -none — 残念ながら、この問題を修正するための事前定義済みのアクションはありません。 これは、パブリック API の不適切な呼び出しを示している可能性があります </br><br>-configuration - TVE ダッシュボードを通じて、またはサポートに問い合わせて、構成を変更する必要があります。 </br><br>-application-registration — アプリケーションは再度登録する必要があります。 </br><br>-authentication — ユーザーは認証または再認証が必要です。 </br><br>-authorization — ユーザーは、特定のリソースの認証を取得する必要があります。 </br><br>-dedevalution — 何らかの形の劣化を適用する必要があります。 </br><br>-retry — リクエストを再試行すると問題が解決する場合があります</br><br>-retry-after — 指定された時間が経過した後にリクエストを再試行すると、問題が解決する場合があります。 |
 
 </br>
 
 **メモ：**
 
-- ***制限*** 列 *それぞれのフィールド値が有限のセットを表しているかどうかを示します* ( 例えば、「 」の既存の HTTP ステータスコード&#x200B;*ステータス*&quot;フィールド ) です。 この仕様の今後の更新では、制限付きリストに値が追加される可能性がありますが、既存の値は削除または変更されません。 通常、無制限のフィールドには任意のデータを含めることができますが、適切なサイズを確保するために制限が設けられる場合があります。
+- ***制限*** 列 *それぞれのフィールド値が有限のセットを表しているかどうかを示します* ( 例えば、「 」の既存の HTTP ステータスコード&#x200B;*ステータス*&quot;フィールド ) に書き込みます。 この仕様の今後の更新では、制限付きリストに値が追加される可能性がありますが、既存の値は削除または変更されません。 通常、無制限のフィールドには任意のデータを含めることができますが、適切なサイズを確保するために制限が設けられる場合があります。
 
-- 各Adobe応答には、HTTP サービス全体を通じてクライアント要求を識別する「Adobe — リクエスト —ID」が含まれます。 「**trace**」フィールドは、これを補完し、一緒に報告する必要があります。 
+- 各Adobe応答には、HTTP サービス全体を通じてクライアント要求を識別する「Adobe — リクエスト —ID」が含まれます。 「**trace**」フィールドは、これを補完し、一緒に報告する必要があります。
 
 ## HTTP ステータスコードとエラーコード {#http-status-codes-and-error-codes}
 
-様々なエラーコードと関連する HTTP ステータスコードの間に不整合があるのは、古い SDK やアプリケーション ( 例えば、 *unknown\_application* は 400 Bad Request を生成しますが、 *不明な\\ソフトウェア\_statement* は、401 Unauthorized を返します )。 これらの不整合の解決は、今後の繰り返しでターゲットになります。 
- 
+様々なエラーコードと関連する HTTP ステータスコードの間に不整合があるのは、古い SDK やアプリケーション ( 例えば、 *unknown\_application* は 400 Bad Request を生成しますが、 *不明な\\ソフトウェア\_statement* は、401 Unauthorized を返します )。 これらの不整合の解決は、今後の繰り返しでターゲットになります。
+
 ## アクションとエラーコード {#actions-and-error-codes}
 
-ほとんどのエラーコードでは、現在の問題を修正するための手段として複数のアクションを使用できます。また、自動的に修正するには複数のアクションが必要になる場合もあります。 エラーを修正する確率が最も高いものを示すことを選択しました。 この **アクション** は、次の 3 つのカテゴリに分割できます。
+ほとんどのエラーコードでは、現在の問題を修正するための手段として複数のアクションを使用できます。また、自動的に修正するには複数のアクションが必要になる場合もあります。 エラーを修正する確率が最も高いものを示すことを選択しました。 The **アクション** は、次の 3 つのカテゴリに分割できます。
 
-1. リクエストコンテキストの修正を試みるもの (retry、retry-after) 
-1. アプリケーション内のユーザーコンテキストを修正しようとするもの（アプリケーションの登録、認証、承認） 
+1. リクエストコンテキストの修正を試みるもの (retry、retry-after)
+1. アプリケーション内のユーザーコンテキストを修正しようとするもの（アプリケーションの登録、認証、承認）
 1. アプリケーションと id プロバイダー間の統合コンテキストの修正を試みるもの（設定、劣化）
 
-1 番目のカテゴリ（再試行および再試行後）の場合、同じリクエストを再試行するだけで問題が解決する可能性があります。 複数の項目を処理する API の場合、アプリケーションはリクエストを繰り返し、「retry」または「retry-after」アクションを持つ項目のみを含める必要があります。 &quot;の場合&#x200B;*retry-after*&quot;アクション、&quot;<u>再試行後</u>「 」ヘッダーは、アプリケーションが要求を繰り返すまでに待機する秒数を示します。
+1 番目のカテゴリ（再試行および再試行後）の場合、同じリクエストを再試行するだけで問題が解決する可能性があります。 複数の項目を処理する API の場合、アプリケーションはリクエストを繰り返し、「retry」または「retry-after」アクションを持つ項目のみを含める必要があります。 &quot;の&#x200B;*retry-after*&quot;アクション、&quot;<u>Retry-After</u>「 」ヘッダーは、アプリケーションが要求を繰り返すまでに待機する秒数を示します。
 
-第 2 および第 3 カテゴリの場合、実際のアクションの実装は、アプリケーションの機能に大きく依存します。 例：*劣化*&quot;は、&quot;ユーザーがコンテンツを再生できるように 15 分間の一時パスに切り替える&quot;、または&quot;指定した MVPD との統合に AUTHN-ALL または AUTHZ-ALL 分解を適用する自動ツール&quot;として実装できます。 「*認証*「 」アクションは、タブレットでパッシブトリガー（バックチャネル認証）を使用し、接続された TV ではフル 2 画面認証フローを使用できます。 そのため、完全に 1 つの URL にスキーマとすべてのパラメーターを提供することを選択しました。 
+2 番目と 3 番目のカテゴリの場合、実際のアクションの実装は、アプリケーションの機能に大きく依存します。 例：*劣化*&quot;は、&quot;ユーザーがコンテンツを再生できるように 15 分間の一時パスに切り替える&quot;、または&quot;指定した MVPD との統合に AUTHN-ALL または AUTHZ-ALL 分解を適用する自動ツール&quot;として実装できます。 「*認証*「 」アクションは、タブレットでパッシブトリガー（バックチャネル認証）を使用し、接続された TV ではフル 2 画面認証フローを使用できます。 そのため、完全に 1 つの URL にスキーマとすべてのパラメーターを提供することを選択しました。
 
 ## エラーコード {#error-codes}
 
@@ -97,7 +98,7 @@ Primetime 認証 API は、エラーまたはエラーを示す 400～500 の範
 |---|---|---|--------------|
 | 設定 | *authorization_denied_by_mvpd* | 403 | MVPD は、指定されたリソースに対する認証をリクエストする際に、「拒否」の決定を返しました。 |
 |  | *authorization_denied_by_parental_controls* | 403 | MVPD は、指定されたリソースに対する親の制御設定により、「拒否」の決定を返しました。 |
-|  | *authorization_denied_by_programmer* | 403 | プログラマーが適用した劣化規則は、現在のユーザーに対して「拒否」の決定を強制します。 |
+|  | *authorization_denied_by_programmer* | 403 | プログラマが適用した劣化規則は、現在のユーザに対して「拒否」の決定を強制します。 |
 |  | *bad_request* | 400 | API リクエストの形式が無効か、正しくありません。 API ドキュメントを確認して、リクエスト要件を判断してください。 |
 |  | *individualization_service_unavailable* | 503 | 個別化サービスが利用できないため、リクエストに失敗しました。 |
 |  | *internal_error* | 500 | 内部サーバーエラーが原因でリクエストに失敗しました。 |
@@ -135,11 +136,10 @@ Primetime 認証 API は、エラーまたはエラーを示す 400～500 の範
 |  | *identity_not_recognized_by_mvpd* | 403 | ユーザー ID が MVPD に認識されなかったため、認証リクエストが失敗しました。 |
 | 認証 | *authorization_expired* | 410 | 指定したリソースの以前の認証が期限切れになりました。 続行するには、新しい認証を取得する必要があります。 |
 |  | *authorization_not_found* | 404 | 指定されたリソースの認証が見つかりませんでした。 続行するには、新しい認証を取得する必要があります。 |
-|  | *device_identifier_mismatch* | 403 | 指定されたデバイス識別子が認証デバイスの識別子と一致しません。 続行するには、新しい認証を取得する必要があります。 |
+|  | *device_identifier_mismatch* | 403 | 指定されたデバイス識別子は、認証デバイスの識別子と一致しません。 続行するには、新しい認証を取得する必要があります。 |
 | 再試行 | **network_connection_failure** | 403 | 関連するパートナーサービスとの接続に失敗しました。 リクエストを再試行すると、問題が解決する場合があります。 |
 |  | *network_connection_timeout* | 403 | 関連するパートナーサービスとの接続タイムアウトが発生しました。 リクエストを再試行すると、問題が解決する場合があります。 |
 |  | *network_received_error* | 403 | 関連するパートナーサービスからの応答を取得する際に、読み取りエラーが発生しました。 リクエストを再試行すると、問題が解決する場合があります。 |
 |  | *maximum_execution_time_exceeded* | 403 | リクエストは、許可された最大時間内に完了しませんでした。 リクエストを再試行すると、問題が解決する場合があります。 |
 | retry-after | *too_many_requests* | 429 | 一定の間隔内に送信されたリクエストが多すぎます。 推奨期間が経過した後に、アプリケーションがリクエストを再試行できます。 |
 |  | *user_rate_limit_exceeded* | 429 | 特定の期間内に特定のユーザーから発行されたリクエストが多すぎます。 推奨期間が経過した後に、アプリケーションがリクエストを再試行できます。 |
-

@@ -1,16 +1,15 @@
 ---
 title: Android の事前認証
 description: Android の事前認証
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: b5337595-135f-4981-a578-2da432f125d6
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-
-
-# 事前認証 {#preuthorize-android}
+# 事前認証 {#preuthorize-android}
 
 >[!NOTE]
 >
@@ -26,24 +25,23 @@ ht-degree: 0%
 予期しないエラー（ネットワークの問題、MVPD 認証エンドポイントが使用できないなど）が発生した場合、 Preauthorize API リクエストがAdobe Primetime Authentication Services によって処理される際に発生する、影響を受けるリソースの 1 つ以上の区切られたエラー情報が、Preauthorize API の応答結果に含まれます。
 
 
-## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
+## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
 
 
-**説明：** 
+**説明：**
 
 **可用性：** v3.6.0 以降
 
 **パラメーター：**
 
-- *PreauthorizeRequest*:リクエストの定義に使用するビルダーオブジェクト
+- *PreauthorizeRequest*：リクエストの定義に使用するビルダーオブジェクト。
 - AccessEnablerCallback :API 応答を返すために使用されるコールバック
 - PreauthorizeResponse :API 応答コンテンツを返すために使用されるオブジェクト
 
 
 ### public クラス PreauthorizeRequest {#androidpreauthorizerequest}
 
-**クラス PreauthorizeRequest.Builder**\
- 
+**クラス PreauthorizeRequest.Builder**
 
 ```java
     ///
@@ -130,18 +128,18 @@ ht-degree: 0%
 ### `abstract class AccessEnablerCallback<PreauthorizeResponse> {#accessenablercallback}`
 
 ```java
-    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
+    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
 
 **public void onResponse(PreauthorizeResponse result)**
 
- 
+ 
 
-    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
+    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
 
 **public void onFailure(PreauthorizeResponse result)**
 ```
 
- 
+
 
 ### PreauthorizeResponse クラス {#preauthorizeresponse}
 
@@ -151,16 +149,16 @@ ht-degree: 0%
     ///   Might hold a `null` value.
     ///
 
-**public [Status](#status) getStatus()**
+**public [Status](#status) getStatus()**
 
- 
+ 
 
     ///
     /// - Returns: The list of preauthorization decisions. One decision for each resource.
     ///            The list might be empty in case of failure.
     ///
 
-**public List\<[Decision](#status)\> getDecisions()**
+**public List\<[Decision](#status)\> getDecisions()**
 ```
 
 
@@ -173,7 +171,7 @@ ht-degree: 0%
 
 ///
 
-**public int getStatus()**
+**public int getStatus()**
 
     ///
     /// - Returns: The standard Adobe Primetime Authentication services error code.
@@ -237,9 +235,9 @@ ht-degree: 0%
     /// - Returns: The resource id for which the decision was obtained.
     ///
 
-    public Status getId()
+    public Status getId()
 
- 
+ 
 
     ///
     /// This is a getter function.
@@ -247,9 +245,9 @@ ht-degree: 0%
     /// - Returns: The value of the flag indicating if the decision is successful or not.
     ///
 
-**public boolean isAuthorized()**
+**public boolean isAuthorized()**
 
- 
+ 
 
     ///
     /// This is a getter function.
@@ -258,14 +256,14 @@ ht-degree: 0%
     ///            Might hold a `null` value.
     ///
 
-**public Status getError()**
+**public Status getError()**
 ```
 
 </br>
 
 
 
-例： 
+例：
 
 
 ```java
@@ -289,4 +287,3 @@ ht-degree: 0%
         }
     });
 ```
-

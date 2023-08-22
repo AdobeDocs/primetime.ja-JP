@@ -1,13 +1,13 @@
 ---
 title: クライアントレス API クックブックを使用したAmazon FireOS SSO
 description: クライアントレス API クックブックを使用したAmazon FireOS SSO
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 4c65eae7-81c1-4926-9202-a36fd13af6ec
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 0%
 
 ---
-
 
 # クライアントレス API クックブックを使用したAmazon FireOS SSO {#amazon-fireos-sso-using-clientless-api-cookbook}
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## はじめに {#Introduction}
 
-このドキュメントでは、クライアントレス API を使用してAmazonの SSO バージョンのAdobe Primetime認証フローを実装する手順を説明します。 このドキュメントの最初の部分では、Amazonバージョンのアーキテクチャに対する特異性に焦点を当てます。これは、実装に既に慣れており、経験豊富な多くのパートナーが対象とします。
+このドキュメントでは、クライアントレス API を使用してAmazonの SSO バージョンのAdobe Primetime認証フローを実装する手順を説明します。 このドキュメントの最初の部分では、Amazonバージョンのアーキテクチャに対する特異性に焦点を当てます。これは、実装に既に慣れており、経験豊富な多くのパートナーが対象とします。
 
 このドキュメントの第 2 部では、Adobe Primetime Authentication クライアントレス API を実装する主な手順を説明します。
 
@@ -37,37 +37,37 @@ Amazon SDK を使用してパーソナライズされたペイロードを取得
 
 ### Amazon SDK を使用するアプリケーションの構築方法 {#Build-entries}
 
-* 最新のをダウンロードしてコピーする [Amazon Stub SDK](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) を/SSOEnabler フォルダーにアプリディレクトリと並行して追加します。
+* 最新のをダウンロードしてコピーする [Amazon Stub SDK](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) を/SSOEnabler フォルダーにアプリディレクトリと並行して追加します。
 * マニフェスト/gradle ファイルを更新して、ライブラリを使用します。
 
-   **マニフェストファイルに次の行を追加します。**
+  **マニフェストファイルに次の行を追加します。**
 
-   ```Java
-   <uses-library android:name="com.amazon.ottssotokenlib" android:required="false"/\>
-   ```
+  ```Java
+  <uses-library android:name="com.amazon.ottssotokenlib" android:required="false"/\>
+  ```
 
-   **Gradle ファイルのエントリ：**
+  **Gradle ファイルのエントリ：**
 
-   リポジトリ内：
+  リポジトリ内：
 
-   ```java
-   flatDir {
-        dirs '../SSOEnabler'
-   }
-   ```
+  ```java
+  flatDir {
+       dirs '../SSOEnabler'
+  }
+  ```
 
-   dependencies の下に、以下を追加します。
+  dependencies の下に、以下を追加します。
 
-   ```Java
-   provided fileTree(include: \['ottSSOTokenStub.jar'\], dir: '../SSOEnabler')
-   ```
+  ```Java
+  provided fileTree(include: \['ottSSOTokenStub.jar'\], dir: '../SSOEnabler')
+  ```
 
 
 * Amazonコンパニオンアプリがない場合の処理：
 
-   コンパニオンがAmazonデバイス上に存在しない可能性は低いものの、アプリケーションが実行中の場合は、次のクラスで実行時に ClassNotFoundException が発生する必要があります。 `com.amazon.ottssotokenlib.SSOEnabler`.
+  コンパニオンがAmazonデバイス上に存在しない可能性は低いものの、アプリケーションが実行中の場合は、次のクラスで実行時に ClassNotFoundException が発生する必要があります。 `com.amazon.ottssotokenlib.SSOEnabler`.
 
-   これが発生した場合、必要な操作は、ペイロードの手順をスキップし、通常の PrimeTime フローにフォールバックするだけです。 SSO は有効になりませんが、通常の認証フローは正常に実行されます。
+  これが発生した場合、必要な操作は、ペイロードの手順をスキップし、通常の PrimeTime フローにフォールバックするだけです。 SSO は有効になりませんが、通常の認証フローは正常に実行されます。
 
 </br>
 
@@ -81,22 +81,22 @@ Amazon SDK を使用してパーソナライズされたペイロードを取得
 
 * SSO Enabler インスタンスを取得：
 
-   ```Java
-   ssoEnabler = SSOEnabler.getInstance(context);
-   SSOEnablerCallback ssoEnablerCallback = new SSOEnablerCallbackImpl();
-   ssoEnabler.setSSOTokenCallback(ssoEnablerCallback);
-   ```
+  ```Java
+  ssoEnabler = SSOEnabler.getInstance(context);
+  SSOEnablerCallback ssoEnablerCallback = new SSOEnablerCallbackImpl();
+  ssoEnabler.setSSOTokenCallback(ssoEnablerCallback);
+  ```
 
 
-* コールバックの設定 
+* コールバックの設定
 
-   ```java
-   public static abstract class SSOEnablerCallback
-   {
-           public abstract void getSSOTokenSuccess(Bundle result);
-           public abstract void getSSOTokenFailure(Bundle result);
-   }
-   ```
+  ```java
+  public static abstract class SSOEnablerCallback
+  {
+          public abstract void getSSOTokenSuccess(Bundle result);
+          public abstract void getSSOTokenFailure(Bundle result);
+  }
+  ```
 
    * 成功応答バンドルには、次が含まれます。
       * キー「SSOToken」を持つ文字列としての SSO トークン
@@ -107,50 +107,49 @@ Amazon SDK を使用してパーソナライズされたペイロードを取得
 
 * SSO トークンの取得
 
-   ```JAVA
-   Bundle getSSOTokenAsync(Void);
-   ```
+  ```JAVA
+  Bundle getSSOTokenAsync(Void);
+  ```
 
 * この API は、初期化時に設定されたコールバックを介して応答を提供します。
 
-   **Ex**. init 中に作成された singleton インスタンスを使用してを呼び出します。
+  **Ex**. init 中に作成された singleton インスタンスを使用してを呼び出します。
 
-   ```JAVA
-   ssoEnabler.getSSOTokenAsync().
-   ```
+  ```JAVA
+  ssoEnabler.getSSOTokenAsync().
+  ```
 
 
 **同期 API**
 
 * SSO Enabler インスタンスを取得し、コールバックを設定します。
 
-   ```JAVA
-   ssoEnabler = SSOEnabler.getInstance(context);</span>
-   ```
+  ```JAVA
+  ssoEnabler = SSOEnabler.getInstance(context);</span>
+  ```
 
 * SSO トークンの取得
 
-   ```JAVA
-   Bundle getSSOTokenSync(Void);
-   ```
+  ```JAVA
+  Bundle getSSOTokenSync(Void);
+  ```
 
    * この API は呼び出し元のスレッドをブロックし、結果のバンドルで応答します。 これは同期呼び出しなので、必ずメインスレッドで使用しないでください。
 
-   ```JAVA
-   void setSSOTokenTimeout(long);
-   ```
+  ```JAVA
+  void setSSOTokenTimeout(long);
+  ```
 
    * ミリ秒単位の値。 設定した場合、同期 API のデフォルトのタイムアウト値である 1 分を上書きします。
 
 
-
 ### 動的なクライアント登録を使用するAdobe Primetimeクライアントレス API の更新 {#clientlessdcr}
 
-これが最初の実装の場合は、 **クライアントレスの技術概要** サポートが必要な場合は、Adobeにお問い合わせください。
+これが初めての実装の場合は、 **クライアントレスの技術概要** サポートが必要な場合は、Adobeにお問い合わせください。
 
 Adobeクライアントレス API では、アプリケーションサーバーを呼び出すために動的クライアント登録を使用するAdobeが必要です。
 
-* アプリケーションで Dynamic Client 登録を使用するには、 [ Dynamic Client 登録管理を使用してアプリケーションを登録](/help/authentication/dynamic-client-registration-management.md).
+* アプリケーションで Dynamic Client 登録を使用するには、 [Dynamic Client 登録管理を使用してアプリケーションを登録](/help/authentication/dynamic-client-registration-management.md).
 
 * Adobe Primetimeサーバーに対して認証と承認のリクエストを実行するために Dynamic Client Registration API を実装するには、 [動的クライアント登録 API](/help/authentication/dynamic-client-registration-api.md) .
 
@@ -168,8 +167,8 @@ Amazon SDK から取得したAmazon SSO ペイロードは、 Adobe Primetime Au
 すべての Primetime 認証エンドポイントは、デバイススコープ識別子またはプラットフォームスコープ識別子 (Amazon SSO ペイロードに存在 ) を受け取るために、次のメソッドをサポートしています。
 
 * ヘッダーとして：&quot;Adobe — 件名 — トークン&quot;
-* クエリパラメーターとして：&quot;ast&quot;
-* POST パラメーターとして：&quot;ast&quot;
+* クエリパラメーターとして： &quot;ast&quot;
+* POST パラメーターとして： &quot;ast&quot;
 
 
 >[!NOTE]
@@ -213,4 +212,4 @@ boundary=---- WebKitFormBoundary7MA4YWxkTrZu0gW
 
 >[!NOTE]
 >
->Amazon SSO が存在しないか無効な場合は、Adobe Primetime Authentication が属性を無視し、SSO が存在しない場合と同じように呼び出しが実行されます。
+>Amazon SSO が存在しないか無効な場合、Adobe Primetime Authentication は属性を無視し、SSO が存在しない場合と同じように呼び出しが実行されます。

@@ -1,13 +1,13 @@
 ---
 title: iOS/tvOS v3.x 移行ガイド
 description: iOS/tvOS v3.x 移行ガイド
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 4c43013c-40af-48b7-af26-0bd7f8df2bdb
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
 
 ---
-
 
 # iOS/tvOS v3.x 移行ガイド {#iostvos-v3x-migration-guide}
 
@@ -21,7 +21,6 @@ ht-degree: 0%
 >
 > - iOS sdk バージョン 3.1 以降、実装者は WKWebView または UIWebView を同じ意味で使用できるようになりました。 UIWebView は非推奨となっているので、今後のiOSバージョンの問題を回避するために、アプリケーションは WKWebView に移行する必要があります。
 > - 移行は、単に UIWebView クラスを WKWebView で切り替えるだけで済むので、Adobeの AccessEnabler に関して行うべき特定の作業はありません。
-
 
 </br>
 
@@ -69,9 +68,9 @@ ht-degree: 0%
 
 ## カスタム URL スキームでの呼び出しの傍受 {#intercept}
 
-これは、アプリケーションが以前に手動で Safari ビューコントローラ (SVC) を有効にしていた場合にのみ、 [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](/help/authentication/iostvos-sdk-api-reference.md) Safari View Controller(SVC) を必要とする特定の MVPD に対して、およびを呼び出すことで、UIWebView/WKWebView コントローラの代わりに SFSafariViewController コントローラによって認証およびログアウトエンドポイントの URL を読み込む必要があります。
+これは、アプリケーションが以前に手動で Safari ビューコントローラ (SVC) を有効にしていた場合にのみ、 [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](/help/authentication/iostvos-sdk-api-reference.md) Safari View Controller(SVC) を必要とする特定の MVPD に対して、およびを呼び出すことで、UIWebView/WKWebView コントローラの代わりに SFSafariViewController コントローラによって認証およびログアウトエンドポイントの URL を読み込む必要があります。
 
-認証およびログアウトフロー中に、アプリケーションは、 `SFSafariViewController `複数のリダイレクトを経る際のコントローラー アプリケーションが、 `application's custom URL scheme` ( 例：`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)`. コントローラーがこの特定のカスタム URL を読み込むと、アプリケーションは `SFSafariViewController` AccessEnabler の `handleExternalURL:url `API メソッド。
+認証およびログアウトフロー中に、アプリケーションは、 `SFSafariViewController `複数のリダイレクトを経る際のコントローラー アプリケーションが、 `application's custom URL scheme` ( 例：`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)`. コントローラーがこの特定のカスタム URL を読み込むと、アプリケーションは `SFSafariViewController` AccessEnabler の `handleExternalURL:url `API メソッド。
 
 を `AppDelegate` 次のメソッドを追加します。
 
@@ -90,7 +89,7 @@ ht-degree: 0%
 
 ## setRequestor メソッドの署名を更新します。 {#update-setreq}
 
-新しい SDK は新しい認証メカニズムを使用しているので、signedRequestId パラメーターや公開鍵および秘密鍵（tvOS の場合）は不要です。 この `setRequestor` メソッドは簡略化され、requestorID のみ必要です。
+新しい SDK は新しい認証メカニズムを使用しているので、signedRequestId パラメーターや公開鍵および秘密鍵（tvOS の場合）は不要です。 The `setRequestor` メソッドは簡略化され、requestorID のみ必要です。
 
 ### iOS
 
@@ -127,7 +126,7 @@ ht-degree: 0%
 
 </br>
 
-## getAuthenticationToken メソッドを handleExternalURL メソッドに置き換えました {#replace}
+## getAuthenticationToken メソッドを handleExternalURL メソッドに置き換えました。 {#replace}
 
 `getAuthentication` メソッドは、過去に認証フローの完了に使用されていました。 名前がわかりにくいので、名前をに変更しました。 `handleExternalURL` は url をパラメーターとして取ります。
 

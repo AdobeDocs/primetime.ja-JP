@@ -1,13 +1,13 @@
 ---
 title: プログラマーのエンタイトルメントフロー
 description: プログラマーのエンタイトルメントフロー
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: b1c8623a-55da-4b7b-9827-73a9fe90ebac
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1822'
 ht-degree: 0%
 
 ---
-
 
 # プログラマーのエンタイトルメントフロー {#prog-entitlement-flow}
 
@@ -17,14 +17,14 @@ ht-degree: 0%
 
 ## 概要 {#overview}
 
-このドキュメントでは、プログラマーの観点からの基本的なエンタイトルメントフローを説明します。  ここで説明する基本的な TVE 統合以外の機能と使用例については、 [プログラマーの使用例](/help/authentication/programmer-use-cases.md).
+このドキュメントでは、プログラマーの観点からの基本的なエンタイトルメントフローについて説明します。  ここで説明する基本的な TVE 統合以外の機能と使用例については、 [プログラマーの使用例](/help/authentication/programmer-use-cases.md).
 
 Adobe Primetime認証は、両者に対して安全で一貫性のあるインターフェイスを提供することで、Programmers と MVPDs の間のエンタイトルメントフローを仲介します。  プログラマー側では、Primetime 認証には、次の 2 つの一般的なタイプのエンタイトルメントインターフェイスが用意されています。
 
 1. AccessEnabler - Web ページをレンダリングできるデバイス（Web アプリ、スマートフォン/タブレットアプリなど）上のアプリ用の API ライブラリを提供するクライアントコンポーネント。
 2. クライアントレス API - Web ページをレンダリングできないデバイス（セットトップボックス、ゲームコンソール、スマートテレビなど）向けの RESTful Web サービス。 Web ページをレンダリングするための要件は、MVPD の Web サイトでユーザーが認証を受ける MVPD の要件に基づいています。
 
-ここで示すプラットフォームに依存しない概要に加えて、クライアントレス API 固有の概要もここで示します。クライアントレス API ドキュメント。 AccessEnabler は、サポート対象のプラットフォーム (Web 上では AS / JS、iOSでは Objective-C、Android では Java) でネイティブに動作します。 AccessEnabler API は、サポートされるプラットフォーム間で一貫しています。 AccessEnabler をサポートしていないすべてのプラットフォームは、同じクライアントレス API を使用します。
+ここで示すプラットフォームに依存しない概要に加えて、クライアントレス API 固有の概要は、クライアントレス API ドキュメントに記載されています。 AccessEnabler は、サポート対象のプラットフォーム (Web 上では AS / JS、iOSでは Objective-C、Android では Java) でネイティブに動作します。 AccessEnabler API は、サポートされるプラットフォーム間で一貫しています。 AccessEnabler をサポートしていないすべてのプラットフォームは、同じクライアントレス API を使用します。
 
 両方のタイプのインターフェイスで、Primetime 認証は、プログラマーのアプリとユーザーの MVPD の間のエンタイトルメントフローを安全に仲介します。
 
@@ -35,7 +35,7 @@ Adobe Primetime認証は、両者に対して安全で一貫性のあるイン�
 
 >[!IMPORTANT]
 >
->上の図では、Adobe Primetime認証サーバーを経由しないエンタイトルメントフローの一部が存在することに注意してください。MVPD ログイン。 ユーザーは、MVPD のログインページにログオンする必要があります。 この要件のため、Web ページをレンダリングできないデバイスでは、プログラマーのアプリは、Web 対応デバイスに切り替えて MVPD でログインし、その後、エンタイトルメントフローの残りの部分に戻るように指示する必要があります。
+>上の図では、Adobe Primetime認証サーバーを経由しないエンタイトルメントフローの一部として、MVPD ログインが存在することに注意してください。 ユーザーは、MVPD のログインページにログオンする必要があります。 この要件のため、Web ページをレンダリングできないデバイスでは、プログラマーのアプリは、Web 対応デバイスに切り替えて MVPD でログインし、その後、エンタイトルメントフローの残りの部分に戻るように指示する必要があります。
 
 ## 権利付与フロー {#entitlement-flow}
 
@@ -44,7 +44,7 @@ Adobe Primetime認証は、両者に対して安全で一貫性のあるイン�
 1. [起動フロー](/help/authentication/entitlement-flow.md#startup)
 1. [認証フロー](/help/authentication/entitlement-flow.md#authentication)
 1. [認証フロー](/help/authentication/entitlement-flow.md#authorization)
-1. [ログアウト FLow](/help/authentication/entitlement-flow.md#logout)
+1. [ログアウトのフロー](/help/authentication/entitlement-flow.md#logout)
 
 ユーザーがプログラマーのサイトに初めて訪問すると、エンタイトルメントフローは上記の順序で進みます。 ただし、以降の訪問では、認証および承認トークンの有効期限が切れているかどうか、または表示ポリシーによっては、ユーザーがサブフローの 1 つまたは 2 つしか経由しない場合があります。
 
@@ -56,17 +56,17 @@ Adobe Primetime認証は、両者に対して安全で一貫性のあるイン�
 
 * **`setRequestor()`** - AccessEnalber と、拡張機能によってAdobe Primetime認証サーバーの識別を確立します。 この呼び出しは、残りのエンタイトルメントフローの前駆者です。 JavaScript の場合の例：
 
-   ```JavaScript
-     /* Define the requestor ID (Programmer/aggregator ID). */
-       var requestorID = "sample_requestor_Id";
-       ...
-       // Callback indicating that the AccessEnabler swf has initialized
-       function swfLoaded() {
-           // AccessEnabler is loaded so we can use the API function it provides
-           accessEnablerObject.setRequestor(requestorID); 
-       ...
-       }
-   ```
+  ```JavaScript
+    /* Define the requestor ID (Programmer/aggregator ID). */
+      var requestorID = "sample_requestor_Id";
+      ...
+      // Callback indicating that the AccessEnabler swf has initialized
+      function swfLoaded() {
+          // AccessEnabler is loaded so we can use the API function it provides
+          accessEnablerObject.setRequestor(requestorID); 
+      ...
+      }
+  ```
 
 **クライアントレス API**
 
@@ -83,7 +83,7 @@ Adobe Primetime認証は、両者に対して安全で一貫性のあるイン�
 
 **クライアントレス API**
 
-* `<FQDN>/.../checkauthn`  — の Web サービスのバージョン `checkAuthentication()` 上
+* `<FQDN>/.../checkauthn`  — の Web サービスのバージョン。 `checkAuthentication()` 上記の
 * `<FQDN>/.../config` - 2nd-screen アプリに MVPD のリストを返します。
 * `<FQDN>/.../authenticate`  — 第 2 画面アプリから認証フローを開始し、選択した MVPD にユーザーをリダイレクトしてログインします。 成功した場合、Adobe Primetime認証は AuthN トークンを生成してサーバーに保存し、ユーザーが元のデバイスに戻って使用権限フローを完了します。
 
@@ -94,9 +94,9 @@ Adobe Primetime認証は、両者に対して安全で一貫性のあるイン�
 
 #### 汎用 AccessEnabler 初期認証ワークフロー {#generic-ae-initial-authn-flow}
 
-1. アプリが、 `getAuthentication()`：有効なキャッシュ済み認証トークンを確認します。 このメソッドにはオプションの `redirectURL` パラメータ；次の値を指定しない場合： `redirectURL`認証が成功すると、ユーザーは認証の初期化に使用した URL に戻ります。
-1. AccessEnabler は、現在の認証状態を決定します。 ユーザーが現在認証されている場合、AccessEnabler は `setAuthenticationStatus()` コールバック関数で、成功を示す認証ステータスを渡す。
-1. ユーザーが認証されていない場合、AccessEnabler は、特定の MVPD でユーザーの最後の認証試行が成功したかどうかを判断することで、認証フローを継続します。 MVPD ID がキャッシュされ、 `canAuthenticate` フラグが true の場合、またはを使用して MVPD が選択された場合 `setSelectedProvider()`を指定した場合、MVPD 選択ダイアログボックスは表示されません。 認証フローは、MVPD のキャッシュされた値（最後の正常な認証時に使用されたのと同じ MVPD）を引き続き使用します。 バックエンドサーバーに対してネットワーク呼び出しがおこなわれ、ユーザーは MVPD ログインページにリダイレクトされます。
+1. アプリが、 `getAuthentication()`：有効なキャッシュ済み認証トークンを確認します。 このメソッドにはオプションの `redirectURL` パラメータ。 `redirectURL`認証が成功すると、ユーザーは認証の初期化に使用した URL に戻ります。
+1. AccessEnabler は、現在の認証状態を決定します。 ユーザーが現在認証されている場合、AccessEnabler は、 `setAuthenticationStatus()` コールバック関数で、成功を示す認証ステータスを渡す。
+1. ユーザーが認証されていない場合、AccessEnabler は、特定の MVPD でユーザーの最後の認証試行が成功したかどうかを判断することで、認証フローを継続します。 MVPD ID がキャッシュされ、 `canAuthenticate` フラグが true の場合、またはを使用して MVPD が選択された場合 `setSelectedProvider()`を指定した場合、MVPD 選択ダイアログが表示されることはありません。 認証フローは、MVPD のキャッシュされた値（最後の正常な認証時に使用されたのと同じ MVPD）を引き続き使用します。 バックエンドサーバーに対してネットワーク呼び出しがおこなわれ、ユーザーは MVPD ログインページにリダイレクトされます。
 
 1. MVPD ID がキャッシュされておらず、を使用して MVPD が選択されていない場合 `setSelectedProvider()` または `canAuthenticate` フラグが false に設定されている場合、 `displayProviderDialog()` コールバックが呼び出されます。 このコールバックは、選択する MVPD のリストをユーザーに表示する UI を作成するようにアプリに指示します。 MVPD オブジェクトの配列が提供され、MVPD セレクターを構築するために必要な情報が含まれます。 各 MVPD オブジェクトは、MVPD エンティティを表し、MVPD の ID や MVPD ロゴが見つかる URL などの情報を含みます。
 
@@ -110,6 +110,7 @@ Adobe Primetime認証は、両者に対して安全で一貫性のあるイン�
 
 >[!IMPORTANT]
 >Comcast は、現時点ではロゴの静的 URL を提供しない MVPD のみです。 プログラマーは、最新のロゴをから引き出す必要があります。 [XFINITY 開発者のポータル](https://developers.xfinity.com/products/tv-everywhere).
+>
 
 ### 認証フロー {#authorization}
 
@@ -125,7 +126,7 @@ Adobe Primetime認証は、両者に対して安全で一貫性のあるイン�
 
 認証呼び出しの結果を処理するために、次のコールバック関数を提供します。
 
-* `setToken()`  — 以前に認証が成功し、認証が成功した場合、AccessEnabler は `setToken()` コールバック関数に渡され、短時間のみ有効なメディアトークンが渡され、Adobe Primetime認証のエンタイトルメントフローの成功した結果が示されます。 ( ユーザーに保護されたコンテンツの表示を許可する前に、プログラマーのアプリは、メディアトークン検証ツールを使用してメディアトークンの有効性を確認します。
+* `setToken()`  — 以前に認証が成功し、認証が成功した場合は、AccessEnabler が `setToken()` コールバック関数に渡され、短時間のみ有効なメディアトークンが渡され、Adobe Primetime認証のエンタイトルメントフローの成功した結果が示されます。 ( ユーザーに保護されたコンテンツの表示を許可する前に、プログラマーのアプリは、メディアトークン検証ツールを使用してメディアトークンの有効性を確認します。
 
 * `tokenRequestFailed()`  — 要求されたリソースに対してユーザーが許可されていない場合（またはクエリが他の理由で失敗した場合）、AccessEnabler はこのコールバック関数（および独自のエラー報告関数）を呼び出し、失敗の詳細を渡します。
 
@@ -137,10 +138,10 @@ Adobe Primetime認証は、両者に対して安全で一貫性のあるイン�
 
 1. 割り当てられたプログラマ GUID を Access Enabler に登録するコールバック関数を指定します。 `setReqestor()`. このコールバック関数は、AccessEnabler が正常にダウンロードされたときに呼び出されます。
 
-1. 呼び出し `getAuthorization()` ユーザーが保護されたリソースへのアクセスを要求したとき。 使用 `getAuthorization()`を呼び出す場合は、リクエストされたリソース（例えば、チャネル、エピソードなど）を指定するリソース ID を渡します。 AccessEnabler は、認証リクエストと共に渡すキャッシュされた認証トークンを探します。 見つからない場合は、認証フローを開始します。
+1. 通話 `getAuthorization()` ユーザーが保護されたリソースへのアクセスを要求したとき。 使用 `getAuthorization()`を呼び出す場合は、リクエストされたリソース（例えば、チャネル、エピソードなど）を指定するリソース ID を渡します。 AccessEnabler は、認証リクエストと共に渡すキャッシュされた認証トークンを探します。 見つからない場合は、認証フローを開始します。
 1. 認証の結果を処理するコールバック関数を提供します。
 
-   * `setToken()`  — 認証が成功した場合、またはユーザーが以前に認証を受けている場合、Access Enabler は、 `setToken()` コールバック関数に短時間のみ有効な認証トークンを渡す
+   * `setToken()`  — 認証が成功した場合、またはユーザーが以前に認証を受けている場合、Access Enabler は、 `setToken()` コールバック関数に短時間のみ有効な認証トークンを渡す。
 
    * `tokenRequestFailed()`  — 要求されたリソースに対してユーザーが許可されていない（またはクエリが他の理由で失敗した）場合、AccessEnabler は、登録したエラー報告関数を呼び出します。 `tokenRequestFailed()` コールバック。失敗に関する詳細を渡します。
 
@@ -158,7 +159,7 @@ Adobe Primetime認証は、両者に対して安全で一貫性のあるイン�
 
 ## AccessEnabler の動作の理解 {#ae-behavior}
 
-AccessEnabler API 呼び出しはすべて非同期です（ただし、API リファレンスに記載されている例外は 1 つです）。 API は任意の回数呼び出すことができますが、呼び出しによってトリガーされるアクションが呼び出しがおこなわれたのと同じ順序で完了するという強力な保証はありません。 ( これに対する例外は、現在のFlash Player・ランタイム。マルチスレッドではないので、呼び出しが確実におこなわれます *do* 呼び出された順に完了します )。
+AccessEnabler API 呼び出しはすべて非同期です（ただし、API リファレンスに記載されている例外は 1 つです）。 API は任意の回数呼び出すことができますが、呼び出しによってトリガーされるアクションが呼び出しがおこなわれたのと同じ順序で完了するという強力な保証はありません。 ( ただし、現在のFlash Playerランタイムは例外です。マルチスレッドではないので、呼び出しを確実におこないます。 *do* 呼び出された順に完了します )。
 
 応答を区別し、応答を呼び出しとペアリングできるように、すべてのコールバックは入力パラメータをエコーバックします。 これには以下が含まれます。 `setToken()` および`tokenRequestFailed()`( 最終的には、 `checkAuthorization()`. ( の `checkAuthorization()` コールバックを呼び出すと、使用したリソースがエコーバックされます )。 この機能を利用すると、どの応答がどの呼び出しに対応しているかを区別できます。 この機能を使用するには、次のようなコードを記述します。
 
@@ -198,7 +199,7 @@ AccessEnabler API 呼び出しはすべて非同期です（ただし、API リ�
 
 **質問。 最初の呼び出しが終了する前に 2 回目の AccessEnabler 呼び出しを実行するとどうなりますか。**
 
-2 回目の呼び出しが実行されると（非同期通信）、最初の呼び出しが引き続き実行されます。
+2 番目の呼び出しが実行されると（非同期通信）、最初の呼び出しが引き続き実行されます。
 
 **質問。 AccessEnabler がサポートする同時呼び出しの数は最大ですか。**
 

@@ -1,13 +1,13 @@
 ---
 title: 動的クライアント登録 API
 description: 動的クライアント登録 API
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 06a76c71-bb19-4115-84bc-3d86ebcb60f3
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
 
 ---
-
 
 # 動的クライアント登録 API {#dynamic-client-registration-api}
 
@@ -19,16 +19,16 @@ ht-degree: 0%
 
 現在、Primetime Authentication がアプリケーションを識別して登録する方法は 2 つあります。
 
-* ブラウザーベースのクライアントは、許可されたを介して登録されます [ドメインリスト](/help/authentication/programmer-overview.md)
+* ブラウザーベースのクライアントは、許可されたを介して登録されます。 [ドメインリスト](/help/authentication/programmer-overview.md)
 * iOSや Android アプリケーションなどのネイティブアプリケーションクライアントは、署名付きの要求者メカニズムを通じて登録されます。
 
 Adobe Primetime認証は、アプリケーションを登録するための新しいメカニズムを提案します。 このメカニズムについては、次の段落で説明します。
 
 ## 出願登録機構 {#appRegistrationMechanism}
 
-### 技術的理由 {#reasons}
+### 技術的な理由 {#reasons}
 
-Adobe Primetime認証の認証メカニズムはセッション cookie に依存していましたが、原因は次のとおりです [Android Chrome カスタムタブ](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari View Controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}に設定した場合、この目標はもう達成できません。
+Adobe Primetime認証の認証メカニズムはセッション cookie に依存していましたが、原因は次のとおりです。 [Android Chrome カスタムタブ](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari View Controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}に設定した場合、この目標はもはや達成できません。
 
 これらの制限を考慮し、Adobeでは、すべてのクライアントに新しい登録メカニズムが導入されました。 OAuth 2.0 RFC に基づいており、次の手順で構成されています。
 
@@ -52,17 +52,17 @@ TVE ダッシュボードからソフトウェア文を取得したら、アプ�
 
 **リクエスト**
 
-| HTTP 呼び出し |  |
+| HTTP 呼び出し |                    |
 |-----------|--------------------|
 | パス | /o/client/register |
 | メソッド | POST |
 
-| フィールド |  |  |
+| フィールド |                                                                           |           |
 |--------------------|---------------------------------------------------------------------------|-----------|
 | software_statement | TVE ダッシュボードで作成されたソフトウェア文。 | 必須 |
 | redirect_uri | アプリケーションが認証フローの完了に使用する URI。 | オプション |
 
-| リクエストヘッダー |  |  |
+| リクエストヘッダー |                                                                                |           |
 |-----------------|--------------------------------------------------------------------------------|-----------|
 | Content-Type | application/json | 必須 |
 | X-Device-Info | 「デバイスと接続情報を渡す」で定義されるデバイス情報 | 必須 |
@@ -70,18 +70,18 @@ TVE ダッシュボードからソフトウェア文を取得したら、アプ�
 
 **応答**
 
-| 応答ヘッダー |  |  |
+| 応答ヘッダー |                  |           |
 |------------------|------------------|-----------|
 | Content-Type | application/json | 必須 |
 
-| 応答フィールド |  |  |
+| 応答フィールド |                 |                            |
 |---------------------|-----------------|----------------------------|
 | client_id | 文字列 | 必須 |
 | client_secret | 文字列 | 必須 |
 | client_id_issued_at | long | 必須 |
 | redirect_uris | 文字列のリスト | 必須 |
-| grant_types | 文字列のリスト<br/> **許容値**<br/> `client_credentials`:Android SDK など、安全でないクライアントで使用されます。 | 必須 |
-| エラー | **許容値**<ul><li>invalid_request</li><li>invalid_redirect_uri</li><li>invalid_software_statement</li><li>unapproved_software_statement</li></ul> | エラーフローで必須 |
+| grant_types | 文字列のリスト<br/> **受け入れられた値**<br/> `client_credentials`:Android SDK など、安全でないクライアントで使用されます。 | 必須 |
+| エラー | **受け入れられた値**<ul><li>invalid_request</li><li>invalid_redirect_uri</li><li>invalid_software_statement</li><li>unapproved_software_statement</li></ul> | エラーフローで必須 |
 
 
 #### エラー応答 {#error-response}
@@ -90,10 +90,10 @@ TVE ダッシュボードからソフトウェア文を取得したら、アプ�
 
 | ステータスコード | 応答本文 | 説明 |
 | --- | --- | --- |
-| HTTP 400 | {&quot;error&quot;:&quot;invalid_request&quot;} | リクエストに必須のパラメーターがない、サポートされていないパラメーター値が含まれている、パラメーターを繰り返す、またはその他の形式ではありません。 |
-| HTTP 400 | {&quot;error&quot;:&quot;invalid_redirect_uri&quot;} | redirect_uri は、登録済みのアプリケーションに基づいて、このクライアントでは許可されていません。 |
-| HTTP 400 | {&quot;error&quot;:&quot;invalid_software_statement&quot;} | ソフトウェア文が無効です。 |
-| HTTP 400 | {&quot;error&quot;:&quot;unapproved_software_statement&quot;} | software_id が設定に見つかりません。 |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_request&quot;} | リクエストに必須のパラメーターがない、サポートされていないパラメーター値が含まれている、パラメーターを繰り返す、またはその他の形式ではありません。 |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_redirect_uri&quot;} | redirect_uri は、登録済みのアプリケーションに基づいて、このクライアントでは許可されていません。 |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_software_statement&quot;} | ソフトウェア文が無効です。 |
+| HTTP 400 | {&quot;error&quot;: &quot;unapproved_software_statement&quot;} | software_id が設定に見つかりません。 |
 
 #### クライアント資格情報の例 {#client-credentials-example}
 
@@ -160,12 +160,12 @@ Pragma: no-cache
 **リクエスト**
 
 
-| **HTTP 呼び出し** |  |
+| **HTTP 呼び出し** | |
 | --- | --- |
 | パス | `/o/client/token` |
 | メソッド | POST |
 
-| **リクエストパラメーター** |  |
+| **リクエストパラメーター** | |
 | --- | --- |
 | `grant_type` | クライアント登録プロセスで受け取りました。<br/> **許可された値**<br/>`client_credentials`:Android SDK など、安全でないクライアントに使用されます。 |
 | `client_id` | クライアント登録プロセスで取得されたクライアント識別子。 |
@@ -173,13 +173,13 @@ Pragma: no-cache
 
 **応答**
 
-| 応答フィールド |  |  |
+| 応答フィールド | | |
 | --- | --- | --- |
 | `access_token` | Primetime API の呼び出しに使用する必要があるアクセストークンの値 | 必須 |
 | `expires_in` | access_token の有効期限が切れるまでの時間（秒） | 必須 |
 | `token_type` | トークンのタイプ **無記名者** | 必須 |
 | `created_at` | トークンの発行時間 | 必須 |
-| **応答ヘッダー** |  |  |
+| **応答ヘッダー** | | |
 | `Content-Type` | application/json | 必須 |
 
 **エラー応答**
@@ -188,9 +188,9 @@ Pragma: no-cache
 
 | ステータスコード | 応答本文 | 説明 |
 | --- | --- | --- |
-| HTTP 400 | {&quot;error&quot;:&quot;invalid_request&quot;} | リクエストに必須のパラメーターがない、サポートされていないパラメーター値（付与タイプ以外）が含まれている、パラメーターを繰り返す、複数の資格情報を含む、クライアントを認証する複数のメカニズムを利用する、またはその他の形式が正しくありません。 |
-| HTTP 400 | {&quot;error&quot;:&quot;invalid_client&quot;} | クライアントが不明なため、クライアント認証に失敗しました。 SDK は、認証サーバーに再度登録する必要があります。 |
-| HTTP 400 | {&quot;error&quot;:&quot;unauthorized_client&quot;} | 認証済みのクライアントは、この認証付与タイプの使用を許可されていません。 |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_request&quot;} | リクエストに必須のパラメーターがない、サポートされていないパラメーター値（付与タイプ以外）が含まれている、パラメーターを繰り返す、複数の資格情報を含む、クライアントを認証する複数のメカニズムを利用する、またはその他の形式が正しくありません。 |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_client&quot;} | クライアントが不明なため、クライアント認証に失敗しました。 SDK は、認証サーバーに再度登録する必要があります。 |
+| HTTP 400 | {&quot;error&quot;: &quot;unauthorized_client&quot;} | 認証済みのクライアントは、この認証付与タイプの使用を許可されていません。 |
 
 #### アクセストークンの取得の例： {#obt-access-token}
 
@@ -234,17 +234,17 @@ Pragma: no-cache
 
 アクセストークンを使用したAdobe Primetimeの実行 [認証 API 呼び出し](/help/authentication/initiate-authentication.md). これをおこなうには、次のいずれかの方法で、アクセストークンを API リクエストに追加する必要があります。
 
-* 新しいクエリパラメーターをリクエストに追加することによって。 新しいパラメーターは、 **access_token**.
+* 新しいクエリパラメーターをリクエストに追加することによって。 この新しいパラメーターは、 **access_token**.
 
-* 新しい HTTP ヘッダーをリクエストに追加することで、次の操作を実行します。認証：Bearer. クエリー文字列はサーバーログに表示されるので、HTTP ヘッダーを使用することをお勧めします。
+* 新しい HTTP ヘッダーをリクエストに追加します (Authorization: Bearer)。 クエリー文字列はサーバーログに表示されるので、HTTP ヘッダーを使用することをお勧めします。
 
 エラーの場合、次のエラー応答が返される可能性があります。
 
-| エラー応答 |  |  |
+| エラー応答 |     |                                                                                                        |
 |-----------------|-----|--------------------------------------------------------------------------------------------------------|
 | invalid_request | 400 | リクエストの形式が正しくありません。 |
 | invalid_client | 403 | クライアント ID は、要求を実行できなくなりました。 新しいクライアント資格情報が生成される必要があります。 |
-| access_denied | 401 | access_token が無効です（期限切れまたは無効）。 クライアントは新しい access_token を MUST リクエストします。 |
+| access_denied | 401 | access_token が無効です（期限切れまたは無効です）。 クライアントは新しい access_token を MUST リクエストします。 |
 
 ### 認証リクエストの実行の例：
 

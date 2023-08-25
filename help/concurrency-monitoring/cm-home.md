@@ -1,7 +1,7 @@
 ---
 title: 同時実行監視の概要
 description: 同時実行監視の概要
-source-git-commit: ac0c15b951f305e29bb8fa0bd45aa2c53de6ad15
+source-git-commit: 9bc4298edb22d72131156bf92717284866728ec5
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 同時実行監視を使用すると、ID プロバイダーとコンテンツプロバイダー（MVPD および Programmers）の両方が、複数のアプリケーション（複数のパートナーが所有する可能性がある）をまたいで同時使用の制限を定義および適用できます。
 
-**同時実行監視 API は、次の場所でホストされます。
+**同時実行監視 API は、次の場所でホストされます。**
 
-* V2.0: [同時実行監視 API](http://docs.adobeptime.io/cm-api-v2/)**
+* **V2.0: [同時実行監視 API](http://docs.adobeptime.io/cm-api-v2/)**
 
 同時実行監視サービスに登録するには、 [サポートチーム](mailto:tve-support@adobe.com). 以下の情報を指定すると、アドビのチームが喜んでお手伝いします。
 

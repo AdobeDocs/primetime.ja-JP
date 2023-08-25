@@ -2,7 +2,7 @@
 title: Android SDK の概要
 description: Android SDK の概要
 exl-id: a1d98325-32a1-4881-8635-9a3c38169422
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4b858a06080ec221c60548e2a2a0f3b6010ede15
 workflow-type: tm+mt
 source-wordcount: '2707'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Primetime 認証資格付与ソリューションは、認証および承認ワ�
 
 #### 認証トークン
 
-- **AccessEnabler 1.6 以前** - ****認証トークンがデバイス上でキャッシュされる方法は、「**リクエスト元ごとの認証»** 現在の MVPD に関連付けられたフラグ：
+- **AccessEnabler 1.6 以前**  — 認証トークンがデバイス上でキャッシュされる方法は、**リクエスト元ごとの認証»** 現在の MVPD に関連付けられたフラグ：
 
 
 1. 「リクエスト元ごとの認証」機能が *無効*&#x200B;を指定した場合、1 つの認証トークンがグローバルペーストボードにローカルに保存されます。 このトークンは、現在の MVPD と統合されているすべてのアプリケーション間で共有されます。

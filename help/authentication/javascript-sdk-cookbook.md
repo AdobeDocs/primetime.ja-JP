@@ -2,9 +2,9 @@
 title: JavaScript SDK クックブック
 description: JavaScript SDK クックブック
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: df9d2bbef16cceb6a7e594f9b81262d475a5b334
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 >
 >このページのコンテンツは、情報提供の目的でのみ提供されます。 この API を使用するには、Adobeの現在のライセンスが必要です。 不正な使用は許可されていません。
 
-## はじめに (#intro)
+## はじめに {#intro}
 
 このドキュメントでは、プログラマーの上位レベルアプリケーションがAdobe Primetime Authentication Service との JavaScript 統合用に実装するエンタイトルメントワークフローについて説明します。 全体に、JavaScript API リファレンスへのリンクが含まれています。
 
 また、 [関連情報](#related) の節には、一連の JavaScript コードサンプルへのリンクが含まれています。
 
-## 権利付与フロー (#entitlement)
+## 権利付与フロー {#entitlement}
 
 1. [前提条件](#prereq)
 2. [起動フロー](#startup)
@@ -34,7 +34,7 @@ ht-degree: 0%
 ![](assets/javascript-flows.png)
 
 
-## 前提条件 (#prereq)
+## 前提条件 {#prereq}
 
 **依存関係：**
 
@@ -141,7 +141,7 @@ src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 
 AccessEnabler の呼び出し時に、認証フローの完了に達する `setAuthenticationStatus()`次を使用 `isAuthenticated == 1`.
 
-## 4.承認フロー (#authz)
+## 4.承認フロー {#authz}
 
 **依存関係：**
 
@@ -164,7 +164,7 @@ AccessEnabler の呼び出し時に、認証フローの完了に達する `setA
 - 検証に合格した場合：ユーザーに要求されたメディアを表示または再生します。
 - 失敗した場合：AuthZ トークンが無効だった場合、メディアリクエストを拒否する必要があり、エラーメッセージがユーザーに表示される必要があります。
 
-## 5.メディアフローの視聴 (#logout)
+## 5.メディアフローの視聴 {#logout}
 
 - ユーザは、表示するメディアを選択する。
    - メディアは保護されていますか？
@@ -173,7 +173,7 @@ AccessEnabler の呼び出し時に、認証フローの完了に達する `setA
          - メディアが保護されていない場合は、メディアの表示フローに進みます。
          - 再生メディア
 
-## 訪問者 ID の設定 (#visitorID)
+## 訪問者 ID の設定 {#visitorID}
 
 の設定 [Experience CloudvisitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html) の値は、分析の観点から非常に重要です。 EC visitorID 値を設定すると、SDK はネットワーク呼び出しごとにこの情報を送信し、Adobe Primetime Authentication サービスはこの情報を収集します。 これにより、Adobe Primetime Authentication Service の分析データを、他のアプリケーションや Web サイトから取得した他の分析レポートと関連付けることができます。 EC visitorID の設定方法に関する情報は、を参照してください。 [ここ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
 

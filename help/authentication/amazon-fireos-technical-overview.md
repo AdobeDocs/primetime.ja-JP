@@ -2,7 +2,7 @@
 title: Amazon FireOS 技術概要
 description: Amazon FireOS 技術概要
 exl-id: 939683ee-0dd9-42ab-9fde-8686d2dc0cd0
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4691e769e1fee51507550c8e1fbecdcdff7e44eb
 workflow-type: tm+mt
 source-wordcount: '2142'
 ht-degree: 0%
@@ -80,7 +80,7 @@ Primetime 認証資格付与ソリューションは、認証および承認ワ�
 
 #### 認証トークン
 
-- **AccessEnabler 1.10.1 for FireOS **は Android 1.9.1 用 AccessEnabler に基づいています — この SDK は、新しいトークンストレージのメソッドを導入し、複数の Programmer-MVPD バケット、つまり複数の認証トークンを有効にします。
+- **FireOS 向け AccessEnabler 1.10.1** は Android 1.9.1 用 AccessEnabler に基づいています — この SDK は、新しいトークンストレージ方法を導入し、複数の Programmer-MVPD バケットを有効にし、複数の認証トークンを有効にします。
 
 #### 認証トークン
 

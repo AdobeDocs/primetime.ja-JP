@@ -2,9 +2,9 @@
 title: ユーザメタデータ機能
 description: ユーザメタデータ機能
 exl-id: 9fd68885-7b3a-4af0-a090-6f1f16efd2a1
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 36cf160c42bb68412c71e100a7d4fb3ca9c58d89
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1649'
 ht-degree: 0%
 
 ---
@@ -212,10 +212,9 @@ ht-degree: 0%
     }
 ```
 
-
-特定のプラットフォームの詳細、または MVPD 側でのユーザーメタデータの処理方法に関するインサイトを得るには、以下の「関連情報」の該当するリンクを参照してください。
-
 <!---
+
+For details on your particular platform, or to gain some insight into how User Metadata is processed on the MVPD side, see the appropriate link in Related Information below.  
 
 ## Related Information {#related}
 

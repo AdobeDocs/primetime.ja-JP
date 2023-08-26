@@ -2,7 +2,7 @@
 title: ユーザーメタデータ
 description: ユーザーメタデータ
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 6779e20e37f1396402f36564e2c85d48d8c581a3
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -33,8 +33,6 @@ ht-degree: 0%
 
 認証済みユーザーに関して MVPD が共有したメタデータを取得します。
 
-<div>
-
 
 | エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
 | --- | --- | --- | --- | --- | --- |
@@ -54,7 +52,8 @@ ht-degree: 0%
 > 
 >ユーザーメタデータ情報は、認証フローの完了後に使用できる必要がありますが、MVPD やメタデータタイプに応じて、認証フローで更新できます。
 
-</br>
+
+
 
 ## レスポンスのサンプル {#sample-response}
 
@@ -87,6 +86,6 @@ ht-degree: 0%
 
 エラーが発生した場合、サーバーは詳細なエラーメッセージを指定する XML または JSON オブジェクトを返します。
 
-詳しくは、 [ユーザーメタデータ](/help/authentication/user-metadata.md).
+詳しくは、 [ユーザーメタデータ](/help/authentication/user-metadata-feature.md).
 
 ### [REST API リファレンスに戻る](/help/authentication/rest-api-reference.md).

@@ -2,9 +2,9 @@
 title: 登録レコードを返す
 description: 登録レコードを返す
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 0%
 
 ## REST API エンドポイント {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
+`<REGGIE_FQDN>`:
 
 * 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
 * ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+`<SP_FQDN>`:
 
 * 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
 * ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 | エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>例：</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | ストリーミングアプリ</br></br>または</br></br>プログラマーサービス | (1) 請求者  </br>    （パスコンポーネント）</br>2.  登録コード  </br>    （パスコンポーネント） | GET | 登録コードと情報を含む XML または JSON。 以下のスキーマとサンプルを参照してください。 | 200 |
+| `<REGGIE_FQDN>`;/reggie/v1/`{requestorId}`/regcode/`{registrationCode}`<p>例：<p>`<REGGIE_FQDN>`/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | ストリーミングアプリ</br></br>または</br></br>プログラマーサービス | (1) 請求者  </br>    （パスコンポーネント）</br>2.  登録コード  </br>    （パスコンポーネント） | GET | 登録コードと情報を含む XML または JSON。 以下のスキーマとサンプルを参照してください。 | 200 |
 
 {style="table-layout:auto"}
 

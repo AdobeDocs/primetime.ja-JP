@@ -2,7 +2,7 @@
 title: ユーザーメタデータ
 description: ユーザーメタデータ
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: 4479df7985da16e8632a538f1042de05109f2392
+source-git-commit: 895438e2b915f8745d685dfc76340b18eccd48bc
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%
@@ -43,10 +43,10 @@ ht-degree: 0%
 | --- | --- |
 | 要求者 | この操作が有効な ProgrammerRequestorId。 |
 | deviceId | デバイス ID バイト。 |
-| device_info/<p>X-Device-Info | デバイス情報のストリーミング。<p>**注意**：この INFO は、URL パラメーターとして渡すことができますが、このパラメーターの潜在的なサイズとGETURL の長さの制限により、HTTP ヘッダーで X-Device-Info として渡す必要があります。 </br></br>詳しくは、 **デバイスと接続情報を渡す** <!--http://tve.helpdocsonline.com/passing-device-information-->. |
-| _deviceType_ | デバイスタイプ（Roku、PC など）。<p>このパラメータが正しく設定されている場合、ESM は以下の指標を提供します。 [デバイスタイプ別に分類](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) クライアントレスを使用する場合に、Roku、AppleTV、Xbox など、様々な種類の分析を実行できます。<p>詳しくは、 [パス指標でクライアントレスデバイスタイプパラメーターを使用するメリット](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)<p>**注意：** The `device_info` は、このパラメーターを置き換えます。 |
-| _deviceUser_ | デバイスのユーザー ID。</br></br>**注意：**使用する場合、 `deviceUser` は、 [登録コードを作成](/help/authentication/registration-code-request.md) リクエスト。 |
-| _appId_ | アプリケーション ID/名前。 <p>**注意：** `device_info` は、このパラメーターを置き換えます。 使用する場合、 `appId` は、 **登録コードを作成** リクエスト。 |
+| device_info/<p>X-Device-Info | デバイス情報のストリーミング。</br></br> **注意：** この INFO は、URL パラメータとして device_info に渡すことができますが、このパラメータの潜在的なサイズと、GETURL の長さに関する制限により、HTTP ヘッダーで X-Device-Info として渡す必要があります。 </br></br> 詳しくは、 [デバイスと接続情報を渡す](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| _deviceType_ | デバイスタイプ（Roku、PC など）。</br></br> このパラメータが正しく設定されている場合、ESM は以下の指標を提供します。 [デバイスタイプ別に分類](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) クライアントレスを使用する場合に、Roku、AppleTV、Xbox など、様々な種類の分析を実行できます。</br></br> 詳しくは、 [パス指標でクライアントレスデバイスタイプパラメーターを使用するメリット](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md) </br></br> **注意：** The `device_info` は、このパラメーターを置き換えます。 |
+| _deviceUser_ | デバイスのユーザー ID。</br></br> **注意：** 使用する場合、 `deviceUser` は、 [登録コードを作成](/help/authentication/registration-code-request.md) リクエスト。 |
+| _appId_ | アプリケーション ID/名前。 </br></br> **注意：** The `device_info` は、このパラメーターを置き換えます。 使用する場合、 `appId` は、 [登録コードを作成](/help/authentication/registration-code-request.md) リクエスト。 |
 
 >[!NOTE]
 > 
@@ -80,9 +80,9 @@ ht-degree: 0%
 
 オブジェクトのルートには、次の 3 つのノードがあります。
 
-* **更新済み**：メタデータが最後に更新された時刻を表す UNIX タイムスタンプを指定します。 このプロパティは、認証フェーズでメタデータを生成する際に、サーバーによって最初に設定されます。 以降の呼び出し（メタデータの更新後）では、タイムスタンプが増分されます。
-* **データ**：実際のメタデータ値が含まれます。
-* **暗号化**：暗号化されたプロパティをリストする配列。 特定のメタデータ値を復号するには、プログラマは、メタデータに対して Base64 デコードを実行し、その結果の値に対して RSA 復号を適用する必要があります (Adobeは、プログラマの公開証明書を使用してサーバ上のメタデータを暗号化します )。
+* *更新済み*：メタデータが最後に更新された時刻を表す UNIX タイムスタンプを指定します。 このプロパティは、認証フェーズでメタデータを生成する際に、サーバーによって最初に設定されます。 以降の呼び出し（メタデータの更新後）では、タイムスタンプが増分されます。
+* *データ*：実際のメタデータ値が含まれます。
+* *暗号化*：暗号化されたプロパティをリストする配列。 特定のメタデータ値を復号するには、プログラマは、メタデータに対して Base64 デコードを実行し、その結果の値に対して RSA 復号を適用する必要があります (Adobeは、プログラマの公開証明書を使用してサーバ上のメタデータを暗号化します )。
 
 エラーが発生した場合、サーバーは詳細なエラーメッセージを指定する XML または JSON オブジェクトを返します。
 

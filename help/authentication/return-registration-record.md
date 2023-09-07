@@ -2,7 +2,7 @@
 title: 登録レコードを返す
 description: 登録レコードを返す
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
+source-git-commit: 9e1d178e00c49cab7bcf9693c3b16234cb29ba4c
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 * 実稼動 — [api.auth.adobe.com](http://api.auth.adobe.com/)
 * ステージング — [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-</br>
+
 
 
 ## 説明 {#description}
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 
 
-<div>
+
 
 
 | エンドポイント | 呼び出し済み  </br>作成者 | 入力   </br>パラメーター | HTTP  </br>メソッド | 応答 | HTTP  </br>応答 |
@@ -46,14 +46,16 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-</br>
+
+
 
 | 入力パラメーター | 説明 |
 | --- | --- |
 | 要求者 | この操作が有効な ProgrammerRequestorId。 |
 | 登録コード | ストリーミングデバイスに表示される登録コード値（認証フローに入力される値）です。 |
 
-</br>
+
+
 
 ## 応答 XML スキーマ {#response-xml-schema}
 

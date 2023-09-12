@@ -2,19 +2,16 @@
 title: Adobe AIR
 description: Adobe AIR
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 23f49e1e-9a0b-4b01-aa64-31be2dfbbed6
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
 
-
 # Adobe AIR{#adobe-air}
 
-Adobe AIRはクロスオペレーティングシステムランタイムで、コンテンツ制作者は、カスタマイズされたマルチメディアアプリケーションを設計することで、Webへの既存の投資をデスクトップに拡張できます。 実証済みのオープンなテクノロジーを基盤とし、信頼できるカスタムアプリケーションの開発と導入をシンプル化した信頼性の高い方法で、より安全で楽しいユーザーエクスペリエンスを提供します。 Adobe AIRでは、リッチメディアを容易に統合して、よりインタラクティブで没入型のユーザーエクスペリエンスを作成できます。 HTML、JavaScript、Flash、Adobe®Flex®ソフトウェアなどの使い慣れたツールを使用して、リッチインターネットアプリケーションの独自の組み合わせをWindows、Macintosh、Linuxに展開できます。
+Adobe AIRはクロスオペレーティングシステムランタイムで、コンテンツプロデューサーは、カスタマイズされたマルチメディアアプリケーションを設計することで、Web に対する既存の投資をデスクトップにまで拡張できます。 実証済みのオープンなテクノロジーを基盤とし、信頼性の高いカスタムアプリケーションを開発および導入し、より安全で楽しいユーザーエクスペリエンスを提供する、信頼性の高いシンプルな方法を提供します。 Adobe AIRを使用すると、企業はリッチメディアを簡単に統合して、より没入感のあるインタラクティブなユーザーエクスペリエンスを作成できます。 HTML、JavaScript、Flash、Adobeなどの使い慣れたツールを使用して、リッチなインターネットアプリケーションの独自の組み合わせを Windows、Macintosh、Linux にデプロイできます。® Flex®
 
-企業はユーザー・インターフェースを完全に制御でき、自社ブランドを反映し強化するユーザー・エクスペリエンスを設計できます。 Adobe AIRは、Adobe PrimetimeDRM SDKで保護されたコンテンツの再生のサポートを組み込んでおり、カスタムのエンドツーエンドコンテンツ配信チェーンの作成に役立ちます。
-
-Adobe AIRの詳細については、次を参照してください。[www.adobe.com/go/air](https://www.adobe.com/go/air)
+ビジネスはユーザーインターフェイスを完全に制御でき、ブランドを反映、強化するユーザーエクスペリエンスを設計できます。 Adobe Primetime DRM SDK で保護されたコンテンツの再生の組み込みのサポートにより、Adobe AIRは、カスタムのエンドツーエンドのコンテンツ配布チェーンを作成できます。

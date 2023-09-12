@@ -3,16 +3,16 @@ title: Primetime リリースノート
 description: Primetime リリースノート
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 32%
+source-wordcount: '301'
+ht-degree: 0%
 
 ---
 
 # Primetime リリースノート
 
-Adobe Primetimeリリースノートへようこそ。 左側のナビゲーションに表示されるドキュメントには、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題が記載されています。
+このたびは、Adobe Primetimeリリースノートをご利用いただき、誠にありがとうございます。 左側のナビゲーションに表示されるドキュメントには、リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題が記載されています。
 
 ## PTAI 22.9.2 の機能強化および修正点
 
@@ -22,7 +22,7 @@ Adobe Primetimeリリースノートへようこそ。 左側のナビゲーシ�
 
 ## TVSDK 3.15 Android の修正点
 
-このリリースでは、クリエイティブタグが見つからない場合やクリエイティブタグが見つからない場合にアプリケーションがクラッシュする問題を修正しました [!UICONTROL url CDATA] 次の項目が空 [!UICONTROL VAST] 応答。
+このリリースでは、クリエイティブタグが見つからない場合やクリエイティブタグが見つからない場合にアプリケーションがクラッシュする問題を修正しました [!UICONTROL url CDATA] 次の項目が空です： [!UICONTROL VAST] 応答。
 
 その他の修正および詳細については、 [Android 向け TVSDK リリースノート](/help/release-notes/tvsdk-3x-android.md)
 
@@ -36,17 +36,17 @@ Adobe Primetimeリリースノートへようこそ。 左側のナビゲーシ�
 
 | ユーザーガイド | 説明 |
 |--- |--- |
-| [Primetime プログラミングのヘルプ](/help/programming/home.md) | Android デバイスでは Java、iOS デバイスでは Objective-C を使用したアプリケーションやビデオプレイヤーの開発を学習できます。 |
-| [Primetime 移行およびコンバージョンのヘルプ](/help/migration-guides/home.md) | 既存の Primetime TVSDK Suite から次世代のスイートに移行するためのコンバージョンと移行のプロセスについて説明します。 |
-| [参照実装](/help/android-reference-implementation/home.md) | TVSDK を理解し、機能マネージャーを変更して、個人用プレイヤーをカスタマイズします。 |
-| [Primetime API リファレンス](/help/reference/api-references.md) | TVSDK 関数、データ構造、および他のプログラミング構成に関する詳細な情報を提供します。 |
+| [Primetime プログラミングのヘルプ](/help/programming/home.md) | Android デバイスでは Java、iOSデバイスでは Objective-C を使用したアプリケーションやビデオプレーヤーの開発を学ぶことができます。 |
+| [Primetime 移行およびコンバージョンのヘルプ](/help/migration-guides/home.md) | 既存の Primetime TVSDK Suite から次世代のスイートに移行するための変換と移行のプロセスについて説明します。 |
+| [参照実装](/help/android-reference-implementation/home.md) | TVSDK を理解し、機能マネージャーを変更して、個人用プレーヤーをカスタマイズするのに役立ちます。 |
+| [Primetime API リファレンス](/help/reference/api-references.md) | TVSDK 関数、データ構造、およびその他のプログラミング構成に関する詳細情報を提供します。 |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Digital Rights Management(DRM) の様々なユーザーシナリオの詳細を学ぶのに役立ちます |
-| [Primetime Ad Insertion のヘルプ](/help/primetime-ad-insertion/home.md) | ユーザーをターゲットに設定した動的な広告をサーバーに挿入してコンテンツを収益化し、パーソナライズされた広告をオーディエンスに提供する方法について説明します。 |
+| [PrimetimeAd Insertionヘルプ](/help/primetime-ad-insertion/home.md) | ユーザーをターゲットにした動的な広告をサーバーに挿入してコンテンツを収益化し、パーソナライズされた広告をオーディエンスに提供する方法を説明します。 |
 | [アーカイブ](https://helpx.adobe.com/primetime/archives.html) | アーカイブ済みドキュメントのPDFをダウンロードします。 |
 
-## 参考リソース
+## 役立つリソース
 
-* [Adobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
+* [Adobe Primetimeの理解](https://www.adobe.com/in/marketing/primetime.html)
 
 * [同時実行監視](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
 
@@ -54,4 +54,3 @@ Adobe Primetimeリリースノートへようこそ。 左側のナビゲーシ�
 
 * [Adobe Primetime DRM フォーラム](https://forums.adobe.com/community/adobe_access)
 
-* [Adobe Primetime Developer Resources](https://www.adobe.com/devnet/primetime.html)

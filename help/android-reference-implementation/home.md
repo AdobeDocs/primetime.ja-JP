@@ -1,40 +1,38 @@
 ---
-title: Primetimeリファレンスの実装
-description: Primetimeリファレンスの実装
+title: Primetime リファレンス実装
+description: Primetime リファレンス実装
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 66be90f1-27e4-4e5f-b84e-fa11ec6f43de
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 43%
+source-wordcount: '199'
+ht-degree: 0%
 
 ---
 
+# Primetime リファレンス実装
 
-# Primetimeリファレンスの実装
+Adobe Primetimeのリファレンス実装のヘルプにようこそ。 左側のナビゲーションに一覧表示されているドキュメントは、TVSDK を理解し、機能マネージャを変更して、個人用プレーヤーをカスタマイズするのに役立ちます。
 
-Adobe Primetimeのリファレンスの実装のヘルプへようこそ。 左側のナビゲーションに示すドキュメントは、TVSDKを理解し、機能マネージャーを変更して個人プレイヤーをカスタマイズするのに役立ちます。
-
-## 関連項目
+## 関連トピック
 
 | ユーザーガイド | 説明 |
 |--- |--- |
 | [Primetime リリースノート](/help/release-notes/home.md) | リリース固有の情報、システム要件、制限事項、修正された問題、既知の問題を示します。 |
-| [Primetime プログラミングのヘルプ](/help/programming/home.md) | Android デバイスでは Java、iOS デバイスでは Objective-C を使用したアプリケーションやビデオプレーヤーの開発を学習できます。 |
-| [Primetime移行とコンバージョンのヘルプ](/help/migration-guides/home.md) | 既存の Primetime TVSDK Suite から次世代のスイートに移行するためのコンバージョンと移行のプロセスについて説明します。 |
-| [Primetime Ad Insertion のヘルプ](/help/primetime-ad-insertion/home.md) | ユーザーをターゲットに設定した動的な広告をサーバーに挿入してコンテンツを収益化し、パーソナライズされた広告をオーディエンスに提供する方法について説明します。 |
-| [Digital Rights Management](/help/digital-rights-management/home.md) | Digital Rights Management(DRM)の様々なユーザーシナリオの詳細を学ぶ |
-| [Primetime APIリファレンス](/help/reference/api-references.md) | TVSDK 関数、データ構造、および他のプログラミング構成に関する詳細な情報を提供します。 |
-| [アーカイブ](https://helpx.adobe.com/primetime/archives.html) | アーカイブされたドキュメントのPDFをダウンロードします。 |
+| [Primetime プログラミングのヘルプ](/help/programming/home.md) | Android デバイスでは Java、iOSデバイスでは Objective-C を使用したアプリケーションやビデオプレーヤーの開発を学ぶことができます。 |
+| [Primetime 移行およびコンバージョンのヘルプ](/help/migration-guides/home.md) | 既存の Primetime TVSDK Suite から次世代のスイートに移行するための変換と移行のプロセスについて説明します。 |
+| [PrimetimeAd Insertionヘルプ](/help/primetime-ad-insertion/home.md) | ユーザーをターゲットにした動的な広告をサーバーに挿入してコンテンツを収益化し、パーソナライズされた広告をオーディエンスに提供する方法を説明します。 |
+| [Digital Rights Management](/help/digital-rights-management/home.md) | Digital Rights Management(DRM) の様々なユーザーシナリオの詳細を学ぶのに役立ちます |
+| [Primetime API リファレンス](/help/reference/api-references.md) | TVSDK 関数、データ構造、およびその他のプログラミング構成に関する詳細情報を提供します。 |
+| [アーカイブ](https://helpx.adobe.com/primetime/archives.html) | アーカイブ済みドキュメントのPDFをダウンロードします。 |
 
 ## 役立つリソース
 
-* [Adobe Primetimeを知る](https://www.adobe.com/in/marketing/primetime.html)
+* [Adobe Primetimeの理解](https://www.adobe.com/in/marketing/primetime.html)
 
-* [並行性の監視](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
+* [同時実行監視](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
 
-* [Primetime認証](https://tve.helpdocsonline.com/home)
+* [Primetime 認証](https://tve.helpdocsonline.com/home)
 
-* [Adobe PrimetimeDRMフォーラム](https://forums.adobe.com/community/adobe_access)
+* [Adobe Primetime DRM フォーラム](https://forums.adobe.com/community/adobe_access)
 
-* [Adobe Primetime開発者向けリソース](https://www.adobe.com/devnet/primetime.html)

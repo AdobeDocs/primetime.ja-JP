@@ -2,9 +2,9 @@
 title: Android SDK クックブック
 description: Android SDK クックブック
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 9fcbb5285ffa85306c0e18337da9564ac862a6eb
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1685'
 ht-degree: 0%
 
 ---
@@ -155,7 +155,7 @@ AccessEnabler のネットワーク・アクティビティは別のスレッド
 
    **注意：** この時点で、ユーザーは認証フローをキャンセルできます。 この場合、UI レイヤは、 `setSelectedProvider()` 次を使用 `null` をパラメーターとして使用します。 これにより、AccessEnabler は内部状態をクリーンアップし、認証フローをリセットできます。
 
-1. ユーザーが正常にログインすると、アプリケーションレイヤーは「カスタムリダイレクト URL」の読み込みを検出します ( 例： [http://adobepass.android.app](http://adobepass.android.app/)) をクリックします。 このカスタム URL は、実際には WebView が読み込むことを意図していない無効な URL です。 これは、認証フローが完了し、WebView を閉じる必要があることを示すシグナルです。
+1. ユーザーが正常にログインすると、アプリケーションレイヤーは「カスタムリダイレクト URL」の読み込みを検出します ( 例： `http://adobepass.android.app`) をクリックします。 このカスタム URL は、実際には WebView が読み込むことを意図していない無効な URL です。 これは、認証フローが完了し、WebView を閉じる必要があることを示すシグナルです。
 
 1. WebView コントロールを閉じ、を呼び出します。 `getAuthenticationToken()`:AccessEnabler に対して、バックエンドサーバから認証トークンを取得するよう指示します。
 
@@ -207,7 +207,7 @@ AccessEnabler のネットワーク・アクティビティは別のスレッド
 
    a.認証ワークフローと同じパターンに従って、AccessEnabler ドメインが UI アプリケーションレイヤーに対して (`navigateToUrl()` コールバック ) を使用して WebView コントロールを作成し、そのコントロールに対して、ログアウトエンドポイントの URL をバックエンドサーバーに読み込むよう指示します。
 
-   b.この場合も、UI は WebView コントロールのアクティビティを監視し、コントロールが複数のリダイレクトを経て、アプリケーションのカスタム URL( 例： [http://adobepass.android.app/](http://adobepass.android.app/)) をクリックします。 このイベントが発生すると、UI アプリケーションレイヤーが WebView を閉じ、ログアウトプロセスが完了します。
+   b.この場合も、UI は WebView コントロールのアクティビティを監視し、コントロールが複数のリダイレクトを経て、アプリケーションのカスタム URL( 例： `http://adobepass.android.app/`) をクリックします。 このイベントが発生すると、UI アプリケーションレイヤーが WebView を閉じ、ログアウトプロセスが完了します。
 
    **注意：** ログアウトフローは、ユーザーが WebView と何らかのやり取りをする必要がないという点で、認証フローとは異なります。 UI アプリケーションレイヤーは WebView を使用して、すべてのリダイレクトに従っていることを確認します。 したがって、ログアウトプロセス中に WebView コントロールを非表示（非表示）にする（推奨）ことが可能です。
 

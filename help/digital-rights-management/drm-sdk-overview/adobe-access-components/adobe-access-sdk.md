@@ -1,19 +1,18 @@
 ---
-description: Primetime DRMの主なコンポーネントは、Java SDK、Flash PlayerおよびAdobe AIRクライアントランタイム環境で構成されます。
-title: Java SDK、Flash Player、Adobe AIRクライアント
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Primetime DRM の主なコンポーネントは、Java&trade、SDK、Flash PlayerとAdobe AIRクライアントのランタイム環境で構成されます。
+title: Java&trade; SDK、Flash Player、Adobe AIRクライアント
+exl-id: 01bb53dc-211d-4ec0-9e06-3bdbca01a071
+source-git-commit: d49042b559ce6083eca0738517d04c490755a033
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
 
+# 概要 {#drm-components-overview}
 
-# 概要{#drm-components-overview}
+Primetime DRM の主なコンポーネントは、Java™ SDK と、Flash PlayerおよびAdobe AIRクライアントランタイム環境で構成されます。
 
-Primetime DRMの主なコンポーネントは、Java SDK、Flash PlayerおよびAdobe AIRクライアントランタイム環境で構成されます。
+SDK の設定について詳しくは、 *コンテンツの保護にAdobe Primetime DRM SDK を使用する。*
 
-SDKのセットアップについて詳しくは、「*コンテンツ保護のためのAdobe PrimetimeDRM SDKの使用」の「SDKのセットアップ」を参照してください。*
-
-Primetime DRM SDKを使用すると、コンテンツ管理、請求、ユーザーアクセス制御システムなど、組織の既存のビジネスインフラストラクチャと統合するデジタル著作権管理ソリューションを開発できます。 Flash PlayerとAdobe AIRを使用すると、ユーザーが大規模なデジタルコンテンツのライブラリにアクセスし、表示できるアプリケーションを作成し、簡単に展開できます。
+Primetime DRM SDK を使用すると、コンテンツ管理、請求、ユーザーアクセス制御システムなど、組織の既存のビジネスインフラストラクチャと統合するデジタル著作権管理ソリューションを開発できます。 Flash PlayerとAdobe AIRを使用すると、消費者がデジタルコンテンツの大きなライブラリにアクセスして表示できるアプリケーションを作成し、簡単にデプロイできます。

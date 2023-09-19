@@ -1,18 +1,16 @@
 ---
-title: Primetime DRMライセンスサーバー
-description: Primetime DRMライセンスサーバー
+title: Primetime DRM ライセンスサーバー
+description: Primetime DRM ライセンスサーバー
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
 
 ---
 
+# Primetime DRM ライセンスサーバー {#primetime-drm-license-server}
 
-# Primetime DRMライセンスサーバー{#primetime-drm-license-server}
+Primetime DRM ライセンスサーバーは、Primetime DRM Java SDK から構築されています。 このサーバーは、保護されたコンテンツへのアクセスを要求するクライアントからのライセンス要求を使用します。 サーバーは、要求元のクライアントのライセンスを生成する前にポリシーを変更または上書きするために、ライセンス要求内から DRM ポリシーを解析および操作する機能を持ちます。
 
-Primetime DRMライセンスサーバーは、Primetime DRM Java SDKから構築されています。 このサーバーは、保護されたコンテンツへのアクセスを要求しているクライアントからのライセンス要求を消費します。 サーバーは、要求元クライアントのライセンスを生成するポリシーを使用する前にポリシーを変更または上書きするために、ライセンス要求内からDRMポリシーを解析および操作できます。
-
-Primetime DRMライセンスサーバーをデプロイするには、まずPrimetime DRMに対する&#x200B;**Adobeのコンプライアンスおよび堅牢性のルール**&#x200B;を満たす必要があります。 また、Adobeは、ホストされているPrimetime DRMライセンスサービス[Primetime Cloud DRM](../cloud-quick-start/whats-included.md)をオファーします。このサービスは、独自のライセンスサーバーをホストする代わりに使用できます。
+Primetime DRM ライセンスサーバーをデプロイするには、まず次を満たす必要があります。 **Adobeのコンプライアンスおよび堅牢性ルール** Primetime DRM 用。 Adobeには、と呼ばれるホスト型 Primetime DRM ライセンスサービスも用意されています。 [Primetime Cloud DRM](../cloud-quick-start/whats-included.md)：を独自のライセンスサーバーをホストする代わりに使用できます。

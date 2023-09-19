@@ -1,24 +1,22 @@
 ---
-description: バージョン3.0のReference Implementation License ServerまたはWatched Folder Packagerをサポートするサーバーをアップグレードするには、Application Serverにデプロイされた.warファイルを、Adobe PrimetimeDRM Reference Implementation Serverに含まれるファイルに置き換える必要があります。
-title: 既存の展開のアップグレード
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: バージョン 3.0 の Reference Implementation License Server または Watched Folder Packager をサポートするサーバーをアップグレードするには、アプリケーションサーバーにデプロイされている.war ファイルを、Adobe Primetime DRM Reference Implementation Server に含まれているファイルに置き換える必要があります。
+title: 既存のデプロイメントのアップグレード
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
+# 概要 {#upgrade-existing-deployments-overview}
 
-# 概要{#upgrade-existing-deployments-overview}
+バージョン 3.0 の Reference Implementation License Server または Watched Folder Packager をサポートするサーバーをアップグレードするには、アプリケーションサーバーにデプロイされている.war ファイルを、Adobe Primetime DRM Reference Implementation Server に含まれているファイルに置き換える必要があります。
 
-バージョン3.0のReference Implementation License ServerまたはWatched Folder Packagerをサポートするサーバーをアップグレードするには、Application Serverにデプロイされた.warファイルを、Adobe PrimetimeDRM Reference Implementation Serverに含まれるファイルに置き換える必要があります。
+参照実装ライセンスサーバーでドメイン登録を使用するには、新しいデータベーステーブルがいくつか必要です。 参照実装データベース全体を再作成し、を実行する必要があります。 `CreateSampleDB.sql`.
 
-参照実装ライセンスサーバーでドメイン登録を使用するには、新しいデータベーステーブルがいくつか必要です。 参照実装データベース全体を再作成し、`CreateSampleDB.sql`を実行する必要があります。
+データベース・レコードを保持し、新しい表を追加する手順は、次のとおりです。
 
-データベース・レコードを保持し、新しい表を追加する手順は、次のとおりです：
-
-1. `CreateSampleDB.sql`を開き、次のテーブルを作成するコマンドを実行します。
+1. 開く `CreateSampleDB.sql` 次のテーブルを作成するコマンドを実行します。
 
    * `DomainServerInfo`
    * `DomainKeys`
@@ -26,14 +24,14 @@ ht-degree: 0%
    * `UserDomainMembership`
    * `UserDomainRefCount`
 
-1. ドメ追加インサポートを使用するには、[!DNL flashaccess-refimpl.properties]に次のプロパティを指定します。
+1. 次のプロパティをに追加します。 [!DNL flashaccess-refimpl.properties] ドメインサポートを使用するには、次の手順に従います。
 
-   * `HandlerConfiguration.DomainCAs.n` または  `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
+   * `HandlerConfiguration.DomainCAs.n` または `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
 
-   * `Domain RegistrationHandler.ServerCredential` および `DomainRegistrationHandler.ServerCredential.password` または  `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
+   * `Domain RegistrationHandler.ServerCredential` および `DomainRegistrationHandler.ServerCredential.password` または `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
 
    * `DomainRegistrationHandler.DomainServerUrl`
 
-1. iOSクライアント追加に対するリモートキー配信をサポートするために、[!DNL flashaccess-refimpl.properties]に対する次のプロパティを指定します。
+1. 次のプロパティをに追加します。 [!DNL flashaccess-refimpl.properties] iOSクライアントへのリモートキー配信をサポートするには：
 
-   * `HandlerConfiguration.KeyServerCertificate` または  `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`
+   * `HandlerConfiguration.KeyServerCertificate` または `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`

@@ -1,13 +1,12 @@
 ---
 title: MVPD の HBA ステータス
 description: MVPD の HBA ステータス
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%
 
 ---
-
 
 # MVPD の HBA ステータス
 
@@ -24,25 +23,24 @@ ht-degree: 0%
 
 | MVPD | 基本的な機能はありますか？ | 認証応答のフラグを送信します | SSO? | コメント |
 |---|---|---|---|---|
-| DirecTV | はい | いいえ |  |  |
-| 皿 | 処理中 | 処理中 |  |  |
-| スペクトル | はい | はい |  |  |
-| 憲章 | はい | いいえ |  |  |
-| Cox | はい | いいえ |  | 保護者による制限を有効にする必要があります |
-| AT&amp;T | はい | いいえ |  |  |
-| Verizon | はい | はい |  |  |
-| Cablevision | 処理中 | 処理中 |  |  |
-| 急リンク | はい | 処理中 |  |  |
-| Mediacom | はい | 処理中 |  |  |
-| 中大陸 | はい | 処理中 |  |  |
-| マシロン | はい | いいえ |  |  |
-| Google Fiber | はい | 処理中 |  |  |
-| AlticeOne | はい | はい |  |  |
+| DirecTV | はい | いいえ |      |                                      |
+| 皿 | 処理中 | 処理中 |      |                                      |
+| スペクトル | はい | はい |      |                                      |
+| 憲章 | はい | いいえ |      |                                      |
+| Cox | はい | いいえ |      | 保護者による制限を有効にする必要があります |
+| AT&amp;T | はい | いいえ |      |                                      |
+| Verizon | はい | はい |      |                                      |
+| Cablevision | 処理中 | 処理中 |      |                                      |
+| 急リンク | はい | 処理中 |      |                                      |
+| Mediacom | はい | 処理中 |      |                                      |
+| 中大陸 | はい | 処理中 |      |                                      |
+| マシロン | はい | いいえ |      |                                      |
+| Google Fiber | はい | 処理中 |      |                                      |
+| AlticeOne | はい | はい |      |                                      |
 
 
 ## OAuth 2.0 が有効な MVPD を持つ HBA {#hba-with-oauth2-enabled-mvpds}
 
 | MVPD | 基本的な機能はありますか？ | 認証応答のフラグを送信します | SSO? | コメント |
 |---|---|---|---|---|
-| Comcast | はい | はい |  |  |
-
+| Comcast | はい | はい | | |

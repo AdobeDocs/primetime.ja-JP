@@ -1,30 +1,28 @@
 ---
-description: デフォルトのリゾルバーに基づいてリゾルバーを実装できます。
+description: デフォルトのリゾルバーに基づいて、リゾルバーを実装できます。
 title: カスタムオポチュニティ/コンテンツリゾルバーの実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
 
 ---
 
+# カスタムオポチュニティ/コンテンツリゾルバーの実装 {#implement-a-custom-opportunity-content-resolver}
 
-# カスタムオポチュニティ/コンテンツリゾルバーの実装{#implement-a-custom-opportunity-content-resolver}
-
-デフォルトのリゾルバーに基づいてリゾルバーを実装できます。
+デフォルトのリゾルバーに基づいて、リゾルバーを実装できます。
 
 <!--<a id="fig_CC41E2A66BDB4115821F33737B46A09B"></a>-->
 
 ![](assets/ios_psdk_content_resolver.png)
 
-1. `PTContentResolver`抽象クラスを拡張して、カスタム広告リゾルバーを開発します。
+1. を拡張して、カスタム広告リゾルバーを開発する `PTContentResolver` 抽象クラス。
 
-   `PTContentResolver` は、コンテンツリゾルバークラスで実装する必要があるインターフェイスです。同じ名前の抽象クラスも使用でき、設定を自動的に処理（委任の取得）します。
+   `PTContentResolver` は、コンテンツリゾルバークラスで実装する必要があるインターフェイスです。 同じ名前の抽象クラスも使用でき、設定を自動的に処理します（デリゲートの取得）。
 
    >[!TIP]
    >
-   >`PTContentResolver` は、 `PTDefaultMediaPlayerClientFactory` クラスを通じて公開されます。クライアントは、`PTContentResolver`抽象クラスを拡張することで、新しいコンテンツリゾルバーを登録できます。 デフォルトでは、特別に削除しない限り、`PTDefaultAdContentResolver`は`PTDefaultMediaPlayerClientFactory`に登録されます。
+   >`PTContentResolver` は、 `PTDefaultMediaPlayerClientFactory` クラス。 クライアントは、 `PTContentResolver` 抽象クラス。 デフォルトでは、特に削除されない限り、 `PTDefaultAdContentResolver` が `PTDefaultMediaPlayerClientFactory`.
 
    ```
    @protocol PTContentResolver <NSObject> 
@@ -52,27 +50,28 @@ ht-degree: 0%
    @end
    ```
 
-1. `shouldResolveOpportunity`を実装し、受信した`PTPlacementOpportunity`を処理する必要がある場合は`YES`を返します。
-1. 代替コンテンツまたは広告を読み込む開始を`resolvePlacementOpportunity`に実装します。
-1. 広告が読み込まれたら、挿入するコンテンツに関する情報を`PTTimeline`に準備します。
+1. 実装方法 `shouldResolveOpportunity` 戻る `YES` 受信した `PTPlacementOpportunity`.
+1. 実装方法 `resolvePlacementOpportunity`：代替コンテンツまたは広告の読み込みを開始します。
+1. 広告が読み込まれたら、 `PTTimeline` に、挿入するコンテンツに関する情報を入力します。
 
-       以下に、タイムラインに関する有益な情報を示します。
+       次に、タイムラインに関する便利な情報を示します。
    
-   * プリロール、ミッドロール、ポストロールのタイプは複数`PTAdBreak`にすることができます。
+   * 複数の `PTAdBreak`プリロール、ミッドロール、ポストロールの各タイプ。
 
-      * `PTAdBreak`は次のものです。
+      * A `PTAdBreak` には次の機能があります。
 
-         * 開始時間と時間の長さの`CMTimeRange`。
+         * A `CMTimeRange` を切断の開始時間と期間に設定します。
 
-            これは`PTAdBreak`の範囲プロパティとして設定されます。
+           これは、の範囲プロパティとして設定されます。 `PTAdBreak`.
 
-         * `NSArray` の値 `PTAd`。
+         * `NSArray` / `PTAd`s.
 
-            これは`PTAdBreak`の広告プロパティとして設定されます。
-   * `PTAd`は広告を表し、各`PTAd`は次のものを持ちます。
+           これは、の ads プロパティとして設定されます。 `PTAdBreak`.
 
-      * 広告の主なアセットプロパティとして設定される`PTAdHLSAsset`。
-      * クリック可能な広告またはバナー広告として複数の`PTAdAsset`インスタンスが存在する可能性があります。
+   * A `PTAd` は広告を表し、各広告は `PTAd` には次の機能があります。
+
+      * A `PTAdHLSAsset` を広告のプライマリアセットプロパティとして設定します。
+      * 複数の `PTAdAsset` クリック可能な広告またはバナー広告としてのインスタンス。
 
    例：
 
@@ -103,8 +102,8 @@ ht-degree: 0%
    _timeline.adBreaks = ptBreaks;
    ```
 
-1. `didFinishResolvingPlacementOpportunity`を呼び出します。これにより、`PTTimeline`が提供されます。
-1. `registerContentResolver`を呼び出して、カスタムコンテンツ/広告リゾルバーをデフォルトのメディアプレイヤーファクトリに登録します。
+1. 通話 `didFinishResolvingPlacementOpportunity`：を提供します。 `PTTimeline`.
+1. を呼び出して、カスタムコンテンツ/広告リゾルバーをデフォルトのメディアプレーヤーファクトリに登録します。 `registerContentResolver`.
 
    ```
    //Remove default content/ad resolver 
@@ -117,7 +116,7 @@ ht-degree: 0%
    [[PTDefaultMediaPlayerFactory defaultFactory] registerContentResolver:[contentResolver autorelease]];
    ```
 
-1. カスタムオポチュニティリゾルバーを実装した場合、それをデフォルトのメディアプレイヤーファクトリに登録します。
+1. カスタムオポチュニティリゾルバーを実装した場合は、デフォルトのメディアプレーヤーファクトリに登録します。
 
    >[!TIP]
    >
@@ -135,7 +134,7 @@ ht-degree: 0%
               registerOpportunityResolver:[opportunityResolver autorelease]];
    ```
 
-プレイヤーがコンテンツを読み込み、VODまたはLIVEのタイプであると判断されると、次のいずれかが発生します。
+プレーヤーがコンテンツを読み込み、VOD または LIVE タイプであると判断されると、次のいずれかが発生します。
 
-* コンテンツがVODの場合、カスタムコンテンツリゾルバーを使用して、ビデオ全体の広告タイムラインを取得します。
-* コンテンツがLIVEの場合、配置オポチュニティ（キューポイント）がコンテンツ内で検出されるたびに、カスタムコンテンツリゾルバーが呼び出されます。
+* コンテンツが VOD の場合、カスタムコンテンツリゾルバーを使用して、ビデオ全体の広告タイムラインを取得します。
+* コンテンツが LIVE の場合、コンテンツ内で配置オポチュニティ（キューポイント）が検出されるたびに、カスタムコンテンツリゾルバーが呼び出されます。

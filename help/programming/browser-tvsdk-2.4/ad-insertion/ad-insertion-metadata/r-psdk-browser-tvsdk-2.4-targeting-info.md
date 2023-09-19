@@ -1,20 +1,18 @@
 ---
-description: Adobe Primetimead decisioningでは、キーと値のペアに対して広告をターゲットできます。
-title: ターゲット情報
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Adobe Primetime Ad Decisioning では、キーと値のペアで広告のターゲットを設定できます。
+title: ターゲティング情報
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
 
 ---
 
+# ターゲティング情報{#targeting-information}
 
-# ターゲット情報{#targeting-information}
+Adobe Primetime Ad Decisioning では、キーと値のペアで広告のターゲットを設定できます。
 
-Adobe Primetimead decisioningでは、キーと値のペアに対して広告をターゲットできます。
-
-次のキーと値のペアをBrowser TVSDKに渡すには：
+これらのキーと値のペアを Browser TVSDK に渡すには：
 
 ```js
 var auditudeSettings = new AdobePSDK.AuditudeSettings(); 
@@ -26,4 +24,3 @@ targetingInfo.setValue(key2, value2);
  
 auditudeSettings.targetingInfo = targetingInfo;
 ```
-

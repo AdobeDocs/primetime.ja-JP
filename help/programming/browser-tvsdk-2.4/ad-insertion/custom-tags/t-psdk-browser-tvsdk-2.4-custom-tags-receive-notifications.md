@@ -1,20 +1,18 @@
 ---
-description: マニフェスト内のタグに関する通知を受け取るには、AdobePSDK.TimedMetadataEventをリッスンします。
-title: 時間指定メタデ追加ータ通知のリスナー
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: マニフェスト内のタグに関する通知を受け取るには、AdobePSDK.TimedMetadataEvent をリッスンします。
+title: 時間指定メタデータ通知のリスナーを追加する
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%
 
 ---
 
+# 時間指定メタデータ通知のリスナーを追加する{#add-listeners-for-timed-metadata-notifications}
 
-# 時間指定メタデ追加ータ通知のリスナー{#add-listeners-for-timed-metadata-notifications}
+マニフェスト内のタグに関する通知を受け取るには、AdobePSDK.TimedMetadataEvent をリッスンします。
 
-マニフェスト内のタグに関する通知を受け取るには、AdobePSDK.TimedMetadataEventをリッスンします。
-
-新しい`TimedMetadata`オブジェクトが作成されると、MediaPlayerは`AdobePSDK.TimedMetadataEvent`をディスパッチします。
+新しい `TimedMetadata` オブジェクトが作成された場合、MediaPlayer がディスパッチします。 `AdobePSDK.TimedMetadataEvent`.
 
 1. 適切なリスナーを実装します。
 
@@ -31,5 +29,4 @@ ht-degree: 0%
    player.addEventListener(AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE, onTimedMetadataEvent);
    ```
 
-ID3メタデータは、同じ`Events.TimedMetadataEvent`を通じてディスパッチされます。 `timedMetadata.type`プロパティを使用して、TAGとID3を区別できます。
-
+ID3 メタデータが同じ `Events.TimedMetadataEvent`. 以下を使用すると、 `timedMetadata.type` プロパティを使用して、TAG と ID3 を区別します。

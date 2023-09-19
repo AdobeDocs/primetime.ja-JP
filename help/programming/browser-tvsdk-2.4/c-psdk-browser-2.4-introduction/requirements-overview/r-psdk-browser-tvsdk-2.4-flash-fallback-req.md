@@ -1,14 +1,12 @@
 ---
 description: Flash Playerを使用するには、環境が必要な要件を満たしていることを確認します。
 title: Flash Player要件
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '142'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Flash Player要件{#flash-player-requirements}
 
@@ -16,19 +14,19 @@ Flash Playerを使用するには、環境が必要な要件を満たしてい�
 
 <!--<a id="section_FEE654D506EC4D85AE77302AD2A27777"></a>-->
 
-Flash Playerの要件は次のとおりです。
+次に、このFlash Playerの要件を示します。
 
-* `Primetime.js`で再生するには、少なくともFlash Playerバージョン23をインストールしてください。
-* Flash Playerバージョン23以降の更新を求めるメッセージを表示するには、少なくともFlash Playerバージョン11.0.0をインストールします。
+* を再生するには `Primetime.js`、少なくともFlash Player23 をインストールします。
+* Flash Playerバージョン 23 以降の更新を求めるメッセージを表示するには、少なくともFlash Playerバージョン 11.0.0 をインストールします。
 
-## パッケージ化要件{#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
+## パッケージの要件 {#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
 
-Flash Playerのある再生には、次のSWFファイルが必要です。
+Flash Playerの再生には、次のSWFファイルが必要です。
 
-* ブラウザーTVSDK APIを処理するメインアプリケーションのSWFファイル。
-* Flash Playerのインストールと更新を処理する`playerProductInstall.swf` SWFファイル。
+* Browser TVSDK API を処理するメインアプリケーションSWFファイル。
+* The `playerProductInstall.swf` SWFのインストールと更新を処理するFlash Playerファイル。
 
-また、Flashでのビデオ再生には、SWFまたは`.DAT`ファイルの可能性がある認証トークンファイルが必要です。 SWFファイルへのパス、認証トークンファイル、トークンファイルの名前と種類は、AdobePSDK APIを使用して指定できます。
+さらに、Flashでのビデオ再生には、SWFまたは `.DAT` ファイル。 SWFファイルへのパス、認証トークンファイルのパス、トークンファイルの名前と種類は、AdobePSDK API を使用して指定できます。
 
 例：
 
@@ -47,4 +45,3 @@ AdobePSDK.setAuthorizationTokenFilename("hlsaf_localhost.swf");
 //Set the token type, "DAT" or "SWF". Defaults to "DAT" 
 AdobePSDK.setAuthorizationTokenType("SWF");
 ```
-

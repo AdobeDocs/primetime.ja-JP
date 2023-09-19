@@ -1,17 +1,15 @@
 ---
-description: TVSDKは、VODストリーム内の広告コンテンツのプログラムによる削除および置換をサポートしています。
-title: VODストリーム内の広告の削除と置換
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK では、VOD ストリーム内の広告コンテンツのプログラムによる削除と置き換えをサポートしています。
+title: VOD ストリーム内の広告の削除と置換
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
 
 ---
 
+# 概要 {#delete-and-replace-ads-in-vod-streams-overview}
 
-# 概要{#delete-and-replace-ads-in-vod-streams-overview}
+TVSDK では、VOD ストリーム内の広告コンテンツのプログラムによる削除と置き換えをサポートしています。
 
-TVSDKは、VODストリーム内の広告コンテンツのプログラムによる削除および置換をサポートしています。
-
-削除および置換機能は、カスタム広告マーカー機能を拡張するものです。 カスタム広告マーカーは、メインコンテンツの一部を広告関連コンテンツ期間としてマークします。 これらの時間範囲をマークするだけでなく、時間範囲を削除したり置き換えたりすることもできます。
+削除および置換機能は、カスタム広告マーカー機能を拡張したものです。 カスタム広告マーカーは、メインコンテンツのセクションを広告関連のコンテンツ期間としてマークします。 これらの時間範囲をマークする以外に、時間範囲を削除して置き換えることもできます。

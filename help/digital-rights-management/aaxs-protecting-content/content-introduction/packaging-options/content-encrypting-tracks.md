@@ -2,17 +2,15 @@
 title: トラックの暗号化
 description: トラックの暗号化
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 0%
 
 ---
 
-
 # トラックの暗号化{#encrypting-tracks}
 
-コンテンツの暗号化する部分を指定します。オーディオ、ビデオまたはその両方。
+コンテンツのどの部分（オーディオ、ビデオ、またはその両方）を暗号化するかを指定します。
 
-使用例：保護が必要なコンテンツのトラックのみを暗号化できるので、クライアントでの復号化のオーバーヘッドが減少し、再生パフォーマンスが向上します。
+使用例：保護が必要なコンテンツのトラックのみを暗号化できるので、クライアントでの復号化のオーバーヘッドが軽減され、再生パフォーマンスが向上します。

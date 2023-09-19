@@ -1,23 +1,21 @@
 ---
-description: 次の手順を実行して、ブラウザーTVSDKを使用して基本プレーヤーを作成します。
-title: TVSDKを使用した基本プレイヤーの作成
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 次の手順を実行して、Browser TVSDK を使用して基本的なプレーヤーを作成します。
+title: TVSDK を使用した基本プレーヤーの作成
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
+# TVSDK を使用した基本プレーヤーの作成{#create-a-basic-player-using-tvsdk}
 
-# TVSDK{#create-a-basic-player-using-tvsdk}を使用した基本プレイヤーの作成
+次の手順を実行して、Browser TVSDK を使用して基本的なプレーヤーを作成します。
 
-次の手順を実行して、ブラウザーTVSDKを使用して基本プレーヤーを作成します。
-
-1. ブラウザーTVSDK用の圧縮ファイルをダウンロードできる新しいディレクトリを作成します。
-1. ZendeskからブラウザーTVSDKをダウンロードし、ファイルを解凍して、新しいディレクトリにframeworksフォルダーを配置します。
-1. `div`を含むコード用の単純なHTMLボイラープレートを作成します。
-1. このボイラープレートは、手順1で作成したディレクトリのHTMLファイルに配置します。
+1. Browser TVSDK 用の圧縮ファイルをダウンロードできる新しいディレクトリを作成します。
+1. Zendesk からブラウザ TVSDK をダウンロードし、ファイルを解凍し、frameworks フォルダを新しいディレクトリに配置します。
+1. を使用して、コードの単純なHTMLボイラープレートを作成します。 `div` その中に
+1. このボイラープレートは、手順 1 で作成したHTMLのディレクトリファイルに配置します。
 
    ```
    <!DOCTYPE html> 
@@ -33,7 +31,7 @@ ht-degree: 0%
    </html>
    ```
 
-1. head追加セクションのブラウザーTVSDKライブラリ。
+1. head セクションにブラウザー TVSDK ライブラリを追加します。
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
@@ -42,16 +40,16 @@ ht-degree: 0%
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. bodyタグに対して、`onLoad`セクションを追加します。
+1. body タグに対して、 `onLoad` 」セクションに入力します。
 
    ```
    <body onload="startVideo()">
    ```
 
-1. `startVideo`関数を実装する開始です。
-1. 追加スクリプトタグを作成し、タグ内に`startVideo`関数を作成します。
+1. の実装を開始する `startVideo` 関数に置き換えます。
+1. スクリプトタグを追加し、 `startVideo` 関数をタグ内に追加します。
 
-   これは、ページのheadセクションにあると想定されます。
+   これは、ページの head セクションにあるはずです。
 
    ```js
    <script> 
@@ -60,17 +58,17 @@ ht-degree: 0%
    </script>
    ```
 
-1. `Adobe.MediaPlayer`を作成します。
+1. を作成します。 `Adobe.MediaPlayer`.
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. `MediaPlayerView`を作成します。
+1. を作成します。 `MediaPlayerView`.
 
    >[!TIP]
    >
-   >ここで、先ほど作成した`div`が使用されます。
+   >ここで、 `div` 前に作成したが使用されます。
 
    ```js
    var view = new AdobePSDK.MediaPlayerView( 
@@ -78,13 +76,13 @@ ht-degree: 0%
    player.view = view;
    ```
 
-1. プレ追加イヤーイベントリスナー。
+1. プレーヤーイベントリスナーを追加します。
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
    ```
 
-1. イベントハンドラーを実装し、追加イベントリスナーの前に配置します。
+1. イベントハンドラーを実装し、イベントリスナーの追加の前にこれを配置します。
 
    ```js
    var onStatusChange = function (event) { 
@@ -141,7 +139,7 @@ ht-degree: 0%
    }; 
    ```
 
-1. M3U8リンク（またはmpd）を渡す`MediaResource`を作成します。
+1. を作成します。 `MediaResource`:M3U8 リンク（または mpd）を渡します。
 
    ```js
    var resourceUrl = "https://example.com/a/yourUrl.m3u8"; 
@@ -157,7 +155,7 @@ ht-degree: 0%
    player.replaceCurrentResource(mediaResource, config);
    ```
 
-1. プレイヤーがINITIALIZED状態になったら、`prepareToPlay`を呼び出します。
+1. プレーヤーが INITIALIZED 状態になったら、を呼び出します。 `prepareToPlay`.
 
    ```js
    case INITIALIZED: 
@@ -165,11 +163,10 @@ ht-degree: 0%
     break;
    ```
 
-1. プレイヤーがPREPARED状態になったら、`play`を呼び出します。
+1. プレーヤーが PREPARED 状態になったら、を呼び出します。 `play`.
 
    ```js
    case PREPARED: 
     player.play(); 
     break;
    ```
-

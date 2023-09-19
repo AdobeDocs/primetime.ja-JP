@@ -1,44 +1,42 @@
 ---
-description: TVSDK Primetime Referenceは、TVSDKとAVEフレームワークに関して構築されたAndroidアプリケーションです。
-title: Primetimeリファレンスの実装の構築
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK Primetime Reference は、 TVSDK および AVE フレームワークに基づいて構築された Android アプリケーションです。
+title: Primetime リファレンス実装の構築
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '216'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Primetime リファレンス実装の構築 {#build-the-primetime-reference-implementation}
 
-# Primetimeリファレンス実装の構築{#build-the-primetime-reference-implementation}
+TVSDK Primetime Reference は、 TVSDK および AVE フレームワークに基づいて構築された Android アプリケーションです。
 
-TVSDK Primetime Referenceは、TVSDKとAVEフレームワークに関して構築されたAndroidアプリケーションです。
+Eclipse で Primetime Reference プロジェクトを設定して構築するには、次の手順を実行します。
 
-EclipseでPrimetime Referenceプロジェクトを設定して構築するには：
-
-1. TVSDK Androidのzipファイルをダウンロードし、記憶しておくべき場所のディレクトリに解凍します。
-1. Eclipseを起動します。
-1. **[!UICONTROL File]**/**[!UICONTROL Import]**&#x200B;を選択します。
-1. **[!UICONTROL Android]**/**[!UICONTROL Existing Android Code Into Workspace]**&#x200B;を選択します。
+1. TVSDK Android zip ファイルをダウンロードし、覚えておく場所のディレクトリに解凍します。
+1. Eclipse を起動します。
+1. 選択 **[!UICONTROL File]** > **[!UICONTROL Import]**.
+1. 選択 **[!UICONTROL Android]** > **[!UICONTROL Existing Android Code Into Workspace]**.
 1. クリック **[!UICONTROL Next]**.
-1. **[!UICONTROL Browse]**&#x200B;ボタンを使用して、**[!UICONTROL Root Directory]**&#x200B;フィールドにTVSDK Android zipファイルを展開した[!DNL samples/PrimetimeReference/src]下のディレクトリを設定します。
-1. 読み込むプロジェクトを次から選択します。**[!UICONTROL appcompat]**、**[!UICONTROL PrimetimeReference]**。
+1. 以下を使用します。 **[!UICONTROL Browse]** ボタンを使用して **[!UICONTROL Root Directory]** の下のディレクトリを含むフィールド [!DNL samples/PrimetimeReference/src] TVSDK Android zip ファイルを展開します。
+1. 読み込むプロジェクトを次の中から選択します。 **[!UICONTROL appcompat]**, **[!UICONTROL PrimetimeReference]**.
 1. クリック **[!UICONTROL Finish]**.
-1. **[!UICONTROL Project]** > **[!UICONTROL Build Project]**&#x200B;を選択して、プロジェクトをビルドします。
+1. 選択  **[!UICONTROL Project]** > **[!UICONTROL Build Project]** をクリックして、プロジェクトを構築します。
 
-   プロジェクトが自動的に構築されるように設定されている場合は、この手順は必要ありません。
-1. テストプロジェクトをWorkspaceに含める場合は、テストプロジェクトをPrimetimeReferenceプロジェクトに関連付けます。
-   1. 手順3を繰り返します。 ～ 6。
-   1. 読み込むプロジェクトを次の中から選択します。`PrimetimeReference\tests`.
+   プロジェクトが自動的にビルドするように設定されている場合、この手順は必要ありません。
+1. テストプロジェクトをワークスペースに含める場合は、テストプロジェクトを PrimetimeReference プロジェクトに関連付けます。
+   1. 手順 3 を繰り返します。 6.
+   1. 読み込むプロジェクトを次の中から選択します。 `PrimetimeReference\tests`.
    1. クリック **[!UICONTROL Finish]**.
 
-      テストプロジェクトはCatalogActivityプロジェクトに依存しているので、テストプロジェクトをCatalogActivityプロジェクトに関連付ける必要があります。
-   1. **[!UICONTROL tests]**&#x200B;を右クリックし、**[!UICONTROL Properties]**&#x200B;を選択します。
-   1. 「Java Build Path」の「**[!UICONTROL Projects]**」タブを選択します。
+      テストプロジェクトは CatalogActivity プロジェクトに依存するので、テストプロジェクトを CatalogActivity プロジェクトに関連付ける必要があります。
+   1. 右クリック **[!UICONTROL tests]** を選択します。 **[!UICONTROL Properties]**.
+   1. を選択します。 **[!UICONTROL Projects]** 」タブをクリックします。
    1. クリック **[!UICONTROL Add...]**
    1. 「CatalogActivity」を選択します。
-   1. **[!UICONTROL OK]**&#x200B;をクリックして、プロジェクトを追加します。
-   1. **[!UICONTROL OK]**&#x200B;をクリックしてプロパティページを終了します。
-   1. **[!UICONTROL Project]** > **[!UICONTROL Build Project]**&#x200B;を選択して、プロジェクトをビルドします。
+   1. クリック **[!UICONTROL OK]** をクリックして、プロジェクトを追加します。
+   1. クリック **[!UICONTROL OK]** をクリックして、プロパティページを終了します。
+   1. 選択  **[!UICONTROL Project]** > **[!UICONTROL Build Project]** をクリックして、プロジェクトを構築します。
 
-      プロジェクトが自動的に構築されるように設定されている場合は、この手順は必要ありません。
+      プロジェクトが自動的にビルドするように設定されている場合、この手順は必要ありません。

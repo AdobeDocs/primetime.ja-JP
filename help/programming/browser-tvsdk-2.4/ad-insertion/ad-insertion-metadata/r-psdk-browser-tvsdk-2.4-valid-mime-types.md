@@ -1,22 +1,20 @@
 ---
-description: 広告には複数のクリエイティブが含まれる場合があり、その中から1つが再生対象として選択されます。
-title: 有効なMIMEタイプ
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 広告には複数のクリエイティブが含まれ、その中から 1 つが再生対象として選択されている場合があります。
+title: 有効な MIME タイプ
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
+# 有効な MIME タイプ{#valid-mime-types}
 
-# 有効なMIMEタイプ{#valid-mime-types}
+広告には複数のクリエイティブが含まれ、その中から 1 つが再生対象として選択されている場合があります。
 
-広告には複数のクリエイティブが含まれる場合があり、その中から1つが再生対象として選択されます。
+MIME タイプを使用すると、ユーザーが優先できるクリエイティブタイプを指定できます。 ユーザーが指定する MIME タイプと、Browser TVSDK がサポートする MIME タイプを使用して、優先順位付けするクリエイティブを決定します。
 
-MIMEタイプを使用して、ユーザーに優先順位を付けることのできるクリエイティブタイプを指定できます。 ユーザーが指定するMIMEタイプと、Browser TVSDKがサポートするMIMEタイプを使用して、優先順位を付けるクリエイティブを決定します。
-
-ブラウザーTVSDKで有効なMIMEタイプを設定するには：
+Browser TVSDK で有効な MIME タイプを設定するには：
 
 ```js
 var auditudeSettings = new AdobePSDK.AuditudeSettings(); 
@@ -24,6 +22,6 @@ var mimeTypes = [“video/mp4”, “application/x-mpegURL”];
 auditudeSettings.validMimeTypes = mimeTypes; 
 ```
 
-`mimeTypes`は文字列の配列で、各文字列はMIMEタイプを表します。
+場所 `mimeTypes` は文字列の配列で、各文字列は mime タイプを表します。
 
-1つの広告に対して複数のメディアファイルが返される場合、選択は`validMimeTypes`配列でメディアファイルが表示される順序に依存します。 インデックスの低いMIME型は、インデックスの高いMIME型よりも優先されます。
+1 つの広告に対して複数のメディアファイルが返される場合の選択は、メディアファイルの表示順に応じて異なります。 `validMimeTypes` 配列。 インデックスの低い MIME タイプは、インデックスの高い MIME タイプよりも優先されます。

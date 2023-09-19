@@ -1,18 +1,16 @@
 ---
-description: ビデオ分析マネージャーは、これらのクラスを公開して、プレーヤーにビデオ追跡を実装します。
-title: 関連するAPIドキュメント
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: ビデオ分析マネージャーは、ビデオ追跡をプレーヤーに実装するために、これらのクラスを公開します。
+title: 関連する API ドキュメント
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
 
 ---
 
+# 関連する API ドキュメント {#related-api-documentation}
 
-# 関連するAPIドキュメント{#related-api-documentation}
-
-ビデオ分析マネージャーは、これらのクラスを公開して、プレーヤーにビデオ追跡を実装します。
+ビデオ分析マネージャーは、ビデオ追跡をプレーヤーに実装するために、これらのクラスを公開します。
 
 * [VAManager](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/VAManager.html)
 * [VAManagerOn](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/VAManagerOn.html)

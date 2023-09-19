@@ -1,64 +1,62 @@
 ---
-description: 即時オンを有効にすると、1つ以上のチャネルがプリロードされます。 ユーザーがチャネルを選択するかチャネルを切り替えると、コンテンツは直ちに再生されます。 バッファリングは、ユーザーが開始を監視するまでに完了します。
+description: 即時オンを有効にすると、1 つ以上のチャネルがプリロードされます。 ユーザーがチャネルを選択したり、チャネルを切り替えたりすると、コンテンツは直ちに再生されます。 バッファリングは、ユーザーが視聴を開始するまでに完了します。
 title: 即時オン
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
 
 ---
 
+# 即時オン {#instant-on}
 
-# {#instant-on}の瞬間
+即時オンを有効にすると、1 つ以上のチャネルがプリロードされます。 ユーザーがチャネルを選択したり、チャネルを切り替えたりすると、コンテンツは直ちに再生されます。 バッファリングは、ユーザーが視聴を開始するまでに完了します。
 
-即時オンを有効にすると、1つ以上のチャネルがプリロードされます。 ユーザーがチャネルを選択するかチャネルを切り替えると、コンテンツは直ちに再生されます。 バッファリングは、ユーザーが開始を監視するまでに完了します。
+Instant On を指定しないと、 TVSDK は再生するメディアを初期化しますが、アプリケーションがを呼び出すまで、ストリームのバッファリングは開始しません `play`. バッファリングが完了するまで、ユーザーにはコンテンツが表示されません。 即時オンにすると、複数のメディアプレーヤー（またはメディアプレーヤーアイテムローダー）インスタンスを起動でき、 TVSDK はストリームのバッファリングを直ちに開始します。 ユーザーがチャネルを変更し、ストリームが正しくバッファーされた場合、 `play` 新しいチャネルでは、再生が直ちに開始されます。
 
-即時オンを指定しないと、TVSDKは再生するメディアを初期化しますが、開始が`play`を呼び出すまで、ストリームをバッファリングしません。 バッファリングが完了するまで、ユーザーにはコンテンツが表示されません。 即時オンでは、複数のメディアプレイヤー（またはメディアプレイヤーアイテムローダー）インスタンスを起動でき、TVSDK開始はストリームを直ちにバッファリングできます。 ユーザーがチャネルを変更し、ストリームが正しくバッファリングされた場合、新しいチャネル開始ーで即座に`play`を呼び出します。
-
-TVSDKが実行できる`MediaPlayer`および`MediaPlayerItemLoader`のインスタンス数に制限はありませんが、実行するインスタンス数が増えると、より多くのリソースが消費されます。 アプリケーションのパフォーマンスは、実行中のインスタンス数の影響を受ける場合があります。 `MediaPlayerItemLoader`について詳しくは、[メディアプレイヤーへのメディアリソースの読み込み](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md)を参照してください。
+ただし、 `MediaPlayer` および `MediaPlayerItemLoader` TVSDK が実行できるインスタンスの数が増えると、実行するインスタンスの数が増え、多くのリソースが消費されます。 実行中のインスタンスの数によって、アプリケーションのパフォーマンスが影響を受ける場合があります。 詳しくは、 `MediaPlayerItemLoader`を参照してください。 [メディアプレーヤーへのメディアリソースの読み込み](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md).
 
 >[!IMPORTANT]
 >
->TVSDKは、1つの`QoSProvider`をサポートせず、`itemLoader`と`MediaPlayer`の両方で動作します。 顧客が即時オンを使用する場合、アプリケーションは2つのQoSインスタンスを維持し、情報の両方のインスタンスを管理する必要があります。
+>TVSDK は、単一の `QoSProvider` 両者を相手に働く `itemLoader` および `MediaPlayer`. お客様がインスタントオンを使用する場合、アプリケーションは 2 つの QoS インスタンスを維持し、情報の両方のインスタンスを管理する必要があります。
 
-`MediaPlayerItemLoader`について詳しくは、[MediaPlayerItemLoaderを使用したメディアリソースの読み込み](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md)を参照してください。
+詳しくは、 `MediaPlayerItemLoader`を参照してください。 [MediaPlayerItemLoader を使用したメディアリソースの読み込み](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md).
 
-## mediaPlayerItemLoader追加 {#section_2F9F24C7BFAD49599D043D64F767F9A0}に対するQoSプロバイダーインスタンス
+## QoS Provider インスタンスを mediaPlayerItemLoader に追加する {#section_2F9F24C7BFAD49599D043D64F767F9A0}
 
-* QoSプロバイダーの作成と`mediaPlayerItemLoader`インスタンスへの接続
+* QoS プロバイダーの作成とへの接続 `mediaPlayerItemLoader` インスタンス
 
-   ```
-   // Create an instance of QoSProvider  
-   private QOSProvider _qosProvider = new QOSProvider(this._context);  
-   
-   // Attach the QoSProvider instance to the mediaPlayerItemLoaderInstance  
-   // (before calling load API on mediaPlayerItemLoader instance)  
-   _qosProvider.attachMediaPlayerItemLoader(this._loader); 
-   ```
+  ```
+  // Create an instance of QoSProvider  
+  private QOSProvider _qosProvider = new QOSProvider(this._context);  
+  
+  // Attach the QoSProvider instance to the mediaPlayerItemLoaderInstance  
+  // (before calling load API on mediaPlayerItemLoader instance)  
+  _qosProvider.attachMediaPlayerItemLoader(this._loader); 
+  ```
 
-   再生開始が終了したら、`_qosProvider`を使用して`timeToLoad`と`timeToPrepare`のQoSdataを取得します。 残りのQoS指標は、`mediaPlayer`に添付された`QoSProvider`を使用して取得できます。
+  再生が開始したら、 `_qosProvider` 手に入れる `timeToLoad` および `timeToPrepare` QoSdata。 残りの QoS 指標は、 `QoSProvider` ～に付随する `mediaPlayer`.
 
-   `MediaPlayerItemLoader`について詳しくは、[MediaPlayerItemLoaderを使用したメディアリソースの読み込み](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader)を参照してください。
+  詳しくは、 `MediaPlayerItemLoader`を参照してください。 [MediaPlayerItemLoader を使用したメディアリソースの読み込み](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader).
 
-## {#section_4FE346B7BE434BA8A2203896D6E52146}に即時バッファリングを設定
+## 即時オンでのバッファリングの設定 {#section_4FE346B7BE434BA8A2203896D6E52146}
 
-TVSDKは、メディアリソースでインスタントオンを使用できるメソッドとステータスを提供します。
+TVSDK は、メディアリソースでインスタントオンを使用できるメソッドとステータスを提供します。
 
 >[!NOTE]
 >
->Adobeでは、InstantOnに`MediaPlayerItemLoader`を使用することを推奨します。 `MediaPlayer`ではなく`MediaPlayerItemLoader`を使用するには、media-resource-load-using-mediaplayeritemloaderを参照してください。
+>Adobeは、 `MediaPlayerItemLoader` InstantOn の場合 次を使用するには： `MediaPlayerItemLoader`ではなく `MediaPlayer`詳しくは、 media-resource-load-using-mediaplayeritemloader を参照してください。
 
-1. リソースが読み込まれ、プレイヤーがリソースを再生する準備ができていることを確認します。
-1. `play`を呼び出す前に、各`MediaPlayer`インスタンスに対して`prepareBuffer`を呼び出します。
+1. リソースが読み込まれ、プレーヤーがリソースを再生する準備が整っていることを確認します。
+1. 呼び出し前 `play`，呼び出し `prepareBuffer` 次の期間 `MediaPlayer` インスタンス。
 
    >[!NOTE]
    >
-   >`prepareBuffer` 即時オンを有効にし、TVSDK開始が即座にバッファリングを行い、バッファーがいっぱいになると `BUFFERING_COMPLETED` イベントをディスパッチします。
+   >`prepareBuffer` 即時オンを有効にすると、 TVSDK は即座にバッファリングを開始し、 `BUFFERING_COMPLETED` イベントを返します。
 
    >[!TIP]
    >
-   >デフォルトでは、`prepareBuffer`と`prepareToPlay`は、最初から再生する開始へのメディアストリームを設定します。 別の位置で開始するには、位置（ミリ秒）を`prepareToPlay`に渡します。
+   >デフォルトでは、 `prepareBuffer` および `prepareToPlay` メディアストリームを設定して、最初から再生を開始します。 別の位置から開始するには、位置（ミリ秒）をに渡します。 `prepareToPlay`.
 
    ```
    @Override 
@@ -78,9 +76,8 @@ TVSDKは、メディアリソースでインスタントオンを使用できる
    }
    ```
 
-1. `BUFFERING_COMPLETE`イベントを受け取ると、開始がアイテムを再生したり、コンテンツが完全にバッファーされたことを示す視覚的なフィードバックを表示したりします。
+1. 次を受け取ったとき： `BUFFERING_COMPLETE` イベントを呼び出し、コンテンツが完全にバッファーされたことを示す視覚的なフィードバックを表示します。
 
    >[!NOTE]
    >
-   >`play`を呼び出すと、再生はすぐに開始されます。
-
+   >を呼び出す場合 `play`、再生は直ちに開始されます。

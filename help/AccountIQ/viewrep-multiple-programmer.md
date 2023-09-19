@@ -1,7 +1,7 @@
 ---
 title: 複数のプログラマーおよびチャネルのアカウント共有レポートを表示
 description: 複数のプログラマーおよびチャネルのアカウント共有レポートを表示
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -18,15 +18,15 @@ ht-degree: 0%
 
 複数のチャネルに関する購読者のアカウント共有の統計を表示するには：
 
-1. 目的のセグメントを [セグメントの定義と期間の選択方法](/help/AccountIQ/howto-select-segment-timeframe.md) 評価のために [セグメントと期間パネル](/help/AccountIQ/segments-timeframe.md).
+1. 次の手順に従って、目的のセグメントを定義します。 [セグメントを定義して期間を選択する方法](/help/AccountIQ/howto-select-segment-timeframe.md) 評価のために [セグメントと期間パネル](/help/AccountIQ/segments-timeframe.md).
 
 1. 左側のナビゲーションから目的のレポートページを選択します。
 
 * [ダッシュボード](/help/AccountIQ/dashboard.md) （ダッシュボードには、様々なレポートページから選択したグラフが表示されます）。
 
-   ![](assets/mult-prog-dashboard.png)
+  ![](assets/mult-prog-dashboard.png)
 
-   *図：複数のプログラマー向けのダッシュボードレポート*
+  *図：複数のプログラマー向けのダッシュボードレポート*
 
 * [一般的な使用方法](/help/AccountIQ/general-usage-reports.md)
 

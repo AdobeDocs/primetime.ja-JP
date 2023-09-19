@@ -1,41 +1,39 @@
 ---
-description: この例は、カスタム広告マーカーを再生タイムラインに含めるための推奨される方法を示しています。
-title: カスタム広告マーカーをタイムラインに配置する
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: この例では、再生タイムラインにカスタム広告マーカーを含める推奨方法を示します。
+title: タイムラインへのカスタム広告マーカーの配置
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
+# タイムラインへのカスタム広告マーカーの配置 {#place-custom-ad-markers-on-the-timeline}
 
-# タイムライン{#place-custom-ad-markers-on-the-timeline}にカスタム広告マーカーを配置する
+この例では、再生タイムラインにカスタム広告マーカーを含める推奨方法を示します。
 
-この例は、カスタム広告マーカーを再生タイムラインに含めるための推奨される方法を示しています。
+1. 帯域外広告配置情報を `RepaceTimeRange` クラス。
+1. のインスタンスを作成 `CustomRangeMetadata` クラスを使用し、その `setTimeRangeList` メソッドの時間範囲リストを設定するための引数として、list/array を使用します。
+1. 使用方法 `setType` メソッドを使用してタイプをに設定します。 `MARK_RANGE`.
+1. 以下を使用します。 `MediaPlayerItemConfig.setCustomRangeMetadata` メソッドの `CustomRangeMetadata` インスタンスを引数として使用し、カスタム範囲メタデータを設定します。
+1. 以下を使用します。 `MediaPlayer.replaceCurrentResource` メソッドの `MediaPlayerItemConfig` 新しいリソースを現在のリソースに設定するための引数としてインスタンスを指定します。
+1. 待機： `STATE_CHANGED` イベント。プレーヤーが `PREPARED` 状態。
+1. を呼び出してビデオの再生を開始する `MediaPlayer.play`.
 
-1. 帯域外の広告配置情報を`RepaceTimeRange`クラスのリスト/配列に変換します。
-1. `CustomRangeMetadata`クラスのインスタンスを作成し、`setTimeRangeList`メソッドとリスト/配列を引数として使用して、時間範囲のリストを設定します。
-1. `setType`メソッドを使用して、型を`MARK_RANGE`に設定します。
-1. `MediaPlayerItemConfig.setCustomRangeMetadata`メソッドを`CustomRangeMetadata`インスタンスの引数として使用し、カスタム範囲メタデータを設定します。
-1. `MediaPlayer.replaceCurrentResource`メソッドを`MediaPlayerItemConfig`インスタンスを引数として使用し、新しいリソースを現在のリソースに設定します。
-1. `STATE_CHANGED`イベントが`PREPARED`状態にあると報告されるのを待ちます。
-1. `MediaPlayer.play`を呼び出してビデオを開始再生します。
+この例のタスクを完了すると、次のようになります。 /
+* 次の場合、 `ReplaceTimeRange` は、再生タイムライン上で別のもの ( 例えば、 `ReplaceTimeRange` が、既に配置されている終了位置より前にある場合、 TVSDK は、問題の発生を静かに調整します `ReplaceTimeRange` 紛争を避けるために
 
-次に、この例でタスクを完了した結果を示します。>
-* 例えば、`ReplaceTimeRange`が再生タイムライン上で別の`ReplaceTimeRange`と重なる場合、の開始位置が既に配置されている終了位置より前にあると、TVSDKは、競合を回避するために、問題の`ReplaceTimeRange`の開始を静かに調整します。
+  これにより、調整された `ReplaceTimeRange` 最初に指定された値より短い。 調整の期間がゼロになった場合、 TVSDK は、問題を黙って破棄します `ReplaceTimeRange`.
 
-   これにより、調整された`ReplaceTimeRange`が、元々指定された値より短くなります。 調整の結果、長さが0になると、TVSDKは問題の`ReplaceTimeRange`を黙ってドロップします。
+* TVSDK は、カスタム広告の時間に隣接する時間範囲を探し、それらを別々の広告の時間にクラスター化します。
 
-* TVSDKは、カスタム広告の時間に関して、隣接する時間範囲を探し、それらを別々の広告の時間にクラスター化します。
+  他の時間範囲と隣接しない時間範囲は、単一の広告を含む広告の時間に変換されます。
+* 設定にが含まれるメディアリソースを読み込もうとした場合 `CustomRangeMetadata` これは、コンテキストのカスタム広告マーカーでのみ使用でき、基になるアセットのタイプが VOD でない場合、 TVSDK は例外をスローします。
+* カスタム広告マーカーを扱う場合、 TVSDK は、他の広告解決メカニズム (Adobe Primetime ad decisioning など ) を非アクティブ化します。
 
-   他の時間範囲に隣接しない時間範囲は、単一の広告を含む広告の時間に変換されます。
-* コンテキストカスタム広告マーカーでのみ使用できる設定`CustomRangeMetadata`を含むメディアリソースを読み込もうとすると、基になるアセットのタイプがVODでない場合、TVSDKは例外をスローします。
-* カスタム広告マーカーを処理する場合、TVSDKは他の広告解決メカニズム(Adobe Primetime広告決定など)を非アクティブにします。
+  TVSDK の広告リゾルバーモジュールや、カスタム広告マーカーメカニズムを使用できます。 カスタム広告マーカーを使用する場合、広告コンテンツは解決されたものと見なされ、タイムラインに配置されます。
 
-   TVSDKの広告リゾルバーモジュールや、カスタム広告マーカーメカニズムを使用できます。 カスタム広告マーカーを使用する場合、広告コンテンツは解決済みと見なされ、タイムラインに配置されます。
-
-次のコードスニペットでは、3つの時間範囲をカスタム広告マーカーとしてタイムラインに配置します。
+次のコードスニペットは、3 つの時間範囲をカスタム広告マーカーとしてタイムラインに配置します。
 
 ```java
 // Assume that the 3 time ranges are obtained through external means 

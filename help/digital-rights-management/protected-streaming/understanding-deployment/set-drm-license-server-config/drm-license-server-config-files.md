@@ -1,27 +1,25 @@
 ---
-title: ライセンスサーバー構成ファイル
-description: ライセンスサーバー構成ファイル
+title: ライセンスサーバの設定ファイル
+description: ライセンスサーバの設定ファイル
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
 
 ---
 
+# ライセンスサーバの設定ファイル{#license-server-configuration-files}
 
-# ライセンスサーバ構成ファイル{#license-server-configuration-files}
+保護されたストリーミング用のAdobe Primetime DRM サーバーには、次の種類の設定ファイルが必要です。
 
-保護ストリーミング用のAdobe PrimetimeDRMサーバーには、次の種類の設定ファイルが必要です。
+* グローバル設定ファイル ( [!DNL flashaccess-global.xml])
+* 各テナントのテナント設定ファイル ( [!DNL flashaccess-tenant.xml])
 
-* グローバル構成ファイル([!DNL flashaccess-global.xml])
-* 各テナントのテナント構成ファイル([!DNL flashaccess-tenant.xml])
+設定ファイルの編集が完了したら、Adobeで、保護されたストリーミング用 Primetime DRM サーバーに付属のユーティリティを使用して、ファイルの形式が正しいことを確認することをお勧めします。
 
-設定ファイルの編集が完了したら、Adobeでは、Primetime DRM Server for Protected Streamingに付属のユーティリティを使用して、ファイルが正しい形式であることを確認することを推奨します。
+詳しくは、 *設定バリデーター*.
 
-*設定バリデーター*&#x200B;を参照してください。
+Adobeを設定ファイル内のクリアテキストで使用できないようにする場合は、設定で指定した Scrambler ツールを使用して、グローバル設定ファイルとテナント設定ファイルで指定したすべてのパスワードを暗号化する必要があります。
 
-設定ファイル内のパスワードをクリアテキストで表示しないようにするには、Adobeが提供したScramblerツールを使用して、グローバル設定ファイルとテナント設定ファイルで指定したすべてのパスワードを暗号化する必要があります。
-
-パスワードを暗号化する方法の詳細については、*パスワードスクランブラ*&#x200B;を参照してください。
+詳しくは、 *パスワードスクランブラ* パスワードの暗号化方法の詳細については、を参照してください。

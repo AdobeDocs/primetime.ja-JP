@@ -1,22 +1,20 @@
 ---
-description: VPAID 2.0サポートを追加するには、カスタム広告表示と適切なリスナーを追加します。
-title: VPAID 2.0統合の実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: VPAID 2.0 サポートを追加するには、カスタム広告ビューと適切なリスナーを追加します。
+title: VPAID 2.0 統合の実装
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# VPAID 2.0 統合の実装 {#implement-vpaid-integration}
 
-# VPAID 2.0統合の実装{#implement-vpaid-integration}
+VPAID 2.0 サポートを追加するには、カスタム広告ビューと適切なリスナーを追加します。
 
-VPAID 2.0サポートを追加するには、カスタム広告表示と適切なリスナーを追加します。
+VPAID 2.0 サポートを追加するには：
 
-VPAID 2.0サポートを追加するには：
-
-1. プレ追加イヤーがPREPARED状態の場合に、プレイヤーインターフェイスに対するカスタム広告表示。
+1. プレーヤーが PREPARED 状態の場合、カスタム広告ビューをプレーヤーインターフェイスに追加します。
 
    ```java
    ... 
@@ -33,20 +31,19 @@ VPAID 2.0サポートを追加するには：
        _playerFrame.addView(view);
    ```
 
-1. リスナーを作成し、イベントリスナーで説明されているイベントを処理します。
+1. リスナーを作成し、 event-listeners で説明されているイベントを処理します。
 
    >[!IMPORTANT]
    >
-   >VPAID 2.0ワークフローでは、カスタム広告表示の場合、カスタム広告表示を作成してから破棄するまで、`AdBreak`開始(イベント`AD_BREAK_START`)と`AdBreak`完了(イベント`AD_BREAK_COMPLETE`)にわたって`CustomAdView`インスタンスを維持することが非常に重要です。 つまり、各広告ブレーク開始にカスタム広告表示を作成し、完了するたびにその広告ブレークを破棄しないでください。
+   >VPAID 2.0 ワークフローでは、カスタム広告ビューの場合、 `CustomAdView` ～の中でインスタンスを作る `AdBreak` 開始（イベント） `AD_BREAK_START`) および `AdBreak` 完了（イベント） `AD_BREAK_COMPLETE`) をクリックし、カスタム広告ビューを作成した時点から破棄する時点までの間、をクリックします。 つまり、すべての広告ブレークの開始時にカスタム広告ビューを作成し、すべての広告ブレークの完了時にカスタム広告ビューを破棄しないでください。
    >
    >
-   >また、プレイヤーがPREPARED状態の場合、カスタム広告表示を作成する必要があります。
+   >また、プレーヤーが PREPARED 状態の場合にのみ、カスタム広告ビューを作成する必要があります。
    >
    >
-   >リセットが呼び出された場合にのみ、カスタム広告表示を破棄します。 例：
+   >リセットが呼び出されたときにのみ、カスタム広告ビューを破棄します。 例：
    >
-   >
-   ```
+   >```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
@@ -54,10 +51,9 @@ VPAID 2.0サポートを追加するには：
    >} 
    >```
    >
-   >最後に、カスタム広告表示を破棄する前に、`FrameLayout`から削除する必要があります。 例：
+   >最後に、カスタム広告ビューを破棄する前に、カスタム広告ビューを `FrameLayout`. 例：
    >
-   >
-   ```
+   >```
    >if (_playerFrame != null) 
    >       _playerFrame.removeAllViews(); 
    >```

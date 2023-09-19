@@ -1,13 +1,12 @@
 ---
 title: MVPD ログインページを iFrame からポップアップに移行する方法
 description: MVPD ログインページを iFrame からポップアップに移行する方法
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
 
 ---
-
 
 # MVPD ログインページを iFrame から Popup に移行する方法 {#migr-mvpd-login-iframe-popup}
 
@@ -48,7 +47,7 @@ iFrame の実装が既に存在する場合、テクニカルノートの最初�
 </body>
 ```
 
-関連する **JavaScript** コード：
+以下が関連する **JavaScript** コード：
 
 ```JavaScript
 /*
@@ -181,7 +180,7 @@ function displayProviderDialog(providers) {
 
 ユーザーがピッカーから MVPD を選択した後、ポップアップを作成する必要があります。 about:blank で作成されたり、別のドメイン上のページで作成された場合、一部のブラウザではポップアップがブロックされる場合があるので、AccessEnabler の読み込み元のホスト名で開くことをお勧めします。
 
-iFrame 実装では、btnCloseIframe ボタンと JavaScript 関数 closeIframeAction() によって認証フローがリセットされていましたが、iFrame の修飾はできなくなりました。 そのため、ポップアップが閉じられるのを監視する（ユーザーによるか、認証フローが終了する）ことで、同じ動作を実現できます。 ユーザーがポップアップのフォーカスを失った場合にも役立つ、コードのスニペットが追加されました。
+iFrame の実装では、 btnCloseIframe ボタンと JavaScript 関数 closeIframeAction() によって認証フローのリセットがおこなわれていましたが、iFrame の修飾はできなくなりました。 そのため、ポップアップが閉じられるのを監視する（ユーザーによるか、認証フローが終了する）ことで、同じ動作を実現できます。 ユーザーがポップアップのフォーカスを失った場合にも役立つ、コードのスニペットが追加されました。
 
 ```HTML
 "<a href="javascript:mvpdWindow.focus();">Click here to open it.</a>".
@@ -232,4 +231,3 @@ function checkClosed() {
 >* サンプルコードは、使用されている要求者 ID に関連付けられたホワイトリストに登録されたドメインからのみ正しく実行されます。
 >* コード全体をダウンロードできるので、このテクニカルノートに表示されるコードは切り捨てられています。 完全なサンプルについては、 **JS iFrame とポップアップのサンプル**.
 >* 外部 JavaScript ライブラリは、次の場所からリンクされました： [Google Hosted Services](https://developers.google.com/speed/libraries/).
-

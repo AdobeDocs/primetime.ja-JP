@@ -2,17 +2,15 @@
 title: 複数の再生権限
 description: 複数の再生権限
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
 
 ---
 
+# 複数の再生権限 {#multiple-play-rights}
 
-# 複数の再生権限{#multiple-play-rights}
+異なるプラットフォームやアプリケーションに適用する異なる使用ルールに対して、複数の再生権限パラメーターを指定できます。
 
-様々なプラットフォームやアプリケーションに適用する様々な使用ルールに対して、複数の再生権限パラメーターを指定できます。
-
-使用例：複数の再生権限を使用する場合、Primetime DRMポリシーを作成して、Microsoft® Windows®プラットフォームで出力保護が必要であることを指定できます。 ただし、Apple® Macintosh®およびLinux®プラットフォームではオプションです。
+使用例：複数の再生権限を使用する場合、Primetime DRM ポリシーを作成して、Microsoft® Windows®プラットフォームで出力保護が必要であることを指定できます。 ただし、Apple® Macintosh®および Linux®プラットフォームでは、このオプションです。

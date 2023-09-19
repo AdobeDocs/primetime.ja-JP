@@ -1,21 +1,18 @@
 ---
-title: Jailbreakの強制(Adobe PrimetimeDRMが必要)
-description: Jailbreakの強制(Adobe PrimetimeDRMが必要)
+title: Jailbreak の強制 (Adobe Primetime DRM が必要 )
+description: Jailbreak の強制 (Adobe Primetime DRM が必要 )
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
 
 ---
 
+# Jailbreak の強制 (Adobe Primetime DRM が必要 ){#jailbreak-enforcement-requires-adobe-primetime-drm}
 
-# JAILBREAKの強制(Adobe PrimetimeDRMが必要){#jailbreak-enforcement-requires-adobe-primetime-drm}
-
-AndroidやiOSモバイルデバイスなど、jailbreak検出をサポートするプラットフォームでは、デバイスで[!DNL jailbreak/root]が検出された場合に、jailbreakの強制を有効にして、コンテンツの再生を禁止できます。
+Android やiOSのモバイルデバイスなど、jailbreak 検出をサポートするプラットフォームでは、jailbreak の強制を有効にして、次の場合にコンテンツの再生を許可しないようにできます。 [!DNL jailbreak/root] がデバイスで検出されました。
 
 >[!NOTE]
 >
->この使用ルールは、Adobe PrimetimeDRMクライアントバージョン4.0以降でサポートされています。 ただし、jailbreak検出をサポートしないプラットフォームには影響しません。 古いクライアントでの動作は、ライセンスサーバーでサポートされている最小クライアントバージョンによって異なります。
-
+>この使用ルールは、Adobe Primetime DRM クライアントバージョン 4.0 以降でサポートされています。 ただし、jailbreak 検出をサポートしないプラットフォームには影響しません。 古いクライアントでの動作は、ライセンスサーバーでサポートされる最小クライアントバージョンによって異なります。

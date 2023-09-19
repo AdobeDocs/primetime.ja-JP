@@ -1,30 +1,28 @@
 ---
-description: MediaResourceが不要になった場合は、MediaPlayerインスタンスとリソースを解放する必要があります。
-title: MediaPlayerインスタンスとリソースの解放
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaResource が不要になったら、MediaPlayer インスタンスとリソースを解放する必要があります。
+title: MediaPlayer インスタンスとリソースの解放
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%
 
 ---
 
+# MediaPlayer インスタンスとリソースの解放{#release-a-mediaplayer-instance-and-resources}
 
-# MediaPlayerインスタンスとリソースの解放{#release-a-mediaplayer-instance-and-resources}
+MediaResource が不要になったら、MediaPlayer インスタンスとリソースを解放する必要があります。
 
-MediaResourceが不要になった場合は、MediaPlayerインスタンスとリソースを解放する必要があります。
+をリリースする際に、 `MediaPlayer` オブジェクト、このオブジェクトに関連付けられている基になるハードウェアリソース `MediaPlayer` オブジェクトの割り当てが解除されます。
 
-`MediaPlayer`オブジェクトを解放すると、この`MediaPlayer`オブジェクトに関連付けられている基になるハードウェアリソースは割り当て解除されます。
-
-以下に、`MediaPlayer`をリリースする理由を示します。
+以下は、 `MediaPlayer`:
 
 * 不要なリソースを保持すると、パフォーマンスに影響を与える可能性があります。
-* 同じビデオコーデックの複数のインスタンスがデバイスでサポートされていない場合、他のアプリケーションで再生エラーが発生する可能性があります。
+* 1 つのデバイスで同じビデオコーデックの複数のインスタンスがサポートされていない場合、他のアプリケーションで再生エラーが発生する可能性があります。
 
-1. `MediaPlayer`を解放します。
+1. をリリースします。 `MediaPlayer`.
 
    ```
    function release():void;
    ```
 
-`MediaPlayer`インスタンスを解放すると、そのインスタンスは使用できなくなります。 `MediaPlayer`インターフェイスのメソッドが解放された後に呼び出されると、`IllegalStateException`がスローされます。
+次の期間の後に `MediaPlayer` インスタンスがリリースされているので、使用できなくなっています。 いずれかの方法で `MediaPlayer` インターフェイスは、リリース後に呼び出されます。 `IllegalStateException` がスローされます。

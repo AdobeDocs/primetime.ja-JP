@@ -1,26 +1,24 @@
 ---
-description: MediaPlayerItemLoaderを使用すると、MediaPlayerインスタンスをインスタンス化することなく、メディアストリームに関する情報を取得できます。 これは、再生を遅延なく開始できるように、バッファリング前のストリームで特に便利です。
-title: MediaPlayerItemLoaderを使用したメディアリソースの読み込み
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaPlayerItemLoader を使用すると、 MediaPlayer インスタンスをインスタンス化しなくても、メディアストリームに関する情報を取得できます。 これは、遅延なく再生が開始できるよう、プリバッファリングストリームで特に役立ちます。
+title: MediaPlayerItemLoader を使用したメディアリソースの読み込み
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
 
 ---
 
+# MediaPlayerItemLoader を使用したメディアリソースの読み込み {#load-a-media-resource-using-mediaplayeritemloader}
 
-# MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}を使用したメディアリソースの読み込み
+MediaPlayerItemLoader を使用すると、 MediaPlayer インスタンスをインスタンス化しなくても、メディアストリームに関する情報を取得できます。 これは、遅延なく再生が開始できるよう、プリバッファリングストリームで特に役立ちます。
 
-MediaPlayerItemLoaderを使用すると、MediaPlayerインスタンスをインスタンス化することなく、メディアストリームに関する情報を取得できます。 これは、再生を遅延なく開始できるように、バッファリング前のストリームで特に便利です。
-
-`MediaPlayerItemLoader`クラスは、ビデオデコーディングハードウェアリソースを割り当てる表示を`MediaPlayer`インスタンスに割り当てることなく、メディアリソースを現在の`MediaPlayerItem`と交換するのに役立ちます。 DRM保護されたコンテンツには、追加の手順が必要ですが、本マニュアルではそれらの手順について説明しません。
+The `MediaPlayerItemLoader` クラスは、現在の `MediaPlayerItem` にビューを取り付けずに `MediaPlayer` インスタンス。ビデオのデコードハードウェアリソースを割り当てます。 DRM で保護されたコンテンツには追加の手順が必要ですが、このマニュアルでは説明しません。
 
 >[!IMPORTANT]
 >
->TVSDKは、1つの`QoSProvider`をサポートせず、`itemLoader`と`MediaPlayer`の両方で動作します。 アプリケーションが即時オンを使用する場合、アプリケーションは2つの`QoS`インスタンスを維持し、情報の両方のインスタンスを管理する必要があります。 詳しくは、[即時オン](../../android-3x-content-playback-options-android2/buffering-configuration/android-3x-instant-on.md)を参照してください。
+>TVSDK は、単一の `QoSProvider` 両者を相手に働く `itemLoader` および `MediaPlayer`. アプリケーションがインスタントオンを使用する場合、アプリケーションは 2 つを維持する必要があります。 `QoS` インスタンスと両方のインスタンスを管理します。 詳しくは、 [即時オン](../../android-3x-content-playback-options-android2/buffering-configuration/android-3x-instant-on.md) を参照してください。
 
-1. `MediaPlayerItemLoader`のインスタンスを作成します。
+1. のインスタンスを作成 `MediaPlayerItemLoader`.
 
    ```java
    private MediaPlayerItemLoader createLoader() { 
@@ -50,9 +48,9 @@ MediaPlayerItemLoaderを使用すると、MediaPlayerインスタンスをイン
 
    >[!TIP]
    >
-   >各リソースに対して`MediaPlayerItemLoader`の個別のインスタンスを作成します。 1つの`MediaPlayerItemLoader`インスタンスを使用して複数のリソースを読み込まないでください。
+   >の別のインスタンスを作成 `MediaPlayerItemLoader` リソースごとに 使用しない `MediaPlayerItemLoader` インスタンスを使用して、複数のリソースを読み込みます。
 
-1. `ItemLoaderListener`クラスを実装して、`MediaPlayerItemLoader`インスタンスから通知を受信します。
+1. の実装 `ItemLoaderListener` から通知を受け取るクラス `MediaPlayerItemLoader` インスタンス。
 
    ```java
    private MediaPlayerItemLoader createLoader() { 
@@ -77,13 +75,13 @@ MediaPlayerItemLoaderを使用すると、MediaPlayerインスタンスをイン
    }
    ```
 
-   `onLoadComplete()`コールバックで、次のいずれかを実行します。
+   Adobe Analytics の `onLoadComplete()` callback、次のいずれかの操作を行います。
 
-   * WebVTTやオーディオトラックの選択など、バッファリングに影響を与える可能性のあるものがすべて完了していることを確認し、`prepareBuffer()`を呼び出して即時オンを利用します。
-   * `replaceCurrentItem()`を使用して、`MediaPlayer`インスタンスにアイテムをアタッチします。
+   * WebVTT やオーディオトラックの選択など、バッファリングに影響を与える可能性があるすべてが完了していることを確認し、を呼び出します。 `prepareBuffer()` 即座に利用する
+   * 項目を `MediaPlayer` を使用してインスタンスを作成する `replaceCurrentItem()`.
 
-   `prepareBuffer()`を呼び出すと、準備が完了した時に`onBufferPrepared`ハンドラにBUFFER_PREPAREDイベントを受け取ります。
-1. `MediaPlayerItemLoader`インスタンスで`load`を呼び出し、読み込むリソースと、必要に応じてコンテンツIDと`MediaPlayerItemConfig`インスタンスを渡します。
+   を呼び出す場合 `prepareBuffer()`に値を指定する場合、 `onBufferPrepared` ハンドラーを使用します。
+1. 通話 `load` の `MediaPlayerItemLoader` 読み込むリソース、（オプションで）コンテンツ ID、および `MediaPlayerItemConfig` インスタンス。
 
    ```java
    loader = createLoader(); 
@@ -91,18 +89,19 @@ MediaPlayerItemLoaderを使用すると、MediaPlayerインスタンスをイン
    loader.load(res, 233, getConfig());
    ```
 
-1. ストリームの先頭以外のポイントからバッファリングするには、バッファリングを開始する位置（ミリ秒）で`prepareBuffer()`を呼び出します。
-1. `replaceCurrentItem()`メソッドと`play()`メソッドを使用して、`MediaPlayer`の再生を開始します。
-1. アイドル状態を待って`replaceCurrentItem`を呼び出します。
+1. ストリームの先頭以外のポイントからバッファリングするには、を呼び出します。 `prepareBuffer()` バッファリングを開始する位置（ミリ秒）を指定します。
+1. 以下を使用します。 `replaceCurrentItem()` および `play()` ～の方法 `MediaPlayer` その時点から遊び始める
+1. アイドル状態になってから、 `replaceCurrentItem`.
 1. 項目を再生します。
 
-   * アイテムがロードされるがバッファリングされない場合：
+   * 項目が読み込まれ、バッファされていない場合：
 
-      1. 初期化済みの状態を待機します。
-      1. `prepareToPlay()`を呼び出します。
-      1. PREPAREDステータスが表示されるのを待ちます。
-      1. `play()`を呼び出します。
-   * アイテムがバッファリングされている場合：
+      1. 初期化済みステータスを待ちます。
+      1. 通話 `prepareToPlay()`.
+      1. PREPARED ステータスが表示されるまで待ちます。
+      1. 通話 `play()`.
+
+   * アイテムがバッファされる場合：
 
       1. バッファー準備イベントを待ちます。
-      1. `play()`を呼び出します。
+      1. 通話 `play()`.

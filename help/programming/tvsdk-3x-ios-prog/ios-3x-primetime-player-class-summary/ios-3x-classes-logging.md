@@ -1,18 +1,16 @@
 ---
-description: ログをカスタマイズできるクラスです。
-title: Loggingクラス
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: これらのクラスを使用して、ログをカスタマイズできます。
+title: クラスのログ
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%
 
 ---
 
+# クラスのログ {#logging-classes}
 
-# クラス{#logging-classes}のログ記録
-
-ログをカスタマイズできるクラスです。
+これらのクラスを使用して、ログをカスタマイズできます。
 
 <table frame="all" colsep="1" rowsep="1" id="table_389797D3CEF14EA2862E0B20C6E6CC41"> 
  <thead> 
@@ -32,7 +30,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTLogger.html" format="html" scope="external"> PTLogger</a> </td> 
-   <td colname="2"> プロトコル。 TVSDKのカスタムロガーを実装するために必要なメソッド。 </td> 
+   <td colname="2"> プロトコル。 TVSDK のカスタムロガーを実装するために必要なメソッド。 </td> 
   </tr> 
  </tbody> 
 </table>

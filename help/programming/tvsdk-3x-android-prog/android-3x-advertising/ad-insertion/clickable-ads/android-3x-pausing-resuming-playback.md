@@ -1,20 +1,18 @@
 ---
-description: ユーザーが広告をクリックすると、アプリケーションは、メインビデオコンテンツの再生を一時停止する必要があります。
+description: ユーザーが広告をクリックすると、アプリケーションはメインのビデオコンテンツの再生を一時停止する必要があります。
 title: 再生の一時停止と再開
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
 
 ---
 
+# 再生の一時停止と再開 {#pause-and-resume-playback}
 
-# 再生の一時停止と再開{#pause-and-resume-playback}
+ユーザーが広告をクリックすると、アプリケーションはメインのビデオコンテンツの再生を一時停止する必要があります。
 
-ユーザーが広告をクリックすると、アプリケーションは、メインビデオコンテンツの再生を一時停止する必要があります。
-
-1. Androidアクティビティの`onPause`と`onResume`を上書きします。
+1. 次を上書き： `onPause` および `onResume` Android アクティビティから。
 
    ```java
    @Override 
@@ -44,4 +42,3 @@ ht-degree: 0%
    } 
    abandonAudioFocus(); 
    ```
-

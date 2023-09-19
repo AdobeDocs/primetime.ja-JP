@@ -1,33 +1,31 @@
 ---
-description: アプリケーションは、適切なPTTimedMetadataオブジェクトを適切なタイミングで使用する必要があります。
-title: ディスパッチ時の時間指定メタデータオブジェクトの格納
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: アプリケーションでは、適切な PTTimedMetadata オブジェクトを適切なときに使用する必要があります。
+title: ディスパッチされる時間指定メタデータオブジェクトを保存します
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%
 
 ---
 
+# ディスパッチされる時間指定メタデータオブジェクトを保存します {#store-timed-metadata-objects-as-they-are-dispatched}
 
-# ディスパッチ時の時間指定メタデータオブジェクトの保存{#store-timed-metadata-objects-as-they-are-dispatched}
+アプリケーションでは、適切な PTTimedMetadata オブジェクトを適切なときに使用する必要があります。
 
-アプリケーションは、適切なPTTimedMetadataオブジェクトを適切なタイミングで使用する必要があります。
-
-再生前に発生するコンテンツ解析中に、TVSDKはサブスクライブされたタグを識別し、これらのタグをアプリケーションに通知します。 各`PTTimedMetadata`に関連付けられる時間は、再生タイムラインでの絶対時間です。
+再生前に発生するコンテンツ解析中に、 TVSDK はサブスクライブされているタグを識別し、これらのタグに関してアプリケーションに通知します。 各 `PTTimedMetadata` は、再生タイムラインでの絶対時間です。
 
 アプリケーションは、次のタスクを実行する必要があります。
 
 1. 現在の再生時間を追跡します。
-1. 現在の再生時間を、ディスパッチされた`PTTimedMetadata`オブジェクトと一致させます。
+1. 現在の再生時間とディスパッチ済みの時間を一致させる `PTTimedMetadata` オブジェクト。
 
-1. `PTTimedMetadata`は、開始時間が現在の再生時間と等しい場合に使用します。
+1. 以下を使用します。 `PTTimedMetadata` ここで、開始時間は現在の再生時間と等しくなります。
 
    >[!NOTE]
    >
-   >以下のコードでは、`PTTimedMetadata`インスタンスが一度に1つしか存在しないと想定しています。 複数のインスタンスがある場合は、アプリケーションでそれらを辞書に適切に保存する必要があります。 1つの方法は、特定の時間に配列を作成し、その配列内のすべてのインスタンスを格納することです。
+   >以下のコードは、が 1 つのみであることを前提としています。 `PTTimedMetadata` インスタンスを一度に作成します。 複数のインスタンスが存在する場合、アプリケーションはそれらを辞書に適切に保存する必要があります。 1 つの方法は、特定の時間に配列を作成し、すべてのインスタンスをその配列に格納することです。
 
-   次の例は、各`timedMetadata`の開始時間にキーを設定した`NSMutableDictionary (timedMetadataCollection)`に`PTTimedMetadata`オブジェクトを保存する方法を示しています。
+   次の例は、 `PTTimedMetadata` 内のオブジェクト `NSMutableDictionary (timedMetadataCollection)` 各 `timedMetadata`.
 
    ```
    NSMutableDictionary *timedMetadataCollection; 
@@ -52,9 +50,9 @@ ht-degree: 0%
    }
    ```
 
-## Nielsen ID3タグを解析中{#example_3B51E9D4AF2449FAA8E804206F873ECF}
+## Nielsen ID3 タグの解析 {#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-ID3タグを解析用に抽出するには、`onMediaPlayerSubscribedTagIdentified`メソッドで次の構文を使用します。
+解析用に ID3 タグを抽出するには、次のコードを `onMediaPlayerSubscribedTagIdentified` メソッド：
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 
@@ -67,7 +65,7 @@ Unknown macro: { PTMetadata *metadata = (PTMetadata *)timedMetadata; NSString * 
 }
 ```
 
-ID3タグの解析後、次の構文を使用して、ニールセン固有のメタデータを抽出します。
+ID3 タグを解析した後、次のコードを使用して Nielsen 固有のメタデータを抽出します。
 
 ```
     (NSString *)parseNielsenUrlFromID3Tag:(NSString *)str 

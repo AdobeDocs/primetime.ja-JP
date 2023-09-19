@@ -1,42 +1,39 @@
 ---
 description: マニフェスト内のタグに関する通知を受け取るには、適切な通知リスナーを実装します。
-title: 時間指定メタデータ追加通知のリスナー
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: 時間指定メタデータ通知のリスナーを追加する
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
-
-# 時間指定メタデ追加ータ通知のリスナー{#add-listeners-for-timed-metadata-notifications}
+# 時間指定メタデータ通知のリスナーを追加する {#add-listeners-for-timed-metadata-notifications}
 
 マニフェスト内のタグに関する通知を受け取るには、適切な通知リスナーを実装します。
 
-関連するアクティビティをアプリケーションに通知する次のイベントをリッスンすると、時間指定メタデータを監視できます。
+時間指定メタデータを監視するには、次のイベントをリッスンします。このイベントは、関連するアクティビティをアプリケーションに通知します。
 
-* `PTTimedMetadataChangedNotification`:TVSDKは、コンテンツの解析中に一意のサブスクライブ済みタグを識別するたびに、新しい `PTTimedMetadata` オブジェクトを準備し、この通知をディスパッチします。
+* `PTTimedMetadataChangedNotification`：コンテンツの解析中に一意のサブスクライブ済みタグが識別されるたびに、 TVSDK は新しい `PTTimedMetadata` オブジェクトを選択し、この通知をディスパッチします。
 
-   このオブジェクトには、サブスクライブしたタグの名前、このタグが表示される再生中のローカル時間、その他のデータが含まれます。
+  オブジェクトには、購読したタグの名前、このタグが表示される再生中のローカル時間、その他のデータが含まれます。
 
-* `PTMediaPlayerTimeChangeNotification` :マニフェスト/プレイリストが定期的に更新されるライブ/リニアストリームの場合、更新されたプレイリスト/マニフェストにカスタムタグが追加される場合があるので、追加の `TimedMetadata` オブジェクトが `MediaPlayerItem.timedMetadata` プロパティに追加される可能性があります。
+* `PTMediaPlayerTimeChangeNotification` ：マニフェスト/プレイリストが定期的に更新されるライブ/リニアストリームの場合、更新されたプレイリスト/マニフェストに追加のカスタムタグが表示される可能性があります。そのため、追加の `TimedMetadata` オブジェクトが `MediaPlayerItem.timedMetadata` プロパティ。
 
-   このイベントは、このような状況が発生した場合にアプリケーションに通知します。
+  このイベントは、このような状況が発生した場合にアプリケーションに通知します。
 
-   次のいずれかの方法で、時間指定メタデータを取得します。
+  次のいずれかの方法で、時間指定メタデータを取得します。
 
-   * アプリケーション自体をリスナーとして`PTTimedMetadataChangedNotification`通知に追加するように設定し、`PTTimedMetadataKey`を使用してオブジェクトを取得します。
+   * 自分自身をリスナーとしてに追加するアプリケーションを `PTTimedMetadataChangedNotification` 通知を送信し、次を使用してオブジェクトを取得します。 `PTTimedMetadataKey`.
 
-      ```
-      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTimedMetadataChanged:)  
-        name:PTTimedMetadataChangedNotification object:self.player.currentItem]; 
-      
-      - (void) onTimedMetadataChanged:(NSNotification *) notification { 
-          NSDictionary *timedMetadataUserInfo = [[NSDictionary alloc]initWithDictionary: notification.userInfo]; 
-          PTTimedMetadata *newTimedMetadata = [timedMetadataUserInfo objectForKey: PTTimedMetadataKey]; 
-      }
-      ```
+     ```
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTimedMetadataChanged:)  
+       name:PTTimedMetadataChangedNotification object:self.player.currentItem]; 
+     
+     - (void) onTimedMetadataChanged:(NSNotification *) notification { 
+         NSDictionary *timedMetadataUserInfo = [[NSDictionary alloc]initWithDictionary: notification.userInfo]; 
+         PTTimedMetadata *newTimedMetadata = [timedMetadataUserInfo objectForKey: PTTimedMetadataKey]; 
+     }
+     ```
 
-   * `PTMediaPlayerItem`の`timedMetadataCollection`プロパティにアクセスします。これは、これまでに通知されたすべての`PTTimedMetadata`オブジェクトで構成されます。
-
+   * 次にアクセス： `timedMetadataCollection` のプロパティ `PTMediaPlayerItem`( すべての `PTTimedMetadata` これまでに通知されたオブジェクト。

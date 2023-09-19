@@ -1,28 +1,26 @@
 ---
-description: TVSDKは、HTTPS経由の安全な配信を導入しています。
-title: HTTPS経由の安全な配信
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK は、HTTPS を介したセキュアな配信を導入します。
+title: HTTPS 経由でのセキュア配信
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
+# HTTPS 経由でのセキュア配信 {#secure-delivery-https}
 
-# HTTPSを介したセキュア配信{#secure-delivery-https}
+Adobe Primetime TVSDK は、TVSDK からのすべての呼び出しに対して HTTPS 配信をサポートします。この配信には、以下が含まれます。
 
-Adobe PrimetimeTVSDKは、TVSDKから派生するすべての呼び出し(
+* Auditude広告サーバーコール
+* CRS リクエスト
+* DRM ライセンス呼び出し
+* ビデオ分析の Ping
+* 請求 ping
 
-* Auditude広告サーバーの呼び出し
-* CRSリクエスト
-* DRMライセンスの呼び出し
-* ビデオ分析のPing
-* 請求PING
+この機能を使用するには、上記のリクエストを処理するように設定されたサーバーが HTTPS をサポートしていることを確認します。
 
-この機能を使用するには、上記の要求を処理するように設定されたサーバーでHTTPSがサポートされていることを確認してください。
-
-この新しい動作は、デフォルトでは有効になっていません。 `MediaPlayer.replaceCurrentResource()`を呼び出す前に、次を使用してセキュリティで保護された配信を有効にします
+この新しい動作は、デフォルトでは有効になっていません。 次を使用して、への呼び出しの前にセキュア配信を有効にします。 `MediaPlayer.replaceCurrentResource()`
 
 ```java
 MediaPlayerItemConfig config = new MediaPlayerItemConfig(context);

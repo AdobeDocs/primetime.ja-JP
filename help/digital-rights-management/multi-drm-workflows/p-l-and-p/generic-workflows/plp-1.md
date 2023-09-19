@@ -1,90 +1,88 @@
 ---
-description: AdobeのOffline Packagerを使用して、Primetime Cloud DRM（ExpressPlayを利用）でサポートされるDRMソリューションのコンテンツを準備できます。
+description: Adobeのオフラインパッケージャーを使用して、ExpressPlay を利用した Primetime Cloud DRM でサポートされる DRM ソリューション用のコンテンツを準備できます。
 title: Primetime Packager/Cloud DRM/TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
 
 ---
 
-
 # Primetime Packager/Cloud DRM/TVSDK {#primetime-packager-cloud-drm-tvsdk}
 
-AdobeのOffline Packagerを使用して、Primetime Cloud DRM（ExpressPlayを利用）でサポートされるDRMソリューションのコンテンツを準備できます。
+Adobeのオフラインパッケージャーを使用して、ExpressPlay を利用した Primetime Cloud DRM でサポートされる DRM ソリューション用のコンテンツを準備できます。
 
-この一連の説明は、ExpressPlay管理者アカウントが既に設定済みであることを前提としています。[Primetime DRM Cloudクイック開始](../../../multi-drm-workflows/quick-start/quick-overview.md)。
-1. コンテンツのパッケージ化に使用するインフラストラクチャを選択します。 Primetime Packagerは、FairPlay、WidevineおよびPlayReady DRMで使用するコンテンツのパッケージ化を、コマンドラインと設定ベースの両方でサポートしています。 TVSDKでは、現在、以下の形式と暗号化がサポートされています（今後さらに多くの形式が導入されます）。
+この一連の手順は、ExpressPlay の管理者アカウントが既に設定されていることを前提としています。 [Primetime DRM クラウドのクイックスタート](../../../multi-drm-workflows/quick-start/quick-overview.md).
+1. コンテンツのパッケージ化に使用するインフラストラクチャを選択します。 Primetime Packager は、FairPlay、Widevine、PlayReady DRM で使用するコンテンツのコマンドラインと設定ベースのパッケージを両方ともサポートしています。 現在、TVSDK では次の形式と暗号化がサポートされています（パイプライン内でさらに多くの形式がサポートされています）。
 
-   * DASH(CENC)/PlayReady、Widevine - HTML5向け
-   * HLS/FairPlay、Access - iOS向け
+   * DASH(CENC)/PlayReady、Widevine -HTML5 用
+   * HLS / FairPlay、アクセス — iOS向け
 
-1. 鍵管理システム(KMS)を選択します。
+1. キー管理システム (KMS) を選択してください：
 
-   * ExpressPlayのKMSを使用([ExpressPlayキーストレージ](https://www.expressplay.com/developer/key-storage/));このシステムは、ExpressPlayのRESTful APIを使用してコンテンツキーを管理します。
+   * ExpressPlay の KMS ( [ExpressPlay キーストレージ](https://www.expressplay.com/developer/key-storage/))；このシステムは、ExpressPlay の RESTful API を介してコンテンツキーを管理します。
 
-      または…
+     または…
 
-   * 独自のKMSを設定します。 コンテンツキーのデータベースを作成し、コンテンツIDで選択できます。
+   * 独自の KMS を設定します。 コンテンツキーのデータベースを作成し、コンテンツ ID で選択可能にします。
 
-      どちらの場合も、KMSは提供されるコンテンツキーを管理し、各キーにはコンテンツIDが関連付けられています。
+     どちらの場合も、KMS はコンテンツキーの提供を管理し、各キーには Content-ID が関連付けられています。
 
-1. コンテンツをパッケージ化します。 Primetime Packagerを使用すると、特定のDRMソリューションまたは複数のDRMソリューション用にコンテンツをパッケージ化できます。
+1. コンテンツをパッケージ化します。 Primetime Packager を使用すると、特定の DRM ソリューションまたは複数の DRM ソリューション用にコンテンツをパッケージ化できます。
 
-   以下のサンプルコマンドは、様々なDRMソリューション用にコンテンツをパッケージ化する例を示しています。
+   次のサンプルコマンドは、様々な DRM ソリューション用にコンテンツをパッケージ化する例を示しています。
 
-   * [WidevineとPrimetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=19) （MPDファイルを生成）:
+   * [Widevine with Primetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=19) （MPD ファイルを生成）:
 
-      ```
-      java -jar OfflinePackager.jar \ 
-        -in_path [ 
-        <your_content.mp4>] \ 
-        -out_type dash \ 
-        -out_path [ 
-        <your_out_file_path>] \ 
-        -drm \ 
-        -drm_sys WIDEVINE \ 
-        -key_file_path "creds/widevine_key.bin" \ 
-        -widevine_key_id [ 
-        <some_keyID>] \ 
-        -widevine_content_id [ 
-        <some_content-ID] \ 
-        -widevine_header provider:intertrust#content_id:2a
-      ```
+     ```
+     java -jar OfflinePackager.jar \ 
+       -in_path [ 
+       <your_content.mp4>] \ 
+       -out_type dash \ 
+       -out_path [ 
+       <your_out_file_path>] \ 
+       -drm \ 
+       -drm_sys WIDEVINE \ 
+       -key_file_path "creds/widevine_key.bin" \ 
+       -widevine_key_id [ 
+       <some_keyID>] \ 
+       -widevine_content_id [ 
+       <some_content-ID] \ 
+       -widevine_header provider:intertrust#content_id:2a
+     ```
 
-   * [FairPlayとPrimetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=20) （M3U8ファイルを生成）:
+   * [FairPlay with Primetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=20) （M3U8 ファイルを生成）:
 
-      ```
-      java -jar OfflinePackager.jar  
-        -in_path [ 
-        <your_content.mp4>]  
-        -out_type hls  
-        -out_path [ 
-        <your_out_file_path>]  
-        -drm  
-        -drm_sys FAIRPLAY  
-        -key_file_path "creds/fairplay_key.bin"  
-        -key_url "user_provided_value"
-      ```
+     ```
+     java -jar OfflinePackager.jar  
+       -in_path [ 
+       <your_content.mp4>]  
+       -out_type hls  
+       -out_path [ 
+       <your_out_file_path>]  
+       -drm  
+       -drm_sys FAIRPLAY  
+       -key_file_path "creds/fairplay_key.bin"  
+       -key_url "user_provided_value"
+     ```
 
-      >[!NOTE]
-      >
-      >`key_url`値は、そのままM3U8ファイルにコピーされます。
+     >[!NOTE]
+     >
+     >The `key_url` の値は、M3U8 ファイル内と同様にコピーされます。
 
 1. 「ストアフロントサーバー」を作成します。
 
        ストアフロントサーバーは、次の操作を処理する必要があります。
    
-   1. ユーザーによるコンテンツの選択 この実装には、特定のコンテンツIDのコンテンツトークンをリクエストするクライアントのエンドポイントを含める必要があります。
-   1. ユーザーの権利付与
-   1. クライアントからのライセンストークン(ExpressPlay)リクエスト（[ExpressPlayライセンストークンリクエスト/レスポンスリファレンス](../../../multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md)）
+   1. コンテンツの顧客選択。 この実装では、クライアントが特定のコンテンツ ID のコンテンツトークンをリクエストするために、エンドポイントを含める必要があります。
+   1. 顧客の権利付与
+   1. クライアントからのライセンストークン (ExpressPlay) リクエスト ( [ExpressPlay ライセンストークンリクエスト/レスポンスのリファレンス](../../../multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md))
 
 1. クライアントを作成します。
 
-       クライアントにストアフロントサーバーへの呼び出しを含める必要があります。Adobeでは、ユーザーが何らかのコンテンツを選択した後、およびユーザーが認証された後に、クライアントがストアフロントを呼び出すことを推奨します。 次に、ExpressPlayから返されたトークンをプレイヤーに渡して、ライセンスリクエストに使用します。 プレーヤーのDRMコンポーネントの実装については、次を参照してください：
+       クライアントにはストアフロントサーバーへの呼び出しを含める必要があります。 Adobeでは、ユーザーがコンテンツを選択した後、およびユーザーが認証された後に、クライアントがストアフロントを呼び出すことをお勧めします。 次に、ExpressPlay から返されたトークンをプレーヤーに渡し、ライセンスリクエストに使用します。 プレーヤーの DRM コンポーネントの実装の概要は、次のとおりです。
    
-   * [HTML5用のBrowser TVSDK](https://help.adobe.com/en_US/primetime/psdk/browser_tvsdk/index.html#PSDKs-reference-DRM_interface_overview)
+   * [Browser TVSDK for Browser5HTML](https://help.adobe.com/en_US/primetime/psdk/browser_tvsdk/index.html#PSDKs-reference-DRM_interface_overview)
    * [iOS](../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
 
-1. ライセンストークンを取得したクライアントは、トークンからリクエストURLを抽出し、ExpressPlayへのライセンスリクエストを作成して、選択したコンテンツを再生できるようになりました。
+1. ライセンストークンを手元に置いた状態で、クライアントはトークンからリクエスト URL を派生させ、ExpressPlay へのライセンスリクエストを作成してから、ユーザーに対して選択したコンテンツを再生できます。

@@ -1,22 +1,20 @@
 ---
-description: 広告シグナリングモードは、ビデオストリームが広告情報を取得する必要がある場所を指定します。
+description: 広告シグナリングモードは、ビデオストリームが広告情報を取得する場所を指定します。
 title: 広告シグナリングモード
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
 
 ---
 
+# 広告シグナリングモード {#ad-signaling-mode-overview}
 
-# 広告シグナリングモード{#ad-signaling-mode-overview}
+広告シグナリングモードは、ビデオストリームが広告情報を取得する場所を指定します。
 
-広告シグナリングモードは、ビデオストリームが広告情報を取得する必要がある場所を指定します。
+有効な値は次のとおりです。 `DEFAULT`, `SERVER_MAP`、および `MANIFEST_CUES`.
 
-有効な値は`DEFAULT`、`SERVER_MAP`、`MANIFEST_CUES`です。
-
-次の表に、様々なタイプのHLSストリームに対する`AdSignalingMode`値の効果を示します。
+次の表に、 `AdSignalingMode` 様々なタイプの HLS ストリームの値：
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
@@ -29,38 +27,37 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> ビデオオンデマンド(VOD) </td> 
+   <td colname="1"> ビデオオンデマンド (VOD) </td> 
    <td colname="2"> 
     <ul id="ul_E79DA79107364D0D8B46A1859CA75B5C"> 
-     <li id="li_B259ED87743F463095071F58DC840E39"> サーバーマップを使用して配置を検出する </li> 
-     <li id="li_8957E4151466467BA6C954E5010E34EA"> 広告が挿入される </li> 
+     <li id="li_B259ED87743F463095071F58DC840E39"> サーバーマップを使用して配置を検出します </li> 
+     <li id="li_8957E4151466467BA6C954E5010E34EA"> 広告が挿入されます </li> 
     </ul> </td> 
    <td colname="3"> 
     <ul id="ul_D462C76717D94DE09915BDF6E9B3FB68"> 
-     <li id="li_FB46108F4AD9457D99D2618ABEF7DBD1"> インストリームキューを使用して配置を検出する </li> 
-     <li id="li_C3F7FBB98F524CEF97D17318C292E9EA"> プリロール広告がメインストリームに挿入される </li> 
-     <li id="li_A56E1545F84840DFA6D065DA60E98C31"> ミッドロール広告でメインストリームを置換 </li> 
+     <li id="li_FB46108F4AD9457D99D2618ABEF7DBD1"> 配置を検出するために、インストリームキューを使用します </li> 
+     <li id="li_C3F7FBB98F524CEF97D17318C292E9EA"> プリロール広告がメインストリームに挿入されます </li> 
+     <li id="li_A56E1545F84840DFA6D065DA60E98C31"> ミッドロール広告がメインストリームを置き換える </li> 
     </ul> </td> 
    <td colname="4"> 
     <ul id="ul_F10192B1B6F745CBB0D4C1A6D52A57B4"> 
-     <li id="li_2ADACF71FA5F4A08A00A3399F5593420"> サーバーマップを使用して配置を検出する </li> 
-     <li id="li_1201085B9C554A4BBD471E7EB2E363AC"> 広告が挿入される </li> 
+     <li id="li_2ADACF71FA5F4A08A00A3399F5593420"> サーバーマップを使用して配置を検出します </li> 
+     <li id="li_1201085B9C554A4BBD471E7EB2E363AC"> 広告が挿入されます </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> ライブ/リニア </td> 
    <td colname="2"> 
     <ul id="ul_82AAC9EE056F49E999F809536A96C2F8"> 
-     <li id="li_73BAD2BAA95F4592808B77F8DA436237"> マニフェストキューを使用して配置を検出する </li> 
-     <li id="li_A97B6F61078D4149A984B2412021E103"> 広告でメインストリームを置換 </li> 
+     <li id="li_73BAD2BAA95F4592808B77F8DA436237"> マニフェストキューを使用して配置を検出します </li> 
+     <li id="li_A97B6F61078D4149A984B2412021E103"> 広告によるメインストリームの置換 </li> 
     </ul> </td> 
    <td colname="3"> 
     <ul id="ul_CAED2D4F46334D76AE025482881BF843"> 
-     <li id="li_A8023845A037482DBFDEF7EF247FECFD"> インストリームキューを使用して配置を検出する </li> 
-     <li id="li_62A3CDAD249344EB89043B2AE0F4D7FF"> 広告でメインストリームを置換 </li> 
+     <li id="li_A8023845A037482DBFDEF7EF247FECFD"> 配置を検出するために、インストリームキューを使用します </li> 
+     <li id="li_62A3CDAD249344EB89043B2AE0F4D7FF"> 広告によるメインストリームの置換 </li> 
     </ul> </td> 
-   <td colname="4"> 非対応 </td> 
+   <td colname="4"> サポートなし </td> 
   </tr> 
  </tbody> 
 </table>
-

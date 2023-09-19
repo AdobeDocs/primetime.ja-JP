@@ -1,26 +1,24 @@
 ---
-description: localTimeでbeginからendまでのTimeRangesは、タイムラインから削除できます。
-title: 範囲の削除
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: localTime で begin から end までの TimeRanges をタイムラインから削除できます。
+title: 範囲を削除
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
 
 ---
 
-
 # 範囲を削除{#delete-ranges}
 
-localTimeでbeginからendまでのTimeRangesは、タイムラインから削除できます。
+localTime で begin から end までの TimeRanges をタイムラインから削除できます。
 
 >[!TIP]
 >
->コンテンツから特定の範囲のみを削除するには、`CustomRangeMetadata`インスタンスを作成し、定義したカスタム範囲を持つ`DELETE`操作としてタイプを指定します。
+>コンテンツから特定の範囲のみを削除するには、 `CustomRangeMetadata` インスタンスを作成し、タイプを as として指定します。 `DELETE` 演算を指定します。
 
-広告マップは、広告サーバーの定義に従って使用する必要があります。
+広告マップは、広告サーバーで定義されたとおりに使用する必要があります。
 
-1. Adobe PrimetimeAd Decisioning広告の範囲を削除するには：
+1. Adobe Primetime Ad Decisioning 広告を含む範囲を削除するには：
 
    ```
    {   
@@ -76,4 +74,3 @@ localTimeでbeginからendまでのTimeRangesは、タイムラインから削�
        "id": "vod_003"
    },
    ```
-

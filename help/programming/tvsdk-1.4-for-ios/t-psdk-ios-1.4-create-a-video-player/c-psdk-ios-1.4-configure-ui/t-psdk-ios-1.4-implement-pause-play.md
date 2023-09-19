@@ -1,20 +1,18 @@
 ---
-description: TVSDKメソッドを呼び出してメディアを一時停止および再生するボタンを設定できます。
+description: TVSDK メソッドを呼び出してメディアを一時停止および再生するボタンを設定できます。
 title: 再生/一時停止ボタンの実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
+# 再生/一時停止ボタンの実装{#implement-a-play-pause-button}
 
-# 再生/一時停止ボタン{#implement-a-play-pause-button}の実装
+TVSDK メソッドを呼び出してメディアを一時停止および再生するボタンを設定できます。
 
-TVSDKメソッドを呼び出してメディアを一時停止および再生するボタンを設定できます。
-
-以下のサンプルコードを使用して、再生ボタンまたは一時停止ボタンを実装します。
+以下のサンプルコードを使用して、再生または一時停止ボタンを実装します。
 
 <!--<a id="example_BC2632D673FE451190A30A23145090D0"></a>-->
 
@@ -38,4 +36,3 @@ _playPauseButton =
     } 
 } 
 ```
-

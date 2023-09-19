@@ -1,8 +1,7 @@
 ---
 title: 制限事項と既知の問題
 description: 製品の既知の問題。
-exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Adobeは、の製品を通じて、堅牢な機能とシームレスなユーザ
 
 * アカウント IQ は、個々のアカウントの共有スコアを見積もる際に、企業が大きな自信を持って共有に対して行動できる保守的なアプローチを取ります。 しかし、このアプローチは、多くのアカウントで集計した場合の共有の総量を過小評価する傾向があります。
 
-* この [全体的な共有スコア](/help/AccountIQ/dashboard.md#overall-sharing-score) 現在のところ～の要因に過ぎない [共有レベル](/help/AccountIQ/dashboard.md#sharing-level) および [共有アカウントからの使用](/help/AccountIQ/dashboard.md#usage-from-shared-accounts). 今後のバージョンでは、追加の指標が考慮される予定です。
+* The [全体的な共有スコア](/help/AccountIQ/dashboard.md#overall-sharing-score) 現在のところ～の要因に過ぎない [共有レベル](/help/AccountIQ/dashboard.md#sharing-level) および [共有アカウントからの使用状況](/help/AccountIQ/dashboard.md#usage-from-shared-accounts). 今後のバージョンでは、追加の指標が考慮される予定です。
 
 * ダッシュボードまたはレポートページでコホートを定義する場合、現在のところ、MVPDs およびチャネルのセレクターは検索メカニズムを備えていません。
 
@@ -25,13 +24,13 @@ Adobeは、の製品を通じて、堅牢な機能とシームレスなユーザ
 
 * 現在、アカウント統計をエクスポートするオプションは、1000 件のアカウントをエクスポートするオプションに制限されています。
 
-* 選択するオプション [セグメントタイプ](#segment-type) 操作を定義する場合は、次の値に制限されます。 **固定アカウント数**. この **アカウントの変数数** オプションは、今後のバージョンで使用できるようになります。
+* 選択するオプション [セグメントタイプ](#segment-type) 操作を定義する場合は、次の値に制限されます。 **固定アカウント数**. The **アカウントの変数数** オプションは、今後のバージョンで使用できるようになります。
 
 * 左側のナビゲーションの「Benchmarking」、「Detection Models」、「Segments」、「Snapshots」、「Rules」の各セクションは現在無効になっており、今後のバージョンで利用できる予定です。
 
 * 作成時 [運用](/help/AccountIQ/operation-affecting-user-segment.md)、次の 2 種類のみを識別できます [アクション](/help/AccountIQ/operation-affecting-user-segment.md) 現時点では、同時実行監視ルールと外部アクションが使用されます。
 
-* 現在、操作は、 [予定](/help/AccountIQ/operation-affecting-user-segment.md#action). 今後のバージョンでは、一時停止、再開、完全管理が可能になります。
+* 現在、操作は、作成および [予定](/help/AccountIQ/operation-affecting-user-segment.md#action). 今後のバージョンでは、一時停止、再開、完全管理が可能になります。
 
 * 使用されるデータのセットは限られているので、分離モードは共有量を実際に反映しているわけではありません。 したがって、分離モードの MVPD は他の MVPD と比較できません。 <!--do we need to separate out this limitation, which is from a different persona i.e. only for Programmer persona?-->
 

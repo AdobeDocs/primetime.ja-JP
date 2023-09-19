@@ -1,20 +1,18 @@
 ---
-description: ソースリストのforceflashフラグは、URLに対してFlashのフォールバックを強制します。 このURLの場合、AdobeFlash Playerを使用してコンテンツを再生できます。
+description: ソースリストの forceflash フラグは、URL のFlashフォールバックを強制します。 この URL では、AdobeFlash Playerを使用してコンテンツを再生できます。
 title: メディアソースリストを使用したFlashフォールバックの強制
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# メディアソースリストを使用したFlashフォールバックの強制{#forcing-the-flash-fallback-using-the-media-source-list}
 
-# メディアソースリスト{#forcing-the-flash-fallback-using-the-media-source-list}を使用したFlashフォールバックの強制
+ソースリストの forceflash フラグは、URL のFlashフォールバックを強制します。 この URL では、AdobeFlash Playerを使用してコンテンツを再生できます。
 
-ソースリストのforceflashフラグは、URLに対してFlashのフォールバックを強制します。 このURLの場合、AdobeFlash Playerを使用してコンテンツを再生できます。
-
-メディアソースリスト（例えば`sources.js`ファイル内）では、`forceflash`を`true`に設定できます。 例：
+メディアソースリスト内 ( 例： `sources.js` ファイル )、 `forceflash` から `true`. 例：
 
 ```js
 { 
@@ -31,4 +29,3 @@ ht-degree: 2%
         "forceflash" : true
 },
 ```
-

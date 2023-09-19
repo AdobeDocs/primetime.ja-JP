@@ -2,22 +2,19 @@
 title: ポリシー更新リストの環境設定
 description: ポリシー更新リストの環境設定
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
 
 ---
 
+# ポリシー更新リストの環境設定 {#policy-update-list-preferences}
 
-# ポリシー更新リストの環境設定{#policy-update-list-preferences}
-
-このタブには、ポリシー更新リストの作成に必要な設定が含まれています。 次の表に、環境設定を示します。
+このタブには、ポリシー更新リストを作成するために必要な設定が含まれています。 次の表に、プリファレンスを示します。
 
 | 環境設定 | 説明 |
 |---|---|
-| ライセンスサーバー資格情報 | Adobeが発行するLicense Server秘密鍵証明書。 この資格情報は、ポリシーの更新リストへの署名に使用されます。 |
-| ファイル名 | 証明書と秘密鍵を含むPKCS#12 ( [!DNL .pfx])ファイル。 ファイルは[!DNL Resource]ディレクトリに置く必要があります。 |
-| File Password | [!DNL .pfx]ファイルのパスワード |
-
+| ライセンスサーバーの資格情報 | ライセンスサーバーの資格情報 (Adobeが発行 )。 この資格情報は、ポリシー更新リストに署名するために使用されます。 |
+| ファイル名 | PKCS#12 ( [!DNL .pfx]) ファイルに証明書と秘密鍵が含まれています。 ファイルは、 [!DNL Resource] ディレクトリ。 |
+| ファイルのパスワード | 次のパスワード： [!DNL .pfx] ファイル |

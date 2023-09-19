@@ -1,22 +1,20 @@
 ---
 keywords: setSecure;VideoEngineView
-title: 画面キャプチャを有効にする
-description: 画面キャプチャを有効にする
+title: スクリーンキャプチャを有効にする
+description: スクリーンキャプチャを有効にする
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%
 
 ---
 
+# スクリーンキャプチャを有効にする{#enable-screen-capture}
 
-# 画面キャプチャを有効にする{#enable-screen-capture}
+TVSDK は、デフォルトでは画面キャプチャを許可しません。 プレーヤーがを呼び出す `setSecure(true)` の `com.adobe.ave.VideoEngineView` オブジェクトを構築時に作成します。 このオブジェクトにアクセスするには、 `VideoEngineView` オブジェクトを作成し、それを `VideoEngine` オブジェクト。
 
-TVSDKは、デフォルトで画面のキャプチャを許可しません。 プレイヤーは、構築時に`com.adobe.ave.VideoEngineView`オブジェクトに対して`setSecure(true)`を呼び出します。 `VideoEngineView`オブジェクトを作成して`VideoEngine`オブジェクトに渡す必要があるので、このオブジェクトにアクセスできます。
+アプリでスクリーンキャプチャを有効にするには：
 
-アプリで画面キャプチャを有効にするには：
-
-1. `com.adobe.ave.VideoEngineView`オブジェクトを作成します。
-1. `VideoEngineView`オブジェクトで`setSecure(false)`を呼び出します。
+1. を作成します。 `com.adobe.ave.VideoEngineView` オブジェクト。
+1. 通話 `setSecure(false)` を `VideoEngineView` オブジェクト。

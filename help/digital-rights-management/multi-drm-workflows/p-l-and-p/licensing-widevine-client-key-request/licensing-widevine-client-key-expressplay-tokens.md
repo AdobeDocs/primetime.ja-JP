@@ -1,20 +1,18 @@
 ---
-description: 適切なExpressplayトークンサーバーにトークンリクエストを送信することで、暗号化されたコンテンツに対するExpressplayトークンを生成できます。
-title: Expressplayトークン
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: トークンリクエストを適切な Expressplay トークンサーバーに送信することで、暗号化されたコンテンツの Expressplay トークンを生成できます。
+title: Expressplay トークン
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
+# Expressplay トークン {#expressplay-tokens}
 
-# Expressplayトークン{#expressplay-tokens}
+トークンリクエストを適切な Expressplay トークンサーバーに送信することで、暗号化されたコンテンツの Expressplay トークンを生成できます。
 
-適切なExpressplayトークンサーバーにトークンリクエストを送信することで、暗号化されたコンテンツに対するExpressplayトークンを生成できます。
-
-例えば、次のURLがあります。
+例として次の URL が挙げられます。
 
 ```
 https://wv-gen.service.expressplay.com/hms/wv/
@@ -25,7 +23,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-`kid`パラメーターに指定するコンテンツ暗号化キーストレージIDまたはCEKSIDと、`contentKey`パラメーターに指定するコンテンツ暗号化キーまたはCEKは、パッケージ化に使用するコンテンツ暗号化キーストレージIDとコンテンツ暗号化キーと一致する必要があります。 次に、トークンサーバーの応答例を示します。
+に指定されたコンテンツ暗号化キーストレージ ID または CEKSID `kid` パラメーターと、 `contentKey` パラメーターは、パッケージ化に使用するコンテンツ暗号化キーストレージ ID とコンテンツ暗号化キーに一致する必要があります。 次に、トークンサーバーの応答の例を示します。
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -34,7 +32,7 @@ https://wv.service.expressplay.com/hms/wv/rights/
  SJ4o-d8teAkUZUtW3Od5V-SHsCLnAlbFW84K71h2xNUiMAvRcUFBG3bjxMQ
 ```
 
-その後、
+次のいずれかを実行できます。
 
-* 返されたURLとクエリをライセンスサーバーのURLとして使用するか、
-* URLからクエリを取り出し、HTTPPOSTヘッダーとして別々にExpressPlayTokenを渡す
+* 返された URL とクエリをライセンスサーバーの URL として使用するか、
+* URL からクエリを取り出し、ExpressPlayToken を HTTPPOSTヘッダーとして別々に渡す

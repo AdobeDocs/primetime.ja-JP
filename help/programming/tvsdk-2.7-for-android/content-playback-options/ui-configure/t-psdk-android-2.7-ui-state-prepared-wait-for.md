@@ -1,23 +1,21 @@
 ---
-description: TVSDKプレイヤーのほとんどのメソッドを使用する前に、プレイヤーのステータスが有効である必要があります。
+description: ほとんどの TVSDK プレーヤーメソッドを使用する前に、プレーヤーのステータスが有効である必要があります。
 title: 有効なステータスを待つ
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
+# 有効な状態になるのを待つ {#wait-for-a-valid-state}
 
-# 有効な状態を待つ{#wait-for-a-valid-state}
+TVSDK を使用すると、ライブおよびビデオオンデマンド (VOD) の基本的な再生エクスペリエンスを制御できます。 TVSDK は、プレーヤーインスタンス上のメソッドとプロパティを提供します。このメソッドを使用して、プレーヤーユーザーインターフェイスを設定できます。
 
-TVSDKを使用して、ライブおよびビデオオンデマンド(VOD)の基本的な再生エクスペリエンスを制御できます。 TVSDKは、プレイヤーインスタンスにメソッドとプロパティを提供します。このメソッドとプロパティを使用して、プレイヤーユーザーインターフェイスを設定できます。
+ほとんどの TVSDK プレーヤーメソッドを使用する前に、プレーヤーのステータスが有効である必要があります。
 
-TVSDKプレイヤーのほとんどのメソッドを使用する前に、プレイヤーのステータスが有効である必要があります。
+プレーヤーが正しいステータスになるのを待つことで、メディアリソースが正常に読み込まれたことを確認できます。 プレーヤーが少なくとも必要なステータスにない場合は、多くのプレーヤーメソッドがスローします `MediaPlayerException`.
 
-プレイヤーが正しいステータスになるのを待つと、メディアリソースが正常に読み込まれたことが確認されます。 プレイヤーが少なくとも必要なステータスになっていない場合、多くのプレーヤーメソッドは`MediaPlayerException`をスローします。
+通常、必要なステータスは PREPARED です。 この場合、 `StatusChangeEventListener.onStatusChanged()` を実行します。
 
-必要なステータスは、通常PREPAREDです。 この場合、`StatusChangeEventListener.onStatusChanged()`のコールバックルーチンが実行されます。
-
-1. ステータスが`PREPARED`であることを確認するには、`MediaPlayer.MediaPlayerStatus`をチェックします。
+1. ステータスが「 `PREPARED`, check `MediaPlayer.MediaPlayerStatus`.

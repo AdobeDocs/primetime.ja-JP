@@ -1,34 +1,32 @@
 ---
-description: 代替（遅延バインディング）オーディオを使用すると、ビデオトラックで使用可能なオーディオトラックを切り替えることができます。 これにより、ビデオをいつ再生するかをユーザーが選択できます。
+description: 代替のオーディオ（遅延バインディング）を使用すると、ビデオトラックに使用可能なオーディオトラック間で切り替えることができます。 これにより、ユーザーはビデオの再生時に言語トラックを選択できます。
 title: 代替オーディオ
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
+# 代替オーディオ {#alternate-audio}
 
-# 代替オーディオ{#alternate-audio}
-
-代替（遅延バインディング）オーディオを使用すると、ビデオトラックで使用可能なオーディオトラックを切り替えることができます。 これにより、ビデオをいつ再生するかをユーザーが選択できます。
+代替のオーディオ（遅延バインディング）を使用すると、ビデオトラックに使用可能なオーディオトラック間で切り替えることができます。 これにより、ユーザーはビデオの再生時に言語トラックを選択できます。
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-TVSDKは、現在のビデオの`MediaPlayerItem`インスタンスを作成すると、使用可能な各オーディオトラックに対して`AudioTrack`アイテムを作成します。 項目には`name`プロパティが含まれています。通常、このプロパティには、そのトラックの言語に関するユーザーが認識できる説明が含まれています。 項目には、そのトラックをデフォルトで使用するかどうかに関する情報も含まれます。
+TVSDK が `MediaPlayerItem` 現在のビデオのインスタンスに対して、 `AudioTrack` 各オーディオトラックの項目。 項目には、 `name` プロパティ。通常、ユーザーが認識できるトラックの言語の説明を含む文字列です。 項目には、デフォルトでそのトラックを使用するかどうかに関する情報も含まれています。
 
-ビデオの再生時に、使用可能なオーディオトラックのリストを尋ねることができます。必要に応じて、ユーザがオーディオトラックを選択し、選択したトラックで再生するビデオを設定できます。
+ビデオを再生する時に、使用可能なオーディオトラックのリストを求めることができます。必要に応じて、ユーザーに選択してもらい、選択したトラックで再生するビデオを設定できます。
 
-まれにですが、`MediaPlayerItem`の作成後に追加のオーディオトラックが使用可能になった場合、TVSDKは`MediaPlayerItem.AUDIO_UPDATED`イベントを実行します。
+まれですが、 `MediaPlayerItem`を指定した場合、 TVSDK は `MediaPlayerItem.AUDIO_UPDATED` イベント。
 
-## API {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}を追加
+## 追加された API {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
-代替オーディオをサポートするために、次のAPIが追加されました。
+代替オーディオをサポートするために、次の API が追加されました。
 
 `hasAlternateAudio`
 
-指定したメディアにデフォルト以外の代替オーディオトラックがある場合、このboolean関数は`true`を返します。 代替オーディオトラックがない場合は、`false`を返します。
+指定したメディアに、デフォルトのトラック以外の代替オーディオトラックがある場合、このブール関数は `true`. 代替オーディオトラックがない場合は、 `false`.
 
 ```
 bool MediaPlayerItemImpl::hasAlternateAudio() const { 
@@ -38,7 +36,7 @@ bool MediaPlayerItemImpl::hasAlternateAudio() const {
 
 ** `getAudioTracks`**
 
-この関数は、指定されたメディア内の現在使用可能なすべてのオーディオトラックのリストを返します。
+この関数は、指定したメディア内の、現在使用可能なすべてのオーディオトラックのリストを返します。
 
 ```
 virtual PSDKErrorCode getAudioTracks(PSDKImmutableArray<AudioTrack>*& out) const { 
@@ -53,7 +51,7 @@ if (_audioTracks) {
 
 `getSelectedAudioTrack`
 
-現在選択されている代替オーディオトラックおよび言語などのプロパティを返す関数。 トラックの自動選択も抽出できます。
+現在選択されている代替オーディオトラックおよび言語などのプロパティを返すこの関数。 トラックの自動選択も抽出できます。
 
 ```
 PSDKErrorCode MediaPlayerItemImpl::getSelectedAudioTrack(AudioTrack &out) const { 
@@ -87,4 +85,3 @@ PSDKErrorCode MediaPlayerItemImpl::selectAudioTrack(const AudioTrack &audioTrack
     return result; 
 }
 ```
-

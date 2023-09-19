@@ -1,21 +1,19 @@
 ---
-title: 使用モデルのデモを有効にする
-description: 使用モデルのデモを有効にする
+title: 使用状況モデルのデモを有効にする
+description: 使用状況モデルのデモを有効にする
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
+# 使用状況モデルのデモを有効にする{#enable-the-usage-model-demo}
 
-# 使用モデルのデモ{#enable-the-usage-model-demo}を有効にします。
+1. カスタムプロパティを指定する `RI_UsageModelDemo=true` パッケージ時に。
 
-1. パッケージ化時にカスタムプロパティ`RI_UsageModelDemo=true`を指定します。
-
-   Media Packagerコマンドラインツールを使用してコンテンツをパッケージ化する場合は、次のように入力します。
+   Media Packager のコマンドラインツールを使用してコンテンツをパッケージ化する場合は、次のように入力します。
 
    ```
    java -jar AdobeMediaPackager.jar [<i>source_file</i>] [<i>dest_file</i>] -k RI_UsageModelDemo=true
@@ -23,5 +21,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->パッケージ化の際にオプションのデモモードをアクティブにしない場合、ライセンスサーバーは、処理する最初の有効なDRMポリシーに基づいてライセンスを発行します。
-
+>パッケージ化時にオプションのデモモードを有効化しない場合、ライセンスサーバーは処理する最初の有効な DRM ポリシーに基づいてライセンスを発行します。

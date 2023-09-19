@@ -2,50 +2,47 @@
 title: ライセンスサーバーのデプロイ
 description: ライセンスサーバーのデプロイ
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
 
 ---
 
+# ライセンスサーバーのデプロイ{#deploy-the-license-server}
 
-# ライセンスサーバー{#deploy-the-license-server}を展開します
+1. 参照実装の war ファイルを `webapps` Tomcat サーバー上のディレクトリ。
 
-1. 参照実装のwarファイルを、Tomcatサーバーの`webapps`ディレクトリにコピーします。
+   参照実装ライセンスサーバをそのまま使用するには、ライセンスサーバの WAR ファイル ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\\flashaccess.war`) を `webapps` Tomcat サーバー上のディレクトリ。
 
-   参照実装ライセンスサーバーをそのまま使用するには、ライセンスサーバーのWARファイル(`[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\\flashaccess.war`)をTomcatサーバーの`webapps`ディレクトリにコピーします。
-
-   参照実装のライセンスサーバーをカスタマイズする場合は、`DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl-build\wars`から作成したサーバーwarファイルを`webapps`ディレクトリにコピーします。
+   参照実装ライセンスサーバーをカスタマイズする場合は、作成したサーバー war ファイルをコピーします。 `DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl-build\wars` から `webapps` ディレクトリ。
 
    >[!NOTE]
    >
-   >ライセンスサーバーのWARファイルを以前にデプロイした場合は、Tomcatサーバーの[!DNL webapps]ディレクトリ内の展開済みのWARディレクトリを削除する必要がある場合があります。
+   >ライセンスサーバの WAR ファイルを以前に展開した場合は、 [!DNL webapps] Tomcat サーバー上のディレクトリ：
    >
    >* [!DNL webapps/flashaccess]
    >* [!DNL webapps/edcws]
 
-
    >[!NOTE]
    >
-   >FlashメディアRights Management(FMRMS)v1.5コンテンツとの下位互換性が必要な場合を除き、[!DNL edsws.war]をデプロイしないでください。 （これは非常にまれな要件です。）
+   >デプロイしない [!DNL edsws.war] ただし、FlashメディアRights Management(FMRMS)v1.5 コンテンツとの下位互換性が必要な場合を除きます。 （これは非常にまれな要件です。）
    >
-   >TomcatがWARファイルを開くのを防ぐには、`conf`ディレクトリの`server.xml`を編集し、`unpackWARs`を`false`に設定します。
+   >Tomcat による WAR ファイルの展開を防ぐ場合は、 `server.xml` （内） `conf` ディレクトリとセット `unpackWARs` から `false`.
 
-1. `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\resources\`ディレクトリの内容を[!DNL tomcat]ディレクトリにコピーします。
+1. のコンテンツ全体をコピーする `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\resources\` のディレクトリに [!DNL tomcat] ディレクトリ。
 
-   [!DNL resources]ディレクトリには、次のものが含まれます。
+   The [!DNL resources] 次のディレクトリが含まれます。
 
    * [!DNL flashaccesstools.properties]  — ライセンスサーバーのプロパティファイル。
-   * [!DNL log4j.xml]  — ライセンスサーバーログの設定
-   * [!DNL *.pol] - DRMポリシーファイルのサンプル。
+   * [!DNL log4j.xml]  — ライセンスサーバのログ設定
+   * [!DNL *.pol] - DRM ポリシーファイルのサンプル。
 
-   また、Adobe証明書ファイルをこの場所にコピーすることもできます。
+   また、この場所にAdobe証明書ファイルをコピーすることもできます。
 
-1. [!DNL flashaccesstools.properties]のライセンスサーバー設定を変更して、サーバー設定を反映します。
+1. でライセンスサーバの設定を変更する [!DNL flashaccesstools.properties] を追加して、サーバー設定を反映させます。
 
-   少なくとも、次のプロパティの値を設定します。
+   少なくとも、次のプロパティに値を設定します。
 
    * `config.resourcesDirectory`
    * `HandlerConfiguration.ServerTransportCredential`
@@ -58,33 +55,33 @@ ht-degree: 0%
    * `V2KeyParameters.KeyOptions.AsymmetricKeyOptions.Certificate`
    * V2KeyParameters.LicenseServerTransportCertificate
 
-1. Tomcat `conf`ディレクトリ内の`catalina.properties`ファイルを編集します。[!DNL resources]ディレクトリの場所（または、プロパティファイルや他のリソースファイルを保存した別の場所）を`shared.loader`プロパティに追加します。
+1. を編集します。 `catalina.properties` Tomcat 内のファイル `conf` ディレクトリ。 [!DNL resources] ディレクトリ（またはプロパティファイルおよびその他のリソースファイルを保存した代替の場所）を `shared.loader` プロパティ。
 
-   例えば、`flashaccess-refimpl.properties`が[!DNL [Tomcat home]\resources\]にある場合、次のように指定します。
+   例えば、 `flashaccess-refimpl.properties` [!DNL にあります [Tomcat ホーム]\resources\]:
 
    ```
    shared.loader=..\resources
    ```
 
-   これは`flashaccess-refimpl.properties`をクラスパスに配置します。
-1. その他のリソースファイル（[!DNL log4j.xml]、ポリシーファイル、証明書）が[!DNL resources]ディレクトリ内にあるか、または[!DNL flashaccess-refimpl.properties]で指定されたクラスパスとその場所にあることを確認してください。
+   この場所 `flashaccess-refimpl.properties` クラスパスの
+1. 他のリソースファイル ( [!DNL log4j.xml]、ポリシーファイル、証明書 ) は、 [!DNL resources] ディレクトリ、またはクラスパス上に存在しない場合は、 [!DNL flashaccess-refimpl.properties].
 
-   `log4j`は、デバッグモードで最初に実行する必要があります。 [!DNL log4j.xml]で、`debug`をtrueに設定します。
+   最初にを実行するとよいでしょう。 `log4j` デバッグモードで。 In [!DNL log4j.xml]，設定 `debug` を true に設定します。
 
    ```
    <log4j:configuration xmlns:log4j="https://jakarta.apache.org/log4j/"<b>debug="true"</b>>
    ...
    ```
 
-1. Tomcat [!DNL bin]ディレクトリから、サーバーを開始します。
+1. Tomcat から [!DNL bin] ディレクトリに移動し、サーバーを起動します。
 
-   Linuxの場合：
+   Linux の場合：
 
    ```
    catalina.sh start
    ```
 
-   Windowsの場合：
+   Windows の場合：
 
    ```
    catalina.bat start

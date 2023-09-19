@@ -1,28 +1,23 @@
 ---
-description: TVSDK設定ファイル(AdobeTVSDKConfig.json)を使用して、VAST/VMAP応答で広告クリエイティブを選択するための優先順位を更新できます。 また、この設定ファイルを使用して、広告クリエイティブのソースURL変換ルールを定義することもできます。
+description: TVSDK 設定ファイル (AdobeTVSDKConfig.json) を使用して、VAST/VMAP 応答の広告クリエイティブ選択の優先度を更新できます。 また、この設定ファイルを使用して、広告クリエイティブのソース URL 変換ルールを定義することもできます。
 title: 広告クリエイティブ選択ルールの更新
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
 
 ---
 
+# 概要 {#updating-ad-creative-selection-rules}
 
-# 概要{#updating-ad-creative-selection-rules}
+TVSDK 設定ファイル (AdobeTVSDKConfig.json) を使用して、VAST/VMAP 応答の広告クリエイティブ選択の優先度を更新できます。 また、この設定ファイルを使用して、広告クリエイティブのソース URL 変換ルールを定義することもできます。
 
-TVSDK設定ファイル(AdobeTVSDKConfig.json)を使用して、VAST/VMAP応答で広告クリエイティブを選択するための優先順位を更新できます。 また、この設定ファイルを使用して、広告クリエイティブのソースURL変換ルールを定義することもできます。
-
-ビデオプレーヤーが広告サーバーにリクエストを行う場合、VAST/VMAPの応答には通常複数の広告クリエイティブ（`MediaFile`要素）が含まれ、それぞれが異なるコンテナコーデックのバージョンへのURLを提供します。 VAST/VMAP応答の広告クリエイティブは、それぞれ広告に対して異なるビットレートを提供する場合があります。 これらの広告クリエイティブに対して独自の優先順位と変換ルールを指定する場合は、[!DNL AdobeTVSDKConfig.json]設定ファイルで指定できます。
+ビデオプレーヤーが広告サーバーにリクエストをおこなうと、VAST/VMAP の応答には通常、複数の広告クリエイティブ ( `MediaFile` 要素 ) を含み、それぞれが異なるコンテナコーデックバージョンへの URL を提供します。 場合によっては、VAST/VMAP 応答の広告クリエイティブがそれぞれ、広告に対して異なるビットレートを提供します。 これらの広告クリエイティブに独自の優先度と変換ルールを指定する場合は、 [!DNL AdobeTVSDKConfig.json] 設定ファイル。
 
 >[!IMPORTANT]
 >
->* TVSDK設定ファイルの名前は変更しないでください。 名前は[!DNL AdobeTVSDKConfig.json]のままにする必要があります。
->* このファイルは、コンテンツ配信ネットワーク(CDN)でホストする必要があります。
-
+>* TVSDK 設定ファイルの名前は変更しないでください。 名前は残る必要があります [!DNL AdobeTVSDKConfig.json].
+>* このファイルは、コンテンツ配信ネットワーク (CDN) でホストする必要があります。
 >
 
-
-
-[!DNL AdobeTVSDKConfig.json]では、次の2種類のルールを指定できます。*優先度*&#x200B;ルールと&#x200B;*標準化*&#x200B;ルール。
+では、2 種類のルールを指定できます [!DNL AdobeTVSDKConfig.json]: *優先度* ルールと *Normalize* ルール。

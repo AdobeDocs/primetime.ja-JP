@@ -1,23 +1,21 @@
 ---
-title: 特殊な使用例
-description: 特殊な使用例
+title: 特別な使用例
+description: 特別な使用例
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
+# 特別な使用例{#special-use-cases}
 
-# 特殊な使用例{#special-use-cases}
-
-TVSDKは、標準の広告設定よりもカスタム範囲設定を優先します。 例えば、MARK範囲が定義されている場合、広告の挿入設定は無視されます。 REPLACE範囲が定義されている場合、TVSDKは自動的に`CustomRanges`シグナリングモードを使用します。
+TVSDK は、標準の広告設定よりもカスタム範囲設定を優先します。 例えば、MARK 範囲が定義されている場合、広告の挿入設定は無視されます。 REPLACE 範囲が定義されている場合、 TVSDK は `CustomRanges` シグナリングモード。
 
 1. `ReplaceRange` 置き換え時間なしで
 
-   置き換え期間がない場合、実際の置き換え期間はサーバーによって決定されます。 この`AdBreak`に配置される広告の数もサーバーによって決定されます。
+   交換期間が指定されていない場合は、実際の交換期間がサーバーによって決定されます。 この中に配置された広告の数 `AdBreak` はサーバーによっても決まります。
 
    ```
    {
@@ -61,6 +59,6 @@ TVSDKは、標準の広告設定よりもカスタム範囲設定を優先しま
    }
    ```
 
-1. 置換期間のあるMARK範囲とDELETE範囲
+1. 置き換え時間のある MARK およびDELETE範囲
 
-   余分な置換期間は無視されます。
+   追加の置き換え期間は無視されます。

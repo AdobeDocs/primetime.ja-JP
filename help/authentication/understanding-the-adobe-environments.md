@@ -1,7 +1,7 @@
 ---
 title: Adobe環境について
 description: Adobe環境について
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 >
 >このページのコンテンツは、情報提供の目的でのみ提供されます。 この API を使用するには、Adobeの現在のライセンスが必要です。 不正な使用は許可されていません。
 
-環境を説明する公式ドキュメントについては、Adobe環境に関するを参照してください [Pre-qual での環境とテストの設定](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md):
+環境を説明する公式ドキュメントについては、Adobe環境に関するを参照してください。 [Pre-qual での環境とテストの設定](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md):
 
 Adobe環境の概要を次の単語で説明します。
 

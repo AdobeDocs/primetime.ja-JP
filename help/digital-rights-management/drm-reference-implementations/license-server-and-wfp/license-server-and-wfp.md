@@ -1,53 +1,51 @@
 ---
-description: リファレンス実装サーバーは、Adobe PrimetimeDRM Java SDKのすべての機能を使用する完全な機能を備えたライセンスサーバーの作成に役立ちます。
+description: 参照実装サーバーは、Adobe Primetime DRM Java SDK のすべての機能を使用する、完全に機能するライセンスサーバーを作成するのに役立ちます。
 title: ライセンスサーバー
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 0%
 
 ---
 
+# ライセンスサーバー {#license-server}
 
-# ライセンスサーバー{#license-server}
+参照実装サーバーは、Adobe Primetime DRM Java SDK のすべての機能を使用する、完全に機能するライセンスサーバーを作成するのに役立ちます。
 
-リファレンス実装サーバーは、Adobe PrimetimeDRM Java SDKのすべての機能を使用する完全な機能を備えたライセンスサーバーの作成に役立ちます。
+この実装では、ユーザーはデータベース内のユーザーエントリに基づいて認証されます。 このサーバには、ライセンスを発行するためのデモビジネスロジックが含まれ、FlashメディアRights Managementサーバ 1.0 および 1.5 の互換性サポートを提供します。
 
-この実装では、ユーザーはデータベース内のユーザーエントリに基づいて認証されます。 サーバには、ライセンス発行のためのデモビジネスロジックが含まれ、FlashメディアRights Managementサーバ1.0および1.5の互換性サポートを提供します。
+## ライセンスサーバーの要件 {#license-server-requirements}
 
-## ライセンスサーバの要件{#license-server-requirements}
+ライセンスサーバの要件：
 
-ライセンスサーバーの要件：
+* Tomcat 6.0 以降のインストール
+* データベース、例： MySQL （DVD に収録されている）を [!DNL Third Party\MySQL])
+* Java 1.6 以降がインストールされていることを確認します。
+* サンプルのビルドスクリプトを実行するには、Ant 1.8 以降が存在することを確認します。
 
-* Tomcat 6.0以降のインストール
-* データベースをインストールします(例： MySQL （DVDで入手可能、[!DNL Third Party\MySQL]にあります）
-* Java 1.6以降がインストールされていることを確認します
-* サンプルのビルドスクリプトを実行するには、Ant 1.8以降を使用していることを確認します
+Tomcat と MySQL をインストールした後、必要な DRM 資格情報のセットについてAdobeに問い合わせてください。
 
-TomcatとMySQLをインストールした後、必要なDRM秘密鍵証明書のセットについてAdobeに問い合わせてください。
-
-## ライセンスサーバー{#build-the-license-server}の構築
+## ライセンスサーバーを構築します。 {#build-the-license-server}
 
 >[!NOTE]
 >
->ライセンスサーバーの構築は、ソースコードを変更する場合にのみ必要です。 評価のために、出荷済みのWARファイルを使用するだけで済みます。
+>ライセンスサーバーの構築は、ソースコードを変更する場合にのみ必要です。 評価のために、出荷された WAR ファイルを使用するだけで済みます。
 
-参照実装ライセンスサーバーには、すべてのライセンスサーバーソースコード(`([DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\src/`)と、Antビルドスクリプト(`[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/build-refimpl.xml`)が含まれており、このスクリプトを使用して、ビジネスニーズに合わせてライセンスサーバーをカスタマイズできます。
+参照実装ライセンスサーバには、すべてのライセンスサーバのソースコードが含まれています ( `([DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\src/`) と Ant ビルドスクリプト ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/build-refimpl.xml`) を使用して、ビジネスニーズに合わせてライセンスサーバーをカスタマイズできます。
 
-1. Ant構築スクリプトを変更して、Primetime DRM SDK、Tomcat、MySQL、およびLog4Jの場所を指定します。
+1. Ant ビルドスクリプトを変更して、Primetime DRM SDK、Tomcat、MySQL、および Log4J の場所を指定します。
 
-   [!DNL build-refimpl.xml]ファイルをテキストエディターで開き、次のプロパティ値を設定します。
+   を開きます。 [!DNL build-refimpl.xml] ファイルを編集し、次のプロパティ値を設定します。
 
    * `sdkdir`
    * `tomcatdir`
    * `mysqldir`
    * `log4jdir`
 
-1. Ant構築スクリプトが存在するディレクトリで、`all`プロパティを指定してAnt構築スクリプトを実行します。
+1. を使用して Ant ビルドスクリプトを実行します。 `all` プロパティ。Ant ビルドスクリプトが存在するディレクトリにあります。
 
    ```
    ant -f build-refimpl.xml all
    ```
 
-   Ant構築スクリプトは、サーバーのWARファイルを含む[!DNL refimpl-build/wars]ディレクトリを作成します。
+   Ant ビルドスクリプトは、 [!DNL refimpl-build/wars] サーバーの WAR ファイルを含むディレクトリ。

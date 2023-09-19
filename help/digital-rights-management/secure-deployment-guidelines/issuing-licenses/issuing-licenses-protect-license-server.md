@@ -1,95 +1,93 @@
 ---
-description: 'ライセンスを安全に発行していることを確認する必要があります。 License Serverを保護するには、以下のベストプラクティスを検討します。 '
+description: ライセンスを安全に発行していることを確認する必要があります。 ライセンスサーバを保護するために、次のベストプラクティスを検討します。
 title: ライセンスサーバの保護
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1178'
 ht-degree: 0%
 
 ---
 
+# ライセンスサーバの保護 {#protecting-the-license-server}
 
-# ライセンスサーバの保護{#protecting-the-license-server}
+ライセンスを安全に発行していることを確認する必要があります。 ライセンスサーバを保護するには、次のベストプラクティスを検討します。
 
-ライセンスを安全に発行していることを確認する必要があります。 License Serverを保護するには、次のベストプラクティスを検討します。
+## ローカルで生成された CRL の使用 {#consuming-locally-generated-crls}
 
-## ローカルに生成されたCRL {#consuming-locally-generated-crls}の使用
+ローカルに生成された証明書失効リスト (CRL) とポリシー更新リストを使用するには、Adobe Primetime DRM API を使用して署名を検証します。
 
-ローカルに生成された証明書失効リスト(CRL)およびポリシー更新リストを使用するには、Adobe PrimetimeDRM APIを使用して署名を検証します。
+次の API は、リストが改ざんされていないこと、およびリストが正しいライセンスサーバーによって署名されたことを確認します。
 
-次のAPIは、リストが改ざんされていないこと、およびリストが正しいLicense Serverによって署名されていることを確認します。
+* 通話 [RevocationList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html#verifySignature(java.security.cert.X509Certificate)) を使用して、 [RevocationList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html) を任意の API に追加します。
 
-* [RevocationList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html#verifySignature(java.security.cert.X509Certificate))を呼び出して署名を確認してから、APIに[RevocationList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html)を提供します。
+  詳しくは、 [RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html).
 
-   詳しくは、[RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html)を参照してください。
+* 通話 [PolicyUpdateList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html#verifySignature(java.security.cert.X509Certificate)) 署名を確認してから `PolicyUpdateList` を任意の API に追加します。
 
-* [PolicyUpdateList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html#verifySignature(java.security.cert.X509Certificate))を呼び出して署名を確認し、`PolicyUpdateList`をAPIに提供します。
+  詳しくは、 [PolicyUpdateList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html).
 
-   詳しくは、[PolicyUpdateList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/policyupdate/PolicyUpdateList.html)を参照してください。
+## Adobeが公開した CRL の使用{#consuming-crls-published-by-adobe}
 
-## Adobe{#consuming-crls-published-by-adobe}が発行したCRLの使用
+SDK は、Adobeが公開した CRL を定期的にダウンロードします。 これらのファイルへのアクセスがブロックされないようにするか、これらの CRL の適用が妨げられないようにする必要があります。
 
-SDKは、Adobeが発行したCRLを定期的にダウンロードします。 これらのファイルへのアクセスをブロックしないようにするか、これらのCRLの適用を妨げないようにする必要があります。
+SDK には、AdobeCRL の取得時にエラーを無視する設定オプションがあり、このオプションを適用できるのは開発環境のみです。 実稼動環境では、ライセンスサーバーはAdobeから CRL を取得する必要があります。 ライセンスサーバーが有効な CRL を取得できない場合は、エラーが発生しました。
 
-SDKには、AdobeCRLの取得時にエラーを無視する設定オプションがあり、このオプションは開発環境でのみ適用できます。 実稼働環境では、ライセンスサーバーはAdobeからCRLを取得する必要があります。 ライセンスサーバーが有効なCRLを取得できない場合は、エラーが発生しました。
+## CRL を生成して、Adobeが発行したものを補完{#generating-crls-to-supplement-those-published-by-adobe}
 
-## Adobe{#generating-crls-to-supplement-those-published-by-adobe}が発行したCRLを補うCRLの生成
+Adobe Primetime DRM を使用して、Adobeが発行するマシン CRL を補完する CRL を作成できます。
 
-Adobe PrimetimeDRMを使用して、Adobeが発行するマシンCRLを補完するCRLを作成できます。
+Primetime DRM SDK は、AdobeCRL を確認し、強制します。 ただし、追加のクライアントマシンを許可しない場合は、CRL を Primetime DRM SDK に渡して、追加のマシン資格情報を無効にする CRL を作成します。 ライセンスを発行すると、SDK はAdobeCRL と CRL を確認します。
 
-Primetime DRM SDKがチェックし、AdobeCRLを強制します。 ただし、追加のクライアントコンピューターを許可しない場合は、CRLをPrimetime DRM SDKに渡すことで、追加のコンピューターの秘密鍵証明書を失効させるCRLを作成します。 ライセンスを発行すると、SDKはAdobeCRLとCRLを確認します。
+CRL を生成するには、 [RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html).
 
-CRLを生成するには、[RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html)を参照してください。
+## ロールバック検出 {#rollback-detection}
 
-## ロールバックの検出{#rollback-detection}
+Adobe Primetime DRM の実装で、クライアントに状態の維持を要求するビジネスルール（再生ウィンドウの間隔など）を使用する場合、Adobeでは、ロールバックカウンターを追跡し、AIRまたはSWFの許可リストを使用することをお勧めします。
 
-Adobe PrimetimeDRMの実装で、クライアントの状態の維持を必要とするビジネスルール（例えば、再生ウィンドウの間隔）を使用する場合、Adobeでは、ロールバックカウンターを追跡し、AIRまたはSWFで許可リストを使用することを推奨します。
+ロールバックカウンターは、クライアントからのほとんどの要求でサーバーに送信されます。 Primetime DRM の実装にロールバックカウンターが必要ない場合は、そのカウンターを無視できます。 それ以外の場合は、Adobeは、を使用して取得されるランダムマシン ID をサーバーに保存することをお勧めします。 [MachineToken.getUniqueId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId())、およびデータベース内の現在のカウンタ値。
 
-rollbackカウンタは、クライアントからの要求の大部分で、サーバに送信されます。 Primetime DRMの実装にロールバックカウンターが必要ない場合は、無視できます。 それ以外の場合は、Adobeは、[MachineToken.getUniqueId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId())を使用して取得したランダムなマシンIDと、現在のカウンタ値をデータベースに格納することを推奨します。
+ロールバックカウンタをインクリメントして追跡する方法の詳細については、 [ClientState](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/ClientState.html) およびロールバック検出。
 
-ロールバックカウンタを増分および追跡する方法の詳細については、[ClientState](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/ClientState.html)とRollback detectionを参照してください。
+## ライセンス発行時のコンピューター数 {#machine-count-when-issuing-licenses}
 
-## ライセンス発行時のマシン数{#machine-count-when-issuing-licenses}
+ビジネス・ルールでユーザーのマシン数を追跡する必要がある場合は、ライセンス・サーバーまたはドメイン・サーバーに、ユーザーに関連付けられたマシン ID を保存する必要があります。
 
-ビジネスルールでユーザーのマシン数を追跡する必要がある場合、License Serverまたはドメインサーバーには、ユーザーに関連付けられたマシンIDを格納する必要があります。
+マシン ID を追跡する最も堅牢な方法は、 [MachineId.getBytes()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getBytes()) メソッドを使用して、データベース内で設定できます。 新しいリクエストを受け取ったら、を使用して、リクエスト内のマシン ID と既知のマシン ID を比較します。 [MachineId.matches()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#matches(com.adobe.flashaccess.sdk.cert.MachineId)).
 
-マシンIDを追跡する最も強力な方法は、データベース内の[MachineId.getBytes()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getBytes())メソッドから返された値を格納することです。 新しい要求を受け取ったら、[MachineId.matches()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#matches(com.adobe.flashaccess.sdk.cert.MachineId))を使用して、要求内のマシンIDと既知のマシンIDを比較します。
+[MachineId.matches()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#matches(com.adobe.flashaccess.sdk.cert.MachineId)) は、ID の比較を実行して、ID が同じマシンを表しているかどうかを判断します。 この比較は、少数のマシン ID がある場合にのみ実用的です。 例えば、ユーザーがドメイン内で 5 台のマシンを許可されている場合は、データベースでユーザー名に関連付けられているマシン ID を検索し、比較用に小さなデータセットを取得できます。
 
-[MachineId.matches()は、IDの比較を](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#matches(com.adobe.flashaccess.sdk.cert.MachineId)) 実行して、IDが同じマシンを表しているかどうかを判断します。この比較は、マシンIDの数が少ない場合にのみ実用的です。 例えば、ドメインに5台のマシンを許可されている場合、データベースでそのユーザーのユーザー名に関連付けられているマシンIDを検索し、比較用に小さなデータセットを取得できます。
-
-この比較は、匿名アクセスを許可するデプロイメントでは実用的ではありません。 この場合、[MachineId.getUniqueID()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId())を使用できます。 ただし、ユーザーがFlashおよびAdobe AIR®ランタイムからコンテンツにアクセスする場合、このIDを同じにすることはできません。
+この比較は、匿名アクセスを許可するデプロイメントには実用的ではありません。 この場合、 [MachineId.getUniqueID()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId()) を使用できます。 ただし、ユーザーがFlashとAdobe AIR®ランタイムからコンテンツにアクセスする場合、この ID を同じにすることはできません。
 
 >[!NOTE]
 >
->IDは、ユーザーがハードドライブの形式を変更した場合には保持されません。
+>ユーザーが HDD を再フォーマットした場合、ID は有効になりません。
 
-## 再生保護{#replay-protection}
+## リプレイの保護 {#replay-protection}
 
-リプレイ保護は、攻撃者がライセンス要求メッセージを再生するのを防ぎ、場合によってはクライアントに対するサービス拒否(DoS)攻撃を引き起こすのを防ぎます。
+再生保護は、攻撃者がライセンスリクエストメッセージを再生し、潜在的に DoS(DoS) 攻撃をクライアントに対して発生させるのを防ぎます。
 
-DoS攻撃とは、攻撃者がサービスの正当なユーザーがそのサービスを使用できないようにする試みです。 例えば、ロールバックカウンターを使用するリプレイ攻撃を使用して、DRMクライアントが状態をロールバックしたと判断して、License Serverを「騙し取り」、アカウントを停止させることができます。
+DoS 攻撃とは、攻撃者がサービスの正当なユーザーがそのサービスを使用するのを防ぐための試みです。 例えば、ロールバックカウンタを使用する再生攻撃は、DRM クライアントが状態をロールバックしたと考えるためにライセンスサーバを「騙す」ことができ、アカウントの停止を引き起こす可能性があります。
 
-リプレイ保護の詳細については、[ AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId())を参照してください。
+再生保護の詳細については、 [AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
 
-## 信頼できるコンテンツパッケージャーの許可リストの管理{#maintain-a-allowlist-of-trusted-content-packagers}
+## 信頼できるコンテンツパッケージ許可リストの管理 {#maintain-a-allowlist-of-trusted-content-packagers}
 
-許可リストとは、信頼されたエンティティのリストです。
+許可リストは、信頼されたエンティティのリストです。
 
-コンテンツパッケージャーの場合、エンティティは、コンテンツ所有者に信頼されて、ビデオファイルのパッケージ化（または暗号化）やDRM保護コンテンツの作成を行う組織です。 Adobe PrimetimeDRMを展開する場合は、信頼できるコンテンツパッケージャーの許可リストを維持する必要があります。 また、ライセンスを発行する前に、DRM保護ファイルのDRMメタデータ内のコンテンツパッケージャーのIDを検証する必要があります。
+コンテンツパッケージャーの場合、エンティティとは、コンテンツ所有者がビデオファイルのパッケージ化（または暗号化）や DRM 保護されたコンテンツの作成を信頼できる組織です。 Adobe Primetime DRM をデプロイする場合は、信頼できるコンテンツパッケージャーの許可リストを維持する必要があります。 また、ライセンスを発行する前に、DRM 保護ファイルの DRM メタデータでコンテンツパッケージャの ID を確認する必要があります。
 
-コンテンツをパッケージ化したエンティティに関する情報を取得する方法については、[V2ContentMetaData.getPackagerInfo()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/media/drm/keys/v2/V2ContentMetaData.html#getPackagerInfo())を参照してください。
+コンテンツをパッケージ化したエンティティに関する情報を取得する方法については、 [V2ContentMetaData.getPackagerInfo()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/media/drm/keys/v2/V2ContentMetaData.html#getPackagerInfo()).
 
 ## 認証トークンのタイムアウト{#timeout-for-authentication-tokens}
 
-Adobe PrimetimeDRM SDKによって生成されるすべての認証トークンには、アプリケーションのセキュリティを保護するためのタイムアウト間隔があります。
+Adobe Primetime DRM SDK で生成されるすべての認証トークンには、アプリケーションのセキュリティを保護するためのタイムアウト間隔があります。
 
-認証トークンの有効期限は、認証要求を処理する際にPrimetime DRM SDKを使用して指定されます。 有効期限が切れると、トークンは無効になり、ユーザーはライセンスサーバーで再認証する必要があります。
+認証トークンの有効期限が指定されている場合は、認証リクエストの処理時に Primetime DRM SDK を使用します。 有効期限が切れた後、トークンは無効になり、ユーザーはライセンスサーバーで再認証する必要があります。
 
-認証要求について詳しくは、[AuthenticationHandler](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/authentication/AuthenticationHandler.html)を参照してください。
+認証リクエストについて詳しくは、 [AuthenticationHandler](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/authentication/AuthenticationHandler.html).
 
-## ポリシーオプションを上書き{#overriding-policy-options}
+## ポリシーオプションの上書き {#overriding-policy-options}
 
-ライセンスを発行すると、ポリシーで指定されている使用規則をライセンスサーバーが上書きできます。
+ライセンスを発行すると、ライセンスサーバは、ポリシーで指定された使用規則を上書きできます。
 
-ポリシーで開始日を指定した場合、その開始日より前にライセンスは生成されません。 ただし、ライセンスの生成後に、ライセンスの将来の開始日を設定することはできます。 このオプションは、開始日を回避するためにクライアントがシステム時間を前に移動するのを防ぐことができないので、注意して使用してください。
+ポリシーで開始日を指定した場合、その開始日より前にライセンスは生成されません。 ただし、ライセンスが生成された後に、ライセンスに将来の開始日を設定することができます。 このオプションは、ユーザーがシステム時間を前に移動して開始日を回避するのを防ぐことができないので、注意して使用する必要があります。

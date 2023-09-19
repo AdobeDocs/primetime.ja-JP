@@ -1,18 +1,16 @@
 ---
-title: Primetime DRM（クライアントでの使用）
-description: Primetime DRM（クライアントでの使用）
+title: クライアントでの Primetime DRM
+description: クライアントでの Primetime DRM
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
+# クライアントでの Primetime DRM{#primetime-drm-on-the-client}
 
-# クライアントでのPrimetime DRM{#primetime-drm-on-the-client}
+保護されたコンテンツを再生する Primetime TVSDK アプリケーションは、まず Primetime DRM API を呼び出して、ライセンス消費のワークフローを開始し、コンテンツ再生を保護する必要があります。 このワークフローでは、クライアント上の Primetime DRM が保護されたコンテンツのメタデータからライセンスリクエストを作成し、Primetime DRM ライセンスサーバーに送信します。
 
-保護されたコンテンツを再生するPrimetime TVSDKアプリケーションは、最初にPrimetime DRM APIを呼び出して、ライセンス消費および保護されたコンテンツ再生のワークフローを開始する必要があります。 このワークフローでは、クライアントのPrimetime DRMが保護されたコンテンツのメタデータからライセンスリクエストを作成し、Primetime DRMライセンスサーバーに送信します。
-
-ライセンス要求を発行する前に、必要に応じて（ビジネスルールに応じて）クライアントが認証/認証を行うことができます。
+ライセンスリクエストを発行する前に、クライアントは（ビジネスルールに応じて）必要な認証/承認を必要に応じて実行できます。

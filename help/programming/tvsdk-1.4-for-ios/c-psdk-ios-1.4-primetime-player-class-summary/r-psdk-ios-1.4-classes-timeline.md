@@ -1,18 +1,16 @@
 ---
-description: 広告の配置など、特定のメディアのタイムラインに関する情報を提供するクラスです。
-title: Timelineクラス
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 広告の配置を含む、特定のメディアのタイムラインに関する情報を提供するクラスです。
+title: Timeline クラス
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# Timeline クラス{#timeline-classes}
 
-# Timeline classes{#timeline-classes}
-
-広告の配置など、特定のメディアのタイムラインに関する情報を提供するクラスです。
+広告の配置を含む、特定のメディアのタイムラインに関する情報を提供するクラスです。
 
 <table frame="all" colsep="1" rowsep="1" id="table_6752E908BA6546549619994A3F7D5F87"> 
  <thead> 
@@ -28,7 +26,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTTimeline.html" format="html" scope="external"> PTTimeline</a> </td> 
-   <td colname="2"> 広告の時間など、コンテンツのタイムラインを表すクラス。 </td> 
+   <td colname="2"> 広告の時間を含む、コンテンツのタイムラインを表すクラス。 </td> 
   </tr> 
  </tbody> 
 </table>

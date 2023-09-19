@@ -1,60 +1,56 @@
 ---
-description: FlashメディアRights Managementサーバー(FMRMS)1.0または1.5でパッケージ化されたコンテンツのライセンスの発行を続けるには、LiveCycleESサーバーのライセンスおよびDRMポリシーデータを、Adobe PrimetimeDRM SDKに基づくお客様の新しいサーバーに移行する必要があります。
-title: FMRMS 1.0または1.5からAdobe PrimetimeDRM 2.0以降への移行
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Media MediaRights Managementサーバー (FMRMS)1.0 または 1.5 でパッケージ化されたコンテンツのライセンスを引き続き発行するには、LiveCycleES サーバーからAdobe Primetime DRM SDK に基づくお客様の新しいサーバーに、ライセンスと DRM ポリシーデータを移行する必要があります。
+title: FMRMS 1.0 または 1.5 からAdobe Primetime DRM 2.0 以降への移行
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
 
 ---
 
+# FMRMS 1.0 または 1.5 からAdobe Primetime DRM 2.0 以降への移行{#migrate-from-fmrms-or-to-adobe-primetime-drm-or-later}
 
-# FMRMS 1.0または1.5からAdobe PrimetimeDRM 2.0以降への移行{#migrate-from-fmrms-or-to-adobe-primetime-drm-or-later}
-
-FlashメディアRights Managementサーバー(FMRMS)1.0または1.5でパッケージ化されたコンテンツのライセンスの発行を続けるには、LiveCycleESサーバーのライセンスおよびDRMポリシーデータを、Adobe PrimetimeDRM SDKに基づくお客様の新しいサーバーに移行する必要があります。
+Media MediaRights Managementサーバー (FMRMS)1.0 または 1.5 でパッケージ化されたコンテンツのライセンスを引き続き発行するには、LiveCycleES サーバーからAdobe Primetime DRM SDK に基づくお客様の新しいサーバーに、ライセンスと DRM ポリシーデータを移行する必要があります。
 
 移行するには、次のタスクを実行します。
 
-1. ライセンス情報の読み込み：
+1. ライセンス情報を読み込む：
 
-   1. LiveCycleESからPrimetime DRMベースのサーバーにライセンス情報を読み込むには、[!DNL Reference Implementation\Server\migration\db]フォルダーにあるサンプルデータベーススクリプトを参照してください。
-   1. サンプルスクリプトを実行して、MySQL、OracleまたはSQL Serverのデータベースから関連するデータをCSVファイル形式に書き出します。
-   1. LiveCycleESからデータを書き出した後、データをデータベースに読み込みます。
+   1. LiveCycleES から Primetime DRM ベースのサーバーにライセンス情報を読み込むには、 [!DNL Reference Implementation\Server\migration\db] フォルダー。
+   1. サンプルスクリプトを実行して、MySQL、Oracle、または SQL Server のデータベースから CSV ファイル形式に関連データを書き出します。
+   1. LiveCycleES からデータを書き出した後、データをデータベースに読み込みます。
 
       書き出されるライセンス情報には、次の情報が含まれます。
 
-      * ライセンスID
-      * パッケージ化時に割り当てられるコンテンツID
-      * 適用中のDRMポリシーのID
-      * コンテンツがパッケージ化された時刻
+      * ライセンス ID
+      * パッケージ化時に割り当てられるコンテンツ ID
+      * 適用される DRM ポリシーの ID
+      * コンテンツがパッケージ化された時間
       * コンテンツ暗号化キー
 
-      この情報は、1.xコンテンツのメタデータをPrimetime DRMメタデータ形式に変換する前に必要です。 参照実装では、このデータはライセンスデータベーステーブルに格納され、`RefImplMetadataConvReqHandler`によって使用されます。 詳しくは、`FMRMSv1RequestHandler`と`FMRMSv1MetadataHandler`を参照してください。
+      この情報は、1.x のコンテンツメタデータを Primetime DRM メタデータ形式に変換する前に必要です。 参照実装では、このデータはライセンスデータベーステーブルに格納され、 `RefImplMetadataConvReqHandler`. 詳しくは、 `FMRMSv1RequestHandler` および `FMRMSv1MetadataHandler`.
 
+1. FMRMS ポリシーを Primetime DRM 形式に変換します。
 
-1. FMRMSポリシーをPrimetime DRM形式に変換します。
+   1. DRM ポリシーを適用してメタデータを変換し、バージョン 1.0 またはバージョン 1.5 のコンテンツのライセンスを発行する前に、既存の DRM ポリシーを Primetime DRM 形式に変換します。
 
-   1. DRMポリシーを適用してメタデータを変換し、バージョン1.0またはバージョン1.5コンテンツのライセンスを発行する前に、既存のDRMポリシーをPrimetime DRM形式に変換します。
+      The `Reference Implementation\Server\migration` フォルダーには、古い DRM ポリシーに基づく Primetime DRM ポリシーを作成するためのサンプルコードが含まれています。 FMRMS 1.0 から Primetime DRM に移行するには、 `V1_0PolicyConverter.java` サンプル。
+   1. を実行してサンプルコードをコンパイルします。 `ant-f build-migration.xml build-1.0-converter` スクリプトを使用して、 [!DNL libs/1.0] および [!DNL libs/flashaccess] ディレクトリ。
 
-      `Reference Implementation\Server\migration`フォルダーには、古いDRMポリシーに基づくPrimetime DRMポリシーを作成するためのサンプルコードが含まれています。 FMRMS 1.0からPrimetime DRMに移行するには、`V1_0PolicyConverter.java`サンプルを参照してください。
-   1. `ant-f build-migration.xml build-1.0-converter`スクリプトを実行してサンプルコードをコンパイルします。このスクリプトは、[!DNL libs/1.0]と[!DNL libs/flashaccess]のディレクトリ内の1.0およびPrimetime DRMライブラリを検索します。
+   1. を編集します。 [!DNL converter.properties] ファイルを使用して、LiveCycleES サーバーを指定します。
+   1. 実行 `ant -f build-migration.xml migrate-all-1.0-policies` を使用して、すべての FMRMS 1.0 DRM ポリシーを Primetime DRM 形式に変換します。
 
-   1. [!DNL converter.properties]ファイルを編集して、LiveCycleESサーバーを指定します。
-   1. `ant -f build-migration.xml migrate-all-1.0-policies`を実行し、すべてのFMRMS 1.0 DRMポリシーをPrimetime DRM形式に変換します。
+      FMRMS 1.5 から Primetime DRM に移行するには、 `V1_5PolicyConverter.java` サンプル。
 
-      FMRMS 1.5からPrimetime DRMに移行するには、`V1_5PolicyConverter.java`サンプルを参照してください。
+   1. を実行してサンプルコードをコンパイルします。 `ant-f build-migration.xml build-1.5-converter` スクリプトでは、1.5 ライブラリと 3.0 ライブラリが [!DNL libs/1.5] および [!DNL libs/flashaccess] ディレクトリ。
 
-   1. `ant-f build-migration.xml build-1.5-converter`スクリプトを実行してサンプルコードをコンパイルします。このスクリプトでは、1.5と3.0のライブラリが[!DNL libs/1.5]と[!DNL libs/flashaccess]のディレクトリにある必要があります。
+   1. を編集します。 [!DNL converter.properties] ファイルを使用して、LiveCycleES サーバーを指定します。
+   1. 実行 `ant -f build-migration.xml migrate-all-1.5-policies` を使用して、すべての FMRMS 1.5 DRM ポリシーを Primetime DRM 形式に変換できます。
 
-   1. [!DNL converter.properties]ファイルを編集して、LiveCycleESサーバーを指定します。
-   1. `ant -f build-migration.xml migrate-all-1.5-policies`を実行し、すべてのFMRMS 1.5 DRMポリシーをPrimetime DRM形式に変換します。
+      変換された DRM ポリシーは、ファイルのセットとして保存されます。 The `DRM PolicyConverter` は、古い DRM ポリシー ID と新しい DRM ポリシー ID のマッピングを含む CSV 形式のファイルを生成します。 このファイルは、 [!DNL PolicyConversion] 参照実装データベースの表。この表は、 `RefImplMetadataConvReqHandler`.
 
-      変換されたDRMポリシーは、ファイルのセットとして保存されます。 `DRM PolicyConverter`は、古いDRMポリシーIDと新しいDRMポリシーIDとのマッピングを含むCSV形式のファイルを生成します。 このファイルは、参照実装データベースの[!DNL PolicyConversion]テーブルにインポートできます。このテーブルは`RefImplMetadataConvReqHandler`で使用されます。
+1. 1.x の互換性リクエストを `FMRMSv1RequestHandler` および `FMRMSv1MetadataHandler` プロパティ：
 
-1. 1.x互換要求を`FMRMSv1RequestHandler`および`FMRMSv1MetadataHandler`プロパティでサポートします。
+   1. 関連するデータを Primetime DRM ベースのサーバーに移行した後、1.x の互換性リクエストのサポートを実装します。
 
-   1. 関連するデータがPrimetime DRMベースのサーバーに移行された後、1.x互換性リクエストのサポートを実装します。
-
-      これらのタイプのリクエストの処理方法の例については、リファレンス実装の`RefImplUpgradeV1ClientHandler`と`RefImplMetadataConvReqHandler`を参照してください。
-
+      これらのタイプのリクエストの処理方法の例については、 `RefImplUpgradeV1ClientHandler` および `RefImplMetadataConvReqHandler` を参照してください。

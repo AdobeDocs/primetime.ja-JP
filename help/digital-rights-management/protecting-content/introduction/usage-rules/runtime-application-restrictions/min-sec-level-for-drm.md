@@ -1,20 +1,18 @@
 ---
-title: DRMおよび実行時の最小セキュリティレベル
-description: DRMおよび実行時の最小セキュリティレベル
+title: DRM とランタイムの最小セキュリティレベル
+description: DRM とランタイムの最小セキュリティレベル
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 0%
 
 ---
 
+# DRM とランタイムの最小セキュリティレベル{#minimum-security-level-for-drm-and-runtimes}
 
-# DRMおよびランタイムの最小セキュリティレベル{#minimum-security-level-for-drm-and-runtimes}
+最小のセキュリティレベルは、コンテンツへのアクセスに必要なセキュリティレベルを指定します。 各コンポーネントの個々のセキュリティレベルを指定します。
 
-最小セキュリティレベルは、コンテンツへのアクセスに必要なセキュリティレベルを指定します。 各コンポーネントの個々のセキュリティレベルを指定します。
+DRM/Runtime モジュールのデフォルトのセキュリティレベルは10000です。
 
-DRM/Runtimeモジュールのデフォルトのセキュリティレベルは10000です。
-
-使用例：特定の種類のコンテンツ（HDビデオなど）は、他の種類よりも高いセキュリティレベルが必要になる場合があります。
+使用例：特定の種類のコンテンツ（HD ビデオなど）では、他の種類よりも高いセキュリティレベルが必要になる場合があります。

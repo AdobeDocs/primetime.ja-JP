@@ -1,18 +1,16 @@
 ---
-description: この機能をオンにして、関連イベントを確認できます。
-title: ライブマスターマニフェストの更新の使用
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: この機能をオンにして、関連するイベントを確認できます。
+title: ライブマスターマニフェストの更新を使用
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
 
 ---
 
+# ライブマスターマニフェストの更新を使用{#use-live-master-manifest-update}
 
-# ライブマスターマニフェストの更新{#use-live-master-manifest-update}を使用
+この機能をオンにして、関連するイベントを確認できます。
 
-この機能をオンにして、関連イベントを確認できます。
-
-1. ライブマスターマニフェストの更新を有効にするには、`NetworkConfiguration.masterUpdateInterval`プロパティを設定して更新頻度（分単位）を設定します。
-1. オプションで、`MediaPlayerItemEvent.MASTER_UPDATED`イベントをリッスンして、成功したマニフェストの更新を追跡します。
+1. ライブマスターマニフェストの更新を有効にするには、 `NetworkConfiguration.masterUpdateInterval` プロパティ。
+1. オプションで、成功したマニフェストの更新を、 `MediaPlayerItemEvent.MASTER_UPDATED` イベント。

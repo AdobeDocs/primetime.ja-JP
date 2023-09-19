@@ -1,8 +1,7 @@
 ---
 title: アカウント IQ ダッシュボード
 description: ダッシュボードを使用すると、幅広いサブスクライバーデータを分析することで、パスワード共有のインスタンスを特定できます。
-exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 ダッシュボードは、アカウント共有の範囲と影響を大まかに把握できるように設計されたグラフとレポートの集まりにデータをまとめて集計します。 アカウント IQ の主要なレポートと指標を含む単一のページが提供されます。
 
 
-+++プログラマ — ダッシュボード
++++プログラマー — ダッシュボード
 
 ![プログラマーユーザー向けの Account IQ のダッシュボード](assets/dashboard-programr.png)
 
@@ -59,7 +58,7 @@ MVPD ユーザ用のダッシュボードは、プログラマユーザ用のダ
 
 トレンドインジケーターは、の前の期間からの指標の値の変化の割合を示します。
 
-### 共有アカウントからの使用 {#usage-from-shared-accounts}
+### 共有アカウントからの使用状況 {#usage-from-shared-accounts}
 
 このゲージは、定義されたセグメントおよび期間における、共有アカウントのすべての購読者アカウントの使用率を示します。 このゲージは、0～100%のスケールで（共有アカウントから）使用の範囲を示します。 これらの範囲（「低」、「中」、「高」、「異常」）は、業界平均に基づいています。
 
@@ -68,7 +67,7 @@ MVPD ユーザ用のダッシュボードは、プログラマユーザ用のダ
 ![](assets/usage-4mshared-accounts.png)
 
 
-*図：共有アカウントからの使用*
+*図：共有アカウントからの使用状況*
 
 ### 全体的な共有スコア {#overall-sharing-score}
 
@@ -121,7 +120,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 ![](assets/dashboard-ac-sharing-prob.png)
 
 
-*図：異なる共有確率範囲の購読者アカウントの数と割合*
+*図：異なる共有確率範囲の加入者アカウントの数と割合*
 
 ## 共有の確率レベル別のアカウント数と使用状況 {#number-of-accounts-usage-sharing-probability}
 
@@ -130,7 +129,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 ![](assets/no-acc-usage-prob-level.png)
 
 
-*図：様々な確率範囲に該当するアカウント、トレンドおよび使用の数*
+*図：様々な確率範囲に該当するアカウント、トレンド、使用の数*
 
 <!--
 +++Dashboard for programmers

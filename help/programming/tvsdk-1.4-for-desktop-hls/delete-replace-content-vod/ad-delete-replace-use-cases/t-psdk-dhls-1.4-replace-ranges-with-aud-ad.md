@@ -1,21 +1,19 @@
 ---
-title: 時間範囲をAdobe Primetimead decisioning広告に置き換える
-description: 時間範囲をAdobe Primetimead decisioning広告に置き換える
+title: 時間範囲をAdobe Primetime Ad Decisioning 広告で置き換える
+description: 時間範囲をAdobe Primetime Ad Decisioning 広告で置き換える
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
+# 時間範囲をAdobe Primetime Ad Decisioning 広告で置き換える{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
 
-# 時間範囲をAdobe Primetimead decisioning ad{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}に置き換えます
+削除 `TimeRanges` 次の期間 `begin` および `end` in `localTime` タイムラインから。 をの AdBreak に置き換えます。 `begin` から `begin+replaceDuration`.
 
-`localTime`内の`begin`と`end`の間の`TimeRanges`をタイムラインから削除します。 これを`begin` ～ `begin+replaceDuration`のAdBreakに置き換えます。
-
-範囲をPrimetime ad decisioningの広告に置き換えます。
+範囲を Primetime Ad Decisioning 広告に置き換えます。
 
 ```
 {   
@@ -70,4 +68,3 @@ ht-degree: 0%
     "id": "vod_003"
 }
 ```
-

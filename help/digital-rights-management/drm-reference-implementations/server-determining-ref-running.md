@@ -1,43 +1,41 @@
 ---
-title: 参照実装のライセンスサーバーが正しく実行されるかどうかを確認する
-description: 参照実装のライセンスサーバーが正しく実行されるかどうかを確認する
+title: 参照実装ライセンスサーバーが正しく実行されているかどうかの判断
+description: 参照実装ライセンスサーバーが正しく実行されているかどうかの判断
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
 
 ---
 
+# 参照実装ライセンスサーバーが正しく実行されているかどうかの判断 {#determining-if-reference-implementation-license-server-runs-properly}
 
-# 参照実装ライセンスサーバーが正しく実行されるかどうかを判断する{#determining-if-reference-implementation-license-server-runs-properly}
+参照実装ライセンスサーバーが正しく起動したかどうかを判断する方法はいくつかあります。 次の項目を表示すると、 [!DNL catalina.log] ライセンスサーバは独自のログファイルにログを記録するので、ログでは不十分な場合があります。 以下の手順に従って、参照実装が正しく開始されていることを確認します。
 
-リファレンス実装ライセンスサーバーが正しく起動したかどうかを判断するには、いくつかの方法があります。 [!DNL catalina.log]ログは、ライセンスサーバーが独自のログファイルにログするので、表示できない場合があります。 次の手順に従って、リファレンスの実装が正しく起動していることを確認します。
+* 以下を確認します。 [!DNL AdobeFlashAccess.log] ファイル。 リファレンス実装がログ情報を書き込む場所です。 このログファイルの場所は、 [!DNL log4j.xml] ファイルに保存し、任意の場所を指すように変更できます。 デフォルトでは、ログファイルは catalina を実行する作業ディレクトリにコピーされます。
 
-* [!DNL AdobeFlashAccess.log]ファイルを確認します。 これは、リファレンスの実装によるログ情報の書き込み先です。 このログファイルの場所は[!DNL log4j.xml]ファイルで示され、任意の場所を指すように変更できます。 デフォルトでは、ログファイルはcatalinaを実行する作業ディレクトリにコピーされます。
-
-* 次のURLに移動します。[!DNL https:// flashaccess/license/v4]*サーバー：サーバーポート*。 「License Server is setup correctly」というテキストが表示されます。
+* 次の URL に移動します。 [!DNL https:// flashaccess/license/v4]*サーバ：サーバポート*. 「License Server is setup correctly」というテキストが表示されます。
 
 サーバーが正しく動作しているかどうかをテストする別の方法は、テストコンテンツのセグメントをパッケージ化し、サンプルビデオプレーヤーを設定してから再生することです。
 
-次の手順で、このプロセスを説明します。
+このプロセスについて、以下の手順で説明します。
 
-1. [!DNL \Reference Implementation\Command Line Tools]フォルダーに移動します。
+1. 次に移動： [!DNL \Reference Implementation\Command Line Tools] フォルダー。
 
-   コマンドラインツールのインストール方法については、[コマンドラインツールのインストール](../drm-reference-implementations/command-line-tools/install-command-line-tools.md)を参照してください。
+   詳しくは、 [コマンドラインツールのインストール](../drm-reference-implementations/command-line-tools/install-command-line-tools.md) コマンドラインツールのインストール方法を参照してください。
 
-1. 次のコマンドを入力して、単純な匿名DRMポリシーを作成します。
+1. 次のコマンドを入力して、単純な匿名 DRM ポリシーを作成します。
 
    ```
        java -jar libs\AdobePolicyManager.jar new policy_test.pol -x
    ```
 
-   DRMポリシーマネージャーでDRMポリシーを作成する方法については、[コマンドラインの使用](../drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md)を参照してください。
+   詳しくは、 [コマンドラインの使用](../drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md) DRM ポリシーマネージャーを使用して DRM ポリシーを作成する方法に関する情報です。
 
-1. [!DNL flashaccesstools.properties]ファイルの`encrypt.license.serverurl`プロパティをライセンスサーバーのURLに設定します。
+1. を設定します。 `encrypt.license.serverurl` プロパティを [!DNL flashaccesstools.properties] ファイルをライセンスサーバーの URL に追加します。
 
-   例：[!DNL https:// localhost:8080/]。 [!DNL flashaccesstools.properties]ファイルは[!DNL \Reference Implementation\Command Line Tools]フォルダーにあります。
+   例： [!DNL https:// localhost:8080/]. The [!DNL flashaccesstools.properties] ファイルは [!DNL \Reference Implementation\Command Line Tools] フォルダー。
 
 1. 次のコマンドを入力して、コンテンツのセグメントをパッケージ化します。
 
@@ -52,15 +50,14 @@ ht-degree: 0%
        </i class="+ topic>
 ```
 
-1. 生成された2つのファイルをTomcatサーバーの[!DNL webapps\ROOT\Content]フォルダにコピーします。
-1. [!DNL Reference Implementation\Sample Video Players\Desktop\Flash Player\Release]ディレクトリに移動し、Tomcatサーバーの [!DNL webapps\ROOT\SVP\] フォルダーに内容をコピーします。
+1. 生成された 2 つのファイルを [!DNL webapps\ROOT\Content] Tomcat サーバー上のフォルダー。
+1. 次に移動： [!DNL Reference Implementation\Sample Video Players\Desktop\Flash Player\Release] ディレクトリにコピーし、次の場所にコンテンツをコピーします。 [!DNL webapps\ROOT\SVP\] Tomcat サーバー上のフォルダー。
 
-1. Flash Playerバージョン10.1以降をインストールします。
-1. Webブラウザーを開き、次のURLに移動します。[!DNL        https:// localhost:8080/SVP/player.html]
+1. Flash Playerバージョン 10.1 以降をインストールします。
+1. Web ブラウザーを開き、次の URL に移動します。 [!DNL        https:// localhost:8080/SVP/player.html]
 
-1. 次のURLに移動し、**[!UICONTROL Play]**&#x200B;をクリックします。[!DNL https:// localhost:8080/Content/] *`your_encrypted_FLV`*。
+1. 次の URL に移動し、 **[!UICONTROL Play]**: [!DNL https:// localhost:8080/Content/] *`your_encrypted_FLV`*.
 
-1. ビデオの再生に失敗した場合は、サンプルビデオプレーヤーのログペインにエラーコードが表示されているか、または[!DNL AdobeFlashAccess.log]ファイルに追加されているかを確認します。
+1. ビデオの再生に失敗した場合は、エラーコードがサンプルビデオプレーヤーのログパネルに表示されているか、エラーコードが [!DNL AdobeFlashAccess.log] ファイル。
 
-   これで、log4j.xmlファイル内の[!DNL AdobeFlashAccess.log]ログファイルの場所を検索し、それを変更できます。 デフォルトでは、ログファイルはcatalinaを実行する作業ディレクトリにコピーされます。
-
+   これで、 [!DNL AdobeFlashAccess.log] log4j.xml ファイル内のログファイルを編集し、変更します。 デフォルトでは、ログファイルは catalina を実行する作業ディレクトリにコピーされます。

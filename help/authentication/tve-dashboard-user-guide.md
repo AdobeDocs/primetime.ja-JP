@@ -1,13 +1,12 @@
 ---
 title: Primetime TVE ダッシュボードユーザーガイド
 description: Primetime TVE ダッシュボードユーザーガイド
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4386'
 ht-degree: 0%
 
 ---
-
 
 # Primetime TVE ダッシュボードユーザーガイド {#tve-db-user-guide}
 
@@ -40,7 +39,7 @@ ht-degree: 0%
 
 ![TVE ダッシュボードワークスペース](assets/tve-basic-advanced-workspace.png)
 
-*図 1:Adobe Primetime TVE ダッシュボードの「基本/詳細なワークスペース」ドロップダウン*
+*図 1: Adobe Primetime TVE ダッシュボードの「Basic/Advanced Workspace」ドロップダウン*
 
 ## 環境 {#authn-environments}
 
@@ -51,18 +50,18 @@ TVE ダッシュボードには、次に示すように、Prequal（事前認定
 * [事前のステージング](https://console-prequal.auth-staging.adobe.com/)
 * [事前実稼動](https://console-prequal.auth.adobe.com/)
 * [リリースステージング](https://console.auth-staging.adobe.com/)
-* [実稼動をリリース](https://console.auth.adobe.com/)
+* [実稼動環境をリリース](https://console.auth.adobe.com/)
 
 環境を切り替えるには、次に示すドロップダウン要素から、エントリに表示される目的の環境をクリックします。
 
 ![TVE ダッシュボード環境ドロップダウン](assets/tve-dashboard-env.png)
 
-*図 2:Adobe Primetime TVE Dashboard 環境ドロップダウン*
+*図 2: Adobe Primetime TVE Dashboard environments ドロップダウン*
 
 >[!IMPORTANT]
 >TVE ダッシュボードを使用してAdobe Primetime認証設定に管理上の変更を加える場合は、適切な機能を確保するために、次の手順に従うことを強くお勧めします。
 
-TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上の変更を加えるには：
+TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上の変更を加えるには、次の手順を実行します。
 
 * で変更を実行します。 [ステージングをリリースして検証します。](http://sp.auth-staging.adobe.com/apitest/api.html).
 * で変更を実行します。 [実稼動環境を事前に準備し、検証する](http://sp.auth-staging.adobe.com/apitest/api.html).
@@ -73,7 +72,7 @@ TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上�
 
 ![タイブダッシュボードでのプッシュ通知の確認](assets/tve-review-push-notifications.png)
 
-*図 3:Adobe Primetime TVE ダッシュボードのレビューと変更のプッシュ通知*
+*図 3: Adobe Primetime TVE ダッシュボードの変更の確認とプッシュの通知*
 
 ## セクション {#sections}
 
@@ -83,12 +82,12 @@ TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上�
 * **プログラマー** - 1 つまたは複数の集計を行う親組織に関する設定が含まれます **チャネル**
 * **統合**  — 次の間の統合に関連する設定が含まれます： **チャネル** および **MVPDs**
 * **MVPDs**  — 使用可能な **MVPDs**
-* **レポート**  — 次の 3 種類のレポートの集計データが含まれます。AuthN TTL、AuthZ TTL、SSO
+* **レポート** - AuthN TTL、AuthZ TTL、SSO の 3 種類のレポートの集計データが含まれます
 * **変更ログ** - TVE ダッシュボード設定に適用された最新の変更が含まれます
 
 ![TVE ダッシュボードセクション](assets/tve-dashboard-sections.png)
 
-*図 4:「 Adobe Primetime TVE Dashboard 」セクション*
+*図 4: Adobe Primetime TVE Dashboard のセクション*
 
 ### チャネル {#tve-db-channels-section}
 
@@ -101,20 +100,20 @@ TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上�
    * **Analytics 設定** - Adobe Primetimeに転送するAdobe Analytics認証イベントを設定します。 この機能を有効にする前にレポートスイート ID(RSID) を設定する必要がある方法の詳細については、Adobeにお問い合わせください。
 * **証明書**
 
-   認証フローで使用される証明書のリストと、発行組織、発行日および有効期限の一覧が含まれます。 これらの証明書は、秘密鍵/公開鍵として機能し、検証目的で使用されます。
+  認証フローで使用される証明書のリストと、発行組織、発行日および有効期限の一覧が含まれます。 これらの証明書は、秘密鍵/公開鍵として機能し、検証目的で使用されます。
 * **ドメイン**
 
-   各チャネルがAdobe Primetime認証と通信するドメインのリストが含まれます。
+  各チャネルがAdobe Primetime認証と通信するドメインのリストが含まれます。
 * **統合**
 
-   使用可能な MVPD との統合のリストと、有効になっているかどうかの可能性のある各統合のステータスが含まれます。 統合ページへの移動は、特定のエントリをクリックすると実行できます。
+  使用可能な MVPD との統合のリストと、有効になっているかどうかの可能性のある各統合のステータスが含まれます。 統合ページへの移動は、特定のエントリをクリックすると実行できます。
 * **登録済みアプリ**
 
-   アプリケーション登録のリストを含みます。 詳しくは、ドキュメントを確認してください [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md).
+  アプリケーション登録のリストを含みます。 詳しくは、ドキュメントを確認してください [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md).
 
 * **カスタムスキーム**
 
-   カスタムスキームのリストが含まれます。 詳しくは、 [iOS/tvOS アプリの登録](/help/authentication/iostvos-application-registration.md) および [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md)
+  カスタムスキームのリストが含まれます。 詳しくは、 [iOS/tvOS アプリの登録](/help/authentication/iostvos-application-registration.md) および [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md)
 
 
 #### ドメインの追加/削除 {#add-delete-domains}
@@ -137,19 +136,19 @@ TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上�
 
 * **証明書**
 
-   認証フローで使用される証明書のリストと、発行組織、発行日および有効期限の一覧が含まれます。 これらの証明書は、秘密鍵/公開鍵として機能し、検証目的で使用されます。
+  認証フローで使用される証明書のリストと、発行組織、発行日および有効期限の一覧が含まれます。 これらの証明書は、秘密鍵/公開鍵として機能し、検証目的で使用されます。
 
 * **チャネル**
 
-   この特定のプログラマに属するチャネルのリストが含まれます。 「チャネル」セクションに移動するには、特定のエントリをクリックします。
+  この特定のプログラマに属するチャネルのリストが含まれます。 「チャネル」セクションに移動するには、特定のエントリをクリックします。
 
 * **登録済みアプリ**
 
-   アプリケーション登録のリストを含みます。 詳しくは、 [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md).
+  アプリケーション登録のリストを含みます。 詳しくは、 [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md).
 
 * **カスタムスキーム**
 
-   カスタムスキームのリストが含まれます。 詳しくは、 [iOS/tvOS アプリの登録](/help/authentication/iostvos-application-registration.md) および [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md).
+  カスタムスキームのリストが含まれます。 詳しくは、 [iOS/tvOS アプリの登録](/help/authentication/iostvos-application-registration.md) および [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md).
 
 
 ### 統合 {#tve-db-integrations-sec}
@@ -181,9 +180,9 @@ TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上�
 * チャネルを検索して選択
 * MVPD を検索して選択
 * TVE ダッシュボードが「Integration Id」を計算し、使用可能な MVPD エンドポイントを表示するのを待ちます。
-* 認証、承認、ログアウトのエンドポイントを選択するか、デフォルト値を使用します
+* 認証、承認、ログアウトのエンドポイントを選択するか、デフォルト値を使用します。
 * 「統合を作成」ボタンをクリックします。
-* MVPD 設定に応じて、ポップアップが表示され、追加のプロパティを求めることができます。これは、事前に MVPD によって提供されているはずです。そうしないと、新しく作成された統合ページへのリダイレクトが行われます
+* MVPD 設定に応じて、ポップアップが表示され、追加のプロパティを求めることができます。これは、事前に MVPD によって提供されているはずです。そうしないと、新しく作成された統合ページへのリダイレクトが行われます。
 
 ![](assets/new-integration-window.png)
 
@@ -196,7 +195,7 @@ TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上�
 
 既存の統合を更新するには、「統合」セクションまたは「統合」タブを含む「チャネル」セクションで、その特定の統合のテーブルエントリをクリックします。
 
-基本ワークスペースモードを使用する場合、このセクションでは、認証および認証トークンの TTL（有効期間）や iFrame 設定など、最も一般的に更新された設定の表示と編集が可能です。 動的に定義されたトークン永続化 TTL をサポートする MVPDs との統合では、TTL 設定が欠落する場合があることに注意してください (1.19 の [MVPD 統合の要件](/help/authentication/mvpd-integr-features.md)) をクリックします。
+基本ワークスペースモードを使用する場合、このセクションでは、認証および認証トークンの TTL（有効期間）や iFrame 設定など、最も一般的に更新された設定の表示と編集が可能です。 動的に定義されたトークン永続化 TTL をサポートする MVPDs との統合では、TTL 設定が欠落する場合があることに注意してください (1.19 項目： [MVPD 統合の要件](/help/authentication/mvpd-integr-features.md)) をクリックします。
 
 
 
@@ -209,7 +208,7 @@ TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上�
 
 
 >[!IMPORTANT]
->設定の継承チェーンについて理解することが重要です。MVPD -> MVPD Endpoint -> Integration -> Platform（Platform が最も具体的な値を持ち、MVPD が最も一般的なデフォルトです）。
+>MVPD -> MVPD Endpoint -> Integration -> Platform の設定継承チェーンを理解することが重要です。Platform は最も具体的な値を持ち、MVPD は最も一般的なデフォルトです。
 
 ![](assets/inheritance-chain-component.png)
 
@@ -244,26 +243,26 @@ TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上�
 
 特定の統合およびプラットフォームに対してシングルサインオンを有効/無効にするには、以下の手順に従ってください。
 
-* 詳細ワークスペースモードを使用していることを確認します
+* 詳細ワークスペースモードを使用していることを確認します。
 * 目的の統合に移動します。
 * に移動します。 **一般設定** タブ
 * シングルサインオンを有効または無効にするプラットフォームを選択します
 * 切り替える **シングルサインオンを有効にする** フラグを目的の値（はい/いいえ）に設定します。
 
-   >[!IMPORTANT]
-   >重要なのは、 **シングルサインオンを有効にする** フラグは、iOS、tvOS、Roku、FireTV プラットフォームでのみ使用でき、これらのプラットフォームでのシングルサインオンをサポートする MVPD との統合にのみ使用できます。
+  >[!IMPORTANT]
+  >重要なのは、 **シングルサインオンを有効にする** フラグは、iOS、tvOS、Roku、FireTV プラットフォームでのみ使用でき、これらのプラットフォームでのシングルサインオンをサポートする MVPD との統合にのみ使用できます。
 
 * 切り替える **プラットフォーム権限の適用** フラグを目的の値（はい/いいえ）に設定します。
 
-   >[!IMPORTANT]
-   >重要なのは、 **プラットフォーム権限の適用** フラグは、TV Provider サブスクリプションへのプラットフォームへのアクセスを許可または拒否するユーザーの決定を適用するかどうかを制御します。 シナリオの検討 **シングルサインオンを有効にする** フラグが「はい」に設定されている場合、 **プラットフォーム権限の適用** フラグも「はい」に設定され、ユーザーが TV Provider の購読へのプラットフォームアクセスを拒否すると、各アプリケーション（チャネル）は、別のアプリケーション（チャネル）で取得されたAdobe Primetime認証トークンを使用できなくなります。
+  >[!IMPORTANT]
+  >重要なのは、 **プラットフォーム権限の適用** フラグは、TV Provider サブスクリプションへのプラットフォームへのアクセスを許可または拒否するユーザーの決定を適用するかどうかを制御します。 シナリオの検討： **シングルサインオンを有効にする** フラグが「はい」に設定されている場合、 **プラットフォーム権限の適用** フラグも「はい」に設定され、ユーザーが TV Provider の購読へのプラットフォームアクセスを拒否すると、各アプリケーション（チャネル）は、別のアプリケーション（チャネル）で取得されたAdobe Primetime認証トークンを使用できなくなります。
 
 
-#### ホームベース認証を有効にする {#enable-hba}
+#### ホームベースの認証を有効にする {#enable-hba}
 
 次の手順に従って、のホームベース認証を有効/無効にしてください： **OAuth2** ベースの MVPD:
 
-* 詳細ワークスペースモードを使用していることを確認します
+* 詳細ワークスペースモードを使用していることを確認します。
 * 目的の統合に移動します。
 * に移動します。 **認証設定** タブ
 * に移動します。 **AuthN 動的ルール** サブタブ
@@ -287,7 +286,7 @@ TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上�
 * **一般設定**
    * **ユーザーのメタデータキー**
       * 特定の MVPD で使用できるメタデータキー。
-   * **クライアントデータプロパティ**
+   * **クライアントデータのプロパティ**
       * **認証/集約** - 「はい」に設定した場合、ユーザーがアクセスしようとしている新しいチャネルごとに新しい認証トークンが必要です。
       * **パッシブ AuthN 有効** - Auth / Aggregator フラグが「Yes」に設定され、パッシブ AuthN が「Yes」に設定されている場合、ブラウザーの完全なリダイレクトとピッカーの表示を必要とせずに、別のチャネルとの認証プロセスがバックグラウンドで実行されます。
       * **認証/ブラウザーセッション** - 「はい」に設定した場合、ユーザーはブラウザーを閉じた後でログアウトされます。 「いいえ」に設定した場合、ユーザーはブラウザーを再起動し、ログインしたままにすることができます。
@@ -310,8 +309,8 @@ TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上�
          * 1 回の呼び出しで MVPD によって事前に認証できるリソースの数、使用される PreFlight モデル、およびタイムアウトのしきい値を示します。 特定の統合で、リソースの数が異なる場合があります。 これは、**プリフライトリソースの最大数**」プロパティが表示されます。 このプロパティは、特定の統合に対してのみ使用でき、設定した場合は、「認証設定」/「 PreFlight 設定」/「 PreFlight 最大リソース」で定義した値の代わりに使用されます。
       * **DOS 保護**
          * MVPD 認証エンドポイントに対するサービス拒否保護について説明します。 各フィールドの詳細な説明は、DOS 保護フィールドの上にマウスポインターを置くとツールチップが表示されます。
-      * MVPD が **TempPass**、 **AuthZ の一般設定** には、TempPass の期間に関する情報も含まれます。
-      * MVPD が **FlexibleTempPass**、 **AuthZ の一般設定** には、TempPass の期間、リソースの最大数、識別フィールドに関する情報も含まれています（下図を参照）。
+      * MVPD が **TempPass**&#x200B;を、 **AuthZ の一般設定** には、TempPass の期間に関する情報も含まれます。
+      * MVPD が **FlexibleTempPass**&#x200B;を、 **AuthZ の一般設定** には、TempPass の期間、リソースの最大数、識別フィールドに関する情報も含まれています（下図を参照）。
    * **AuthZ 証明書**
       * このサブタブには、MVPD が認証フローで使用する証明書が、発行者組織、発行日および有効期限と共に表示されます。 これらの証明書は、秘密鍵/公開鍵として機能し、検証目的で使用されます。
    * **AuthZ 動的ルール**
@@ -329,7 +328,7 @@ TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上�
 
 ### レポート {#tve-db-reports-sec}
 
-このセクションに移動するには、「[ダッシュボードセクション](#sections)&quot;メニュー。 これにより、3 つのタブを持つ画面に移動します。次のサブセクションで詳しく説明します。 [AuthN TTL レポート](#authn-ttl-reports), [AuthZ TTL レポート](#authz-ttl-reports), [SSO レポート](#sso-reports).
+このセクションに移動するには、「[ダッシュボードセクション](#sections)」メニューに表示されます。 これにより、3 つのタブを持つ画面に移動します。次のサブセクションで詳しく説明します。 [AuthN TTL レポート](#authn-ttl-reports), [AuthZ TTL レポート](#authz-ttl-reports), [SSO レポート](#sso-reports).
 
 このセクションでは、すべてのプラットフォームにわたる様々な MVPD との Channel/s 統合に関する複数のタイプのレポートに関する集計データの表示および書き出しを行うことができます。
 
@@ -340,7 +339,7 @@ TVE ダッシュボードを使用してAdobe Primetime認証設定を管理上�
 **ブラウザー**
 Adobe Primetime認証 JavaScript SDK を介してプログラマーの実装に適用される値を表示します。
 
-**モバイル：iOS**
+**モバイル：IOS**
 Adobe Primetime Authentication iOS SDK を介してプログラマーの実装に適用される値を表示します。
 
 **モバイル：ANDROID**
@@ -349,22 +348,22 @@ Adobe Primetime認証 Android SDK を介してプログラマーの実装に適�
 **モバイル：その他**
 モバイルデバイス用に開発されたAdobe Primetime Authentication REST API を介してプログラマーの実装に適用される値を表示します。
 
-**TVCD:ROKU**
+**TVCD: ROKU**
 Adobe Primetime Authentication REST API を介したプログラマーの実装に適用され、デバイスタイプとして「Roku」を送信する値を表示します。
 
-**TVCD:FIRETV**
-Adobe Primetime Authentication FireTV SDK を使用したプログラマー実装に適用される値を表示します。
+**TVCD: FIRETV**
+Adobe Primetime Authentication FireTV SDK を介してプログラマーの実装に適用される値を表示します。
 
-**TVCD:APPLETV**
+**TVCD: APPLETV**
 Adobe Primetime Authentication tvOS SDK を介してプログラマーの実装に適用される値を表示します。
 
-**TVCD:その他**
+**TVCD：その他**
 TV 接続デバイス用に開発されたAdobe Primetime Authentication REST API を介してプログラマーの実装に適用される値を表示します。
 
 **プラットフォーム：不明**
 Adobe Primetime認証サービスが不明なデバイスタイプを検出するプログラマー実装に適用される値を表示します。
 
-メカニズムのレビュー [クライアント情報を渡す](/help/authentication/passing-client-information-device-connection-and-application.md) をAdobe Primetime Authentication REST API または SDK に追加して、目的のデバイスタイプ（例：「Roku」）の送信方法の詳細を確認してください。
+のメカニズムのレビュー [クライアント情報を渡す](/help/authentication/passing-client-information-device-connection-and-application.md) をAdobe Primetime Authentication REST API または SDK に追加して、目的のデバイスタイプ（例：「Roku」）の送信方法の詳細を確認してください。
 
 すべてのレポートは、各Adobe Primetime認証環境に固有の設定に基づいて計算された値を集計します。 したがって、異なる TVE ダッシュボード環境を切り替える際に、異なるレポートデータを期待できます。
 
@@ -392,11 +391,11 @@ Adobe Primetime認証サービスが不明なデバイスタイプを検出す�
 
 という名前のファイル **Report.csv** が自動的にコンピューターにダウンロードされます。 そのため、お使いのブラウザーの設定で、ファイルのダウンロードが許可されていることを確認してください。
 
-Report.csv ファイルの計算中に、「データのエクスポート」読み込みアイコンが画面に表示されます。このアイコンは処理に時間がかかる場合があります **数分間** 書き出すデータのサイズに応じて異なります。
+Report.csv ファイルの計算中に、「データのエクスポート」読み込みアイコンが画面に表示されます。このアイコンは処理に時間がかかる場合があります。 **2～3 分** 書き出すデータのサイズに応じて異なります。
 
 #### AuthN TTL レポート (#authn-ttl-reports)
 
-このレポートには、すべてのプラットフォームの様々な MVPD とのチャネル統合用に設定された認証トークンの有効期間 (TTL) が表示されます。
+このレポートには、すべてのプラットフォームにわたる様々な MVPD とのチャネル統合用に設定された認証トークンの有効期間 (TTL) が表示されます。
 
 認証トークンの有効期間 ( 別名： **AuthN TTL**&#x200B;は、次のような人間が読み取り可能な値で表示されます。 **日、時間、分、秒**.
 
@@ -406,7 +405,7 @@ Report.csv ファイルの計算中に、「データのエクスポート」読
 
 ![AuthN TTL レポート](assets/authn-ttl-reports.png)
 
-*図 8:「Adobe Primetime TVE Dashboard AuthN TTL Report」タブ*
+*図 8: Adobe Primetime TVE ダッシュボードの「AuthN TTL Report」タブ*
 
 AuthN TTL レポートの表にはページが含まれ、画面サイズに応じて水平および垂直にスクロールできます。
 
@@ -420,7 +419,7 @@ AuthN TTL 値の変更を検討している場合は、 [統合](#tve-db-integra
 
 このレポートには、すべてのプラットフォームの様々な MVPD とのチャネル統合用に設定された認証トークンの有効期間 (TTL) が表示されます。
 
-認証トークンの有効期間 ( 別名 **AuthZ TTL**&#x200B;は、次のような人間が読み取り可能な値で表示されます。 **日、時間、分、秒**.
+認証トークンの有効期間 ( 別名： **AuthZ TTL**&#x200B;は、次のような人間が読み取り可能な値で表示されます。 **日、時間、分、秒**.
 
 ユーザーエクスペリエンスに関しては、AuthZ TTL レポートを使用すると、特定の MVPD および特定のプラットフォームを考慮してユーザーが承認される時間を視覚的に検査できます。
 
@@ -442,17 +441,17 @@ AuthZ の TTL 値を変更する場合は、 [統合](#tve-db-integrations-sec) 
 
 このレポートには、すべてのプラットフォームにわたる様々な MVPD とのチャネル統合用に設定されたシングルサインオン (SSO) ステータスが表示されます。
 
-シングルサインオンステータス ( 別名 **SSO ステータス**&#x200B;は、次の値を持つ 3 つの状態として表示されます。 **SSO 無効、SSO 有効、SSO 不確実**.
+シングルサインオンのステータス ( 別名 **SSO ステータス**&#x200B;は、次の値を持つ 3 つの状態として表示されます。 **SSO 無効、SSO 有効、SSO 不確実**.
 
 ユーザーエクスペリエンスに関しては、SSO レポートを使用すると、特定の MVPD および特定のプラットフォームを考慮して、期待されるユーザー認証 SSO エクスペリエンスを視覚的に検査できます。
 
-このタイプのレポートに移動するには、「**SSO レポート**」タブを&#x200B;**レポート**」セクションに追加します。
+このタイプのレポートに移動するには、「**SSO レポート**」タブを&#x200B;**レポート**」セクションに追加しました。
 
 
 ![TVE ダッシュボード SSO レポートタブ](assets/sso-reports.png)
 
 
-*図 10:「 Adobe Primetime TVE Dashboard SSO Reports 」タブ*
+*図 10: 「Adobe Primetime TVE Dashboard SSO Reports」タブ*
 
 SSO レポートの表にはページが含まれ、画面サイズに応じて水平および垂直にスクロールできます。
 
@@ -476,12 +475,12 @@ SSO のステータスを変更する場合は、 [統合](#tve-db-integrations-
 * 画面の右側にある「フィードバック」ボタンをクリックします
 * 件名を入力
 * メッセージを入力
-* 必要に応じて、「スクリーンショットをアップロード」ボタンをクリックして、メッセージにスクリーンショットをアップロードします
+* 必要に応じて、「スクリーンショットをアップロード」ボタンをクリックして、メッセージにスクリーンショットをアップロードします。
 * 「送信」ボタンをクリックします。
 
 ![ダッシュボードフィードバックフォームを開く](assets/tve-dashboard-feedback.png)
 
-*図 11:「 Adobe Primetime TVE Dashboard Feedback 」セクション*
+*図 11: Adobe Primetime TVE Dashboard の「Feedback」セクション*
 
 スクリーンショットの取り込み方法については、以下のリンクを参照してください。
 
@@ -503,12 +502,12 @@ TVE ダッシュボードが「メンテナンスモード」の場合、ユー�
 
 この場合、Adobe Primetime認証エンジニアリングチームが TVE ダッシュボードでメンテナンス作業を完了するのを待つ必要があります。
 
-### 縮退状態 {#degraded-state}
+### 機能縮退状態 {#degraded-state}
 
 ![TVE アプリが機能縮退状態になっています](assets/tve-degraded-state.png)
 
 
-*図：TVE アプリが機能縮退状態になっています*
+*図： TVE App in degraded state*
 
 TVE ダッシュボードが「機能縮退」状態の場合、ユーザーは検索および並べ替え機能を使用できませんが、ユーザーは新しい変更を表示または行うことができます。
 

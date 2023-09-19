@@ -1,23 +1,21 @@
 ---
-description: Primetime Player APIを使用して、プレイヤーの動作をカスタマイズできます。 メディアプレイヤーとそのリソースを記述するクラスです。
-title: Mediacoreクラス
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Primetime Player API を使用して、プレーヤーの動作をカスタマイズできます。 メディアプレーヤーとそのリソースを記述するクラスです。
+title: Mediacore クラス
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 0%
 
 ---
 
+# Mediacore クラス{#mediacore-classes}
 
-# Mediacoreクラス{#mediacore-classes}
+Primetime Player API を使用して、プレーヤーの動作をカスタマイズできます。 メディアプレーヤーとそのリソースを記述するクラスです。
 
-Primetime Player APIを使用して、プレイヤーの動作をカスタマイズできます。 メディアプレイヤーとそのリソースを記述するクラスです。
+TVSDK の API に関する完全なドキュメントを参照するには、 [Adobe Primetime API リファレンス](https://help.adobe.com/en_US/primetime/api/index.html).
 
-TVSDKのAPIに関する完全なドキュメントを参照するには、[Adobe PrimetimeAPIリファレンス](https://help.adobe.com/en_US/primetime/api/index.html)を参照してください。
-
-メディアプレイヤーとそのリソースを記述するクラスです。
-パッケージ：[com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/package-detail.html)
+メディアプレーヤーとそのリソースを記述するクラスです。
+パッケージ： [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/package-detail.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_2801E01282A948E6917910CA2FD1E05C"> 
  <thead> 
@@ -29,11 +27,11 @@ TVSDKのAPIに関する完全なドキュメントを参照するには、[Adobe
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> ABRControlParameters</a> </span> </td> 
-   <td colname="2"> すべての可変ビットレート制御パラメーターをカプセル化するクラス。 </td> 
+   <td colname="2"> すべての適応ビットレート制御パラメーターをカプセル化するクラス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/BufferControlParameters.html" format="html" scope="external"> BufferControlParameters</a></span> </td> 
-   <td colname="2"> すべてのバッファー制御パラメーターをカプセル化するクラス。 </td> 
+   <td colname="2"> すべてのバッファ制御パラメーターをカプセル化するクラス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ClosedCaptionStyles.html" format="html" scope="external"> ClosedCaptionsStyles</a></span> </td> 
@@ -45,43 +43,43 @@ TVSDKのAPIに関する完全なドキュメントを参照するには、[Adobe
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ContentFactory.html" format="html" scope="external"> ContentFactory</a> </span> </td> 
-   <td colname="2"> 広告ワークフローで使用される様々なコンポーネントを作成および管理するファクトリの基本クラス。 </td> 
+   <td colname="2"> 広告ワークフローで使用される様々なコンポーネントを作成および管理するためのファクトリベースクラス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultAdPolicySelector.html" format="html" scope="external"> DefaultAdPolicySelector</a></span> </td> 
-   <td colname="2"> 広告再生動作のデフォルト実装。 アプリケーションが広告の動作をカスタマイズできるインターフェイス。 </td> 
+   <td colname="2"> 広告の再生動作のデフォルト実装。 アプリケーションが広告の動作をカスタマイズするインターフェイス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultContentFactory.html" format="html" scope="external"> DefaultContentFactory</a></span> </td> 
-   <td colname="2">メタデータと広告解決プロセスの両方をサポートする、<span class="codeph"> MediaPlayerClient</span>ファクトリのデフォルト実装。 </td> 
+   <td colname="2">のデフォルトの実装 <span class="codeph"> MediaPlayerClient</span> ファクトリで、メタデータと広告解決プロセスの両方をサポートしています。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultMediaPlayer.html" format="html" scope="external"> DefaultMediaPlayer</a></span> </td> 
-   <td colname="2"><span class="codeph"> MediaPlayer</span>インターフェイスのデフォルトクラス実装。 </td> 
+   <td colname="2">のデフォルトクラス実装 <span class="codeph"> MediaPlayer</span> インターフェイス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultMediaPlayerConfig.html" format="html" scope="external"> DefaultMediaPlayerConfig</a> </span> </td> 
-   <td colname="2"> メディアプレイヤーのデフォルト実装の設定クラス。 </td> 
+   <td colname="2"> メディアプレーヤーのデフォルト実装の設定クラス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultMediaPlayerItemConfig.html" format="html" scope="external"> DefaultMediaPlayerItemConfig</a></span> </td> 
-   <td colname="2"> デフォルトのメディアプレイヤーアイテム設定クラス。 </td> 
+   <td colname="2"> デフォルトのメディアプレーヤーアイテム設定クラス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultMediaPlayerItemLoader.html" format="html" scope="external"> DefaultMediaPlayerItemLoader</a></span> </td> 
-   <td colname="2"> 初期設定のメディアプレイヤーアイテムローダー。 </td> 
+   <td colname="2"> デフォルトのメディアプレーヤーアイテムローダー。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayer.html" format="html" scope="external"> MediaPlayer</a></span> </td> 
-   <td colname="2"><span class="codeph"> DefaultMediaPlayer</span>クラスのパブリックインターフェイス。 イベント、PlayerState、Visibilityの定義済みリストが含まれます。 </td> 
+   <td colname="2">のパブリックインターフェイス <span class="codeph"> DefaultMediaPlayer</span> クラス。 Event、PlayerState、Visibility の列挙が含まれます。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerConfig.html" format="html" scope="external"> MediaPlayerConfig</a> </span> </td> 
-   <td colname="2"> メディアプレイヤー設定クラス。 </td> 
+   <td colname="2"> メディアプレーヤーの設定クラス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerContext.html" format="html" scope="external"> MediaPlayerContext</a></span> </td> 
-   <td colname="2"> 追加のコンテキストをメディアプレイヤーに提供するクラス。 </td> 
+   <td colname="2"> メディアプレーヤーに追加のコンテキストを提供するクラス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerItem.html" format="html" scope="external"> MediaPlayerItem</a></span> </td> 
@@ -89,23 +87,23 @@ TVSDKのAPIに関する完全なドキュメントを参照するには、[Adobe
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultMediaPlayerItemConfig.html" format="html" scope="external"> DefaultMediaPlayerItemConfig</a></span> </td> 
-   <td colname="2"> デフォルトのメディアプレイヤーアイテム設定クラス。 </td> 
+   <td colname="2"> デフォルトのメディアプレーヤーアイテム設定クラス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerItemLoader.html" format="html" scope="external"> MediaPlayerItemLoader</a></span> </td> 
-   <td colname="2">メディアプレイヤーリソースを読み込み、対応する<span class="codeph"> MediaPlayerItem</span>オブジェクトを作成するクラス。 </td> 
+   <td colname="2">メディアプレーヤーリソースを読み込み、対応する <span class="codeph"> MediaPlayerItem</span> オブジェクト。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerStatus.html" format="html" scope="external"> MediaPlayerStatus</a></span> </td> 
-   <td colname="2"> サポートされているメディアプレイヤーのステータスを含むクラス。 </td> 
+   <td colname="2"> メディアプレーヤーでサポートされるステータスを含むクラス。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerView.html" format="html" scope="external"> MediaPlayerView</a></span> </td> 
-   <td colname="2"><span class="codeph"> MediaPlayer</span>がビデオレンダリングに使用する表示のクラス。 </td> 
+   <td colname="2">で使用されるビューのクラス <span class="codeph"> MediaPlayer</span> ビデオレンダリング用。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaResource.html" format="html" scope="external"> MediaResource</a></span> </td> 
-   <td colname="2"> メディアリソースに関するすべての情報をラップするクラス。 メディアリソースの種類の定義済みリストが含まれます。 </td> 
+   <td colname="2"> メディアリソースに関するすべての情報をラップするクラス。 メディアリソースのタイプの列挙を含みます。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaResourceType.html" format="html" scope="external"> MediaResourceType</a></span> </td> 
@@ -113,16 +111,15 @@ TVSDKのAPIに関する完全なドキュメントを参照するには、[Adobe
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/PSDKConfig.html" format="html" scope="external"> PSDKConfig</a></span> </td> 
-   <td colname="2"> デフォルトのキュータグに加え、広告を配置する際にメディアプレイヤーが使用するカスタムタグをカプセル化するクラス。 また、アプリケーションに通知したいタグ名も含まれます。 </td> 
+   <td colname="2"> デフォルトのキュータグに加えて、広告配置の実行時にメディアプレーヤーが使用するカスタムタグをカプセル化するクラスです。 また、アプリケーションが通知を受け取るタグ名も含まれます。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/TextFormat.html" format="html" scope="external"> TextFormat</a></span> </td> 
-   <td colname="2"> テキストスタイル（クローズドキャプションスタイルなど）を記述する様々な属性をカプセル化するインターフェイス。 </td> 
+   <td colname="2"> テキストスタイル（クローズドキャプションスタイルなど）を表す様々な属性をカプセル化するインターフェイス。 </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/Version.html" format="html" scope="external"> バージョン</a></span> </td> 
-   <td colname="2"> TVSDKのバージョンと説明を提供するクラス。 </td> 
+   <td colname="2"> TVSDK のバージョンと説明を提供するクラス。 </td> 
   </tr> 
  </tbody> 
 </table>
-

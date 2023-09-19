@@ -1,24 +1,21 @@
 ---
-title: HTTPS経由のセキュアな広告読み込み
-description: HTTPS経由のセキュアな広告読み込み
+title: HTTPS を介したセキュアな広告読み込み
+description: HTTPS を介したセキュアな広告読み込み
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
+# HTTPS を介したセキュアな広告読み込み {#secure-ad-loading-over-https}
 
-# HTTPSを介したセキュアな広告読み込み{#secure-ad-loading-over-https}
+Adobe Primetimeには、Primetime 広告サーバーへの最初の呼び出しと、HTTPS を介した CRS 関連の呼び出しをリクエストするオプションが用意されています。
 
-Adobe Primetimeは、Primetime広告サーバーへの最初の呼び出しと、HTTPSを介したCRS関連の呼び出しをリクエストするオプションを提供します。
-
-この機能は、デフォルトでは有効になっていません。 セキュアな広告読み込みを有効にするには、次を使用します。
+この機能は、デフォルトでは有効になっていません。 セキュアな広告の読み込みを有効にするには、次を使用します。
 
 ```
 AuditudeSettings auditudeSettings = new AuditudeSettings(); 
 auditudeSettings. getForceHttpsConfiguration().setAdServerCalls(true);
 ```
-

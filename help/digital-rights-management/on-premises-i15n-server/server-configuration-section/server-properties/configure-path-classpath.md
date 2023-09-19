@@ -2,36 +2,33 @@
 title: パスとクラスパスの設定
 description: パスとクラスパスの設定
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '149'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # パスとクラスパスの設定{#configure-the-path-and-classpath}
 
-[!DNL flashaccess.war]には[!DNL jsafeWithNative.jar]が含まれています。これはCrypto-Jライブラリです。 後者は、暗号化操作を実行するために追加のネイティブライブラリが必要です。
+The [!DNL flashaccess.war] 次を含む [!DNL jsafeWithNative.jar]:Crypto-J ライブラリ。 後者の場合は、暗号化操作を実行するために追加のネイティブライブラリが必要です。
 
-1. パス追加のネイティブ[!DNL jsafe]ライブラリ。
+1. ネイティブの追加 [!DNL jsafe] ライブラリをパスに追加します。
 
-   * **Linux /  [!DNL libjsafe.so]  — を含むディレクトリ** はパス上に [!DNL libjsafe.so] 存在する必要があります（他のプラットフォームでもネイティブのCrypto-Jライブラリを利用できます）。例えば、`LD_LIBRARY_PATH`に[!DNL libjsafe.so]を設定します。
+   * **Linux / [!DNL libjsafe.so] -** を含むディレクトリ [!DNL libjsafe.so] はパス上に存在する必要があります（他のプラットフォームでもネイティブの Crypto-J ライブラリを使用できます）。 例えば、 [!DNL libjsafe.so] オン `LD_LIBRARY_PATH`.
 
-   * **Windows /  [!DNL jsafe.dll] - Windows** の対応するWindows/- [!DNL libjsafe.so] が適切 [!DNL jsafe.dll]です。
-   これらのライブラリは、[!DNL thirdparty]ライブラリフォルダーにあります。
-1. [!DNL adobe-flashaccess-certs] jarファイルの1つをクラスパスに配置します。
+   * **Windows / [!DNL jsafe.dll] -** Windows 上でのに対応する [!DNL libjsafe.so] が適切である [!DNL jsafe.dll].
 
-       このJARファイルは、WARファイルには含まれません。クラスパスに明示的に追加する必要があります。
+   これらのライブラリは、 [!DNL thirdparty] ライブラリフォルダー。
+1. 次のいずれかを配置： [!DNL adobe-flashaccess-certs] クラスパスの jar ファイル。
+
+       この JAR ファイルは WAR ファイルに含まれていません。クラスパスに明示的に追加する必要があります。
    
-   * 開発サーバー — [!DNL adobe-flashaccess-certs-prerelease.jar]のみを使用する必要があります。
-   * 本番サーバ — [!DNL adobe-flashaccess- certs.jar]のみを使用
+   * 開発サーバー — 使用する必要があるのは [!DNL adobe-flashaccess-certs-prerelease.jar].
+   * 実稼動サーバー — 使用する必要があるのは [!DNL adobe-flashaccess- certs.jar]
 
-この配布物には[!DNL shared]フォルダーが含まれ、このフォルダーにはjarファイルと事前設定済みの[!DNL AdobeInitial.properties]ファイルの両方が含まれます。 Adobeでは、これらの項目を[!DNL catalina.properties]ファイルを介して`common.loader`に追加することをお勧めします。 例：
+この配分には、 [!DNL shared] jar ファイルと事前設定済みの [!DNL AdobeInitial.properties] ファイル。 Adobeでは、次の項目を `common.loader` 経由 [!DNL catalina.properties] ファイル。 例：
 
 ```
 common.loader=<Any Pre-Existing Values>,${catalina.home}/shared/classes,${catalina.home}/shared/lib/*.jar
 ```
-
-

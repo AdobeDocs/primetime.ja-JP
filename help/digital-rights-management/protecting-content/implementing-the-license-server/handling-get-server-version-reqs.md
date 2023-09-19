@@ -1,22 +1,20 @@
 ---
-title: Get Server Version要求の処理
-description: Get Server Version要求の処理
+title: Get Server Version リクエストの処理
+description: Get Server Version リクエストの処理
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
+# Get Server Version リクエストの処理 {#handle-get-server-version-requests}
 
-# Get Server Version要求を処理{#handle-get-server-version-requests}
+Adobe Primetime DRM クライアント 3.0 以降は、サーバーの機能を判断するための Get Server Version リクエストを送信します。 Primetime DRM SDK 3.0 以降を使用するすべてのサーバーは、Get Server Version リクエストのサポートを実装する必要があります。
 
-Adobe PrimetimeDRMクライアント3.0以降は、サーバーの機能を判断するための「Get Server Version」要求を送信します。 Primetime DRM SDK 3.0以降を使用しているすべてのサーバーは、Get Server Version要求のサポートを実装する必要があります。
+* リクエストハンドラークラスは、 `com.adobe.flashaccess.sdk.protocol.getversion.GetServerVersionHandler`
+* リクエストメッセージクラスは、 `com.adobe.flashaccess.sdk.protocol.getversion.GetServerVersionRequestMessage`
+* リクエスト URL は、「メタデータのライセンスサーバー URL」+「」である必要があります [!DNL /flashaccess/getServerVersion/v3]&quot;
 
-* リクエストハンドラークラスは`com.adobe.flashaccess.sdk.protocol.getversion.GetServerVersionHandler`です
-* 要求メッセージクラスは`com.adobe.flashaccess.sdk.protocol.getversion.GetServerVersionRequestMessage`です
-* 要求URLは、「メタデータのライセンスサーバーURL」 + 「 [!DNL /flashaccess/getServerVersion/v3]」にする必要があります。
-
-Primetime DRM SDK 4.0以降の場合、Get Server Versionリクエストに対する応答は、サーバーがPrimetime DRMプロトコルのバージョン3と4をサポートしていることをクライアントに示します。
+Primetime DRM SDK 4.0 以降の場合、 Get Server Version 要求への応答は、サーバーが Primetime DRM プロトコルのバージョン 3 および 4 をサポートしていることをクライアントに示します。

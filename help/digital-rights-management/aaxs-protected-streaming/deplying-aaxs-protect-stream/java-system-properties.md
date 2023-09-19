@@ -1,26 +1,23 @@
 ---
-title: Javaシステムのプロパティ
-description: Javaシステムのプロパティ
+title: Java システムプロパティ
+description: Java システムプロパティ
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
+# Java システムプロパティ {#java-system-properties}
 
-# Javaシステムのプロパティ{#java-system-properties}
+次の 2 つの Java System プロパティを、ライセンスサーバーの構成ファイルとログファイルの場所を変更するように設定することもできます。
 
-次の2つのJava Systemプロパティをオプションで設定して、ライセンスサーバーの設定ファイルとログファイルの場所を変更することができます。
+* *LicenseServer.ConfigRoot*  — ライセンスサーバーのすべての構成ファイルを含むディレクトリ。 これらのファイルの内容について詳しくは、[ライセンスサーバの設定ファイル](../../aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-configuration-directory-structure.md)&quot;. 設定しない場合、デフォルトはです。 *CATALINA_BASE/licenseserver*.
+* *LicenseServer.LogRoot*  — ライセンスサーバーアプリケーションのログが書き込まれる「logs」フォルダのディレクトリ。 設定しない場合、デフォルトはです。 *LicenseServer.ConfigRoot*.
 
-* *LicenseServer.ConfigRoot*  — ライセンスサーバーのすべての設定ファイルが格納されているディレクトリ。これらのファイルの内容について詳しくは、「[ライセンスサーバー構成ファイル](../../aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-configuration-directory-structure.md)」を参照してください。 設定しなかった場合のデフォルト値は&#x200B;*CATALINA_BASE/licenseserver*&#x200B;です。
-* *LicenseServer.LogRoot*  - 「logs」フォルダーのディレクトリ。ここで、ライセンスサーバーのアプリケーションログが書き込まれます。設定しない場合、デフォルトは&#x200B;*LicenseServer.ConfigRoot*&#x200B;です。
-
-[!DNL catalina.bat]または[!DNL catalina.sh]を使用してTomcatを開始する場合は、`JAVA_OPTS`環境変数を使用して、これらのシステムプロパティを簡単に設定できます。 ここで設定したJavaオプションは、Tomcatの起動時に使用されます。 例えば、次のように設定します。
+を使用している場合、 [!DNL catalina.bat] または [!DNL catalina.sh] Tomcat を起動するには、以下のシステムプロパティを `JAVA_OPTS` 環境変数。 ここで設定した Java オプションは、Tomcat の起動時に使用されます。 例えば、次のように設定します。
 
 ```
 JAVA_OPTS=-DLicenseServer.ConfigRoot="absolute-path-to-config-folder" -DLicenseServer.LogRoot="absolute-path-to-log-folder"
 ```
-

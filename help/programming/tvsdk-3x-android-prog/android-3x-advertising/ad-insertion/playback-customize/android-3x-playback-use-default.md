@@ -1,44 +1,42 @@
 ---
 description: デフォルトの広告動作を使用するように選択できます。
-title: デフォルトの再生動作の使用
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: デフォルトの再生動作を使用
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
-
-# デフォルトの再生動作{#use-the-default-playback-behavior}を使用
+# デフォルトの再生動作を使用 {#use-the-default-playback-behavior}
 
 デフォルトの広告動作を使用するように選択できます。
 
-1. デフォルトの動作を使用するには、次のタスクのいずれかを実行します。
+1. デフォルトの動作を使用するには、次のいずれかのタスクを実行します。
 
-   * 独自の`AdvertisingFactory`クラスを実装する場合、`createAdPolicySelector`に対してnullを返します。
+   * 独自の `AdvertisingFactory` クラスは、の null を返します。 `createAdPolicySelector`.
 
-   * `AdvertisingFactory`クラスのカスタム実装がない場合、TVSDKはデフォルトの広告ポリシーセレクターを使用します。
+   * のカスタム実装がない場合、 `AdvertisingFactory` クラスの場合、 TVSDK はデフォルトの広告ポリシーセレクターを使用します。
 
-## カスタマイズ再生の設定{#set-up-customized-playback}
+## カスタマイズされた再生の設定 {#set-up-customized-playback}
 
-広告動作は、カスタマイズまたは上書きできます。
+広告の動作をカスタマイズまたは上書きできます。
 
-広告動作をカスタマイズまたは上書きする前に、に広告ポリシーインスタンスを登録します。
-広告動作をカスタマイズするには、次のいずれかを実行します。
+広告の動作をカスタマイズまたは上書きする前に、広告ポリシーインスタンスをに登録します。
+広告の動作をカスタマイズするには、次のいずれかの操作を行います。
 
-* `AdPolicySelector`インターフェイスとそのすべてのメソッドを実装します。
+* の実装 `AdPolicySelector` インターフェイスおよびそのすべてのメソッド。
 
-   デフォルトの広告動作&#x200B;**すべての**&#x200B;を上書きする必要がある場合は、このオプションをお勧めします。
+  このオプションは、 **すべて** デフォルトの広告の動作です。
 
-* `DefaultAdPolicySelector`クラスを拡張し、カスタマイズが必要な動作のみに実装を提供します。
+* の拡張 `DefaultAdPolicySelector` クラスを作成し、カスタマイズが必要な動作に対してのみ実装を提供します。
 
-   デフォルトの動作の&#x200B;**一部**&#x200B;のみを上書きする必要がある場合は、このオプションをお勧めします。
+  このオプションは、 **some** のデフォルトの動作を設定します。
 
-広告動作をカスタマイズするには：
+広告の動作をカスタマイズするには：
 
-1. `AdPolicySelector`インターフェイスとそのすべてのメソッドを実装します。
-1. TVSDKが使用するポリシーインスタンスを、広告ファクトリを介して割り当てます。
+1. の実装 `AdPolicySelector` インターフェイスとそのすべてのメソッド。
+1. 広告ファクトリを通じて、TVSDK が使用するポリシーインスタンスを割り当てます。
 
    >[!NOTE]
    >
@@ -50,10 +48,10 @@ ht-degree: 0%
    >&amp;rbrace;
    >...
    >&amp;rbrace;
-   >// register custom content factory with media player
+   >//カスタムコンテンツファクトリをメディアプレーヤーに登録します。
    >MediaPlayerItemConfig config = new MediaPlayerItemConfig();
    >config.setAdvertisingFactory(new CustomContentFactory());
-   >//この設定は、読み込み中に後で渡されます>リソース
+   >//この設定は、後で読み込み中に渡される > リソース
    >mediaPlayer.replaceCurrentResource(resource, config);
 
-1. カスタマイズを実装します。
+1. カスタマイズ機能を実装します。

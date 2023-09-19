@@ -1,18 +1,16 @@
 ---
-description: 機能マネージャーからディスパッチされたイベントをアプリケーションで処理する必要がある場合は、PlayerFragment.javaファイルにマネージャーを登録する必要があります。
+description: 機能マネージャーからディスパッチされるイベントを処理する必要がある場合は、PlayerFragment.java ファイルにマネージャーを登録する必要があります。
 title: イベントの処理
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
+# イベントの処理 {#handling-events}
 
-# イベント{#handling-events}の処理
-
-機能マネージャーからディスパッチされたイベントをアプリケーションで処理する必要がある場合は、PlayerFragment.javaファイルにマネージャーを登録する必要があります。
+機能マネージャーからディスパッチされるイベントを処理する必要がある場合は、PlayerFragment.java ファイルにマネージャーを登録する必要があります。
 
 例：
 

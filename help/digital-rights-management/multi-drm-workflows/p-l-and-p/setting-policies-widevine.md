@@ -1,29 +1,26 @@
 ---
-title: Output Protectionポリシーの使用
-description: Output Protectionポリシーの使用
+title: 出力保護ポリシーの使用
+description: 出力保護ポリシーの使用
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
 
 ---
 
+# 出力保護ポリシーの使用{#using-output-protection-policies}
 
-# Output Protectionポリシーの使用{#using-output-protection-policies}
+**Widevine の出力保護ポリシー**
 
-**Widevineの出力保護ポリシー**
+Widevine は、アナログとデジタルの両方の出力保護制限をネイティブにサポートしています。 生成されたライセンスにこれらのポリシーを添付する方法については、Widevine サービスプロバイダーのドキュメントを参照してください。
 
-Widevineは、アナログ出力保護とデジタル出力保護の両方の制限をネイティブでサポートしています。 生成されたライセンスにこれらのポリシーを適用する方法については、Widevineサービスプロバイダーのドキュメントを参照してください。
+Widevine サービスプロバイダーとして Expressplay を使用する場合、hdcpOutputControl フラグを使用して、トークン生成時にデジタル出力保護ポリシーを添付します。使用できる値は、0、1、2 です。 0 = HDCP_NONE、1 = HDCP_V1、2 = HDCP_V2 です。 HDCP_V1 と HDCP_V2 の両方で、それぞれ HDCP バージョン 1.X と 2.X が適用されます。
 
-WidevineサービスプロバイダーとしてExpressplayを使用する場合は、hdcpOutputControlフラグを使用して、トークン生成時にデジタル出力保護ポリシーをアタッチします。
-指定できる値は0、1、2です。0 = HDCP_NONE、1 = HDCP_V1、2 = HDCP_V2です。 HDCP_V1とHDCP_V2はどちらも、それぞれHDCPバージョン1.Xと2.Xを適用します。
+Expressplay は、現在、アナログ出力制限のアタッチをサポートしていません
 
-Expressplayは、現在、アナログ出力制限のアタッチをサポートしていません
+**PlayReady 出力保護ポリシー**
 
-**PlayReady出力保護ポリシー**
+PlayReady は、アナログとデジタルの両方の出力保護制限もネイティブにサポートしています。 設定可能な出力保護レベルの値です。 ページ [出力保護レベル](https://msdn.microsoft.com/en-us/library/dn468831.aspx) には、設定できる値と、クライアントの期待される動作が記載されています。
 
-PlayReadyでは、アナログ出力保護とデジタル出力保護の両方の制限もネイティブでサポートされています。 設定できる出力保護レベルの値です。 [Output Protection Levels](https://msdn.microsoft.com/en-us/library/dn468831.aspx)ページには、設定できる値と、クライアントの期待される動作がドキュメントされます。
-
-Expressplayを使用する場合は、compressedDigitalAudioOPL、uncompressedDigitalAudioOPL、compressedDigitalVideoOPL、uncompressedDigitalVideoOPLおよびunknownOutputBehaviorフラグを使用して、トークン生成時に出力保護レベル値をアタッチします。 これらは[PlayReadyライセンストークンリクエスト](https://www.expressplay.com/developer/restapi/#playready-license-token-request)に記載されています
+Expressplay を使用する場合は、 compressedDigitalAudioOPL、uncompressedDigitalAudioOPL、compressedDigitalVideoOPL、uncompressedDigitalVideoOPL および unknownOutputBehavior フラグを使用して、トークン生成時に出力保護レベル値をアタッチします。 これらについては、で説明しています。 [PlayReady ライセンストークンリクエスト](https://www.expressplay.com/developer/restapi/#playready-license-token-request)

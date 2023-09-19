@@ -2,8 +2,7 @@
 title: CRL ファイルについて
 description: CRL ファイルについて
 copied-description: true
-exl-id: 126a323d-9433-4a1e-a617-2d3bbf717cce
-source-git-commit: 6a00df9c061da43f6efa49d927873db629568597
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -22,19 +21,19 @@ ht-degree: 0%
 
    * URL: [!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl>]
    * ファイル： [!DNL http___crl2.adobe.com_Adobe_FlashAccessIntermediateCA.crl]
-   * 有効性：創造から約 12 カ月間有効
+   * 有効性：作成後約 12 ヶ月間有効
 
 * **ルート CRL:**
 
    * URL: [!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl>]
    * ファイル： [!DNL http___crl2.adobe.com_Adobe_FlashAccessRootCA.crl]
-   * 有効性：創造から約 5 年間の間有効
+   * 有効性：作成から約 5 年間有効
 
 * **最新の CRL:**
 
    * URL: [!DNL <ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl>]
    * ファイル： [!DNL http___crl3.adobe.com_AdobeSystemsIncorporatedFlashAccessRuntime_LatestCRL.crl]
-   * 有効性：創造から約 3 ヶ月間有効
+   * 有効性：作成後約 3 か月間有効
 
 ライセンスサーバーで使用できる外部でホストされている CRL については、Adobeサポートにお問い合わせください。
 

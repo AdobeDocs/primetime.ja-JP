@@ -1,24 +1,22 @@
 ---
-title: 同期要求の処理
-description: 同期要求の処理
+title: 同期リクエストの処理
+description: 同期リクエストの処理
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%
 
 ---
 
+# 同期リクエストの処理{#handling-synchronization-requests}
 
-# 同期要求{#handling-synchronization-requests}の処理
+. ライセンスが同期要件を指定する場合 ([同期の要件](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md#requirements-for-synchronization)) の場合、クライアントは、ライセンスで指定された頻度に基づいて、定期的に同期リクエストをサーバーに送信します。 同期メッセージを有効にするには、PlayRight に SyncFrequencyRequirements を設定します。
 
-.ライセンスで同期の要件（[同期の要件](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md#requirements-for-synchronization)）が指定されている場合、クライアントは、ライセンスで指定されている頻度に基づいて、定期的に同期要求をサーバーに送信します。 同期メッセージを有効にするには、PlayRightでSyncFrequencyRequirementsを設定します。
+* リクエストハンドラークラスは、 `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationHandler`
+* リクエストメッセージクラスは、 `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationRequestMessage`
+* クライアントとサーバーの両方がプロトコルバージョン 5 をサポートしている場合、要求 URL は「License Server URL in metadata: + &quot;/flashaccess/sync/v4」になります。 それ以外の場合、リクエスト URL は「メタデータのライセンスサーバー URL」 + 「/flashaccess/sync/v3」です。
 
-* リクエストハンドラークラスは`com.adobe.flashaccess.sdk.protocol.sync.SynchronizationHandler`です
-* 要求メッセージクラスは`com.adobe.flashaccess.sdk.protocol.sync.SynchronizationRequestMessage`です
-* クライアントとサーバーの両方がプロトコルバージョン5をサポートしている場合、要求URLは「メタデータのライセンスサーバーURL:+ 「/flashaccess/sync/v4」)。 それ以外の場合、リクエストURLは「メタデータのライセンスサーバーURL」 + 「/flashaccess/sync/v3」になります。
+同期メッセージは、クライアントの時刻とサーバーの時刻を同期するために使用されます。 ライセンスがコンテンツに埋め込まれ、ライセンスサーバから取得する必要がない場合は、クライアントがライセンスの有効期限を回避するためにクライアントのクロックを変更しないように、クライアントの時刻を同期することが重要です。
 
-同期メッセージは、クライアントの時刻とサーバーの時刻を同期するために使用されます。 ライセンスがコンテンツに埋め込まれていて、ライセンスサーバから取得する必要がない場合は、クライアントの時間を同期させて、クライアントがライセンスの有効期限を回避するためにクロックを変更しないようにすることが重要です。
-
-同期メッセージを使用して、クライアント状態情報をサーバー(`getClientState()`)に通信し、ロールバック検出を行うこともできます。 [ロールバック保護](../../aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-rollback-detection.md)を参照してください。
+同期メッセージを使用して、クライアントの状態情報をサーバーに伝えることもできます ( `getClientState()`) を使用して、ロールバック検出を行います。 詳しくは、 [ロールバック保護](../../aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-rollback-detection.md).

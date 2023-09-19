@@ -1,8 +1,7 @@
 ---
 title: 一般使用状況レポート
 description: 一般使用状況レポート
-exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
-source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 0%
@@ -41,12 +40,12 @@ content consumption.....-->
 
 この折れ線グラフでは、定義したセグメントの選択した期間の AuthN OK、AuthZ OK、Play Requests、Unique Subscribers の値の時間の変化が表示されます。
 
-+++プログラマ — **AuthN OK / AuthZ OK / Play リクエスト/ Unique Subscribers**
++++プログラマー — **AuthN OK / AuthZ OK / Play リクエスト/ Unique Subscribers**
 
 ![](assets/progr-line-graph-gu.png)
 
 
-*図：AuthN OK / AuthZ OK / Play リクエスト/プログラマーユーザーの一意の購読者*
+*図： AuthN OK / AuthZ OK / Play リクエスト/プログラマーユーザーの一意の購読者*
 
 
 +++
@@ -57,7 +56,7 @@ content consumption.....-->
 ![](assets/mvpd-line-graph-gu.png)
 
 
-*図：AuthN OK / AuthZ OK / MVPD ユーザーの一意の購読者*
+*図： AuthN OK / AuthZ OK / MVPD ユーザのユニークサブスクライバ*
 
 
 +++
@@ -66,34 +65,34 @@ x 軸は現在の時間枠内の単位を示し、y 軸はその期間の基本�
 
 * **AuthN OK**
 
-   AuthN OK は、成功した認証の数です。 詳細および定義については、 [製品の概念：AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
+  AuthN OK は、成功した認証の数です。 詳細および定義については、 [製品の概念： AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
 
 * **AuthZ OK**
 
-   AuthZ OK は、正常に認証された数です。 詳細および定義については、 [製品の概念：AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
+  AuthZ OK は、正常に認証された数です。 詳細および定義については、 [製品の概念： AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
 
-* **再生リクエスト**
+* **Play リクエスト**
 
-   Play リクエストは、再生リクエストの数です。 詳細および定義については、 [製品の概念：リクエストの再生](/help/AccountIQ/product-concepts.md#play-requests-def)
+  Play リクエストは、再生リクエストの数です。 詳細および定義については、 [製品の概念：リクエストの再生](/help/AccountIQ/product-concepts.md#play-requests-def)
 
-   >[!NOTE]
-   >
-   >MVPD ユーザーは、再生要求の折れ線グラフを使用できません。
+  >[!NOTE]
+  >
+  >MVPD ユーザーは、再生要求の折れ線グラフを使用できません。
 
 
 * **ユニーク購読者**
 
-   ユニーク購読者は、成功したユニーク購読者の数です。 詳細および定義については、 [製品の概念：ユニーク購読者](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
+  ユニーク購読者は、成功したユニーク購読者の数です。 詳細および定義については、 [製品の概念：個別購読者](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
 
-   >[!NOTE]
-   >
-   >プログラマーがAdobeTempPass （無料プレビュー）を使用している場合、ユニーク購読者の合計数には、ユニークデバイスの数も含まれます。
+  >[!NOTE]
+  >
+  >プログラマーがAdobeTempPass （無料プレビュー）を使用している場合、ユニーク購読者の合計数には、ユニークデバイスの数も含まれます。
 
 ## スナップショットの概要 — しきい値を上回るアカウント {#snapshot-overview}
 
 この追加フィルターを使用して分析とレポートを微調整し、様々な使用状況のしきい値を設定します。 目的の MVPD とチャネルを選択して分析用のセグメント（またはコホート）を定義したら、次のフィルターを使用して、購読者の行動を分析することもできます。
 
-* デバイス数しきい値
+* デバイス数のしきい値
 
 * IP しきい値の数
 
@@ -101,11 +100,11 @@ x 軸は現在の時間枠内の単位を示し、y 軸はその期間の基本�
 
 のしきい値を更新する場合 [アカウントセグメント — 選択したしきい値に基づく](#account-segments-basedon-segments) パネルでは、次の場所で影響を確認できます。
 
-* [アカウントごとの 1 週間（または 1 ヶ月）のデバイス数](#devices-week-account)
+* [アカウントごとの 1 週間（または 1 ヶ月）あたりのデバイス数](#devices-week-account)
 
 * [アカウントごとの 1 週間（または 1 ヶ月）の場所](#locations-week-account)
 
-* [アカウントごとの 1 週間（または 1 ヶ月）の IP](#ip-week-account)
+* [アカウントごとの 1 週間（または 1 ヶ月）あたりの IP](#ip-week-account)
 
 * [アカウントセグメントの履歴表示](#account-segment-historical-view)
 
@@ -115,27 +114,27 @@ x 軸は現在の時間枠内の単位を示し、y 軸はその期間の基本�
 
 ### アカウントセグメント — 選択したしきい値に基づく {#account-segments-basedon-segments}
 
-この **アカウントセグメント — 選択したしきい値に基づく** パネルでは、デバイス数、IP 数、郵便番号数のしきい値 (1～10) を設定できます。
+The **アカウントセグメント — 選択したしきい値に基づく** 「 」パネルでは、デバイス数、IP の数、郵便番号の数のしきい値 (1 ～ 10) を設定できます。
 
-グラフには次の情報が表示されます。
+グラフには、次の情報が表示されます。
 
 * サブスクライバーアカウントの絶対数
 
-* そのセグメントの合計購読者アカウント数のうち、割合
+* そのセグメントの合計購読者アカウント数のうち、割合 (%)
 
-   を使用して、ある期間、X 個のデバイス、Y 個の IP、Z 個の郵便番号を使用して、（定義された）MVPDs 用のチャネルのコンテンツを使用します。
+  を使用して、ある期間、X 個のデバイス、Y 個の IP、Z 個の郵便番号を使用して、（定義された）MVPDs 用のチャネルのコンテンツを使用します。
 
 ![](assets/select-thresholds.png)
 
 ## アカウントごとの 1 週間（または 1 ヶ月）あたりのデバイス数 {#devices-week-account}
 
-この **棒グラフ** では、購読者がデバイスを使用してコンテンツにアクセスする方法に関する使用状況に関するインサイトを提供します。
+The **棒グラフ** では、購読者がデバイスを使用してコンテンツにアクセスする方法に関する使用状況に関するインサイトを提供します。
 
 X 軸には「勘定科目数」がプロットされ、Y 軸には「デバイス数」がプロットされます。 アカウントごとに設定したデバイス数のしきい値に基づいて、1 週間の間に特定数のデバイスからコンテンツを消費した購読者アカウントの絶対数が示されます。
 
 ![](assets/bar-gr-devices-w-acc.png)
 
-（デバイス数に固有の）バーにカーソルを合わせると、1 週間にチャネルコンテンツをストリーミングしている購読者のアカウント数（およびセグメント内の合計購読者アカウント数の割合）に関する情報が示されるラベルが表示されます。
+（デバイス数に固有の）バーにカーソルを合わせると、1 週間にチャネルコンテンツをストリーミングしている購読者アカウントの数（およびセグメント内の合計購読者アカウントの割合）に関する情報が示されるラベルが表示されます。
 
 また、グラフは次のマークも付けます。
 
@@ -155,7 +154,7 @@ X 軸には「勘定科目数」がプロットされ、Y 軸には「デバイ�
 
 次に類似 [アカウントごとの 1 週間（または 1 ヶ月）あたりのデバイス数](#devices-week-account)「 Locations per week （または month） per Account 」指標を使用すると、様々な場所から購読者のアカウントの使用状況を分析し、パスワード共有をより詳細に識別できます。 X 軸には「勘定科目数」がプロットされ、Y 軸には「事業所数」がプロットされます。
 
-この指標と [アカウントごとの 1 週間（または 1 ヶ月）あたりのデバイス数](#devices-week-account) および [アカウントごとの 1 週間（または 1 ヶ月）の IP](#ip-week-account) は、パスワード共有インスタンスをより正確に判断するのに役立ちます。その結果、真正なユーザーは、にカウントされなくなります。
+この指標と [アカウントごとの 1 週間（または 1 ヶ月）あたりのデバイス数](#devices-week-account) およびの数 [アカウントごとの 1 週間（または 1 ヶ月）の IP](#ip-week-account) は、真正なユーザーがカウントされないように、パスワード共有インスタンスをより正確に判断するのに役立ちます。
 
 ![](assets/graph-loc-week-acc.png)
 
@@ -204,4 +203,3 @@ x 軸にはアカウント数がプロットされ、y 軸には IP 数がプロ
 >[!MORELIKETHIS]
 >
 >* 選択したセグメントの上位 1000 人の購読者に関するレポートを書き出す方法については、を使用した一般使用状況レポートのフィルターを使用して説明します。 [上位 1000 件のアカウントのエクスポート](/help/AccountIQ/export-acc-information.md) オプション。
-

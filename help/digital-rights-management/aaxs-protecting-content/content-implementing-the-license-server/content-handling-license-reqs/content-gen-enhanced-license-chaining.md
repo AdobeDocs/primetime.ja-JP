@@ -1,21 +1,18 @@
 ---
-title: 拡張ライセンスチェーン
-description: 拡張ライセンスチェーン
+title: 拡張ライセンスチェーニング
+description: 拡張ライセンスチェーニング
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
 
 ---
 
+# 拡張ライセンスチェーニング {#enhanced-license-chaining}
 
-# 拡張ライセンスチェーン{#enhanced-license-chaining}
-
-Adobeアクセス3.0で拡張ライセンスチェーンを使用する場合、特定のマシンのライセンスを初めて要求する際に、リーフとルートの両方を発行することをお勧めします。 ユーザーが既にRootライセンスを持っている場合、サーバーはリーフのみを発行する可能性があります（`LicenseRequestMessage.clientHasEnhancedRootForPolicy()`を呼び出して、クライアントに3.0拡張ルートが既に存在するかどうかを判断します）。 以降のライセンスリクエストでは、クライアントは、既にリーフとルートが存在することを示すので、サーバは新しいRootライセンスを発行する必要があります。 拡張ライセンスチェーンを使用する場合は、`setRootKeyRetrievalInfo()`を呼び出して、ポリシーのルート暗号化キーの復号化に必要な資格情報を指定する必要があります。
+Adobeアクセス 3.0 で拡張されたライセンスチェーニングを使用する場合、ユーザーが特定のマシンのライセンスを初めてリクエストする際に、リーフとルートの両方を発行することをお勧めします。 ユーザーが既に Root ライセンスを持っている場合、サーバはリーフ ( `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` をクリックして、クライアントに既に 3.0 拡張ルートがあるかどうかを判断します。 以降のライセンス要求では、クライアントはすでにリーフとルートを持っていることを示すので、サーバは新しいルートライセンスを発行する必要があります。 拡張ライセンスチェーニングを使用する場合、 `setRootKeyRetrievalInfo()` は、ポリシーのルート暗号化キーを復号化するために必要な資格情報を提供するために呼び出す必要があります。
 
 >[!NOTE]
 >
->ポリシーが3.0拡張ライセンスチェーンをサポートしているが、クライアントがAdobeアクセス2.0の場合、サーバーは2.0オリジナルのチェーンライセンスを発行します。 クライアントのバージョンを確認するには、LicenseRequestMessage.getClientVersion()を使用します。
-
+>ポリシーが 3.0 拡張ライセンスチェーンをサポートしているが、クライアントがAdobeアクセス 2.0 の場合、サーバーは 2.0 オリジナルのチェーンされたライセンスを発行します。 クライアントのバージョンを確認するには、 LicenseRequestMessage.getClientVersion() を使用します。

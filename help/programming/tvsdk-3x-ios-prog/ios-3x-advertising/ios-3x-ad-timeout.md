@@ -1,24 +1,22 @@
 ---
-description: Adobe Primetimeのad decisioningインターフェイスを使用して、VODおよびライブ/リニアコンテンツに広告を挿入できます。
-title: 広告の要件
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Adobe Primetime Ad Decisioning インターフェイスを使用して、VOD およびライブ/リニアコンテンツに広告を挿入できます。
+title: 広告要件
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
 
 ---
 
+# 広告タイムアウト {#ad-timeout}
 
-# 広告タイムアウト{#ad-timeout}
+## AV Foundation の要件 {#av-foundation-requirements}
 
-## AVファンデーションの要件{#av-foundation-requirements}
+VOD コンテンツの場合、メインコンテンツマニフェストの読み込み、広告の解決、広告マニフェストの読み込みを含むプレイリストのステッチは、35 秒以内に完了する必要があります。
 
-VODコンテンツの場合、メインコンテンツマニフェストの読み込み、広告の解決、広告マニフェストの読み込みを含むプレイリストのステッチは、35秒以内に完了する必要があります。
+ライブコンテンツの場合、プレイリストが更新されるたびに、プレイリストのステッチを 20 秒以内に完了する必要があります
 
-Liveコンテンツの場合、プレイリストが更新されるたびに、プレイリストのステッチが20秒以内に完了する必要があります
-
-**AdResolutionのタイムアウトに関連するAPI**
+**AdResolution タイムアウトに関連する API**
 
 ```
 /** @name Properties */
@@ -29,7 +27,7 @@ Liveコンテンツの場合、プレイリストが更新されるたびに、�
 @property (notatomic, assign) double adResolutionTimeout;
 ```
 
-広告メタデータを設定する際に、PTAdMetadata::adResolutionTimeoutを設定してadResolutionTimeoutを設定できます。
+adResolutionTimeout は、広告メタデータの設定時に PTAdMetadata::adResolutionTimeout を設定して設定できます。
 
 ```
 // Create an instance of PTAuditudeMetadata and set its property
@@ -37,9 +35,9 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adResolutionTimeout = 15 seconds
 ```
 
-その後、次の節に従います。[Primetime広告サーバーメタデータ](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)。
+その後は、次の手順に従います。 [Primetime 広告サーバーメタデータ](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
 
-**AdManifestのタイムアウトに関連するAPI**
+**AdManifest タイムアウトに関連する API**
 
 ```
 /** @name Properties */
@@ -50,7 +48,7 @@ adMetadata.adResolutionTimeout = 15 seconds
  @property (notatomic, assign) double adManifestTimeout; 
 ```
 
-広告メタデータを設定する際に、PTAdMetadata::adManifestTimeoutを設定することで、adManifestTimeoutを設定できます。
+adManifestTimeout は、広告メタデータの設定時に PTAdMetadata::adManifestTimeout を設定することで設定できます。
 
 
 ```
@@ -59,4 +57,4 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adManifestTimeout = 5 seconds
 ```
 
-その後、次の節に従います。[Primetime広告サーバーメタデータ](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)。
+その後は、次の手順に従います。 [Primetime 広告サーバーメタデータ](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).

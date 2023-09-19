@@ -1,38 +1,36 @@
 ---
-description: ClosedCaptionStylesクラスを使用して、クローズドキャプショントラックのスタイル情報を指定できます。 プレイヤーが表示するクローズドキャプションのスタイルを設定します。
+description: ClosedCaptionStyles クラスを使用して、クローズドキャプショントラックのスタイル設定情報を指定できます。 プレーヤーで表示されるクローズドキャプションのスタイルを設定します。
 title: クローズドキャプションのスタイル設定を制御する
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
-
 # クローズドキャプションのスタイル設定を制御する{#control-closed-caption-styling}
 
-ClosedCaptionStylesクラスを使用して、クローズドキャプショントラックのスタイル情報を指定できます。 プレイヤーが表示するクローズドキャプションのスタイルを設定します。
+ClosedCaptionStyles クラスを使用して、クローズドキャプショントラックのスタイル設定情報を指定できます。 プレーヤーで表示されるクローズドキャプションのスタイルを設定します。
 
-このクラスには、フォントの種類、サイズ、色、背景の不透明度などのクローズドキャプションのスタイル情報がカプセル化されています。 関連付けられたヘルパークラス`ClosedCaptionStylesBuilder`は、クローズドキャプションスタイル設定の作業を容易にします。
+このクラスは、フォントタイプ、サイズ、色、背景の不透明度など、クローズドキャプションのスタイル設定情報をカプセル化します。 関連付けられたヘルパークラス `ClosedCaptionStylesBuilder`を使用すると、クローズドキャプションスタイルの設定を容易におこなうことができます。
 
-## クローズドキャプションのスタイルを設定{#section_DAE84659D1964DB1B518F91B59AF29D9}
+## クローズドキャプションのスタイルの設定 {#section_DAE84659D1964DB1B518F91B59AF29D9}
 
-TVSDKのメソッドを使用して、クローズドキャプションテキストのスタイルを設定できます。
+TVSDK メソッドを使用して、クローズドキャプションのテキストのスタイルを設定できます。
 
-1. MediaPlayerがPREPAREDステータス以上になるまで待ちます（[有効な状態を待つ](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)を参照）。
+1. MediaPlayer のステータスが PREPARED 以上になるまで待ちます ( [有効な状態になるのを待つ](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)) をクリックします。
 1. スタイル設定を変更するには、次のいずれかの操作を行います。
 
-   * `ClosedCaptionStylesBuilder`ヘルパークラスを使用します（背後で`ClosedCaptionStyles`を操作します）。
-   * `ClosedCaptionStyles`クラスを直接使用します。
+   * 以下を使用します。 `ClosedCaptionStylesBuilder` ヘルパークラス ( `ClosedCaptionStyles` ) の背後に。
+   * 以下を使用します。 `ClosedCaptionStyles` クラスを直接使用します。
 
 >[!NOTE]
 >
->クローズドキャプションスタイルの設定は非同期的な操作なので、変更が画面に表示されるまでに最大数秒かかる場合があります。
+>クローズドキャプションスタイルの設定は非同期的な操作なので、変更が画面に表示されるまでに最大で数秒かかる場合があります。
 
-## クローズドキャプションのスタイル設定オプション{#section_D28F50B98C0D48CF89C4FB6DC81C5185}
+## クローズドキャプションのスタイル設定オプション {#section_D28F50B98C0D48CF89C4FB6DC81C5185}
 
-`ClosedCaptionStyles`クラスを使用して、クローズドキャプショントラックのスタイル設定情報を指定できます。 プレイヤーが表示するクローズドキャプションのスタイルを設定します。
+クローズドキャプショントラックのスタイル設定情報は、 `ClosedCaptionStyles` クラス。 プレーヤーで表示されるクローズドキャプションのスタイルを設定します。
 
 ```
 public function TextFormat( 
@@ -50,7 +48,7 @@ public function TextFormat(
 
 >[!TIP]
 >
->デフォルト値（例：`DEFAULT`）を定義するオプションでは、その値はキャプションが最初に指定されたときの設定を示します。
+>デフォルト値を定義するオプション ( 例： `DEFAULT`) の値は、キャプションが最初に指定されたときの設定を示します。
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -62,7 +60,7 @@ public function TextFormat(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> フォント </td> 
-   <td colname="2"> <p>フォントタイプ。 </p> <p><span class="codeph"> ClosedCaptionStyles.FONT </span>配列で定義され、例えば、シリフのある（またはない）等幅を表す値にのみ設定できます。 
+   <td colname="2"> <p>フォントタイプ。 </p> <p>は、 <span class="codeph"> ClosedCaptionStyles.FONT </span> 配列およびは、たとえば、serifs のあるかどうかを表します。 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;AVCaptionStyle.DEFAULT, 
@@ -74,21 +72,21 @@ public function TextFormat(
       &nbsp;AVCaptionStyle.CURSIVE, 
       &nbsp;AVCaptionStyle.SMALL_CAPITALS 
       &nbsp;]; 
-     </code> </p> <p>ヒント： デバイスで使用できる実際のフォントは異なる場合があり、必要に応じて代替フォントが使用されます。 serifsを持つ等幅スペースは、通常、代替として使用されますが、システム固有の置換である場合もあります。 </p> </td> 
+     </code> </p> <p>ヒント：デバイス上で使用できる実際のフォントは異なる場合があり、必要に応じて置換が使用されます。 serifs を持つ Monospace は通常、代替として使用されますが、この代替はシステム固有の場合もあります。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> サイズ </td> 
-   <td colname="2"> <p>キャプションのサイズ。 </p> <p> <span class="codeph"> ClosedCaptionStyles.FONT_SIZE </span>配列で定義されている値にのみ設定できます。 
+   <td colname="2"> <p>キャプションのサイズ。 </p> <p> は、 <span class="codeph"> ClosedCaptionStyles.FONT_SIZE </span> 配列： 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span>  — 標準サイズ </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> LARGE  </span>  — 標準サイズより約30%大きい </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL  </span>  — 標準サイズより約30%小さい </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT  </span>  — キャプションのデフォルトサイズ。媒体と同じ </li> 
-     </ul> </p> <p>ヒント： WebVTTキャプションのフォントサイズを変更するには、<span class="codeph"> DefaultMediaPlayer.ccStyles setter </span>関数のサイズパラメーターを変更します。 </p> </td> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> 中 </span>  — 標準サイズ </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> 大 </span>  — 中より約 30%大きい </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> 小 </span>  — 中より約 30%小さい </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> デフォルト </span>  — キャプションのデフォルトサイズ（中） </li> 
+     </ul> </p> <p>ヒント： WebVTT キャプションのフォントサイズは、 <span class="codeph"> DefaultMediaPlayer.ccStyles setter </span> 関数に置き換えます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> フォントエッジ </td> 
-   <td colname="2"> <p>浮き出し、なしなど、フォントエッジに使用する効果。 </p> <p><span class="codeph"> ClosedCaptionStyles.FONT_EDGE </span>配列で定義されている値にのみ設定できます。 
+   <td colname="2"> <p>フォントの端に使用する効果（浮き出し、なしなど）。 </p> <p>は、 <span class="codeph"> ClosedCaptionStyles.FONT_EDGE </span> 配列。 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT_EDGE&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -103,7 +101,7 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> フォントカラー </td> 
-   <td colname="2"> <p>フォントの色。 </p> <p><span class="codeph"> ClosedCaptionStyles.COLOR </span>配列で定義された値にのみ設定できます。 
+   <td colname="2"> <p>フォントの色。 </p> <p>は、 <span class="codeph"> ClosedCaptionStyles.COLOR </span> 配列。 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;COLOR&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -132,37 +130,37 @@ public function TextFormat(
      </code> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> エッジカラー </td> 
-   <td colname="2"> <p>エッジ効果のカラー。 </p> <p>フォントカラーに使用できる任意の値に設定できます。 </p> </td> 
+   <td colname="1"> エッジの色 </td> 
+   <td colname="2"> <p>エッジ効果の色。 </p> <p>には、フォントカラーに使用できる任意の値を設定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 背景色 </td> 
    <td colname="2"> <p>背景文字のセルの色。 </p> <p>フォントカラーに使用できる値にのみ設定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> 塗りのカラー </td> 
-   <td colname="2"> <p>テキストが配置されているウィンドウの背景の色。 </p> <p>フォントカラーに使用できる任意の値に設定できます。 </p> <p>重要： WebVTTではこの機能が使用されないので、この機能はWebVTTのキャプションには適用されません。 </p> </td> 
+   <td colname="1"> 塗りの色 </td> 
+   <td colname="2"> <p>テキストが配置されているウィンドウの背景の色。 </p> <p>には、フォントカラーに使用できる任意の値を設定できます。 </p> <p>重要： WebVTT はこの機能を使用しないので、これは WebVTT キャプションには適用されません。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> フォントの不透明度 </td> 
-   <td colname="2"> <p>テキストの不透明度。 </p> <p>0（完全に透明）～ 100（完全に不透明）のパーセンテージで表します。 <span class="codeph"> フォント </span> のDEFAULT_OPACITYは100です。 </p> </td> 
+   <td colname="2"> <p>テキストの不透明度。 </p> <p>0 （完全な透明）～ 100 （完全な不透明）のパーセンテージで表されます。 <span class="codeph"> DEFAULT_OPACITY </span> の場合、フォントは 100 です。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 背景の不透明度 </td> 
-   <td colname="2"> <p>背景文字セルの不透明度。 </p> <p>0（完全に透明）～ 100（完全に不透明）のパーセンテージで表します。 <span class="codeph"> 背景 </span> のDEFAULT_OPACITYは100です。 </p> </td> 
+   <td colname="2"> <p>背景文字セルの不透明度。 </p> <p>0 （完全な透明）～ 100 （完全な不透明）のパーセンテージで表されます。 <span class="codeph"> DEFAULT_OPACITY </span> の場合、背景は 100 です。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 塗りの不透明度 </td> 
-   <td colname="2"> <p>キャプションウィンドウの背景の不透明度。 </p> <p>0（完全に透明）～ 100（完全に不透明）のパーセンテージで表します。 <span class="codeph"> 塗りのDEFAULT_OPACITY </span> は0です。 </p> </td> 
+   <td colname="2"> <p>キャプションウィンドウの背景の不透明度。 </p> <p>0 （完全な透明）～ 100 （完全な不透明）のパーセンテージで表されます。 <span class="codeph"> DEFAULT_OPACITY </span> の値は 0 です。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## 例：キャプションの形式設定{#section_63E33840B7A14D26990046E2ACF2ECA1}
+## 例：キャプションの書式設定 {#section_63E33840B7A14D26990046E2ACF2ECA1}
 
-クローズドキャプションの形式設定を指定できます。
+クローズドキャプションの書式設定を指定できます。
 
-## 例1:形式の値を明示的に指定{#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
+## 例 1：形式の値を明示的に指定する {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
 
 ```
 private function onStatusChanged(event:MediaPlayerStatusChangeEvent):void { 
@@ -181,7 +179,7 @@ private function onStatusChanged(event:MediaPlayerStatusChangeEvent):void {
 } 
 ```
 
-## 例2:パラメーター{#section_147036D7C31C4010A5A7DF49997014A9}に形式の値を指定
+## 例 2：パラメーターで形式の値を指定する {#section_147036D7C31C4010A5A7DF49997014A9}
 
 ```
 /** 

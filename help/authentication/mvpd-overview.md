@@ -1,13 +1,12 @@
 ---
 title: MVPD の概要
 description: MVPD の概要
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2736'
 ht-degree: 0%
 
 ---
-
 
 # MVPD の概要 {#mvpd-overview}
 
@@ -29,7 +28,7 @@ TV Everywhere (TVE) は、Pay TV の購読者が既に支払ったコンテン�
 
 
 
-下線：Adobe Primetime認証は、Programmers と MVPDs の間の権利付与トランザクションを安全に仲介し、購読コンテンツへのビューアアクセスを容易にします。 つまり、Adobe Primetime認証を使用すると、適切な顧客が適切なコンテンツに簡単かつ迅速にアクセスできます。
+最終的な行： Adobe Primetime認証は、Programmers と MVPDs の間の権利付与トランザクションを安全に仲介し、購読コンテンツへのビューアのアクセスを容易にします。 つまり、Adobe Primetime認証を使用すると、適切な顧客が適切なコンテンツに簡単かつ迅速にアクセスできます。
 
 
 Adobe Primetime認証を使用すると、MVPD は以下を受け取ります。
@@ -38,7 +37,7 @@ Adobe Primetime認証を使用すると、MVPD は以下を受け取ります。
 
 顧客エンゲージメントの強化。  顧客が複数のプラットフォームやデバイスでコンテンツを閲覧する際に、スムーズでブランド化されたエクスペリエンスをサポートします。
 
-セキュア認証。  許可されたユーザーとデバイスのみがプレミアムコンテンツへのアクセス権を付与され、（オプションで）世帯アカウントごとに接続できるデバイスと同時ストリームの数を制限します。
+認証を保護します。  許可されたユーザーとデバイスのみがプレミアムコンテンツへのアクセス権を付与され、（オプションで）世帯アカウントごとに接続できるデバイスと同時ストリームの数を制限します。
 
 ## FAQ {#faq}
 
@@ -51,7 +50,7 @@ Flash Playerは必要ですか？ TV Everywhere 用のAdobe Primetime認証は�
 Adobe Primetime認証ではどのデバイスをサポートしていますか？ Adobe Primetime認証は、ブラウザー内表示エクスペリエンス用のHTML5 web キットを備えたほぼすべてのデバイスでサポートされています。 さらに、Adobe Primetime認証では、iOS、Android™、Xbox360（非推奨）、Xbox Air®（非推奨）アプリケーションなど、様々なデバイス固有のプラットフォーム向けに、ネイティブのソフトウェア開発キット (SDK) を引き続き展開しています。 最近では、Adobe Primetime認証は、ブラウザーページをレンダリングできないデバイス（「スマート」TV、セットトップボックス、ゲームコンソールなど）向けに、クライアントレスソリューションを提供しました。  ブラウザーページをレンダリングする機能は、MVPD を使用してユーザーを認証するための要件です。
 
 
-Adobe Primetime認証は、TV Everywhere の新しい標準をサポートしていますか？ Adobe Primetime認証は、CableLabs OLCA(Online Content Access) の仕様に準拠しており、オンラインソースから Pay TV のお客様にビデオを配信するための技術的要件とアーキテクチャを提供します。 Adobeは、2011 年 6 月に共同の CableLabs 社間テストプロジェクトに参加し、サービスプロバイダの実装のテストプロセスに合格しました。 Adobe Primetime認証は、認証用の OLCA 仕様に対して検証（完全およびテスト）されます。 承認コンポーネントは完了しましたが、テスト検証は現在、CableLabs テスト環境のリリースを待っています。 Adobeは、OATC(Open Authentication Technical Consortium) の活動的なメンバーでもあり、その本体の一部として、サブコミッティの仕様 — 製図プロジェクトのいくつかに参加しています。
+Adobe Primetime認証は、TV Everywhere の新しい標準をサポートしていますか。 Adobe Primetime認証は、CableLabs OLCA(Online Content Access) の仕様に準拠しており、オンラインソースから Pay TV のお客様にビデオを配信するための技術的要件とアーキテクチャを提供します。 Adobeは、2011 年 6 月に共同の CableLabs 社間テストプロジェクトに参加し、サービスプロバイダの実装のテストプロセスに合格しました。 Adobe Primetime認証は、認証用の OLCA 仕様に対して検証（完全およびテスト）されます。 承認コンポーネントは完了しましたが、テスト検証は現在、CableLabs テスト環境のリリースを待っています。 Adobeは、OATC(Open Authentication Technical Consortium) の活動的なメンバーでもあり、その本体の一部として、サブコミッティの仕様 — 製図プロジェクトのいくつかに参加しています。
 
 
 
@@ -77,6 +76,7 @@ Adobe Primetime認証は、Software as a Service(SaaS) モデルを介して提�
 >[!NOTE]
 >
 >MVPD の場合、Web サービスはAdobe Primetime認証からの認証および承認の要求を認識し、必要なデータを想定された形式で応答できる必要があります。
+>
 
 Adobe Primetime認証を使用すると、フェデレーテッド ID 管理 ( シングルサインオン (SSO) 認証および認証とも呼ばれます ) をユーザーに提供できます。 Adobe Primetime認証を使用すると、MVPD がその認証を保持できる限り、購読者が最初の認証後に再度ログインする必要がなくなります。 （通常は 30 日です）。 これを実現するために、Adobe Primetime認証は、お客様に認証トークン用の共通ドメインを提供します。 この認証状態情報は、特定の MVPD と統合されているすべての参加サイトで利用できます。
 
@@ -101,7 +101,7 @@ Adobeの操作や特定の処理を必要とするビジネスロジックの場
 
 ## Adobe Primetime Authentication Components {#components}
 
-次に、Adobe Primetime認証エコシステムの主なコンポーネントの概要を示します。 これには次が含まれます。
+次に、Adobe Primetime認証エコシステムの主なコンポーネントの一部の概要を示します。 これには次が含まれます。
 
 * [Access Enabler/Clientless Web サービス](#ae)
 * [Adobeがホストするバックエンドサーバ](#backend)
@@ -119,7 +119,7 @@ Access Enabler:
 * 不要なリクエストトラフィックを最小限に抑えるために、プログラマーのリソース/チャネルごとに成功した認証応答をキャッシュします。
 * 明示的なデバイス登録など、各 MVPD に固有の事前定義済みのワークフローに対して設定できます。
 * 次のフォームで使用できます。
-   * SWFランタイムが実行できるFlash Playerファイル
+   * SWF・ランタイムが実行できるFlash Player・ファイル
    * ブラウザーによって直接実行された JS ファイル
    * iOS、Android、Xbox など、様々なプラットフォーム向けのネイティブ Access Enabler。
 
@@ -158,13 +158,13 @@ Adobe Primetime認証エンタイトルメントソリューションは、認�
 
 ![](assets/authn-authz-entitlmnt-flow.png)
 
-*図：Adobe Primetime認証を使用して使用権限を確認するプロセス*
+*図： Adobe Primetime認証を使用して使用権限を確認するプロセス*
 
 ## 認証手順 {#authn-steps}
 
 次の手順は、Adobe Primetime認証フローの例を示しています。  これは、プログラマーがユーザーが MVPD の有効な顧客かどうかを判断するエンタイトルメントプロセスの一部です。  このシナリオでは、ユーザーは MVPD の有効な購読者です。  ユーザーは、次のプログラマーのアプリケーションを使用して、保護されたコンテンツを表示しようとしています。Flash:
 
-1. ユーザーがプログラマーの Web ページを参照し、プログラマーのFlashアプリケーションとAdobe Primetime認証 Access Enabler コンポーネントをユーザーのマシンに読み込みます。 Flashアプリケーションは、Access Enabler を使用してAdobe Primetime認証でプログラマの識別を設定し、Adobe Primetime認証は、そのプログラマ（「要求者」）の構成と状態データを使用して Access Enabler を設定します。 他の API 呼び出しを実行する前に、Access Enabler がサーバからこのデータを受け取る必要があります。  技術メモ：プログラマは、ID を Access Enabler の `setRequestor()` メソッド詳しくは、 [プログラマー統合ガイド](/help/authentication/programmer-integration-guide-overview.md).
+1. ユーザーがプログラマーの Web ページを参照し、プログラマーのFlashアプリケーションとAdobe Primetime認証 Access Enabler コンポーネントをユーザーのマシンに読み込みます。 Flashアプリケーションは、Access Enabler を使用してAdobe Primetime認証でプログラマの識別を設定し、Adobe Primetime認証は、そのプログラマ（「要求者」）の構成と状態データを使用して Access Enabler を設定します。 他の API 呼び出しを実行する前に、Access Enabler がサーバからこのデータを受け取る必要があります。  技術メモ：プログラマは、Access Enabler の `setRequestor()` メソッド。詳しくは、 [プログラマー統合ガイド](/help/authentication/programmer-integration-guide-overview.md).
 1. ユーザがプログラマの保護されたコンテンツを表示しようとすると、プログラマのアプリケーションは、ユーザに MVPD のリストを提示し、そこからプロバイダを選択する。
 1. ユーザーがAdobe Primetime認証サーバーにリダイレクトされ、ユーザーが選択した MVPD に対する暗号化された SAML リクエストが作成されます。 このリクエストは、プログラマーに代わって認証リクエストとして MVPD に送信されます。 MVPD のシステムに応じて、ユーザーのブラウザが MVPD のサイトにリダイレクトされてログインするか、プログラマーのアプリでログイン iFrame が作成されます。
 1. どちらの場合も（redirect または iFrame）、MVPD はリクエストを受け入れ、そのログインページを表示します。
@@ -173,14 +173,14 @@ Adobe Primetime認証エンタイトルメントソリューションは、認�
 1. Adobe Primetime認証が MVPD 応答を受け取り、Adobe Primetime認証 HTTP セッションが開いていることを確認し、 [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) MVPD からの応答を返し、プログラマーのサイトにリダイレクトします。
 1. プログラマのサイトが再読み込みされ、Access Enabler が再読み込みされ、プログラマが setRequestor() を再度呼び出します。  現在の構成が変更されたので、setRequestor() の 2 回目の呼び出しが必要です。AuthN トークンがサーバ上で生成されるのを待っていることを Access Enabler に通知するフラグが存在します。
 1. Access Enabler は、保留中の認証があることを確認し、Adobe Primetime認証サーバからトークンを要求します。 トークンは、サーバーの DRM 機能を呼び出すことでFlash Playerから取得されます。
-1. AuthN トークンは、プログラマーのFlash PlayerLSO キャッシュに格納されます。これで認証が完了し、セッションはAdobe Primetime認証サーバーで破棄されます。
+1. AuthN トークンは、プログラマーのFlash PlayerLSO キャッシュに格納されます。認証が完了し、セッションはAdobe Primetime認証サーバーで破棄されます。
 
 ## 認証手順 {#authz-steps}
 
 以下の手順は、前の節 ([認証手順](#authn-steps)):
 
-1. ユーザーがプログラマーの保護されたコンテンツにアクセスしようとすると、プログラマーのアプリケーションは、まずユーザーのローカルマシンまたはデバイス上の AuthN トークンを確認します。  そのトークンがない場合、 [認証手順](#authn-steps) 上に続く。  AuthN トークンが存在する場合、認証フローは、保護されたコンテンツの特定の項目に対するユーザーの表示権限を取得する要求を受けて、プログラマーのアプリケーションが Access Enabler への呼び出しを開始すると進みます。
-1. 保護されたコンテンツの特定の項目は、「リソース識別子」で表されます。  これは単純な文字列か、より複雑な構造になるかもしれませんが、どの場合でも、リソース識別子の性質はプログラマーと MVPD の間で事前に合意されます。  プログラマのアプリケーションは、リソース識別子を Access Enabler に渡します。  Access Enabler は、ユーザーのローカルマシンまたはデバイス上で AuthZ トークンを確認します。  AuthZ トークンがない場合、Access Enabler は、バックエンドのAdobe Primetime認証サーバに要求を渡します。
+1. ユーザーがプログラマーの保護されたコンテンツにアクセスしようとすると、プログラマーのアプリケーションは、まず、ユーザーのローカルマシンまたはデバイス上の AuthN トークンを確認します。  そのトークンがない場合、 [認証手順](#authn-steps) 上に続く。  AuthN トークンが存在する場合、認証フローは、保護されたコンテンツの特定の項目に対するユーザーの表示権限を取得する要求を受けて、プログラマーのアプリケーションが Access Enabler への呼び出しを開始すると進みます。
+1. 保護されたコンテンツの特定の項目は、「リソース識別子」で表されます。  これは単純な文字列か、より複雑な構造になるかもしれませんが、どの場合でも、リソース識別子の性質はプログラマーと MVPD の間で事前に合意されます。  プログラマのアプリケーションは、リソース識別子を Access Enabler に渡します。  Access Enabler は、ユーザーのローカルマシンまたはデバイス上で AuthZ トークンを確認します。  AuthZ トークンがない場合、Access Enabler はリクエストをバックエンドのAdobe Primetime認証サーバに渡します。
 1. Adobe Primetime認証サーバは、標準化されたプロトコルを使用して MVPD 認証エンドポイントと通信します。  MVPD の応答が、ユーザーが保護されたコンテンツを表示する権限を持っていることを示している場合、Adobe Primetime認証サーバーは AuthZ トークンを作成し、AuthZ トークンを Access Enabler に渡します。AuthZ トークンはユーザーのマシンに保存されます。
 1. AuthZ トークンがユーザーのマシンまたはデバイスに保存されている場合、プログラマーのアプリケーションは Access Enabler を呼び出してAdobe Primetime認証サーバからメディアトークンを取得し、そのトークンをプログラマーのアプリケーションに提供します。
 1. 最後に、プログラマーのアプリケーションは、メディアトークン検証コンポーネントを使用して、適切なユーザーが適切なコンテンツを表示していることを確認し、メディアトークンを設定した状態で、保護されたコンテンツを表示できます。

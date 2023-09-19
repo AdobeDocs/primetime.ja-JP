@@ -1,13 +1,12 @@
 ---
 title: 認証iOS/tvOS 3.7.0 のリリースノート
 description: 認証iOS/tvOS 3.7.0 のリリースノート
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
 
 ---
-
 
 # 認証iOS/tvOS 3.7.0 のリリースノート {#ios-tvos-sdk-370-release-notes}
 
@@ -21,7 +20,7 @@ ht-degree: 0%
 
 Adobe Primetime認証：iOS/tvOS 3.7.0
 
-リリース日：09/03/2021
+リリース日： 09/03/2021
 
 
 

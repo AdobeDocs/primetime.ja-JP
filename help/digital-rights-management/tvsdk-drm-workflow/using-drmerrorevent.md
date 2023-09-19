@@ -1,29 +1,27 @@
 ---
-title: DRMErrorEventクラスの使用の概要
-description: DRMErrorEventクラスの使用の概要
+title: DRMErrorEvent クラスの使用：概要
+description: DRMErrorEvent クラスの使用：概要
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
+# DRMErrorEvent クラスの使用 {#using-the-drmerrorevent-class}
 
-# DRMErrorEventクラス{#using-the-drmerrorevent-class}の使用
+Primetime が `DRMErrorEvent` オブジェクトは、保護されたコンテンツを再生しようとして、Primetime オブジェクトに対して [DRM 関連のエラー](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages). ユーザーの資格情報が無効な場合、 `DRMAuthenticateEvent` オブジェクトは、ユーザーが有効な資格情報を入力するか、アプリケーションがそれ以上の試行を拒否するまで、繰り返しディスパッチされます。 アプリケーションは、その他の DRM エラーイベントをリッスンして、 [DRM 関連のエラー](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages).
 
-Primetimeは、保護されたコンテンツを再生しようとしているPrimetimeオブジェクトが[DRM関連のエラー](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages)を検出すると、`DRMErrorEvent`オブジェクトをディスパッチします。 ユーザーの資格情報が無効な場合、`DRMAuthenticateEvent`オブジェクトは、ユーザーが有効な資格情報を入力するか、アプリケーションがそれ以上の試行を拒否するまで、繰り返しディスパッチします。 アプリケーションは、[DRM関連のエラー](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages)を検出、識別、処理するための、他のDRMエラーイベントをリッスンする必要があります。
+有効なユーザー資格情報を持っていても、コンテンツのライセンス条件によって、ユーザーが暗号化されたコンテンツを表示できなくなる場合があります。 例えば、ユーザーが権限のないアプリケーション（アプリケーションの許可リストへの登録など）でコンテンツを表示しようとした場合、アクセスを拒否できます。 許可されていないアプリケーションとは、許可リストに登録されたアプリケーション署名証明書を使用して署名されていないアプリケーションです。 この場合、 `DRMErrorEvent` オブジェクトがディスパッチされます。
 
-有効なユーザー資格情報を持っていても、コンテンツのライセンス条項によって、ユーザーが暗号化されたコンテンツを表示できなくなる場合があります。 例えば、許可されていないアプリケーション（アプリケーションの許可リストなど）でコンテンツを表示しようとした場合、ユーザーがアクセスを拒否される場合があります。 許可されていないアプリケーションとは、リストに記載されたアプリケーション署名証明書を使用して署名されていないアプリケーションです。 この場合、`DRMErrorEvent`オブジェクトがディスパッチされます。
+コンテンツが破損している場合や、アプリケーションのバージョンがライセンスで指定されたバージョンと一致しない場合にも、エラーイベントを発生させることができます。 アプリケーションは、エラーを処理するための適切なメカニズムを提供する必要があります。
 
-コンテンツが破損している場合や、アプリケーションのバージョンがライセンスで指定されたバージョンと一致しない場合は、エラーイベントを実行することもできます。 アプリケーションは、エラーを処理するための適切なメカニズムを提供する必要があります。
+## DRMErrorEvent ハンドラーを作成する {#create-a-drmerrorevent-handler}
 
-## DRMErrorEventハンドラー{#create-a-drmerrorevent-handler}を作成する
+保護されたコンテンツの再生中にエラーが発生した場合に Primetime からディスパッチされるエラーイベントを処理するイベントハンドラーを作成します。
 
-保護されたコンテンツの再生を試みているときにエラーが発生した場合にPrimetimeからディスパッチされるエラーイベントを処理するイベントハンドラーを作成します。
-
-通常、アプリケーションはエラーを検出すると、任意の数のクリーンアップタスクを実行します。 その後、エラーをユーザに通知し、問題を解決するためのオプションを提供します。
+通常、アプリケーションでエラーが発生した場合は、任意の数のクリーンアップタスクを実行します。 その後、エラーをユーザーに通知し、問題を解決するためのオプションを提供します。
 
 ```
 private function drmErrorEventHandler(event:DRMErrorEvent):void {  

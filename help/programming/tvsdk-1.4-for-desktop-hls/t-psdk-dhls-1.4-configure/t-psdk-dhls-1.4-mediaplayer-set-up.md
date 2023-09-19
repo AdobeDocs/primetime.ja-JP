@@ -1,57 +1,55 @@
 ---
-description: MediaPlayerインターフェイスには、メディアプレイヤーの機能と動作がカプセル化されています。
-title: MediaPlayerの設定
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaPlayer インターフェイスには、メディアプレーヤーの機能と動作がカプセル化されています。
+title: MediaPlayer のセットアップ
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
 
 ---
 
+# MediaPlayer のセットアップ {#set-up-the-mediaplayer}
 
-# MediaPlayerの設定{#set-up-the-mediaplayer}
+TVSDK には、他の Primetime コンポーネントと統合できる高度なビデオプレーヤーアプリケーション（Primetime プレーヤー）を作成するためのツールが用意されています。
 
-TVSDKは、他のPrimetimeコンポーネントと統合できる高度なビデオプレイヤーアプリケーション（Primetimeプレイヤー）を作成するためのツールを提供します。
+プラットフォームのツールを使用して、プレーヤーを作成し、 TVSDK のメディアプレーヤービューに接続します。 TVSDK は、ビデオを再生および管理するメソッドを備えています。 例えば、 TVSDK は再生および一時停止のメソッドを提供します。 プラットフォーム上にユーザーインターフェイスボタンを作成し、これらの TVSDK メソッドを呼び出すボタンを設定できます。 MediaPlayer インターフェイスには、メディアプレーヤーの機能と動作がカプセル化されています。
 
-プラットフォームのツールを使用してプレイヤーを作成し、TVSDKのメディアプレイヤー表示に接続します。このメソッドは、ビデオの再生と管理を行うメソッドを備えています。 例えば、TVSDKは再生メソッドと一時停止メソッドを提供します。 プラットフォーム上にユーザーインターフェイスボタンを作成し、これらのTVSDKメソッドを呼び出すボタンを設定できます。MediaPlayerインターフェイスには、メディアプレイヤーの機能と動作がカプセル化されています。
-
-TVSDKは、`MediaPlayer`インターフェイスを1つ実装します。DefaultMediaPlayerクラス。 ビデオ再生機能が必要な場合は、`DefaultMediaPlayer`をインスタンス化します。
+TVSDK は、 `MediaPlayer` インターフェイス：DefaultMediaPlayer クラス。 ビデオ再生機能が必要な場合は、 `DefaultMediaPlayer`.
 
 >[!NOTE]
 >
->`DefaultMediaPlayer`インスタンスは、`MediaPlayer`インターフェイスで公開されているメソッドでのみ操作します。
+>の操作 `DefaultMediaPlayer` インスタンスのみ、 `MediaPlayer` インターフェイス。
 
-1. アプリケーションが読み込んだ`authorizedFeatures`インスタンスを使用して`MediaPlayerContext`をインスタンス化します（[署名付きトークンを読み込む](../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-get-signed-token.md)を参照）。
+1. のインスタンス化 `MediaPlayerContext` アプリケーションで読み込まれた `authorizedFeatures` インスタンス ( [署名付きトークンを読み込む](../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-get-signed-token.md)) をクリックします。
 
    ```
    var context:MediaPlayerContext =  
        new MediaPlayerContext(authorizedFeatures)
    ```
 
-1. パブリック作成ファクトリメソッドを使用して`MediaPlayer`をインスタンス化し、`MediaPlayerContext`コンテキストオブジェクトを渡します。
+1. のインスタンス化 `MediaPlayer` パブリックの create ファクトリメソッドを使用して、 `MediaPlayerContext` コンテキストオブジェクト：
 
    ```
    public static function create(context:Context):MediaPlayer
    ```
 
-   これは汎用の`MediaPlayer`インターフェイスを返します。 1. `MediaPlayerView`をインスタンス化し、使用するStageVideoインスタンスを指定します。
+   これにより、ジェネリックが返されます `MediaPlayer` インターフェイス。 1. `MediaPlayerView` 使用する StageVideo インスタンスを指定します。
 
    ```
    var view:MediaPlayerView =  
        MediaPlayerView.create(stage.stageVideos[0] )
    ```
 
-1. `MediaPlayerView`インスタンスを新しく作成した表示に関連付けます。
+1. を関連付ける `MediaPlayerView` 新しく作成されたビューのインスタンス：
 
    ```
    mediaPlayer.view = view;
    ```
 
-1. `MediaPlayerView`インスタンスをデバイスの画面に配置します。
+1. を `MediaPlayerView` デバイスの画面のインスタンス：
 
    ```
    container.addChild(view)
    ```
 
-これで`MediaPlayer`インスタンスが使用可能になり、ビデオコンテンツがデバイス画面に表示されるように適切に設定されます。
+The `MediaPlayer` これで、インスタンスが使用可能になり、ビデオコンテンツをデバイス画面に表示するように適切に設定されました。

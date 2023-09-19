@@ -1,29 +1,26 @@
 ---
-title: Adobe PrimetimeDRM SDK — 概要
-description: Adobe PrimetimeDRM SDK — 概要
+title: Adobe Primetime DRM SDK — 概要
+description: Adobe Primetime DRM SDK — 概要
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
 
 ---
 
-
-# Adobe PrimetimeDRM SDK — 概要{#adobe-primetime-drm-sdk-an-overview}
+# Adobe Primetime DRM SDK — 概要 {#adobe-primetime-drm-sdk-an-overview}
 
 >[!NOTE]
 >
->Adobe PrimetimeDRMは、以前はAdobeアクセスと呼ばれていましたが、それ以前はFlash Accessと呼ばれていました。
+>Adobe Primetime DRM は、以前はAdobeアクセスと呼ばれていましたが、それ以前はFlash Accessでした。
 
-Primetime DRM SDKは、コンシューマーデバイスで再生するビデオおよびオーディオコンテンツを保護し、安全に配信できるデジタル著作権管理プラットフォームです。
+Primetime DRM SDK は、消費者向けデバイスで再生するビデオおよびオーディオコンテンツを保護し、安全に配信できるデジタル著作権管理プラットフォームです。
 
-Primetime DRMは、コンテンツ所有者がコンテンツを保護し、配信の制御を維持できる柔軟なプラットフォームです。 コンテンツ所有者は、各デジタルメディアファイルのライセンスを作成することで権利を保護し、管理できます。これにより、様々な高品質のコンテンツを消費者が利用できるようになります。
+Primetime DRM は、コンテンツ所有者がコンテンツを保護し、配信を制御できる柔軟なプラットフォームです。 コンテンツ所有者は、各デジタルメディアファイルのライセンスを作成することで、権利を保護および管理できます。これにより、消費者は、様々な高品質のコンテンツを確実に利用できるようになります。
 
-Primetime DRMは、ビデオオンデマンド、レンタル、電子販売スルーなど、幅広いビジネスモデルをサポートしています。 Primetime DRMで保護されたコンテンツは、次に示す様々な方法で配布できます。
+Primetime DRM は、ビデオオンデマンド、レンタル、電子販売など、様々なビジネスモデルをサポートしています。 Primetime DRM で保護されたコンテンツは、次のような様々な方法で配布できます。
 
-* AdobeFlash Media Serverソフトウェアを使用したストリーミング
-* AdobeのHTTP Dynamic Streamingテクノロジを使用したHTTP経由のプログレッシブダウンロードの提供
-* ユーザーの利便性を考慮して、ローカル再生用のコンテンツライブラリへのダウンロードを許可する
-
+* ストリーミングスルーAdobeFlash Media Serverソフトウェア
+* AdobeのHTTP Dynamic Streamingテクノロジーを使用した HTTP 経由でのプログレッシブダウンロードの提供
+* 消費者の利便性のために、ローカルでの再生のためにコンテンツライブラリへのダウンロードを許可すること

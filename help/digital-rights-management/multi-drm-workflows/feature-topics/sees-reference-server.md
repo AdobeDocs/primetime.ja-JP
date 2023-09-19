@@ -1,34 +1,32 @@
 ---
-description: ライセンス認証とポリシーの適用を調整する1つの方法は、エンタイトルメントサーバーにこれらの機能を組み込むことです。 Adobeは、独自のサーバーを構築する際に使用できるSEES参照エンタイトルメントサーバーを提供します。
-title: リファレンスサーバーのサンプルExpressPlayエンタイトルメントサーバー(SEE)
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: ライセンスとポリシーの実施を調整する方法の 1 つは、権限付与サーバーにこれらの機能を組み込むことです。 Adobeは、 SEES 参照権限付与サーバーを提供します。このサーバーは、と連携して独自のサーバーを作成できます。
+title: 参照サーバー ExpressPlay エンタイトルメントサーバー (SEES) のサンプル
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%
 
 ---
 
+# 参照サーバー： ExpressPlay 使用権限サーバーの例 (SEES) {#reference-server-sample-expressplay-entitlement-server-sees}
 
-# 参照サーバー：ExpressPlayエンタイトルメントサーバーの例(SEES) {#reference-server-sample-expressplay-entitlement-server-sees}
+ライセンスとポリシーの実施を調整する方法の 1 つは、権限付与サーバーにこれらの機能を組み込むことです。 Adobeは、 SEES 参照権限付与サーバーを提供します。このサーバーは、と連携して独自のサーバーを作成できます。
 
-ライセンス認証とポリシーの適用を調整する1つの方法は、エンタイトルメントサーバーにこれらの機能を組み込むことです。 Adobeは、独自のサーバーを構築する際に使用できるSEES参照エンタイトルメントサーバーを提供します。
+参照サーバー SEES は、ExpressPlay エンタイトルメントサービスの例を示し、基本的な時間ベースのエンタイトルメントとデバイスバインディングのエンタイトルメントの 2 つのサービスを示します。
 
-リファレンスサーバーSEEには、ExpressPlay Entitlement Serviceの例が示され、次の2つのサービスが表示されます。基本的な時間ベースの権利付与とデバイスバインディングの権利付与。
+SEES は、2 つの ExpressPlay Fairplay サービスの上に構築されています。
 
-SEESは、2つのExpressPlay FairPlay Servicesの上に構築されています。
+1. Expressplay トークンリクエストサービス
+1. Expressplay レコード取得サービス
 
-1. Expressplayトークンリクエストサービス
-1. Expressplayレコード取得サービス
+ExpressPlay トークンリクエストの URL 形式は、実稼動用、テスト環境用の 2 つの形式を取ります。
 
-ExpressPlay TokenリクエストのURL形式は、実稼働用とテスト環境用の2つの形式を取ります。
+**実稼動**: ht<span></span>tps://fp-gen.{prod_domain}/hms/fp/token
 
-**実稼働**:<span></span>https://fp-gen.{prod_domain}/hms/fp/token
+**テスト**: ht<span></span>tps://fp-gen.test.expressplay.com/hms/fp/token
 
-**テスト**:<span></span>https://fp-gen.test.expressplay.com/hms/fp/token
+ExpressPlay レコードを取得する際の URL 形式は、実稼動用とテスト環境用の 2 つの形式を取ります。
 
-ExpressPlayレコードを取得するためのURL形式は、実稼働用とテスト環境用の2つのフォームを取ります。
+**実稼動**: ht<span></span>tps://api.{prod_domain}/cmiapi/getrecord/
 
-**実稼働**:<span></span>https://api.{prod_domain}/cmiapi/getrecord/
-
-**テスト**:<span></span>https://api.test.expressplay.com/cmiapi/getrecord/
+**テスト**: ht<span></span>tps://api.test.expressplay.com/cmiapi/getrecord/

@@ -1,29 +1,27 @@
 ---
-description: MediaResourceは、MediaPlayerインスタンスが読み込もうとしているコンテンツを表します。
-title: MediaPlayerおよびMediaResourceクラス
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaResource は、MediaPlayer インスタンスによって読み込まれるコンテンツを表します。
+title: MediaPlayer および MediaResource クラス
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
 
 ---
 
+# MediaPlayer および MediaResource クラス{#mediaplayer-and-mediaresource-classes}
 
-# MediaPlayerおよびMediaResourceクラス{#mediaplayer-and-mediaresource-classes}
-
-MediaResourceは、MediaPlayerインスタンスが読み込もうとしているコンテンツを表します。
+MediaResource は、MediaPlayer インスタンスによって読み込まれるコンテンツを表します。
 
 <!--<a id="section_B09A012C97454AF58CE2269B800D8027"></a>-->
 
-TVSDKライブラリは、`MediaPlayer`インターフェイスの`replaceCurrentResource`メソッドを使用して、再生するコンテンツを読み込み、準備する簡単な方法を提供します。 このメソッドは、`MediaResource`クラスのインスタンスを唯一の入力引数として受け取ります。 `MediaResource`クラスは次の情報で構成されます。
+TVSDK ライブラリを使用すると、 `replaceCurrentResource` メソッドを `MediaPlayer` インターフェイス。 このメソッドは、 `MediaResource` クラスを唯一の入力引数として使用します。 The `MediaResource` クラスは、次の情報で構成されます。
 
-* 読み込まれるコンテンツの場所を表すURL。
+* 読み込まれるコンテンツの場所を表す URL。
 * タイプ。読み込まれるコンテンツのタイプです。
 
-   `MediaPlayer`によって読み込み可能なコンテンツのタイプを定義する文字列です。 使用可能な値はHLSとHDSです。 各値には、一般的に使用されるファイル拡張子を表す文字列が関連付けられています。HLSには&quot;m3u8&quot;、HDSには&quot;f4m&quot;です。
-* `Metadata`クラスのインスタンスである、一部のメタデータ。
+  これは、 `MediaPlayer`. 指定できる値は HLS と HDS です。 各値は、一般的に使用されるファイル拡張子を表す文字列に関連付けられます。HLS の場合は「m3u8」、HDS の場合は「f4m」です。
+* 一部のメタデータ ( `Metadata` クラス。
 
-   このディクショナリのような構造体は、読み込まれるコンテンツに関する追加情報（メインコンテンツに配置する必要がある代替/広告コンテンツに関する情報など）を含む場合があります。
+  この辞書に似た構造には、読み込まれるコンテンツに関する追加情報（メインコンテンツに配置する代替/広告コンテンツに関する情報など）が含まれている場合があります。
 
-メタデータは、代替コンテンツに関連する情報をTVSDKに渡すメディアです。 `Metadata`インターフェイスは、キーと値の両方がプレーン文字列である汎用のキー値ストアのAPIを定義します。
+メタデータは、代替コンテンツに関連する情報を TVSDK に渡すメディアです。 The `Metadata` インターフェイスは、汎用のキーと値のストアの API を定義します。キーと値の両方がプレーン文字列です。

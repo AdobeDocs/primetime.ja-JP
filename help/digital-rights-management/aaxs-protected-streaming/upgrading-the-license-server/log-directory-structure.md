@@ -2,14 +2,12 @@
 title: ログディレクトリ構造
 description: ログディレクトリ構造
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '16'
 ht-degree: 0%
 
 ---
-
 
 # ログディレクトリ構造{#log-directory-structure}
 
@@ -29,4 +27,3 @@ ht-degree: 0%
  </i class="+ topic>
 </i class="+ topic>
 ```
-

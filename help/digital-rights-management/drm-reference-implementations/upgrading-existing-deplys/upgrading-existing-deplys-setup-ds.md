@@ -1,27 +1,25 @@
 ---
-title: ドメインサーバーのセットアップ
-description: ドメインサーバーのセットアップ
+title: ドメインサーバーの設定
+description: ドメインサーバーの設定
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%
 
 ---
 
+# ドメインサーバーの設定{#set-up-a-domain-server}
 
-# ドメインサーバーのセットアップ{#set-up-a-domain-server}
+既存のライセンスサーバーインストールでドメインサーバーを構成するには、次の手順に従います。
 
-既存のライセンスサーバーのインストールにドメインサーバーを設定するには：
+1. Adobe Analytics の [!DNL tomcat/lib] ディレクトリに移動し、 [!DNL flashaccess-refimpl.properties] ファイル。
+1. の下 `Domain CA certificate` オプションで、ドメイン CA 証明書を入力します。
 
-1. [!DNL tomcat/lib]ディレクトリで、[!DNL flashaccess-refimpl.properties]ファイルを開きます。
-1. `Domain CA certificate`オプションの下で、ドメインCA証明書を入力します。
+   その後、この証明書はドメイントークンの受け入れに使用されます。
+1. の下 `Domain CA credential` オプションを選択し、 `Domain CA credential certificate (PFX)` 詳細。
 
-   この証明書は、次に、ドメイントークンの受け入れに使用されます。
-1. `Domain CA credential`オプションの下で、`Domain CA credential certificate (PFX)`の詳細を入力します。
+   その後、この証明書はドメイン証明書およびトークンへの署名に使用されます。
+1. 次の値を指定： `DomainServerlURL`.
 
-   その後、この証明書をドメインの証明書とトークンの署名に使用します。
-1. `DomainServerlURL`の値を指定します。
-
-   この値を`NULL`に設定すると、ドメイン認証が成功する場合があります。 ただし、ドメインに参加している間に、参加ドメインのエラーが発生する場合があります。
+   この値が `NULL`の場合、ドメイン認証が成功する可能性があります。 ただし、ドメインに参加する際に、結合ドメインエラーが発生する場合があります。

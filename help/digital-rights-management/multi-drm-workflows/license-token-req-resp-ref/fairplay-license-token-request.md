@@ -1,24 +1,22 @@
 ---
-description: FairPlayライセンストークンインターフェイスは、実稼働およびテストサービスを提供します。
-title: FairPlayライセンストークンリクエスト/レスポンス
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: FairPlay ライセンストークンインターフェイスは、実稼動およびテストサービスを提供します。
+title: FairPlay ライセンストークンリクエスト/レスポンス
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 4%
 
 ---
 
+# FairPlay ライセンストークンのリクエストと応答 {#fairplay-license-token-request-response}
 
-# FairPlayライセンストークンリクエストとレスポンス{#fairplay-license-token-request-response}
+FairPlay ライセンストークンインターフェイスは、実稼動およびテストサービスを提供します。 このリクエストは、FairPlay ライセンスに交換できるトークンを返します。
 
-FairPlayライセンストークンインターフェイスは、実稼働およびテストサービスを提供します。 このリクエストは、FairPlayライセンスに交換できるトークンを返します。
-
-**方法：GET、POST** （www-url-encoded bodyに両方のメソッドのパラメーターが含まれている場合）
+**メソッド：GET、POST** （www-url-encoded の本文には、両方のメソッドのパラメータが含まれています）
 
 **URL:**
 
-* **実稼働環境：** `https://fp-gen.{prod_domain}/hms/fp/token`
+* **実稼動：** `https://fp-gen.{prod_domain}/hms/fp/token`
 
 * **テスト：** `https://fp-gen.test.expressplay.com/hms/fp/token`
 
@@ -37,72 +35,72 @@ FairPlayライセンストークンインターフェイスは、実稼働およ
    &uncompressedDigitalVideoOPL=0
 ```
 
-* **応答の例：**
+* **レスポンスのサンプル：**
 
-   ```
-   https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
-   ```
+  ```
+  https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
+  ```
 
 **リクエストクエリパラメーター**
 
-**表3:トークンクエリパラメーター**
+**表 3：トークンクエリのパラメータ**
 
-| クエリパラメータ | 説明 | 必須？ |
+| クエリパラメーター | 説明 | 必須？ |
 |--- |--- |--- |
-| customerAuthenticatorクエリパラメーターとしてのユーザー認証子customerAuthenticator FairPlay | これは、お客様のAPIキーで、本番環境とテスト環境用に1つずつあります。 これは、ExpressPlayの「Admin」ダッシュボードタブで確認できます。 | はい |
-| errorFormat | htmlまたはjson。 html（デフォルト）の場合、任意のエラーのHTML表現が応答のエンティティ本体に提供されます。 jsonを指定した場合、JSON形式で構造化された応答が返されます。 詳しくは、[JSONエラー](https://www.expressplay.com/developer/restapi/#json-errors)を参照してください。 応答のMIMEタイプは、成功時にはtext/uri-リスト、HTMLエラー形式の場合はtext/html、JSONエラー形式の場合はapplication/jsonです。 | いいえ |
+| customerAuthenticator クエリパラメータ customerAuthenticator FairPlay としての顧客認証子 | これは、実稼動環境とテスト環境用に 1 つずつ、顧客 API キーです。 これは、「 ExpressPlay Admin Dashboard 」タブで確認できます。 | はい |
+| errorFormat | html または json。 html（デフォルト）の場合、HTMLのエラー表現が応答のエンティティ本文に提供されます。 json を指定した場合、JSON 形式の構造化された応答が返されます。 詳しくは、 [JSON エラー](https://www.expressplay.com/developer/restapi/#json-errors) 」を参照してください。 応答の MIME タイプは、成功時は text/uri-list、HTMLエラー形式の場合は text/html、JSON エラー形式の場合は application/json です。 | いいえ |
 
-**表4:ライセンスクエリのパラメータ**
+**表 4：ライセンスクエリーパラメータ**
 
-| **クエリパラメータ** | **説明** | **必須？** |
+| **クエリパラメーター** | **説明** | **必須？** |
 |---|---|---|
-| `generalFlags` | ライセンスフラグを表す4バイトの16進文字列。 許可されている値は「0000」のみです。 | いいえ |
-| `kek` | キー暗号化キー(KEK)。 鍵は、鍵ラップアルゴリズム（AES鍵ラップ、RFC3394）を使用して、KEKで暗号化されて保存されます。 `kek`を指定する場合は、`kid`または`ek`のいずれかのパラメーターを指定する必要がありますが、*両方*&#x200B;を指定する必要はありません。 | いいえ |
-| `kid` | コンテンツ暗号化キーの16バイトの16進文字列表現または文字列`'^somestring'`です。 `'^'`に続く文字列の長さは、64文字以下にする必要があります。 | いいえ |
-| `ek` | 暗号化されたコンテンツキーの16進文字列表現です。 | いいえ |
-| `contentKey` | コンテンツ暗号化キーの16バイトの16進文字列表現です | `kek`と`ek`または`kid`を指定しない限りは○ |
-| `iv` | コンテンツ暗号化IVの16バイトの16進文字列表現です。 | はい |
+| `generalFlags` | ライセンスフラグを表す 4 バイトの 16 進文字列。 許可されている値は「0000」のみです。 | いいえ |
+| `kek` | キー暗号化キー (KEK)。 キーは、キーラッピングアルゴリズム（AES キーラップ、RFC3394）を使用して、KEK で暗号化されて格納されます。 次の場合 `kek` が指定され、 `kid` または `ek` パラメータを指定する必要があります。 *しかし、両方は*. | いいえ |
+| `kid` | コンテンツ暗号化キーまたは文字列の 16 バイトの 16 進文字列表現です `'^somestring'`. 文字列の長さの後に `'^'` は 64 文字以下にする必要があります。 | いいえ |
+| `ek` | 暗号化されたコンテンツキーの 16 進文字列表現です。 | いいえ |
+| `contentKey` | コンテンツ暗号化キーの 16 バイトの 16 進文字列表現 | はい、ただし `kek` および `ek` または `kid` が提供されます。 |
+| `iv` | コンテンツ暗号化 IV の 16 バイトの 16 進文字列表現 | はい |
 | `rentalDuration` | 秒単位のレンタル期間（デフォルト — 0） | いいえ |
-| `fpExtension` | `extensionType`と`extensionPayload`をカンマ区切りの文字列として短いフォームに含めます。 次に例を示します。[...] `&fpExtension=wudo,AAAAAA==&`[...] | いいえ。任意の数を使用できます。 |
+| `fpExtension` | 短い形式のラッピング `extensionType` および `extensionPayload`をコンマ区切りの文字列として指定します。 例： [...] `&fpExtension=wudo,AAAAAA==&`[...] | いいえ、任意の数を使用できます |
 
-**表5:トークン制限のクエリパラメーター**
+**表 5：トークン制限クエリー・パラメータ**
 
 <table id="table_ar3_lsx_pv">  
  <thead> 
   <tr> 
-   <th class="entry"> <b>クエリパラメータ</b> </th> 
+   <th class="entry"> <b>クエリパラメーター</b> </th> 
    <th class="entry"> <b>説明</b> </th> 
    <th class="entry"> <b>必須？</b> </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> expirationTime  </span> </td> 
-   <td> このトークンの有効期限。 この値は、Zゾーン指定子（「ズールー時間」）の<a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a>日付/時刻形式の文字列か、前に+符号の付いた整数である必要があります。 RFC 3339日付/時刻の例は、<span class="codeph"> 2006-04-14T12:01:10Z </span>です。 <p>値が<a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a>日付/時刻形式の文字列である場合、トークンの絶対的な有効期限切れ日時を表します。 値が前に+符号の付いた整数である場合、発行からトークンが有効な相対秒数として解釈されます。 </p> 例えば、<span class="codeph"> +60 </span>は1分を表します。 最大およびデフォルト（指定されていない場合）のトークン有効期間は30日です。 </td> 
+   <td> <span class="codeph"> expirationTime </span> </td> 
+   <td> このトークンの有効期限。 この値は、 <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> 「Z」ゾーン指定子（「ズール時間」）での日付/時刻形式、または前に「+」記号が付いた整数。 RFC 3339 日時の例は次のとおりです。 <span class="codeph"> 2006-04-14T12:01:10Z </span>. <p>値が <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> 日付/時刻形式の場合は、トークンの絶対的な有効期限切れの日時を表します。 値が整数の前に「+」記号が付いた場合、発行からトークンが有効であることを相対秒数として解釈されます。 </p> 例： <span class="codeph"> +60 </span> 1 分を指定します。 トークンの有効期間は、最大とデフォルト（指定されていない場合）で 30 日です。 </td> 
    <td> いいえ </td> 
   </tr> 
  </tbody> 
 </table>
 
-**表6:相関クエリパラメータ**
+**表 6：相関クエリー・パラメータ**
 
-| **クエリパラメータ** | **説明** | **必須？** |
+| **クエリパラメーター** | **説明** | **必須？** |
 |---|---|---|
-| `cookie` | 最長32文字の任意の文字列で、トークンに格納して送信され、トークン交換サーバーによって記録されます。 これは、交換サーバーのログエントリとサービスプロバイダーのサーバーのログエントリを相互に関連付けるために使用できます。 | いいえ |
+| `cookie` | 最大 32 文字の任意の文字列。トークンに格納され、トークン交換サーバーによって記録されます。 これは、引き換えサーバーのログエントリと、サービスプロバイダーのサーバーのログエントリを関連付けるために使用できます。 | いいえ |
 
-**回答**
+**応答**
 
-**表7:HTTP応答**
+**表 7:HTTP 応答**
 
-| **HTTPステータスコード** | **説明** | **Content-Type** | **エンティティボディに次を含む** |
+| **HTTP ステータスコード** | **説明** | **Content-Type** | **エンティティ本文に次を含む** |
 |---|---|---|---|
-| `200 OK` | エラーはありません。 | `text/uri-list` | ライセンス取得URL +トークン |
-| `400 Bad Request` | 無効な引数 | `text/html` または  `application/json` | エラーの説明 |
-| `401 Unauthorized` | 認証に失敗しました | `text/html` または  `application/json` | エラーの説明 |
-| `404 Not found` | 不正なURL | `text/html` または  `application/json` | エラーの説明 |
-| `50x Server Error` | サーバーエラー | `text/html` または  `application/json` | エラーの説明 |
+| `200 OK` | エラーはありません。 | `text/uri-list` | ライセンス取得 URL +トークン |
+| `400 Bad Request` | 無効な引数 | `text/html` または `application/json` | エラーの説明 |
+| `401 Unauthorized` | 認証に失敗しました | `text/html` または `application/json` | エラーの説明 |
+| `404 Not found` | 無効な URL | `text/html` または `application/json` | エラーの説明 |
+| `50x Server Error` | サーバーエラー | `text/html` または `application/json` | エラーの説明 |
 
-**表8:イベントエラーコード**
+**表 8：イベントエラーコード**
 
 <table id="table_i2c_zsx_pv">  
  <thead> 
@@ -114,19 +112,19 @@ FairPlayライセンストークンインターフェイスは、実稼働およ
  <tbody> 
   <tr> 
    <td> -2002 </td> 
-   <td> 無効なトークン有効期限：&lt;詳細&gt; </td> 
+   <td> 無効なトークン有効期限： &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2003 </td> 
-   <td> 無効なIPアドレス </td> 
+   <td> 無効な IP アドレス </td> 
   </tr> 
   <tr> 
    <td> -2005 </td> 
-   <td> 無効なコンテンツ暗号化キー：&lt;詳細&gt; </td> 
+   <td> 無効なコンテンツ暗号化キー： &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2008 </td> 
-   <td> 無効な出力制御フラグが指定されました：&lt;詳細&gt; </td> 
+   <td> 無効な出力制御フラグが指定されました： &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2017 </td> 
@@ -134,11 +132,11 @@ FairPlayライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td> 認証トークンが無効です：&lt;詳細&gt; <p>注意： 認証子が間違っている場合や、<span class="filepath"> *.test.expressplay.com </span>のテストAPIにアクセスする場合に、本番用認証子を使用して認証子が正しくない場合、またはその逆の場合に、この問題が発生する可能性があります。 </p> <p importance="high">注意： テストSDKとアドバンスドテストツール(ATT)は<span class="filepath"> *.test.expressplay.com </span>でのみ機能しますが、実稼働デバイスは<span class="filepath"> *.service.expressplay.com </span>を使用する必要があります。 </p> </td> 
+   <td> 認証トークンが無効です： &lt;details&gt; <p>注意：これは、認証子が正しくない場合、または <span class="filepath"> *.test.expressplay.com </span> 本番用認証子の使用（または本番用認証子の使用） </p> <p importance="high">注意：テスト SDK と高度なテストツール (ATT) は、 <span class="filepath"> *.test.expressplay.com </span>に対して、実稼動デバイスはを使用する必要があります。 <span class="filepath"> *.service.expressplay.com </span>. </p> </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
-   <td> 使用可能なトークンが不十分 </td> 
+   <td> 使用可能なトークンが不十分です </td> 
   </tr> 
   <tr> 
    <td> -2020 </td> 
@@ -154,31 +152,31 @@ FairPlayライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -2023 </td> 
-   <td> レンタル再生期間がありません </td> 
+   <td> レンタル再生時間がありません </td> 
   </tr> 
   <tr> 
    <td> -2025 </td> 
-   <td> 無効なレンタル再生期間 </td> 
+   <td> 無効なレンタル再生時間 </td> 
   </tr> 
   <tr> 
    <td> -2027 </td> 
-   <td> コンテンツ暗号化キーは32桁の16進数である必要があります </td> 
+   <td> コンテンツ暗号化キーは 32 桁の 16 進数である必要があります </td> 
   </tr> 
   <tr> 
    <td> -2030 </td> 
-   <td> ExpressPlay Adminエラー：&lt;詳細&gt; </td> 
+   <td> ExpressPlay 管理エラー： &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2031 </td> 
-   <td> サービス無効なアカウント </td> 
+   <td> 無効なサービスアカウント </td> 
   </tr> 
   <tr> 
    <td> -2033 </td> 
-   <td> 無効なCookie </td> 
+   <td> 無効な cookie </td> 
   </tr> 
   <tr> 
    <td> -2034 </td> 
-   <td> 無効な出力制御、値が指定範囲外 </td> 
+   <td> 無効な出力制御、指定された範囲外の値 </td> 
   </tr> 
   <tr> 
    <td> -2035 </td> 
@@ -186,19 +184,19 @@ FairPlayライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -2036 </td> 
-   <td> 拡張子の種類は4文字にする必要があります </td> 
+   <td> 拡張子のタイプは 4 文字にする必要があります </td> 
   </tr> 
   <tr> 
    <td> -2037 </td> 
-   <td> 拡張機能のペイロードはBase64エンコードする必要があります </td> 
+   <td> 拡張機能のペイロードは Base64 エンコードする必要があります </td> 
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td> <span class="codeph"> OutputControlFlag </span> はエンコードされた4バイトである必要があります </td> 
+   <td> <span class="codeph"> OutputControlFlag </span> は、4 バイトでエンコードする必要があります </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
-   <td> 無効なエラー形式が指定されました：&lt;形式&gt; </td> 
+   <td> 無効なエラーフォーマットが指定されました： &lt;format&gt; </td> 
   </tr> 
   <tr> 
    <td> -4001 </td> 
@@ -210,7 +208,7 @@ FairPlayライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -4018 </td> 
-   <td> kidがありません </td> 
+   <td> kid がありません </td> 
   </tr> 
   <tr> 
    <td> -4019 </td> 
@@ -218,19 +216,19 @@ FairPlayライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td> <span class="codeph"> kid </span> は32文字の16進数である必要があります </td> 
+   <td> <span class="codeph"> kid </span> は、32 文字の 16 進数である必要があります </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td> <span class="codeph"> kid </span> は^の後ろに64文字必要です </td> 
+   <td> <span class="codeph"> kid </span> は、^の後ろの 64 文字にする必要があります </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
-   <td> 無効な<span class="codeph"> kid </span> </td> 
+   <td> 無効 <span class="codeph"> kid </span> </td> 
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td> 無効な暗号化キーまたは<span class="codeph"> kek </span> </td> 
+   <td> 無効な暗号化キーまたは <span class="codeph"> kek </span> </td> 
   </tr> 
   <tr> 
    <td> -5003 </td> 
@@ -238,19 +236,19 @@ FairPlayライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -6001 </td> 
-   <td> 無効な<span class="codeph"> FPExtension </span>パラメータが指定されました </td> 
+   <td> 無効 <span class="codeph"> FPExtension </span> 指定されたパラメーター </td> 
   </tr> 
   <tr> 
    <td> -6002 </td> 
-   <td> 無効なFPトークンタイプ </td> 
+   <td> 無効な FP トークンタイプ </td> 
   </tr> 
   <tr> 
    <td> -6003 </td> 
-   <td> 無効な<span class="codeph"> iv </span>パラメータが指定されました </td> 
+   <td> 無効 <span class="codeph"> iv </span> 指定されたパラメータ </td> 
   </tr> 
   <tr> 
    <td> -6004 </td> 
-   <td> FPのCKCを生成できませんでした </td> 
+   <td> FP の CKC を生成できませんでした </td> 
   </tr> 
   <tr> 
    <td> -6005 </td> 
@@ -258,7 +256,7 @@ FairPlayライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -6006 </td> 
-   <td> サービスがFairPlayサポート用に承認されていません </td> 
+   <td> FairPlay サポートのためのサービスが許可されていません </td> 
   </tr> 
   <tr> 
    <td> -6007 </td> 
@@ -266,11 +264,11 @@ FairPlayライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -6008 </td> 
-   <td> デバイスIDのバインディングはFairPlayではサポートされていません </td> 
+   <td> FairPlay では、デバイス ID のバインディングはサポートされていません </td> 
   </tr> 
   <tr> 
    <td> -6009 </td> 
-   <td> FairPlayオプションが無効 </td> 
+   <td> FairPlay オプションが無効です </td> 
   </tr> 
  </tbody> 
 </table>

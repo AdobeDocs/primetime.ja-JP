@@ -2,15 +2,13 @@
 title: グローバルログファイル
 description: グローバルログファイル
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
 
 ---
 
-
 # グローバルログファイル{#global-log-file}
 
-グローバルログファイルflashaccess-global.logは、*LicenseServer.LogRoot*&#x200B;にあります。 このログには、AdobeアクセスSDKによって生成されたログメッセージや、サーバーの初期化時に生成されたログメッセージを含めることができます。
+グローバル・ログ・ファイル flashaccess-global.log は、 *LicenseServer.LogRoot*. このログには、Adobeアクセス SDK で生成されたログメッセージや、サーバーの初期化中に生成されたログメッセージを含めることができます。

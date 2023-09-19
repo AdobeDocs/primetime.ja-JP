@@ -1,24 +1,22 @@
 ---
-description: 一部の解析実装では、クライアントアプリケーションは、Browser TVSDKのlocalTime値でレポートされる位置とは異なる再生ヘッド位置を提供する必要があります。
+description: 一部の Analytics 実装では、クライアントアプリケーションが、Browser TVSDK localTime 値で報告される位置とは異なる再生ヘッドの位置を提供する必要がある場合があります。
 title: カスタム時間更新の実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
+# カスタム時間更新の実装{#implement-custom-time-updates}
 
-# カスタム時刻更新の実装{#implement-custom-time-updates}
+一部の Analytics 実装では、クライアントアプリケーションが、Browser TVSDK localTime 値で報告される位置とは異なる再生ヘッドの位置を提供する必要がある場合があります。
 
-一部の解析実装では、クライアントアプリケーションは、Browser TVSDKのlocalTime値でレポートされる位置とは異なる再生ヘッド位置を提供する必要があります。
-
-例えば、リニアストリーム再生中に、各プログラムの再生ヘッドを開始時間に対して相対的に提供できます。
+例えば、リニアストリームの再生中に、各プログラムの再生ヘッドを開始時間に対して相対的に提供できます。
 
 >[!TIP]
 >
->デフォルトの位置以外の再生ヘッドの位置を指定する場合にのみ、このメソッドを上書きします。
+>デフォルト位置以外の再生ヘッドの位置を指定する場合にのみ、このメソッドを上書きします。
 
 デフォルトの再生ヘッドの位置を上書きするには：
 
@@ -30,5 +28,4 @@ vaMetadata.currentTimeUpdateBlock = function() {
 
 >[!IMPORTANT]
 >
->このコードスニペットの値はサンプルのみです。 カスタム再生ヘッドの位置に異なる値を使用する必要があります。
-
+>このコードスニペットの値は、サンプルのみです。 カスタム再生ヘッドの位置に異なる値を使用する必要があります。

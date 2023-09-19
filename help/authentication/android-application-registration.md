@@ -1,14 +1,12 @@
 ---
 title: Android アプリケーションの登録
 description: Android アプリケーションの登録
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
 
 ---
-
-
 
 # Android アプリケーションの登録 {#android-application-registration}
 
@@ -28,16 +26,16 @@ Android AccessEnabler SDK バージョン 3.0 以降では、Adobeのサーバ�
 
 >[!NOTE]
 >
->ソフトウェアステートメントはアプリ固有で、個々のソフトウェアステートメントは複数のアプリケーションに対して使用できません。 プログラマレベルのソフトウェアステートメントは同じ制約を持ち、単一のチャネルとマルチチャネルのどちらでも、単一のアプリケーションでのみ使用できることに注意してください。
+>ソフトウェアステートメントはアプリ固有で、個々のソフトウェアステートメントは複数のアプリケーションに対して使用できません。 プログラマレベルのソフトウェアステートメントは同じ制約を持ち、単一のチャネルとマルチチャネルのどちらでも、単一のアプリケーションに対してのみ使用できることに注意してください。
 
-## ソフトウェアステートメントの取得方法 {#how-to-get-ss}
+## ソフトウェアステートメントを取得する方法 {#how-to-get-ss}
 
 ### Adobeの TVE ダッシュボードにアクセスできる場合：
 
 * ブラウザーを開き、に移動します。 [Adobe Primetime TVE Dashboard](https://console.auth.adobe.com).
 * に移動します。 `Channels` 」セクションで、チャネルを選択します。
 * に移動します。 `Registered Applications` タブ。
-* クリック `Add new application`.
+* クリック： `Add new application`.
 * アプリケーションの名前とバージョンを指定し、使用可能なプラットフォームを選択します。 Android の場合は。
 * プログラマー用に既に構成されたドメインのリストから選択してドメイン名を指定します。
 * 変更をサーバーにプッシュし、チャネルの「登録済みアプリケーション」タブに戻ります。
@@ -68,4 +66,3 @@ Android では、「ソフトウェアステートメント」の作成時に選
     <string name="software_statement">softwarestatement value</string>
     <string name="redirect_uri">com.domain_name</string>
 ```
-

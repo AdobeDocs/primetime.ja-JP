@@ -1,8 +1,7 @@
 ---
-description: '環境を反映するようにサーバーのプロパティを設定する必要があります。 次のいずれかを使用してこれを実行できます。 '
+description: 環境を反映するようにサーバーのプロパティを設定する必要があります。 次のいずれかを使用してこれを実行できます。
 title: サーバー環境へのプロパティの適用
-exl-id: 0c78011a-e8c8-43a8-8c2d-a5c4ed54a8d7
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -13,18 +12,18 @@ ht-degree: 0%
 
 環境を反映するようにサーバーのプロパティを設定する必要があります。 これをおこなうには、次のいずれかを使用します。
 
-* [!DNL flashaccess-i15n.properties] ・各 [!DNL .war] ファイル
+* [!DNL flashaccess-i15n.properties] ・各サンプルに含まれるサンプル [!DNL .war] ファイル
 
-* [!DNL AdobeInitial.properties] - [!DNL /shared] DVD 上のフォルダ
+* [!DNL AdobeInitial.properties]  — 内のサンプル [!DNL /shared] DVD 上のフォルダ
 
-   このファイルを使用して、WAR ファイルで設定されたプロパティを次のように上書きできます。
+  このファイルを使用して、WAR ファイルで設定されたプロパティを次のように上書きできます。
 
-   1. 上書きプロパティ値をに設定します。 [!DNL AdobeInitial.properties]
+   1. 上書きするプロパティ値をに設定します。 [!DNL AdobeInitial.properties]
    1. 場所 [!DNL AdobeInitial.properties] クラスパスの
 
-   >[!NOTE]
-   >
-   >Adobeでは、 [!DNL AdobeInitial.properties] ファイルを更新すると、以前に設定したプロパティが失われる恐れがなく、アプリケーションの WAR ファイルを更新できます。 [!DNL flashaccess-i15n.properties] ファイル。
+  >[!NOTE]
+  >
+  >Adobeでは、 [!DNL AdobeInitial.properties] ファイルを更新すると、以前に設定したプロパティが失われる恐れがなく、アプリケーションの WAR ファイルを更新できます。 [!DNL flashaccess-i15n.properties] ファイル。
 
 * Java System プロパティーのメカニズム。
 
@@ -55,14 +54,14 @@ log.Level__DEV=DEBUG
 
 1. `propertyname_environment` in [!DNL flashaccess-15n.properties]
 
-1. `propertyname_environment` （Java システムプロパティ）
+1. `propertyname_environment` （Java システムのプロパティ）
 1. `propertyname` in [!DNL AdobeInitial.properties]
 
 1. `propertyname` in [!DNL flashaccess-15n.properties]
 
-1. `propertyname` （Java システムプロパティ）
+1. `propertyname` （Java システムのプロパティ）
 
 >[!NOTE]
 >
->サーバーの起動時に、サーバーの環境名を Java System プロパティとして指定する必要があります。 例えば、Tomcat を [!DNL catalina.bat]、 `CATALINA_OPTS` 環境変数の内容を次に示します。
->-DENVIRONMENT_NAME=[ 開発 |ステージ | PROD ]
+>サーバーの起動時に、サーバーの環境名を Java System プロパティとして指定する必要があります。 例えば、Tomcat を [!DNL catalina.bat]を設定し、 `CATALINA_OPTS` 環境変数の内容を次に示します。
+>-DENVIRONMENT_NAME=[開発 | STAGE | PROD]

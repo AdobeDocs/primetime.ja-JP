@@ -1,36 +1,34 @@
 ---
 title: マニフェストの書き換えと広告取得ルール
-description: 'マニフェストの書き換えと広告取得ルール '
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+description: マニフェストの書き換えと広告取得ルール
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
 
 ---
 
+# マニフェストの書き換えと広告取得ルール {#manifest-rewriting}
 
-# マニフェストの書き換えと広告取得ルール{#manifest-rewriting}
+PrimetimeAd Insertionは、単純な検索/置換ルールを使用してフラグメントの書き直しやアセットの取得をおこなうことができます。  これを使用して、https を http リクエストにダウンコンバートし、TLS のハンドシェイクを削除することでパフォーマンスを向上させることができます。  これは、同じ CDN から広告アセットと CDN アセットを配信する場合にも使用できます。
 
-PrimetimeAd Insertionは、単純な検索/置換ルールを使用して、フラグメントの書き直しやアセットの取得を行うことができます。  これは、httpsをhttp要求にダウンコンバートする場合に使用できます。これにより、TLSのハンドシェイクを削除してパフォーマンスを向上させることができます。  また、同じCDNから広告アセットとCDNアセットを配信する場合にも使用できます。
+ルールは、正規表現の検索/置換として定義され、送信前やマニフェストに挿入後に url を変換するために使用できます。
 
-ルールは、通常の式検索/置換として定義され、送信前、またはマニフェストに挿入後にURLを変換するために使用できます。
-
-このルールの例では、すべての広告リクエストを、httpsからhttpにダウンコンバートします。
+このルールの例では、すべての広告リクエストがdomain.comに https から http にダウンコンバートされます。
 
 ```
 find: "https://domain.com/(.*)"
 replace: "http://domain.com/$1"
 ```
 
-次のルールは、コンテンツCDNを使用して、Adobeの広告ストレージCDNにある広告を配信します。
+次のルールでは、コンテンツ CDN を使用して、Adobeの広告ストレージ CDN に配置された広告を配信します。
 
 ```
 find: "https?://primetime-a.akamaihd.net/(.*)"
 replace: "http://mycdn.com/ad-mapping-pathname/$1"
 ```
 
-BootstrapAPIの`ptprotoswitch`パラメーターを変更すると、ルールの名前を付けたり、有効/無効にしたりできます。これは、実行するルールをカンマで区切ったリストです。  例えば、次の2つのルールは、`ptprotoswitch=adfetch_rule1,adfetch_rule2`を設定することで実行できます。
+ルールは、 `ptprotoswitch` パラメーターを指定します。BootstrapAPI は、実行するルールのコンマ区切りリストです。  例えば、これら 2 つのルールは、 `ptprotoswitch=adfetch_rule1,adfetch_rule2`:
 
 ```
 <ruleSet>
@@ -45,4 +43,4 @@ BootstrapAPIの`ptprotoswitch`パラメーターを変更すると、ルール�
 </ruleSet>
 ```
 
-お客様のアカウントに対してこれらのルールを作成/有効にするには、テクニカルサポートにお問い合わせください。
+お使いのアカウントでこれらのルールを作成/有効にするには、テクニカルサポートにお問い合わせください。

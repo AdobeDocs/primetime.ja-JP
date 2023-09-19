@@ -2,19 +2,16 @@
 title: 設定ファイルのプロパティ
 description: 設定ファイルのプロパティ
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '32'
 ht-degree: 0%
 
 ---
 
+# 設定ファイルのプロパティ {#configuration-file-properties}
 
-# 構成ファイルのプロパティ{#configuration-file-properties}
-
-次に示すのはPolicy Updateリストマネージャーのプロパティです。Policy Update Server Managerプロパティでは、失効リスト(License Server Certificate)に署名するための秘密鍵証明書を含むPKCS12ファイルを指定します。
+次に、Policy Update List Manager プロパティを示します。このプロパティは、失効リスト (License Server Certificate) に署名するための資格情報を含む PKCS12 ファイルを指定します。
 
 * `revocation.sign.certfile=license-server-credentials.pfx`
 * `revocation.sign.certpass=password`
-

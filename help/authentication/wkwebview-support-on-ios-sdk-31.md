@@ -1,13 +1,12 @@
 ---
 title: iOS SDK 3.1 以降での WKWebView のサポート
 description: iOS SDK 3.1 以降での WKWebView のサポート
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
 
 ---
-
 
 # iOS SDK 3.1 以降での WKWebView のサポート {#wkwebview-support-on-ios-sdk-3.1}
 
@@ -29,6 +28,6 @@ iOS SDK バージョン 3.1 以降、実装者は、WKWebView または UIWebVie
 
 Adobeの AccessEnabler は、非表示の内部 UIWebView インスタンスを使用して、「[パッシブ認証](/help/authentication/sso-passive-authn.md)」が表示されます。 「パッシブ」フローは、各要求者 ID に対する認証が必要な MVPD で役立ち、このフローから、SSO エクスペリエンス (AdobeSSO) をシミュレートするために、複数のiOSアプリケーションで同じチーム ID を使用したプログラマーの役に立ちました。 この機能は、現在、限られた数の MVPD で使用されています。
 
-この機能では、Adobeが認証 Cookie を取り込み、「パッシブ」フローの間に再生できる UIWebView の動作を使用しました。 WKWebView は、Adobeがログイン時に設定された Cookie を取得し、WKWebView の非表示のインスタンスを使用して Cookie を再生できないようにする、より強力なセキュリティを導入します。 このセキュリティの向上と、「パッシブ」フローは、非常に特定の実装シナリオ ( 同じチーム ID を使用する複数のAdobe) で、非常に限られた MVPD のセットにのみ利益を与えたと考えたため、WebViews を使用して認証する MVPD の「パッシブ認証」機能を削除しました。
+この機能では、Adobeが認証 Cookie を取り込み、「パッシブ」フローの間に再生できる UIWebView の動作を使用しました。 WKWebView は、Adobeがログイン時に設定された Cookie を取得し、WKWebView の隠しインスタンスを使用して Cookie を再生するのを防ぐ、より強力なセキュリティを導入します。 このセキュリティの向上と、「パッシブ」フローは、非常に特定の実装シナリオ ( 同じチーム ID を使用する複数のAdobe) で、非常に限られた MVPD のセットにのみ利益を与えたと考えたため、WebViews を使用して認証する MVPD の「パッシブ認証」機能を削除しました。
 
 この機能は、SFSafariViewController を使用するように設定された MVPD にはまだ存在しますが、この場合、SFSafariViewController を「隠し」方法で使用することはできないので、「パッシブ」認証はユーザーに対して表示されます。

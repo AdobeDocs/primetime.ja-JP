@@ -1,22 +1,20 @@
 ---
 description: デフォルトのリゾルバーに基づいて、独自のコンテンツリゾルバーを実装できます。
 title: カスタムコンテンツリゾルバーの実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
-# カスタムコンテンツリゾルバーの実装{#implement-a-custom-content-resolver}
+# カスタムコンテンツリゾルバーの実装 {#implement-a-custom-content-resolver}
 
 デフォルトのリゾルバーに基づいて、独自のコンテンツリゾルバーを実装できます。
 
-TVSDKは、新しいオポチュニティを生成する際に、登録されているコンテンツリゾルバーを繰り返し処理し、そのオポチュニティを解決できるコンテンツリゾルバーを探します。 オポチュニティの解決のために、`true`を最初に返すものが選択されます。 オポチュニティを解決できるコンテンツリゾルバーがない場合、そのオポチュニティはスキップされます。 通常、コンテンツ解決プロセスは非同期的なので、コンテンツリゾルバーは、TVSDKにプロセスが完了したことを通知する必要があります。
+TVSDK は、新しいオポチュニティを生成する際に、登録されたコンテンツリゾルバーを繰り返し処理し、そのオポチュニティを解決できるコンテンツリゾルバーを探します。 最初に戻る `true` が選択され、オポチュニティが解決されます。 可能なコンテンツリゾルバーがない場合は、そのオポチュニティはスキップされます。 通常、コンテンツ解決プロセスは非同期なので、コンテンツリゾルバーは TVSDK にプロセスが完了したことを通知します。
 
-1. `ContentFactory`インターフェイスを拡張し、`retrieveResolvers`をオーバーライドして、独自のカスタム`ContentFactory`を実装します。
+1. 独自のカスタムの実装 `ContentFactory`を拡張して、 `ContentFactory` インターフェイスと上書き `retrieveResolvers`.
 
    例：
 
@@ -51,7 +49,7 @@ TVSDKは、新しいオポチュニティを生成する際に、登録されて
    } 
    ```
 
-1. `ContentFactory`を`MediaPlayer`に登録します。
+1. を登録します。 `ContentFactory` から `MediaPlayer`.
 
    例：
 
@@ -68,9 +66,9 @@ TVSDKは、新しいオポチュニティを生成する際に、登録されて
    itemLoader.load(resource, id, config);
    ```
 
-1. 次のように、`AdvertisingMetadata`オブジェクトをTVSDKに渡します。
-   1. `AdvertisingMetadata`オブジェクトを作成します。
-   1. `AdvertisingMetadata`オブジェクトを`MediaPlayerItemConfig`に保存します。
+1. パス： `AdvertisingMetadata` オブジェクトを TVSDK に次のように追加します。
+   1. の作成 `AdvertisingMetadata` オブジェクト。
+   1. を保存します。 `AdvertisingMetadata` ～に対して `MediaPlayerItemConfig`.
 
       ```java
       AdvertisingMetadata advertisingMetadata = new AdvertisingMetadata(); 
@@ -81,8 +79,8 @@ TVSDKは、新しいオポチュニティを生成する際に、登録されて
       mediaPlayerItemConfig.setAdvertisingMetadata(advertisingMetadata); 
       ```
 
-1. `ContentResolver`クラスを拡張するカスタム広告リゾルバークラスを作成します。
-   1. カスタム広告リゾルバーで、`doConfigure`、`doCanResolve`、`doResolve`、`doCleanup`をオーバーライドします。
+1. を拡張するカスタム広告リゾルバークラスの作成 `ContentResolver` クラス。
+   1. カスタム広告リゾルバーで、 `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
 
       ```java
       void doConfigure(MediaPlayerItem item); 
@@ -91,7 +89,7 @@ TVSDKは、新しいオポチュニティを生成する際に、登録されて
       void doCleanup();
       ```
 
-      `doConfigure`に渡されたアイテムから`advertisingMetadata`を取得します。
+      お客様の `advertisingMetadata` 渡された項目から `doConfigure`:
 
       ```java
       MediaPlayerItemConfig itemConfig = item.getConfig(); 
@@ -100,9 +98,9 @@ TVSDKは、新しいオポチュニティを生成する際に、登録されて
         mediaPlayerItemConfig.getAdvertisingMetadata(); 
       ```
 
-   1. 配置オポチュニティごとに、`List<TimelineOperation>`を作成します。
+   1. 配置オポチュニティごとに、 `List<TimelineOperation>`.
 
-      次のサンプル`TimelineOperation`は`AdBreakPlacement`の構造を提供します。
+      このサンプル `TimelineOperation` ～の構造を提供する `AdBreakPlacement`:
 
       ```java
       AdBreakPlacement( 
@@ -115,28 +113,28 @@ TVSDKは、新しいオポチュニティを生成する際に、登録されて
 
    1. 広告が解決されたら、次のいずれかの関数を呼び出します。
 
-      * 広告の解決に成功した場合は、`ContentResolverClient`で`process(List<TimelineOperation> proposals)`と`notifyCompleted(Opportunity opportunity)`を呼び出します。
+      * 広告の解決に成功した場合は、を呼び出します。 `process(List<TimelineOperation> proposals)` および `notifyCompleted(Opportunity opportunity)` の `ContentResolverClient`
 
-         ```java
-         _client.process(timelineOperations); 
-         _client.notifyCompleted(opportunity); 
-         ```
+        ```java
+        _client.process(timelineOperations); 
+        _client.notifyCompleted(opportunity); 
+        ```
 
-      * 広告の解決に失敗した場合は、`ContentResolverClient`で`notifyResolveError`を呼び出します
+      * 広告の解決に失敗した場合は、を呼び出します。 `notifyResolveError` の `ContentResolverClient`
 
-         ```java
-         _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
-         ```
+        ```java
+        _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
+        ```
 
-         例：
+        例：
 
-         ```java
-         _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
-         ```
+        ```java
+        _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
+        ```
 
 <!--<a id="example_463B718749504A978F0B887786844C39"></a>-->
 
-このサンプルのカスタム広告リゾルバーは、オポチュニティを解決し、単純な広告を提供します。
+このサンプルのカスタム広告リゾルバーは、オポチュニティを解決し、シンプルな広告を提供します。
 
 ```java
 public class CustomContentResolver extends ContentResolver { 
@@ -169,4 +167,3 @@ public class CustomContentResolver extends ContentResolver {
     protected void doCleanup() {} 
 } 
 ```
-

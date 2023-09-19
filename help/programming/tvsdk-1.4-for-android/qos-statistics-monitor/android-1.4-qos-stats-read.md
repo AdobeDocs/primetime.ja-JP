@@ -1,27 +1,25 @@
 ---
-description: QOSProviderクラスから再生、バッファリング、デバイスの統計を読み取ることができます。
-title: 再生、バッファリング、デバイスに関するQOS統計の読み取り
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: QOSProvider クラスから、再生、バッファリング、デバイスの統計を読み取ることができます。
+title: 再生、バッファリング、デバイスに関する QOS 統計の読み取り
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# 再生、バッファリング、デバイスに関する QOS 統計の読み取り{#read-qos-playback-buffering-and-device-statistics}
 
-# 再生、バッファリング、デバイスに関するQOS統計を読み取ります{#read-qos-playback-buffering-and-device-statistics}
+QOSProvider クラスから、再生、バッファリング、デバイスの統計を読み取ることができます。
 
-QOSProviderクラスから再生、バッファリング、デバイスの統計を読み取ることができます。
+The `QOSProvider` クラスは、バッファリング、ビットレート、フレームレート、時間データなどに関する情報を含む様々な統計を提供します。
 
-`QOSProvider`クラスは、バッファリング、ビットレート、フレームレート、時間データなど、様々な統計情報を提供します。
+また、製造元、モデル、オペレーティングシステム、SDK バージョン、製造元のデバイス ID、画面サイズ/密度など、デバイスに関する情報も提供されます。
 
-製造元、モデル、オペレーティングシステム、SDKバージョン、製造元のデバイスID、画面のサイズ/密度など、デバイスに関する情報も提供します。
+1. メディアプレーヤーをインスタンス化します。
+1. の作成 `QOSProvider` オブジェクトを探し、メディアプレーヤーに接続します。
 
-1. メディアプレイヤーをインスタンス化します。
-1. `QOSProvider`オブジェクトを作成し、メディアプレイヤーに接続します。
-
-   `QOSProvider`コンストラクタは、デバイス固有の情報を取得できるように、プレイヤーコンテキストを取得します。
+   The `QOSProvider` コンストラクターは、デバイス固有の情報を取得できるように、プレーヤーコンテキストを取得します。
 
    ```java
    // Create Media Player. 
@@ -31,7 +29,7 @@ QOSProviderクラスから再生、バッファリング、デバイスの統計
 
 1. （オプション）再生統計を読み取ります。
 
-   再生統計を読み取る方法の1つは、タイマーを設定して、`QOSProvider`から新しいQoS値を定期的に取り込むことです。 例：
+   再生統計を読み取る 1 つの方法は、タイマーを使用することです。タイマーは、 `QOSProvider`. 例：
 
    ```java
    _playbackClock = new Clock(PLAYBACK_CLOCK, 1000); // every 1 second 
@@ -82,4 +80,3 @@ QOSProviderクラスから再生、バッファリング、デバイスの統計
      deviceInfo.getWidthPixels() + "x" + deviceInfo.getHeightPixels() +  
      " (" + orientation + ")"); 
    ```
-

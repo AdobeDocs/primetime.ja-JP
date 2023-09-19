@@ -1,31 +1,29 @@
 ---
-description: コンテンツをパッケージ化する場合は、ライセンスサーバーのURLを指定する必要があります。
+description: コンテンツをパッケージ化する場合は、ライセンスサーバー URL を指定する必要があります。
 title: コンテンツのパッケージ化
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
-
 # コンテンツのパッケージ化{#packaging-content}
 
-コンテンツをパッケージ化する場合は、ライセンスサーバーのURLを指定する必要があります。
+コンテンツをパッケージ化する場合は、ライセンスサーバー URL を指定する必要があります。
 
-Adobe PrimetimeDRMサーバーのURLは次の形式を使用します。
+Adobe Primetime DRM サーバーの URL の形式は次のとおりです。
 
 ```
 http(s)://<license-server-host:port>/flashaccessserver/<tenant-name>
 ```
 
-例えば、ポート8080をリッスンするライセンスサーバーホスト名`mylicenseserver.com`とテナント名&#x200B;*`tenant1`*&#x200B;の場合、コンテンツのパッケージ化時に指定するライセンスサーバーURLに次の構文を使用します。
+例えば、ライセンスサーバーのホスト名の場合は、 `mylicenseserver.com` このサーバーは、ポート 8080 と呼ばれるテナントでリッスンします。 *`tenant1`*&#x200B;を使用する場合、コンテンツをパッケージ化する際に指定するライセンスサーバー URL に対して次の構文を使用します。
 
 ```
 https://mylicenseserver.com:8080/flashaccessserver/tenant1
 ```
 
-各テナントが異なるライセンスサーバーとトランスポート資格情報を使用する場合は、パッケージャーで正しいテナントの証明書を指定していることを確認してください。
+各テナントが異なるライセンスサーバーとトランスポート資格情報を使用している場合は、Packager で正しいテナントの証明書を必ず指定してください。
 
-サーバーが既知のパッケージャーのコンテンツに対してのみライセンスを発行するようにする場合は、テナント設定ファイルのpackager許可リストにパッケージャーの証明書を含める必要があります。
+サーバーが既知のパッケージャーのコンテンツに対してのみライセンスを発行する場合は、テナント設定ファイルの packager許可リストにパッケージャーの証明書を含める必要があります。

@@ -1,16 +1,14 @@
 ---
-title: 高度な遠隔測定
-description: 高度な遠隔測定
+title: 高度なテレメトリ
+description: 高度なテレメトリ
 copied-description: true
-exl-id: 3a030dc8-c3e5-4bf5-9d69-58cfa880bf6a
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
 
 ---
 
-# 高度なテレメトリ{#advanced-telemetry}
+# 高度なテレメトリ {#advanced-telemetry}
 
-お客様は、PrimetimeAd Insertionを使用して広告とセッションに関連するイベントや指標を取り込み、コンテンツと広告エラーの主な原因を明らかにして、ビデオと広告のパフォーマンスに関するインサイトを得ることができます。  広告リクエストは生のリクエストレベルで取り込むことができ、演算子はプロバイダーから直接来る特定のVASTタグまたはVMAPタグをデバッグできます。
+お客様は、PrimetimeAd Insertionを使用して広告およびセッション関連のイベントおよび指標を取得し、コンテンツと広告のエラーの主な原因を突き止めて、ビデオおよび広告のパフォーマンスに関するインサイトを得ることができます。  広告リクエストは、生のリクエストレベルで取り込むことができ、オペレーターは、プロバイダーから直接提供される特定の VAST または VMAP タグをデバッグできます。

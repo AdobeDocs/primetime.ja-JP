@@ -1,18 +1,16 @@
 ---
-description: ReplaceTimeRangeユーティリティクラスは、CustomRangeMetadataで使用するTimeRangeクラスの拡張です。
-title: ReplaceTimeRangeクラス
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: ReplaceTimeRange ユーティリティクラスは、CustomRangeMetadata で使用する TimeRange クラスの拡張です。
+title: ReplaceTimeRange クラス
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%
 
 ---
 
+# ReplaceTimeRange クラス {#replacetimerange-class}
 
-# ReplaceTimeRangeクラス{#replacetimerange-class}
-
-ReplaceTimeRangeユーティリティクラスは、CustomRangeMetadataで使用するTimeRangeクラスの拡張です。
+ReplaceTimeRange ユーティリティクラスは、CustomRangeMetadata で使用する TimeRange クラスの拡張です。
 
 ```java
 public class ReplaceTimeRange extends TimeRange {
@@ -33,4 +31,3 @@ public class ReplaceTimeRange extends TimeRange {
     }
 }
 ```
-

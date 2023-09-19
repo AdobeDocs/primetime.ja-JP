@@ -2,26 +2,24 @@
 title: オーディオトラックを選択
 description: オーディオトラックを選択
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
 
 ---
 
-
 # オーディオトラックを選択{#select-the-audio-tracks}
 
-遅延バインディングオーディオ用のオーディオトラックを選択するには、[IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html)を実装します。
+遅延バインディングオーディオ用のオーディオトラックを選択するには、を実装します。 [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html).
 
 | 宛先… | 通話… |
 |---|---|
-| 使用可能なAAトラックのリストの取得 | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
-| 現在選択されているトラックを取得 | [getSelectedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
-| AAトラックの選択 | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
+| 使用可能な AA トラックのリストを取得する | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
+| 現在選択されているトラックを取得します | [getSelectedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
+| AA トラックを選択 | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
 
-以下のコードの例は、リファレンスの実装がTVSDKからオーディオトラックを取得し、選択したトラックを関連付けられたメディア項目に割り当てる方法を示しています。
+以下のコードサンプルは、リファレンス実装が TVSDK からオーディオトラックを取得し、選択したトラックを関連するメディアアイテムに割り当てる方法を示しています。
 
 ```java
 /** 

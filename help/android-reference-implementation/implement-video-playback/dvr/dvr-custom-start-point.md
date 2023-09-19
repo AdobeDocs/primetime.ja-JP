@@ -1,21 +1,19 @@
 ---
-description: ConfigProviderクラスを使用して最初にDVRストリームに入るときのデフォルトの動作の代わりに、いつDVRストリームに入るかのカスタム開始ポイントを選択できます。
-title: DVRのカスタム開始ポイントの選択
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: ConfigProvider クラスを使用して最初に DVR ストリームに入るデフォルトの動作ではなく、DVR ストリームに入るタイミングのカスタム開始点を選択できます。
+title: DVR のカスタム開始点の選択
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
 
 ---
 
+# DVR のカスタム開始点の選択 {#choosing-a-custom-starting-point-for-dvr}
 
-# DVR {#choosing-a-custom-starting-point-for-dvr}のカスタム開始ポイントの選択
+ConfigProvider クラスを使用して最初に DVR ストリームに入るデフォルトの動作ではなく、DVR ストリームに入るタイミングのカスタム開始点を選択できます。
 
-ConfigProviderクラスを使用して最初にDVRストリームに入るときのデフォルトの動作の代わりに、いつDVRストリームに入るかのカスタム開始ポイントを選択できます。
+開始時間を [ConfigProvider](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/ConfigProvider.html) クラス：
 
-[ConfigProvider](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/ConfigProvider.html)クラスを使用して開始時間を設定するには：
-
-1. [isCustomPositionPrefEnabled()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/ConfigProvider.html#isCustomPositionPrefEnabled())を有効にします。
-1. [retrieveStartTimePref()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IPlaybackConfig.html#iretrieveStartTimePref())に開始時刻を設定します。
-1. カスタム開始の位置が有効になっていることを確認します。
+1. 有効にする [isCustomPositionPrefEnabled()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/ConfigProvider.html#isCustomPositionPrefEnabled()).
+1. 開始時間を [retrieveStartTimePref()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IPlaybackConfig.html#iretrieveStartTimePref()).
+1. カスタムの開始位置が有効になっていることを確認します。

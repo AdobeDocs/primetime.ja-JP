@@ -1,18 +1,16 @@
 ---
-description: TVSDKは、QoS(QoS)イベントをディスパッチして、バッファリングやシークイベントなど、QoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
-title: QoSイベント
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK は、サービス品質 (QoS) イベントをディスパッチして、バッファリングやシークイベントなど、QoS 統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
+title: QoS イベント
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
 
 ---
 
+# QoS イベント{#qos-events}
 
-# QoSイベント{#qos-events}
-
-TVSDKは、QoS(QoS)イベントをディスパッチして、バッファリングやシークイベントなど、QoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
+TVSDK は、サービス品質 (QoS) イベントをディスパッチして、バッファリングやシークイベントなど、QoS 統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
 
 次の例に、これらのイベントの一般的な流れを示します。
 
@@ -34,4 +32,3 @@ private function onSeekCompleted(event:SeekEvent):void { ... }
 ...  SeekEvent.SEEK_POSITION_ADJUSTED...  //if the desired 
 // seek position is modified by the current advertising policies 
 ```
-

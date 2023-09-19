@@ -1,49 +1,47 @@
 ---
-description: TVSDKを使用して、シークバーに表示できるメディアに関する情報を取得できます。
-title: ビデオの長さ、現在時間および残り時間の表示
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK を使用して、シークバーに表示できるメディアに関する情報を取得できます。
+title: ビデオの長さ、現在時間および残り時間を表示
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%
 
 ---
 
+# ビデオの長さ、現在時間および残り時間を表示{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
-# ビデオの長さ、現在時間、残り時間の表示{#display-the-duration-current-time-and-remaining-time-of-the-video}
+TVSDK を使用して、シークバーに表示できるメディアに関する情報を取得できます。
 
-TVSDKを使用して、シークバーに表示できるメディアに関する情報を取得できます。
+1. プレーヤーが PREPARED 状態になるのを待ちます。
+1. を使用して、現在の再生ヘッド時間を取得する `MediaPlayer.getCurrentTime` メソッド。
 
-1. プレイヤーがPREPARED状態になるのを待ちます。
-1. `MediaPlayer.getCurrentTime`メソッドを使用して、再生ヘッドの現在の時間を取得します。
-
-   これは、仮想タイムライン上の再生ヘッドの現在の位置をミリ秒単位で返します。 時間は、メインストリームにスライスされる複数の広告や広告の時間など、代替コンテンツの複数のインスタンスを含む可能性がある、解決済みストリームを基準にして計算されます。 ライブ/リニアストリームの場合、戻り時間は常に再生時間の範囲にあります。
+   これは、仮想タイムライン上の現在の再生ヘッドの位置をミリ秒単位で返します。 時間は、メインストリームにスプライスされる複数の広告や広告の時間など、代替コンテンツの複数のインスタンスを含む可能性がある、解決されたストリームを基準に計算されます。 ライブ/リニアストリームの場合、返される時間は常に再生ウィンドウの範囲にあります。
 
    ```java
    long getCurrentTime() throws IllegalStateException;
    ```
 
-1. ストリームの再生範囲を取得し、長さを決定します。
-   1. `mediaPlayer.getPlaybackRange`メソッドを使用して、バーチャルタイムラインの時間範囲を取得します。
+1. ストリームの再生範囲を取得し、時間を決定します。
+   1. 以下を使用します。 `mediaPlayer.getPlaybackRange` メソッドを使用して、仮想タイムラインの時間範囲を取得します。
 
       ```java
       TimeRange getPlaybackRange() throws IllegalStateException;
       ```
 
-   1. `mediacore.utils.TimeRange`を使用して時間範囲を解析します。
-   1. 長さを調べるには、範囲の終わりから開始を引きます。
+   1. を使用して時間範囲を解析 `mediacore.utils.TimeRange`.
+   1. 期間を指定するには、範囲の終わりから開始を引きます。
 
-      これには、ストリームに挿入される追加コンテンツ（広告）の長さも含まれます。
+      これには、ストリームに挿入される追加コンテンツ（広告）の期間が含まれます。
 
-      VODの場合、範囲は常に0で始まり、終了値はメインコンテンツの長さと、ストリームに挿入される追加コンテンツ（広告）の長さの合計と等しくなります。
+      VOD の場合、範囲は常に 0 で始まり、終了値は、ストリーム（広告）に挿入される追加コンテンツの時間とメインコンテンツの時間の合計に等しくなります。
 
-      リニア/ライブアセットの場合、範囲は再生時間の範囲を表し、再生中にこの範囲が変わります。
+      リニア/ライブアセットの場合、範囲は再生ウィンドウの範囲を表し、この範囲は再生中に変更されます。
 
-      TVSDKは、`onUpdated`コールバックを呼び出して、メディア項目が更新され、その属性（再生範囲を含む）が更新されたことを示します。
+      TVSDK が `onUpdated` メディアアイテムが更新され、その属性（再生範囲を含む）が更新されたことを示すコールバック。
 
-1. `MediaPlayer`で使用できるメソッドと、Android SDKでpublicクラスとして有効な`SeekBar`クラスを使用して、シークバーパラメーターを設定します。
+1. で使用できるメソッドの使用 `MediaPlayer` そして `SeekBar` Android SDK でシークバーパラメーターを設定するために一般的に使用可能なクラス。
 
-   例えば、`SeekBar`と2つの`TextView`要素を含むレイアウトを次に示します。
+   例えば、次に示すのは、 `SeekBar` と 2 `TextView` 要素。
 
    ```xml
    <LinearLayout 
@@ -75,9 +73,9 @@ TVSDKを使用して、シークバーに表示できるメディアに関する
    </LinearLayout>
    ```
 
-1. タイマーを使用して、定期的に現在時間を取得し、SeekBarを更新します。
+1. タイマーを使用して、現在の時間を定期的に取得し、SeekBar を更新します。
 
-   次の例では、`Clock.java`ヘルパークラスをタイマーとして使用します。このタイマーは、参照プレーヤーPrimetimeReferenceで使用できます。 このクラスは、イベントリスナーとトリガーに対して、1秒ごとに`onTick`イベントを設定するか、別のタイムアウト値を指定します。
+   次の例では、 `Clock.java` タイマーとしてのヘルパークラス。リファレンスプレーヤーの PrimetimeReference で使用できます。 このクラスはイベントリスナーを設定し、トリガーを `onTick` イベントを 1 秒ごと、または指定可能な別のタイムアウト値。
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
@@ -90,7 +88,7 @@ TVSDKを使用して、シークバーに表示できるメディアに関する
    playbackClock.addClockEventListener(playbackClockEventListener);
    ```
 
-   この例では、時計が鳴るたびに、メディアプレイヤーの現在の位置を取得し、SeekBarを更新します。 2つのTextView要素を使用して、現在時間と再生範囲の終了位置を数値でマークします。
+   この例では、時計のたびに、メディアプレーヤーの現在の位置を取得し、SeekBar を更新します。 2 つの TextView 要素を使用して、現在時間と再生範囲の終了位置を数値としてマークします。
 
    ```java
    @Override 
@@ -110,4 +108,3 @@ TVSDKを使用して、シークバーに表示できるメディアに関する
    } 
    }
    ```
-

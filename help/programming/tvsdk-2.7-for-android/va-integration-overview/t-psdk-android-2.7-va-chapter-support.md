@@ -2,24 +2,22 @@
 title: チャプターサポートの実装
 description: チャプターサポートの実装
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%
 
 ---
 
+# チャプターサポートの実装 {#implement-chapter-support}
 
-# チャプターサポートの実装{#implement-chapter-support}
+定義して追跡できます *カスタム* TVSDK ベースのアプリケーションでのビデオトラッキングの章です。
 
-TVSDKベースのアプリケーションで、ビデオトラッキング用の&#x200B;*カスタム*&#x200B;チャプターを定義して追跡できます。
-
-カスタムチャプターは、アプリケーションによって管理され、CMSデータや、アプリケーションがチャプターを定義する際に使用する別の方法に基づいています。
+カスタムチャプターは、アプリケーションによって管理され、CMS データに基づくか、アプリケーションがチャプターを定義するために使用する別の方法に基づきます。
 
 >[!CAUTION]
 >
->デフォルトチャプターは、2.5 Android TVSDKではサポートされていません。
+>2.5 Android TVSDK では、デフォルトのチャプターはサポートされていません。
 
 1. カスタムチャプターを定義し、追跡します。
 
@@ -45,4 +43,3 @@ TVSDKベースのアプリケーションで、ビデオトラッキング用の
    
    vaMetadata.setChapters(chapters); 
    ```
-

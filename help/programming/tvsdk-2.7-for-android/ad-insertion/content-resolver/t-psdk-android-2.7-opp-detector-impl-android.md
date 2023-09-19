@@ -1,20 +1,18 @@
 ---
-description: OpportunityGeneratorクラスを実装することで、独自のオポチュニティジェネレーターを実装できます。
+description: OpportunityGenerator クラスを実装することで、独自のオポチュニティジェネレーターを実装できます。
 title: カスタムオポチュニティジェネレーターの実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
+# カスタムオポチュニティジェネレーターの実装 {#implement-a-custom-opportunity-generator}
 
-# カスタムオポチュニティジェネレーターの実装{#implement-a-custom-opportunity-generator}
+OpportunityGenerator クラスを実装することで、独自のオポチュニティジェネレーターを実装できます。
 
-OpportunityGeneratorクラスを実装することで、独自のオポチュニティジェネレーターを実装できます。
-
-1. `ContentFactory`インターフェイスを実装し、`retrieveGenerators`をオーバーライドして、カスタム`ContentFactory`を実装します。
+1. カスタムの実装 `ContentFactory` を実装することで `ContentFactory` インターフェイスと上書き `retrieveGenerators`.
 
    例：
 
@@ -30,7 +28,7 @@ OpportunityGeneratorクラスを実装することで、独自のオポチュニ
    }
    ```
 
-1. `ContentFactory`を`MediaPlayer`に登録します。
+1. を登録します。 `ContentFactory` から `MediaPlayer`.
 
    例：
 
@@ -47,14 +45,14 @@ OpportunityGeneratorクラスを実装することで、独自のオポチュニ
    itemLoader.load(resource, id, config);
    ```
 
-1. `OpportunityGenerator`クラスを実装するカスタムオポチュニティジェネレータークラスを作成します。
+1. を実装するカスタムオポチュニティジェネレータークラスを作成します。 `OpportunityGenerator` クラス。
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. カスタムオポチュニティジェネレーターで、`doConfigure`、`doUpdate`および`doCleanup`をオーバーライドします。
+   1. カスタムオポチュニティジェネレーターで、 `doConfigure`, `doUpdate` および `doCleanup`:
 
       ```java
       @Override 
@@ -75,7 +73,7 @@ OpportunityGeneratorクラスを実装することで、独自のオポチュニ
       List<TimedMetadata> tList = getItem().getTimedMetadata(); 
       ```
 
-   1. `TimedMetadata`または`TimedMetadata`の各グループに対して、次の属性を持つオポチュニティを作成します。
+   1. 次ごとに `TimedMetadata` またはのグループ `TimedMetadata`、次の属性を持つオポチュニティを作成します。
 
       ```java
       Opportunity( 
@@ -86,11 +84,11 @@ OpportunityGeneratorクラスを実装することで、独自のオポチュニ
       ); 
       ```
 
-   1. オポチュニティを作成するたびに、`OpportunityGeneratorClient:getClient().resolve(opportunity);`で`resolve`を呼び出します。
+   1. 作成した各オポチュニティに対して、 `resolve` の `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
-次に、カスタム配置オポチュニティディテクターのサンプルを示します。
+次に、カスタム配置オポチュニティディテクターの例を示します。
 
 ```java
 public class MyOpportunityGenerator implements OpportunityGenerator {
@@ -150,4 +148,3 @@ public class MyOpportunityGenerator implements OpportunityGenerator {
     protected void cleanup() {} 
 }
 ```
-

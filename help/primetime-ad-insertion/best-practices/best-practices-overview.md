@@ -2,21 +2,19 @@
 title: ベストプラクティス
 description: ベストプラクティス
 copied-description: true
-exl-id: 2dae6032-5e22-4274-a5a2-02960fcbcf19
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
-# ベストプラクティス{#best-practices}
+# ベストプラクティス {#best-practices}
 
-ビデオストリームのパフォーマンスと開始アップ時間を最適化するには、次のベストプラクティスを参照して、広告とコンテンツのワークフローを分析し最適化します。
+ビデオストリームの最適なパフォーマンスと開始時間については、次のベストプラクティスを参照して、広告とコンテンツのワークフローを分析および最適化してください。
 
-+ [ビデオの開始アップ時間の最適化](optimize-video-startup-time.md)
++ [ビデオの開始時間の最適化](optimize-video-startup-time.md)
 + [パフォーマンスの分析](analyze-performance.md)
-+ [HTTPキャッシュ](caching.md)
++ [HTTP キャッシュ](caching.md)
 + [ルートとプロトコルの最適化](optimize-routes-protocols.md)
-+ [広告解決の制約の適用](apply-ad-resolution-constraints.md)
++ [広告解像度の制約の適用](apply-ad-resolution-constraints.md)

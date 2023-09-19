@@ -1,18 +1,16 @@
 ---
-description: AdobeFlash Playerの使用に役立つAPIがいくつかあります。
-title: AdobeFlash Playerに役立つAPI
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: AdobeFlash Playerの使用に役立つ API がいくつかあります。
+title: AdobeFlash Playerに役立つ API
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
 
 ---
 
+# AdobeFlash Playerに役立つ API{#helpful-apis-for-the-adobe-flash-player}
 
-# AdobeFlash Player{#helpful-apis-for-the-adobe-flash-player}に役立つAPI
-
-AdobeFlash Playerの使用に役立つAPIがいくつかあります。
+AdobeFlash Playerの使用に役立つ API がいくつかあります。
 
 ## AdobePSDK.MediaResource {#section_8C339FA1386D4B1A926A1459B2619E5E}
 
@@ -20,7 +18,7 @@ AdobeFlash Playerの使用に役立つAPIがいくつかあります。
 new MediaResource(url, type, metadata, forceFlash)
 ```
 
-サポートされている場合は、`forceFlash`パラメーターを使用して、再生テクノロジーの決定シーケンスを上書きし、Flash Playerの使用を強制できます。
+サポート対象の場合、 `forceFlash` パラメーターを使用して、再生テクノロジーの決定シーケンスを上書きし、実装に強制的にこのFlash Playerを使用させます。
 
 <!--<a id="section_FEE3205B532446498771F7DD55B5E79F"></a>-->
 
@@ -69,4 +67,3 @@ AdobePSDK.setAuthorizationTokenFilename(authorizationTokenFilename);
 */ 
 AdobePSDK.setAuthorizationTokenType(authorizationTokenType);
 ```
-

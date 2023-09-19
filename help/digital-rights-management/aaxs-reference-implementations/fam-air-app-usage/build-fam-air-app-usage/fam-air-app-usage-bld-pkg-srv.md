@@ -1,16 +1,14 @@
 ---
-title: Packagerサーバーの構築
-description: Packagerサーバーの構築
+title: Packager サーバーの構築
+description: Packager サーバーの構築
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '28'
 ht-degree: 0%
 
 ---
 
+# Packager サーバーの構築 {#building-the-packager-server}
 
-# Packagerサーバーの構築{#building-the-packager-server}
-
-ソースコードを変更する場合は、リファレンス実装のコンパイル手順を参照してください。
+ソースコードを変更する場合は、参照実装のコンパイルに関する説明を参照してください。

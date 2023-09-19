@@ -2,8 +2,7 @@
 title: 概要
 description: 概要
 copied-description: true
-exl-id: 07f2ef0b-c6aa-4574-a3ae-18685a090cf2
-source-git-commit: a1fc67b708f3d5821532d3827639adbadf15f6b4
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -18,7 +17,7 @@ Publisher ID は、AIRファイルの作成に使用する証明書に対して�
 
 >[!NOTE]
 >
->AIR許可リストの適用に使用される Publisher ID は、アプリケーションの Publisher ID とは異なります。 [!DNL application.xml] ファイル。
+>AIR許可リストの適用に使用される Publisher ID は、アプリケーションの Publisher ID とは異なります。Publisher ID は、アプリケーションの [!DNL application.xml] ファイル。
 
 ## AIR Publisher ID ユーティリティのコマンドラインの使用 {#air-publisher-id-utility-command-line-usage}
 

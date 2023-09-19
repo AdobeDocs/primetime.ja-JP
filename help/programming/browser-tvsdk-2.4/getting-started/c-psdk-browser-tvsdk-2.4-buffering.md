@@ -1,20 +1,18 @@
 ---
 description: ビジュアルを設定して、コンテンツがバッファリングされていることをユーザーに通知できます。
 title: バッファリング
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '56'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
-
 
 # バッファリング{#buffering}
 
 ビジュアルを設定して、コンテンツがバッファリングされていることをユーザーに通知できます。
 
-`AdobePSDK.PSDKEventType.BUFFERING_BEGIN`と`AdobePSDK.PSDKEventType.BUFFERING_END`イベントをリッスンします。 例：
+次をリッスン： `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` および `AdobePSDK.PSDKEventType.BUFFERING_END` イベント。 例：
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_BEGIN,  
@@ -30,7 +28,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_END,
                         });
 ```
 
-UIフレームワークには、次に示すように拡張できる、デフォルトのバッファリングオーバーレイ動作の実装が用意されています。
+UI フレームワークは、次に示すように拡張できるデフォルトのバッファリングオーバーレイ動作実装を提供します。
 
 ```js
 // Using UI Framework 
@@ -49,7 +47,7 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-結果のDOMは次のようになります。
+DOM の結果は次のようになります。
 
 ```
 <div id=" videoDiv" class="ptp-root-element"> 
@@ -58,4 +56,3 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 </div> 
 </div> 
 ```
-

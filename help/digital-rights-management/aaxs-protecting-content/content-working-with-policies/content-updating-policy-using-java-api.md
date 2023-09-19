@@ -1,28 +1,26 @@
 ---
-title: Java APIを使用したポリシーの更新
-description: Java APIを使用したポリシーの更新
+title: Java API を使用したポリシーの更新
+description: Java API を使用したポリシーの更新
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# Java API を使用したポリシーの更新 {#updating-a-policy-using-the-java-api}
 
-# Java API {#updating-a-policy-using-the-java-api}を使用したポリシーの更新
+Java API を使用してポリシーを更新するには、次の手順を実行します。
 
-Java APIを使用してポリシーを更新するには、次の手順を実行します。
-
-1. 開発環境を設定し、プロジェクト内の[開発環境の設定](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)で説明されているすべてのJARファイルを含めます。
-1. `Policy`インスタンスを作成し、ポリシーをファイルまたはデータベースから読み取ります。
+1. 開発環境を設定し、 [開発環境の設定](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) を選択します。
+1. の作成 `Policy` インスタンスを作成し、ポリシーをファイルまたはデータベースから読み取ります。
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. `Policy`オブジェクトのプロパティ（名前や使用ルールなど）を設定して、オブジェクトを更新します。
+1. を更新します。 `Policy` オブジェクトに割り当てる必要があります。
 
    ```java
      // Change the policy name.  
@@ -47,7 +45,7 @@ Java APIを使用してポリシーを更新するには、次の手順を実行
      }
    ```
 
-1. 更新した`Policy`オブジェクトをシリアル化し、ファイルまたはデータベースに格納します。
+1. 更新されたをシリアル化します。 `Policy` オブジェクトを作成し、ファイルまたはデータベースに保存します。
 
    ```java
       // Serialize the policy.  
@@ -61,4 +59,4 @@ Java APIを使用してポリシーを更新するには、次の手順を実行
       out.close(); 
    ```
 
-このサンプルコードの完全なソースについては、『リファレンス導入コマンドラインツール』の`com.adobe.flashaccess.samples.policy.UpdatePolicy`を参照してください。
+このサンプルコードの完全なソースについては、 `com.adobe.flashaccess.samples.policy.UpdatePolicy` 「リファレンス実装」コマンドラインツールの「samples」ディレクトリ。

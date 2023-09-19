@@ -1,49 +1,46 @@
 ---
-title: ライセンスサーバーデータベースのセットアップ
-description: ライセンスサーバーデータベースのセットアップ
+title: ライセンスサーバーデータベースを設定する
+description: ライセンスサーバーデータベースを設定する
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
+# ライセンスサーバーデータベースを設定する{#set-up-the-license-server-database}
 
-# ライセンスサーバーデータベース{#set-up-the-license-server-database}のセットアップ
-
-参照実装のライセンスサーバーでは、次をサポートするデータベースが必要です。
+参照実装ライセンスサーバーでは、以下をサポートするデータベースが必要です。
 
 * ユーザー認証
-* 使用モデルデモビジネスルール
-* メタデータ変換
+* 使用状況モデルデモビジネスルール
+* メタデータの変換
 * ドメインのサポート
 
-匿名ライセンスの取得には、データベースが実行されている必要はありません。
+匿名ライセンスの取得では、データベースが実行されている必要はありません。
 
 >[!NOTE]
 >
->この手順は、Microsoft Windowsにのみ適用されます。 その他のオペレーティングシステムについては、ご使用のオペレーティングシステムのドキュメントを参照するか、MySQLのドキュメントを参照してください。
+>この手順は、Microsoft Windows にのみ適用されます。 その他のオペレーティングシステムについては、ご使用のオペレーティングシステムのドキュメントを参照するか、MySQL のドキュメントを参照してください。
 
-ライセンスサーバーを実行するには、MySQLをインストールして設定する必要があります。
+ライセンスサーバーを実行するには、MySQL をインストールして設定する必要があります。
 
-1. DVDの[!DNL Third Party\MySQL\Installer\5.1]フォルダーに移動し、インストールプログラムを開始します。
-1. MySQLのインストールを完了します。
-1. **[!UICONTROL Configure MySQL Server Now]**&#x200B;を選択して、構成ウィザードを開始します。
-1. 5つ目の画面までは、デフォルト設定を使用するか、テスト用の特定の設定を選択します。
-1. 5つ目の画面で、「**[!UICONTROL Online Transaction Processing (OLTP)]**」または「**[!UICONTROL Manual Setting]**」を選択し、許可される接続の最大数を入力します。
-1. rootパスワードを書き留めます。
-1. MySQLを再インストールするには、後でサーバーを開始する必要がある場合は、次の手順を実行します。
-   1. *システムドライブ：*&#x200B;フォルダーを削除します。
+1. DVD で、に移動します。 [!DNL Third Party\MySQL\Installer\5.1] フォルダを開き、インストールプログラムを起動します。
+1. MySQL のインストールを完了します。
+1. 選択 **[!UICONTROL Configure MySQL Server Now]** をクリックして、設定ウィザードを起動します。
+1. 5 番目の画面まで、デフォルト設定を使用するか、テスト用の特定の設定を選択します。
+1. 5 番目の画面で、「 」を選択します。 **[!UICONTROL Online Transaction Processing (OLTP)]** または **[!UICONTROL Manual Setting]** 許可される接続の最大数を入力します。
+1. ルートパスワードを書き留めます。
+1. MySQL を再インストールするには、後でサーバーを起動する必要がある場合は、次の手順を実行します。
+   1. を削除します。 *システムドライブ：* フォルダー。
 
-      このフォルダーは[!DNL \Documents and Settings\All Users\Application Data\MySQL]にあります。
-   1. 古いMySQLインストールフォルダーを削除します。
+      このフォルダーは、 [!DNL \Documents and Settings\All Users\Application Data\MySQL].
+   1. 古い MySQL install フォルダーを削除します。
 
-      例えば、*システムドライブ：*（[!DNL \Program Files\MySQL\MySQL Server 5.1]にあります）。
-1. MySQL JDBC Driver 5.1.7をインストールするには、DVDの[!DNL Third Party\MySQL\Installer\5.1]フォルダーの[!DNL mysql-connector-java-5.1.7-bin.jar]ファイルをTomcatサーバーの[!DNL ...\Tomcat6.0\lib]ディレクトリにコピーします。
+      例： *システムドライブ：*（内） [!DNL \Program Files\MySQL\MySQL Server 5.1].
+1. MySQL JDBC Driver 5.1.7 をインストールするには、 [!DNL mysql-connector-java-5.1.7-bin.jar] ファイルを [!DNL Third Party\MySQL\Installer\5.1] DVD 上のフォルダを [!DNL ...\Tomcat6.0\lib] Tomcat サーバー上のディレクトリ。
 
    >[!NOTE]
    >
-   >MySQL JDBC Driver 5.1.7はTomcat 6.0で動作します。古いバージョンのTomcatはサポートされなくなりました。
-
+   >MySQL JDBC Driver 5.1.7 は、Tomcat 6.0 で動作します。古いバージョンの Tomcat はサポートされなくなりました。

@@ -1,33 +1,31 @@
 ---
-description: TVSDKは、VODストリーム内の広告コンテンツのプログラムによる削除および置換をサポートしています。
+description: TVSDK では、VOD ストリーム内の広告コンテンツのプログラムによる削除と置き換えをサポートしています。
 title: カスタム時間範囲操作
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
+# 概要 {#custom-time-range-operations-overview}
 
-# 概要{#custom-time-range-operations-overview}
+TVSDK では、VOD ストリーム内の広告コンテンツのプログラムによる削除と置き換えをサポートしています。
 
-TVSDKは、VODストリーム内の広告コンテンツのプログラムによる削除および置換をサポートしています。
-
-削除および置換機能は、カスタム広告マーカー機能を拡張するものです。 カスタム広告マーカーは、メインコンテンツの一部を広告関連コンテンツ期間としてマークします。 これらの時間範囲をマークするだけでなく、時間範囲を削除したり置き換えたりすることもできます。
+削除および置換機能は、カスタム広告マーカー機能を拡張したものです。 カスタム広告マーカーは、メインコンテンツのセクションを広告関連のコンテンツ期間としてマークします。 これらの時間範囲をマークする以外に、時間範囲を削除して置き換えることもできます。
 
 <!--<a id="section_D3FE668CAF764DCC912373D5410C932C"></a>-->
 
-広告削除および置換は、VODストリームの様々なタイプの時間範囲を識別するカスタムマーカーを使用して実装されます。マーク、削除、置換を行います。 カスタム時間範囲ごとに、広告コンテンツの削除や置換など、関連する操作を実行できます。
+広告の削除と置換は、VOD ストリーム内の様々なタイプの時間範囲（マーク、削除および置換）を識別するカスタムマーカーを使用して実装されます。 カスタム時間範囲ごとに、広告コンテンツの削除や置き換えなど、関連する操作を実行できます。
 
-広告削除および置換の場合、TVSDKには、次の&#x200B;*カスタム時間範囲操作*&#x200B;モードが含まれます。
+広告の削除と置き換えの場合、 TVSDK には次の機能が含まれます。 *カスタム時間範囲操作* モード：
 
-* MARK — マークされた領域に対して`AdBreak`イベントをディスパッチします。 （以前のバージョンのTVSDKでは`customAdMarker`と呼ばれていました）。 このモードでは広告挿入は許可されません。
+* MARK — ディスパッチ `AdBreak` イベントを設定します。 ( これは、 `customAdMarker` （以前のバージョンの TVSDK）。 このモードでは広告の挿入は許可されていません。
 
-* DELETE — このモードでは、アプリは`TimeRangeCollection`クラスを使用してC3広告削除の時間範囲を定義します。 このモードでは広告挿入が許可されます。
-* REPLACE — このモードでは、アプリは`timeRange`をAdobe Primetimead decisioning `AdBreak`で置き換えます。 C3広告削除が発生し、指定された時間（元の時間範囲より短いまたは長い）に終了する置換操作開始。
+* DELETE — このモードでは、アプリは `TimeRangeCollection` C3 広告削除の時間領域を定義するクラス。 このモードでは、広告の挿入が許可されます。
+* REPLACE — このモードでは、アプリは `timeRange` Adobe Primetime ad decisioning を使用 `AdBreak`. 置換操作は、C3 広告削除の発生時に開始し、指定された時間（元の時間範囲より短い、または長い）に終了します。
 
-TVSDKは、MARKとDELETE範囲の配置オポチュニティを生成するための`CustomRangesOpportunityGenerator`クラスを提供します。 REPLACEモードの場合、TVSDKは、時間範囲ごとに2つの配置オポチュニティを生成します。
+TVSDK は、 `CustomRangesOpportunityGenerator` クラスを使用して、MARK およびDELETE範囲の配置オポチュニティを生成します。 REPLACE モードの場合、 TVSDK は、各時間範囲に対して 2 つの配置オポチュニティを生成します。
 
-* `CustomRangeResolver`は、DELETEのための配置オポチュニティを生成します
-* `AuditudeAdResolver`は、INSERT用の配置オポチュニティを生成します。
+* The `CustomRangeResolver` DELETEの配置機会を生成します
+* The `AuditudeAdResolver` は、INSERT 用の配置オポチュニティを生成します。

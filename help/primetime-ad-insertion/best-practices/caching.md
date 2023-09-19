@@ -2,25 +2,23 @@
 title: キャッシュ
 description: キャッシュ
 copied-description: true
-exl-id: c12c2345-db55-468a-b4b5-5a9e1364a46d
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
-# HTTPキャッシュ{#caching}
+# HTTP キャッシュ {#caching}
 
-PrimetimeAd Insertionは、デフォルトで、広告クリエイティブおよびコンテンツをフェッチする際に、HTTPキャッシュ制御ヘッダーに従います。  これにより、PrimetimeAd InsertionがすべてのクライアントのCDNに対して行うために必要なネットワークリクエストの量を大幅に削減できます。  キャッシュの場合、Adobeでは次の設定を推奨し、CDNからHTTPヘッダー`max-age`を送信することを推奨します。  ビデオストリームおよび広告ストリームでこれらのヘッダーを有効にするには、CDNの担当者にお問い合わせください。
+PrimetimeAd Insertionは、広告クリエイティブおよびコンテンツを取得する際に、デフォルトで HTTP キャッシュ制御ヘッダーに従います。  これにより、すべてのクライアントをまたいで CDN に対して PrimetimeAd Insertionがおこなうのに必要なネットワークリクエストの量を大幅に削減できます。  キャッシュの場合、Adobeでは次の設定を推奨し、HTTP ヘッダーの送信を含めます。 `max-age` を CDN から取得します。  CDN 担当者に連絡して、ビデオストリームおよび広告ストリームでこれらのヘッダーを有効にしてもらってください。
 
-## ライブ/リニアコンテンツ{#caching-live-linear-content}
+## ライブ/リニアコンテンツの場合 {#caching-live-linear-content}
 
-* マスターマニフェスト：24時間、またはCache-Control:max-age=86400
-* メディアマニフェスト：1秒またはCache-Control:max-age=1
+* マスターマニフェスト： 24 時間、または Cache-Control: max-age=86400
+* メディアマニフェスト： 1 秒、または Cache-Control: max-age=1
 
-## VODコンテンツ用{#caching-vod-content}
+## VOD コンテンツの場合 {#caching-vod-content}
 
-* マスターマニフェスト：24時間、またはCache-Control:max-age=86400
-* メディアマニフェスト：24時間、またはCache-Control:max-age=86400
+* マスターマニフェスト： 24 時間、または Cache-Control: max-age=86400
+* メディアマニフェスト： 24 時間、または Cache-Control: max-age=86400

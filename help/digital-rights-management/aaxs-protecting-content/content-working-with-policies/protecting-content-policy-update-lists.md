@@ -1,18 +1,16 @@
 ---
-title: ポリシーの更新リスト
-description: ポリシーの更新リスト
+title: ポリシー更新リスト
+description: ポリシー更新リスト
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
 
 ---
 
-
 # ポリシー更新リスト{#policy-update-lists}
 
-コンテンツをパッケージ化した後にポリシーの使用規則を更新する場合、更新したポリシーを使用してライセンスを発行するには、ライセンスサーバーに最新バージョンが必要です。 これを実現する1つの方法は、ポリシーの更新リストを通じてです。 ポリシー更新リストは、更新または失効したポリシーのリストを含むファイルです。 ポリシーを更新したら、新しいポリシー更新リストを生成し、定期的にリストをすべてのライセンスサーバーにプッシュします。
+コンテンツをパッケージ化した後にポリシーの使用規則を更新する場合、更新されたポリシーを使用するライセンスを発行するには、ライセンスサーバーが最新バージョンである必要があります。 これを実現する 1 つの方法は、ポリシー更新リストを通じてです。 ポリシー更新リストは、更新または失効したポリシーのリストを含むファイルです。 ポリシーが更新されたら、新しいポリシー更新リストを生成し、定期的にすべてのライセンスサーバにリストをプッシュします。
 
-ポリシーの作成と更新について詳しくは、「* [ポリシー](../../aaxs-protecting-content/content-working-with-policies/content-working-with-policies-overview.md)*の操作」を参照してください。
+ポリシーの作成と更新について詳しくは、*を参照してください。 [ポリシーの使用](../../aaxs-protecting-content/content-working-with-policies/content-working-with-policies-overview.md)*.

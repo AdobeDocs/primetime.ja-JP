@@ -1,26 +1,24 @@
 ---
-description: TVSDKは、サブスクライブされたタグがコンテンツマニフェスト内で検出されるたびに、そのタグのTimedMetadataオブジェクトを準備します。
-title: カスタムタグのサブスクライブ
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK は、コンテンツマニフェストでこれらのオブジェクトを検出するたびに、サブスクライブされたタグの TimedMetadata オブジェクトを準備します。
+title: カスタムタグを購読
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# カスタムタグを購読 {#subscribe-to-custom-tags}
 
-# カスタムタグを登録{#subscribe-to-custom-tags}
+TVSDK は、コンテンツマニフェストでこれらのオブジェクトを検出するたびに、サブスクライブされたタグの TimedMetadata オブジェクトを準備します。
 
-TVSDKは、サブスクライブされたタグがコンテンツマニフェスト内で検出されるたびに、そのタグのTimedMetadataオブジェクトを準備します。
+再生が開始される前に、タグを購読する必要があります。 HLS マニフェスト内のカスタムタグに関する通知を受け取るには：
 
-再生開始の前に、タグをサブスクライブする必要があります。 HLSマニフェストのカスタムタグに関する通知を受け取るには：
-
-1. カスタムタグを含む配列を`MediaPlayerItemConfig`の`setSubscribedTags`に渡して、カスタム広告タグ名をグローバルに設定します。
+1. カスタムタグを含む配列をに渡して、カスタム広告タグ名をグローバルに設定します。 `setSubscribedTags` in `MediaPlayerItemConfig`.
 
    >[!IMPORTANT]
    >
-   >HLSストリームを操作する場合は、`#`プレフィックスを含める必要があります。
+   >次を含める必要があります： `#` プレフィックスを使用して、HLS ストリームを操作する場合に使用します。
 
    例：
 

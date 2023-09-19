@@ -1,34 +1,32 @@
 ---
-description: PrimetimeDigital Rights Management(DRM)システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 または、サードパーティのDRMソリューションをAdobeの統合ソリューションの代わりに使用することもできます。
+description: PrimetimeDigital Rights Management(DRM) システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 または、サードパーティの DRM ソリューションを、Adobeの統合ソリューションの代わりに使用することもできます。
 title: Widevine DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
-
 # Widevine DRM {#widevine-drm}
 
-PrimetimeDigital Rights Management(DRM)システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 または、サードパーティのDRMソリューションをAdobeの統合ソリューションの代わりに使用することもできます。
+PrimetimeDigital Rights Management(DRM) システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 または、サードパーティの DRM ソリューションを、Adobeの統合ソリューションの代わりに使用することもできます。
 
-サードパーティのDRMソリューションの可用性に関する最新情報については、Adobeの担当者にお問い合わせください。
+サードパーティの DRM ソリューションの入手方法に関する最新情報については、Adobe担当者にお問い合わせください。
 
 <!--<a id="section_1385440013EF4A9AA45B6AC98919E662"></a>-->
 
-HLS CMAFストリームでAndroidネイティブWidevine DRMを使用できます。
+Android のネイティブ Widevine DRM を HLS CMAF ストリームで使用できます。
 
 >[!NOTE]
 >
-> Widevine CENC CTRスキームには、Androidバージョン4.4（APIレベル19）以上が必要です。
+> Widevine CENC CTR スキームには、Android バージョン 4.4（API レベル 19）以上が必要です。
 >
-> Widevine CBCSスキームには、Androidバージョン7.1（APIレベル25）以上が必要です。
+> Widevine CBCS スキームには、Android バージョン 7.1（API レベル 25）以上が必要です。
 
-## ライセンスサーバーの詳細を設定{#license-server-details}
+## ライセンスサーバーの詳細を設定 {#license-server-details}
 
-MediaPlayerリソースを読み込む前に、次の`com.adobe.mediacore.drm.DRMManager` APIを呼び出します。
+次の呼び出しをおこないます。 `com.adobe.mediacore.drm.DRMManager` MediaPlayer リソースを読み込む前の API:
 
 ```java
 public static void setProtectionData(
@@ -37,15 +35,15 @@ String licenseServerURL,
 Map<String, String> requestProperties)
 ```
 
-### 引数{#arguments-license-server}
+### 引数 {#arguments-license-server}
 
-* `drm` - Widevine `"com.widevine.alpha"` の場合。
+* `drm` - `"com.widevine.alpha"` ウィデビンにとって
 
-* `licenseServerURL`  — ライセンス要求を受け取るWidevineライセンスサーバーのURL。
+* `licenseServerURL`  — ライセンス要求を受け取る Widevine ライセンスサーバーの URL。
 
-* `requestProperties`  — 発信ライセンス要求に含める追加のヘッダが含まれます。
+* `requestProperties`  — 送信ライセンス要求に含める追加のヘッダーが含まれます。
 
-例えば、ExpressPlay DRM用にパッケージ化されたコンテンツを使用する場合、再生の前に次のコードを使用します。
+例えば、Expressplay DRM 用にパッケージ化されたコンテンツを使用する場合は、再生の前に次のコードを使用します。
 
 ```java
 DRMManager.setProtectionData(
@@ -55,33 +53,33 @@ DRMManager.setProtectionData(
   null);
 ```
 
-## カスタムコールバックを提供{#custom-callback}
+## カスタムコールバックの提供 {#custom-callback}
 
-MediaPlayerリソースを読み込む前に、次の`com.adobe.mediacore.drm.DRMManager` APIを呼び出します。
+次の呼び出しをおこないます。 `com.adobe.mediacore.drm.DRMManager` MediaPlayer リソースを読み込む前の API。
 
 ```java
 public static void setMediaDrmCallback(
 MediaDrmCallback callback)
 ```
 
-### 引数{#arguments-custom-callback}
+### 引数 {#arguments-custom-callback}
 
-* `callback`  — デフォルトの代わりに使用するMediaDrmCallbackのカスタム実装 `com.adobe.mediacore.drm.WidevineMediaDrmCallback`。
+* `callback`  — デフォルトの代わりに使用する MediaDrmCallback のカスタム実装 `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
 
-詳しくは、[Android TVSDK 3.11 APIドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html)を参照してください。
+詳しくは、 [Android TVSDK 3.11 API ドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html).
 
-## 現在読み込まれているMediaPlayerリソースのPSSHボックスを取得{#pssh-box-mediaplayer-resoource}
+## 現在読み込まれている MediaPlayer リソースの PSSH ボックスを取得 {#pssh-box-mediaplayer-resoource}
 
-次の`com.adobe.mediacore.drm.DRMManager` APIを呼び出します。できれば、カスタムコールバック実装で呼び出します。
+次の呼び出しをおこないます。 `com.adobe.mediacore.drm.DRMManager` API。できれば、カスタムコールバック実装で使用します。
 
 ```java
 public static byte[] getPSSH()
 ```
 
-APIは、読み込まれたWidevineメディアリソースに関連付けられた保護システム固有のヘッダーボックスを返します。
+API は、読み込まれた Widevine メディアリソースに関連付けられた保護システム固有のヘッダーボックスを返します。
 
-有効なボックスは、短い間（DRMインスタンスの作成とキーの読み込みの間）使用できます。 `MediaDrmCallback callback executeKeyRequest()` これを使用して、ライセンスキーの取得をカスタマイズできます。
+有効なボックスは、（DRM インスタンスの作成からキーの読み込みの間に）短時間使用できます。 `MediaDrmCallback callback executeKeyRequest()` を使用して、ライセンスキーを取得するのをカスタマイズできます。
 
 >[!NOTE]
 >
-> `getPSSH()` APIは、単一のプレーヤーインスタンスでのみサポートされます。複数のプレーヤーまたは即時オン機能は、正しいボックスを受け取るためにシリアルに初期化する必要があります。
+> `getPSSH()` API は、単一のプレーヤーインスタンスでのみサポートされます。 複数のプレーヤーまたはインスタントオン機能は、正しいボックスを受け取るために、シリアルに初期化する必要があります。

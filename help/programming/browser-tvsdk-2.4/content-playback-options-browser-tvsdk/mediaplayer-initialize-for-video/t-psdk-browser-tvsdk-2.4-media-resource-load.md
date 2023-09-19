@@ -1,44 +1,41 @@
 ---
-description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。
-title: メディアリソースをMediaPlayerに読み込む
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaResource を直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。
+title: MediaPlayer でのメディアリソースの読み込み
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
 
 ---
 
+# MediaPlayer でのメディアリソースの読み込み {#load-a-media-resource-in-the-mediaplayer}
 
-# メディアリソースをMediaPlayer {#load-a-media-resource-in-the-mediaplayer}に読み込む
+MediaResource を直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。
 
-MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。
+1. を `MediaPlayer` 再生する新しいリソースを含むオブジェクトの再生可能な項目。
 
-1. `MediaPlayer`オブジェクトの再生可能な項目を、再生する新しいリソースで設定します。
+   既存の `MediaPlayer` を呼び出すことにより、オブジェクトの現在再生可能な項目 `replaceCurrentResource` そして既存の `MediaResource` インスタンス。
 
-   `replaceCurrentResource`を呼び出し、既存の`MediaResource`インスタンスを渡すことで、既存の`MediaPlayer`オブジェクトの現在の再生可能な項目を置き換えます。
-
-1. ブラウザーTVSDKが`AdobePSDK.MediaPlayerStatusChangeEvent`をディスパッチするまで待ちます。`event.status`は、次のいずれかに等しく、
+1. Browser TVSDK がディスパッチするのを待ちます。 `AdobePSDK.MediaPlayerStatusChangeEvent` 次を使用 `event.status` これは、次のいずれかと等しくなります。
 
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.ERROR`
 
-      これらのイベントを通じて、MediaPlayerオブジェクトは、メディアリソースが正常に読み込まれたかどうかをアプリケーションに通知します。
+     これらのイベントを通じて、 MediaPlayer オブジェクトはメディアリソースが正常に読み込まれたかどうかをアプリケーションに通知します。
 
-1. メディアプレイヤーの状態が`MediaPlayerStatus.INITIALIZED`に変わったら、`MediaPlayer.prepareToPlay`を呼び出すことができます。
+1. メディアプレーヤーの状態が `MediaPlayerStatus.INITIALIZED`を呼び出すと、 `MediaPlayer.prepareToPlay`.
 
-   INITIALIZED状態は、メディアが正常に読み込まれたことを示します。 `prepareToPlay`開始を呼び出すと、広告解決と配置プロセスが発生します（存在する場合）。
-1. ブラウザーTVSDKが`MediaPlayerStatus.PREPARED`イベントをディスパッチすると、メディアストリームが正常に読み込まれ（MediaPlayerItemが作成されます）、再生の準備が行われます。
+   INITIALIZED 状態は、メディアが正常に読み込まれたことを示します。 呼び出し `prepareToPlay` 広告の解決および配置プロセスを開始します（存在する場合）。
+1. ブラウザー TVSDK が `MediaPlayerStatus.PREPARED` イベントは、メディアストリームが正常に読み込まれ（MediaPlayerItem が作成されます）、再生の準備が整います。
 
-エラーが発生した場合、`MediaPlayer`は`MediaPlayerStatus.ERROR`に切り替わります。
+エラーが発生した場合、 `MediaPlayer` に切り替えます。 `MediaPlayerStatus.ERROR`.
 
-また、`MediaPlayerStatus.ERROR`イベントをディスパッチして、アプリケーションに通知します。
+また、 `MediaPlayerStatus.ERROR` イベント。
 
 ><!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
 
-
-以下のサンプルコードは、メディアリソースの読み込みプロセスを簡単に示しています。
+以下に、メディアリソースの読み込みプロセスを簡略化したサンプルコードを示します。
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  

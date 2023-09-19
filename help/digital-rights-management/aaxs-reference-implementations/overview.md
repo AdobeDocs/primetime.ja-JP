@@ -2,23 +2,21 @@
 title: 概要 — リファレンス実装の使用
 description: 概要 — リファレンス実装の使用
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
 
 ---
 
+# 概要 — リファレンス実装の使用 {#overview-using-the-reference-implementations}
 
-# 概要 — リファレンス実装の使用{#overview-using-the-reference-implementations}
-
-Adobeアクセス製品には、次のコンポーネントに関するリファレンス実装が付属しています。
+Adobeアクセス製品には、次のコンポーネントの参照実装が付属しています。
 
 * コマンドラインツール
-* ライセンスサーバーと監視フォルダーのパッケージャー
+* ライセンスサーバーと監視フォルダーパッケージャー
 * Flash AccessマネージャーAIRアプリケーション
 
 >[!NOTE]
 >
->Protected Streaming用のAdobe Access Server、リファレンス実装、または独自のライセンスサーバをデプロイする必要があります。
+>Adobe Access Server for Protected Streaming、参照実装、または独自のライセンスサーバーのいずれかをデプロイする必要があります。

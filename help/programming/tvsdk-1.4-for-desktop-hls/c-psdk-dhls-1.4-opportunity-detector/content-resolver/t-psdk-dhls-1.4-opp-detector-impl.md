@@ -1,29 +1,27 @@
 ---
 description: 独自のオポチュニティディテクターを実装できます。
 title: カスタムオポチュニティディテクターの実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
 
 ---
 
-
 # カスタムオポチュニティディテクターの実装{#implement-a-custom-opportunity-detector}
 
 独自のオポチュニティディテクターを実装できます。
 
-* オポチュニティジェネレーターが、現在のメディアストリームに関連付けられた`TimedMetadata`オブジェクトに基づいている場合は、`SpliceOutOpportunityGenerator`または`TimedMetadataOpportunityGenerator`を拡張する必要があります。
+* オポチュニティジェネレーターが `TimedMetadata` 現在のメディアストリームに関連付けられているオブジェクト。その場合は、 `SpliceOutOpportunityGenerator` または `TimedMetadataOpportunityGenerator`.
 
-* オポチュニティジェネレーターが、外部サービス（CISなど）が提供する帯域外データに基づいている場合は、`OpportunityGenerator`を拡張する必要があります。
+* オポチュニティジェネレーターが、外部サービス（CIS など）が提供する帯域外データに基づいている場合、 `OpportunityGenerator`.
 
 1. カスタムオポチュニティジェネレーターを作成します。
 
-       カスタムオポチュニティジェネレーターが&#39;TimedMetadata&#39;オブジェクトに基づいている場合は、&#39;TimedMetadataOpportunityGenerator&#39;を拡張し、以下のメソッドをオーバーライドします。
+       カスタムオポチュニティジェネレーターが「TimedMetadata」オブジェクトに基づいている場合は、「TimedMetadataOpportunityGenerator」を拡張し、次のメソッドを上書きします。
    
-   * `doConfigure`  — このメソッドは、メディアプレイヤーアイテムが作成された後に呼び出され、必要に応じてオポチュニティの初期セットを作成するオポチュニティジェネレーターを提供します
-   * `doProcess`  — このメソッドは、新しい情報 `TimedMetadata` が検出されるたびに呼び出されます（例えば、ライブ/リニアストリームの場合は、プレイリスト/マニフェストが更新されるたびに）
+   * `doConfigure`  — このメソッドは、メディアプレーヤーアイテムが作成された後に呼び出され、必要に応じて、オポチュニティの初期セットを作成するオポチュニティジェネレーターを提供します
+   * `doProcess`  — このメソッドは、新しくなるたびに呼び出されます `TimedMetadata` が検出されます（例えば、プレイリスト/マニフェストが更新されるたびにライブ/リニアストリームの場合）。
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
@@ -47,7 +45,7 @@ ht-degree: 0%
    }
    ```
 
-1. カスタムオポチュニティジェネレーターを使用する、カスタムコンテンツファクトリを作成します。
+1. カスタムオポチュニティジェネレーターを使用するカスタムコンテンツファクトリを作成します。
 
    ```
    public class CustomContentFactory extends DefaultContentFactory { 
@@ -65,7 +63,7 @@ ht-degree: 0%
    }
    ```
 
-1. 再生するメディアストリーム用のカスタムコンテンツファクトリを登録します。
+1. 再生するメディアストリームのカスタムコンテンツファクトリを登録します。
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig = new DefaultMediaPlayerItemConfig(); 
@@ -74,4 +72,3 @@ ht-degree: 0%
    
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

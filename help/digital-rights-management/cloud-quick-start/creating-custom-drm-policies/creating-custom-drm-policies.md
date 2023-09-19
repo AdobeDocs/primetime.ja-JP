@@ -1,39 +1,37 @@
 ---
-title: カスタムDRMポリシーの作成（オプション）
-description: カスタムDRMポリシーの作成（オプション）
+title: カスタム DRM ポリシーの作成（オプション）
+description: カスタム DRM ポリシーの作成（オプション）
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
 
 ---
 
+# カスタム DRM ポリシーの作成（オプション）{#create-custom-drm-policies-optional}
 
-# カスタムDRMポリシーの作成（オプション）{#create-custom-drm-policies-optional}
-
-Primetime Cloud DRM保護キットには、パッケージ化の際に使用できる事前設定済みのポリシーがいくつか付属しています。 特定のSWF許可リスト権限など、追加のポリシー設定が必要な場合は、含まれているPrimetime DRM Policy Managerを使用して、カスタムポリシーを生成できます。
+Primetime Cloud DRM 保護キットには、パッケージ化時に使用できる事前設定済みのポリシーがいくつか付属しています。 追加のポリシー設定 ( 特定のSWF許可リスト権限など ) が必要な場合は、付属の Primetime DRM Policy Manager を使用してカスタムポリシーを生成できます。
 
 >[!NOTE]
 >
->すべてのポリシーは、（ユーザー名パスワードやカスタムではなく）匿名認証を使用する必要があります。カスタム認証/権利付与ワークフローが使用されているかどうかに関係ありません。
+>Custom Auth/Entitlement ワークフローが使用されているかどうかに関係なく、すべてのポリシーで、匿名認証（ユーザー名パスワードやカスタムではなく）を使用する必要があります。
 
-Policy Managerには[!DNL flashaccesstools.properties]設定ファイルが含まれています。この設定ファイルは、Primetime Cloud DRMサービスがサポートする設定可能なポリシーオプションのみを公開するように変更されています。 Primetime Cloud DRMサービスでサポートされていないポリシーオプションを設定すると、ライセンス取得エラーが発生します。 Primetime DRMポリシーマネージャーの使用に関する詳細は、次を参照してください。[Primetime DRM参照の実装：Policy Manager](https://help.adobe.com/en_US/primetime/drm/5.3/reference_implementations/index.html#concept-DRM_Policy_Manager)。
+Policy Manager に含まれる： [!DNL flashaccesstools.properties] 設定ファイル（Primetime Cloud DRM サービスがサポートする設定可能なポリシーオプションのみを公開するように変更） Primetime Cloud DRM サービスでサポートされていないポリシーオプションを設定すると、ライセンス取得エラーが発生します。 Primetime DRM Policy Manager の使用に関する詳細は、次を参照してください。 [Primetime DRM 参照実装：Policy Manager](https://help.adobe.com/en_US/primetime/drm/5.3/reference_implementations/index.html#concept-DRM_Policy_Manager).
 
-新しいポリシーを作成するには、必要に応じて[!DNL flashaccesstools.properties]ファイルを更新し、次のコマンドを使用します。
+新しいポリシーを作成するには、 [!DNL flashaccesstools.properties] 必要に応じてファイルを作成し、次のコマンドを使用します。
 
 ```
 java -jar libs/AdobePolicyManager.jar new myPolicy.pol
 ```
 
-## カスタム認証/エンタイトルメント{#create-policies-dynamically-for-custom-auth-entitlement}のポリシーを動的に作成
+## カスタム認証/権利付与用のポリシーを動的に作成{#create-policies-dynamically-for-custom-auth-entitlement}
 
-Primetime Cloud DRMのカスタム認証/権利付与を使用し、（事前に生成されたプールからポリシーを取り込むのではなく）各ライセンスリクエストに対して新しいDRMポリシーを動的に作成する場合、AdobeではPrimetime DRM Java SDKを直接使用することをお勧めします。 Java SDKを直接使用する方が[!DNL AdobePolicyManager.jar]ツールより高速です。ツールを使用すると、ポリシーファイルが自動的にディスクに出力され、ディスクI/Oのオーバーヘッドが発生します。
+Primetime Cloud DRM のカスタム認証/使用権限を使用していて、（事前に生成されたプールからポリシーをプルするのではなく）ライセンス要求ごとに新しい DRM ポリシーを動的に作成する場合は、Primetime DRM Java SDK を直接使用することをAdobeにお勧めします。 Java SDK を直接使用する方が、 [!DNL AdobePolicyManager.jar] ツールを使用して、ポリシー・ファイルを自動的にディスクに出力し、ディスクの I/O オーバーヘッドが発生します。
 
-Java SDKを使用したサンプルコードは、[!DNL CreatePolicy.java]および[!DNL CreatePolicyWithOutputProtection.java]という[!DNL /Primetime DRM PolicyManager/sampleCode/]ディレクトリにあります。 JavaDocおよびJava SDKに関するドキュメントは、[Adobe PrimetimeDRM SDKの概要](../../../digital-rights-management/drm-sdk-overview/overview.md)で参照できます。
+Java SDK を使用するサンプルコードは、 [!DNL /Primetime DRM PolicyManager/sampleCode/] ディレクトリ、名前 [!DNL CreatePolicy.java] および [!DNL CreatePolicyWithOutputProtection.java]. Java SDK の JavaDoc およびドキュメントについては、を参照してください。 [Adobe Primetime DRM SDK の概要](../../../digital-rights-management/drm-sdk-overview/overview.md)
 
-サンプルを作成して実行するには、.javaファイルを。./libs/フォルダーにコピーし、次のコマンドを実行します。
+サンプルをビルドして実行するには、.java ファイルを。./libs/フォルダーにコピーし、次のコマンドを実行します。
 
 ```
 javac -cp adobe-flashaccess-sdk.jar:. CreatePolicy.java

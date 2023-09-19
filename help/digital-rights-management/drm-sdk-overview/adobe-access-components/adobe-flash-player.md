@@ -2,17 +2,15 @@
 title: AdobeFlash Player
 description: AdobeFlash Player
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
 
 ---
 
+# AdobeFlash Player {#adobe-flash-player}
 
-# AdobeFlash Player{#adobe-flash-player}
+Flash Playerは、一貫した魅力的なユーザーエクスペリエンス、優れたオーディオ/ビデオ再生、広範なリーチを提供する、軽量のブラウザープラグインおよびランタイムです。 Flash Playerでは、ストリーミングされたビデオコンテンツやダウンロードされたビデオコンテンツを高品質で再生できます。 コンテンツ発行者向けに、Flash Playerは、コンテンツを取り巻く再生画面をカスタマイズする手段を提供し、バナーとオーバーレイを使用した広告を通じた、より深いブランディングエクスペリエンスと収益化を可能にします。 消費者向けに、Flash Playerは、ビデオコンテンツを視覚的に直感的で魅力的な方法で表示します。
 
-Flash Playerは、軽量のブラウザプラグインおよびランタイムで、一貫した魅力的なユーザーエクスペリエンス、魅力的なオーディオ/ビデオ再生、広範なリーチを提供します。 Flash Playerは、ストリーム化またはダウンロードされたビデオコンテンツの高品質再生を提供します。 コンテンツ発行者の場合、Flash Playerはコンテンツを取り巻く再生画面をカスタマイズする手段を提供し、バナーとオーバーレイを使用した広告を通じて、より深いブランディング体験と収益化を可能にします。 表示向けに、Flash Playerはビデオコンテンツを直感的で視覚的に訴える方法を提供します。
-
-Flash Playerの詳細については、次を参照してください。[www.adobe.com/go/flashplayer](https://www.adobe.com/go/flashplayer)
+Flash Playerの詳細は、次を参照してください。 [www.adobe.com/go/flashplayer](https://www.adobe.com/go/flashplayer)

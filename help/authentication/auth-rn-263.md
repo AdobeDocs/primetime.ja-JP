@@ -1,13 +1,12 @@
 ---
 title: Adobe Primetime authentication 2.63 リリースノート
 description: Adobe Primetime authentication 2.63 リリースノート
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Primetime Authentication 2.63 リリースノート {#pt-authn-263-rn}
 
@@ -42,9 +41,9 @@ Adobe Primetime認証：adobe-pass-**2.63**
 この機能は、MVPD に対して、それぞれのエンドポイントの負荷が大きくなりすぎた場合に、高トラフィックシナリオに対して独自の認証および承認エンドポイントを一時的にバイパスする機能を提供します。
 
 
-#### 認証呼び出しのヘッダーにプロキシ化 ID を追加 {#add-proxied-id}
+#### 認証呼び出しのヘッダーにプロキシ化 ID を追加する {#add-proxied-id}
 
-この機能は、認証呼び出しのヘッダーに Synacor プロキシ化された MVPD の ID を追加します。 これにより、Synacor は、個々のプロキシ ( プロキシ化された MVPD ごとに異なるドメインへのルーティング )。
+この機能は、認証呼び出しのヘッダーに Synacor プロキシ化された MVPD の ID を追加します。 これにより、Synacor は、個々のプロキシ ( 例： プロキシ化された MVPD ごとに異なるドメインへのルーティングを行います )。
 
 
 #### TVE ダッシュボード {#tve-dashboard}
@@ -56,6 +55,3 @@ Adobe Primetime認証：adobe-pass-**2.63**
 
 * の使用を削除しました。 `eval` 関数を使用して、SDK をコンテンツセキュリティポリシーに準拠させることができます。
 * ブラウザーのローカルストレージがパートナーアプリケーションによって明示的にクリアされた場合に、認証フローが正常に完了しない問題を修正しました。
-
-
-

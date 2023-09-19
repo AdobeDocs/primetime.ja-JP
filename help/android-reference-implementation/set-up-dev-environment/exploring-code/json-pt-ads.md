@@ -1,18 +1,16 @@
 ---
-title: Primetime広告のJSONオブジェクト
-description: 以下のコードブロックは、タイプ値がPrimetime adsの場合に、details JSONオブジェクトを定義します。
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Primetime 広告の JSON オブジェクト
+description: 以下のコードブロックは、タイプ値が Primetime 広告の場合の詳細 JSON オブジェクトを定義します。
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%
 
 ---
 
+# Primetime 広告の JSON オブジェクト {#json-object-for-primetime-ads}
 
-# Primetime広告のJSONオブジェクト{#json-object-for-primetime-ads}
-
-以下のコードブロックは、タイプ値がPrimetime adsの場合に、details JSONオブジェクトを定義します。
+以下のコードブロックは、タイプ値が Primetime 広告の場合の詳細 JSON オブジェクトを定義します。
 
 ```
 “metadata”: {
@@ -35,9 +33,9 @@ ht-degree: 0%
 
 | プロパティ | 説明 |
 |---|---|
-| domain | 広告リクエストに使用するPrimetime広告ドメイン。 |
-| mediaid | このコンテンツ用にPrimetime広告で設定されたメディア。 |
-| zoneid | Primetime広告はzoneidです。 詳しくは、Primetime広告のドキュメントを参照してください。 |
-| ターゲット | コンテンツの特定の広告をターゲット設定するために使用されるキー/値のペアの配列。 |
+| ドメイン | 広告リクエストに使用する Primetime 広告ドメイン。 |
+| mediaid | このコンテンツに対して Primetime 広告で設定された mediaid。 |
+| zoneid | Primetime は、zoneid を広告します。 詳しくは、 Primetime 広告のドキュメントを参照してください。 |
+| ターゲティング | コンテンツの特定の広告のターゲティングに使用されるキーと値のペアの配列。 |
 
-これらの属性の値の詳細については、[com.adobe.mediacore.metadata.AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/AuditudeSettings.html)を参照してください。
+詳しくは、 [com.adobe.mediacore.metadata.AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/AuditudeSettings.html) を参照してください。

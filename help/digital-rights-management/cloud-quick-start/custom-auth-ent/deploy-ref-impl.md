@@ -1,21 +1,19 @@
 ---
-title: BEESリファレンスの実装のデプロイ
-description: BEESリファレンスの実装のデプロイ
+title: BEES リファレンス実装のデプロイ
+description: BEES リファレンス実装のデプロイ
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 0%
 
 ---
 
+# BEES リファレンス実装のデプロイ {#deploy-the-bees-reference-implementation}
 
-# BEESリファレンス実装を導入{#deploy-the-bees-reference-implementation}
+1. Tomcat アプリケーションサーバーを設定します。 （ Tomcat のドキュメントを参照）。
+1. をコピーします。 `[!DNL bees.war]` Tomcat の [!DNL webapps/] フォルダー。
+1. にリクエストを送信 `https://localhost:8080/bees`.
 
-1. Tomcatアプリケーションサーバーを設定します。 （Tomcatのマニュアルを参照）。
-1. `[!DNL bees.war]`ファイルをTomcatの[!DNL webapps/]フォルダにコピーします。
-1. `https://localhost:8080/bees`にリクエストを送信します。
-
-   「BEES is operational」というメッセージが表示された場合は、デプロイメントは正常に完了しています。
-1. サーバーでSSLを有効にします。
+   「BEES is operational」というメッセージが表示された場合は、デプロイメントが正常に完了しています。
+1. サーバーで SSL を有効にします。

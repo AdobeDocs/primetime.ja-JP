@@ -1,27 +1,25 @@
 ---
-keywords: creative selection rules;AdobeTVSDKConfig
-title: クリエイティブ選択ルールの適用
-description: クリエイティブ選択ルールの適用
+keywords: クリエイティブ選択ルール；AdobeTVSDKConfig
+title: クリエイティブ選択ルールを適用
+description: クリエイティブ選択ルールを適用
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
 
 ---
 
+# クリエイティブ選択ルールを適用 {#apply-creative-selection-rules}
 
-# クリエイティブ選択ルールの適用{#apply-creative-selection-rules}
+TVSDK は、以下の方法でクリエイティブ選択ルールを適用します。
 
-TVSDKは、次の方法でクリエイティブ選択ルールを適用します。
+* TVSDK は、すべてを適用します `default` ルールを最初に設定し、次にゾーン固有のルールを設定します。
+* TVSDK は、現在のゾーン ID に対して定義されていないルールを無視します。
+* TVSDK がデフォルトのルールを適用すると、ゾーン固有のルールによって、 `host` （ドメイン）が `default` ルール。
 
-* TVSDKは、最初にすべての`default`ルールを適用し、次にゾーン固有のルールを適用します。
-* TVSDKは、現在のゾーンIDに対して定義されていないルールを無視します。
-* TVSDKがデフォルトのルールを適用すると、ゾーン固有のルールは、`default`ルールで選択されたクリエイティブに対する`host` （ドメイン）の一致に基づいて、クリエイティブの優先順位をさらに変更できます。
+* 追加のゾーンルールが含まれるサンプルルールファイルでは、 TVSDK が `default` ルール (M3U8 クリエイティブドメインに [!DNL my.domain.com] または [!DNL a.bcd.com] 広告ゾーンは `1234`に設定すると、クリエイティブは並べ替えられ、FlashVPAID クリエイティブがある場合は最初に再生されます。 それ以外の場合は、MP4 広告が再生され、その後 JavaScript が再生されます。
 
-* 追加のゾーンルールを含むサンプルルールファイルでは、TVSDKが`default`ルールを適用すると、M3U8クリエイティブドメインに[!DNL my.domain.com]または[!DNL a.bcd.com]が含まれず、広告ゾーンが`1234`の場合、クリエイティブが再順序付けされ、FlashVPAIDクリエイティブが最初に再生されます。 それ以外の場合は、MP4広告が再生され、JavaScriptにダウンします。
+* 広告クリエイティブが選択されている場合、 TVSDK はネイティブで再生できません ( [!DNL .mp4], [!DNL .flv]など )、 TVSDK は再パッケージ化リクエストを発行します。
 
-* TVSDKがネイティブ（[!DNL .mp4]、[!DNL .flv]など）再生できない広告クリエイティブを選択した場合、TVSDKは再パッケージ化リクエストを発行します。
-
-TVSDKで処理できる広告タイプは、`AuditudeSettings`の`validMimeTypes`設定を通じて定義されます。
+TVSDK で処理できる広告タイプは、 `validMimeTypes` 設定 `AuditudeSettings`.

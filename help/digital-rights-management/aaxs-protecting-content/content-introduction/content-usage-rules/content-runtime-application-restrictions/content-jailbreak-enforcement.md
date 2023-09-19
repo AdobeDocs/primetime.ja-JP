@@ -1,21 +1,18 @@
 ---
-title: Jailbreak Enforcation(Adobe Primetimeが必要)
-description: Jailbreak Enforcation(Adobe Primetimeが必要)
+title: Jailbreak の施行 (Adobe Primetimeが必要 )
+description: Jailbreak の施行 (Adobe Primetimeが必要 )
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# Jailbreak の施行 (Adobe Primetimeが必要 ) {#jailbreak-enforcement-requires-adobe-primetime}
 
-# Jailbreakの強制(Adobe Primetimeが必要) {#jailbreak-enforcement-requires-adobe-primetime}
-
-jailbreakの検出をサポートするプラットフォーム（AndroidやiOS携帯端末など）では、jailbreakの強制を有効にすると、デバイスで[!DNL jailbreak/root]が検出された場合に、コンテンツの再生が無効になります。
+jailbreak 検出をサポートするプラットフォーム (Android やiOSのモバイルデバイスなど ) では、jailbreak の強制を有効にすると、次の場合にコンテンツの再生が不可になります。 [!DNL jailbreak/root] がデバイスで検出されました。
 
 >[!NOTE]
 >
->この使用ルールは、Adobeアクセスクライアントバージョン4.0以降でサポートされていますが、jailbreak検出をサポートしないプラットフォームには影響しません。 古いクライアントでの動作は、ライセンスサーバーでサポートされている最小クライアントバージョンによって異なります。
-
+>この使用規則は、Adobeアクセスクライアントのバージョン 4.0 以降でサポートされていますが、jailbreak 検出をサポートしないプラットフォームには影響しません。 古いクライアントでの動作は、ライセンスサーバーでサポートされる最小クライアントバージョンによって異なります。

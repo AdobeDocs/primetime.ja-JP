@@ -1,50 +1,48 @@
 ---
-description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む方法の1つです。
-title: メディアリソースをMediaPlayerに読み込む
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaResource を直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースの読み込み方法の 1 つです。
+title: MediaPlayer でのメディアリソースの読み込み
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
+# MediaPlayer でのメディアリソースの読み込み{#load-a-media-resource-in-the-mediaplayer}
 
-# メディアリソースをMediaPlayer{#load-a-media-resource-in-the-mediaplayer}に読み込む
+MediaResource を直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースの読み込み方法の 1 つです。
 
-MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む方法の1つです。
+1. を `MediaPlayer` 再生する新しいリソースを含むオブジェクトの再生可能な項目。
 
-1. `MediaPlayer`オブジェクトの再生可能な項目を、再生する新しいリソースで設定します。
+   を呼び出して、既存の MediaPlayer の現在再生可能な項目を置き換えます。 `MediaPlayer.replaceCurrentResource` そして既存の `MediaResource` インスタンス。
 
-   `MediaPlayer.replaceCurrentResource`を呼び出し、既存の`MediaResource`インスタンスを渡すことで、既存のMediaPlayerの現在再生可能なアイテムを置き換えます。
+1. 少なくとも次の変更を確認してください。
 
-1. 少なくとも次の変更を確認します。
+   * 初期化済み
+   * 準備済み
+   * エラー
 
-   * INITIALIZED
-   * PREPARED
-   * ERROR
+     これらのイベントを通じて、 `MediaPlayer` オブジェクトは、メディアリソースが正常に読み込まれたときにアプリケーションに通知できます。
 
-      これらのイベントを通じて、`MediaPlayer`オブジェクトは、メディアリソースが正常に読み込まれたことをアプリケーションに通知できます。
+1. メディアプレーヤーの状態が INITIALIZED に変わったら、を呼び出すことができます。 `MediaPlayer.prepareToPlay`
 
-1. メディアプレイヤーの状態がINITIALIZEDに変わった場合は、`MediaPlayer.prepareToPlay`を呼び出すことができます
+   INITIALIZED 状態は、メディアが正常に読み込まれたことを示します。 呼び出し `prepareToPlay` 広告の解決および配置プロセスを開始します（存在する場合）。
 
-   INITIALIZED状態は、メディアが正常に読み込まれたことを示します。 `prepareToPlay`開始を呼び出すと、広告解決と配置プロセスが発生します（存在する場合）。
+1. メディアプレーヤーのステータスが「準備済み」に変わると、メディアストリームは正常に読み込まれ、再生の準備が整います。
 
-1. メディアプレイヤーのステータスがPREPAREDに変わった場合、メディアストリームの読み込みが成功し、再生の準備が整います。
+   メディアストリームが読み込まれると、 `MediaPlayerItem` が作成されました。
 
-   メディアストリームが読み込まれると、`MediaPlayerItem`が作成されます。
+エラーが発生した場合、 MediaPlayer は ERROR ステータスに切り替わります。 また、 `STATUS_CHANGED` イベントに `MediaPlayerStatusChangeEvent` コールバック。
 
-エラーが発生した場合は、MediaPlayerのステータスがERRORに切り替わります。 また、`STATUS_CHANGED`イベントを`MediaPlayerStatusChangeEvent`コールバックにディスパッチすることで、アプリケーションに通知します。
+これには、次の複数のパラメーターが渡されます。
+* A `type` 値を持つ文字列型のパラメーター `ERROR`.
 
-これは、次のいくつかのパラメーターを渡します。
-* 値`ERROR`を持つタイプ文字列の`type`パラメータ。
-
-* エラーイベントに関する診断情報を含む通知を取得するために使用できる`MediaError`パラメーター。
+* A `MediaError` エラーイベントに関する診断情報を含む通知を取得するために使用できるパラメーター。
 
 
 <!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
 
-以下のサンプルコードは、メディアリソースの読み込みプロセスを簡単に示しています。
+以下に、メディアリソースの読み込みプロセスを簡略化したサンプルコードを示します。
 
 ```
 // mediaResource is a properly configured MediaResource instance 

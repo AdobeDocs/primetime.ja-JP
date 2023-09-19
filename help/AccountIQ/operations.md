@@ -1,10 +1,9 @@
 ---
 title: アカウント IQ の操作
 description: アカウント IQ の操作には、購読者アカウントに対して自動化と一括操作を実行し、その効果を追跡するアクションを実行する必要があります。
-exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
-source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 アカウント IQ の Operations 機能は、操作と呼ばれる重点的な手順を通じて、資格情報の共有に効果的に取り組み、管理するのに役立ちます。 このツールでは、目的を設計し、特定の購読者アカウントのグループに合わせて（目標に基づいて）ターゲットアクションを調整し、将来の期間にわたって自動化するオプションを提供します。 操作機能を使用すると、操作の作成と実行だけでなく、その影響を測定することができます。 そのため、影響を調整することで、借り手の変換や資格情報の共有の軽減など、効果を最適化するための戦略を調整できます。
 
-表示する **運用** ページ選択 **運用** のオプション **アクション** をクリックします。 [ 操作 ] ページには、アカウント IQ システム上に既に存在するすべての操作とその詳細が表示されます。
+表示するには **運用** ページ選択 **運用** 下のオプション **アクション** （アカウント IQ アプリケーションの左側のナビゲーション） [ 操作 ] ページには、アカウント IQ システム上に既に存在するすべての操作とその詳細が表示されます。
 
 ![](assets/operations-page.png)
 
@@ -59,15 +58,16 @@ ht-degree: 0%
 
    ![](assets/operation-impact-report.png)
 
-   *図：運用レポートを開いて、運用の影響を確認*
+   *図：操作レポートで操作の影響を確認*
 
-   X 軸は評価期間を表し、y 軸は操作の影響（評価期間中のセグメント内のアカウント数）を示します。 各バーは 3 つの部分に分かれています。
+   X 軸は評価期間を表し、y 軸は操作の影響を示します（評価期間中のセグメント内のアカウント数の観点から）。 各バーは 3 つの部分に分かれています。
 
    * 1 つの部分は、操作セグメントの条件を満たすアカウントの数を表します。
 
    * 別の部分は、元々セグメント内にあったが、操作セグメントの基準を満たさなくなった、その期間のアクティブなアカウントの数を表します。
 
    * 3 番目の部分は、その期間にアクティブでなかったアカウントを表します。
+
    >[!NOTE]
    >
    >最初のバーは、評価期間の最初に操作セグメントの条件を満たすアカウント数を表します。
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 So, if your operation was to send out warning emails to suspecting accounts, and accounts in operations segment were those with sharing probability more than 90 and using more than 5 devices to stream content, then in the beginning of the evaluation period accounts in segment are more than 17 thousand. This number changes over the evaluation period as shown in the graph, thereby indicating the impact of operation. Based on the evaluation, you can take remedial measures on suspecting accounts, or continue with the operation, or adjust your strategy for better outcomes to curb credential sharing.-->
 
-1. レポートを閉じて、メインの操作ページに戻るには、「 **運用** のオプション **アクション** をクリックします。
+1. レポートを閉じて、メインの操作ページに戻るには、「 **運用** 下のオプション **アクション** をクリックします。
 
 <!--
 

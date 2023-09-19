@@ -1,29 +1,27 @@
 ---
-title: 参照実装DBの更新
-description: 参照実装DBの更新
+title: 参照実装 DB の更新
+description: 参照実装 DB の更新
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
 
 ---
 
-
-# 参照実装DB{#update-the-reference-implementation-db}を更新します
+# 参照実装 DB の更新{#update-the-reference-implementation-db}
 
 指定されたユーザに対してライセンスが発行される使用モデルを制御するには、参照実装データベースにエントリを追加します。
 
-1. &lt;a0追加/>テーブルへのエントリ。`Customer`
+1. エントリを `Customer` 表。
 
-   `Customer`テーブルには、ユーザーを認証するためのユーザー名とパスワードが含まれます。 また、購読(*購読*&#x200B;の使用モデルで発行されるライセンス)があるかどうかも示します。
+   The `Customer` この表には、ユーザーを認証するためのユーザー名とパスワードが含まれています。 また、ユーザーがサブスクリプション ( *購読* 使用モデル )。
 
-1. 所有者へのダウンロードまたはビデオオンデマンドの使用モデルでユーザーアクセスを許可します。
+1. 「ダウンロード先 — 自社」または「ビデオオンデマンド」の使用モデルでユーザーにアクセス権を付与します。
 
-       次を追加指定する&#39;CustomerAuthorization&#39;テーブルのエントリ：
+       「CustomerAuthorization」テーブルに次の項目を追加します。
    
    * 使用モデル
    * ユーザーがアクセスできるコンテンツの各セグメント
 
-各テーブルにデータを埋め込む方法について詳しくは、[!DNL PopulateSampleDB.sql]スクリプト（[!DNL Reference Implementation/Server/Reference Implementation Server/dbscript/]ディレクトリのPrimetime DRM DVDに含まれています）を参照してください。
+各テーブルにデータを入力する方法について詳しくは、 [!DNL PopulateSampleDB.sql] スクリプト (Primetime DRM DVD の [!DNL Reference Implementation/Server/Reference Implementation Server/dbscript/] ディレクトリ ) に書き込まれます。

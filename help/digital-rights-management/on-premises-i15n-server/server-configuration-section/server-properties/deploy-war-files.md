@@ -1,24 +1,21 @@
 ---
-title: WARファイルのデプロイ
-description: WARファイルのデプロイ
+title: WAR ファイルのデプロイ
+description: WAR ファイルのデプロイ
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
 
 ---
 
+# WAR ファイルのデプロイ{#deploy-the-war-files}
 
-# WARファイルのデプロイ{#deploy-the-war-files}
+1. WAR ファイルを Tomcat の [!DNL webapps] ディレクトリ。
 
-1. WARファイルをTomcatの[!DNL webapps]ディレクトリにコピーします。
+   * 個別化サーバー： [!DNL flashaccess.war]
+   * キー生成サーバー： [!DNL flashaccess-kgs.war]
 
-   * 個別化サーバー：[!DNL flashaccess.war]
-   * Key Generation Server:[!DNL flashaccess-kgs.war]
+1. をコピーします。 [!DNL ROOT] フォルダーで指定されたパッケージからAdobeー [!DNL webapps] ディレクトリ。
 
-1. Adobeが提供するパッケージの[!DNL ROOT]フォルダーを[!DNL webapps]ディレクトリにコピーします。
-
-   個別化サーバーは、[!DNL crossdomain.xml]ファイルもホストする必要があります。 ([!DNL ROOT]フォルダーには[!DNL crossdomain.xml]ファイルが含まれています。[!DNL ROOT]はすべて大文字にする必要があります。) キー生成サーバーでは、このファイルは必要ありません。
-
+   また、個別化サーバーが [!DNL crossdomain.xml] ファイル。 ( [!DNL ROOT] フォルダーに [!DNL crossdomain.xml] ファイル； [!DNL ROOT] はすべて大文字にする必要があります )。 Key Generation サーバーでは、このファイルは必要ありません。

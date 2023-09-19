@@ -1,35 +1,33 @@
 ---
-description: サービス品質(QoS)オファーは、ビデオエンジンの動作状況に関する詳細な表示です。 TVSDKは、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
-title: サービス品質統計
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: サービス品質 (QoS) により、ビデオエンジンのパフォーマンスに関する詳細な情報が得られます。 TVSDK は、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
+title: サービス品質の統計
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# サービス品質の統計 {#quality-of-service-statistics}
 
-# サービス品質統計{#quality-of-service-statistics}
+サービス品質 (QoS) により、ビデオエンジンのパフォーマンスに関する詳細な情報が得られます。 TVSDK は、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
 
-サービス品質(QoS)オファーは、ビデオエンジンの動作状況に関する詳細な表示です。 TVSDKは、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
+## 再生、バッファリング、デバイスに関する QOS 統計の読み取り {#section_9996406E2D814FA382B77E3041CB02BC}
 
-## 再生、バッファリング、デバイスに関するQOS統計を読み取ります{#section_9996406E2D814FA382B77E3041CB02BC}
+再生、バッファリング、デバイスの統計は、 `PTQOSProvider` クラス。
 
-`PTQOSProvider`クラスから再生、バッファリング、デバイスの統計を読み取ることができます。
+The `PTQOSProvider` クラスは、バッファリング、ビットレート、フレームレート、時間データなどに関する情報を含む様々な統計を提供します。
 
-`PTQOSProvider`クラスは、バッファリング、ビットレート、フレームレート、時間データなど、様々な統計情報を提供します。
-
-また、モデル、オペレーティングシステム、製造元のデバイスIDなど、デバイスに関する情報も提供されます。
+また、モデル、オペレーティングシステム、製造元のデバイス ID など、デバイスに関する情報も提供されます。
 
 >[!TIP]
 >
->再生バッファーのサイズは変更できませんが、デバッグや分析のためにバッファーサイズの状態を監視できます。 `PTPlaybackInformation` には、 `playbackBufferFull` およびなどのプロパティが含まれ `playbackLikelyToKeepUp`ます。
+>再生バッファーのサイズは変更できませんが、デバッグや分析のために、バッファーサイズのステータスを監視することができます。 `PTPlaybackInformation` 次のようなプロパティを含みます。 `playbackBufferFull` および `playbackLikelyToKeepUp`.
 
-1. メディアプレイヤーをインスタンス化します。
-1. `PTQOSProvider`オブジェクトを作成し、メディアプレイヤーに接続します。
+1. メディアプレーヤーをインスタンス化します。
+1. の作成 `PTQOSProvider` オブジェクトを探し、メディアプレーヤーに接続します。
 
-   `PTQOSProvider`コンストラクタは、デバイス固有の情報を取得できるように、プレイヤーコンテキストを取得します。
+   The `PTQOSProvider` コンストラクターは、デバイス固有の情報を取得できるように、プレーヤーコンテキストを取得します。
 
    ```
    qosProvider = [[PTQOSProvider alloc]initWithPlayer:self.player]; 
@@ -37,7 +35,7 @@ ht-degree: 1%
 
 1. （オプション）再生統計を読み取ります。
 
-   再生統計を読み取る方法の1つとして、`NSTimer`などのタイマーを使用し、`PTQOSProvider`から新しいQoS値を定期的に取り込みます。 例：
+   再生統計を読み取る 1 つの方法は、タイマー ( `NSTimer`を呼び出し、 `PTQOSProvider`. 例：
 
    ```
    - (void)printPlaybackInfoLog { 

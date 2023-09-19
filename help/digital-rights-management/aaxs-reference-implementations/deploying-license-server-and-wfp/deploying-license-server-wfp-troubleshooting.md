@@ -2,41 +2,38 @@
 title: トラブルシューティング
 description: トラブルシューティング
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# トラブルシューティング {#troubleshooting}
 
-# トラブルシューティング{#troubleshooting}
-
-次に、展開に関する一般的な問題と解決策を示します。
-
-* 次のエラーが表示される場合：
-
-   ```
-       "Error decoding the password for HandlerConfiguration.ServerTransportCredential.password  
-       javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
-   ```
-
-   指定した`ScrambleUtil`クラスを使用してパスワードが暗号化されていることを確認します。
+次に、デプロイメントに関する一般的な問題と解決策を示します。
 
 * 次のエラーが表示される場合：
 
-   ```
-       "Unable to load credential from file.pfx -- possibly wrong password."
-   ```
+  ```
+      "Error decoding the password for HandlerConfiguration.ServerTransportCredential.password  
+      javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
+  ```
 
-   PFXファイルに正しい暗号化パスワードを指定していることを確認してください。
+  指定した `ScrambleUtil` クラス。
 
 * 次のエラーが表示される場合：
 
-   ```
-       "javax.crypto.BadPaddingException: Given final block not properly padded"
-   ```
+  ```
+      "Unable to load credential from file.pfx -- possibly wrong password."
+  ```
 
-   リファレンス実装に付属のパスワードスクランブラクラスを使用していることを確認してください(このスクランブラユーティリティは、Adobe® Access™ Server for Protected Streamingで提供されるものとは異なります)。
+  PFX ファイルに正しい暗号化パスワードを指定していることを確認してください。
 
+* 次のエラーが表示される場合：
+
+  ```
+      "javax.crypto.BadPaddingException: Given final block not properly padded"
+  ```
+
+  参照実装で提供されるAdobeスクランブラクラスを使用していることを確認してください ( このスクランブラユーティリティは、Protected Streaming 用の Password® Access™ Server で提供されるものとは異なります )。

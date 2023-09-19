@@ -1,31 +1,29 @@
 ---
-description: TextFormatクラスを使用して、クローズドキャプショントラックのスタイル設定情報を指定できます。 プレイヤーが表示するクローズドキャプションのスタイルを設定します。
+description: TextFormat クラスを使用して、クローズドキャプショントラックのスタイル設定情報を指定できます。 プレーヤーで表示されるクローズドキャプションのスタイルを設定します。
 title: クローズドキャプションのスタイル設定を制御する
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
 
 ---
 
+# クローズドキャプションのスタイル設定を制御する {#control-closed-caption-styling-overview}
 
-# クローズドキャプションのスタイル設定を制御する{#control-closed-caption-styling-overview}
+TextFormat クラスを使用して、クローズドキャプショントラックのスタイル設定情報を指定できます。 プレーヤーで表示されるクローズドキャプションのスタイルを設定します。
 
-TextFormatクラスを使用して、クローズドキャプショントラックのスタイル設定情報を指定できます。 プレイヤーが表示するクローズドキャプションのスタイルを設定します。
+このクラスは、フォントタイプ、サイズ、色、背景の不透明度など、クローズドキャプションのスタイル設定情報をカプセル化します。 関連付けられたヘルパークラス `TextFormatBuilder`を使用すると、クローズドキャプションスタイルの設定を容易におこなうことができます。
 
-このクラスには、フォントの種類、サイズ、色、背景の不透明度などのクローズドキャプションのスタイル情報がカプセル化されています。 関連付けられたヘルパークラス`TextFormatBuilder`は、クローズドキャプションスタイル設定の作業を容易にします。
+## クローズドキャプションのスタイルの設定 {#set-closed-caption-styles}
 
-## クローズドキャプションのスタイルを設定{#set-closed-caption-styles}
+TVSDK メソッドを使用して、クローズドキャプションのテキストのスタイルを設定できます。
 
-TVSDKのメソッドを使用して、クローズドキャプションテキストのスタイルを設定できます。
+1. メディアプレーヤーが PREPARED 状態以上になるのを待ちます。
+1. の作成 `TextFormatBuilder` インスタンス。
 
-1. メディアプレイヤーがPREPARED状態以上になるのを待ちます。
-1. `TextFormatBuilder`インスタンスを作成します。
+   すべてのクローズドキャプションスタイル設定パラメーターを今すぐ指定することも、後で設定することもできます。
 
-   すべてのクローズドキャプションのスタイル設定パラメーターを指定するか、後で設定することができます。
-
-   TVSDKは、クローズドキャプションスタイル情報を`TextFormat`インターフェイスにカプセル化します。 `TextFormatBuilder`クラスは、このインターフェイスを実装するオブジェクトを作成します。
+   TVSDK は、クローズドキャプションのスタイル設定情報を `TextFormat` インターフェイス。 The `TextFormatBuilder` クラスは、このインターフェイスを実装するオブジェクトを作成します。
 
    ```java
    public TextFormatBuilder( 
@@ -41,93 +39,93 @@ TVSDKのメソッドを使用して、クローズドキャプションテキス
       int fillOpacity)
    ```
 
-1. `TextFormat`インターフェイスを実装するオブジェクトへの参照を取得するには、`TextFormatBuilder.toTextFormat`パブリックメソッドを呼び出します。
+1. を実装するオブジェクトへの参照を取得するには `TextFormat` インターフェイスで、 `TextFormatBuilder.toTextFormat` パブリックメソッド。
 
-   これは、メディアプレイヤーに適用できる`TextFormat`オブジェクトを返します。
+   これにより、 `TextFormat` オブジェクトを再生する必要があります。
 
    ```java
    public TextFormat toTextFormat()
    ```
 
-1. 必要に応じて、次のいずれかの操作を行って、現在のクローズドキャプションスタイル設定を取得します。
+1. オプションで、次のいずれかの操作を行って、現在のクローズドキャプションスタイル設定を取得します。
 
-   * `MediaPlayer.getCCStyle`を使用して、すべてのスタイル設定を取得します。
+   * ですべてのスタイル設定を取得する `MediaPlayer.getCCStyle`.
 
-      戻り値は`TextFormat`インターフェイスのインスタンスです。
+     戻り値は、 `TextFormat` インターフェイス。
 
-      ```js
-      /** 
-      * @return the current closed captioning style.  
-      * If no style was previously set, it returns a TextFormat object 
-      * with default values for each attribute. 
-      * @throws IllegalStateException if media player was already released. 
-      */ 
-      public TextFormat getCCStyle() throws IllegalStateException;
-      ```
+     ```js
+     /** 
+     * @return the current closed captioning style.  
+     * If no style was previously set, it returns a TextFormat object 
+     * with default values for each attribute. 
+     * @throws IllegalStateException if media player was already released. 
+     */ 
+     public TextFormat getCCStyle() throws IllegalStateException;
+     ```
 
-   * `TextFormat` getterメソッドを使用して、設定を一度に1つずつ取得します。
+   * 以下の手順で、一度に 1 つずつ設定を取得します。 `TextFormat` インターフェイスの getter メソッド。
 
-      ```js
-      public Color getFontColor(); 
-      public Color getBackgroundColor(); 
-      public Color getFillColor(); // retrieve the font fill color 
-      public Color getEdgeColor(); // retrieve the font edge color 
-      public Size getSize(); // retrieve the font size 
-      public FontEdge getFontEdge(); // retrieve the font edge type 
-      public Font getFont(); // retrieve the font type 
-      public int getFontOpacity(); 
-      public int getBackgroundOpacity();
-      ```
+     ```js
+     public Color getFontColor(); 
+     public Color getBackgroundColor(); 
+     public Color getFillColor(); // retrieve the font fill color 
+     public Color getEdgeColor(); // retrieve the font edge color 
+     public Size getSize(); // retrieve the font size 
+     public FontEdge getFontEdge(); // retrieve the font edge type 
+     public Font getFont(); // retrieve the font type 
+     public int getFontOpacity(); 
+     public int getBackgroundOpacity();
+     ```
 
 1. スタイル設定を変更するには、次のいずれかの操作を行います。
 
    >[!NOTE]
    >
-   >WebVTTキャプションのサイズは変更できません。
+   >WebVTT キャプションのサイズは変更できません。
 
-   * setterメソッド`MediaPlayer.setCCStyle`を使用して、`TextFormat`インターフェイスのインスタンスを渡します。
+   * setter メソッドの使用 `MediaPlayer.setCCStyle`を渡す場合、 `TextFormat` インターフェイス：
 
-      ```js
-      /** 
-      * Sets the closed captioning style. Used to control the closed captioning font, 
-      * size, color, edge and opacity.  
-      * 
-      * This method is safe to use even if the current media stream doesn't have closed 
-      * captions. 
-      * 
-      * @param textFormat 
-      * @throws IllegalStateException 
-      */ 
-      public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
-      ```
+     ```js
+     /** 
+     * Sets the closed captioning style. Used to control the closed captioning font, 
+     * size, color, edge and opacity.  
+     * 
+     * This method is safe to use even if the current media stream doesn't have closed 
+     * captions. 
+     * 
+     * @param textFormat 
+     * @throws IllegalStateException 
+     */ 
+     public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
+     ```
 
-   * `TextFormatBuilder`クラスを使用します。このクラスは、個々のsetterメソッドを定義します。
+   * 以下を使用します。 `TextFormatBuilder` 個々の setter メソッドを定義するクラス。
 
-      `TextFormat`インターフェイスは不変オブジェクトを定義するので、getterメソッドのみが存在し、setterメソッドは存在しません。 クローズドキャプションのスタイル設定パラメーターは、`TextFormatBuilder`クラスでのみ設定できます。
+     The `TextFormat` インターフェイスは不変オブジェクトを定義するので、getter メソッドのみが存在し、setter メソッドは存在しません。 クローズドキャプションのスタイル設定パラメーターは、 `TextFormatBuilder` クラス：
 
-      ```js
-      // set font type 
-      public void setFont(Font font)  
-      public void setBackgroundColor(Color backgroundColor) 
-      public void setFillColor(Color fillColor) 
-      // set the font-edge color 
-      public void setEdgeColor(Color edgeColor)  
-      // set the font size 
-      public void setSize(Size size)  
-      // set the font edge type 
-      public void setFontEdge(FontEdge fontEdge)  
-      public void setFontOpacity(int fontOpacity) 
-      public void setBackgroundOpacity(int backgroundOpacity) 
-      // set the font-fill opacity level 
-      public void setFillOpacity(int fillOpacity)  
-      public void setFontColor(Color fontColor)
-      ```
+     ```js
+     // set font type 
+     public void setFont(Font font)  
+     public void setBackgroundColor(Color backgroundColor) 
+     public void setFillColor(Color fillColor) 
+     // set the font-edge color 
+     public void setEdgeColor(Color edgeColor)  
+     // set the font size 
+     public void setSize(Size size)  
+     // set the font edge type 
+     public void setFontEdge(FontEdge fontEdge)  
+     public void setFontOpacity(int fontOpacity) 
+     public void setBackgroundOpacity(int backgroundOpacity) 
+     // set the font-fill opacity level 
+     public void setFillOpacity(int fillOpacity)  
+     public void setFontColor(Color fontColor)
+     ```
 
-クローズドキャプションスタイルの設定は非同期的な操作なので、変更が画面に表示されるまでに最大で数秒かかる場合があります。
+クローズドキャプションスタイルの設定は非同期的な操作なので、変更が画面に表示されるまでに数秒かかる場合があります。
 
-## クローズドキャプションのスタイル設定オプション{#closed-caption-styling-options}
+## クローズドキャプションのスタイル設定オプション {#closed-caption-styling-options}
 
-複数のキャプションのスタイル設定オプションを指定できます。これらのオプションは、元のキャプションのスタイル設定オプションよりも優先されます
+複数のキャプションのスタイル設定オプションを指定できます。これらのオプションは、元のキャプションのスタイルオプションよりも優先されます
 
 ```
 public TextFormatBuilder(
@@ -146,7 +144,7 @@ public TextFormatBuilder(
 
 >[!TIP]
 >
->デフォルト値（DEFAULTなど）を定義するオプションでは、キャプションが最初に指定されたときの設定を示す値が使用されます。
+>デフォルト値を定義するオプション（例えば、DEFAULT）では、キャプションが最初に指定されたときの設定を指定します。
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -158,58 +156,58 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> フォント </td> 
-   <td colname="2"> <p>フォントタイプ。 </p> <p><span class="codeph"> TextFormat.Font </span>定義済みリストで定義され、例えばserifsのある（またはない）等幅を表す値にのみ設定できます。 </p> <p>ヒント： デバイスで使用できる実際のフォントは異なる場合があり、必要に応じて代替フォントが使用されます。 serifsを持つ等幅スペースは、通常、代替として使用されますが、システム固有の置換である場合もあります。 </p> </td> 
+   <td colname="2"> <p>フォントタイプ。 </p> <p>は、 <span class="codeph"> TextFormat.Font </span> 列挙およびは、例えば、serifs のある場合もない場合も等幅で表します。 </p> <p>ヒント：デバイス上で使用できる実際のフォントは異なる場合があり、必要に応じて置換が使用されます。 serifs を持つ Monospace は通常、代替として使用されますが、この代替はシステム固有の場合もあります。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> サイズ </td> 
-   <td colname="2"> <p>キャプションのサイズ。 </p> <p> <span class="codeph"> TextFormat.Size </span>定義済みリストで定義された値にのみ設定できます。 
+   <td colname="2"> <p>キャプションのサイズ。 </p> <p> は、 <span class="codeph"> TextFormat.Size </span> 列挙： 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span>  — 標準サイズ </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> LARGE  </span>  — 標準サイズより約30%大きい </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> SMALL  </span>  — 標準サイズより約30%小さい </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT  </span>  — キャプションのデフォルトサイズ。媒体と同じ </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> 中 </span>  — 標準サイズ </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> 大 </span>  — 中より約 30%大きい </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> 小 </span>  — 中より約 30%小さい </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> デフォルト </span>  — キャプションのデフォルトサイズ（中） </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> フォントエッジ </td> 
-   <td colname="2"> <p>浮き出し、なしなど、フォントエッジに使用する効果。 </p> <p><span class="codeph"> TextFormat.FontEdge </span>定義済みリストで定義されている値にのみ設定できます。 </p> </td> 
+   <td colname="2"> <p>フォントの端に使用する効果（浮き出し、なしなど）。 </p> <p>は、 <span class="codeph"> TextFormat.FontEdge </span> 列挙。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> フォントカラー </td> 
-   <td colname="2"> <p>フォントの色。 </p> <p><span class="codeph"> TextFormat.Color </span>定義済みリストで定義された値にのみ設定できます。 </p> </td> 
+   <td colname="2"> <p>フォントの色。 </p> <p>は、 <span class="codeph"> TextFormat.Color </span> 列挙。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> エッジカラー </td> 
-   <td colname="2"> <p>エッジ効果のカラー。 </p> <p>フォントカラーに使用できる任意の値に設定できます。 </p> </td> 
+   <td colname="1"> エッジの色 </td> 
+   <td colname="2"> <p>エッジ効果の色。 </p> <p>には、フォントカラーに使用できる任意の値を設定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 背景色 </td> 
    <td colname="2"> <p>背景文字のセルの色。 </p> <p>フォントカラーに使用できる値にのみ設定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> 塗りのカラー </td> 
-   <td colname="2"> <p>テキストが配置されているウィンドウの背景の色。 </p> <p>フォントカラーに使用できる任意の値に設定できます。 </p> </td> 
+   <td colname="1"> 塗りの色 </td> 
+   <td colname="2"> <p>テキストが配置されているウィンドウの背景の色。 </p> <p>には、フォントカラーに使用できる任意の値を設定できます。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> フォントの不透明度 </td> 
-   <td colname="2"> <p>テキストの不透明度。 </p> <p>0（完全に透明）～ 100（完全に不透明）のパーセンテージで表します。 <span class="codeph"> フォント </span> のDEFAULT_OPACITYは100です。 </p> </td> 
+   <td colname="2"> <p>テキストの不透明度。 </p> <p>0 （完全な透明）～ 100 （完全な不透明）のパーセンテージで表されます。 <span class="codeph"> DEFAULT_OPACITY </span> の場合、フォントは 100 です。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 背景の不透明度 </td> 
-   <td colname="2"> <p>背景文字セルの不透明度。 </p> <p>0（完全に透明）～ 100（完全に不透明）のパーセンテージで表します。 <span class="codeph"> 背景 </span> のDEFAULT_OPACITYは100です。 </p> </td> 
+   <td colname="2"> <p>背景文字セルの不透明度。 </p> <p>0 （完全な透明）～ 100 （完全な不透明）のパーセンテージで表されます。 <span class="codeph"> DEFAULT_OPACITY </span> の場合、背景は 100 です。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 塗りの不透明度 </td> 
-   <td colname="2"> <p>キャプションウィンドウの背景の不透明度。 </p> <p>0（完全に透明）～ 100（完全に不透明）のパーセンテージで表します。 <span class="codeph"> 塗りのDEFAULT_OPACITY </span> は0です。 </p> </td> 
+   <td colname="2"> <p>キャプションウィンドウの背景の不透明度。 </p> <p>0 （完全な透明）～ 100 （完全な不透明）のパーセンテージで表されます。 <span class="codeph"> DEFAULT_OPACITY </span> の値は 0 です。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## キャプションの書式設定の例{#examples-caption-formatting}
+## キャプションの書式設定の例 {#examples-caption-formatting}
 
-クローズドキャプションの形式設定を指定できます。
+クローズドキャプションの書式設定を指定できます。
 
-**例1:形式の値を明示的に指定する**
+**例 1：形式の値を明示的に指定する**
 
 ```java
 private final MediaPlayer.PlaybackEventListener  
@@ -233,7 +231,7 @@ private final MediaPlayer.PlaybackEventListener
 } 
 ```
 
-**例2:パラメーターでの形式の値の指定**
+**例 2：パラメーターで形式の値を指定する**
 
 ```java
 /** 

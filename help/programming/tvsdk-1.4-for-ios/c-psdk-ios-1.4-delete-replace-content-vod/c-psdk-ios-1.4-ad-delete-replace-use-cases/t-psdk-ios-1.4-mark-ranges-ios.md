@@ -2,22 +2,20 @@
 title: 範囲をマーク
 description: 範囲をマーク
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
-
 # 範囲をマーク{#mark-ranges}
 
-`PTTimeRangeCollection`を実装し、コンテンツの範囲を広告としてマークするには：
-1. `PTTimeRangeCollection`を準備します。
-1. `PTTimeRangeCollection`のタイプを`PTTimeRangeCollectionTypeMarkRanges`に設定します。
+を実装するには、以下を実行します。 `PTTimeRangeCollection` コンテンツ範囲を広告としてマークします。
+1. を準備する `PTTimeRangeCollection`.
+1. タイプを `PTTimeRangeCollection` から `PTTimeRangeCollectionTypeMarkRanges`.
 
-   この手順は、カスタム範囲が広告と同様に扱われる必要があることをTVSDKに通知します。
+   この手順は、カスタム範囲が広告と同様に扱われる必要があることを TVSDK に通知します。
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -36,7 +34,7 @@ ht-degree: 0%
        type:PTTimeRangeCollectionTypeMarkRanges];
    ```
 
-1. `PTAdMetadata`を作成し、`PTTimeRangeCollection`を設定します。
+1. を作成します。 `PTAdMetadata` をクリックし、 `PTTimeRangeCollection`.
 
    ```
    // Create the PTPlayerItem metadata 
@@ -55,7 +53,7 @@ ht-degree: 0%
                                                                   metadata:metadata];
    ```
 
-1. プレイヤーと開始の再生を作成します。
+1. プレーヤーを作成し、再生を開始します。
 
    ```
    //Create PTMediaPlayer using the created PTMediaPlayer 
@@ -70,11 +68,11 @@ ht-degree: 0%
 
 ## 範囲を置換{#replace-ranges}
 
-`PTTimeRangeCollection`を実装し、コンテンツの範囲を広告として削除するには：
-1. `PTTimeRangeCollection`を準備します。
-1. `PTTimeRangeCollection`のタイプを`PTTimeRangeCollectionTypeReplaceRanges`に設定します。
+を実装するには、以下を実行します。 `PTTimeRangeCollection` コンテンツ範囲を広告として削除します。
+1. 準備 `PTTimeRangeCollection`.
+1. タイプを `PTTimeRangeCollection` から `PTTimeRangeCollectionTypeReplaceRanges`.
 
-   この手順は、提供された範囲を代替コンテンツ（広告）に置き換える必要があることをTVSDKに通知します。
+   この手順は、提供された範囲を代替コンテンツ（広告）に置き換える必要があることを TVSDK に通知します。
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -95,9 +93,9 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >引数`replacementDuration`はオプションです。 定義されていない場合、`AdServer`によって広告の時間の長さが決まります。
+   >引数 `replacementDuration` はオプションです。 定義されていない場合、 `AdServer` 広告ブレークの期間を決定します。
 
-1. `PTAdMetadata`を作成し、`PTTimeRangeCollection`を設定します。
+1. を作成します。 `PTAdMetadata` をクリックし、 `PTTimeRangeCollection`.
 
    ```
    //Create the PTPlayerItem metadata 
@@ -121,9 +119,9 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >`signalingMode`は`PTAdSignalingModeCustomRanges`として設定されますが、この広告シグナリングモードは、タイプ`PTTimeRangeCollectionTypeReplace`の`PTTimeRangeCollection`を設定する際に自動的に設定されます。
+   >ただし、 `signalingMode` は次のように設定されます。 `PTAdSignalingModeCustomRanges`に設定されている場合、この広告シグナリングモードは、 `PTTimeRangeCollection` のタイプ `PTTimeRangeCollectionTypeReplace`.
 
-1. プレイヤーと開始の再生を作成します。
+1. プレーヤーを作成し、再生を開始します。
 
    ```
    //Create PTMediaPlayer using the created PTMediaPlayer 
@@ -136,11 +134,11 @@ ht-degree: 0%
    [player play];
    ```
 
-## 範囲の削除{#delete-ranges}
+## 範囲を削除 {#delete-ranges}
 
-`PTTimeRangeCollection`を実装し、コンテンツの範囲を広告として削除するには：
-1. `PTTimeRangeCollection`を準備します。
-1. `PTTimeRangeCollection`のタイプを`PTTimeRangeCollectionTypeDeleteRanges`に設定します。これは、提供された範囲を削除する必要があることをTVSDKに通知します。
+を実装するには、以下を実行します。 `PTTimeRangeCollection` コンテンツ範囲を広告として削除します。
+1. を準備する `PTTimeRangeCollection`.
+1. タイプを `PTTimeRangeCollection` から `PTTimeRangeCollectionTypeDeleteRanges`：提供された範囲を削除する必要があることを TVSDK に通知します。
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -157,7 +155,7 @@ ht-degree: 0%
                                               type:PTTimeRangeCollectionTypeDeleteRanges];
    ```
 
-1. `PTAdMetadata`を作成し、`PTTimeRangeCollection`を設定します。
+1. を作成します。 `PTAdMetadata` をクリックし、 `PTTimeRangeCollection`.
 
    ```
    //Create the PTPlayerItem metadata 
@@ -181,9 +179,9 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >広告挿入は、カスタム範囲の削除の後、`PTAdMetadata`と現在の`PTAdSignalingMode`に基づいて発生します。
+   >広告挿入は、 `PTAdMetadata` そして現在の `PTAdSignalingMode`.
 
-1. プレイヤーと開始の再生を作成します。
+1. プレーヤーを作成し、再生を開始します。
 
    ```
    //Create PTMediaPlayer using the created PTMediaPlayer 

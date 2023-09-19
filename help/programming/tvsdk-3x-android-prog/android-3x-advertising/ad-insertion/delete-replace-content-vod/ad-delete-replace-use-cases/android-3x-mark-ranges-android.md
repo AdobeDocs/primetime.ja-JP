@@ -1,26 +1,24 @@
 ---
-description: VODコンテンツの時間間隔を広告の時間として指定できます。
+description: VOD コンテンツの時間間隔を広告の時間として指定できます。
 title: 範囲をマーク
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
+# 範囲をマーク {#mark-ranges}
 
-# 範囲をマーク{#mark-ranges}
+VOD コンテンツの時間間隔を広告の時間として指定できます。
 
-VODコンテンツの時間間隔を広告の時間として指定できます。
-
-`localTime`内の`begin`と`end`の間の`TimeRanges`は、タイムラインで`AdBreak`としてマークされます。 その他の広告設定は無視されます。
+The `TimeRanges` 次の期間 `begin` および `end` in `localTime` は、 `AdBreak` を使用します。 その他の広告設定は無視されます。
 
 >[!TIP]
 >
->コンテンツ内の特定の範囲のみを広告としてマークし、動的な広告挿入を使用しない場合は、`CustomRangeMetadata`インスタンスを作成し、タイプを`MARK`操作として指定し、定義したカスタム範囲を指定します。
+>コンテンツ内の特定の範囲のみを広告としてマークし、動的な広告挿入を使用しない場合は、 `CustomRangeMetadata` インスタンスを作成し、型を as として指定します。 `MARK` 演算を指定します。
 
-1. Tp範囲をマーク：
+1. 範囲を上限マーク：
 
    ```
    {   

@@ -1,19 +1,17 @@
 ---
-title: 追加広告
-description: 追加広告
+title: 広告の追加
+description: 広告の追加
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
 
 ---
 
+# 広告の追加 {#add-advertising}
 
-# 追加広告{#add-advertising}
+プレーヤーに広告機能を追加するには、 `AdsManager` または、管理者ファクトリを使用して、
 
-`AdsManager`を作成するか、マネージャーファクトリを使用して、プレイヤーに広告機能を追加できます。
-
-* `AdsManager`を作成するには：
-* `ManagerFactory`を使用して広告を有効または無効にするには
+* 次の手順で、 `AdsManager`:
+* 次の手順で `ManagerFactory` 広告を有効または無効にする

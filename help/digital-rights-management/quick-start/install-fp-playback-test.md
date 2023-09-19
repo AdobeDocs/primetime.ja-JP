@@ -1,20 +1,18 @@
 ---
-title: Flash Playerおよび再生テスト用コンテンツのインストール
-description: Flash Playerおよび再生テスト用コンテンツのインストール
+title: Flash Playerと再生のテストコンテンツをインストールする
+description: Flash Playerと再生のテストコンテンツをインストールする
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 0%
 
 ---
 
+# Flash Playerと再生のテストコンテンツをインストールする {#install-flash-player-and-playback-test-content}
 
-# Flash Playerおよび再生テスト用コンテンツのインストール{#install-flash-player-and-playback-test-content}
-
-1. ht<span></span>tps://get.adobe.com/flashplayer/に移動します。
-1. Flash Playerをダウンロードしてインストールします。
-1. Flash Playerが正しくインストールされていることを確認するには、次のデフォルトのビデオを再生します。
+1. ht に移動<span></span>tps://get.adobe.com/flashplayer/.
+1. ダウンロードとインストールのFlash Player。
+1. Flash Playerが正しくインストールされたことを確認するには、次のデフォルトのビデオを再生します。
 
    `https://drmtest2.adobe.com/AccessPlayer/player.swf`

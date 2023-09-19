@@ -1,34 +1,32 @@
 ---
-title: 事前生成ライセンス
-description: 事前生成ライセンス
+title: ライセンスの事前生成
+description: ライセンスの事前生成
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
 
 ---
 
+# ライセンスの事前生成{#pre-generating-licenses}
 
-# 事前生成ライセンス{#pre-generating-licenses}
+ライセンスを事前に生成するには、 `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` 例を得る `LicenseFactory`. このファクトリで生成されたライセンスに署名するには、ライセンスサーバー資格情報を指定する必要があります。 このクラスは、ライセンスチェーニングを行わずに Leaf ライセンスを生成し、 [強化されたライセンスチェーニング](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md).
 
-ライセンスを事前生成するには、`com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()`を使用して`LicenseFactory`のインスタンスを取得します。 このファクトリによって生成されたライセンスに署名するには、License Server資格情報を指定する必要があります。 このクラスは、ライセンスチェーンなしでリーフライセンスを生成し、[拡張ライセンスチェーン](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md)を使用してリーフライセンスとルートライセンスを生成できます。
+Leaf ライセンスを生成する場合、コンテンツのメタデータは `initContentInfo()`. メタデータに複数のポリシーが含まれる場合、またはメタデータに含まれていないポリシーを使用する場合は、 `setSelectedPolicy()` をクリックして、ライセンスの生成に使用するポリシーを指定します。 ポリシー更新リストを使用してポリシーの更新を追跡する場合、を使用してメタデータを初期化する前に、ポリシー更新リストを License Factory に提供できます。 `setPolicyUpdateList()`.
 
-リーフライセンスを生成する場合、コンテンツのメタデータは`initContentInfo()`を使用して指定する必要があります。 メタデータに複数のポリシーが含まれる場合、またはメタデータに含まれていないポリシーを使用する場合は、`setSelectedPolicy()`を使用して、ライセンスの生成に使用するポリシーを指定します。 ポリシーの更新リストを使用してポリシーの更新を追跡する場合、`setPolicyUpdateList()`を使用してメタデータを初期化する前に、License Factoryにポリシー更新リストを提供できます。
-
-Rootライセンスを生成する際に、コンテンツのメタデータを上記のとおりに指定できます。 また、Rootライセンスは、メタデータの代わりにポリシー(`setSelectedPolicy()`)とライセンスサーバーURL(`setLicenseServerURL()`)を使用して生成できます。
+ルートライセンスを生成する際には、前述のようにコンテンツのメタデータを指定できます。 または、ポリシー ( `setSelectedPolicy()`) およびライセンスサーバ URL ( `setLicenseServerURL()`) を使用する必要があります。
 
 >[!NOTE]
 >
->クライアントがライセンスを要求できるAdobeアクセスライセンスサーバがない場合でも、ライセンスサーバURLが必要です。 この場合、License ServerのURLには、ライセンス発行者を識別するURLを指定する必要があります。
+>ライセンスを要求できるAdobeアクセスライセンスサーバがない場合でも、ライセンスサーバ URL が必要です。 この場合、ライセンスサーバ URL は、ライセンス発行者を識別する URL を指定する必要があります。
 
-ポリシーで拡張ライセンスチェーンを使用する場合は、ポリシー(`setRootKeyRetrievalInfo()`)のルート暗号化キーを復号化するために、ライセンスサーバーの秘密鍵証明書を指定する必要があります。
+ポリシーで拡張ライセンスチェーンを使用する場合は、ポリシーのルート暗号化キーを復号化するために、ライセンスサーバーの資格情報を指定する必要があります ( `setRootKeyRetrievalInfo()`) をクリックします。
 
-ポリシーにドメインバインドライセンスが必要な場合は、`setDomainCAs()`を使用して、ライセンスサーバーがドメイントークンを受け入れるドメイン発行者を指定します。 ライセンス受信者を検証するには、1つ以上のドメインCA証明書を指定する必要があります。
+ポリシーでドメインバインドライセンスが必要な場合は、 `setDomainCAs()` をクリックして、ライセンスサーバーがドメイントークンを受け取るドメイン発行者を指定します。 ライセンス受信者を検証するには、1 つ以上のドメイン CA 証明書を提供する必要があります。
 
-iOSデバイスに対してリモートキー配信がポリシーで必要な場合、Chained Leafが生成されない限り、`setKeyServerCertificate()`を使用してキーサーバー証明書を指定する必要があります。
+ポリシーでiOSデバイスのリモートキー配信が必要な場合は、を使用してキーサーバー証明書を指定する必要があります。 `setKeyServerCertificate()`チェーンされたリーフが生成されていない場合は除きます。
 
-ライセンスを生成するには、`generateLicense()`を呼び出し、ライセンスの種類（リーフまたはルート）と1つ以上の受信者証明書を指定します。 受信者証明書は、ポリシーで指定されている要件に応じて、コンピューター証明書またはドメイン証明書になります。 Chained Leafを生成する場合、受信者は不要です。 ライセンスが生成された後は、ポリシーで指定された使用規則を上書きできます。 最後に、`signLicense()`を呼び出してライセンスに署名し、`PreGeneratedLicense`のインスタンスを取得します。 ライセンスをファイルに保存（`getBytes()`を使用してシリアライズされたライセンスを取得）したり、暗号化されたコンテンツに埋め込んだりできるようになりました。 「[ライセンスの埋め込み](../../aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-embedding-licenses.md)」を参照してください。
+ライセンスを生成するには、を呼び出します。 `generateLicense()` ライセンスの種類（リーフまたはルート）と 1 つ以上の受信者証明書を指定します。 受信者証明書は、ポリシーで指定されている要件に応じて、コンピューター証明書またはドメイン証明書になります。 チェーンされたリーフを生成する場合は、受信者は不要です。 ライセンスが生成された後は、ポリシーで指定された使用規則を上書きできます。 最後に、を呼び出します。 `signLicense()` ライセンスに署名してインスタンスを取得するには `PreGeneratedLicense`. これで、ライセンスをファイルに保存できます ( `getBytes()` ：シリアル化されたライセンスの取得 )、または暗号化されたコンテンツに埋め込まれます。 詳しくは、 [ライセンスの埋め込み](../../aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-embedding-licenses.md).
 
-事前生成ライセンスをデモするサンプルコードについては、リファレンス実装のコマンドラインツールの「samples」ディレクトリの`com.adobe.flashaccess.samples.licensegen.GenerateLicense`を参照してください。
+事前生成ライセンスを示すサンプルコードについては、 `com.adobe.flashaccess.samples.licensegen.GenerateLicense` 「リファレンス実装」コマンドラインツールの「samples」ディレクトリ。

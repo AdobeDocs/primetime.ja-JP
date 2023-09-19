@@ -1,32 +1,30 @@
 ---
 description: マニフェスト内のタグに関する通知を受け取るには、適切なイベントリスナーを登録します。
-title: 時間指定メタデータ追加通知のリスナー
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: 時間指定メタデータ通知のリスナーを追加する
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
-
-# 時間指定メタデ追加ータ通知{#add-listeners-for-timed-metadata-notifications}のリスナー
+# 時間指定メタデータ通知のリスナーを追加する{#add-listeners-for-timed-metadata-notifications}
 
 マニフェスト内のタグに関する通知を受け取るには、適切なイベントリスナーを登録します。
 
-関連するアクティビティをアプリケーションに通知する次のイベントをリッスンすると、時間指定メタデータを監視できます。
+時間指定メタデータを監視するには、次のイベントをリッスンします。このイベントは、関連するアクティビティをアプリケーションに通知します。
 
-* `MediaPlayerItemEvent.ITEM_CREATED`:オブジェクトの初期リストは、 `TimedMetadata` オブジェクトの作成後 `MediaPlayerItem` に使用できます。
+* `MediaPlayerItemEvent.ITEM_CREATED`：の最初のリスト `TimedMetadata` オブジェクトは、 `MediaPlayerItem` が作成されました。
 
-   このイベントは、このような状況が発生した場合にアプリケーションに通知します。
+  このイベントは、このような状況が発生した場合にアプリケーションに通知します。
 
-* `MediaPlayerItemEvent.ITEM_UPDATED`:マニフェスト/プレイリストが定期的に更新されるライブ/リニアストリームの場合、更新されたプレイリスト/マニフェストにカスタムタグが追加される場合があるので、追加の `TimedMetadata` オブジェクトが `MediaPlayerItem.timedMetadata` プロパティに追加される可能性があります。
+* `MediaPlayerItemEvent.ITEM_UPDATED`：マニフェスト/プレイリストが定期的に更新されるライブ/リニアストリームの場合、更新されたプレイリスト/マニフェストに追加のカスタムタグが表示される可能性があります。そのため、追加の `TimedMetadata` オブジェクトが `MediaPlayerItem.timedMetadata` プロパティ。
 
-   このイベントは、このような状況が発生した場合にアプリケーションに通知します。
+  このイベントは、このような状況が発生した場合にアプリケーションに通知します。
 
-* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`:新しい `TimedMetadata` オブジェクトが作成されるたびに、このイベントがMediaPlayerによってディスパッチされます。
+* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`：新しい `TimedMetadata` オブジェクトが作成された場合、このイベントは MediaPlayer によってディスパッチされます。
 
-   初期化フェーズ中に作成された`TimedMetadata`オブジェクトに対しては、このイベントはディスパッチされません。
+  このイベントは、 `TimedMetadata` オブジェクトが初期化フェーズ中に作成されました。
 
 1. 適切なリスナーを実装します。
 
@@ -56,4 +54,4 @@ ht-degree: 0%
                            onTimedMetadataAvailable);
    ```
 
-ID3メタデータは、同じ`TimedMetadataEvent.TIMED_METADATA_AVAILABLE`を通じてディスパッチされます。 ただし、TimedMetadataオブジェクトの`type`プロパティを使用してTAGとID3を区別できるので、混乱の原因になりません。 ID3タグについて詳しくは、[ID3タグ](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md)を参照してください。
+ID3 メタデータが同じ `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`. ただし、TimedMetadata オブジェクトの `type` プロパティを使用して TAG と ID3 を区別します。 ID3 タグについて詳しくは、 [ID3 タグ](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md).

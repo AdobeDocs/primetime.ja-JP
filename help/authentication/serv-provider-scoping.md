@@ -1,13 +1,12 @@
 ---
 title: サービスプロバイダー範囲
 description: サービスプロバイダー範囲
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
 
 ---
-
 
 # サービスプロバイダー範囲 {#service-provoider-scoping}
 
@@ -25,13 +24,13 @@ Adobe Primetime認証がプログラマの SP の役割を引き継ぐ場合は�
 
 Adobe Primetime認証では、次の 2 つの方法で認証要求の SP スコープを有効にできます。
 
-* **SAML 発行者アプローチ。**  このアプローチでは、「リクエスト元 ID」が SAML 認証リクエストの SAML 発行者文字列に追加されます。
+* **SAML 発行者のアプローチです。**  このアプローチでは、「リクエスト元 ID」が SAML 認証リクエストの SAML 発行者文字列に追加されます。
 
 * **カスタムスコーピングプロパティのアプローチです。**  このアプローチでは、「Requestor ID」が SAML 認証リクエストのカスタム「Scoping」プロパティとして明示的に含まれます。
 
 >[!NOTE]
 >
->「リクエスト元 ID」は、Adobe Primetime認証がプログラマーのネットワークブランド ( 例：「CNN」はターナーネットワークのブランドの 1 つです )。
+>「要求者 ID」は、Adobe Primetime認証がプログラマーのネットワークブランドを指す方法です（例えば、「CNN」はターナーネットワークのブランドの 1 つです）。
 
 ### SAML 発行者アプローチ {#saml-issuer-approach}
 
@@ -45,7 +44,7 @@ Adobe Primetime認証では、次の 2 つの方法で認証要求の SP スコ�
 ...
 ```
 
-### カスタムスコーププロパティのアプローチ {#custom-scoping-property-approach}
+### カスタムスコーピングプロパティのアプローチ {#custom-scoping-property-approach}
 
 この方法では、SAML 認証要求の次のスニペットに示すように、「Scoping」という名前のカスタムプロパティを使用します。
 

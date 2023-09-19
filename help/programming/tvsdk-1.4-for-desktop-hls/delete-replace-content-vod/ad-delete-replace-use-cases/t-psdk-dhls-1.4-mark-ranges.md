@@ -2,18 +2,16 @@
 title: 範囲をマーク
 description: 範囲をマーク
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '24'
 ht-degree: 0%
 
 ---
 
-
 # 範囲をマーク{#mark-ranges}
 
-`localTime`内の`begin`と`end`の間の`TimeRanges`を`AdBreak`としてタイムラインからマークします。 その他の広告設定は無視されます。
+トンボ `TimeRanges` 次の期間 `begin` および `end` in `localTime` as a `AdBreak` タイムラインから。 その他の広告設定は無視されます。
 
 1. 時間範囲をマークします。
 
@@ -58,4 +56,3 @@ ht-degree: 0%
        "id": "vod_004"
    }
    ```
-

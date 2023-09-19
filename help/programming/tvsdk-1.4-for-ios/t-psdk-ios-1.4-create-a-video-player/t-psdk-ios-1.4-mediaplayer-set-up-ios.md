@@ -1,61 +1,59 @@
 ---
-description: PTMediaPlayerインターフェイスには、メディアプレイヤーオブジェクトの機能と動作がカプセル化されています。
-title: PTMediaPlayerの設定
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: PTMediaPlayer インターフェイスは、メディアプレーヤーオブジェクトの機能と動作をカプセル化します。
+title: PTMediaPlayer の設定
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
 
 ---
 
+# PTMediaPlayer の設定 {#set-up-the-ptmediaplayer}
 
-# PTMediaPlayer {#set-up-the-ptmediaplayer}の設定
+TVSDK には、他の Primetime コンポーネントと統合できる高度なビデオプレーヤーアプリケーション（Primetime プレーヤー）を作成するためのツールが用意されています。
 
-TVSDKは、他のPrimetimeコンポーネントと統合できる高度なビデオプレイヤーアプリケーション（Primetimeプレイヤー）を作成するためのツールを提供します。
+プラットフォームのツールを使用して、プレーヤーを作成し、 TVSDK のメディアプレーヤービューに接続します。 TVSDK は、ビデオを再生および管理するメソッドを備えています。 例えば、 TVSDK は再生および一時停止のメソッドを提供します。 プラットフォーム上にユーザーインターフェイスボタンを作成し、これらの TVSDK メソッドを呼び出すためのボタンを設定できます。
 
-プラットフォームのツールを使用してプレイヤーを作成し、TVSDKのメディアプレイヤー表示に接続します。このメソッドは、ビデオの再生と管理を行うメソッドを備えています。 例えば、TVSDKは再生メソッドと一時停止メソッドを提供します。 プラットフォーム上にユーザーインターフェイスボタンを作成し、これらのTVSDKメソッドを呼び出すためのボタンを設定できます。
+PTMediaPlayer インターフェイスは、メディアプレーヤーオブジェクトの機能と動作をカプセル化します。
 
-PTMediaPlayerインターフェイスには、メディアプレイヤーオブジェクトの機能と動作がカプセル化されています。
+次の手順で `PTMediaPlayer`:
 
-`PTMediaPlayer`を設定するには：
-
-1. メディアのURLをユーザインターフェイスから取得します。例えば、テキストフィールドに取得します。
+1. ユーザーインターフェイスからメディアの URL を取得します。例えば、テキストフィールドなどです。
 
    ```
    NSURL *url = [NSURL URLWithString:textFieldURL.text];
    ```
 
-1. `PTMetadata`を作成します。
+1. 作成 `PTMetadata`.
 
-   メソッド`createMetada`がメタデータを準備するとします（[広告](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)を参照）。
+   メソッドを `createMetada` メタデータの準備 ( [広告](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)) をクリックします。
 
    ```
    PTMetadata *metadata = [self createMetadata]
    ```
 
-1. `PTMetadata`インスタンスを使用して`PTMediaPlayerItem`を作成します。
+1. 作成 `PTMediaPlayerItem` を使用して、 `PTMetadata` インスタンス。
 
    ```
    PTMediaPlayerItem *item = [[[PTMediaPlayerItem alloc] 
           initWithUrl:url mediaId:yourMediaID metadata:metadata] autorelease];
    ```
 
-1. TVSDKがディスパッチする追加通知に対するオブザーバー。
+1. TVSDK がディスパッチする通知にオブザーバーを追加します。
 
    ```
    [self addObservers]
    ```
 
-1. 新しい`PTMediaPlayerItem`を使用して`PTMediaPlayer`を作成します。
+1. 作成 `PTMediaPlayer` 新しい `PTMediaPlayerItem`.
 
    ```
    PTMediaPlayer *player = [PTMediaPlayer playerWithMediaPlayerItem:item];
    ```
 
-1. プレイヤーにプロパティを設定します。
+1. プレーヤーにプロパティを設定します。
 
-   次に、使用可能な`PTMediaPlayer`プロパティの例を示します。
+   次に、利用可能な `PTMediaPlayer` プロパティ：
 
    ```
    player.autoPlay                    = YES;  
@@ -64,7 +62,7 @@ PTMediaPlayerインターフェイスには、メディアプレイヤーオブ�
    player.allowsAirPlayVideo          = YES;
    ```
 
-1. プレイヤーの表示プロパティを設定します。
+1. プレーヤーの view プロパティを設定します。
 
    ```
    CGRect playerRect = self.adPlayerView.frame;  
@@ -77,16 +75,15 @@ PTMediaPlayerインターフェイスには、メディアプレイヤーオブ�
          ( UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight )];
    ```
 
-1. 現在追加の表示のサブビュー内のプレイヤーの表示。
+1. 現在のビューのサブビューにプレーヤーのビューを追加します。
 
    ```
    [self.adPlayerView  setAutoresizesSubviews:YES];  
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. `play`を呼び出して開始メディアの再生を開始します。
+1. 通話 `play` メディアの再生を開始する。
 
    ```
    [player play];
    ```
-

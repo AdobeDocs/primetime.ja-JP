@@ -1,18 +1,16 @@
 ---
-title: 関連するAPIドキュメント
-description: 関連するAPIドキュメント
+title: 関連する API ドキュメント
+description: 関連する API ドキュメント
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%
 
 ---
 
+# 関連する API ドキュメント {#related-api-documentation}
 
-# 関連するAPIドキュメント{#related-api-documentation}
-
-* [クラスAAManager](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AdsManager.html)
-* [クラスAAManagerOn](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManagerOn.html)
+* [クラス AAManager](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AdsManager.html)
+* [クラス AAManagerOn](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManagerOn.html)
 * [mediacore.info.AudioTrack](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/info/AudioTrack.html)

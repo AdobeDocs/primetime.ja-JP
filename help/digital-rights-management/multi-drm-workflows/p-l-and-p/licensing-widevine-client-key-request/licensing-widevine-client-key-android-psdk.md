@@ -1,20 +1,18 @@
 ---
-description: クライアントコードは、Android APIにデータを渡します。
-title: Android PSDKのキーリクエストワークフロー
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: クライアントコードはデータを Android API に渡します。
+title: Android PSDK でのキーリクエストワークフロー
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
+# Android PSDK でのキーリクエストワークフロー{#key-request-workflow-on-android-psdk}
 
-# Android PSDK{#key-request-workflow-on-android-psdk}のキーリクエストワークフロー
+クライアントコードはデータを Android API に渡します。
 
-クライアントコードは、Android APIにデータを渡します。
-
-Androidでは、次のAPIを使用して、クライアントコードにライセンスサーバーのURLとそれに付随するライセンス取得データを渡す必要があります。
+Android では、クライアントコードは、次の API を使用して、ライセンスサーバー URL と付属のライセンス取得データを渡す必要があります。
 
 ```
 class DRMManager 
@@ -32,9 +30,9 @@ class DRMManager
     }
 ```
 
-このAPIの呼び出しが完了すると、コードは通常の方法で開始コンテンツを再生できます。 Expressplayを使用している場合は、トークンをライセンスサーバーURLの一部として渡すか、リクエストプロパティとして渡して、ライセンスサーバーURLからトークンを取り除くことができます。
+この API が正常に呼び出された後、コードは通常の方法でコンテンツの再生を開始できます。 ExpressPlay を使用している場合は、トークンをライセンスサーバー URL の一部として渡すか、リクエストプロパティとして渡して、ライセンスサーバー URL からトークンを取り除くことができます。
 
-一部のAndroidデバイスは、WidevineとPlayReadyの両方をサポートしています。 このようなデバイスでは、コンテンツに複数のDRMヘッダーがある場合、顧客は特定のDRMを使用してPSDKにコンテンツの復号化を強制する必要があります。 これは、再生前に次のAPIを呼び出すことで実行できます。
+一部の Android デバイスは、Widevine と PlayReady の両方をサポートしています。 そのようなデバイスでは、コンテンツに複数の DRM ヘッダーがある場合、顧客は特定の DRM を使用して PSDK でコンテンツを復号化するよう強制することができます。 これは、再生前に次の API を呼び出すことで実行できます。
 
 ```
 class MediaPlayer 
@@ -48,4 +46,3 @@ class MediaPlayer
    public void setDRMScheme(String drm) throws MediaPlayerException 
    }
 ```
-

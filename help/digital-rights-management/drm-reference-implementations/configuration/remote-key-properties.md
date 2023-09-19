@@ -1,21 +1,19 @@
 ---
-title: リモートキー配信のプロパティ(iOS)
-description: リモートキー配信のプロパティ(iOS)
+title: リモートキー配信プロパティ (iOS)
+description: リモートキー配信プロパティ (iOS)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# リモートキー配信プロパティ (iOS){#remote-key-delivery-properties-ios}
 
-# リモートキー配信のプロパティ(iOS){#remote-key-delivery-properties-ios}
+Adobe Primetime DRM でiOSクライアントへのリモートキー配信のライセンスの生成をサポートするには、 `flashaccess-refimpl.properties` ファイル。
 
-Adobe PrimetimeDRMでiOSクライアントに対するリモートキー配信のライセンス生成をサポートするには、`flashaccess-refimpl.properties`ファイルでキーサーバー証明書を指定する必要があります。
-
-Primetime DRMに次のプロパティが追加されました。
+Primetime DRM に次のプロパティが追加されました。
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_xz2_lwy_n4"> 
  <thead class="- topic/thead "> 
@@ -27,12 +25,11 @@ Primetime DRMに次のプロパティが追加されました。
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> HandlerConfiguration.KeyServerCertificate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Adobeが発行するキーサーバーのライセンスサーバー証明書。 </p> <p>この証明書は、メタデータがキーサーバーが必要であることを示している場合に、iOSデバイスのライセンスを生成します。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Adobeが発行したキーサーバーのライセンスサーバー証明書。 </p> <p>この証明書は、メタデータがキーサーバーが必要であることを示している場合に、iOSデバイスのライセンスを生成します。 </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> RefImpl.HSM.HandlerConfiguration.\ KeyServerCertificate.Alias</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>HSMに保存されるキーサーバーのAdobe発行ライセンスサーバー証明書のエイリアス。 </p> <p>HSMを有効にする場合、<span class="codeph"> HandlerConfiguration.KeyServerCertificate</span>プロパティの代わりに、このプロパティを適用できます。 </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> RefImpl.HSM.HandlerConfiguration.\KeyServerCertificate.Alias</span> </td> 
+   <td colname="2" class="- topic/entry "> <p>HSM に保存されるキーサーバーのAdobe発行ライセンスサーバー証明書のエイリアス。 </p> <p>HSM を有効にすると、 <span class="codeph"> HandlerConfiguration.KeyServerCertificate</span> プロパティ。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

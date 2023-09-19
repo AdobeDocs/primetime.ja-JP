@@ -1,26 +1,24 @@
 ---
-description: Bento4 PackagerとAdobeOffline Packagerの両方を使用して、暗号化されたDASHコンテンツを作成します。 Bento4は、暗号化されていないmp4コンテンツを入力として受け取ります。
-title: Bento4でコンテンツをパッケージ化する
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 暗号化された DASH コンテンツを作成するには、Bento4 パッケージャーとAdobeオフラインパッケージャーの両方を使用します。 Bento4 は、暗号化されていない mp4 コンテンツを入力として取り込みます。
+title: Bento4 でコンテンツをパッケージ化
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
+# Widevine および PlayReady 用コンテンツのパッケージ化 {#package-for-widevine}
 
-# WidevineおよびPlayReady用コンテンツのパッケージ化{#package-for-widevine}
+暗号化された DASH コンテンツを作成するには、Bento4 パッケージャーとAdobeオフラインパッケージャーの両方を使用します。 Bento4 は、暗号化されていない mp4 コンテンツを入力として取り込みます。
 
-Bento4 PackagerとAdobeOffline Packagerの両方を使用して、暗号化されたDASHコンテンツを作成します。 Bento4は、暗号化されていないmp4コンテンツを入力として受け取ります。
+## Bento4 でコンテンツをパッケージ化{#package-your-content-with-bento}
 
-## Bento4{#package-your-content-with-bento}でコンテンツをパッケージ化する
+Bento4 パッケージャは、入力 mp4 が事前に断片化されていることを想定しています。 Bento4 パッケージャの配布には、このツールが含まれています。
 
-Bento4パッケージャーは、入力mp4が事前にフラグメント化されていることを想定しています。 Bento4 packagerの配布版には、この機能を実現するためのツールが含まれています。
+**Bento4 の呼び出し**
 
-**Bento4の呼び出し**
-
-一般的なBento4 packagerの呼び出しは、次の例のようになります。
+一般的な Bento4 パッケージャの呼び出しは、次の例のようになります。
 
 ```
 ./mp4dash
@@ -45,7 +43,7 @@ Bento4パッケージャーは、入力mp4が事前にフラグメント化さ�
 --playready-header=\"LA_URL:http://pr.test.expressplay.com/playready/RightsManager.asmx\"
 ```
 
-次の例は、PlayReadyとWidevineのスキームを組み合わせたものです。 この場合、パッケージャーは、Widevineコンテンツ保護とPlayReadyコンテンツ保護の初期化データの両方を出力DASHコンテンツに追加します。
+以下の例は、PlayReady と Widevine のスキームを組み合わせたものです。 この場合、パッケージャは Widevine コンテンツ保護と PlayReady コンテンツ保護初期化データの両方を出力 DASH コンテンツに追加します。
 
 ```
 /mp4dash
@@ -61,21 +59,21 @@ Bento4パッケージャーは、入力mp4が事前にフラグメント化さ�
 -o "CC_300_640x360_DASH"
 ```
 
-where
+場所
 
-`--encryption-key`フラグの値は`<base16 encoded key id>:<base16 encoded encryption key>`の形式です。
+の値 `--encryption-key` フラグがフォーム内にある `<base16 encoded key id>:<base16 encoded encryption key>`.
 
-`--widevine-header=provider:intertrust#content_id:2a`フラグは、パッケージャーにマニフェストにpsshボックスを含めるように指示します。このSSHボックスは、現在、TVSDKが再生に必要とします。
+The `--widevine-header=provider:intertrust#content_id:2a` フラグは、現在 TVSDK が再生に必要としている pssh ボックスをマニフェストに含めるようにパッケージャに指示します。
 
-`-playready-header`の値は、PlayReadyライセンス取得のための値です。
+の値 `-playready-header` は、PlayReady ライセンス獲得用のものです。
 
-## AdobeのOffline Packager {#package-your-content-with-adobe-offline-packager}でコンテンツをパッケージ化する
+## Adobeオフラインパッケージャでコンテンツをパッケージ化 {#package-your-content-with-adobe-offline-packager}
 
-AdobeOffline Packagerは、暗号化されていないmp4コンテンツを入力として受け取ります。
+Adobeオフライン Packager は、暗号化されていない mp4 コンテンツを入力として取得します。
 
-**Adobeオフラインパッケージャーの呼び出し**
+**Adobeオフラインパッケージャを呼び出し中**
 
-一般的なadobe offline packagerの呼び出しは、次のようになります。
+一般的な adobe offline packager の呼び出しは、次のようになります。
 
 ```
 java -jar OfflinePackager.jar -conf_path Content_PR_WV.xml -in_path "Jaigo.mp4"
@@ -89,9 +87,9 @@ http://pr.test.expressplay.com/playready/RightsManager.asmx
 -content_id c595f214d84dc7ecf31a8ebf1b7ddda5
 ```
 
-この場合、オフラインパッケージャーは、Widevineコンテンツ保護とPlayReadyコンテンツ保護の初期化データの両方を出力DASHコンテンツに追加します。 `-key_file_path`の値は、base64エンコードされたキーに対する値です。 `-playready_LA_URL`の値は、PlayReadyライセンス取得のためのものです。
+この場合、オフラインパッケージャは Widevine コンテンツ保護と PlayReady コンテンツ保護初期化データの両方を出力 DASH コンテンツに追加します。 の値 `-key_file_path` は、base64 でエンコードされたキーの場合に使用されます。 の値 `-playready_LA_URL` は、PlayReady ライセンス獲得用のものです。
 
-conf_path引数は、次の値を含む設定ファイルを指します。
+conf_path 引数は、次の内容を含む設定ファイルを指します。
 
 ```
 <config>
@@ -101,4 +99,4 @@ conf_path引数は、次の値を含む設定ファイルを指します。
 </config>
 ```
 
-一部のAndroidデバイス(主にAmazonFire TV)は、オーディオの復号化をサポートしないので、オーディオの暗号化はオプションです。
+特定の Android デバイス ( 主にAmazon Fire TV ) は、オーディオの復号化をサポートしていないので、オーディオの暗号化はオプションです。

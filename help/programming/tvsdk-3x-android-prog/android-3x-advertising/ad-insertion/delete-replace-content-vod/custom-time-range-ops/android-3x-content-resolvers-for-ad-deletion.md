@@ -1,18 +1,16 @@
 ---
-description: 複数のコンテンツリゾルバーを使用して、様々なタイムライン操作を処理できます。
+description: 複数のコンテンツリゾルバーを使用して、異なるタイムライン操作を処理できます。
 title: 広告削除/置換用のコンテンツリゾルバー
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
 
 ---
 
+# 広告削除/置換用のコンテンツリゾルバー {#content-resolvers-for-ad-deletion-replacement}
 
-# 広告削除/置換用のコンテンツリゾルバー{#content-resolvers-for-ad-deletion-replacement}
-
-複数のコンテンツリゾルバーを使用して、様々なタイムライン操作を処理できます。
+複数のコンテンツリゾルバーを使用して、異なるタイムライン操作を処理できます。
 
 ```java
 public List<ContentResolver> retrieveResolvers(MediaPlayerItem item) { 

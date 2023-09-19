@@ -1,52 +1,50 @@
 ---
-description: TVSDKは、スライディングウィンドウプレイリストのストリームである特定の位置（時間）のシークを、ビデオオンデマンド(VOD)とライブストリームの両方でサポートしています。
-title: シークスクラブバーに現在の再生位置を表示
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK は、ビデオオンデマンド (VOD) とライブストリームの両方で、ストリームがスライドウィンドウプレイリストである特定の位置（時間）へのシークをサポートしています。
+title: シークスクラブバーを現在の再生位置で表示
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
+# シークスクラブバーを現在の再生位置で表示 {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-# シークスクラブバーに現在の再生位置{#display-a-seek-scrub-bar-with-the-current-playback-position}を表示
-
-TVSDKは、スライディングウィンドウプレイリストのストリームである特定の位置（時間）のシークを、ビデオオンデマンド(VOD)とライブストリームの両方でサポートしています。
+TVSDK は、ビデオオンデマンド (VOD) とライブストリームの両方で、ストリームがスライドウィンドウプレイリストである特定の位置（時間）へのシークをサポートしています。
 
 >[!IMPORTANT]
 >
->ライブストリームでのシークは、DVRでのみ可能です。
+>ライブストリームでのシークは、DVR でのみ許可されます。
 
-1. シーク用のコールバックを設定します。
+1. シークのコールバックを設定します。
 
-       シークは非同期的なので、TVSDKは以下のシーク関連イベントをディスパッチします。
+       シークは非同期なので、 TVSDK は以下のシーク関連イベントをディスパッチします。
    
    * `QOSEventListener.onSeekStart`  — シーク開始。
    * `QOSEventListener.onSeekComplete`  — シークに成功しました。
    * `QOSEventListener.onOperationFailed`  — シークに失敗しました。
 
-1. プレイヤーがシーク可能な状態になるのを待ちます。
+1. プレーヤーがシーク可能な状態になるのを待ちます。
 
-   有効な状態は、PREPARED、COMPLETE、PAUSEDおよびPLAYINGです。
+   有効な状態は、準備済み、完了、一時停止および再生です。
 
-1. ネイティブのSeekBarを使用して`OnSeekBarChangeListener`を設定し、ユーザーがスクラブしている時間を確認します。
-1. `QOSEventListener.onOperationFailed`をリッスンし、適切な処置を取ります。
+1. ネイティブの SeekBar を使用して設定 `OnSeekBarChangeListener` をクリックして、ユーザーがスクラブしている時間を確認します。
+1. 次をリッスン： `QOSEventListener.onOperationFailed` 適切な行動を取る。
 
-   このイベントは、適切な警告を渡します。 アプリケーションは、例えば、シークを再試行するか、前の位置から再生を続行することで、どのように進むかを決定します。
+   このイベントは、適切な警告を渡します。 例えば、シークを再試行したり、前の位置から再生を続行したりすることで、アプリケーションの進め方が決まります。
 
-1. TVSDKが`QOSEventListener.onSeekComplete`コールバックを呼び出すまで待ちます。
-1. コールバックの位置パラメーターを使用して、最後に調整された再生位置を取得します。
+1. TVSDK が `QOSEventListener.onSeekComplete` コールバック。
+1. コールバックの position パラメーターを使用して、最後に調整された再生位置を取得します。
 
-   シーク後の実際の開始位置が、要求された位置と異なる場合があるので、これは重要です。 広告の時間の途中でシークや他の位置変更が行われたり、広告をスキップしたりすると、再生動作に影響する場合があります。
+   シーク後の実際の開始位置は、リクエストされた位置と異なる場合があるので、これは重要です。 シークやその他の再配置が広告の途中で終了したり、広告の時間をスキップしたりすると、再生動作が影響を受ける場合があります。
 
-1. シークスクラブバーを表示する場合は、位置情報を使用します。
+1. シークスクラブバーを表示する際には、位置情報を使用します。
 
 <!--<a id="example_9657AA855B6A4355B0E7D854596FFB54"></a>-->
 
 **シークの例**
 
-この例では、ユーザーはシークバーを使用して目的の位置にシークします。
+この例では、ユーザーはシークバーをスクラブして、目的の位置を探します。
 
 ```java
 // Use the native SeekBar to set OnSeekBarChangeListener to  
@@ -79,4 +77,3 @@ seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
     } 
 }; 
 ```
-

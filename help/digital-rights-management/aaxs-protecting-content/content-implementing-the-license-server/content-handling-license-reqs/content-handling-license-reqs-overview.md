@@ -2,27 +2,25 @@
 title: 概要
 description: 概要
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
 
 ---
 
-
 # 概要{#overview}
 
-ライセンスを要求するために、クライアントはパッケージ化の際にコンテンツに埋め込まれたメタデータを送信します。 ライセンスサーバは、コンテンツメタデータの情報を使用してライセンスを生成する。
+ライセンスを要求する場合、クライアントはパッケージ化時にコンテンツに埋め込まれたメタデータを送信します。 ライセンスサーバは、コンテンツメタデータの情報を使用してライセンスを生成する。
 
-`LicenseHandler`はライセンス要求を読み取り、要求を解析します。 `LicenseHandler`は、バッチライセンス要求 `BatchHandlerBase` に対応するように拡張されていますが、この機能は現在、Adobeアクセスクライアントではサポートされていません。`getRequests()`メソッドは、`LicenseRequestMessage`オブジェクトのリストを返します。 呼び出し元は`LicenseRequestMessages`を繰り返し処理し、要求ごとにライセンスを生成するか、エラーコードを設定する必要があります（詳しくは、`LicenseRequestMessage` APIリファレンスドキュメントを参照してください）。 サーバーは、ライセンス要求ごとにライセンスを発行するかどうかを決定します。 コンテンツID、ライセンスID、ポリシーなどのコンテンツメタデータから抽出した情報を取得するには、`LicenseRequestMessage.getContentInfo()`を呼び出します。
+The `LicenseHandler` ライセンスリクエストを読み取り、リクエストを解析します。 `LicenseHandler`extends `BatchHandlerBase` バッチライセンス要求に対応するために、この機能は、現在、Adobeアクセスクライアントではサポートされていません。 The `getRequests()` メソッドは、次のリストを返します： `LicenseRequestMessage` オブジェクト。 呼び出し元は、 `LicenseRequestMessages`を呼び出し、リクエストごとに、ライセンスを生成するか、エラーコードを設定します ( `LicenseRequestMessage` API リファレンスドキュメントを参照してください )。 サーバは、ライセンス要求ごとに、ライセンスを発行するかどうかを決定します。 通話 `LicenseRequestMessage.getContentInfo()` コンテンツメタデータから抽出された情報（コンテンツ ID、ライセンス ID、ポリシーを含む）を取得する。
 
-* リクエストハンドラークラスは`com.adobe.flashaccess.sdk.protocol.license.LicenseHandler`です
-* 要求メッセージクラスは`com.adobe.flashaccess.sdk.protocol.license.LicenseRequestMessage`です
-* クライアントとサーバーの両方がプロトコルバージョン5をサポートしている場合、要求URLは「メタデータのライセンスサーバーURL:+ 「/flashaccess/license/v4」)。 プロトコルバージョン3がクライアントまたはサーバーでサポートされる最大数の場合、Adobeアクセスクライアントは認証要求を「License Server URL in metadata」 + &quot;/flashaccess/license/v3&quot;に送信します。 それ以外の場合は、認証要求は「メタデータのライセンスサーバーのURL」 + 「/flashaccess/license/v1」に送信されます。
+* リクエストハンドラークラスは、 `com.adobe.flashaccess.sdk.protocol.license.LicenseHandler`
+* リクエストメッセージクラスは、 `com.adobe.flashaccess.sdk.protocol.license.LicenseRequestMessage`
+* クライアントとサーバーの両方がプロトコルバージョン 5 をサポートしている場合、要求 URL は「メタデータのライセンスサーバー URL: + &quot;/flashaccess/license/v4&quot;」になります。 Adobeバージョン 3 がクライアントまたはサーバーでサポートされる最大値の場合、プロトコルアクセスクライアントは認証要求を「メタデータのライセンスサーバー URL」+「/flashaccess/license/v3」に送信します。 それ以外の場合は、認証要求が「メタデータのライセンスサーバー URL」 + 「/flashaccess/license/v1」に送信されます。
 
-要求の解析中にエラーが発生した場合は、`HandlerParsingException`がスローされます。 この例外には、クライアントに返すエラー情報が含まれます。 エラー情報を取得するには、`HandlerParsingException.getErrorData()`を呼び出します。 ポリシー要件が満たされていないためにライセンスの生成中にエラーが発生した場合は、`PolicyEvaluationException`がスローされます。 この例外には、クライアントに返す`ErrorData`も含まれます。 ライセンス生成中のポリシーの評価方法について詳しくは、`LicenseRequestMessage.generateLicense()`のAPIドキュメントを参照してください。
+リクエストの解析中にエラーが発生した場合、 `HandlerParsingException` がスローされます。 この例外には、クライアントに返されるエラー情報が含まれます。 エラー情報を取得するには、 `HandlerParsingException.getErrorData()`. ポリシー要件が満たされていないため、ライセンスの生成中にエラーが発生した場合、 `PolicyEvaluationException` がスローされます。 この例外には、 `ErrorData` をクライアントに返します。 詳しくは、 API ドキュメントを参照してください。 `LicenseRequestMessage.generateLicense()` を参照してください。
 
-ライセンスとエラーは、`LicenseHandler.close()`が呼び出されると同時に送信されます。
+ライセンスとエラーは、 `LicenseHandler.close()` が呼び出されます。
 
-1つのデバイスに同じコンテンツの複数のライセンス（同じライセンスID）を持つこともできますが、特定のライセンスIDとポリシーIDに対するライセンスは1つだけ持つことができます。 重複ライセンスID/ポリシーIDのライセンスを受け取った場合、新しいライセンスは、新しいライセンスの発行日が既存のライセンスの発行日より後の場合にのみ、古いライセンスに置き換わります。 このロジックはコンテンツに埋め込まれたライセンスの処理に使用されるので、複数のライセンスを同じポリシーIDでコンテンツのチャンクに埋め込むことはお勧めしません。 `DRMManager.storeVoucher()`ActionScript3 API経由でクライアントに渡されるライセンスにも同じロジックが適用されます。クライアントが発行日の新しいライセンスを既に所有している場合、提供されたライセンスは無視することができます。
+1 つのデバイスに同じコンテンツの複数のライセンス（同じライセンス ID）がある場合でも、特定のライセンス ID とポリシー ID に対して 1 つのライセンスしか持つことができません。 LicenseID/PolicyID が重複するライセンスを受け取った場合、新しいライセンスの発行日が既存のライセンスの発行日より後の場合にのみ、新しいライセンスは古いライセンスに置き換えられます。 このロジックは、コンテンツに埋め込まれたライセンスを処理するために使用されるので、同じポリシー ID を持つ複数のライセンスをコンテンツのチャンクに埋め込むことはお勧めしません。 同じロジックが、 `DRMManager.storeVoucher()` ActionScript3 API。クライアントが発行日の新しいライセンスを既に保有している場合、提供されたライセンスは無視される場合があります。

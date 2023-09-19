@@ -2,23 +2,21 @@
 title: 匿名ドメインロジック
 description: 匿名ドメインロジック
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
-
 # 匿名ドメインロジック{#anonymous-domain-logic}
 
-## ドメイン登録ロジック{#section_C91DCD49D7D44570AF98C2D7B8A283F9}
+## ドメイン登録ロジック {#section_C91DCD49D7D44570AF98C2D7B8A283F9}
 
-参照の実装では、匿名ドメインの登録に次のロジックが適用されます。
+参照実装では、匿名ドメイン登録に対して次のロジックが適用されます。
 
-1. 要求URLからドメイン名を解析します。
-1. `DomainServerInfo`テーブルのドメイン名を参照します。
+1. 要求 URL からドメイン名を解析します。
+1. ドメイン名を `DomainServerInfo` 表。
 1. エントリが見つからない場合は、テーブルにエントリを挿入します。
 
    デフォルト値は次のとおりです。
@@ -26,36 +24,36 @@ ht-degree: 0%
    * `authentication is not required`
    * `no membership maximum`
 
-   要求されたドメインに認証が必要な場合は、有効な認証トークンが要求内にあることを確認します。 データベースで認証名前空間が指定されている場合、トークンは指定された認証名前空間と一致する必要があります。
-1. 認証が必要で、有効な認証トークンが使用できない場合は、エラー`DOM_AUTHENTICATION_REQUIRED (503)`を返します。
+   リクエストされたドメインに認証が必要な場合は、有効な認証トークンがリクエストに含まれていることを確認します。 データベースで Auth 名前空間が指定されている場合、トークンは指定された Auth 名前空間と一致する必要があります。
+1. 認証が必要で、有効な認証トークンが使用できない場合は、エラーを返します。 `DOM_AUTHENTICATION_REQUIRED (503)`.
 1. デバイスがドメインに登録されているかどうかを確認します。
 
-   1. `DomainMembership`テーブルのドメイン名を参照します。
-   1. 検索したマシンGUIDと、要求内のマシンGUIDを比較します。
-   1. これが新しいマシンの場合は、`DomainMembership`テーブルにエントリを追加します。
-   1. 新しいデバイスで`Max Membership`値に達した場合は、エラー`DOM_LIMIT_REACHED (502)`を返します。
+   1. ドメイン名を `DomainMembership` 表。
+   1. 探したマシン GUID と、リクエスト内のマシン GUID を比較します。
+   1. これが新しいマシンの場合、 `DomainMembership` 表。
+   1. 新しいデバイスで、 `Max Membership` 値に達しました。エラーを返します `DOM_LIMIT_REACHED (502)`.
 
-1. `DomainKeys`テーブルで、このドメインのすべてのドメインキーを検索します。
+1. のこのドメインのすべてのドメインキーを検索します `DomainKeys` テーブル：
 
-   1. `DomainServerInfo`がキーをロールオーバーする必要があることを示している場合は、新しいキーペアを生成します。
-   1. 既存のキーの上位より1つ大きいキーバージョンのキーを`DomainKeys`テーブルに保存します。
-   1. `DomainServerInfo`の`Key Rollover Required`フラグをリセットします。
+   1. 次の場合 `DomainServerInfo` は、キーをロールオーバーする必要があることを示し、新しいキーペアを生成します。
+   1. キーペアを `DomainKeys` 最も大きい既存のキーより 1 つ大きい数値を持つキーバージョンのテーブル。
+   1. をリセット `Key Rollover Required` 旗を立てる `DomainServerInfo`.
 
-   1. 各ドメインキーに対して、ドメイン秘密鍵証明書を生成します。
+   1. 各ドメインキーに対して、ドメインの資格情報を生成します。
 
-## ドメイン登録解除ロジック{#section_C968BBFCBFAB4510A903D169F38C9FCE}
+## ドメインの登録解除ロジック {#section_C968BBFCBFAB4510A903D169F38C9FCE}
 
-参照の実装では、匿名ドメインの登録解除に次のロジックが適用されます。
+この参照実装では、匿名ドメインの登録解除に対して次のロジックが適用されます。
 
-1. 要求URLからドメイン名を解析します。
-1. `DomainServerInfo`テーブルで、要求されたドメイン名を検索します。
-1. 要求されたドメインに認証が必要な場合は、有効な認証トークンが要求内にあることを確認します。
+1. 要求 URL からドメイン名を解析します。
+1. 要求されたドメイン名を `DomainServerInfo` 表。
+1. リクエストされたドメインに認証が必要な場合は、有効な認証トークンがリクエストに含まれていることを確認します。
 
-   また、トークンは、データベースで指定されているAuth名前空間と一致する必要があります。
-1. `DomainMembership`テーブルのドメイン名とマシンGUIDを参照します。
+   トークンは、データベースで指定されている Auth 名前空間とも一致する必要があります。
+1. のドメイン名とマシン GUID を検索します。 `DomainMembership` 表。
 
-   一致するエントリが見つからない場合は、エラー`DEREG_DENIED (401)`を返します。
+   一致するエントリが見つからない場合は、エラーを返します。 `DEREG_DENIED (401)`.
 
-1. これがプレビューリクエストでない場合は、`DomainMembership`からエントリを削除し、`DomainServerInfo`に`Key Rollover Required`フラグを設定します。
+1. これがプレビューリクエストでない場合は、 `DomainMembership`、および `DomainServerInfo`を設定し、 `Key Rollover Required` フラグ。
 
-多数のマシンがドメインに加入している可能性があるので、マシンIDを単純に一致させることはできません。 代わりに、個別化の際にマシンに割り当てられるランダムなマシンGUIDが適用されます。
+多数のマシンがドメインに参加する可能性があるので、単にマシン ID を照合することはできません。 代わりに、個別化時にマシンに割り当てられるランダムマシン GUID が適用されます。

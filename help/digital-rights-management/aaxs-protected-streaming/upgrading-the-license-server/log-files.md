@@ -2,20 +2,17 @@
 title: ログファイル
 description: ログファイル
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
 
 ---
 
-
 # ログファイル{#log-files}
 
-保護されたストリーミングアプリケーション用にAdobe Access Serverが生成するログファイルは、*LicenseServer.LogRoot*&#x200B;で指定されたディレクトリにあります。
+保護されたストリーミングアプリケーション用にAdobe Access Serverで生成されたログファイルは、 *LicenseServer.LogRoot*.
 
 >[!NOTE]
 >
->サーバーの実行中に現在のログファイルを削除または移動した場合、ログファイルは再作成されず、一部のログ情報が失われます。
-
+>サーバーの実行中に現在のログファイルが削除または移動された場合、ログファイルが再作成されない可能性があり、一部のログ情報は失われます。

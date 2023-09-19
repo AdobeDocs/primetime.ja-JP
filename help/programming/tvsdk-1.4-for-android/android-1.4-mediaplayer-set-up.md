@@ -1,42 +1,40 @@
 ---
-description: Android用のMediaPlayerインターフェイスには、メディアプレイヤーの機能と動作がカプセル化されています。
-title: MediaPlayerの設定
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Android 用の MediaPlayer インターフェイスには、メディアプレーヤーの機能と動作がカプセル化されています。
+title: MediaPlayer のセットアップ
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
+# MediaPlayer のセットアップ {#set-up-the-mediaplayer}
 
-# MediaPlayerの設定{#set-up-the-mediaplayer}
+Android 用の MediaPlayer インターフェイスには、メディアプレーヤーの機能と動作がカプセル化されています。
 
-Android用のMediaPlayerインターフェイスには、メディアプレイヤーの機能と動作がカプセル化されています。
-
-TVSDKは、`MediaPlayer`インターフェイスの実装を1つ提供します（`DefaultMediaPlayer`クラス）。 ビデオ再生機能が必要な場合は、`DefaultMediaPlayer`をインスタンス化します。
+TVSDK は、 `MediaPlayer` インターフェイス、 `DefaultMediaPlayer` クラス。 ビデオ再生機能が必要な場合は、 `DefaultMediaPlayer`.
 
 >[!TIP]
 >
->`DefaultMediaPlayer`インスタンスは、`MediaPlayer`インターフェイスで公開されるメソッドでのみ操作します。
+>の操作 `DefaultMediaPlayer` インスタンスのみ、 `MediaPlayer` インターフェイス。
 
-1. パブリック`DefaultMediaPlayer.create`ファクトリメソッドを使用して、Java Androidアプリケーションコンテキストオブジェクトを渡して、MediaPlayerをインスタンス化します。
+1. パブリックを使用した MediaPlayer のインスタンス化 `DefaultMediaPlayer.create` Java Android アプリケーションコンテキストオブジェクトを渡すファクトリメソッド。
 
    ```java
    public static MediaPlayer create(Context context) 
    ```
 
-1. `MediaPlayer.getView`を呼び出して、`MediaPlayerView`インスタンスへの参照を取得します。
+1. 通話 `MediaPlayer.getView` 参照を得る `MediaPlayerView` インスタンス。
 
    ```java
    MediaPlayerView getView() throws IllegalStateException; 
    ```
 
-1. `MediaPlayerView`インスタンスを`FrameLayout`インスタンスに配置します。このインスタンスにより、ビデオがデバイスの画面に配置されます。
+1. を `MediaPlayerView` インスタンスの `FrameLayout` インスタンス：ビデオをデバイスの画面に配置します。
 
    ```java
    FrameLayout playerFrame = (FrameLayout) view.findViewById(R.id.playerFrame); 
    playerFrame.addView(mediaPlayer.getView()); 
    ```
 
-これで`MediaPlayer`インスタンスが使用可能になり、ビデオコンテンツがデバイス画面に表示されるように適切に設定されます。
+The `MediaPlayer` これで、インスタンスが使用可能になり、ビデオコンテンツをデバイス画面に表示するように適切に設定されました。

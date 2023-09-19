@@ -1,94 +1,92 @@
 ---
-description: PTMediaPlayerオブジェクトは、使用するメディアプレイヤーを表します。 PTMediaPlayerItemは、プレイヤー上のオーディオまたはビデオを表します。
-title: MediaPlayerオブジェクトの操作
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: PTMediaPlayer オブジェクトは、メディアプレーヤーを表します。 PTMediaPlayerItem は、プレーヤー上のオーディオまたはビデオを表します。
+title: MediaPlayer オブジェクトの操作
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
 
 ---
 
+# MediaPlayer オブジェクトの操作 {#work-with-mediaplayer-objects}
 
-# MediaPlayerオブジェクトの操作{#work-with-mediaplayer-objects}
+PTMediaPlayer オブジェクトは、メディアプレーヤーを表します。 PTMediaPlayerItem は、プレーヤー上のオーディオまたはビデオを表します。
 
-PTMediaPlayerオブジェクトは、使用するメディアプレイヤーを表します。 PTMediaPlayerItemは、プレイヤー上のオーディオまたはビデオを表します。
+## MediaPlayerItem クラスについて {#section_B6F36C0462644F5C932C8AA2F6827071}
 
-## MediaPlayerItemクラス{#section_B6F36C0462644F5C932C8AA2F6827071}について
+メディアリソースが正常に読み込まれた後、 TVSDK は `PTMediaPlayerItem` クラスを使用して、そのリソースへのアクセスを提供します。
 
-メディアリソースが正常に読み込まれた後、TVSDKは`PTMediaPlayerItem`クラスのインスタンスを作成して、そのリソースへのアクセスを提供します。
-
-`PTMediaPlayer`は、メディアリソースを解決し、関連付けられたマニフェストファイルを読み込み、マニフェストを解析します。 これは、リソース読み込みプロセスの非同期部分です。 `PTMediaPlayerItem`インスタンスは、リソースが解決された後に生成され、このインスタンスはメディアリソースの解決されたバージョンです。 TVSDKは、新しく作成された`PTMediaPlayerItem`インスタンスに対して、`PTMediaPlayer.currentItem`を介してアクセスを提供します。
+The `PTMediaPlayer` メディアリソースを解決し、関連するマニフェストファイルを読み込んで、マニフェストを解析します。 これは、リソースの読み込みプロセスの非同期部分です。 The `PTMediaPlayerItem` インスタンスは、リソースが解決された後に生成され、このインスタンスはメディアリソースの解決されたバージョンです。 TVSDK は、新しく作成された `PTMediaPlayerItem` インスタンス経由で `PTMediaPlayer.currentItem`.
 
 >[!TIP]
 >
->リソースが正常に読み込まれるのを待ってから、メディアプレイヤーアイテムにアクセスする必要があります。
+>リソースが正常に読み込まれるのを待ってから、メディアプレーヤーアイテムにアクセスする必要があります。
 
-## MediaPlayerオブジェクトのライフサイクル{#section_D87EF7FBC7B442BDBE825156DC2C1CCF}
+## MediaPlayer オブジェクトのライフサイクル {#section_D87EF7FBC7B442BDBE825156DC2C1CCF}
 
-`PTMediaPlayer`インスタンスを作成した瞬間から終了（再利用または削除）した瞬間まで、このインスタンスはあるステータスから別のステータスへの一連のトランジションを完了します。
+作成した時点から、 `PTMediaPlayer` インスタンスを終了（再利用または削除）した瞬間に、このインスタンスは、あるステータスから別のステータスへの一連の遷移を完了します。
 
-一部の操作は、プレイヤーが特定の状態にある場合にのみ許可されます。 例えば、`PTMediaPlayerStatusCreated`で`play`を呼び出すことはできません。 このステータスは、プレイヤーが`PTMediaPlayerStatusReady`ステータスに達した後にのみ呼び出すことができます。
+一部の操作は、プレーヤーが特定の状態にある場合にのみ許可されます。 例： `play` in `PTMediaPlayerStatusCreated` は許可されていません。 このステータスは、プレーヤーが `PTMediaPlayerStatusReady` ステータス。
 
-ステータスを使用するには：
+ステータスを処理するには：
 
-* `PTMediaPlayer.status`を使用して、MediaPlayerオブジェクトの現在のステータスを取得できます。
-* ステータスのリストは`PTMediaPlayerStatus`に定義されています。
+* MediaPlayer オブジェクトの現在のステータスは、 `PTMediaPlayer.status`.
+* ステータスのリストは、 `PTMediaPlayerStatus`.
 
-MediaPlayerインスタンスのライフサイクルの状態トランジション図：
+MediaPlayer インスタンスのライフサイクルの状態遷移図です。
 <!--<a id="fig_1C55DE3F186F4B36AFFDCDE90379534C"></a>-->
 
 ![](assets/player-state-transitions-diagram-ios2_web.png)
 
-次の表に、その他の詳細を示します。
+その他の詳細を次の表に示します。
 
 <table id="table_426F0093E4214EA88CD72A7796B58DFD"> 
  <thead> 
   <tr> 
    <th colname="col1" class="entry"><b>PTMediaPlayerStatus</b></th> 
-   <th colname="col2" class="entry"><b>発生するのは</b> </th> 
+   <th colname="col2" class="entry"><b>発生するタイミング</b> </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusCreated</span> </p> </td> 
-   <td colname="col2"> <p>アプリケーションが、<span class="codeph"> playerWithMediaPlayerItem</span>を呼び出して新しいメディアプレイヤーを要求しました。 新しく作成されたプレイヤーは、ユーザーがメディアプレイヤーアイテムを指定するのを待っています。 これは、メディアプレイヤーの初期ステータスです。 </p> </td> 
+   <td colname="col2"> <p>アプリケーションが <span class="codeph"> playerWithMediaPlayerItem</span>. 新しく作成されたプレーヤーは、メディアプレーヤーアイテムの指定を待っています。 これは、メディアプレーヤーの初期ステータスです。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing</span> </p> </td> 
-   <td colname="col2"> <p>アプリケーションが<span class="codeph"> PTMediaPlayer.replaceCurrentItemWithPlayerItem</span>を呼び出し、メディアプレイヤーが読み込まれます。 </p> </td> 
+   <td colname="col2"> <p>アプリケーションの呼び出し <span class="codeph"> PTMediaPlayer.replaceCurrentItemWithPlayerItem</span>、メディアプレーヤーが読み込まれている状態。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusInitialized</span> </p> </td> 
-   <td colname="col2"> <p>TVSDKは、メディアプレイヤーアイテムを正常に設定しました。 </p> </td> 
+   <td colname="col2"> <p>TVSDK は、メディアプレーヤーアイテムを正常に設定しました。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> PTMediaPlayerStatusReady</span> </p> </td> 
-   <td colname="col2"> <p>コンテンツが準備され、広告がタイムラインに挿入されているか、広告手順が失敗しています。 バッファリングまたは再生が開始できます。 </p> </td> 
+   <td colname="col2"> <p>コンテンツが準備され、広告がタイムラインに挿入された、または広告手順が失敗した。 バッファリングまたは再生を開始できます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusPlaying</span> </p> </td> 
-   <td colname="col2"> <p>アプリケーションが<span class="codeph"> play</span>を呼び出したので、TVSDKはビデオを再生しようとしています。 ビデオが実際に再生される前に、バッファリングが発生する場合があります。 </p> </td> 
+   <td colname="col2"> <p>アプリケーションがを呼び出しました <span class="codeph"> play</span>そのため、 TVSDK はビデオを再生しようとしています。 ビデオが実際に再生される前にバッファリングが発生する場合があります。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusPaused</span> </p> </td> 
-   <td colname="col2"> <p>アプリケーションがメディアを再生および一時停止すると、メディアプレイヤーはこの状態と<span class="codeph"> PTMediaPlayerStatusPlaying</span>の間を移動します。 </p> </td> 
+   <td colname="col2"> <p>アプリケーションがメディアを再生および一時停止すると、メディアプレーヤーはこの状態と <span class="codeph"> PTMediaPlayerStatusPlaying</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusCompleted</span> </p> </td> 
-   <td colname="col2"> <p>プレイヤーがストリームの終わりに到達し、再生が停止しました。 </p> </td> 
+   <td colname="col2"> <p>プレーヤーがストリームの終わりに到達し、再生が停止した。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusStopped</span> </p> </td> 
-   <td colname="col2"> <p>アプリケーションがメディアプレイヤーをリリースし、関連付けられているリソースもすべて解放します。 このインスタンスは使用できなくなります </p> </td> 
+   <td colname="col2"> <p>アプリケーションがメディアプレーヤーをリリースし、関連するリソースもリリースしました。 このインスタンスは使用できなくなりました </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusError</span> </p> </td> 
-   <td colname="col2"> <p>プロセス中にエラーが発生しました。 また、エラーは、アプリケーションが次に実行できる操作に影響する可能性があります。 </p> </td> 
+   <td colname="col2"> <p>プロセス中にエラーが発生しました。 また、エラーは、アプリケーションが次に実行できる操作に影響を与える場合があります。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!TIP]
 >
->ステータスを使用して、プロセスに対するフィードバック（例えば、次のステータス変更を待つ間のスピナー）を提供したり、次のメソッドを呼び出す前に適切なステータスを待つなど、メディアの再生時に次の手順を実行したりできます。
+>ステータスを使用して、プロセスに関するフィードバックを提供したり（例えば、次のステータスの変更を待つ間は、スピナーを表示）、次のメソッドを呼び出す前に適切なステータスを待つなど、メディアを再生する際に次の手順を実行できます。

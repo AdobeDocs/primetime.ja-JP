@@ -1,18 +1,16 @@
 ---
-title: 保護されたコンテンツの再生が許可されるAdobe®Flash®プレーヤーSWFの許可リスト
-description: 保護されたコンテンツの再生が許可されるAdobe®Flash®プレーヤーSWFの許可リスト
+title: Adobe®Flash®プレーヤーSWFの保護されたコンテンツの再生が許可される許可リスト
+description: Adobe®Flash®プレーヤーSWFの保護されたコンテンツの再生が許可される許可リスト
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
+# Adobe®Flash®プレーヤーSWFの保護されたコンテンツの再生が許可される許可リスト {#allowlist-for-adobe-flash-player-swfs-allowed-to-play-protected-content}
 
-# 保護されたコンテンツの再生が許可されるAdobe®Flash®プレーヤーSWFの許可リスト{#allowlist-for-adobe-flash-player-swfs-allowed-to-play-protected-content}
+コンテンツを再生できるSWFファイルを指定します。 SWFのコンテンツを使用して計算されるSWFURL または SHA-256 ダイジェストでSWFファイルを指定します。 SHA-256 ダイジェストを使用する場合、この使用ルールでは、クライアントがSWFをダウンロードおよび検証できる最大時間も指定します。
 
-コンテンツを再生できるSWFファイルを指定します。 SWFファイルは、SWF URLまたはSWFのコンテンツを使用して計算されたSHA-256ダイジェストで指定します。 SHA-256ダイジェストを使用する場合、この使用ルールでは、クライアントがSWFをダウンロードして検証できる最大時間も指定します。
-
-使用例：概念的には、Flash Media Serverの場合はSWF検証と同じですが、コンテンツを再生できるビデオプレーヤーを制限するようにクライアント側に強制されます。 Adobeアクセスの動作は、親SWFと比較して子SWFの強制に関して異なることに注意してください。
+使用例：概念上はSWFの検証と同じですが、Flash Media Server時にクライアント側で適用され、コンテンツを再生できるビデオプレーヤーを制限します。 Adobeアクセスの動作は、子SWFの適用に関して親SWFとは異なることに注意してください。

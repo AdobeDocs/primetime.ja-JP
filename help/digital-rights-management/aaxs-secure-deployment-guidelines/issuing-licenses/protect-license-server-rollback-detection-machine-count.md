@@ -1,24 +1,22 @@
 ---
-title: ライセンス発行時のコンピュータ数
-description: ライセンス発行時のコンピュータ数
+title: ライセンス発行時のコンピューター数
+description: ライセンス発行時のコンピューター数
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
 
 ---
 
+# ライセンス発行時のコンピューター数{#machine-count-when-issuing-licenses}
 
-# ライセンス発行時のマシン数{#machine-count-when-issuing-licenses}
+ビジネス・ルールでユーザーのマシン数を追跡する必要がある場合は、ライセンス・サーバーまたはドメイン・サーバーにユーザーに関連付けられたマシン ID を保存する必要があります。 マシン ID を追跡する最も堅牢な方法は、 `MachineId.getBytes()` メソッドを使用して、データベース内で設定できます。 新しいリクエストが発生したら、を使用して、リクエスト内のマシン ID と既知のマシン ID を比較します。 `MachineId.matches()`.
 
-ビジネスルールでユーザーのマシン数を追跡する必要がある場合、License Serverまたはドメインサーバーには、ユーザーに関連付けられたマシンIDを格納する必要があります。 マシンIDを追跡する最も強力な方法は、`MachineId.getBytes()`メソッドから返された値をデータベースに格納することです。 新しい要求が入ってきたら、`MachineId.matches()`を使用して、要求内のマシンIDと既知のマシンIDを比較します。
-
-`MachineId.matches()` は、IDの比較を実行して、同じマシンを表しているかどうかを判断します。この比較は、比較対象のマシンIDが少数ある場合にのみ実用的です。 例えば、ユーザーがドメイン内で5台のマシンを許可されている場合、データベースでそのユーザーのユーザー名に関連付けられたマシンIDを検索し、比較対象となる小さなデータセットを取得できます。
+`MachineId.matches()` は、ID の比較を実行して、同じマシンを表しているかどうかを判断します。 この比較は、比較対象のマシン ID が少数ある場合にのみ実用的です。 例えば、ユーザーがドメイン内で 5 台のマシンを許可されている場合は、データベースでユーザー名に関連付けられているマシン ID を検索し、比較対象となる小さなデータセットを取得できます。
 
 >[!NOTE]
 >
->この比較は、匿名アクセスを許可する展開では実用的ではありません。 このような場合は`MachineId.getUniqueID()`を使用できますが、FlashとAdobe AIR®ランタイムの両方からコンテンツにアクセスした場合、このIDは同じではなく、ユーザーがハードドライブを再フォーマットした場合、このIDは使用できません。
+>この比較は、匿名アクセスを許可するデプロイメントには実用的ではありません。 このような場合 `MachineId.getUniqueID()` ただし、FlashとAdobe AIR®のランタイムの両方からコンテンツにアクセスする場合は、この ID が同じではなくなり、ユーザーがハードドライブを再フォーマットした場合は存続しません。
 
-`MachineToken.getMachineId()`と`MachineId.matches()`について詳しくは、*AdobeアクセスAPIリファレンス*&#x200B;を参照してください。
+詳しくは、以下を参照してください。 `MachineToken.getMachineId()`および `MachineId.matches()`を参照し、 *Adobeアクセス API リファレンス*.

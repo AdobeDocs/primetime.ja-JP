@@ -1,18 +1,16 @@
 ---
-title: エンタイトルメントリソースIDのJSONオブジェクト
-description: 次のコードブロックは、エンタイトルメントリソースIDが単純なテキスト文字列の場合のJSONオブジェクトの例を示しています。
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: エンタイトルメントリソース ID の JSON オブジェクト
+description: 次のコードブロックは、エンタイトルメントリソース ID が単純なテキスト文字列の場合の JSON オブジェクトの例を示しています。
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
+# エンタイトルメントリソース ID の JSON オブジェクト {#json-object-for-entitlement-resource-id}
 
-# エンタイトルメントリソースID {#json-object-for-entitlement-resource-id}のJSONオブジェクト
-
-次のコードブロックは、エンタイトルメントリソースIDが単純なテキスト文字列の場合のJSONオブジェクトの例を示しています。 この場合、リソースIDは文字列「resource」です。
+次のコードブロックは、エンタイトルメントリソース ID が単純なテキスト文字列の場合の JSON オブジェクトの例を示しています。 この場合、リソース ID は文字列「resource」です。
 
 ```
 "metadata" : { 
@@ -22,7 +20,7 @@ ht-degree: 0%
 }
 ```
 
-次のコードブロックは、エンタイトルメントリソースIDがHTMLエンコードされたmRSS文字列の場合のJSONオブジェクトの例を示しています。
+次のコードブロックは、エンタイトルメントリソース ID がHTMLでエンコードされた mRSS 文字列の場合の JSON オブジェクトの例を示しています。
 
 ```
 <rss version="2.0" xmlns:media="https://search.yahoo.com/mrss/"> 
@@ -37,7 +35,7 @@ ht-degree: 0%
 </rss>
 ```
 
-次のmRSS文字列がリソースIDとして使用されます。
+次の mRSS 文字列がリソース ID として使用されます。
 
 ```
 "metadata" : { 

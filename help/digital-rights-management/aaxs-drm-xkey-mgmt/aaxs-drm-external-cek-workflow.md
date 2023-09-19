@@ -1,25 +1,23 @@
 ---
-title: AAXS DRM外部CEKワークフロー
-description: このワークフローは、中央リポジトリやコンテンツキー管理システム(CKMS)を使用する必要がないため、既存のほとんどのDRMシステムとは異なります
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: AAXS DRM 外部 CEK ワークフロー
+description: このワークフローは、中央リポジトリや CKMS(Content Key Management System) を使用する必要がないので、既存のほとんどの DRM システムからの出発点となります。
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
 
 ---
 
+# AAXS DRM 外部 CEK ワークフロー{#aaxs-drm-external-cek-workflow}
 
-# AAXS DRM外部CEKワークフロー{#aaxs-drm-external-cek-workflow}
-
-このワークフローは、中央リポジトリやコンテンツキー管理システム(CKMS)を使用する必要がないため、既存のほとんどのDRMシステムとは異なります。 ただし、AAXSで既存のCKMSを使用したいお客様の場合、AAXSには「External CEK」と呼ばれる機能があり、パッケージ化とライセンス発行時にCEKが外部から提供されます。
+このワークフローは、中央リポジトリや CKMS(Content Key Management System) を使用する必要がないので、既存のほとんどの DRM システムからの出発点となります。 ただし、AAXS が既存の CKMS と連携することを望むお客様に対しては、AAXS は「外部 CEK」と呼ばれる機能を提供し、パッケージ化およびライセンス発行時に CEK が外部から提供されます。
 
 ![](assets/ECEK_Workflow.PNG)
 
-1. （パッケージ）AAXS Java SDKは、CEKとCEK IDを備えています。
-1. （パッケージ）CEKは、コンテンツの暗号化に使用されます。
-1. （パッケージ）CEK IDがコンテンツのDRMメタデータに挿入されます。
-1. デバイスは、AAXSサーバーにライセンスを要求してコンテンツを再生しようとします。
-1. （ライセンス認証）AAXSサーバーは、コンテンツメタデータからCEK IDを抽出します。
-1. AAXSサーバーはCKMSからCEKを取得します。
-1. （ライセンス認証）AAXSサーバーは、CEKを含むライセンスをデバイスに発行します。
+1. （パッケージ）AAXS Java SDK は、CEK と CEK ID を備えています。
+1. （パッケージ）CEK はコンテンツの暗号化に使用されます。
+1. （パッケージ）CEK ID がコンテンツの DRM メタデータに挿入されます。
+1. デバイスは、AAXS サーバーからライセンスを要求して、コンテンツを再生しようとします。
+1. （ライセンス）AAXS サーバーは、コンテンツメタデータから CEK ID を抽出します。
+1. AAXS サーバーは、CKMS から CEK を取得します。
+1. （ライセンス）AAXS サーバーは、CEK を含むライセンスをデバイスに発行します。

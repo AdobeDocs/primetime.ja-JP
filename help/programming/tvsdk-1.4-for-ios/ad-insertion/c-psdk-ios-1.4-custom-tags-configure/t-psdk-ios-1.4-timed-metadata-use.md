@@ -1,22 +1,20 @@
 ---
-description: 現在の再生時間が開始時間と一致する場合は、TimedMetadataを使用できます。
-title: 時間指定メタデータの使用
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 現在の再生時間が開始時間と一致する場合は、 TimedMetadata を使用できます。
+title: 時間指定メタデータを使用
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
 # 時間指定メタデータを使用{#use-timed-metadata}
 
-現在の再生時間が開始時間と一致する場合は、TimedMetadataを使用できます。
+現在の再生時間が開始時間と一致する場合は、 TimedMetadata を使用できます。
 
-再生中にこれらの保存した`PTTimedMetadata`オブジェクトを使用するには、[Store timed-metadata objects as dispatched](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md)の保存済みディクショナリを使用します。
+これらを保存して使用するには `PTTimedMetadata` オブジェクトを再生中に、次の場所から保存したディクショナリを使用します。 [ディスパッチされる時間指定メタデータオブジェクトを保存します。](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
 
-1. この通知から現在の再生時間を抽出して更新し、現在の再生時間と一致する開始時間を持つすべての`PTTimedMetadata`オブジェクトを見つけます。
+1. この通知から現在の再生時間を抽出して更新し、 `PTTimedMetadata` 現在の再生時間に一致する開始時間を持つオブジェクト。
 
    これらのオブジェクトを使用して、様々なアクションを実行できます。
 
@@ -57,4 +55,4 @@ ht-degree: 2%
    }
    ```
 
-1. リストから古い`PTTimedMetadata`インスタンスを定期的にフラッシュして、メモリが継続的に増大するのを防ぎます。
+1. 古いものを定期的にフラッシュ `PTTimedMetadata` インスタンスをリストから削除して、メモリが継続的に増大するのを防ぎます。

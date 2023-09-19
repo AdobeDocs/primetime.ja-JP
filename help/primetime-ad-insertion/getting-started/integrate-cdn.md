@@ -1,38 +1,36 @@
 ---
-title: CDNの統合
-description: CDNの統合
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+title: CDN の統合
+description: CDN の統合
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
+# CDN の統合 {#integrating-cdn}
 
-# CDNを統合{#integrating-cdn}
+PrimetimeAd Insertionは、ビデオチャンク自体ではなく、クライアントアプリケーションとマニフェストの間のプロキシとして機能します。 コンテンツを任意の CDN にデプロイし、BootstrapAPI を使用して URL を PrimetimeAd Insertionに渡します。 統合の詳細については、 [サポートされる CDN](/help/primetime-ad-insertion/technical-reference/supported-cdns.md).
 
-PrimetimeAd Insertionは、ビデオチャンク自体ではなく、クライアントアプリケーションとマニフェスト間のプロキシとして機能します。 BootstrapAPIを使用して、選択したCDNにコンテンツをデプロイし、PrimetimeAd InsertionにURLを渡します。 統合の詳細については、[サポートされているCDN](/help/primetime-ad-insertion/technical-reference/supported-cdns.md)を参照してください。
+## サポートされる CDN トークン化スキーム {#cdn-tokenization-schemes}
 
-## サポートされるCDNトークン化スキーム{#cdn-tokenization-schemes}
-
-CDNには、フラグメント認証のための異なるトークン化スキームが用意されていることがよくあります。 PrimetimeAd Insertionは、次のような主要なCDNネットワークをネイティブでサポートします。
+CDN には、多くの場合、フラグメント認証用に異なるトークン化スキームがあります。 PrimetimeAd Insertionは、次のような主要な CDN ネットワークをネイティブにサポートします。
 
 * Akamai
-* リメライト
+* Limelight
 * Centurylink / Level3
-* サポートされるCDNの完全なリストについては、Primetimeのサポート担当者にお問い合わせください。
+* サポートされる CDN の完全なリストについては、Primetime サポート担当者にお問い合わせください
 
-`pttoken`パラメーターについて詳しくは、[BootstrapAPIパラメーターの説明](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md#parameter-description)を参照してください。
+詳しくは、 `pttoken` パラメーター： [BootstrapAPI パラメーターの説明](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md#parameter-description).
 
-## コンテンツCDNから配信する広告の設定{#configure-ad-deliver-from-cdn}
+## コンテンツ CDN から配信する広告の設定 {#configure-ad-deliver-from-cdn}
 
-同じCDNから広告とコンテンツを配信して、コンテンツのアフィニティを維持したり、広告ブロッカーを避けたり、クライアントアプリケーションから必要な接続数を最適化したりする場合があります。 PrimetimeAd Insertionは、フラグメントをコンテンツCDNにマッピングするためのフラグメント再記述ルールをサポートしています。 詳しくは、[マニフェストの書き直し](/help/primetime-ad-insertion/technical-reference/manifest-rewriting.md)を参照してください。
+コンテンツの親和性を維持し、広告ブロッカーを回避し、クライアントアプリケーションからの必要な接続数を最適化するために、同じ CDN から広告とコンテンツを配信したい場合があります。 PrimetimeAd Insertionは、フラグメントをコンテンツ CDN にマッピングするためのフラグメント書き換えルールをサポートしています。 詳しくは、 [マニフェストの書き直し](/help/primetime-ad-insertion/technical-reference/manifest-rewriting.md).
 
-## CDNによる開始アップパフォーマンスの向上{#increase-startup-performance}
+## CDN を使用した起動パフォーマンスの向上 {#increase-startup-performance}
 
-詳しくは、[開始アップの最適化](/help/primetime-ad-insertion/best-practices/optimize-video-startup-time.md)を参照してください。
+詳しくは、 [最適化の開始](/help/primetime-ad-insertion/best-practices/optimize-video-startup-time.md).
 
-## マルチCDN機能{#enable-multi-cdn-fetures}
+## マルチ CDN 機能 {#enable-multi-cdn-fetures}
 
-マルチCDN機能を有効にする場合は、Primetimeのサポート担当者にお問い合わせください。
+マルチ CDN 機能を有効にする場合は、Primetime サポート担当者にお問い合わせください。

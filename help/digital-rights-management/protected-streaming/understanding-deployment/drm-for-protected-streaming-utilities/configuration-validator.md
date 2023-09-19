@@ -1,18 +1,16 @@
 ---
-description: Adobeでは、設定ファイルに変更を加える場合、サーバを開始する前にConfiguration Validatorユーティリティを実行することをお勧めします。 このユーティリティは、ほとんどの設定エラーを早期に検出してから、要求処理中にエラーが発生します。
+description: Adobeでは、設定ファイルに変更を加える場合、サーバを起動する前に Configuration Validator ユーティリティを実行することをお勧めします。 このユーティリティは、リクエストの処理中にエラーが発生する前に、ほとんどの設定エラーを早期に検出できます。
 title: 設定バリデーター
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
 
 ---
 
+# 設定バリデーター{#configuration-validator}
 
-# 構成バリデーター{#configuration-validator}
-
-Adobeでは、設定ファイルに変更を加える場合、サーバを開始する前にConfiguration Validatorユーティリティを実行することをお勧めします。 このユーティリティは、ほとんどの設定エラーを早期に検出してから、要求処理中にエラーが発生します。
+Adobeでは、設定ファイルに変更を加える場合、サーバを起動する前に Configuration Validator ユーティリティを実行することをお勧めします。 このユーティリティは、リクエストの処理中にエラーが発生する前に、ほとんどの設定エラーを早期に検出できます。
 
 バリデーターを実行するには、次のように入力します。
 
@@ -32,7 +30,7 @@ java -jar libs/flashaccess-validator.jar
 </i class="+ topic>
 ```
 
-各ライセンスサーバー設定ファイルに対して、バリデーターはファイルベースの検証を実行できます。これにより、XMLファイルが適切に形成され、設定ファイルのスキーマに準拠していることが確認されます。
+各ライセンスサーバー設定ファイルに対して、バリデーターはファイルベースの検証を実行できます。これにより、XML ファイルの形式が正しく、設定ファイルスキーマに準拠していることが確認されます。
 
 グローバル設定ファイルに対してファイルベースの検証を実行するには、次のように入力します。
 
@@ -40,25 +38,24 @@ java -jar libs/flashaccess-validator.jar
 Validator --<file path>/flashaccess-global.xml --global
 ```
 
-テナント構成ファイルに対してファイルベースの検証を実行するには、次のように入力します。
+テナント設定ファイルに対してファイルベースの検証を実行するには、次のように入力します。
 
 ```
 Validator --<file path>/flashaccess-tenant.xml --tenant
 ```
 
-バリデーターは、デプロイメントベースの検証も実行できます。 スキーマとの適合性をチェックするだけでなく、この検証レベルでも、指定した値が有効であることが確認されます。 例えば、参照ファイルが存在することを確認します。
+バリデーターは、デプロイメントベースの検証も実行できます。 この検証レベルでは、スキーマとの適合を確認するだけでなく、指定した値が有効であることも確認します。 例えば、参照ファイルが確実に存在するようにします。
 
 デプロイメントベースの検証は、次のレベルで実行できます。
 
-* `Tenant`  — 特定のテナントの構成ファイルと資格情報を検証します。`<tenant1>`の設定を検証する場合は、次のように入力します。
+* `Tenant`  — 特定のテナントの設定ファイルと資格情報を検証します。 の設定を検証する場合は、 `<tenant1>`、タイプ：
 
-   ```
-       Validator --<root-path-to-LicenseServer.ConfigRoot> -d flashaccessserver/tenant1 -t
-   ```
+  ```
+      Validator --<root-path-to-LicenseServer.ConfigRoot> -d flashaccessserver/tenant1 -t
+  ```
 
-* `Global`  — すべてのテナントのグローバル構成ファイルとテナント検証を検証します。グローバルなデプロイメントベースの検証を実行する場合は、次のように入力します。
+* `Global`  — すべてのテナントのグローバル設定ファイルとテナント検証を検証します。 グローバルデプロイメントベースの検証を実行する場合は、次のように入力します。
 
-   ```
-       Validator --<root-path-to-LicenseServer.ConfigRoot> -g
-   ```
-
+  ```
+      Validator --<root-path-to-LicenseServer.ConfigRoot> -g
+  ```

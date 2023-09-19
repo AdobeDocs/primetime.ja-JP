@@ -1,23 +1,21 @@
 ---
-title: ファイルの変換
-description: ファイルの変換
+title: ファイルを変換
+description: ファイルを変換
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
 
 ---
 
-
 # ファイルを変換{#convert-files}
 
-OpenSSLや秘密鍵などのユーティリティを使用して、リクエスタは、コマンドウィンドウから次のコマンドを入力して、PKCS#12(pfx)およびPEM/DERファイルを生成します。
+OpenSSL や秘密鍵などのユーティリティを使用して、リクエスターは、コマンドウィンドウから次のコマンドを入力して、PKCS#12 (pfx) および PEM/DER ファイルを生成します。
 
-1. PKCS#7ファイルを一時PEMファイルに変換します。
+1. PKCS#7 ファイルを一時 PEM ファイルに変換します。
 
-   OpenSSLを使用するには、コマンドウィンドウを開いて次のように入力します。
+   OpenSSL を使用するには、コマンドウィンドウを開き、次のように入力します。
 
    ```
    openssl pkcs7 -in mycompany-license.p7b -inform DER -out mycompany-license-temp.pem \ 
@@ -26,20 +24,20 @@ OpenSSLや秘密鍵などのユーティリティを使用して、リクエス�
 
    >[!NOTE]
    >
-   >この一時PEMには、証明書と中間CA用の証明書が含まれます。 PFXファイルを生成するには、次の証明書を使用します。
+   >この一時的な PEM には、証明書と中間 CA 用の証明書が含まれます。 これらの証明書を使用して PFX ファイルを生成します。
 
-1. 一時PEMファイルをPFXファイルに変換します。
+1. 一時 PEM ファイルを PFX ファイルに変換します。
 
-   OpenSSLを使用するには、コマンドウィンドウを開いて次のように入力します。
+   OpenSSL を使用するには、コマンドウィンドウを開き、次のように入力します。
 
    ```
    openssl pkcs12 -export -inkey mycompany-license.key -in mycompany-license-temp.pem \ 
    -out mycompany-license.pfx -passin pass:private_key_password -passout pass:pfx_password 
    ```
 
-1. 一時PEMファイルを最終PEMファイルに変換します。
+1. 一時 PEM ファイルを最終 PEM ファイルに変換します。
 
-   OpenSSLを使用するには、コマンドウィンドウを開いて次のように入力します。
+   OpenSSL を使用するには、コマンドウィンドウを開き、次のように入力します。
 
    ```
    openssl x509 -in mycompany-license-temp.pem -inform PEM -out mycompany-license.pem -outform PEM 
@@ -47,13 +45,13 @@ OpenSSLや秘密鍵などのユーティリティを使用して、リクエス�
 
    >[!NOTE]
    >
-   >Adobeでは、秘密鍵(private_key_password)とPFX(pfx_password)に異なるパスワードを使用することをお勧めします。
+   >Adobeでは、必須ではありませんが、秘密鍵 (private_key_password) と PFX(pfx_password) に異なるパスワードを使用することをお勧めします。
 
-   この最後のPEMファイルには、自分の証明書のみが含まれます。
+   この最終的な PEM ファイルには、証明書のみが含まれています。
 
-1. PEMファイルをDERファイルに変換します。
+1. PEM ファイルを DER ファイルに変換します。
 
-   OpenSSLを使用するには、コマンドウィンドウを開いて次のように入力します。
+   OpenSSL を使用するには、コマンドウィンドウを開き、次のように入力します。
 
    ```
    openssl x509 -in mycompany-license.pem -inform PEM -out mycompany-license.der -outform DER 
@@ -61,5 +59,4 @@ OpenSSLや秘密鍵などのユーティリティを使用して、リクエス�
 
    >[!NOTE]
    >
-   >DERファイルは、HTTP Dynamic Streamingパッケージャーに対してのみ必要です。
-
+   >DER ファイルは、HTTP Dynamic Streamingパッケージャにのみ必要です。

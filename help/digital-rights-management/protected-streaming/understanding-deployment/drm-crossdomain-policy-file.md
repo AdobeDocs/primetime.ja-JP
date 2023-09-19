@@ -1,18 +1,16 @@
 ---
-title: Crossdomain DRMポリシーファイル
-description: Crossdomain DRMポリシーファイル
+title: Crossdomain DRM ポリシーファイル
+description: Crossdomain DRM ポリシーファイル
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 0%
 
 ---
 
+# Crossdomain DRM ポリシーファイル{#crossdomain-drm-policy-file}
 
-# クロスドメインDRMポリシーファイル{#crossdomain-drm-policy-file}
+License Server からFlashRuntime クライアントにライセンスを要求する場合は、クロスドメイン DRM ポリシーファイルが必要です。
 
-FlashランタイムクライアントがLicense Serverからライセンスを要求する場合は、クロスドメインDRMポリシーファイルが必要です。
-
-*コンテンツ保護のためのAdobe PrimetimeDRM SDKの使用*&#x200B;を参照してください。
+詳しくは、 *コンテンツの保護にAdobe Primetime DRM SDK を使用*.

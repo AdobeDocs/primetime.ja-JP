@@ -1,16 +1,14 @@
 ---
-title: クロスドメインポリシーファイル
-description: クロスドメインポリシーファイル
+title: Crossdomain ポリシーファイル
+description: Crossdomain ポリシーファイル
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%
 
 ---
 
+# Crossdomain ポリシーファイル {#crossdomain-policy-file}
 
-# クロスドメインポリシーファイル{#crossdomain-policy-file}
-
-FlashランタイムクライアントがLicense Serverからライセンスを要求するには、クロスドメインポリシーファイルが必要です。 詳しくは、*AdobeアクセスSDKを使用したコンテンツの保護*&#x200B;を参照してください。
+License Server からFlashRuntime クライアントにライセンスを要求するには、クロスドメインポリシーファイルが必要です。 詳しくは、 *コンテンツの保護にAdobeアクセス SDK を使用する* を参照してください。

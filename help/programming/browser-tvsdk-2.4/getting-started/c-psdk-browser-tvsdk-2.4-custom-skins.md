@@ -1,18 +1,16 @@
 ---
-description: カスタムスキンを使用するには、default-video-controls.cssと同様のカスタマイズを作成し、この新しいカスタマイズをプレーヤーで参照する必要があります。
+description: カスタムスキンを使用するには、 default-video-controls.css と同様のカスタマイズを記述し、この新しいカスタマイズをプレーヤーで参照する必要があります。
 title: カスタムスキン
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
-
 # カスタムスキン{#custom-skins}
 
-カスタムスキンを使用するには、default-video-controls.cssと同様のカスタマイズを作成し、この新しいカスタマイズをプレーヤーで参照する必要があります。
+カスタムスキンを使用するには、 default-video-controls.css と同様のカスタマイズを記述し、この新しいカスタマイズをプレーヤーで参照する必要があります。
 
 例えば、次のいずれかのオプションを使用できます。
 
@@ -23,29 +21,28 @@ ht-degree: 0%
 
 * ボタンとテキストの前景色
 
-   フォアグラウンドを持つすべてのコントロールは`vid-skin-fgcolor`クラスを使用します。 すべてのコントロールの前景を変更するには、`vid-skin-fgcolor`クラスを持つすべての要素を繰り返し処理し、必要な色を指定します。
+  前景を持つすべてのコントロールは、 `vid-skin-fgcolor` クラス。 すべてのコントロールの前景を変更するには、 `vid-skin-fgcolor` クラスを選択し、目的の色を指定します。
 * ボタンとテキストの背景色
 
-   フォアグラウンドを持つコントロールはすべて`vid-skin-bgcolor`クラスを使用します。 すべてのコントロールの前景を変更するには、`vid-skin-bgcolor`クラスを持つすべての要素を繰り返し処理し、必要な色を指定します。
+  前景を持つすべてのコントロールは、 `vid-skin-bgcolor` クラス。 すべてのコントロールの前景を変更するには、 `vid-skin-bgcolor` クラスを選択し、目的の色を指定します。
 * 再生ヘッドの形状
 
-   再生ヘッドは、正方形または円形にできます。 再生ヘッドを変更するには、`square`または`round`クラスを`playhead`要素に追加します。
+  再生ヘッドは、四角形または丸型にすることができます。 再生ヘッドを変更するには、 `square` または `round` ～へのクラス `playhead` 要素を選択します。
 * バッファリングスピナーのスタイル
 
-   参照プレーヤーは、プレイヤーがコンテンツをバッファリングする際に、次のスタイルのスピナーを表示できます。
+  リファレンスプレーヤは、プレーヤがコンテンツをバッファリングする際に、次のスタイルのスピナーを表示できます。
 
-   * オーバーレイテキスト(`overlay-text`)
-   * 矩形のスピナー(`spinner`)
-   * シグナル(`signal`)
-   * 縦棒グラフ(`vertical`)
+   * オーバーレイテキスト ( `overlay-text`)
+   * 長方形スピナー ( `spinner`)
+   * シグナル ( `signal`)
+   * 縦棒グラフ ( `vertical`)
 
-      >[!TIP]
-      >
-      >バッファリングスピナーのいずれかを使用するには、buffering-overlay要素にクラスを追加する必要があります。 例えば、`overlay-text`を使用するには、`BufferOverlay.js`ファイルに次の行を追加します。
-      >
-      >
-      ```js
-      >var overlay = document.getElementById("buffering-overlay"); 
-      >overlay.classList.add ("spinner");
-      >```
-
+     >[!TIP]
+     >
+     >バッファリングスピナーを使用するには、 buffering-overlay 要素にクラスを追加する必要があります。 例えば、 `overlay-text`をクリックし、 `BufferOverlay.js` ファイル：
+     >
+     >```js
+     >var overlay = document.getElementById("buffering-overlay"); 
+     >overlay.classList.add ("spinner");
+     >```
+     >

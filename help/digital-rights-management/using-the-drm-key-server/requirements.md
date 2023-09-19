@@ -2,8 +2,7 @@
 title: Primetime DRM キーサーバーの使用の要件
 description: Primetime DRM キーサーバーの使用の要件
 copied-description: true
-exl-id: a5c0db05-15a1-45b0-abb9-11f857f5e34c
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -16,7 +15,7 @@ Primetime DRM キーサーバーは、リモートiOSや Xbox 360 のキー配�
 
 ## Primetime DRM キーサーバーの使用の要件 {#requirements-for-using-primetime-drm-key-server}
 
-Primetime DRM キーサーバーを使用する際の最小要件は次のとおりです。
+Primetime DRM キーサーバーを使用する場合の最小要件は次のとおりです。
 
 * [Java JRE 1.6](https://www.oracle.com/technetwork/java/javase/downloads/index.html) または後で。 （Windows 64 ビットで HSM を使用するには、JRE 8 が必要です）
 

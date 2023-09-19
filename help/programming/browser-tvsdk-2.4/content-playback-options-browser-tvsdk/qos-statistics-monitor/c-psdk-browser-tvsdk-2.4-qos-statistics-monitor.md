@@ -1,27 +1,25 @@
 ---
-description: サービス品質(QoS)オファーは、ビデオエンジンの動作状況に関する詳細な表示です。 ブラウザーTVSDKは、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
-title: サービス品質統計
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: サービス品質 (QoS) により、ビデオエンジンのパフォーマンスに関する詳細な情報が得られます。 ブラウザー TVSDK は、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
+title: サービス品質の統計
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# サービス品質の統計{#quality-of-service-statistics}
 
-# サービス品質統計{#quality-of-service-statistics}
+サービス品質 (QoS) により、ビデオエンジンのパフォーマンスに関する詳細な情報が得られます。 ブラウザー TVSDK は、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
 
-サービス品質(QoS)オファーは、ビデオエンジンの動作状況に関する詳細な表示です。 ブラウザーTVSDKは、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
+## 再生、バッファリング、デバイスに関する QOS 統計の読み取り {#read-qos-playback-buffering-and-device-statistics}
 
-## 再生、バッファリング、デバイスに関するQOS統計を読み取ります{#read-qos-playback-buffering-and-device-statistics}
+QOSProvider クラスから、再生、バッファリング、デバイスの統計を読み取ることができます。
 
-QOSProviderクラスから再生、バッファリング、デバイスの統計を読み取ることができます。
+The `QOSProvider` クラスは、バッファリング、ビットレート、フレームレート、時間データなどに関する情報を含む様々な統計を提供します。
 
-`QOSProvider`クラスは、バッファリング、ビットレート、フレームレート、時間データなど、様々な統計情報を提供します。
-
-1. メディアプレイヤーをインスタンス化します。
-1. `QOSProvider`オブジェクトを作成し、メディアプレイヤーに接続します。
+1. メディアプレーヤーをインスタンス化します。
+1. の作成 `QOSProvider` オブジェクトを探し、メディアプレーヤーに接続します。
 
    ```js
    // Create Media Player.qosProvider =  
@@ -31,7 +29,7 @@ QOSProviderクラスから再生、バッファリング、デバイスの統計
 
 1. （オプション）再生統計を読み取ります。
 
-   再生統計を読み取る方法の1つは、タイマーを設定して、`QOSProvider`から新しいQoS値を定期的に取り込むことです。 例：
+   再生統計を読み取る 1 つの方法は、タイマーを使用することです。タイマーは、 `QOSProvider`. 例：
 
    ```js
    var qosTimer = (function () { 

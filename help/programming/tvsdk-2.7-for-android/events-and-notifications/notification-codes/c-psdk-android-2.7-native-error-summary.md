@@ -2,8 +2,7 @@
 title: NATIVE_ERROR 通知の詳細
 description: NATIVE_ERROR 通知の詳細
 copied-description: true
-exl-id: 51c75349-0fa8-405d-9e09-b51b425fe21b
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6868'
 ht-degree: 2%
@@ -33,7 +32,7 @@ TVSDK は、ネイティブエラーを処理すると、以下のメタデー�
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> NATIVE_ERROR</span> </td> 
-   <td colname="col2">通知の短い説明 ( 例： <span class="codeph"> AAXS_InvalidVoucher</span> または <span class="codeph"> DECODER_FAILED</span>) をクリックします。 </td> 
+   <td colname="col2">通知の短い説明（例： ） <span class="codeph"> AAXS_InvalidVoucher</span> または <span class="codeph"> DECODER_FAILED</span>) をクリックします。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> 説明</span> </td> 
@@ -105,7 +104,7 @@ TVSDK は、ネイティブエラーを処理すると、以下のメタデー�
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> MANIFEST_ERROR</span> </td> 
-   <td colname="col2"> マニフェストファイルのダウンロード中のエラーの説明。 </td> 
+   <td colname="col2"> マニフェストファイルのダウンロード中に発生したエラーの説明。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> CONTENT_ERROR</span> </td> 
@@ -140,13 +139,13 @@ TVSDK は、ネイティブエラーを処理すると、以下のメタデー�
    <td colname="col2"></td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> Auditude_エラーコード</span> </td> 
+   <td colname="col1"><span class="codeph"> AUDITUDE_ERROR_CODE</span> </td> 
    <td colname="col2"> Auditudeエラーコード（数値）。 </td> 
   </tr> 
  </tbody> 
 </table>
 
-## NATIVE_ERROR:DRM 値 {#section_D240082B93D34902A18C3923C1C717B3}
+## NATIVE_ERROR: DRM 値 {#section_D240082B93D34902A18C3923C1C717B3}
 
 Adobeビデオエンジンの Video Encoder インターフェイスは、 `NATIVE_ERROR` メタデータオブジェクト。
 
@@ -196,7 +195,7 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
    <td colname="col2"><span class="codeph"> AAXS_RequireSSL</span> </td> 
    <td colname="col3"> <p>Access 4.0 以降では、リモートキー URL がスキームとして HTTPS を使用していない場合に、このエラーがiOSでスローされます。 HTTPS が必要です。 </p> 
     <ul id="ul_3D47777BBCA14B67B107FBBE3E37E40C"> 
-     <li id="li_7F7BBB27AE754CC39ABAAF9269739C49">ディストリビューターが Access v4 より古いバージョンを使用している場合、または少なくとも 4 つのバージョンを使用しているが、プラットフォームがiOSでない場合、ディストリビューターのソフトウェアはエラーをログに記録する必要があります。 <p>エラーはiOSでのみスローされます。 </p> </li> 
+     <li id="li_7F7BBB27AE754CC39ABAAF9269739C49">ディストリビューターが Access v4 より古いバージョンを使用している場合、または少なくとも 4 つのバージョンを使用しているが、プラットフォームがiOSではない場合、ディストリビューターのソフトウェアはエラーをログに記録する必要があります。 <p>エラーはiOSでのみスローされます。 </p> </li> 
      <li id="li_D83C427D2A0D47408F723EF7195070B6">ディストリビュータのソフトウェアが少なくともAdobeアクセスバージョン 4 で、プラットフォームがiOSの場合、ディストリビュータは、HTTPS に使用するリモートキーサーバー URL を変更する必要があります。 <p>HTTP のみを使用している場合は、ディストリビューターが HTTPS サーバーを設定する必要がある場合があります。 それ以外の場合は、ディストリビューターは、ログに記録された情報をAdobeに送信し、問題をエスカレーションする必要があります。 </p> </li> 
     </ul> </td> 
   </tr> 
@@ -231,7 +230,7 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
    <td colname="col2"><span class="codeph"> AAXS_ClientUpdateRequire</span> </td> 
    <td colname="col3"> Android 向け TVSDK の新しいバージョンを使用します。 <p>現在のクライアントは要求された操作を完了できませんが、更新されたクライアントが要求を完了できる可能性があります。 </p> <p>これには、次のような複数の原因が考えられます。 
      <ul id="ul_2EC4D42D5273439FA1AFDA1A2578B3D6"> 
-      <li id="li_FCA926F5FAED4E7190BE855545AB6ACF">このクライアントで使用できない共有ドメインが使用されました。 これは、Chrome で再生が動作する場合に起こりますが、他のブラウザーでは動作しない場合に起こります（逆の場合も同様です）。 <p> <p>ヒント：Chrome では、他のブラウザーとは異なる PHDS/PHLS キーを使用します。 詳しくは、 <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>. </p> </p> </li> 
+      <li id="li_FCA926F5FAED4E7190BE855545AB6ACF">このクライアントで使用できない共有ドメインが使用されました。 これは、Chrome で再生が動作する場合に起こりますが、他のブラウザーでは動作しない場合に起こります（その逆の場合も同様です）。 <p> <p>ヒント： Chrome では、他のブラウザーとは異なる PHDS/PHLS キーを使用します。 詳しくは、 <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>. </p> </p> </li> 
       <li id="li_3B633FB699234DCEA136E9BE3CC3386D">5.0 より前のバージョンのiOSで実行している場合、アプリケーションは複数の DRMSessions を追加しようとしています。 </li> 
       <li id="li_F7ED993AF0B941A7A27216B4D587A999">バージョン 2 のみがサポートされている場合、メタデータのバージョンは 3 以降です。 </li> 
      </ul> </p> 
@@ -254,7 +253,7 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
    <td colname="col2"><span class="codeph"> AAXS_WrongLicenseKey</span> </td> 
    <td colname="col3"> <p>このエラーは、使用中のライセンスに、コンテンツを復号化するための誤ったキーが含まれている場合にスローされます。 subErrorId には、クライアント固有のエラーまたは行エラーが含まれます。 </p> <p>このバグを生成する方法は 2 つだけのようです。 
      <ul id="ul_1C955BD74C7843809D1B5A0CDCA5ED7B"> 
-      <li id="li_18F0A7FDA6584887AD9DB3EDE54080D8">お客様は、ライセンスを生成するための標準Adobeツール（例えば、ライセンサーサーバー Java フレームワーク）を変更しました。 <p>この場合、ライセンスに無効なキーが含まれており、どのコンテンツにも対応していない可能性があります。 </p> </li> 
+      <li id="li_18F0A7FDA6584887AD9DB3EDE54080D8">お客様は、ライセンスを生成するための標準Adobeツール（例えば、ライセンサーサーバー Java フレームワーク）を変更しました。 <p>この場合、ライセンスには不正なキーが含まれており、どのコンテンツにも対応していない可能性があります。 </p> </li> 
       <li id="li_21D04ED1F1FA464785BC297D385766FF">お客様が同じライセンス ID の複数のライセンスを発行している。 <p>この場合、クライアント上で使用可能なライセンスがコンテンツメタデータに一致し、アクセスコードによって誤ったライセンスが選択されて使用されます。 </p> </li> 
      </ul> </p> 
     <ul id="ul_64AEE62BE36946F290067CF475A36ECA"> 
@@ -316,7 +315,7 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
   <tr> 
    <td colname="col1"> 3315 </td> 
    <td colname="col2"><span class="codeph"> AAXS_PermissionDenied </span> </td> 
-   <td colname="col3"> <p>3305 が意図されているときにこのエラーコードがスローされる既知のバグがあります。 詳しくは、 <a href="https://forums.adobe.com/thread/1284947" format="https" scope="external"> DRM 3305 [ServerConnectionFailed] の原因と解決</a>. </p> <p>AIRによって読み込まれたリモートSWFは、Flash Access機能にアクセスできません。 このエラーコードは、ネットワークアクセス中にセキュリティエラーが発生した場合にもスローされます。 例えば、crossdomain.xml を使用して接続するクライアントが宛先サーバーにいない、または crossdomain.xml に接続できないなどです。 </p> <p>詳しくは、 <a href="https://forums.adobe.com/thread/1266592" format="https" scope="external"> DRM エラー 3315 考えられる根本原因と解決策</a>. </p> </td> 
+   <td colname="col3"> <p>3305 が意図されたときにこのエラーコードがスローされる既知のバグがあります。 詳しくは、 <a href="https://forums.adobe.com/thread/1284947" format="https" scope="external"> DRM 3305 [ServerConnectionFailed] の原因と解決</a>. </p> <p>AIRによって読み込まれたリモートSWFは、Flash Access機能にアクセスできません。 このエラーコードは、ネットワークアクセス中にセキュリティエラーが発生した場合にもスローされます。 例えば、crossdomain.xml を使用して接続するクライアントが宛先サーバーにいない、または crossdomain.xml に接続できないなどです。 </p> <p>詳しくは、 <a href="https://forums.adobe.com/thread/1266592" format="https" scope="external"> DRM エラー 3315 考えられる根本原因と解決策</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3316 </td> 
@@ -326,7 +325,7 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
   <tr> 
    <td colname="col1"> 3317 </td> 
    <td colname="col2"><span class="codeph"> AAXS_LoadAdobeCPFailed </span> </td> 
-   <td colname="col3"> <p>重要：これはまれなエラーであり、通常、実稼動環境では発生しません。 </p> <p>エラーが発生した場合は、次のいずれかの操作を実行できます。 
+   <td colname="col3"> <p>重要：これはまれなエラーで、通常、実稼動環境では発生しません。 </p> <p>エラーが発生した場合は、次のいずれかの操作を実行できます。 
      <ul id="ul_BC435E61623444BB98A86216531DC892"> 
       <li id="li_FA433D0758B642D2AFDCF04906B3FE18">AIRを使用している場合は、再インストールします。 </li> 
       <li id="li_F08D9AAFF46244F8842DEE5FD9CBBE0A">Flash Playerを使用している場合は、 <span class="codeph"> AdobeCP</span> モジュールを再度追加しました。 </li> 
@@ -350,14 +349,14 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
   <tr> 
    <td colname="col1"> 3321 </td> 
    <td colname="col2"><span class="codeph"> AAXS_I15nFailed </span> </td> 
-   <td colname="col3"> <p>キーを使用してクライアントをプロビジョニングするプロセスが失敗しました。 subErrorId には、クライアント固有のエラー、サーバー固有のエラー、または行エラーが含まれます。 </p> 
+   <td colname="col3"> <p>キーを使用してクライアントをプロビジョニングするプロセスが失敗しました。 subErrorId には、クライアント固有のエラー、サーバー固有のエラー、または LINE エラーが含まれます。 </p> 
     <ul id="ul_98D919B9060A441AACB6106F6D8E8DA7"> 
      <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">ディストリビュータのソフトウェアは、少なくとも 1 回は操作を再試行する必要があります。 <p>Windows でGoogle Chrome を使用している場合は、サンドボックスにないプラグインアクセスを許可する方法について説明します。 Google Chrome のサンドボックス解除のアクセスが拒否されました</a>. </p> </li> 
      <li id="li_7FB7681FE32D444BB1BDBA3E5953A2C3">ディストリビューターは、次のタスクのいずれかを実行する必要があります。 
       <ul id="ul_486B64F187C44AE3B4775953A6142836"> 
        <li id="li_095B1D4CD051427CB2BFA7082B454056">プラットフォーム間でエラーの一貫性がある場合は、問題をエスカレーションして、Adobeを実施する必要があります。 </li> 
        <li id="li_0C6EB7B912FA41E59657216498DA3515">エラーが Windows 上の Chrome に限定されている場合は、サンドボックス化されていないプラグインへのアクセスをユーザーに許可するように指示します。 </li> 
-      </ul> <p>ディストリビューターは、SWFをバージョン 19 以降に更新する必要があり、Chrome 固有の 3321 エラーが発生すると、3368 エラーが発生します。 エラー 3368 は、ディストリビュータのソフトウェアによってより具体的に処理できます。 この変更は、Chrome 安定チャネルバージョン 26.0.1410.43 で導入されました。 </p> <p>ヒント：エラー <span class="codeph"> 3321:1090519056</span> は、Flash Playerのバージョン 11.1 ～ 11.6 で発生する場合があります。最新のFlash Playerバージョンにアップグレードすることをお勧めします。 </p> </li> 
+      </ul> <p>ディストリビューターは、SWFをバージョン 19 以降に更新する必要があり、Chrome 固有の 3321 エラーが発生すると、3368 エラーが発生します。 エラー 3368 は、ディストリビュータのソフトウェアによってより具体的に処理できます。 この変更は、Chrome 安定チャネルバージョン 26.0.1410.43 で導入されました。 </p> <p>ヒント：エラー <span class="codeph"> 3321:1090519056</span> は、Flash Playerバージョン 11.1 ～ 11.6 で発生する場合があります。最新バージョンにアップグレードすることをお勧めしますFlash Player。 </p> </li> 
     </ul> <p>詳しくは、 <a href="https://forums.adobe.com/thread/1277138" format="https" scope="external"> DRM エラー 3321 原因と解決</a>. </p> </td> 
   </tr> 
   <tr> 
@@ -368,9 +367,9 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
   <tr> 
    <td colname="col1"> 3322 </td> 
    <td colname="col2"><span class="codeph"> AAXS_DeviceBindingFailed </span> </td> 
-   <td colname="col3"> <p>初期化時に存在した設定とデバイスが一致しないようです。 subErrorId には、クライアント固有のエラーまたは行エラーが含まれます。 </p> <p>ディストリビュータのソフトウェアは、次のタスクのいずれかを完了する必要があります。 
+   <td colname="col3"> <p>初期化時に存在していた設定とデバイスが一致しないようです。 subErrorId には、クライアント固有のエラーまたは行エラーが含まれます。 </p> <p>ディストリビュータのソフトウェアは、次のタスクのいずれかを完了する必要があります。 
      <ul id="ul_444401051A2E407B95BC44491E9BB71C"> 
-      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>デバイスがFlash Playerを使用しておらず、AIR、iOSなどを使用している場合は、を呼び出します。 <span class="codeph"> DRMManager.resetDRMVouchers()</span>. </p> <p>開発フェーズでiOSで問題が発生した場合は、開発者に問い合わせて、サードパーティのプレリリース配布システム（例：HockeyApp）からダウンロードしたビルドと Xcode からローカルビルドを切り替える際に問題が発生しているかどうかを確認します。 HockeyApp から配布されたビルドと Xcode からのビルドを切り替えると、以前のインストールの属性が完全に上書きされるわけではありません。 この状況では、3322 エラーがトリガーする場合があります。 </p> <p>この問題を解決するには、デベロッパーが新しいビルドをインストールする前に、デバイスから古いビルドを削除する必要があります。 </p> </li> 
+      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>デバイスがFlash Playerを使用しておらず、AIR、iOSなどを使用している場合は、を呼び出します。 <span class="codeph"> DRMManager.resetDRMVouchers()</span>. </p> <p>開発フェーズでiOSで問題が発生した場合は、開発者に問い合わせて、サードパーティのプレリリース配布システム（例：HockeyApp）からダウンロードされたビルドと Xcode からローカルビルドを切り替える際に、問題が発生しているかどうかを確認します。 HockeyApp から配布されたビルドと Xcode からのビルドを切り替えると、以前のインストールの属性が完全に上書きされるわけではありません。 この状況では、3322 エラーがトリガーする場合があります。 </p> <p>この問題を解決するには、デベロッパーが新しいビルドをインストールする前に、デバイスから古いビルドを削除する必要があります。 </p> </li> 
       <li id="li_A5C9633F11584C788A2D9A23CC18FA6D">Flash Playerを使用していて、3322 または 3346 のエラーコードで使用できない場合は、Adobeの説明に従って、 <a href="https://forums.adobe.com/message/5535907#5535907" format="https" scope="external"> Chrome での DRM エラー3322/3346/3368（情報バーの問題）</a>. </li> 
      </ul> </p> <p>このエラーは頻繁に発生するとは限りません。 ローミングプロファイルを使用する企業環境で、DRM で保護されたコンテンツをユーザーが表示していた場合、ユーザーが別のマシンからログインすると、エラー 3322 が発生する可能性が高くなります。 可能な場合、ディストリビューターは、ユーザーからこの情報を取得しようとする必要があります。 </p> <p>エラーが頻繁に発生する場合は、「 」にエスカレーションしてAdobeします。 Adobeに、ライセンスストアのリセットで問題が解決したかどうかを通知し、エラーが発生しているブラウザをAdobeに知らせる必要があります。 </p> <p>詳しくは、次の記事を参照してください。 
      <ul id="ul_C468409D1EA046178CA7F54DCDCB84EA"> 
@@ -396,13 +395,13 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
     <ul id="ul_23B7F1A104AF49E79EA87DB8E15E337E"> 
      <li id="li_855D87F251184FE688A8D5FA0F6C9EF5">ファイルがこのディレクトリにある場合は、Windows エクスプローラーでファイルをダブルクリックし、CRL ビューアアプリケーションで、期限切れのファイルがあるかどうかを確認します。 </li> 
      <li id="li_58EC4EDA2B5146188A0FF7B33C91E2FD">tomcat/temp/にファイルがない場合は、ファイアウォール/ルーティングの問題が原因で、このライセンスサーバーがAdobeCRL サーバーに到達できなかったと見なすことができます。 </li> 
-    </ul> <p>詳しくは、 <a href="https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_secure_deployment_guidelines.pdf" format="http" scope="external"> ファイアウォール規則</a>. </p> <p>CRL ファイルが使用できない場合や、期限切れの場合は、ライセンスサーバーにアクセスできるかどうかを確認する必要があります。 お客様のライセンスサーバでネットワークスニファを開き、サーバを再起動し、クライアントがサーバからライセンスを要求しようとします。 ネットワークトラフィックを観察して、次の URL エンドポイントへの呼び出しが成功したかどうかを確認できます。 <p>ヒント：次の CRL の URL をブラウザーに入力して、各ファイルを手動でダウンロードできるかどうかを確認することもできます。 </p> 
+    </ul> <p>詳しくは、 <a href="https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_secure_deployment_guidelines.pdf" format="http" scope="external"> ファイアウォール規則</a>. </p> <p>CRL ファイルが使用できない場合や、期限切れの場合は、ライセンスサーバーにアクセスできるかどうかを確認する必要があります。 お客様のライセンスサーバでネットワークスニファを開き、サーバを再起動し、クライアントがサーバからライセンスを要求しようとします。 ネットワークトラフィックを観察して、次の URL エンドポイントへの呼び出しが成功したかどうかを確認できます。 <p>ヒント：ブラウザーに次の CRL の URL を入力して、各ファイルを手動でダウンロードできるかどうかを確認することもできます。 </p> 
      <ul id="ul_9B65C7ABBDEC4AC9BF3755FFD3587971"> 
       <li id="li_6867A9050E8D421C9138AC853D1784C9"><a href="https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl</a> </li> 
       <li id="li_6431689260554EAFAFDA2EC31798DCB5"><a href="https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl</a> </li> 
       <li id="li_2939674D0F854ADEB67E45FD216288A2"><a href="https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessRootCA.crl</a> </li> 
       <li id="li_96386E00BE9D4CB99D100057A5F7C6DD">crl3.adobe.com/AdobeSystemsIncorporated FlashAccessRuntime/LatestCRL.crl</li> 
-     </ul> </p> <p>ファイアウォール規則が開いていて、現在の 3324 エラーがない場合は、一時的なネットワークの問題が発生していた可能性があります。 お客様のサーバーログを確認します ( おそらく、 <span class="codeph"> /tomcat/logs/</span> ディレクトリに格納され、ライセンスサーバーが証明書失効リストを取得しようとしたときにエラーが発生したかどうかを判断します。 <p>重要：CRL ファイルを更新する際に、クライアントの大量のエラー（またはバースト）が 3324 エラーを一時的なネットワークの問題に報告した場合に、エラーが発生することがあります。 ネットワークの問題が解決されると、3324 の問題も解決されました。 </p> </p> <p>CRL ファイルの 4 つすべてが <span class="filepath"> tomcat/temp/</span> ディレクトリに保存され、クライアントは依然として 3324 エラーコードを取得しています。CRL ファイルへのファイルアクセスに関する問題が発生する可能性があります。 この問題を解決するには、ログを確認し、既存の CRL ファイルをパージします。 </p> <p>サーバーに問題がない場合は、3322 の説明に従って、でリセットするように求めます。 </p> </td> 
+     </ul> </p> <p>ファイアウォール規則が開いていて、現在の 3324 エラーがない場合は、一時的なネットワークの問題が発生していた可能性があります。 お客様のサーバーログを確認します ( おそらく、 <span class="codeph"> /tomcat/logs/</span> ディレクトリに格納され、ライセンスサーバーが証明書失効リストを取得しようとしたときにエラーが発生したかどうかを判断します。 <p>重要： CRL ファイルを更新する際に、クライアントの大量のエラー（またはバースト）が 3324 エラーを一時的なネットワークの問題に報告した場合に、エラーが発生する可能性があります。 ネットワークの問題が解決されると、3324 の問題も解決されました。 </p> </p> <p>CRL ファイルの 4 つすべてが <span class="filepath"> tomcat/temp/</span> ディレクトリに保存され、クライアントは依然として 3324 エラーコードを取得しています。CRL ファイルへのファイルアクセスに関する問題が発生する可能性があります。 この問題を解決するには、ログを確認し、既存の CRL ファイルをパージします。 </p> <p>サーバーに問題がない場合は、3322 の説明に従って、でリセットするように求めます。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><b>サーバーストアの破損エラー</b> </td> 
@@ -415,13 +414,13 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
    <td colname="col3"> <p>DRM クライアントが使用するファイルが予期せず変更されました。 <span class="codeph"> subErrorId</span> クライアント固有のエラーまたはラインエラーが含まれます。 </p> 
     <ul id="ul_860D2402DA61460AB0D938F1116F6D64"> 
      <li id="li_CF368C43452B4265B62ADA3E223894BA">AdobeCP が内部で問題のあるサーバーストアを削除したので、ディストリビューターのソフトウェアは操作を再試行する必要があります。再試行は成功します。 再試行が失敗した場合は、問題を記録します。 </li> 
-     <li id="li_51A5803A1F754970BB4EBD6494F5DC96">再試行がユーザーベースのハードドライブの予想される障害率を超える速度で失敗する場合は、問題をAdobeにエスカレートします。 </li> 
+     <li id="li_51A5803A1F754970BB4EBD6494F5DC96">再試行が、ユーザーベースのハードドライブの予想される障害率を超える速度で失敗する場合は、問題をAdobeにエスカレートします。 </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3326 </td> 
    <td colname="col2"><span class="codeph"> AAXS_StoreTamperingDetected </span> </td> 
-   <td colname="col3"> 呼び出し <span class="codeph"> DRMManager.resetDRM</span>. <p>ライセンスストアが改ざんまたは破損しているため、使用できなくなりました。 </p> <p>ディストリビュータのソフトウェアは、3322 で説明したように、ユーザにリセットを指示する必要があります。 </p> </td> 
+   <td colname="col3"> 通話 <span class="codeph"> DRMManager.resetDRM</span>. <p>ライセンスストアが改ざんまたは破損しているため、使用できなくなりました。 </p> <p>ディストリビュータのソフトウェアは、3322 で説明したように、ユーザにリセットを指示する必要があります。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3327 </td> 
@@ -436,7 +435,7 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
   <tr> 
    <td colname="col1"> 3328 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ServerErrorTryAgain </span> </td> 
-   <td colname="col3"> <p>これは、サーバーがクライアントからのリクエストを完了できなかったサーバー側のエラーです。 このエラーは、例えば、サーバーがビジー状態、HTTP/500、サーバーが要求を復号化するために必要なキーを持っていない場合などに発生する可能性があります。 </p> <p>クライアントでは、何が問題を引き起こしたかを判断する方法はありません。 お客様は、通常、と呼ばれるAdobe・アクセス・サーバ・ログを確認する必要があります。 <span class="codeph"> AdobeFlashAccess.log</span>、何が起こったかを判断するために。 問題を示す記述的なスタックトレースがログに常に記録されます。 <span class="codeph"> subErrorId</span> には、サーバー固有のエラーまたは行エラーが含まれます。 </p> <p>ディストリビューターは、サーバーログを調べて、このエラーを送信しているサーバーを特定する必要があります。 3328 エラーにサブエラーコード 101 が含まれる場合、サーバーはリクエストを復号化できません。 お客様は、ライセンスサーバーにインストールされているライセンス/トランスポートサーバーの証明書が、パッケージ化時に使用される証明書と一致し、対応していることを検証する必要があります。 </p> <p>また、参照実装を使用している場合、 <span class="codeph"> flashaccess-refimpl.properties</span> プライマリ証明書と追加証明書を指定するファイル。 </p> </td> 
+   <td colname="col3"> <p>これは、サーバーがクライアントからのリクエストを完了できなかったサーバー側のエラーです。 このエラーは、例えば、サーバーがビジー状態、HTTP/500、サーバーが要求を復号化するために必要なキーを持っていない場合などに発生する可能性があります。 </p> <p>クライアントでは、何が問題を引き起こしたかを判断する方法はありません。 お客様は、通常、と呼ばれるAdobe・アクセス・サーバ・ログを確認する必要があります。 <span class="codeph"> AdobeFlashAccess.log</span>、何が起こったかを判断するために使用します。 問題を示す記述的なスタックトレースがログに常に記録されます。 <span class="codeph"> subErrorId</span> には、サーバー固有のエラーまたは行エラーが含まれます。 </p> <p>ディストリビューターは、サーバーログを調べて、このエラーを送信しているサーバーを特定する必要があります。 3328 エラーにサブエラーコード 101 が含まれる場合、サーバーはリクエストを復号化できません。 お客様は、ライセンスサーバーにインストールされているライセンス/トランスポートサーバーの証明書が、パッケージ化時に使用される証明書と一致し、対応していることを検証する必要があります。 </p> <p>また、参照実装を使用している場合、 <span class="codeph"> flashaccess-refimpl.properties</span> プライマリ証明書と追加証明書を指定するファイル。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3329 </td> 
@@ -475,12 +474,12 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
   <tr> 
    <td colname="col1"> 3334 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InvalidDRMPlatform </span> </td> 
-   <td colname="col3"> <p>例えば、コンテンツプロバイダーがAdobe上のAdobeアクセスを拒否するようにアクセスを設定しているか、共有ドメインバウンドライセンスが別のパーティション用の共有ドメイントークンにバインドされているため、このプラットフォームではコンテンツを再生できません。 </p> <p>適切な（CDM 機能ゲーテッド）パッケージャーの証明書を使用してコンテンツがパッケージ化されなかった場合、CDM はこのエラーをスローする可能性があります。 </p> <p>コンテンツが間違った PHDS/PHLS 証明書でパッケージ化されている場合、コンテンツは Chrome で機能しますが、他のブラウザーでは機能しない（またはその逆も同様）可能性があります。 <p>ヒント：これは、Chrome が異なる PHDS/PHLS 証明書を使用するからです。 </p>どの証明書が使用されているかを確認するには、コンテンツメタデータの詳細をダンプし、 <i>受信者の証明書</i>. 詳しくは、 <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>. </p> </td> 
+   <td colname="col3"> <p>例えば、コンテンツプロバイダーがAdobe上のAdobeアクセスを拒否するようにアクセスを設定しているか、共有ドメインバウンドライセンスが別のパーティション用の共有ドメイントークンにバインドされているため、このプラットフォームではコンテンツを再生できません。 </p> <p>適切な（CDM 機能ゲーテッド）パッケージャーの証明書を使用してコンテンツがパッケージ化されなかった場合、CDM はこのエラーをスローする可能性があります。 </p> <p>コンテンツが間違った PHDS/PHLS 証明書でパッケージ化されている場合、コンテンツは Chrome で機能しますが、他のブラウザーでは機能しない（またはその逆も同様）可能性があります。 <p>ヒント：これは、Chrome が異なる PHDS/PHLS 証明書を使用するためです。 </p>どの証明書が使用されているかを確認するには、コンテンツメタデータの詳細をダンプし、 <i>受信者の証明書</i>. 詳しくは、 <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3335 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InvalidDRMVersion </span> </td> 
-   <td colname="col3"> Android 向け TVSDK の最新バージョンにアップグレードします。 <p>この問題を解決するには、次のいずれかのタスクを実行します。 
+   <td colname="col3"> Android 向け TVSDK の最新バージョンにアップグレードします。 <p>この問題を解決するには、次のどちらかのタスクを実行します。 
      <ul id="ul_BF1742948BC9461CB8686DE70124D3CD"> 
       <li id="li_690D440C94CC45A0AE55EC319B1C4C23">AIRをアップグレード </li> 
       <li id="li_CDD20251C881466E88BE7BBB53D61EBC">Flash Playerの場合は、AdobeCP モジュールをアップグレードして、再生を再試行してください。 </li> 
@@ -505,8 +504,8 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
    <td colname="col2"><span class="codeph"> AAXS_UnknownConnectionType </span> </td> 
    <td colname="col3"> <p>接続の種類を検出できません。このポリシーでは、[ 出力保護 ] をオンにする必要があります。 この問題は、デジタルまたはアナログ出力の保護を必要とするようにコンテンツがパッケージ化されている場合にのみ発生します。 </p> <p>バージョン 11.8.800.168 より前のFlash Playerのバージョンでは、コンテンツ保護を示すポリシーが適用されているコンテンツで、エラー 3338 が発生することがありました <span class="codeph"> 使用可能な場合は使用</span>. この問題は、バージョン 11.8.800.168 以降で修正されました。 </p> 
     <ul id="ul_4B6CA26A53F84838B5B95400925464D4"> 
-     <li id="li_CBD890F467E449EBB5116E1561252058">ディストリビュータのソフトウェアは、出力保護を必要としないコンテンツのバリアント（例えば、HD ストリームの SD バリアント）を選択します。 <p>エラー 3338 が <span class="codeph"> USE_IF_AVAILABLE </span> コンテンツ、プレーヤーのバージョン番号を確認します。 プレーヤーのバージョンが 11.8.800.168 未満の場合は、Flash Playerをアップグレードするようにユーザーに通知します。 11.8.800.168 を超えるバージョンでエラー 3338 が発生する場合は、どのコンテンツがエラーの原因となったかを記録します。 </p> </li> 
-     <li id="li_62886C1D96264B129928A7E29E6C70E1">ディストリビューターは、このエラーの原因となっているコンテンツを確認し、コンテンツのポリシーが設定されていることを検証する必要があります <span class="codeph"> NO_PROTECTION</span> または <span class="codeph"> USE_IF_AVAILABLE</span> アナログ出力とデジタル出力用。 <p>コンテンツが誤って <span class="codeph"> NO_OUTPUT</span> または <span class="codeph"> 必須</span>、コンテンツを再パッケージ化します。 コンテンツが正しくパッケージ化されている場合は、ポリシーの診断/ライセンスの不一致を参照してください。 それ以外の場合は、Adobeにエスカレーションします。 </p> </li> 
+     <li id="li_CBD890F467E449EBB5116E1561252058">ディストリビュータのソフトウェアは、出力保護を必要としないコンテンツのバリアント（例えば、HD ストリームの SD バリアント）を選択します。 <p>エラー 3338 が <span class="codeph"> USE_IF_AVAILABLE </span> コンテンツ、プレーヤーのバージョン番号を確認します。 プレーヤーのバージョンが 11.8.800.168 未満の場合は、Flash Playerをアップグレードするようにユーザーに通知します。 11.8.800.168 を超えるバージョンでエラー 3338 が発生する場合は、どのコンテンツがエラーの原因となったかをログに記録します。 </p> </li> 
+     <li id="li_62886C1D96264B129928A7E29E6C70E1">ディストリビューターは、このエラーの原因となっているコンテンツを確認し、コンテンツのポリシーが設定されていることを検証する必要があります <span class="codeph"> NO_PROTECTION</span> または <span class="codeph"> USE_IF_AVAILABLE</span> アナログ出力とデジタル出力用。 <p>コンテンツを誤ってパッケージ化した場合 <span class="codeph"> NO_OUTPUT</span> または <span class="codeph"> 必須</span>、コンテンツを再パッケージ化します。 コンテンツが正しくパッケージ化されている場合は、ポリシーの診断/ライセンスの不一致を参照してください。 それ以外の場合は、Adobeにエスカレーションします。 </p> </li> 
     </ul> <p>詳しくは、 <a href="https://forums.adobe.com/message/5518688" format="https" scope="external"> DRM ポリシーが USE_IF_AVAILABLE に設定されている場合、予期しない 3338 エラーが発生しましたか？</a> </p> </td> 
   </tr> 
   <tr> 
@@ -522,7 +521,7 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
   <tr> 
    <td colname="col1"> 3341 </td> 
    <td colname="col2"><span class="codeph"> AAXS_NoDigitalPlaybackAllowed </span> </td> 
-   <td colname="col3"> デジタルデバイスでコンテンツを再生できません。 <p>重要：この問題は、コンテンツ発行者はデジタル再生を許可しないでください。そのため、実稼動環境では発生しません。 </p> </td> 
+   <td colname="col3"> デジタルデバイスでコンテンツを再生できません。 <p>重要：この問題は、コンテンツ発行者はデジタル再生を許可しないでください。そのため、実稼動環境では発生しないでください。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3342 </td> 
@@ -532,7 +531,7 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
   <tr> 
    <td colname="col1"> 3343 </td> 
    <td colname="col2"><span class="codeph"> AAXS_IntegrityVerificationFailed </span> </td> 
-   <td colname="col3"> <p>Android には適用されません。 </p> <p>このエラーは、現在、新しいバージョンのエラーがリリースされた後に最初に発生することが知られています。Flash これは、Flashが開いている間にFlashがアップグレードされ、ブラウザーが再起動するまでFlashの状態が悪くなるためです。 </p> 
+   <td colname="col3"> <p>Android には適用されません。 </p> <p>このエラーは、現在、新しいバージョンのエラーがリリースされた後に最初に発生することが知られています。Flash これは、Flashが開いている間にFlashがアップグレードされ、Flashが再起動するまで不適切な状態になるためです。 </p> 
     <ul id="ul_A0AC4A77550E40409A04BD33748EA987"> 
      <li id="li_F41C1ABD838D41ABB0DF65093E664A29">ディストリビュータのソフトウェアは、次のタスクを完了する必要があります。 
       <ul id="ul_79B2AB1372074D448F129851AA24F985"> 
@@ -563,7 +562,7 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
     <ul id="ul_518AD4931CC64EB3A962DD451E6C5067"> 
      <li id="li_3C44F0740B08490E9C62D89C40B57DC2">ディストリビュータのソフトウェアは、次のいずれかを実行する必要があります。 
       <ul id="ul_7D90526684BF4EB2BBADCF598AA13086"> 
-       <li id="li_D15B4BEDAF7340F6B9BC886DF6E346EC">AIRの場合は、にお電話ください <span class="codeph"> DRMManager.resetDRMVouchers()</span> </li> 
+       <li id="li_D15B4BEDAF7340F6B9BC886DF6E346EC">AIRの場合は、にお電話ください。 <span class="codeph"> DRMManager.resetDRMVouchers()</span> </li> 
        <li id="li_40A51D35408249CFA28DBC49FDA3408B">エラー 3322 または 3346 エラーコードが原因でFlashが使用できない場合、ユーザーは次の場所に移動する必要があります。 <a href="https://forums.adobe.com/message/5535907#5535907" format="http" scope="external"> https://forums.adobe.com/message/5535907#5535907</a> およびAdobe記事の指示に従って、DRM ライセンスストアをプログラムでリセットします。 </li> 
       </ul> </li> 
      <li id="li_0464471E4A094C80BF2986694341921A">このエラーが頻繁に発生する場合、ディストリビューターは、頻度プレーヤーのバージョンとブラウザーのバージョンに関する詳細をAdobeに提供する必要があります。 </li> 
@@ -578,9 +577,9 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
    <td colname="col2"><span class="codeph"> AAXS_InsufficientDeviceCapabilities </span> </td> 
    <td colname="col3"> <p>このエラーの主な意味は、ライセンスには、クライアントの DRM 証明書が満たせないと示す制約が含まれていることです。 クライアントの DRM 証明書が発行される際に、次の「ハードウェア機能」が定義されます。 
      <ul id="ul_1EB6F1469C244CF0BA52C212495C053D"> 
-      <li id="li_646043CE045C4DE2BBC939E1F4963DFE"><b>非ユーザーアクセスバス</b>. If <b>true</b>では、復号化されたメディアは、バスや、アプリケーションがアクセスできるメインメモリには送られません。 <p>If <b>false</b>の場合、復号化後にコンテンツにアクセスできる可能性があります。 </p> </li> 
-      <li id="li_02AAECAF4D35447BA10554541B46DE67"><b>信頼のハードウェアルート</b>. If <b>true</b>：デバイス上で起動時に読み込まれるすべてのソフトウェアが、ハードウェアでのみ使用可能なキーまたはダイジェストに対して検証されました。 <p>クライアントの DRM 証明書に対してライセンスが開かれ、失敗が直ちに発生すると、これらの両方の制約がクライアント側でチェックされます。 これらの制約は、ライセンスを発行する前に、サーバー側で確認することもできます。 </p> </li> 
-     </ul> </p> <p>このエラーの二次的な意味は、ライセンスに「Jailbreak Enforcement」ポリシーが設定され、デバイスで jailbreak が検出されたことです。 このチェックは、クライアント側で定期的に行われ、サーバー側ではチェックできません。 </p> <p>ディストリビューターは、ポリシーを更新し、制限を解除できます。 デバイス機能ポリシーの場合は、 <span class="codeph"> -devCapabilitiesV1</span> フラグを設定し、引数を設定しない。 jailbreak 強制の場合、 <span class="codeph"> policy.enforceJailbreak=false</span>. </p> </td> 
+      <li id="li_646043CE045C4DE2BBC939E1F4963DFE"><b>非ユーザーアクセスバス</b>. 次の場合 <b>true</b>では、復号化されたメディアは、バスや、アプリケーションがアクセスできるメインメモリには送られません。 <p>次の場合 <b>false</b>の場合、復号化後にコンテンツにアクセスできる可能性があります。 </p> </li> 
+      <li id="li_02AAECAF4D35447BA10554541B46DE67"><b>信頼のハードウェアルート</b>. 次の場合 <b>true</b>：デバイス上で起動時に読み込まれるすべてのソフトウェアが、ハードウェアでのみ使用可能なキーまたはダイジェストに対して検証されました。 <p>クライアントの DRM 証明書に対してライセンスが開かれ、失敗が直ちに発生すると、これらの両方の制約がクライアント側でチェックされます。 これらの制約は、ライセンスを発行する前に、サーバー側で確認することもできます。 </p> </li> 
+     </ul> </p> <p>このエラーの二次的な意味は、ライセンスに「Jailbreak Enforcement」ポリシーが設定され、デバイスで jailbreak が検出されたことです。 このチェックは、クライアント側で定期的に行われ、サーバー側ではチェックできません。 </p> <p>ディストリビューターは、ポリシーを更新し、制限を解除できます。 デバイス機能ポリシーの場合は、 <span class="codeph"> -devCapabilitiesV1</span> フラグを設定し、引数を設定しない。 jailbreak 強制の場合は、 <span class="codeph"> policy.enforceJailbreak=false</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3348 </td> 
@@ -695,7 +694,7 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
   <tr> 
    <td colname="col1"> 3370 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ContentIdSettingsNoAccess</span> </td> 
-   <td colname="col3"> <p>ユーザーが <span class="uicontrol"> 保護されたコンテンツの識別子を許可</span> 設定。 </p> <p>ヒント：このエラーは、Pepper バージョン 13.0.0.x 以降で発生しました。 </p> <p>配布者のソフトウェアは、ユーザーに対して <span class="uicontrol"> 保護されたコンテンツの識別子を許可</span> 設定。 </p> <p>ディストリビューターのオペレーションチームは、ユーザーに対し、 <span class="uicontrol"> 保護されたコンテンツの識別子を許可</span> 設定。 </p> <p>詳しくは、 <a href="https://forums.adobe.com/message/6518323#6518323" format="https" scope="external"> https://forums.adobe.com/message/6518323#6518323</a>. </p> </td> 
+   <td colname="col3"> <p>ユーザーが <span class="uicontrol"> 保護されたコンテンツの識別子を許可</span> 設定。 </p> <p>ヒント：このエラーは、Pepper バージョン 13.0.0.x 以降で発生しました。 </p> <p>配布者のソフトウェアは、ユーザーに対し、 <span class="uicontrol"> 保護されたコンテンツの識別子を許可</span> 設定。 </p> <p>ディストリビューターのオペレーションチームは、ユーザーに対し、 <span class="uicontrol"> 保護されたコンテンツの識別子を許可</span> 設定。 </p> <p>詳しくは、 <a href="https://forums.adobe.com/message/6518323#6518323" format="https" scope="external"> https://forums.adobe.com/message/6518323#6518323</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3371 </td> 
@@ -705,12 +704,12 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
   <tr> 
    <td colname="col1"> 3372 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ResolutionLargerThanMaxResolution</span> </td> 
-   <td colname="col3"> <p>コンテンツの解像度が、出力保護制約で指定された最大解像度を超えています。 </p> <p>配布者の運用チームがログでこのエラーを確認した場合は、解決に基づく出力保護ポリシーを確認し、必要に応じてコンテンツを再パッケージ化する必要があります。 </p> </td> 
+   <td colname="col3"> <p>コンテンツの解像度が、出力保護制約で指定された最大解像度を超えています。 </p> <p>配布者の運用チームがログにこのエラーが表示された場合は、解決に基づく出力保護ポリシーを確認し、必要に応じてコンテンツを再パッケージ化する必要があります。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3373 </td> 
    <td colname="col2"><span class="codeph"> AAXS_MinorErr_DisplayResolutionLargerThanConstrain</span> </td> 
-   <td colname="col3"> <p>コンテンツの解像度が、現在アクティブな出力保護制約で指定された解像度よりも大きくなっています。 </p> <p>配布者の運用チームがログでこのエラーを確認した場合は、解決に基づく出力保護ポリシーを確認し、必要に応じてコンテンツを再パッケージ化する必要があります。 </p> </td> 
+   <td colname="col3"> <p>コンテンツの解像度が、現在アクティブな出力保護制約で指定された解像度よりも大きくなっています。 </p> <p>配布者の運用チームがログにこのエラーが表示された場合は、解決に基づく出力保護ポリシーを確認し、必要に応じてコンテンツを再パッケージ化する必要があります。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3374 </td> 
@@ -720,7 +719,7 @@ DRM エラーをAdobeに報告する場合は、 `NATIVE_SUBERROR_CODE` およ�
  </tbody> 
 </table>
 
-## NATIVE_ERROR:ビデオ再生値 {#section_7079501250C2487499639F92EC774525}
+## NATIVE_ERROR：ビデオ再生値 {#section_7079501250C2487499639F92EC774525}
 
 AVE の Video Encoder インターフェイスは、 `NATIVE_ERROR` メタデータオブジェクト。
 
@@ -771,7 +770,7 @@ AVE の Video Encoder インターフェイスは、 `NATIVE_ERROR` メタデー
   <tr> 
    <td colname="col1"> 6 </td> 
    <td colname="col2"><span class="codeph"> GENERIC_ERROR </span> </td> 
-   <td colname="col3"> 一般的なエラー。 </td> 
+   <td colname="col3"> 一般的なエラーです。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 7 </td> 
@@ -936,7 +935,7 @@ AVE の Video Encoder インターフェイスは、 `NATIVE_ERROR` メタデー
   <tr> 
    <td colname="col1"> 39 </td> 
    <td colname="col2"><span class="codeph"> FRAGMENT_READ_ERROR</span> </td> 
-   <td colname="col3"> フラグメント読み取りエラー。 フェールオーバーが存在しません。 エンジンは次のフラグメントを読み取ろうとします。 </td> 
+   <td colname="col3"> フラグメントの読み取りエラー。 フェールオーバーが存在しません。 エンジンは次のフラグメントを読み取ろうとします。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 40 </td> 
@@ -961,7 +960,7 @@ AVE の Video Encoder インターフェイスは、 `NATIVE_ERROR` メタデー
   <tr> 
    <td colname="col1"> 44 </td> 
    <td colname="col2"><span class="codeph"> NETWORK_DOWN </span> </td> 
-   <td colname="col3"> ユーザーのネットワーク接続がダウンしています。 再生はいつでも停止する可能性があり、接続が可能になると再開します。 </td> 
+   <td colname="col3"> ユーザーのネットワーク接続がダウンしています。 再生はいつでも停止する可能性があり、接続が利用可能になると再開します。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 45 </td> 
@@ -986,7 +985,7 @@ AVE の Video Encoder インターフェイスは、 `NATIVE_ERROR` メタデー
   <tr> 
    <td colname="col1"> 49 </td> 
    <td colname="col2"><span class="codeph"> SWITCH_TO_ASYMMETRIC_PROFILE</span> </td> 
-   <td colname="col3"> DRM が非対称プロファイルに切り替え中です。 すべてのプロファイルは、期間内に整列する必要があります。 そうでない場合は、この警告がスローされ、再生にジャンプが発生する可能性があります。 </td> 
+   <td colname="col3"> DRM が非対称プロファイルに切り替え中です。 すべてのプロファイルは、期間内に整列する必要があります。 そうでない場合は、この警告がスローされ、再生にジャンプが発生する場合があります。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 50 </td> 
@@ -1006,16 +1005,16 @@ AVE の Video Encoder インターフェイスは、 `NATIVE_ERROR` メタデー
   <tr> 
    <td colname="col1"> 53 </td> 
    <td colname="col2"><span class="codeph"> PERIOD_HOLD</span> </td> 
-   <td colname="col3"> setHoldAt API が設定した時間に達したので、メディアリーダーはこれ以上読み取れません。 </td> 
+   <td colname="col3"> setHoldAt API で設定された時間に達したので、メディアリーダーはこれ以上読み取れません。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 54 </td> 
    <td colname="col2"><span class="codeph"> LIVE_HOLD </span> </td> 
-   <td colname="col3">ライブウィンドウの終わりに達したので、メディアリーダーはセグメントを読み込めません。 サーバーがライブウィンドウに新しいメディアを追加すると、セグメントの読み込みが再開されます。 通常、この状態になるのは次の場合です。 
+   <td colname="col3">ライブウィンドウの終わりに達したので、メディアリーダーはセグメントを読み込めません。 サーバーがライブウィンドウに新しいメディアを追加すると、セグメントの読み込みが再開されます。 通常、この状態になるのは、次の場合です。 
     <ul id="ul_FCFF658EDA4144E59970B317D6DEB624"> 
-     <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">この <span class="codeph"> bufferTime</span> が長すぎます（ライブウィンドウの期間以上）。 </li> 
+     <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">The <span class="codeph"> bufferTime</span> が長すぎます（ライブウィンドウの期間以上）。 </li> 
      <li id="li_25CE97115ED64E44AA89977FB5F0DCF7">1 つ以上の挿入/消去 API の組み合わせにより、追加されたメディアより多くのメディアが置き換えられました。 </li> 
-     <li id="li_1B14716B2157492AB1859306D1250523">次の期間は、（InsertBy API 呼び出しによる）保留中のメディア置き換えを含むライブ期間です </li> 
+     <li id="li_1B14716B2157492AB1859306D1250523">次の期間は、（InsertBy API 呼び出しによる）保留中のメディア置き換えを含むライブ期間です。 </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -1206,7 +1205,7 @@ AVE の Video Encoder インターフェイスは、 `NATIVE_ERROR` メタデー
   <tr> 
    <td colname="col1"> 93 </td> 
    <td colname="col2"><span class="codeph"> TRICKPLAY_ENDED_DUE_TO_ERROR</span> </td> 
-   <td colname="col3">でメディアを再生中にエラーが発生しました <i>トリックプレイ</i> モード。 トリック再生モードが終了し、ストリームが一時停止します。 呼び出し <span class="codeph"> Play()</span> 通常モードでメディアを再生する場合。 </td> 
+   <td colname="col3">でメディアを再生中にエラーが発生しました <i>トリックプレイ</i> モード。 トリック再生モードが終了し、ストリームが一時停止します。 通話 <span class="codeph"> Play()</span> 通常モードでメディアを再生する場合。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 95 </td> 
@@ -1216,7 +1215,7 @@ AVE の Video Encoder インターフェイスは、 `NATIVE_ERROR` メタデー
  </tbody> 
 </table>
 
-## NATIVE_ERROR:暗号値 {#section_39365E545CAC49B9A4D4678657BB2155}
+## NATIVE_ERROR：暗号値 {#section_39365E545CAC49B9A4D4678657BB2155}
 
 Adobeビデオエンジンの暗号モジュールは、 `NATIVE_ERROR` メタデータオブジェクト。
 

@@ -1,21 +1,19 @@
 ---
-title: 認証UIの作成
-description: 認証UIの作成
+title: 認証 UI の作成
+description: 認証 UI の作成
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
+# 認証 UI の作成 {#create-an-authentication-ui}
 
-# 認証UIの作成{#create-an-authentication-ui}
+1. ユーザーの認証資格情報を取得するためのユーザーインターフェイスを作成します。
 
-1. ユーザーの認証資格情報を取得するユーザーインターフェイスを作成します。
-
-   以下は、Flexのユーザー資格情報を取得するためのシンプルなユーザーインターフェイスの例です。 これは2つの`TextInput`オブジェクトを含むパネルオブジェクトで構成され、各ユーザー名とパスワードの秘密鍵証明書に対して1つずつ割り当てられます。 このパネルには、`credentials()`メソッドを起動するボタンも含まれています。
+   次に、Flexのユーザー資格情報を取得するためのシンプルなユーザーインターフェイスの例を示します。 これは、2 つの `TextInput` オブジェクト。ユーザー名とパスワードの資格情報ごとに 1 つずつ。 パネルには、 `credentials()` メソッド。
 
    ```xml
    <mx:Panel x="236.5"  
@@ -44,9 +42,9 @@ ht-degree: 0%
    </mx:Panel>  
    ```
 
-1. `credentials()`メソッドを記述して、ユーザーが提供する認証値を処理します。
+1. を書き込む `credentials()` メソッドを使用して、ユーザー指定の認証値を処理できます。
 
-   `credentials()`メソッドは、ユーザー名とパスワードの値を`setDRMAuthenticationCredentials()`メソッドに渡すユーザー定義のメソッドです。 値が渡されると、`credentials()`メソッドは`TextInput`オブジェクトの値をリセットします。
+   The `credentials()` メソッドは、ユーザー名とパスワードの値を `setDRMAuthenticationCredentials()` メソッド。 値が渡されると、 `credentials()` メソッドは、 `TextInput` オブジェクト。
 
    ```
    <mx:Script> 
@@ -59,7 +57,7 @@ ht-degree: 0%
    </mx:Script> 
    ```
 
-   このタイプのシンプルインターフェイスを実装する1つの方法は、パネルを新しい状態の一部として含めることです。 新しい状態は、`DRMAuthenticateEvent`オブジェクトがスローされたときの基本状態に基づきます。 次の例には、保護されたビデオファイルを指すsource属性を持つ`VideoDisplay`オブジェクトが含まれています。 この場合、`credentials()`メソッドも変更され、アプリケーションもベース状態に戻ります。 このメソッドは、ユーザー資格情報を渡し、TextInputオブジェクトの値をリセットした後に実行します。
+   このタイプのシンプルなインターフェイスを実装する 1 つの方法は、パネルを新しい状態の一部として含めることです。 新しい状態は、 `DRMAuthenticateEvent` オブジェクトがスローされます。 次の例には、 `VideoDisplay` 保護されたビデオファイルを指す source 属性を持つオブジェクト。 この場合、 `credentials()` メソッドを変更して、アプリケーションもベース状態に戻すようにします。 このメソッドは、ユーザーの資格情報を渡し、TextInput オブジェクトの値をリセットした後に実行します。
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?> 
@@ -133,4 +131,3 @@ ht-degree: 0%
                     source="https://www.example.com/flv/Video.flv" /> 
    </mx:WindowedApplication> 
    ```
-

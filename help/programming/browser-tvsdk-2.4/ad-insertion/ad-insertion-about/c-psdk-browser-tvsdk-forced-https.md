@@ -1,25 +1,23 @@
 ---
-title: HTTPS経由のセキュアな広告読み込み
-description: HTTPS経由のセキュアな広告読み込み
+title: HTTPS を介したセキュアな広告読み込み
+description: HTTPS を介したセキュアな広告読み込み
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 0%
 
 ---
 
+# HTTPS を介したセキュアな広告読み込み{#secure-ad-loading-over-https}
 
-# HTTPSを介したセキュアな広告読み込み{#secure-ad-loading-over-https}
-
-Adobe Primetimeは、プレーヤーがhttpでホストされている場合でも、httpsを使用してサードパーティの広告サーバーをリクエストできます。 httpsにアップグレードされた広告サーバー呼び出しのみが、Auditude Ad Resolverフェーズ中にクライアントがシークするものです。
+Adobe Primetimeは、プレーヤーが http でホストされている場合でも、https を使用してサードパーティ広告サーバーをリクエストできます。 Auditude広告リゾルバーフェーズでクライアントが探している https にアップグレードされるのは、これらの広告サーバー呼び出しのみです。
 
 >[!NOTE]
 >
->この機能はFlashではサポートされていません。
+>この機能は、Flashではサポートされていません。
 
-セキュアな広告読み込みを有効にするには、次を使用します。 デフォルトでは有効になっていません。
+セキュアな広告の読み込みを有効にするには、次を使用します。 デフォルトでは有効になっていません。
 
 ```
 var auditudeSettings = new AdobePSDK.AuditudeSettings(); 

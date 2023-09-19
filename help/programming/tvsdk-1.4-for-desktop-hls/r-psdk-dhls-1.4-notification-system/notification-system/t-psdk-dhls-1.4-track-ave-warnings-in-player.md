@@ -1,22 +1,20 @@
 ---
-description: NotificationEventを使用して、Adobeビデオエンジン(AVE)から渡された警告を追跡できます。
-title: プレイヤーでAVE警告を追跡する
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: NotificationEvent を使用して、Adobeビデオエンジン (AVE) から渡された警告を追跡できます。
+title: プレーヤーで AVE 警告を追跡する
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# プレーヤーで AVE 警告を追跡する{#track-ave-warnings-in-your-player}
 
-# プレイヤー{#track-ave-warnings-in-your-player}でAVE警告を追跡
+NotificationEvent を使用して、Adobeビデオエンジン (AVE) から渡された警告を追跡できます。
 
-NotificationEventを使用して、Adobeビデオエンジン(AVE)から渡された警告を追跡できます。
+プレーヤーアプリは、再生を停止しないフェールオーバーやネットワークダウンイベントなど、AVE によって発生した再生の警告やエラーを追跡でき、必ずしもアプリによる操作が必要ない場合があります。 一部の AVE エラーは TVSDK が処理しますが、 `NotificationEvent` は、AVE 警告のアプリケーションレイヤーへの一般的なパススルーメカニズムの役割を果たします。 AVE 警告を受け取った後は、事前に再生を停止する、コンティンジェンシープランを有効化する、メッセージのログ記録など、何らかのアクションを実行するよう選択する場合があります。
 
-プレイヤーアプリは、再生を停止しない、アプリが何も操作を必要としないフェイルオーバーやネットワークダウンイベントなど、AVEが生成する再生警告やエラーを追跡できます。 一部のAVEエラーはTVSDKで処理されますが、`NotificationEvent`は、AVE警告の場合に、アプリケーションレイヤーへの一般的なパススルーメカニズムとして機能します。 AVE警告を受け取ったら、事前に再生を停止したり、コンティンジェンシープランをアクティブにしたり、メッセージを記録したりするなどの操作を行うことができます。
-
-以下のAPIエレメントを使用して、プレイヤーでAVE警告を追跡します。
+以下の API 要素を使用して、プレーヤー内の AVE 警告を追跡します。
 
 **NotificationCode**
 
@@ -76,7 +74,7 @@ public class NotificationEvent extends Event {
 }
 ```
 
-AVE追加警告を受け取るための、プレイヤーへのイベントリスナーです。
+AVE 警告を受け取るには、イベントリスナーをプレーヤーに追加します。
 
 例：
 
@@ -99,7 +97,7 @@ private function onWarningAvailable(event:NotificationEvent):void {
 
 <!--<a id="example_C35262605D394718B40C084B569A5052"></a>-->
 
-`NotificationEvent`を使用して追跡されたAVE警告の例を次に示します。
+以下に、 `NotificationEvent`:
 
 ```
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [resourceType:HLS] 

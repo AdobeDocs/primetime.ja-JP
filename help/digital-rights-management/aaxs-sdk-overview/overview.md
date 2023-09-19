@@ -1,18 +1,16 @@
 ---
-title: AdobeアクセスSDKの概要
-description: AdobeアクセスSDKの概要
+title: Adobeアクセス SDK の概要
+description: Adobeアクセス SDK の概要
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
+# Adobeアクセス SDK の概要 {#an-overview-of-adobe-access-sdk}
 
-# AdobeアクセスSDK {#an-overview-of-adobe-access-sdk}の概要
+Adobe® Access™ SDK は、ビデオおよびオーディオコンテンツを保護し、安全に配信して、パソコンなどの消費者向けデバイスで再生できるようにするデジタル著作権管理プラットフォームです。 Adobeアクセスは、コンテンツ所有者がコンテンツを保護し、配信を制御できる柔軟なプラットフォームです。 コンテンツ所有者は、各デジタルメディアファイルのライセンスを作成することで、権利を保護および管理できます。これにより、消費者は、様々な高品質のコンテンツを確実に利用できるようになります。
 
-Adobe® Access™ SDKは、ビデオおよびオーディオコンテンツを保護し、セキュリティで保護して、パソコンなどのコンシューマーデバイスで再生できるようにするデジタル著作権管理プラットフォームです。 Adobeアクセスは、コンテンツ所有者がコンテンツを保護し、配信の制御を維持できる柔軟なプラットフォームです。 コンテンツ所有者は、各デジタルメディアファイルのライセンスを作成することで権利を保護し、管理できます。これにより、様々な高品質のコンテンツを消費者が利用できるようになります。
-
-Adobeアクセスは、ビデオオンデマンド、レンタル、電子販売など、幅広いビジネスモデルをサポートしています。 Adobeアクセスで保護されたコンテンツは、AdobeFlash Media Serverソフトウェアを介してストリーミング配信したり、AdobeのHTTP Dynamic Streamingテクノロジを使用してHTTP経由でプログレッシブダウンロードを提供したり、ユーザーの都合の良いローカル再生用にコンテンツライブラリにダウンロードできます。
+Adobeアクセスは、ビデオオンデマンド、レンタル、電子販売など、幅広いビジネスモデルをサポートしています。 AdobeFlash Media Serverソフトウェアを介したストリーミング、AdobeのHTTP Dynamic Streaming技術を使用した HTTP 経由でのプログレッシブダウンロード、ユーザーの都合でのローカル再生のためのコンテンツライブラリへのダウンロードを許可して、Adobeアクセスで保護されたコンテンツを配布できます。

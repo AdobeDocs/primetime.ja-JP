@@ -1,62 +1,60 @@
 ---
-description: PrimetimeDigital Rights Management(DRM)システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 または、サードパーティのDRMソリューションを、Adobeの統合Primetime DRMソリューションの代替として使用できます。
+description: PrimetimeDigital Rights Management(DRM) システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 または、サードパーティの DRM ソリューションを、Adobeの統合 Primetime DRM ソリューションの代わりに使用することもできます。
 keywords: DRM;DASH;HLS
-title: Primetime DRMインターフェイスの概要
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Primetime DRM インターフェイスの概要
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
 
 ---
 
+# Primetime DRM インターフェイスの概要 {#primetime-drm-interface-overview}
 
-# Primetime DRMインターフェイスの概要{#primetime-drm-interface-overview}
-
-PrimetimeDigital Rights Management(DRM)システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 または、サードパーティのDRMソリューションを、Adobeの統合Primetime DRMソリューションの代替として使用できます。
+PrimetimeDigital Rights Management(DRM) システムの機能を使用して、ビデオコンテンツへの安全なアクセスを提供できます。 または、サードパーティの DRM ソリューションを、Adobeの統合 Primetime DRM ソリューションの代わりに使用することもできます。
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-サードパーティのDRMソリューションの可用性に関する最新情報については、Adobeの担当者にお問い合わせください。
+サードパーティの DRM ソリューションの入手に関する最新情報については、Adobeの担当者にお問い合わせください。
 
-Primetime digital rights management(DRM)システムのクライアント側の主要要素はDRMマネージャーです。
+Primetime デジタル著作権管理 (DRM) システムの主なクライアント側要素は DRM マネージャーです。
 
-Primetime DRMは、TVSDKアプリケーションにコンテンツ保護を実装するためのスケーラブルで効率的なワークフローを提供します。 各デジタルメディアファイルのライセンスを作成することで、ビデオコンテンツの権限を保護し、管理します。
+Primetime DRM は、TVSDK アプリケーションにコンテンツ保護を実装するためのスケーラブルで効率的なワークフローを提供します。 各デジタルメディアファイルのライセンスを作成することで、ビデオコンテンツに対する権限を保護および管理できます。
 
-TVSDKは、カスタムDRMワークフローとしてPrimetime DRM統合をサポートしています。 つまり、FlashDRMManagerを使用してストリームを再生する前に、アプリケーションでDRM認証ワークフローを実装する必要があります。 これを有効にするために、MediaPlayerは認証用のDRMマネージャーを提供します。
+TVSDK は、カスタム DRM ワークフローとして Primetime DRM 統合をサポートしています。 つまり、 DRMManagerFlashを使用してストリームを再生する前に、アプリケーションで DRM 認証ワークフローを実装する必要があります。 これを有効にするために、MediaPlayer は認証用の DRM マネージャーを提供します。
 
-TVSDKパッケージに含まれるDRMサンプルプレイヤーコードを参照してください。
+TVSDK パッケージに含まれている DRM サンプルプレイヤーコードを参照してください。
 
-以下は、DRMを操作するための最も重要なAPI要素です。
+DRM を操作するための最も重要な API 要素は次のとおりです。
 
-* DRMサブシステムを実装するDRMマネージャーオブジェクトへのメディアプレイヤー内の参照：
+* DRM サブシステムを実装する DRM マネージャーオブジェクトへのメディアプレーヤー内の参照。
 
-   ```
-   @property (readonly, nonatomic) DRMManager *drmManager
-   ```
+  ```
+  @property (readonly, nonatomic) DRMManager *drmManager
+  ```
 
 <!--<a id="section_F986DB1EDD6F44CD8E57419CCA0921E8"></a>-->
 
-DRMメタデータが変更されると、TVSDKは`PTMediaPlayerItemDRMMetadataChanged`通知を発行します。 このメタデータは、`DRMManager`クラスのほとんどすべての関数の入力として使用されます。
+TVSDK が `PTMediaPlayerItemDRMMetadataChanged` DRM メタデータが変更された場合の通知。 このメタデータは、 `DRMManager` クラス。
 
 <!--<a id="section_223DCF63BAB6438792A85352A79044CC"></a>-->
 
-DRM保護されたストリームがマルチビットレート(MBR)でエンコードされている場合、バリアントプレイリストに使用されるDRMメタデータは、すべてのビットレートストリームで使用されるメタデータと同じでなければなりません。
+DRM 保護されたストリームがマルチビットレート (MBR) でエンコードされている場合、バリアントプレイリストに使用される DRM メタデータは、すべてのビットレートストリームで使用されるメタデータと同じである必要があります。
 
 >[!TIP]
 >
->DRM保護されたアセットのURLをiOSアプリで参照する場合、クエリ文字列パラメーター`?faxs=1`を(MBR)設定レベルM3U8 URLに追加する必要があります。 例：
+>DRM で保護されたアセット URL をiOSアプリで参照する場合は、クエリー文字列パラメーター `?faxs=1` は、(MBR) セットレベルの M3U8 URL に追加する必要があります。 例：
 
 ```
 https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 ```
 
-`faxs=1`クエリ文字列パラメーターは、コンテンツがDRM保護されていることを伝え、それに応じてiOS TVSDKでDRM復号ワークフローをトリガーします。 また、他のプラットフォーム向けのDRM保護されたHLSアセットURLに`faxs=1`タグを追加することもできます。iOSでは必須と見なされるか、他のプラットフォームでは非操作として扱われます。
+The `faxs=1` クエリー文字列パラメーターは、コンテンツが DRM 保護されていることを示し、iOS TVSDK でその内容に応じて DRM 復号ワークフローをトリガー化します。 また、 `faxs=1` タグを、他のプラットフォーム向けの DRM 保護された HLS アセット URL に追加します。iOSでは必要に応じて表示されるか、他のプラットフォームでは非 op として扱われます。
 
-## TSVDKアプリケーションにPrimetime DRMを実装する{#implement-primetime-drm-in-a-tsvdk-application}
+## TSVDK アプリケーションへの Primetime DRM の実装 {#implement-primetime-drm-in-a-tsvdk-application}
 
-Primetime DRMはTVSDKに統合されているので、TVSDKアプリケーションでのコンテンツ保護の実装を簡略化できます。
+Primetime DRM は TVSDK に統合され、TVSDK アプリケーションでのコンテンツ保護の実装を簡単にします。
 
-Primetime DRMを使用してTVSDKアプリケーションにコンテンツ保護を実装する方法の概要と詳細については、以下を参照してください。
+TVSDK アプリケーションでのコンテンツ保護の実装に Primetime DRM を使用する方法の概要と詳細については、以下を参照してください。
 
-* [Adobe PrimetimeTVSDK-DRMワークフロー(PDF)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_tvsdk_drm_workflow.pdf)
+* [Adobe Primetime TVSDK-DRM ワークフロー (PDF)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_tvsdk_drm_workflow.pdf)

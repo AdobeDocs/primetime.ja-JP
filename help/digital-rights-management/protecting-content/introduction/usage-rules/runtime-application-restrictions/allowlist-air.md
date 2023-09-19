@@ -1,22 +1,20 @@
 ---
-title: 保護されたコンテンツの再生が許可されたPrimetime DRMアプリケーションの許可リスト
-description: 保護されたコンテンツの再生が許可されたPrimetime DRMアプリケーションの許可リスト
+title: 保護されたコンテンツの再生が許可された Primetime DRM アプリケーションの許可リスト
+description: 保護されたコンテンツの再生が許可された Primetime DRM アプリケーションの許可リスト
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
 
 ---
 
+# 保護されたコンテンツの再生が許可された Primetime DRM アプリケーションの許可リスト {#allowlist-for-primetime-drm-applications-allowed-to-play-protected-content}
 
-# 保護されたコンテンツの再生が許可されたPrimetime DRMアプリケーションの許可リスト{#allowlist-for-primetime-drm-applications-allowed-to-play-protected-content}
+許可リストは、コンテンツの再生が許可されるAIR、iOSおよび Android のアプリケーションを指定します。 また、AIRおよびiOSアプリケーション ID、最小バージョン、最大バージョン、発行者 ID も指定します。
 
-許可リストは、コンテンツの再生が許可されるAIR、iOS、Androidアプリケーションを指定します。 また、AIRおよびiOSアプリケーションID、最小バージョン、最大バージョン、発行者IDも指定します。
-
-使用例：特定のアプリケーションに再生を制限する場合や、コンテンツにアクセスできるアプリケーションのバージョンを制御する場合に、このルールを使用します。
+使用例：このルールを使用して、特定のアプリケーションでの再生を制限したり、コンテンツにアクセスできるアプリケーションのバージョンを制御したりします。
 
 >[!NOTE]
 >
->AdobeFlash Builderを使用して保護されたアプリケーションを構築する場合は、アプリケーションをデバッグモードでデプロイしないようにする必要があります。 アプリケーションをデバッグモードでデプロイすると、Flash BuilderがAIRアプリケーション IDに`.debug`を追加するので、Primetime DRMの許可リスト機能が予期せず動作します。
+>AdobeFlash Builderを使用して保護されたアプリケーションを構築する場合は、アプリケーションをデバッグモードでデプロイしないようにする必要があります。 デバッグモードでアプリケーションをデプロイすると、Flash Builderによって `.debug` をAIRアプリケーション ID に追加すると、Primetime DRM の許可リスト機能が予期せず動作します。

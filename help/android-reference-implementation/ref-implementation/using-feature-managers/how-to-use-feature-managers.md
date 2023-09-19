@@ -1,20 +1,17 @@
 ---
-title: フィーチャマネージャの使用方法
-description: フィーチャマネージャの使用方法
+title: 機能マネージャの使用方法
+description: 機能マネージャの使用方法
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
 
 ---
 
+# 機能マネージャの使用方法 {#how-to-use-feature-managers}
 
-# フィーチャマネージャの使い方{#how-to-use-feature-managers}
+機能マネージャを使用して、機能の有効化、無効化、設定を行う方法は 2 つあります。
 
-機能マネージャを使用して、機能の有効化、無効化、設定を行う方法は2つあります。
-
-* 設定情報を設定ファイルからメディアプレイヤーに渡すことで、機能マネージャーを作成および設定できます。
-* マネージャーファクトリを使用して、コードを調べずに機能を有効または無効にできます。
-
+* 設定ファイルからメディアプレーヤーに設定情報を渡すことで、機能マネージャーを作成して設定できます。
+* マネージャーファクトリを使用すると、コードを調べずに機能を有効または無効にできます。

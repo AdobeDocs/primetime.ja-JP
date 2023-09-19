@@ -2,15 +2,13 @@
 title: アプリケーションサーバーのポート
 description: アプリケーションサーバーのポート
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
-
 # アプリケーションサーバーのポート{#ports-for-application-servers}
 
-Adobeアクセスライセンスサーバーで任意のネットワークポートを使用するように設定できます。 これらのポートは、Adobeアクセスを実行しているアプリケーションサーバーに接続するクライアントに許可するネットワーク機能に応じて、内側のファイアウォールで有効または無効にする必要があります。
+任意のネットワークポートを使用するAdobeアクセスライセンスサーバーを設定できます。 Adobeアクセスを実行しているアプリケーションサーバーに接続するクライアントに許可するネットワーク機能に応じて、これらのポートを内側のファイアウォールで有効または無効にする必要があります。

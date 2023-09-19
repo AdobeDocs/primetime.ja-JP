@@ -1,16 +1,14 @@
 ---
-title: Media Packagerの使用
-description: Media Packagerの使用
+title: Media Packager の使用
+description: Media Packager の使用
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 0%
 
 ---
 
+# Media Packager の使用 {#using-media-packager}
 
-# Media Packager {#using-media-packager}の使用
-
-Media Packagerを使用して、暗号化するファイル内のデータと、コンテンツファイルに適用するポリシーを指定できます。 例えば、ビデオデータは暗号化するが、オーディオデータは暗号化しないように指定できます。
+Media Packager を使用すると、暗号化するファイル内のデータと、コンテンツファイルに適用するポリシーを指定できます。 例えば、ビデオデータは暗号化され、オーディオデータは暗号化されないように指定できます。

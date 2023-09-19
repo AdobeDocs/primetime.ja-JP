@@ -1,28 +1,26 @@
 ---
-title: ドメインCA証明書の取得
-description: ドメインCA証明書の取得
+title: ドメイン CA 証明書の取得
+description: ドメイン CA 証明書の取得
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
+# ドメイン CA 証明書の取得{#obtain-domain-ca-certificates}
 
-# ドメインCA証明書の取得{#obtain-domain-ca-certificates}
+License Server、Packager または Transport 証明書とは異なり、Domain CA 証明書はAdobeによって発行されません。 この証明書は、証明機関から取得することも、この目的で使用する自己署名証明書を生成することもできます。
 
-License Server、Packager、またはトランスポート証明書とは異なり、ドメインCA証明書はAdobeによって発行されません。 この証明書は認証局から取得するか、この目的で使用する自己署名証明書を生成することができます。
+ドメイン CA 証明書は、1024 ビットキーを使用し、CA 証明書に必要な標準属性を含む必要があります。
 
-ドメインCA証明書は、1024ビットキーを使用し、CA証明書に必要な標準属性を含む必要があります。
+* CA フラグが true に設定された Basic Constraints 拡張機能
+* 証明書の署名を指定する鍵用途拡張が許可されています
 
-* CAフラグがtrueに設定された基本制約拡張
-* 証明書署名を指定する鍵用途拡張が許可されます
+例えば、OpenSSL を使用すると、自己署名 CA 証明書を次のように生成できます。
 
-例えば、OpenSSLを使用して、自己署名CA証明書を次のように生成できます。
-
-1. [!DNL ca-extensions.txt]という名前のファイルを作成し、次を含めます。
+1. という名前のファイルを作成します。 [!DNL ca-extensions.txt] 次を含む：
 
    ```
    keyUsage=critical,keyCertSign  
@@ -30,35 +28,34 @@ License Server、Packager、またはトランスポート証明書とは異な�
    subjectKeyIdentifier=hash 
    ```
 
-1. キーの生成：
+1. キーを生成：
 
    ```
    openssl genrsa -des3 -out domain-ca.key 1024 
    ```
 
-1. CSRの生成：
+1. CSR を生成：
 
    ```
    openssl req -new -key domain-ca.key -out domain-ca.csr 
    ```
 
-1. 証明書の生成：
+1. 証明書を生成：
 
    ```
    openssl x509 -req -days 365 -in domain-ca.csr -signkey domain-ca.key \ 
      -out domain-ca.cer -extfile ca-extensions.txt 
    ```
 
-1. パスワードの生成：
+1. パスワードを生成：
 
    ```
    openssl rand -base64 8 
    ```
 
-1. PFXを生成：
+1. PFX を生成：
 
    ```
    openssl pkcs12 -export -inkey domain-ca.key \ 
    -in domain-ca.cer -out domain-ca.pfx
    ```
-

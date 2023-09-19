@@ -1,9 +1,8 @@
 ---
 title: Adobe Primetime API リファレンス
-description: この API を使用すると、機能アプリケーションや統合をすばやく簡単に作成できます。
+description: API を使用すると、機能アプリケーションや統合をすばやく簡単に作成できます。
 topic-tags: API-references
-exl-id: 6862764e-c1d8-413a-a0c0-66b31eac8e53
-source-git-commit: 61904f8bf2ed2942072f75fd4b2d9b3f4bbe21f9
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
@@ -56,5 +55,5 @@ ht-degree: 0%
 + その他 {#miscellaneous}
    + [ビデオハートビートライブラリ](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/index.html)
    + [DHPK 2.0 C++](https://help.adobe.com/en_US/primetime/api/psdk/psdk_doxygen/index.html)
-   + [2.4 Browser TVSDK 用 UI フレームワーク](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
-   + [PSDK FlashRuntime 公開 API](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls/)
+   + [2.4 Browser TVSDK 用の UI フレームワーク](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
+   + [PSDK FlashRuntime パブリック API](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls/)

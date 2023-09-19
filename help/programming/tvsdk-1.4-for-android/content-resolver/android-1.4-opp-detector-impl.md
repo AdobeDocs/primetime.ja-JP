@@ -1,20 +1,18 @@
 ---
-description: PlacementOpportunityDetectorインターフェイスを実装することで、独自のオポチュニティディテクターを実装できます。
+description: インターフェイス PlacementOpportunityDetector を実装することで、独自のオポチュニティディテクターを実装できます。
 title: カスタムオポチュニティディテクターの実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# カスタムオポチュニティディテクターの実装 {#implement-a-custom-opportunity-detector}
 
-# カスタムオポチュニティディテクターの実装{#implement-a-custom-opportunity-detector}
+インターフェイス PlacementOpportunityDetector を実装することで、独自のオポチュニティディテクターを実装できます。
 
-PlacementOpportunityDetectorインターフェイスを実装することで、独自のオポチュニティディテクターを実装できます。
-
-1. カスタム`AdvertisingFactory`インスタンスを作成し、`createOpportunityDetector`をオーバーライドします。 例：
+1. カスタムの作成 `AdvertisingFactory` インスタンスとオーバーライド `createOpportunityDetector`. 例：
 
    ```java
    new AdvertisingFactory() { 
@@ -27,7 +25,7 @@ PlacementOpportunityDetectorインターフェイスを実装することで、�
    }
    ```
 
-1. 広告クライアントファクトリを`MediaPlayer`に登録します。 例：
+1. 広告クライアントファクトリをに登録します。 `MediaPlayer`. 例：
 
    ```java
    // register the custom advertising factory with media player 
@@ -35,16 +33,16 @@ PlacementOpportunityDetectorインターフェイスを実装することで、�
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. `PlacementOpportunityDetector`クラスを拡張するカスタムオポチュニティディテクタークラスを作成します。
-   1. カスタムオポチュニティディテクターで、次の関数を上書きします。
+1. カスタムオポチュニティディテクタークラスを作成し、 `PlacementOpportunityDetector` クラス。
+   1. カスタムオポチュニティディテクターで、この関数を上書きします。
 
       ```java
       public List<PlacementOpportunity> process(List<TimedMetadata> timedMetadataList, Metadata metadata)
       ```
 
-      `timedMetadataList`には、使用可能な`TimedMetadata`のリストが含まれており、これは並べ替えられます。 メタデータには、広告プロバイダーに送信されるターゲットパラメーターとカスタムパラメーターが含まれます。
+      The `timedMetadataList` 使用可能な `TimedMetadata`：並べ替えられます。 メタデータには、広告プロバイダーに送信されるターゲティングパラメーターとカスタムパラメーターが含まれます。
 
-   1. `TimedMetadata`ごとに、`List<PlacementOpportunity>`を作成します。 リストは空にできますが、nullは指定できません。 `PlacementOpportunity` には次の属性が必要です。
+   1. 次ごとに `TimedMetadata`、 `List<PlacementOpportunity>`. リストは空にできますが、null はできません。 `PlacementOpportunity` は、次の属性を持つ必要があります。
 
       ```java
       PlacementOpportunity( 
@@ -54,9 +52,9 @@ PlacementOpportunityDetectorインターフェイスを実装することで、�
       )
       ```
 
-   1. 検出されたすべての時間指定メタデータオブジェクトに対して配置オポチュニティが作成されたら、`PlacementOpportunity`リストを返します。
+   1. 検出されたすべての時間指定メタデータオブジェクトに対して配置オポチュニティが作成されたら、単に `PlacementOpportunity` リスト。
 
-次に、カスタム配置オポチュニティディテクターのサンプルを示します。
+次に、カスタム配置オポチュニティディテクターの例を示します。
 
 ```java
 public class CustomPlacementOpportunityDetector implements PlacementOpportunityDetector { 
@@ -82,4 +80,3 @@ public class CustomPlacementOpportunityDetector implements PlacementOpportunityD
     ... 
 } 
 ```
-

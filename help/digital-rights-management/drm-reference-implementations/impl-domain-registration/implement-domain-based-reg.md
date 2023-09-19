@@ -1,30 +1,28 @@
 ---
-title: IDベースのドメイン登録の実装
-description: IDベースのドメイン登録の実装
+title: ID ベースのドメイン登録の実装
+description: ID ベースのドメイン登録の実装
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
+# ID ベースのドメイン登録の実装{#implement-identity-based-domain-registration}
 
-# IDベースのドメイン登録{#implement-identity-based-domain-registration}の実装
+1. 必須のドメイン登録を含む DRM ポリシーを作成します。
+1. ドメインサーバー URL のサーバーのホストとポートを指定します。
 
-1. 必須のドメイン登録を含むDRMポリシーを作成します。
-1. サーバーのホストとドメインサーバーのURLのポートを指定します。
-
-   [!DNL .properties]ファイルに次を設定します。
+   を [!DNL .properties] ファイル、設定：
 
    ```
    policy.domain.url=https://[server:port] 
    ```
 
-1. ユーザー名とパスワードを必須にして認証します。
+1. ユーザー名とパスワードを必須にして認証を行います。
 
-   [!DNL .properties]ファイルに次を設定します。
+   を [!DNL .properties] ファイル、設定：
 
    ```
    policy.domain.anonymous=false 

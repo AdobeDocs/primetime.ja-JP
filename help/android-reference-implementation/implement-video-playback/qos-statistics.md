@@ -1,60 +1,58 @@
 ---
-description: 必要に応じて、QoSProviderから再生とデバイスの統計情報を読み取るようにプレイヤーを設定できます。
-title: QoS再生とデバイス統計の表示
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 必要に応じて、QoSProvider から再生とデバイスの統計を読み取るようにプレーヤーを設定できます。
+title: QoS 再生とデバイス統計の表示
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
+# QoS 再生とデバイス統計の表示 {#display-qos-playback-and-device-statistics}
 
-# QoS再生とデバイス統計情報の表示{#display-qos-playback-and-device-statistics}
+必要に応じて、QoSProvider から再生とデバイスの統計を読み取るようにプレーヤーを設定できます。
 
-必要に応じて、QoSProviderから再生とデバイスの統計情報を読み取るようにプレイヤーを設定できます。
+The `QoSProvider` クラスは、フレームレート、プロファイルのビットレート、バッファリングに費やした合計時間、バッファリングの試行回数、最初のビデオフラグメントから最初のバイトを取得するのにかかった時間、最初のフレームのレンダリングに要した時間、現在のバッファ時間など、様々な統計を提供します。
 
-`QoSProvider`クラスは、フレームレート、プロファイルビットレート、バッファリングに費やした合計時間、バッファリング試行回数、最初のビデオフラグメントからの最初のバイト取得に要した時間、最初のフレームのレンダリングに要した時間、現在のバッファ長、バッファ時間など、様々な統計を提供します。
-
-参照実装は、QoSオーバーレイの表示を有効にできる`QoSManager`クラスを提供します。 QoS表示は、設定ユーザーインターフェイスで有効にすることもできます。
+リファレンス実装では、以下を提供します。 `QoSManager` QoS オーバーレイの表示を有効にできるクラス。 Settings ユーザーインターフェイスで QoS の表示を有効にすることもできます。
 
 ![](assets/qos-configuration.jpg)
 
-`QoSManager`は、デバイス情報を取得し、メディアプレイヤーに接続し、最新のQoS情報で更新することで、QoS統計を追跡します。
+The `QoSManager` は、デバイス情報の取得、メディアプレーヤーへの接続、最新の QoS 情報による更新によって、QoS 統計を追跡します。
 
-**QoS統計レポートの有効化または無効化**
+**QoS 統計レポートを有効または無効にします**
 
-1. QosManagerを作成するか、ManagerFactoryを使用してQoSレポートを有効にします。
+1. QosManager を作成するか、ManagerFactory を使用して QoS レポートを有効にします。
 
-   * QosManagerを作成するには：
-      * このアプリケーションでは、広告ワークフロー機能を使用する必要があります
+   * QosManager を作成するには：
+      * このアプリケーションは、広告ワークフロー機能を使用する必要があります
 
    QoSManager qosManager = new QosManagerOn();
 
-   * ManagerFactoryを使用してQoS統計情報を表示するには：
+   * ManagerFactory を使用して QoS 統計を表示するには、次の手順を実行します。
 
    qosManager = ManagerFactory.getQosManager(
-   <b>true</b>、config、mediaPlayer);
+   <b>true</b>, config, mediaPlayer);
 
    >[!NOTE]
    >
-   >ブール値を`false`に変更すると、QoSレポートが無効になります。
+   >ブール値をに変更 `false` QoS レポートを無効にします。
 
-2. 追加イベントリスナー：
+2. イベントリスナーを追加します。
 
    `qosManager.addEventListener(qosManagerEventListener);`
 
-3. QoSプロバイダーを作成し、プレイヤーアクティビティコンテキストに接続します。
+3. QoS プロバイダーを作成し、プレーヤーアクティビティコンテキストに接続します。
 
    `qosManager.createQOSProvider(getActivity());`
 
    >[!NOTE]
    >
-   >プレイヤーアクティビティを破棄する場合は、[qosManager.destroyQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider())を呼び出して、QOSプロバイダーをメディアプレイヤーから切り離してクリーンアップする必要があります。
+   >プレーヤーのアクティビティが破壊される場合は、必ず [qosManager.destroyQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider()) QOS プロバイダーをメディアプレーヤーから切り離してクリーンアップする場合。
 
-**関連するAPIドキュメント**
+**関連する API ドキュメント**
 
-* [QosManagerクラス](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html)
-* [QosManagerOnクラス](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManagerOn.html)
+* [クラス QosManager](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html)
+* [クラス QosManagerOn](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManagerOn.html)
 * [QosManagerEventListener](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.QosManagerEventListener.html)
 * [QosItem](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.QosItem.html)

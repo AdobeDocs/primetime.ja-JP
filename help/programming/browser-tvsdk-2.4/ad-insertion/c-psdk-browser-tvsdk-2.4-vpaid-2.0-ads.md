@@ -1,58 +1,56 @@
 ---
-description: ビデオプレーヤー広告配信インターフェイス定義(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアの操作性を提供し、発行者はターゲット広告の改善、広告インプレッションの追跡、ビデオコンテンツの収益化を行うことができます。
-title: VPAID 2.0広告のサポート
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: ビデオプレーヤー広告提供インターフェイス定義 (VPAID)2.0 は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアエクスペリエンスを提供し、発行者は、広告のターゲット設定、広告インプレッションの追跡、ビデオコンテンツの収益化を改善できます。
+title: VPAID 2.0 広告のサポート
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
 
 ---
 
+# VPAID 2.0 広告のサポート {#vpaid-ad-support}
 
-# VPAID 2.0広告のサポート{#vpaid-ad-support}
-
-ビデオプレーヤー広告配信インターフェイス定義(VPAID)2.0は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアの操作性を提供し、発行者はターゲット広告の改善、広告インプレッションの追跡、ビデオコンテンツの収益化を行うことができます。
+ビデオプレーヤー広告提供インターフェイス定義 (VPAID)2.0 は、ビデオ広告を再生するための共通のインターフェイスを提供します。 ユーザーにリッチメディアエクスペリエンスを提供し、発行者は、広告のターゲット設定、広告インプレッションの追跡、ビデオコンテンツの収益化を改善できます。
 
 次の機能がサポートされています。
 
-* VPAID仕様のバージョン2.0
+* VPAID 仕様のバージョン 2.0
 
-   詳しくは、[IAB VPAID 2.0](https://www.iab.com/guidelines/digital-video-player-ad-interface-definition-vpaid-2-0/)を参照してください。
-* ビデオオンデマンド(VOD)コンテンツを含むリニアVPAID広告
-* ライブコンテンツでは、ブラウザーTVSDKは、プリロールJavaScript VPAID広告をサポートします。
-* Flashのフォールバックモードでは、Browser TVSDKは、FlashベースのVPAID広告のみをサポートします。
-* Linear JavaScript VPAID広告
+  詳しくは、 [IAB VPAID 2.0](https://www.iab.com/guidelines/digital-video-player-ad-interface-definition-vpaid-2-0/).
+* ビデオオンデマンド (VOD) コンテンツを使用したリニア VPAID 広告
+* ライブコンテンツでは、Browser TVSDK は、プリロール JavaScript VPAID 広告をサポートします。
+* Flashフォールバックモードでは、Browser TVSDK は、Flashベースの VPAID 広告のみをサポートします。
+* リニア JavaScript VPAID 広告
 
-   VPAID広告はJavaScriptベースである必要があり、広告応答はVPAID広告のメディアタイプを`application/javascript`として識別する必要があります。
+  VPAID 広告は JavaScript ベースである必要があり、広告応答は VPAID 広告のメディアタイプを `application/javascript`.
 
 次の機能はサポートされていません。
 
-* VPAID仕様のバージョン1.0
+* VPAID 仕様のバージョン 1.0
 * スキップ可能な広告
-* オーバーレイ広告、動的なコンパニオン広告、最小化可能な広告、折りたたみ可能な広告、展開可能な広告など、ノンリニア広告。
-* VPAID広告のプリロード
-* ライブコンテンツ内のVPAID広告
-* FlashVPAID広告
+* オーバーレイ広告、動的なコンパニオン広告、最小化可能な広告、折りたたみ可能な広告、拡大可能な広告などのノンリニア広告。
+* VPAID 広告のプリロード
+* ライブコンテンツ内の VPAID 広告
+* FlashVPAID 広告
 
 ## API {#section_0DB1D383CA5047B281BC808BC082C69B}
 
-以下のAPIエレメントはVPAID 2.0広告をサポートしています。
+次の API 要素は、VPAID 2.0 広告をサポートしています。
 
-* `MediaPlayer`の`getCustomAdView`メソッドは、VPAID広告をレンダリングするWeb表示ーを表す`CustomAdView`オブジェクトを返します。
+* The `getCustomAdView` メソッド `MediaPlayer` は、 `CustomAdView` オブジェクト。VPAID 広告をレンダリングする web ビューを表します。
 
-   `getCustomAdView`メソッドについて詳しくは、[MediaPlayer APIドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.MediaPlayer.html)を参照してください。
+  詳しくは、 `getCustomAdView` メソッド： [MediaPlayer API ドキュメント](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.MediaPlayer.html).
 
-* `MediaPlayer.setCustomAdTimeout(int milliseconds)` は、VPAID読み込みプロセスのタイムアウトを設定します。
+* `MediaPlayer.setCustomAdTimeout(int milliseconds)` は、VPAID 読み込みプロセスのタイムアウトを設定します。
 
-   デフォルトのタイムアウト値は10秒です。
+  デフォルトのタイムアウト値は 10 秒です。
 
-* API `auditudeSettings.ignoreVPAIDAds`を使用すると、Auditudeサーバーから受信したVPAID広告を無視できます。 このAPIはFlashのフォールバックでは動作しません。
+* API `auditudeSettings.ignoreVPAIDAds`「 」を使用すると、Auditudeサーバーから受信した VPAID 広告を無視できます。 この API は、Flashフォールバックでは機能しません。
 
-VPAID広告の再生中：
+VPAID 広告の再生中：
 
-* VPAID広告は、プレイヤー表示の上の表示コンテナに表示されるので、プレイヤー表示のタップに依存するコードは機能しません。
-* プレイヤーインスタンスで一時停止および再生を呼び出して、VPAID広告を一時停止および再開します。
-* VPAID広告には、インタラクティブな広告が含まれる可能性があるので、広告の長さは事前に定義されたものではありません。
+* VPAID 広告は、プレーヤービューの上のビューコンテナに表示されるので、プレーヤービューでのユーザーによるタップに依存するコードは機能しません。
+* プレーヤーインスタンスでの一時停止および再生の呼び出しは、VPAID 広告を一時停止し、再開します。
+* VPAID 広告はインタラクティブになるので、事前に定義された期間はありません。
 
-   広告サーバーの応答で指定される広告の継続時間と広告の時間の合計の継続時間は、正確でない場合があります。
+  広告サーバーの応答で指定されている広告の時間と合計広告の時間は、正確でない可能性があります。

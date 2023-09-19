@@ -1,15 +1,14 @@
 ---
-title: アカウント IQ のオンボーディングと利用の開始方法
-description: 'アカウント IQ のオンボーディング、前提条件および使用の手引き。 '
-source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
+title: アカウント IQ のオンボーディングと使用の手引き
+description: アカウント IQ のオンボーディング、前提条件および使用の手引き。
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
 
 ---
 
-
-# アカウント IQ のオンボーディングと利用の開始方法 {#onboard}
+# アカウント IQ のオンボーディングと使用の手引き {#onboard}
 
 アカウント IQ は、ホストされる Web アプリケーションです。 この分析ツールを D2C ストリーミングプロバイダー、プログラマーまたはディストリビューター (MVPD) として使用し、資格情報の共有を軽減するには、Adobe Experience Cloud組織に組織をオンボーディングし、組織のユーザーを **Primetime アカウント IQ** ～に関するプロフィール [Adobe Admin Console](https://adminconsole.adobe.com/). オンボーディングの前提条件と詳細については、以下を参照してください。
 
@@ -53,5 +52,3 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Adobeがアカウント IQ ダッシュボードにアクセスできない場合は、ユーザーサポートに連絡して、組織の ID がアカウント IQ のホワイトリストに登録されていることを確認してください。
-
-

@@ -1,20 +1,18 @@
 ---
-description: localTimeでbeginからendまでのTimeRangesをタイムラインから削除します。
-title: Primetime Ad Decisioning広告の範囲の削除
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: localTime の begin から end までの TimeRanges をタイムラインから削除します。
+title: Primetime Ad Decisioning 広告の範囲を削除
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
+# Primetime Ad Decisioning 広告の範囲を削除{#delete-ranges-with-primetime-ad-decisioning-ad}
 
-# Primetime ad decisioning ad{#delete-ranges-with-primetime-ad-decisioning-ad}を含む範囲の削除
+localTime の begin から end までの TimeRanges をタイムラインから削除します。
 
-localTimeでbeginからendまでのTimeRangesをタイムラインから削除します。
-
-フレーズ広告のある範囲を削除します。
+フレーズ広告を含む範囲を削除します。
 
 ```
 {   
@@ -66,4 +64,3 @@ localTimeでbeginからendまでのTimeRangesをタイムラインから削除�
     "id": "vod_003"
 }
 ```
-

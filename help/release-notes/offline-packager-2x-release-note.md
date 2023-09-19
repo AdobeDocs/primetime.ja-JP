@@ -1,134 +1,132 @@
 ---
-title: Primetime Offline Packager 2.xのリリース
-description: Primetime Offline Packager 2.1および2.3.1リリースの新機能
+title: Primetime Offline Packager 2.x リリース
+description: Primetime Offline Packager 2.1 および 2.3.1 リリースの新機能
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 0%
 
 ---
 
+# Primetime Offline Packager リリース {#primetime-offline-packager-x-releases}
 
-# Primetime Offline Packagerのリリース{#primetime-offline-packager-x-releases}
+Primetime Offline Packager 2.1 および 2.3.1 リリースの新機能
 
-Primetime Offline Packager 2.1および2.3.1リリースの新機能
+## Primetime Offline Packager 2.3.1（2016 年 10 月）の新機能  {#what-s-new-in-primetime-offline-packager-oct}
 
-## Primetime Offline Packager 2.3.1（2016年10月）の新機能{#what-s-new-in-primetime-offline-packager-oct}
-
-このリリースでは、MPEG-DASHのオンデマンドプロファイルが有効になり、PlaylistCreatorツールの`validate`オプションのサポートが追加されます。また、以下に示すMulti-DRMシナリオに関する主な修正はいくつかあります。
-
-| **問題番号** | **説明** |
-|---|---|
-| PTPUB-985 | HLS AAXSとSample-AESは、Packagerで生成されたキーに対しては機能しません。 |
-| PTPUB-973 | 特定のWidevineコンテンツの暗号化アルゴリズムで発生していたエラーを修正しました。 |
-| PTPUB-964 | 特定のプレーヤー(Android TVSDK)の特定のメディアタイプに対するCENCの暗号化が破損しました。 |
-| PTPUB-954 | サンプル —AES暗号化は、デフォルトではAAXS DRMをバイパスします。また、リモートキー配信が有効な状態でスローされるエラーもあります。 |
-| PTPUB-951 | Widevineでkey_file_pathが指定されていない場合、Offline Packagerでは例外がスローされません。 代わりにNPEをスローします。 |
-
-Primetime Packagerの最新ドキュメントは、[https://help.adobe.com/en_US/primetime/api/packagers/index.html](https://help.adobe.com/en_US/primetime/api/packagers/index.html)で入手できます。
-
-### バージョン2.3.1 {#known-issue-in-version}の既知の問題
-
-このリリースには、次の問題が存在します。
+このリリースでは、MPEG-DASH の On-Demand プロファイルが有効になり、 `validate` PlaylistCreator ツール用のオプションと、以下に示す Multi-DRM シナリオに関する主な修正点がいくつかあります。
 
 | **問題番号** | **説明** |
 |---|---|
-| PTPUB-1005 | AAXS DRM用に生成された最終設定レベルの.mpdファイルで、PlaylistCreatorが.psshファイルの正しいURLを提供しません。 |
-| PTPUB-1001 | in_pathパラメーターを介して空のパスが提供される場合、PlaylistCreatorはエラーをスローする必要があります |
-| PTPUB-990 | DASHの場合、Offline Packagerは、`log_vi` &amp; `iv_out_path`のパラメーターが指定されているときに、Packagerで生成されたIVをディスクに書き込みません。 |
-| PTPUB-980 | 構成ファイルをパッケージ化に使用する場合、パラメーター`key_url`を使用しても、指定された入力から引用符は削除されません。 |
+| PTPUB-985 | HLS AAXS と Sample-AES は、packager で生成されたキーに対しては機能しません。 |
+| PTPUB-973 | 一部の特定の Widevine コンテンツの暗号化アルゴリズムのエラーを修正しました。 |
+| PTPUB-964 | 特定のプレーヤー (Android TVSDK) の特定のメディアタイプに対して、CENC 暗号化が壊れました。 |
+| PTPUB-954 | Sample-AES 暗号化は、デフォルトでは AAXS DRM をバイパスし、リモートキー配信が有効になっている場合にエラーが発生します。 |
+| PTPUB-951 | Widevine で key_file_path が指定されていない場合、オフラインパッケージャは例外をスローしません。 代わりに NPE をスローします。 |
 
-## Adobe Primetimeオフラインパッケージャー2.3.1 {#adobe-primetime-offline-packager}
+Primetime Packager の最新ドキュメントについては、 [https://help.adobe.com/en_US/primetime/api/packagers/index.html](https://help.adobe.com/en_US/primetime/api/packagers/index.html).
 
-### 最小システム要件{#minimum-system-requirements}
+### バージョン 2.3.1 の既知の問題 {#known-issue-in-version}
+
+このリリースには次の問題が存在します。
+
+| **問題番号** | **説明** |
+|---|---|
+| PTPUB-1005 | AAXS DRM 用に生成された最終セットレベルの.mpd ファイルで、PlaylistCreatorが.pssh ファイルの正しい URL を提供しません。 |
+| PTPUB-1001 | in_path パラメーターで空のパスが指定された場合、PlaylistCreator はエラーをスローする必要があります |
+| PTPUB-990 | DASH の場合、Offline Packager は、パラメーターが `log_vi` &amp; `iv_out_path` が指定されている。 |
+| PTPUB-980 | 設定ファイルをパッケージ化に使用する場合は、パラメーター `key_url` では、指定された入力から引用符は削除されません。 |
+
+## Adobe Primetime Offline Packager 2.3.1 {#adobe-primetime-offline-packager}
+
+### 最小必要システム構成 {#minimum-system-requirements}
 
 サポートされるオペレーティングシステム
 
-* Linux CentOS 6.3 64ビット
+* Linux CentOS 6.3 64 ビット
 
 ハードウェア要件
 
-* 3.2 GHz Intel® Pentium® 4プロセッサー（デュアルIntel Xeon®以上を推奨）
+* 3.2GHz Intel® Pentium® 4 プロセッサー ( デュアル Intel Xeon®以上を推奨 )
 
-* 64ビットオペレーティングシステム：4 GBのRAM（8 GBを推奨）
+* 64 ビットオペレーティングシステム： 4GB の RAM（8GB を推奨）
 
 * ハードディスク
 
-(Disk-SAS):最小10 GB(7.5K RPM)
+(Disk-SAS)：最低 10GB (7,500 RPM)
 
-（ディスク —SSD）:400 MBps読み取り/書き込み速度
+(Disk-SSD)：読み取り/書き込み速度 400MBps
 
-(NAS):1 GB専用リンク
+(NAS): 1 GB の専用リンク
 
 ソフトウェア要件
 
-* OracleJava SE 1.8以降
+* OracleJava SE 1.8 以降
 
-### Adobe Primetimeオフラインパッケージャー2.3.1 {#adobe-primetime-offline-packager-1}
+### Adobe Primetime Offline Packager 2.3.1 {#adobe-primetime-offline-packager-1}
 
-1. [Oracleサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html)からJava SEソフトウェアをダウンロードし、インストール手順に従います。
-1. `PrimetimeOfflinePackager-2-3-1-b47-10142016.zip`という名前のAdobe PrimetimeOffline Packager 2.3.1アーカイブファイルをディスクに展開します。
+1. Java SE ソフトウェアを [Oracleサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html) をクリックし、インストール手順に従います。
+1. という名前のAdobe Primetime Offline Packager 2.3.1 アーカイブファイルを抽出します。 `PrimetimeOfflinePackager-2-3-1-b47-10142016.zip` をディスクに追加します。
 
-### Offline Packager 2.3.1の設定{#configuring-the-offline-packager}
+### Offline Packager 2.3.1 の設定 {#configuring-the-offline-packager}
 
-設定手順については、[https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)のPrimetime Offline Packager使用の手引きガイドを参照してください
+設定手順については、Primetime Offline Packager の概要ガイド ( ) を参照してください。 [https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)
 
-## Primetime Offline Packager 2.1（2015年7月）の新機能{#what-s-new-in-primetime-offline-packager-july}
+## Primetime Offline Packager 2.1（2015 年 7 月）の新機能 {#what-s-new-in-primetime-offline-packager-july}
 
-PlayReady BuyDRMのサポート（DASHの場合） 詳しくは、[ヘルプドキュメント](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)を参照してください。
+PlayReady BuyDRM のサポート（DASH 用）。 詳しくは、ヘルプドキュメントを参照してください。 [こちらから入手可能](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
 
-Offline Packagerの機能強化には、次のものも含まれています。
+オフラインパッケージャに対しても、次の機能強化がおこなわれました。
 
-PTPUB-780 EXT-X-開始タグのサポートを追加
+PTPUB-780 EXT-X-START タグのサポートを追加
 
-## Primetime Offline Packager 2.0（2015年6月）の新機能{#what-s-new-in-primetime-offline-packager-june}
+## Primetime Offline Packager 2.0（2015 年 6 月）の新機能 {#what-s-new-in-primetime-offline-packager-june}
 
-Clear DASH output supportが追加されました。 詳しくは、製品ドキュメント[ここ](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)を参照してください。
+DASH 出力のクリアのサポートが追加されました。 製品ドキュメントを参照してください。 [ここ](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html) 」を参照してください。
 
 このリリースでは、次の問題も修正されました。
 
-* PTPUB-783 Offline Packagerで、空のWebVTTファイルを処理できるようになりました。
-* PTPUB- 781特定のトランスコードされたMP4アセットがオフラインパッケージャーでパッケージ化され、MBR出力が生成される場合の、Chrome上のHLS出力内のアーティファクト。
+* PTPUB-783 Offline Packager で、空の WebVTT ファイルを処理できるようになりました。
+* PTPUB- 781 特定のトランスコードされた MP4 アセットがオフラインパッケージャと共にパッケージ化され、MBR 出力が生成されるときの、Chrome での HLS 出力のアーティファクト。
 
-## Adobe Primetimeオフラインパッケージャ2.1 {#adobe-primetime-offline-packager-2}
+## Adobe Primetime Offline Packager 2.1 {#adobe-primetime-offline-packager-2}
 
-### 最小システム要件{#minimum-system-requirements-1}
+### 最小必要システム構成 {#minimum-system-requirements-1}
 
 **サポートされるオペレーティングシステム**
 
-* Linux CentOS 6.3 64ビット
+* Linux CentOS 6.3 64 ビット
 
 **ハードウェア要件**
 
-* 3.2 GHz Intel® Pentium® 4プロセッサー（デュアルIntel Xeon®以上を推奨）
+* 3.2GHz Intel® Pentium® 4 プロセッサー ( デュアル Intel Xeon®以上を推奨 )
 
-* 64ビットオペレーティングシステム：4 GBのRAM（8 GBを推奨）
+* 64 ビットオペレーティングシステム： 4GB の RAM（8GB を推奨）
 
-* 1 Gbイーサネットカードを推奨（複数のネットワークカードと10 Gbもサポート）
+* 1 Gb イーサネットカードを推奨（複数のネットワークカードと 10 Gb もサポート）
 
 * ハードディスク
 
-   * (Disk-SAS):最小10 GB(7.5K RPM)
-   * （ディスク —SSD）:400 MBps読み取り/書き込み速度
-   * (NAS):1 GB専用リンク
+   * (Disk-SAS)：最低 10GB (7,500 RPM)
+   * (Disk-SSD)：読み取り/書き込み速度 400MBps
+   * (NAS): 1 GB の専用リンク
 
 **ソフトウェア要件**
 
-* OracleJava SE 1.8以降
+* OracleJava SE 1.8 以降
 
-### Offline Packager 2.1のインストール{#installing-offline-packager}
+### Offline Packager 2.1 のインストール {#installing-offline-packager}
 
-1. [Oracleサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html)からJava SEソフトウェアをダウンロードし、インストール手順に従います。
-1. `Adobe Primetime - Offline Packager 2.1.0 archive file, PrimetimeOfflinePackager-2-1-0-b15-07082015.zip`をディスクに展開します。
+1. Java SE ソフトウェアを [Oracleサイト](https://www.oracle.com/technetwork/java/javase/downloads/index.html) をクリックし、インストール手順に従います。
+1. を抽出します。 `Adobe Primetime - Offline Packager 2.1.0 archive file, PrimetimeOfflinePackager-2-1-0-b15-07082015.zip`をディスクに追加します。
 
-### Offline Packager 2.1の設定{#configuring-the-offline-packager-1}
+### Offline Packager 2.1 の設定 {#configuring-the-offline-packager-1}
 
-[https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)で利用可能な設定の詳細については、Primetime Offline Packager使用の手引きドキュメントを参照してください。
+設定の詳細については、 Primetime Offline Packager はじめにを参照してください。 [https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)
 
-## 役立つリソース{#helpful-resources}
+## 役立つリソース {#helpful-resources}
 
-* [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html)のページにある完全なヘルプドキュメントを参照してください。
+* 完全なヘルプドキュメントは、 [Adobe Primetimeラーニングとサポート](https://helpx.adobe.com/support/primetime.html) ページに貼り付けます。

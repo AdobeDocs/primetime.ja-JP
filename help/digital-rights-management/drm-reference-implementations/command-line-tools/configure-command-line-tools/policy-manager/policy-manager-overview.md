@@ -2,21 +2,19 @@
 title: 概要
 description: 概要
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%
 
 ---
 
+# 概要 {#overview}
 
-# 概要{#overview}
+Primetime DRM Policy Manager コマンドラインツール ( [!DNL AdobePolicyManager.jar]) を使用して、DRM ポリシーを作成および管理します。
 
-Primetime DRM Policy Managerコマンドラインツール([!DNL AdobePolicyManager.jar])を使用して、DRMポリシーを作成および管理します。
-
-[!DNL AdobePolicyManager.jar]を実行する前に、設定ファイルの「Policy Managerのプロパティ」セクションでプロパティを設定する必要があります。 設定ファイルで設定した値は、すべてのDRMポリシーに適用されます。
+実行する前に [!DNL AdobePolicyManager.jar]の場合は、設定ファイルの「Policy Manager のプロパティ」セクションでプロパティを設定する必要があります。 設定ファイルで設定した値は、すべての DRM ポリシーに適用されます。
 
 >[!NOTE]
 >
->コマンドラインからPolicy Managerのすべてのプロパティを指定することもできます。
+>また、すべての Policy Manager プロパティは、コマンドラインから指定できます。

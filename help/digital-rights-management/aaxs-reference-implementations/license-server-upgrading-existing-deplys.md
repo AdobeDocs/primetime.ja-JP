@@ -1,21 +1,19 @@
 ---
-title: 既存の配置のアップグレード
-description: 既存の配置のアップグレード
+title: 既存のデプロイメントのアップグレード
+description: 既存のデプロイメントのアップグレード
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
 
 ---
 
+# 既存のデプロイメントのアップグレード {#upgrading-existing-deployments}
 
-# 既存の配置をアップグレード{#upgrading-existing-deployments}
+バージョン 3.0 参照実装ライセンスサーバーまたは監視フォルダーパッケージャーを実行しているサーバーをアップグレードするには、 [!DNL .war] アプリケーション・サーバー上にデプロイされたファイルで、Adobe・アクセス参照実装サーバーに含まれるファイル。
 
-バージョン3.0 Reference Implementation License ServerまたはWatched Folder Packagerを実行しているサーバーをアップグレードするには、Application Serverにデプロイされている[!DNL .war]ファイルを、Adobeアクセスリファレンス実装サーバーに含まれているファイルに置き換えます。
-
-参照実装ライセンスサーバーでドメイン登録を使用する場合は、新しいデータベーステーブルがいくつか必要です。 参照実装データベース全体を再作成するには、`CreateSampleDB.sql`を実行します。 既存のデータベースレコードを保持し、新しいテーブルを追加するには、`CreateSampleDB.sql`を開き、次のテーブルを作成するコマンドのみを実行します。
+参照実装ライセンスサーバーでドメイン登録を使用する場合は、新しいデータベーステーブルがいくつか必要です。 参照実装データベース全体を再作成するには、を実行します。 `CreateSampleDB.sql`. 既存のデータベースレコードを保持し、新しいテーブルを追加するには、を開きます。 `CreateSampleDB.sql`コマンドを実行して、次のテーブルを作成します。
 
 * `DomainServerInfo`
 * `DomainKeys`
@@ -23,15 +21,14 @@ ht-degree: 0%
 * `UserDomainMembership`
 * `UserDomainRefCount`
 
-ドメインサポートを使用するには、flashaccess-refimpl.propertiesに次のプロパティを追加する必要があります。
+ドメインサポートを使用するには、以下のプロパティを flashaccess-refimpl.properties に追加する必要があります。
 
-* `HandlerConfiguration.DomainCAs.n` または  `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
+* `HandlerConfiguration.DomainCAs.n` または `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
 
-* `Domain RegistrationHandler.ServerCredential` および `DomainRegistrationHandler.ServerCredential.password`、または  `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
+* `Domain RegistrationHandler.ServerCredential` および `DomainRegistrationHandler.ServerCredential.password`または `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
 
 * `DomainRegistrationHandler.DomainServerUrl`
 
-iOSクライアントへのリモートキー配信をサポートするには、次のプロパティを[!DNL flashaccess-refimpl.properties]に追加する必要があります。
+次のプロパティをに追加する必要があります。 [!DNL flashaccess-refimpl.properties] iOSクライアントへのリモートキー配信をサポートするには：
 
-* `HandlerConfiguration.KeyServerCertificate` または  `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`
-
+* `HandlerConfiguration.KeyServerCertificate` または `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`

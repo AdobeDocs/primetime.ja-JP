@@ -1,13 +1,12 @@
 ---
 title: MVPD Preflight Authorization
 description: MVPD Preflight Authorization
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%
 
 ---
-
 
 # MVPD Preflight Authorization
 
@@ -21,7 +20,7 @@ ht-degree: 0%
 
 Adobe Primetime認証では、現在、AuthN 応答属性経由またはマルチチャネル AuthZ 要求経由の 2 つの方法で、MVPD のプリフライト認証をサポートしています。  次のシナリオでは、プリフライト認証を実装する様々な方法のコストとメリットについて説明します。
 
-* **ベストケースシナリオ** - MVPD は、承認フェーズ中に事前に許可されたリソースのリストを提供します（マルチチャネル AuthZ）。
+* **ベストケースシナリオ** - MVPD は、承認フェーズ中に事前に認証されたリソースのリストを提供します（マルチチャネル AuthZ）。
 * **最悪のケースのシナリオ** - MVPD が何らかの形式の複数のリソース認証をサポートしていない場合、Adobe Primetime認証サーバーは、リソースリスト内の各リソースに対して MVPD への認証呼び出しを実行します。 このシナリオは、（リソースの数に比例して）プリフライト認証リクエストの応答時間に影響を与えます。 パフォーマンスの問題を引き起こすAdobeと MVPD の両方のサーバーの負荷を増やすことができます。 また、実際に再生を必要とせずに、認証リクエスト/応答イベントを生成します。
 * **非推奨** - MVPD は、認証フェーズ中に事前に許可されたリソースのリストを提供するので、リストがクライアント上でキャッシュされるので、プリフライトリクエストも含め、ネットワーク呼び出しは不要です。
 
@@ -44,7 +43,7 @@ IdP の SAML 認証応答には、AdobePass が承認する必要のあるリソ
 </saml:AttributeStatement>
 ```
 
-上記のサンプルは、事前に認証された 2 つのリソースを含むリストです。「MMOD」と「Olinpics 2012」。
+上記のサンプルは、「MMOD」と「Olinpics2012」の 2 つの事前認証済みリソースを含むリストを示しています。
 
 これは効果的に最良のシナリオを達成し、すべてが既にクライアント上にあるので、プログラマーが checkPreauthorizedResources() を呼び出すと、ネットワーク呼び出しは実行されません。
 
@@ -55,8 +54,8 @@ IdP の SAML 認証応答には、AdobePass が承認する必要のあるリソ
 
 Adobe Primetime認証は、プログラマーのアプリケーションからリソースのリストを受け取ります。 次に、Adobe Primetime認証の MVPD 統合では、これらのすべてのリソースを含む 1 つの AuthZ 呼び出しをおこない、応答を解析して複数の許可/拒否の決定を抽出できます。  マルチチャネル AuthZ シナリオでのプリフライトのフローは、次のように機能します。
 
-1. プログラマーのアプリは、次のように、プリフライトクライアント API を介して、リソースのコンマ区切りリストを送信します。&quot;TestChannel1,TestChannel2,TestChannel3&quot;
-1. MVPD プリフライト AuthZ 要求呼び出しには複数のリソースが含まれ、次の構造を持ちます。
+1. プログラマーのアプリは、プリフライトクライアント API を介して、リソースのコンマ区切りリストを送信します。例：「TestChannel1,TestChannel2,TestChannel3」。
+1. MVPD プリフライト AuthZ 要求呼び出しには、複数のリソースが含まれ、次の構造を持ちます。
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?><soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"> 
@@ -125,7 +124,7 @@ Adobeは、既存の実装に変更を加えることなく、複数のチャネ
 
 | プリフライトアプローチ | MVPD | メモ |
 |:-------------------------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
-| マルチチャネル AuthZ | Comcast AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |  |
+| マルチチャネル AuthZ | Comcast AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |                                                                    |
 | ユーザメタデータのチャネルラインアップ | 突然の HTC のリンク | すべての Synacor の直接統合も、この方法をサポートできます。 |
 | 分岐と結合 | 上記以外のすべて | チェックされたリソースのデフォルトの最大数= 5。 |
 

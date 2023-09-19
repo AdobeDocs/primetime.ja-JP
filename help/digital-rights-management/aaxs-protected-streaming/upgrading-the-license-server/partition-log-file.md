@@ -2,15 +2,13 @@
 title: パーティションログファイル
 description: パーティションログファイル
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '29'
 ht-degree: 0%
 
 ---
 
-
 # パーティションログファイル{#partition-log-file}
 
-パーティションログファイルflashaccess-partition.logは、*LicenseServer.LogRoot* [!DNL /flashaccesserver]にあります。 このログには、ライセンス要求の処理中に生成されたログメッセージが含まれます。
+パーティション・ログ・ファイル flashaccess-partition.log は、 *LicenseServer.LogRoot* [!DNL /flashaccesserver]. このログには、ライセンス要求の処理中に生成されたログメッセージが含まれます。

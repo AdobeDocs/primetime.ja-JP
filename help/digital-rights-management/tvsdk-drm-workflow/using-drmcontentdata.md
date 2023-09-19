@@ -1,16 +1,14 @@
 ---
-title: DRMContentDataクラスの使用
-description: DRMContentDataクラスの使用
+title: DRMContentData クラスの使用
+description: DRMContentData クラスの使用
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
+# DRMContentData クラスの使用 {#using-the-drmcontentdata-class}
 
-# DRMContentDataクラス{#using-the-drmcontentdata-class}の使用
-
-`DRMContentData`オブジェクトには、Adobeアクセスで保護されたコンテンツのメタデータプロパティが含まれます。 `DRMContentData`プロパティには、コンテンツ表示用のライセンスを取得するために必要な情報が含まれます。 `DRMContentData`クラスを使用して、コンテンツに関連付けられたメタデータファイルを取得できます。詳しくは、*コンテンツ保護プロセスの概要*&#x200B;を参照してください。 詳しくは、『Adobe Flash PlatformActionScript3.0リファレンスガイド』の[DRMContentDataクラス](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMContentData.html)を参照してください。
+The `DRMContentData` オブジェクトには、Adobeアクセスで保護されたコンテンツのメタデータプロパティが含まれます。 The `DRMContentData` プロパティには、コンテンツを表示するためのライセンスを取得するために必要な情報が含まれます。 以下を使用すると、 `DRMContentData` クラスを使用して、コンテンツに関連付けられたメタデータファイルを取得します。詳しくは、 *コンテンツ保護プロセスの概要*. 詳しくは、 [DRMContentData クラス](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMContentData.html) (Adobe Flash PlatformのActionScript3.0 リファレンス )。

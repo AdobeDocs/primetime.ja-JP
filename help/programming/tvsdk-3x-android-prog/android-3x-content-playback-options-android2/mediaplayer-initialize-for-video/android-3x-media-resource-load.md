@@ -1,39 +1,37 @@
 ---
-description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む方法の1つです。
-title: メディアリソースをメディアプレイヤーに読み込む
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaResource を直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースの読み込み方法の 1 つです。
+title: メディアプレーヤーへのメディアリソースの読み込み
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
+# メディアプレーヤーへのメディアリソースの読み込み {#load-a-media-resource-in-the-media-player}
 
-# メディアリソースをメディアプレイヤーに読み込む{#load-a-media-resource-in-the-media-player}
+MediaResource を直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースの読み込み方法の 1 つです。
 
-MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む方法の1つです。
+1. 新しいリソースを再生するメディアプレーヤーを設定します。
 
-1. 新しいリソースを再生するようにメディアプレイヤーを設定します。
+   を呼び出して、現在再生可能な項目を置き換える `MediaPlayer.replaceCurrentResource()` そして既存の `MediaResource` インスタンス。
 
-   `MediaPlayer.replaceCurrentResource()`を呼び出し、既存の`MediaResource`インスタンスを渡して、現在再生可能な項目を置き換えます。
+   リソースの読み込みプロセスが開始されます。
 
-   これは、リソースの読み込みプロセスを開始します。
-
-1. `MediaPlayerEvent.STATUS_CHANGED`イベントを`MediaPlayer`インスタンスに登録します。 このコールバックで、少なくとも次のステータス値を確認します。
+1. を登録します。 `MediaPlayerEvent.STATUS_CHANGED` イベント `MediaPlayer` インスタンス。 このコールバックで、少なくとも次のステータス値を確認します。
 
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.ERROR`
 
-   これらのイベントを通じて、`MediaPlayer`オブジェクトは、メディアリソースが正常に読み込まれたことをアプリケーションに通知します。
-1. メディアプレイヤーのステータスが`INITIALIZED`に変わったら、`MediaPlayer.prepareToPlay()`を呼び出すことができます。
+   これらのイベントを通じて、 `MediaPlayer` オブジェクトは、メディアリソースが正常に読み込まれた場合に、アプリケーションに通知します。
+1. メディアプレーヤーのステータスが `INITIALIZED`を呼び出すと、 `MediaPlayer.prepareToPlay()`.
 
-   このステータスは、メディアが正常に読み込まれたことを示します。 新しい`MediaPlayerItem`は再生の準備ができました。 `prepareToPlay()`開始を呼び出すと、広告解決と配置プロセスが発生します（存在する場合）。
+   このステータスは、メディアが正常に読み込まれたことを示します。 新しい `MediaPlayerItem` は再生の準備ができています。 呼び出し `prepareToPlay()` 広告の解決および配置プロセスを開始します（存在する場合）。
 
-エラーが発生した場合は、メディアプレイヤーのステータスが`ERROR`に切り替わります。
+エラーが発生した場合、メディアプレーヤーは `ERROR` ステータス。
 
-以下のサンプルコードは、メディアリソースの読み込みプロセスを簡単に示しています。
+以下に、メディアリソースの読み込みプロセスを簡略化したサンプルコードを示します。
 
 ```java>
 // mediaResource is a properly configured MediaResource instance 

@@ -2,25 +2,22 @@
 title: パフォーマンスの調整
 description: パフォーマンスの調整
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
 
 ---
 
+# パフォーマンスの調整{#performance-tuning}
 
-# パフォーマンス調整{#performance-tuning}
+パフォーマンスを向上させるには、次のヒントを使用します。
 
-パフォーマンスを向上させるには、次のヒントを参考にしてください。
+* ネットワーク HSM の使用は、直接接続された HSM の使用に比べて大幅に遅くなる可能性があります。
+* パフォーマンスを向上させるには、SDK の「thirdparty/cryptoj」フォルダーにあるプラットフォーム固有のライブラリをデプロイして、暗号化操作のネイティブサポートをオプションで有効にできます。 ネイティブサポートを有効にするには、プラットフォーム用のライブラリ（Windows の場合は jsafe.dll 、Linux の場合は libjsafe.so ）をパスに追加します。
 
-* ネットワークHSMの使用は、直接接続されたHSMの使用に比べて、大幅に遅くなる可能性があります。
-* パフォーマンスを向上させるために、SDKの「thirdparty/cryptoj」フォルダーにあるプラットフォーム固有のライブラリをデプロイすることで、暗号化操作のネイティブサポートをオプションで有効にできます。 ネイティブサポートを有効にするには、プラットフォーム用のライブラリ（Windowsの場合はjsafe.dll、Linuxの場合はlibjsafe.so）をパスに追加します。
+  >[!NOTE]
+  >
+  >同じ Tomcat インスタンスで複数の Web アプリケーションを実行し、 `jsafe.dll` パスで、を読み込めるのは最初の web アプリケーションのみです。 `jsafe.dll` ライブラリ。 したがって、ネイティブサポートのメリットを得られるのは最初の Web アプリケーションのみです。 このような場合、すべての Web アプリケーションのパフォーマンスを向上させるには、 `cryptoj.jar`WAR ファイルの外側にあります。 例えば、 `<tomcat_installation_folder>/lib` ディレクトリ。
 
-   >[!NOTE]
-   >
-   >同じTomcatインスタンスで複数のWebアプリケーションを実行し、パスに`jsafe.dll`がある場合、`jsafe.dll`ライブラリをロードできるのは最初のWebアプリケーションだけです。 したがって、最初のWebアプリケーションのみがネイティブサポートのメリットを受けます。 このような場合、すべてのWebアプリケーションのパフォーマンスを向上させるには、WARファイルの外側に`cryptoj.jar`を配置します。 例えば、`<tomcat_installation_folder>/lib`ディレクトリにあります。
-
-* 64ビット版のRed Hat®やWindowsなどの64ビット版のオペレーティングシステムは、32ビット版のオペレーティングシステムと比べて、パフォーマンスが大幅に向上します。
-
+* 64 ビット版の Red Hat®や Windows などの 64 ビットオペレーティングシステムは、32 ビット版のオペレーティングシステムと比べてはるかに高いパフォーマンスを発揮します。

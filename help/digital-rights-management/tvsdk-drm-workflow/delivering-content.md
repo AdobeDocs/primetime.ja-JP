@@ -2,20 +2,18 @@
 title: コンテンツの配信
 description: コンテンツの配信
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
+# コンテンツの配信 {#delivering-content}
 
-# コンテンツの配信{#delivering-content}
+Primetime DRM はコンテンツの配信メカニズムに依存しません。ランタイムはネットワークレイヤーを抽象化し、保護されたコンテンツを Primetime DRM サブシステムに提供するだけです。 したがって、HTTP、HTTP Dynamic Streaming、RTMP、RTMPE、HLS などを使用してコンテンツを配信できます。
 
-Primetime DRMはコンテンツの配信メカニズムには依存しません。ランタイムはネットワーク層を抽象化し、保護されたコンテンツをPrimetime DRMサブシステムに提供するだけなのです。 したがって、コンテンツはHTTP、HTTP Dynamic Streaming、RTMP、RTMPE、HLSなどを通じて配信できます。
-
-ただし、プロトコルによっては、保護されたコンテンツのメタデータ（`DRMContentData` — 通常はサイドロードされた[!DNL .metadata]ファイルの形式）の取得に、複雑なデータが含まれる場合があります。 このDRMメタデータは、ライセンスのプリフェッチ、DRM認証、デバイスドメインへの参加など、`DRMManager` APIを呼び出すために必要です。 例えば、RTMP/RTMPEプロトコルの場合、FLVとF4VのデータのみがFlash Media Server(FMS)を介してクライアントに配信できます。 このため、クライアントは他の方法でメタデータBLOBを取得する必要があります。 この問題を解決する1つの方法は、HTTP Webサーバー上でメタデータをホストし、再生中のコンテンツに応じて適切なメタデータを取得するようにクライアントビデオプレーヤーを実装することです。
+ただし、プロトコルによっては、保護されたコンテンツのメタデータ ( `DRMContentData`  — 通常、サイドロードされた形で [!DNL .metadata] ファイル ) です。 この DRM メタデータは、 `DRMManager` API（ライセンスのプリフェッチ、DRM 認証、デバイスドメインへの参加など）。 例えば、RTMP/RTMPE プロトコルでは、Flash Media Server(FMS) を通じて FLV と F4V のデータのみをクライアントに配信できます。 このため、クライアントは他の方法でメタデータ blob を取得する必要があります。 この問題を解決する 1 つの方法は、HTTP Web サーバー上でメタデータをホストし、再生されるコンテンツに応じて適切なメタデータを取得するようにクライアントビデオプレーヤーを実装することです。
 
 ```
 private function getMetadata():void { 
@@ -37,4 +35,3 @@ private function getMetadata():void {
     } 
 } 
 ```
-

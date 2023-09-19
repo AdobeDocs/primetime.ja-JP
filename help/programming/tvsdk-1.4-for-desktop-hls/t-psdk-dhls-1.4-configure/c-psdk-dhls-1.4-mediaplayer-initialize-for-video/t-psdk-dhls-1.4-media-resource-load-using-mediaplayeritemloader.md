@@ -1,31 +1,29 @@
 ---
-description: メディアリソースを解決する別の方法は、MediaPlayerItemLoaderを使用する方法です。 これは、MediaPlayerインスタンスをインスタンス化せずに、特定のメディアストリームに関する情報を取得する場合に役立ちます。
-title: MediaPlayerItemLoaderを使用したメディアリソースの読み込み
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: メディアリソースを解決するもう 1 つの方法は、 MediaPlayerItemLoader を使用することです。 これは、MediaPlayer インスタンスをインスタンス化せずに、特定のメディアストリームに関する情報を取得する場合に役立ちます。
+title: MediaPlayerItemLoader を使用したメディアリソースの読み込み
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '168'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# MediaPlayerItemLoader を使用したメディアリソースの読み込み{#load-a-media-resource-using-mediaplayeritemloader}
 
-# MediaPlayerItemLoader{#load-a-media-resource-using-mediaplayeritemloader}を使用したメディアリソースの読み込み
+メディアリソースを解決するもう 1 つの方法は、 MediaPlayerItemLoader を使用することです。 これは、MediaPlayer インスタンスをインスタンス化せずに、特定のメディアストリームに関する情報を取得する場合に役立ちます。
 
-メディアリソースを解決する別の方法は、MediaPlayerItemLoaderを使用する方法です。 これは、MediaPlayerインスタンスをインスタンス化せずに、特定のメディアストリームに関する情報を取得する場合に役立ちます。
+を通じて `MediaPlayerItemLoader` クラスを使用すると、メディアリソースを `MediaPlayerItem` にビューを取り付けずに `MediaPlayer` インスタンスを使用して、ビデオデコーディングハードウェアリソースを割り当てます。 を取得するプロセス `MediaPlayerItem` インスタンスは非同期です。
 
-`MediaPlayerItemLoader`クラスを通じて、`MediaPlayer`インスタンスに表示を割り当てることなく、対応する`MediaPlayerItem`とメディアリソースを交換できます。その結果、ビデオデコーディングハードウェアリソースが割り当てられます。 `MediaPlayerItem`インスタンスを取得するプロセスは非同期です。
-
-1. 以下の`MediaPlayerItemLoader`イベント用にイベントリスナーを実装します。
+1. これらのイベントリスナーの実装 `MediaPlayerItemLoader` イベント：
 
    * `MediaPlayerItemLoaderEvent.ERROR` イベント
 
-      TVSDKは、このメソッドを使用して、エラーが発生したことをアプリケーションに通知します。 TVSDKは、診断情報を含むエラープロパティを提供します。
+     TVSDK は、この値を使用して、エラーが発生したことをアプリケーションに通知します。 TVSDK は、診断情報を含むエラープロパティを提供します。
 
-1. このインスタンスを`MediaPlayerItemLoader`に登録します。
-1. `DefaultMediaPlayerItemLoader.load`を呼び出し、`MediaResource`オブジェクトのインスタンスを渡します。
+1. このインスタンスをに登録 `MediaPlayerItemLoader`.
+1. 通話 `DefaultMediaPlayerItemLoader.load`を渡し、 `MediaResource` オブジェクト。
 
-   `MediaResource`オブジェクトのURLは、情報を取得するストリームを指している必要があります。 例：
+   の URL `MediaResource` オブジェクトは、情報を取得するストリームを指している必要があります。 例：
 
    ```
    private function onLoadError(event:MediaPlayerItemLoaderEvent):void { 
@@ -45,4 +43,3 @@ ht-degree: 1%
    // load the media resource 
    itemLoader.load(mediaResource); 
    ```
-

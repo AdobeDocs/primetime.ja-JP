@@ -1,26 +1,24 @@
 ---
-description: 302リダイレクトの最適化は、302リダイレクト応答の数を最小限に抑え、アプリケーションのロードバランシングをより効果的に行うことができます。
-title: 302リダイレクトの最適化の無効化または有効化
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 302 リダイレクトの最適化により、302 リダイレクト応答の数を最小限に抑え、アプリケーションのロードバランスをより効果的に実現できます。
+title: 302 リダイレクトの最適化を無効または有効にします
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '104'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# HTTP 302 リダイレクトの最適化 {#http-302-redirect-optimization}
 
-# HTTP 302リダイレクトの最適化{#http-302-redirect-optimization}
+302 リダイレクトの最適化により、302 リダイレクト応答の数を最小限に抑え、アプリケーションのロードバランスをより効果的に実現できます。
 
-302リダイレクトの最適化は、302リダイレクト応答の数を最小限に抑え、アプリケーションのロードバランシングをより効果的に行うことができます。
-
-メインのマニフェスト要求がリダイレクトされ、プレイヤーで302最適化が有効になっている場合、そのマニフェストからアセットに対して行われる以降の要求では、最終的なドメインの場所が使用され、302個の追加の応答が回避されます。
+メインのマニフェストリクエストがリダイレクトされ、プレーヤーで 302 最適化が有効になっている場合、そのマニフェストからのアセットに対して以降におこなわれるリクエストでは最終的なドメインの場所が使用され、302 件の追加の応答が避けられます。
 
 この機能はデフォルトで有効になっており、この設定は変更できます。
 
-## 302リダイレクトの最適化を無効または有効にする{#disable-or-enable-redirect-optimization}
+## 302 リダイレクトの最適化を無効または有効にします{#disable-or-enable-redirect-optimization}
 
-`useRedirectedUrl`プロパティを使用して、302リダイレクトを有効(true)または無効(false)にします。
+以下を使用します。 `useRedirectedUrl` プロパティを使用して、302 リダイレクトをオン (true) またはオフ (false) にします。
 例：
 
 ```java
@@ -39,4 +37,3 @@ MediaResource resource = MediaResource.createFromURL(url, resourceMetadata);
 //Load the resource 
 mediaPlayer.replaceCurrentItem(resource);
 ```
-

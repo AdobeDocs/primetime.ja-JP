@@ -1,110 +1,108 @@
 ---
-description: Widevineライセンストークンインターフェイスは、実稼働およびテストサービスを提供します。
-title: Widevineライセンストークンリクエスト/レスポンス
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Widevine ライセンストークンインターフェイスは、実稼動およびテストサービスを提供します。
+title: Widevine ライセンストークンリクエスト/レスポンス
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 5%
 
 ---
 
+# Widevine ライセンストークンリクエスト/レスポンス {#widevine-license-token-request-response}
 
-# Widevineライセンストークンリクエスト/レスポンス{#widevine-license-token-request-response}
+Widevine ライセンストークンインターフェイスは、実稼動およびテストサービスを提供します。
 
-Widevineライセンストークンインターフェイスは、実稼働およびテストサービスを提供します。
+この HTTP リクエストは、Widevine ライセンスに交換できるトークンを返します。
 
-このHTTPリクエストは、Widevineライセンスに交換できるトークンを返します。
-
-**方法：GET、POST** （www-url-encoded bodyに両方のメソッドのパラメーターが含まれている場合）
+**メソッド：GET、POST** （www-url-encoded の本文には、両方のメソッドのパラメータが含まれています）
 
 **URL:**
 
-* **実稼働環境：** `https://wv-gen.{prod_domain}/hms/wv/token`
+* **実稼動：** `https://wv-gen.{prod_domain}/hms/wv/token`
 
 * **テスト：** ` [https://wv-gen.test.expressplay.com/hms/wv/token](https://wv-gen.test.expressplay.com/hms/wv/token)`
 
 * **リクエストの例：**
 
-   ```
-   https://wv-gen.service.expressplay.com/hms/wv/token?customerAuthenticator= 
-   <ExpressPlay customer authenticator identifier>
-   ```
+  ```
+  https://wv-gen.service.expressplay.com/hms/wv/token?customerAuthenticator= 
+  <ExpressPlay customer authenticator identifier>
+  ```
 
-* **応答の例：**
+* **レスポンスのサンプル：**
 
-   ```
-   https://wv.service.expressplay.com/hms/wv/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
-   ```
+  ```
+  https://wv.service.expressplay.com/hms/wv/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
+  ```
 
 <!--<a id="section_1E22012EE4B94BB2974D3B16DE8812D9"></a>-->
 
-**表13:トークンクエリパラメーター**
+**表 13：トークン・クエリー・パラメータ**
 
 <table id="table_ww1_hcs_pv">  
  <thead> 
   <tr> 
-   <th class="entry"> <b>クエリパラメータ</b> </th> 
+   <th class="entry"> <b>クエリパラメーター</b> </th> 
    <th class="entry"> <b>説明</b> </th> 
    <th class="entry"> <b>必須？</b> </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> customerAuthenticator  </span> </td> 
-   <td> <p>これは、お客様のAPIキーで、本番環境とテスト環境用に1つずつあります。 これは、ExpressPlayの「Admin」ダッシュボードタブで確認できます。 </p> </td> 
+   <td> <span class="codeph"> customerAuthenticator </span> </td> 
+   <td> <p>これは、実稼動環境とテスト環境用に 1 つずつ、顧客 API キーです。 これは、「 ExpressPlay Admin Dashboard 」タブで確認できます。 </p> </td> 
    <td> はい </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> errorFormat  </span> </td> 
-   <td> <span class="codeph"> html </span>または<span class="codeph"> json </span>です。 <p><span class="codeph"> html </span> （デフォルト）の場合、すべてのエラーのHTML表現が応答のエンティティ本体に提供されます。 <span class="codeph"> json </span>を指定した場合、JSON形式で構造化された応答が返されます。 詳しくは、<a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSONエラー</a>を参照してください。 </p> <p>応答のMIMEタイプは、成功した場合は<span class="codeph"> text/uri-リスト</span>、<span class="codeph"> html </span> error形式の場合は<span class="codeph"> text/html </span>、<span class="codeph"> application/json </span> for <span class="codeph"> json </span> error形式の場合はです。 </p> </td> 
+   <td> <span class="codeph"> errorFormat </span> </td> 
+   <td> 次のいずれか <span class="codeph"> html </span> または <span class="codeph"> json </span>. <p>次の場合 <span class="codeph"> html </span> （デフォルト）HTMLのエラー表現は、応答のエンティティ本文に表示されます。 次の場合 <span class="codeph"> json </span> が指定されている場合、JSON 形式の構造化された応答が返されます。 詳しくは、 <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON エラー </a> 」を参照してください。 </p> <p>応答の MIME タイプは、 <span class="codeph"> text/uri-list </span> 成功して <span class="codeph"> text/html </span> 対象： <span class="codeph"> html </span> エラーフォーマット、または <span class="codeph"> application/json </span> 対象： <span class="codeph"> json </span> エラーフォーマット。 </p> </td> 
    <td> いいえ </td> 
   </tr> 
  </tbody> 
 </table>
 
-**表14:ライセンスクエリのパラメータ**
+**表 14：ライセンス・クエリー・パラメータ**
 
-| クエリパラメータ | 説明 | 必須？ |
+| クエリパラメーター | 説明 | 必須？ |
 |--- |--- |--- |
-| `generalFlags` | ライセンスフラグを表す4バイトの16進文字列。 許可されている値は「0000」のみです。 | いいえ |
-| `kek` | キー暗号化キー(KEK)。 鍵は、鍵ラップアルゴリズム（AES鍵ラップ、RFC3394）を使用して、KEKで暗号化されて保存されます。 | いいえ |
-| `kid` | コンテンツ暗号化キーの16バイトの16進文字列表現または文字列`^somestring'`です。 `^`に続く文字列の長さは、64文字以下にする必要があります。 例については、下の注意を参照してください。 | はい |
-| `ek` | 暗号化されたコンテンツキーの16進文字列表現です。 | いいえ |
-| `contentKey` | コンテンツ暗号化キーの16バイトの16進文字列表現です | はい（`kek`と`ek`または`kid`を指定しない場合） |
-| `contentId` | コンテンツID | いいえ |
-| `securityLevel` | 指定できる値は1 ～ 5です。 <ul><li>1 = `SW_SECURE_CRYPTO`</li><li> 2 = `SW_SECURE_DECODE` </li><li> 3 = `HW_SECURE_CRYPTO` </li><li> 4 = `HW_SECURE_DECODE` </li><li> 5 = `HW_SECURE_ALL`</li></ul> | はい |
-| `hdcpOutputControl` | 指定できる値は0、1、2です。 <ul><li>0 = `HDCP_NONE` </li><li> 1 = `HDCP_V1` </li><li> 2 = `HDCP_V2`</li></ul> | はい |
-| `licenseDuration` * | ライセンスの期間（秒）。 指定しなかった場合は、期間に制限がないことを示します。 詳細は下記のメモを参照してください。 | いいえ |
-| `wvExtension` | コンマ区切り文字列として、extensionTypeとextensionPayloadをショート形式でラップしたもの。 以下の形式を参照してください。 例：`…&wvExtension=wudo,AAAAAA==&…` | いいえ。任意の数を使用できます。 |
+| `generalFlags` | ライセンスフラグを表す 4 バイトの 16 進文字列。 許可されている値は「0000」のみです | いいえ |
+| `kek` | キー暗号化キー (KEK)。 キーは、キーラッピングアルゴリズム（AES キーラップ、RFC3394）を使用して、KEK で暗号化されて格納されます。 | いいえ |
+| `kid` | コンテンツ暗号化キーまたは文字列の 16 バイトの 16 進文字列表現です `^somestring'`. 文字列の長さの後に `^` は 64 文字以下にする必要があります。 例については、以下のメモを確認してください。 | はい |
+| `ek` | 暗号化されたコンテンツキーの 16 進文字列表現です。 | いいえ |
+| `contentKey` | コンテンツ暗号化キーの 16 バイトの 16 進文字列表現 | はい、ただし `kek` および `ek` または `kid` が指定されている |
+| `contentId` | コンテンツ ID | いいえ |
+| `securityLevel` | 使用できる値は 1 ～ 5 です。 <ul><li>1 = `SW_SECURE_CRYPTO`</li><li> 2 = `SW_SECURE_DECODE` </li><li> 3 = `HW_SECURE_CRYPTO` </li><li> 4 = `HW_SECURE_DECODE` </li><li> 5 = `HW_SECURE_ALL`</li></ul> | はい |
+| `hdcpOutputControl` | 使用できる値は 0、1、2 です。 <ul><li>0 = `HDCP_NONE` </li><li> 1 = `HDCP_V1` </li><li> 2 = `HDCP_V2`</li></ul> | はい |
+| `licenseDuration` * | ライセンスの期間（秒）。 指定されていない場合は、期間に制限がないことを示します。 詳細は、以下のメモを確認してください。 | いいえ |
+| `wvExtension` | extensionType と extensionPayload をコンマ区切りの文字列としてラッピングした短い形式です。 以下の形式を参照してください。 例： `…&wvExtension=wudo,AAAAAA==&…` | いいえ、任意の数を使用できます |
 
-`licenseDuration`について： <ol><li> 再生が開始されてから`licenseDuration`秒後に停止します。 </li><li> 再生を無制限の時間停止/再開できるようにするには、`licenseDuration`を省略します（デフォルトは無限になります）。 それ以外の場合は、エンドユーザーがストリームを楽しめる時間を指定します。 </li></ol>
+について `licenseDuration`: <ol><li> 再生が停止します `licenseDuration` 再生開始後の秒数。 </li><li> 再生を無制限の時間に停止/再開できるようにするには、を省略します。 `licenseDuration` （デフォルトでは無限に設定されます）。 それ以外の場合は、エンドユーザーがストリームを楽しめる時間を指定します。 </li></ol>
 
-**表15:トークン制限のクエリパラメーター**
+**表 15：トークン制限クエリー・パラメータ**
 
-| クエリパラメータ | 説明 | 必須？ |
+| クエリパラメーター | 説明 | 必須？ |
 |--- |--- |--- |
-| `expirationTime` | このトークンの有効期限。 この値は、Zゾーン指定子（「ズールー時間」）での[RFC 3339](https://www.ietf.org/rfc/rfc3339.txt)日付/時刻形式の文字列か、前に+符号の付いた整数である必要があります。 RFC 3339日付/時刻の例は、2006-04-14T12:01:10Zです。 <br> 値が [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) 日付/時刻形式の文字列である場合は、トークンの絶対的な有効期限切れ日時を表します。値が前に+符号の付いた整数である場合、発行からトークンが有効な相対秒数として解釈されます。 例えば、`+60`は1分を指定します。 <br> 最大およびデフォルト（指定されていない場合）のトークン有効期間は30日です。 | いいえ |
+| `expirationTime` | このトークンの有効期限。 この値は、 [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) 「Z」ゾーン指定子（「ズール時間」）での日付/時刻形式、または前に+記号が付いた整数。 RFC 3339 日時の例は2006-04-14T12です:01:10Z <br> 値が [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) 日付/時刻形式の場合は、トークンの絶対的な有効期限切れの日時を表します。 値が整数の前に+記号が付いた場合、発行からトークンが有効であることを相対秒数として解釈します。 例： `+60` 1 分を指定します。 <br> トークンの有効期間は、最大とデフォルト（指定されていない場合）で 30 日です。 | いいえ |
 
-**表16:相関クエリパラメータ**
+**表 16：相関クエリー・パラメータ**
 
-| **クエリパラメータ** | **説明** | **必須？** |
+| **クエリパラメーター** | **説明** | **必須？** |
 |---|---|---|
-| `cookie` | 最長32文字の任意の文字列で、トークンに格納され、トークン交換サーバーによって記録されます。 交換サーバーのログエントリとサービスプロバイダーのサーバーのログエントリを相互に関連付けるために使用できます。 | いいえ |
+| `cookie` | 最大 32 文字の任意の文字列。トークンに格納され、トークン交換サーバーによって記録されます。 引き換えサーバーのログエントリと、サービスプロバイダーのサーバーのログエントリを関連付けるために使用できます。 | いいえ |
 
 <!--<a id="section_6BFBD314C77C40C4B172ABBDD2D8D80E"></a>-->
 
-**表17:HTTP応答**
+**表 17: HTTP 応答**
 
-| **HTTPステータスコード** | **説明** | **Content-Type** | **エンティティボディに次を含む** |
+| **HTTP ステータスコード** | **説明** | **Content-Type** | **エンティティ本文に次を含む** |
 |---|---|---|---|
-| `200 OK` | エラーはありません。 | `text/uri-list` | ライセンス取得URL +トークン |
-| `400 Bad Request` | 無効な引数 | `text/html` または  `application/json` | エラーの説明 |
-| `401 Unauthorized` | 認証に失敗しました | `text/html` または  `application/json` | エラーの説明 |
-| `404 Not found` | 不正なURL | `text/html` または  `application/json` | エラーの説明 |
-| `50x Server Error` | サーバーエラー | `text/html` または  `application/json` | エラーの説明 |
+| `200 OK` | エラーはありません。 | `text/uri-list` | ライセンス取得 URL +トークン |
+| `400 Bad Request` | 無効な引数 | `text/html` または `application/json` | エラーの説明 |
+| `401 Unauthorized` | 認証に失敗しました | `text/html` または `application/json` | エラーの説明 |
+| `404 Not found` | 無効な URL | `text/html` または `application/json` | エラーの説明 |
+| `50x Server Error` | サーバーエラー | `text/html` または `application/json` | エラーの説明 |
 
-**表18:イベントエラーコード**
+**表 18：イベントエラーコード**
 
 <table id="table_agj_gqx_pv">  
  <thead> 
@@ -116,19 +114,19 @@ Widevineライセンストークンインターフェイスは、実稼働およ
  <tbody> 
   <tr> 
    <td> -2002 </td> 
-   <td> 無効なトークン有効期限：&lt;詳細&gt; </td> 
+   <td> 無効なトークン有効期限： &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2003 </td> 
-   <td> 無効なIPアドレス </td> 
+   <td> 無効な IP アドレス </td> 
   </tr> 
   <tr> 
    <td> -2005 </td> 
-   <td> 無効なコンテンツ暗号化キー：&lt;詳細&gt; </td> 
+   <td> 無効なコンテンツ暗号化キー： &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2008 </td> 
-   <td> 無効な出力制御フラグが指定されました：&lt;詳細&gt; </td> 
+   <td> 無効な出力制御フラグが指定されました： &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2017 </td> 
@@ -136,11 +134,11 @@ Widevineライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td> 認証トークンが無効です：&lt;詳細&gt; <p>注意： 認証子が間違っている場合や、本番用認証子を使用して*.test.expressplay.comのテストAPIにアクセスしている場合、またはその逆の場合に、この問題が発生する可能性があります。 </p> <p importance="high">注意： テストSDKとアドバンスドテストツール(ATT)は<span class="filepath"> *.test.expressplay.com </span>でのみ機能しますが、実稼働デバイスは<span class="filepath"> *.service.expressplay.com </span>を使用する必要があります。 </p>. </td> 
+   <td> 認証トークンが無効です： &lt;details&gt; <p>注意：これは、認証子が間違っている場合や、*.test.expressplay.comにあるテスト API に本番用認証子を使用してアクセスする場合、または本番用認証子を使用してテスト API にアクセスする場合に発生する可能性があります。 </p> <p importance="high">注意：テスト SDK と高度なテストツール (ATT) は、 <span class="filepath"> *.test.expressplay.com </span>に対して、実稼動デバイスはを使用する必要があります。 <span class="filepath"> *.service.expressplay.com </span> </p>. </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
-   <td> 使用可能なトークンが不十分 </td> 
+   <td> 使用可能なトークンが不十分です </td> 
   </tr> 
   <tr> 
    <td> -2022 </td> 
@@ -148,31 +146,31 @@ Widevineライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -2023 </td> 
-   <td> レンタル再生期間がありません </td> 
+   <td> レンタル再生時間がありません </td> 
   </tr> 
   <tr> 
    <td> -2025 </td> 
-   <td> 無効なレンタル再生期間 </td> 
+   <td> 無効なレンタル再生時間 </td> 
   </tr> 
   <tr> 
    <td> -2027 </td> 
-   <td> コンテンツ暗号化キーは32桁の16進数である必要があります </td> 
+   <td> コンテンツ暗号化キーは 32 桁の 16 進数である必要があります </td> 
   </tr> 
   <tr> 
    <td> -2030 </td> 
-   <td> ExpressPlay Adminエラー：&lt;詳細&gt; </td> 
+   <td> ExpressPlay 管理エラー： &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2031 </td> 
-   <td> サービス無効なアカウント </td> 
+   <td> 無効なサービスアカウント </td> 
   </tr> 
   <tr> 
    <td> -2033 </td> 
-   <td> 無効なCookie </td> 
+   <td> 無効な cookie </td> 
   </tr> 
   <tr> 
    <td> -2034 </td> 
-   <td> 無効な出力制御、値が指定範囲外 </td> 
+   <td> 無効な出力制御、指定された範囲外の値 </td> 
   </tr> 
   <tr> 
    <td> -2035 </td> 
@@ -180,19 +178,19 @@ Widevineライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -2036 </td> 
-   <td> 拡張子の種類は4文字にする必要があります </td> 
+   <td> 拡張子のタイプは 4 文字にする必要があります </td> 
   </tr> 
   <tr> 
    <td> -2037 </td> 
-   <td> 拡張機能のペイロードはBase64エンコードする必要があります </td> 
+   <td> 拡張機能のペイロードは Base64 エンコードする必要があります </td> 
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td> <span class="codeph"> OutputControlFlag </span> はエンコードされた4バイトである必要があります </td> 
+   <td> <span class="codeph"> OutputControlFlag </span> は、4 バイトでエンコードする必要があります </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
-   <td> 無効なエラー形式が指定されました：&lt;形式&gt; </td> 
+   <td> 無効なエラーフォーマットが指定されました： &lt;format&gt; </td> 
   </tr> 
   <tr> 
    <td> -4001 </td> 
@@ -204,7 +202,7 @@ Widevineライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -4018 </td> 
-   <td> <span class="filepath"> kid </span>がありません </td> 
+   <td> 見つかりません <span class="filepath"> kid </span> </td> 
   </tr> 
   <tr> 
    <td> -4019 </td> 
@@ -212,19 +210,19 @@ Widevineライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td> <span class="codeph"> kid </span> は32文字の16進数である必要があります </td> 
+   <td> <span class="codeph"> kid </span> は、32 文字の 16 進数である必要があります </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td> <span class="codeph"> kid </span> は^の後ろに64文字必要です </td> 
+   <td> <span class="codeph"> kid </span> は、「^」の後ろの 64 文字にする必要があります </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
-   <td> 無効な<span class="codeph"> kid </span> </td> 
+   <td> 無効 <span class="codeph"> kid </span> </td> 
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td> 無効な暗号化キーまたは<span class="codeph"> kek </span> </td> 
+   <td> 無効な暗号化キーまたは <span class="codeph"> kek </span> </td> 
   </tr> 
   <tr> 
    <td> -5003 </td> 
@@ -240,7 +238,7 @@ Widevineライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -7002 </td> 
-   <td> デバイスIDのバインディングはWidevineではサポートされていません </td> 
+   <td> デバイス ID のバインディングは Widevine ではサポートされていません </td> 
   </tr> 
   <tr> 
    <td> -7003 </td> 
@@ -248,11 +246,11 @@ Widevineライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -7004 </td> 
-   <td> 無効なセキュリティレベル値 </td> 
+   <td> セキュリティレベルの値が無効です </td> 
   </tr> 
   <tr> 
    <td> -7006 </td> 
-   <td> HDCP出力制御値がありません </td> 
+   <td> HDCP 出力制御値がありません </td> 
   </tr> 
   <tr> 
    <td> -7007 </td> 
@@ -260,15 +258,15 @@ Widevineライセンストークンインターフェイスは、実稼働およ
   </tr> 
   <tr> 
    <td> -7008 </td> 
-   <td> Widevineライセンスを生成できませんでした </td> 
+   <td> Widevine ライセンスの生成に失敗しました </td> 
   </tr> 
   <tr> 
    <td> -7009 </td> 
-   <td> 無効な<span class="codeph"> WVExtension </span>パラメータが指定されました </td> 
+   <td> 無効 <span class="codeph"> WVExtension </span> 指定されたパラメーター </td> 
   </tr> 
   <tr> 
    <td> -7011 </td> 
-   <td> Widevineオプションが無効 </td> 
+   <td> Widevine オプションが無効です </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,26 +1,24 @@
 ---
-description: PlayerFragmentクラスでは、コードを編集して、完全に有効な機能マネージャーを作成できます。
+description: PlayerFragment クラスでは、コードを編集して、完全に有効な機能マネージャーを作成できます。
 title: PlayerFragment
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
-
 # PlayerFragment {#playerfragment}
 
-PlayerFragmentクラスでは、コードを編集して、完全に有効な機能マネージャーを作成できます。
+PlayerFragment クラスでは、コードを編集して、完全に有効な機能マネージャーを作成できます。
 
-`PlayerFragment`クラスには、`playerFrame`、`ControlBar`、`playerClickableAdFragment`、`adOverlay`など、すべてのUIコンポーネントが含まれます。
+The `PlayerFragment` クラスには、すべての UI コンポーネント ( `playerFrame`, `ControlBar`, `playerClickableAdFragment`、および `adOverlay`.
 
-これらのコンポーネントの初期化と、プレイヤーの作成、表示の設定、メディアプレイヤーの機能マネージャーの作成、再開、再生、一時停止などのメディアイベントの処理、`QoSManager`、`CCManager`、`AAManager`、`AdsManager`、`PlaybackManager`、`EntitlementManager`のイベントリスナーの処理を行います。`DRMManager`
+これは、これらのすべてのコンポーネントの初期化と、プレーヤーの作成、ビューの設定、メディアプレーヤーの機能マネージャーの作成、再開、再生、一時停止などのメディアイベントの処理、 `QoSManager`, `DRMManager`, `CCManager`, `AAManager`, `AdsManager`, `PlaybackManager`、および `EntitlementManager`.
 
-`PlayerFragment`の設定パラメーターを含むXMLファイルは`res/layout/fragment_player.xml`です。
+の設定パラメーターを含む XML ファイル `PlayerFragment` 次に該当 `res/layout/fragment_player.xml`.
 
-機能マネージャを作成する前に、`PlayerFragment.java`ファイル内に次のコードがあることを確認して、メディアプレイヤを作成する必要があります。
+機能マネージャを作成する前に、次のコードが `PlayerFragment.java` ファイル：
 
 ```java
 private MediaPlayer createMediaPlayer() { 

@@ -1,22 +1,20 @@
 ---
-title: TVSDK-DRMクライアント側ワークフローの概要
-description: TVSDK-DRMクライアント側ワークフローの概要
+title: TVSDK-DRM クライアントサイドワークフローの概要
+description: TVSDK-DRM クライアントサイドワークフローの概要
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
+# TVSDK-DRM クライアントサイドワークフローの概要 {#tvsdk-drm-client-side-workflow-overview}
 
-# TVSDK-DRMクライアント側ワークフローの概要{#tvsdk-drm-client-side-workflow-overview}
-
-Adobeのコンテンツ保護ソリューションであるAdobe PrimetimeDRMは、Primetime TVSDKに統合されています。 Primetime DRMには、ライセンスサーバー、個別化サーバー、コマンドラインツールなどのサーバー側コンポーネントも含まれています。
+Adobe Primetime DRM は、Adobeのコンテンツ保護ソリューションで、Primetime TVSDK に統合されています。 Primetime DRM には、ライセンスサーバー、個別化サーバー、コマンドラインツールなど、サーバー側のコンポーネントも含まれています。
 
 >[!NOTE]
 >
->Primetime DRMは、以前はAdobeアクセスと呼ばれていましたが、それ以前はFlash Accessでした。 クライアント側の側面は、引き続きアクセスと呼ばれます。
+>Primetime DRM は以前はAdobe・アクセスと呼ばれていましたが、その前はFlash Accessでした。 クライアント側の側面は、引き続き「アクセス」と呼ばれます。
 
-Primetime DRM(Access)に加えて、Primetime DRM(Access)として、TVSDKアプリケーション（FairPlay、Widevine、PlayReady DRMソリューションなど）にMulti-DRMソリューションを採用できるプラットフォームもあります。 最新のMulti-DRMプラットフォームのサポート情報については、Adobeの担当者にお問い合わせの上、[Multi-DRMドキュメント](../multi-drm-workflows/title-page/overview.md)を参照してください。
+Primetime DRM(Access) に加えて、一部のプラットフォームでは、FairPlay、Widevine、PlayReady DRM ソリューションなど、TVSDK アプリケーションに Multi-DRM ソリューションを使用できます。 最新の Multi-DRM プラットフォームのサポート情報については、Adobe担当者にお問い合わせのうえ、 [Multi-DRM に関するドキュメント](../multi-drm-workflows/title-page/overview.md).

@@ -1,22 +1,20 @@
 ---
-description: TVSDKは、ブラックアウト期間を処理するためのAPIとサンプルコードを提供します。
+description: TVSDK には、ブラックアウト期間を処理するための API とサンプルコードが用意されています。
 title: ブラックアウト処理の実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# ブラックアウト処理の実装 {#implement-blackout-handling}
 
-# ブラックアウト処理{#implement-blackout-handling}を実装
+TVSDK には、ブラックアウト期間を処理するための API とサンプルコードが用意されています。
 
-TVSDKは、ブラックアウト期間を処理するためのAPIとサンプルコードを提供します。
+ブラックアウト処理を実装し、ブラックアウト中に代替コンテンツを提供するには、次の手順を実行します。
 
-ブラックアウト処理を実装し、ブラックアウト中に代替コンテンツを提供するには：
-
-1. ライブストリームマニフェストのブラックアウトタグをサブスクライブするようにアプリを設定します。
+1. ライブストリームマニフェスト内のブラックアウトタグをサブスクライブするようにアプリを設定します。
 
 ```
  - (void) createMediaPlayer:(PTMediaPlayerItem *)item
@@ -27,7 +25,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
  }
 ```
 
-1. 追加`PTTimedMetadataChangedNotification`の通知リスナーです。
+1. 次の通知リスナーを追加します。 `PTTimedMetadataChangedNotification`.
 
    ```
    - (void)addobservers 
@@ -37,7 +35,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. フォアグラウンドで`PTTimedMetadata`オブジェクトのリスナーメソッドを実装します。
+1. のリスナーメソッドを実装します。 `PTTimedMetadata` オブジェクトを前景に配置します。
 
    例：
 
@@ -61,7 +59,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. 再生中に一定の更新を行って`TimedMetadata`オブジェクトを処理します。
+1. 処理 `TimedMetadata` オブジェクトが常に更新され、再生中に更新される。
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +80,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. 代替コンテンツに追加切り替え、`PTTimedMetadata`オブジェクトに示されるメインコンテンツとその再生時間に戻る`PTTimedMetadata`ハンドラー。
+1. 次を追加： `PTTimedMetadata` 代替コンテンツに切り替えてメインコンテンツに戻るハンドラー `PTTimedMetadata` オブジェクトとその再生時間。
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +195,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. バックグラウンドで`PTTimedMetadata`オブジェクトのリスナーメソッドを実装します。
+1. のリスナーメソッドを実装します。 `PTTimedMetadata` オブジェクトをバックグラウンドで表示します。
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
@@ -227,7 +225,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. ブラックアウト範囲が再生ストリームのDVR上にある場合は、シーク不可能範囲を更新します。
+1. ブラックアウト範囲が再生ストリームの DVR 上にある場合は、シーク不可能な範囲を更新します。
 
    ```
    // This sample assumes that blackoutStartTimedMetadata is the PTTimedMetadata  

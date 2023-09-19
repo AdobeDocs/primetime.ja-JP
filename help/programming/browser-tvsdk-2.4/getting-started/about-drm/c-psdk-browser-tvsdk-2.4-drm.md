@@ -1,20 +1,18 @@
 ---
-description: Digital Rights Management(DRM)固有のワークフローを完了できます。
+description: Digital Rights Management(DRM) 固有のワークフローを完了できます。
 title: Digital Rights Management
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
+# Digital Rights Management {#digital-rights-management}
 
-# Digital Rights Management{#digital-rights-management}
+Digital Rights Management(DRM) 固有のワークフローを完了できます。
 
-Digital Rights Management(DRM)固有のワークフローを完了できます。
-
-`AdobePSDK.DRMMetadataInfoEvent`イベントをリッスンしてDRMワークフローを処理できます。
+次の情報を聞くことができます。 `AdobePSDK.DRMMetadataInfoEvent` DRM ワークフローを処理するイベント：
 
 ```js
 ... 
@@ -22,15 +20,15 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 ...
 ```
 
-## 追加Digital Rights Management{#add-digital-rights-management}
+## 追加Digital Rights Management {#add-digital-rights-management}
 
-1. 追加`DRMMetadataInfoAvailableEvent`を呼び出して`DRMMetadata`を取得します。
+1. 次を追加： `DRMMetadataInfoAvailableEvent` 手に入れる `DRMMetadata`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. 手順1の行の上に`onDRMMetadataInfoAvailable`セクションを実装します。
+1. の実装 `onDRMMetadataInfoAvailable` セクションを手順 1 の行の上に配置します。
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
@@ -45,13 +43,13 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. setupVideoメソッドでDRMManagerを作成します。
+1. setupVideo メソッドで DRMManager を作成します。
 
    ```js
    var drmManager = player.drmManager;
    ```
 
-1. 以下のサンプルをコピーして、WidevineおよびPlayReady用の保護データを作成します。
+1. 次のサンプルをコピーして、Widevine および PlayReady の保護データを作成します。
 
    ```js
    var protectionData = { 
@@ -69,17 +67,17 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. drmManager追加に保護データを送信します。
+1. drmManager に保護データを追加します。
 
    ```js
    drmManager.setProtectionData(protectionData);
    ```
 
-1. リソースURLをDASHテストストリームに変更します。
+1. リソース URL を DASH テストストリームに変更します。
 
    >[!TIP]
    >
-   >リソースタイプはDASHになっているので、必ず更新してください。
+   >リソースの種類は DASH になったので、必ず更新してください。
 
    ```js
    var resourceUrl = "https://ptdemos.com/videos/dashdrm/stream.mpd"; 

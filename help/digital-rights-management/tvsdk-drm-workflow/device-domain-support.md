@@ -1,36 +1,36 @@
 ---
-description: 通常、Primetime DRMライセンスは作成時にすべて、一意のデバイスに結び付けられます。 このバインディングにより、ユーザーが認証を受けずに異なるデバイス間でライセンスを共有できなくなります。 Primetime DRMは、デバイスごとのバインディングに加えて、デバイスドメイン（デバイスのグループ）にライセンスをバインドする機能を提供します。
+description: 通常、Primetime DRM ライセンスは作成時にはすべて一意のデバイスに結び付けられます。 このバインディングにより、ユーザーは認証を受けずに異なるデバイス間でライセンスを共有できなくなります。 Primetime DRM は、デバイスごとのバインディングに加えて、ライセンスをデバイスドメイン（デバイスのグループ）にバインドする機能を提供します。
 title: ドメインサポートを使用した暗号化コンテンツの再生
-exl-id: 3c9badfc-046b-4c56-bde1-7b3b708bfaa2
-source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
-# デバイスドメインのサポート{#device-domain-support}
+# デバイスドメインのサポート {#device-domain-support}
 
-通常、Primetime DRMライセンスは作成時にすべて、一意のデバイスに結び付けられます。 このバインディングにより、ユーザーが認証を受けずに異なるデバイス間でライセンスを共有できなくなります。 Primetime DRMは、デバイスごとのバインディングに加えて、デバイスドメイン（デバイスのグループ）にライセンスをバインドする機能を提供します。
+通常、Primetime DRM ライセンスは作成時にはすべて一意のデバイスに結び付けられます。 このバインディングにより、ユーザーは認証を受けずに異なるデバイス間でライセンスを共有できなくなります。 Primetime DRM は、デバイスごとのバインディングに加えて、ライセンスをデバイスドメイン（デバイスのグループ）にバインドする機能を提供します。
 
-コンテンツメタデータがデバイスドメインの登録が必要であることを指定した場合、アプリケーションはAPIを呼び出してデバイスグループに参加できます。 このアクションは、トリガーサーバーに送信されるドメイン登録要求を設定します。 デバイスグループに対してライセンスが発行されると、そのライセンスをエクスポートし、そのデバイスグループに参加している他のデバイスと共有できます。
+コンテンツメタデータでデバイスドメインの登録が必要と指定されている場合、アプリケーションは API を呼び出してデバイスグループに参加できます。 このアクションは、トリガーサーバーに送信されるドメイン登録要求をドメインに登録します。 デバイスグループに対してライセンスが発行されると、そのライセンスをエクスポートして、そのデバイスグループに参加している他のデバイスと共有することができます。
 
-次に、デバイスグループ情報を`DRMContentData` `VoucherAccessInfo`オブジェクトで使用し、この情報を使用して、ライセンスを正常に取得して使用するために必要な情報を表示します。
+その後、デバイスグループの情報は、 `DRMContentData` `VoucherAccessInfo` オブジェクト。このオブジェクトは、ライセンスを正常に取得して使用するために必要な情報を提示するために使用されます。
 
-## ドメインサポート{#play-encrypted-content-using-domain-support}を使用した暗号化コンテンツの再生
+## ドメインサポートを使用した暗号化コンテンツの再生 {#play-encrypted-content-using-domain-support}
 
-Primetime DRMを使用して暗号化されたコンテンツを再生するには、次の手順を実行します。
+Primetime DRM を使用して暗号化されたコンテンツを再生するには、次の手順を実行します。
 
-1. `VoucherAccessInfo.deviceGroup`を使用して、デバイスグループの登録が必要かどうかを確認します。
+1. 使用 `VoucherAccessInfo.deviceGroup`、デバイスグループの登録が必要かどうかを確認します。
 1. 認証が必要な場合：
-   1. `DeviceGroupInfo.authenticationMethod`プロパティを使用して、認証が必要かどうかを調べます。
+   1. 以下を使用します。 `DeviceGroupInfo.authenticationMethod` property 認証が必要かどうかを調べます。
    1. 認証が必要な場合は、次の手順のいずれかを実行してユーザーを認証します。
 
-      * ユーザーのユーザー名とパスワードを取得し、`DRMManager.authenticate(deviceGroup.serverURL, deviceGroup.domain, username, password)`を呼び出します。
-      * キャッシュまたは事前生成された認証トークンを取得し、`DRMManager.setAuthenticationToken()`を呼び出します。
-   1. `DRMManager.addToDeviceGroup()`を呼び出す
+      * ユーザーのユーザー名とパスワードを取得し、を呼び出す `DRMManager.authenticate(deviceGroup.serverURL, deviceGroup.domain, username, password)`.
+      * キャッシュ/事前生成された認証トークンを取得し、を呼び出す `DRMManager.setAuthenticationToken()`.
+
+   1. 起動 `DRMManager.addToDeviceGroup()`
 1. 次のいずれかのタスクを実行して、コンテンツのライセンスを取得します。
-   1. `DRMManager.loadVoucher()`メソッドを使用します。
-   1. 同じデバイスグループに登録されている別のデバイスからライセンスを取得し、`DRMManager.storeVoucher()`メソッドを通じて`DRMManager`にライセンスを提供します。
-1. `Primetime.play()`メソッドを使用して、暗号化されたコンテンツを再生します。
-コンテンツ用のライセンスを書き出すために、任意のデバイスは、Primetime DRMライセンスサーバーからライセンスを取得した後、`DRMVoucher.toByteArray()`メソッドを使用してライセンスの生のバイトを提供できます。 通常、コンテンツプロバイダーはデバイスグループ内のデバイス数を制限します。 制限に達した場合は、現在のデバイスを登録する前に、未使用のデバイスで`DRMManager.removeFromDeviceGroup()`メソッドを呼び出す必要がある場合があります。
+   1. 以下を使用します。 `DRMManager.loadVoucher()` メソッド。
+   1. 同じデバイスグループに登録されている別のデバイスからライセンスを取得し、 `DRMManager` から `DRMManager.storeVoucher()` メソッド。
+1. 暗号化されたコンテンツを `Primetime.play()` メソッド。
+コンテンツのライセンスをエクスポートするために、任意のデバイスで、 `DRMVoucher.toByteArray()` メソッドを使用して、Primetime DRM ライセンスサーバーからライセンスを取得した後で、 通常、コンテンツプロバイダーはデバイスグループ内のデバイスの数を制限します。 上限に達した場合は、 `DRMManager.removeFromDeviceGroup()` メソッドを使用して、現在のデバイスを登録する前に使用しないデバイスに接続します。

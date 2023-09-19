@@ -2,27 +2,26 @@
 title: ポリシーワークフローの詳細
 description: ポリシーワークフローの詳細
 copied-description: true
-exl-id: e3daf7a9-def0-48a9-8190-adb25eec7b59
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
 
 ---
 
-# ハチのワークフロー {#bees-workflow}
+# BEES ワークフロー {#bees-workflow}
 
 **概要：**
 
 * **ポリシー**  — チスポリシーを使用してパッケージ化されたすべてのコンテンツに BEES が必要であることを示す DRM BEES 対応ポリシーを作成します。
 * **パッケージ** - BEES 対応の DRM ポリシーを使用してコンテンツをパッケージ化します。
-* **認証**  — クライアントデバイスを認証し、Primetime DRM API または Primetime API を使用して、このトークンを Primetime Cloud DRM に関連付けます。 これをおこなうと、クライアントデバイスはこの認証トークンを Primetime Cloud DRM まで、すべてのライセンスリクエストと共に送信します。 Primetime Cloud DRM はこのトークンを処理しませんが、代わりに BEES エンドポイントに（不透明な塗りとして）渡して処理します。
+* **認証**  — クライアントデバイスを認証し、Primetime DRM API または Primetime API を使用して、このトークンを Primetime Cloud DRM に関連付けます。 これをおこなうと、クライアントデバイスはこの認証トークンを Primetime Cloud DRM まで、すべてのライセンスリクエストと共に送信します。 Primetime Cloud DRM はこのトークンを処理しませんが、代わりに BEES エンドポイントに（不透明なブロブとして）渡して処理します。
 * **ライセンス**  — 保護されたコンテンツのライセンスをリクエストします。 クライアントデバイスは、以前に設定した認証トークンを自動的に呼び出しに追加します。
-* **使用権限** - Primetime Cloud DRM は、コンテンツが BEES を必要とするポリシーでパッケージ化されたかを判断します。 Primetime Cloud DRM は、BEES エンドポイントに送信する JSON リクエストを構築します。 BEES の応答は、Primetime Cloud DRM に対して、ライセンスを発行するかどうか、および必要に応じて、使用する DRM ポリシーを指示します。
+* **使用権限** - Primetime Cloud DRM は、コンテンツが BEES を必要とするポリシーでパッケージ化されたかどうかを判断します。 Primetime Cloud DRM は、BEES エンドポイントに送信する JSON リクエストを構築します。 BEES の応答は、Primetime Cloud DRM に対して、ライセンスを発行するかどうか、および必要に応じて、使用する DRM ポリシーを指示します。
 
 ## ポリシーワークフローの詳細 {#policy-workflow-details}
 
-Primetime Cloud DRM がライセンスリクエストを処理する場合、リクエスト内の DRM ポリシーを解析して、コンテンツを表示する前にバックエンドエンタイトルメントサービスの呼び出しが必要かどうかを判断します。 もし蜂が呼ぶなら *が* 必須の場合、Primetime Cloud DRM は BEES リクエストを作成し、DRM ポリシーを解析して BEES リクエストに対して指定された BEES URL エンドポイントを取得します。
+Primetime Cloud DRM がライセンスリクエストを処理する場合、リクエスト内の DRM ポリシーを解析して、コンテンツを表示する前にバックエンドエンタイトルメントサービスの呼び出しが必要かどうかを判断します。 もし蜂が呼ぶなら *次に該当* 必須の場合、Primetime Cloud DRM は BEES リクエストを作成し、DRM ポリシーを解析して BEES リクエストに対して指定された BEES URL エンドポイントを取得します。
 
 BEES 要件を示す DRM ポリシーを適用し、ポリシーで次の 2 つのカスタムプロパティを指定します。
 
@@ -48,13 +47,13 @@ Adobeのアクセスで保護されたコンテンツをパッケージ化する
 
 BEES エンドポイントがエンタイトルメントの決定をおこなうには、クライアントデバイスが認証情報を提供する必要があります。 これを実現するには、独自の顧客固有の認証トークンを使用します。
 
-Primetime Cloud DRM は、このトークンを理解する必要はありません。単に、このトークンを BEES エンドポイントに渡します。 クライアントデバイスは、このトークンの作成または取得と、 `DRMManager.setAuthenticationToken()` API
+Primetime Cloud DRM は、このトークンを理解する必要はありません。単に、このトークンを BEES エンドポイントに渡します。 クライアントデバイスは、このトークンの作成または取得と、 `DRMManager.setAuthenticationToken()` API.
 
 次の手順を実行して、このトークンを Primetime Cloud DRM に関連付け、ライセンスリクエストと共に送信します。
 
 をインスタンス化します。 `DRMManager` オブジェクトには、Primetime Cloud DRM 用にパッケージ化されたコンテンツの DRM メタデータが含まれます。
 
-この `setAuthenticationToken()` メソッドは、指定されたバイト配列と、のインスタンス化に使用された DRM メタデータで指定されたライセンスサーバー URL を関連付けることで機能します `DRMManager`.
+The `setAuthenticationToken()` メソッドは、指定されたバイト配列と、のインスタンス化に使用された DRM メタデータで指定されたライセンスサーバー URL を関連付けることで機能します `DRMManager`.
 
 ```java
 //client device acquires auth token needed by your BEES endpoint  
@@ -152,4 +151,4 @@ BEES エンドポイントから、次の応答が期待されます。
 }
 ```
 
-Primetime Cloud DRM は応答を使用して、要求元のデバイスにライセンスを発行するかどうか、および新しい DRM ポリシーをライセンス生成プロセスに置き換えるかどうかを決定します。 If `isAllowed` が `true` 応答にポリシーが指定されていない場合は、コンテンツのパッケージ化時に使用された元の DRM ポリシーがライセンスの生成に使用されます。
+Primetime Cloud DRM は応答を使用して、要求元のデバイスにライセンスを発行するかどうか、および新しい DRM ポリシーをライセンス生成プロセスに置き換えるかどうかを決定します。 次の場合 `isAllowed` 次に該当 `true` 応答にポリシーが指定されていない場合は、コンテンツのパッケージ化時に使用された元の DRM ポリシーがライセンスの生成に使用されます。

@@ -1,23 +1,21 @@
 ---
-title: カスタム広告マーカーのJSONオブジェクト
-description: カスタム広告マーカーのJSONオブジェクト
+title: カスタム広告マーカー用の JSON オブジェクト
+description: カスタム広告マーカー用の JSON オブジェクト
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
+# カスタム広告マーカー用の JSON オブジェクト {#json-object-for-custom-ad-markers}
 
-# カスタム広告マーカー{#json-object-for-custom-ad-markers}のJSONオブジェクト
+以下のコードブロックは、タイプがカスタム広告マーカーの場合の「details」JSON オブジェクトを定義します。
 
-下のコードブロックは、タイプがカスタム広告マーカーの場合に、「details」 JSONオブジェクトを定義します。
-
-IFeedItemAdapter:getStreamMetadata()が返すMetadataNodeには、次の2つのエントリが含まれています。
-1. キーが`com.adobe.mediacore.metadata.DefaultMetadataKeys.CUSTOM_AD_MARKERS_METADATA_KEY`で、`TimeRangeCollection.toMetadata()`が返すMetadataNodeのインスタンスの値を持つエントリ。
-1. 2番目のエントリは、`com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED`型のキーで、下の&#x200B;*adjust-seek-position*&#x200B;属性の値を持ちます。
+IFeedItemAdapter:getStreamMetadata() が返す MetadataNode には、次の 2 つのエントリが含まれます。
+1. タイプのキーを持つエントリ `com.adobe.mediacore.metadata.DefaultMetadataKeys.CUSTOM_AD_MARKERS_METADATA_KEY` と、が返す MetadataNode のインスタンスの値 `TimeRangeCollection.toMetadata()`.
+1. 2 つ目のエントリはタイプのキーを持ちます `com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` の値を *adjust-seek-position* 属性を以下に示します。
 
 ```
 “metadata”: {
@@ -42,9 +40,9 @@ IFeedItemAdapter:getStreamMetadata()が返すMetadataNodeには、次の2つの�
 
 | プロパティ | 説明 |
 |---|---|
-| adjust-seek-position | trueまたはfalse。MetadataNodeのキーcom.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLEDの値を設定するために使用されます。 |
-| 時間範囲 | 各広告マーカーの時間範囲を示すJSONオブジェクトの配列。 各JSONオブジェクトエントリは、com.adobe.mediacore.utils.TimeRangeのインスタンスにマップされます。 |
+| adjust-seek-position | true または false。MetadataNode でキー com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED の値を設定するために使用します。 |
+| 時間範囲 | 各広告マーカーの時間範囲を示す JSON オブジェクトの配列。 各 JSON オブジェクトエントリは、 com.adobe.mediacore.utils.TimeRange のインスタンスにマッピングされます。 |
 | time-ranges.begin | 広告マーカーの開始時間を示すミリ秒単位の値。 |
 | time-ranges.end | 広告マーカーの終了時間を示すミリ秒単位の値。 |
 
-カスタム広告マーカーの動作方法について詳しくは、TVSDKのドキュメントを参照してください。
+カスタム広告マーカーの動作について詳しくは、 TVSDK のドキュメントを参照してください。

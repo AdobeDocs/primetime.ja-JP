@@ -1,8 +1,7 @@
 ---
 description: Primetime DRM の主なコンポーネントは、Java&trade、SDK、Flash PlayerとAdobe AIRクライアントのランタイム環境で構成されます。
 title: Java&trade; SDK、Flash Player、Adobe AIRクライアント
-exl-id: 01bb53dc-211d-4ec0-9e06-3bdbca01a071
-source-git-commit: d49042b559ce6083eca0738517d04c490755a033
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%

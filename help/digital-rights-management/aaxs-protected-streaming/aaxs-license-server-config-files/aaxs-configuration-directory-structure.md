@@ -1,22 +1,20 @@
 ---
-description: 保護ストリーミング用Adobe Access Serverでは、グローバル設定ファイル(flashaccess-global.xml)と各テナント用のテナント設定ファイル(flashaccess-tenant.xml)の2種類の設定ファイルが必要です。
+description: 保護されたストリーミング用のAdobe Access Serverには、グローバル設定ファイル (flashaccess-global.xml) と各テナント用のテナント設定ファイル (flashaccess-tenant.xml) の 2 種類の設定ファイルが必要です。
 title: 設定ディレクトリの構造
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
+# ライセンスサーバの設定ファイルと設定ディレクトリの構造 {#configuration-directory-structure}
 
-# ライセンスサーバ構成ファイルと構成ディレクトリ構造{#configuration-directory-structure}
+保護されたストリーミング用のAdobe Access Serverには、グローバル設定ファイル (flashaccess-global.xml) と、各テナント用のテナント設定ファイル (flashaccess-tenant.xml) の 2 種類の設定ファイルが必要です。
 
-保護ストリーミング用のAdobe Access Serverには、次の2種類の設定ファイルが必要です。グローバル設定ファイル(flashaccess-global.xml)と各テナントのテナント設定ファイル(flashaccess-tenant.xml)。
+設定ファイルを編集した後、Adobeでは、Adobe Access Server for Protected Streaming に付属のユーティリティを使用して、ファイルの形式が正しいことを確認することをお勧めします。 詳しくは、[設定バリデーター](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)&quot;.
 
-設定ファイルを編集した後、Adobeでは、保護ストリーミング用のAdobe Access Serverに付属のユーティリティを使用して、ファイルが適切な形式であることを確認することをお勧めします。 詳しくは、「[構成バリデーター](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)」を参照してください。
-
-構成ファイル内のパスワードをクリアテキストで使用できないようにするには、グローバル構成ファイルとテナント構成ファイルで指定されているすべてのパスワードを暗号化する必要があります。 パスワードの暗号化の詳細については、「[パスワードスクランブラ](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)」を参照してください。
+設定ファイル内のクリアテキストでパスワードを使用できないようにするには、グローバルおよびテナントの設定ファイルで指定されているすべてのパスワードを暗号化する必要があります。 パスワードの暗号化の詳細については、「[パスワードスクランブラ](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)&quot;.
 
 設定ディレクトリの構造は次のとおりです。
 
@@ -43,4 +41,3 @@ ht-degree: 0%
  </i class="+ topic> 
 </i class="+ topic>
 ```
-

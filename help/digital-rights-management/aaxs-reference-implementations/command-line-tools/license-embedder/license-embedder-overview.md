@@ -1,16 +1,14 @@
 ---
-title: ライセンス埋め込みの概要
-description: ライセンス埋め込みの概要
+title: ライセンス埋め込み機能の概要
+description: ライセンス埋め込み機能の概要
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '27'
 ht-degree: 0%
 
 ---
 
+# ライセンス埋め込み機能の概要 {#license-embedder-overview}
 
-# ライセンス埋め込みの概要{#license-embedder-overview}
-
-ライセンス埋め込みコマンドラインツールを使用すると、Media Packagerで保護されたコンテンツに、事前に生成されたライセンスを埋め込むことができます。
+ライセンス埋め込みコマンドラインツールを使用すると、Media Packager で保護されたコンテンツに、事前に生成されたライセンスを埋め込むことができます。

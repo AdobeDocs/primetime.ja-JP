@@ -1,13 +1,12 @@
 ---
 title: TV のあらゆる場所でのホームベースの認証
 description: TV のあらゆる場所でのホームベースの認証
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1676'
 ht-degree: 0%
 
 ---
-
 
 # TV のあらゆる場所でのホームベースの認証
 
@@ -19,7 +18,7 @@ ht-degree: 0%
 
 HBA(Home Based Authentication) は、TV Everywhere の機能で、有料テレビの加入者が自宅にいるときに MVPD の資格情報を入力することなく、TV コンテンツをオンラインで視聴できるので、認証フローのユーザーエクスペリエンスが大幅に向上します。
 
-オープン認証技術委員会 (OATC) によるホームベース認証の定義：「ホーム内自動認証とは、MVPD/OVD がホームネットワークの特性（またはホームネットワーク上のデバイス間で自動的にアクセス可能な識別子）を使用して、TVE 保護コンテンツにアクセスする TVE セッションを確立する際に、ユーザが資格情報を手動で入力する必要がない。
+OATC(Open Authentication Technology Committee:OATC) によるホームベース認証の定義： 「自動認証とは、MVPD/OVD がホームネットワークの特性（またはホームネットワーク上のデバイス間で自動的にアクセス可能な ID）を使用して、保護 TVE の TVE セッションを確立する際に内容」
 
 
 
@@ -35,11 +34,11 @@ HBA は、実際には自宅にあり、既にケーブルを購読している�
 
 現在、ログインの試みのほぼ半分が成功していません。
 
-HBA が上位 5 件の MVPD の 1 つによってアクティブ化されると、その認証の変換率 **40%増加する** (45%～63%)
+HBA が上位 5 件の MVPD の 1 つによってアクティブ化されると、その認証の変換率が向上します。 **40%増加する** (45%～63%)
 
 ![](assets/authn-conv-pre-post.png)
 
-また、以下に、異なる MVPD と統合されたチャネルのサインインコンバージョン率を示します。HBA を有効にしているユーザーと、HBA を持っていないユーザー。 HBA を使用する場合のコンバージョン率は、HBA を使用しない場合のコンバージョン率よりも大幅に高くなります。
+また、以下に、異なる MVPD と統合されたチャネルのサインインコンバージョン率（HBA を有効にしたチャネルと HBA を持たないチャネル）を示します。 HBA を使用する場合のコンバージョン率は、HBA を使用しない場合のコンバージョン率よりも大幅に高くなります。
 
 ![](assets/hba-vs-non-hba.png)
 
@@ -98,7 +97,7 @@ OAuth 2.0 認証プロトコルと統合された MVPD の HBA フローでは�
 | ユーザーアクション | システムアクション |
 |---|---|
 | ユーザーは、プログラマーのサイトに移動します。 ビデオを再生しようとすると、MVPD ピッカーが表示されます。 ユーザーが MVPD を選択し、ログインをクリックします。 | バックグラウンドチェックが実行されます。 MVPD は、ユーザ検出のための一連の規則を適用します ( たとえば、ユーザの IP アドレスを、ディストリビュータがプロビジョニングしたモデムのMACアドレスや、ブロードバンド接続したセットトップボックスにマッピングします )。 |
-| 約 3 秒間表示される画面です。 MVPD アカウントを使用して自動的にサインインしていることをユーザに知らせるインタースティシャルページを表示できます。 | <ol><li>AccessEnabler は、プログラマー側にインストールされ、（HTTP リクエストとして）認証リクエストをAdobe Primetime Authentication エンドポイントに送信します。</li><li>Primetime 認証エンドポイントは、要求を MVPD 認証エンドポイントにリダイレクトします。 <br />**注意：** リクエストには `hba_flag` パラメータ（HBA の試行= true）。MVPD が HBA 認証を試行する必要があることを示す。</li><li>MVPD 認証エンドポイントは、認証コードをAdobe Primetime Authentication エンドポイントに送信します。</li><li>Adobe Primetime認証は、認証コードを使用して、MVPD のトークンエンドポイントから更新トークンとアクセストークンをリクエストします。</li><li>MVPD は認証の決定と `hba_status` (true/false) パラメーターを `id_token`.</li><li>MVPD ユーザープロファイルエンドポイントへの呼び出しが送信され、 [ユーザメタデータの hba_status キー](/help/authentication/user-metadata-feature.md#obtaining).</li><li>MVPD は、リフレッシュトークン TTL を MVPD 同意値に設定し、Adobeは、AuthN トークン TTL をリフレッシュトークンの値以下の値に設定する。</li></ol> |
+| 約 3 秒間表示される画面です。 MVPD アカウントを使用して自動的にサインインしていることをユーザに知らせるインタースティシャルページを表示できます。 | <ol><li>AccessEnabler は、プログラマー側にインストールされ、（HTTP リクエストとして）認証リクエストをAdobe Primetime Authentication エンドポイントに送信します。</li><li>Primetime 認証エンドポイントは、要求を MVPD 認証エンドポイントにリダイレクトします。 <br />**注意：** リクエストには `hba_flag` パラメータ（HBA の試行= true）。MVPD が HBA 認証を試行する必要があることを示す。</li><li>MVPD 認証エンドポイントは、認証コードをAdobe Primetime Authentication エンドポイントに送信します。</li><li>Adobe Primetime認証は、認証コードを使用して、MVPD のトークンエンドポイントから更新トークンとアクセストークンをリクエストします。</li><li>MVPD は、認証の決定と `hba_status` (true/false) パラメーターを `id_token`.</li><li>MVPD ユーザープロファイルエンドポイントへの呼び出しが送信され、 [ユーザメタデータの hba_status キー](/help/authentication/user-metadata-feature.md#obtaining).</li><li>MVPD は、リフレッシュトークン TTL を MVPD 同意値に設定し、Adobeは、AuthN トークン TTL をリフレッシュトークンの値以下の値に設定する。</li></ol> |
 | ユーザーが認証され、権利が付与された TV Everywhere コンテンツを閲覧できるようになりました。 | 認証トークンは、プログラマーのサイトを正常に参照できるユーザーに渡されます。 |
 
 #### SAML プロトコル {#saml-protocol}
@@ -108,7 +107,7 @@ SAML 認証プロトコルの HBA 認証フローの説明
 | ユーザーアクション | システムアクション |
 |---|---|
 | ユーザーは、プログラマーのサイトに移動します。 ビデオを再生しようとすると、MVPD ピッカーが表示されます。 ユーザーが MVPD を選択し、ログインをクリックします。 | バックグラウンドチェックが実行されます。 MVPD は、ユーザ検出のための一連の規則を適用します ( たとえば、ユーザの IP アドレスを、ディストリビュータがプロビジョニングしたモデムのMACアドレスや、ブロードバンド接続したセットトップボックスにマッピングします )。 |
-| 約 3 秒間表示される画面です。 MVPD アカウントを使用して自動的にサインインしていることをユーザに知らせるインタースティシャルページを表示できます。 | <ol><li>AccessEnabler は、プログラマー側にインストールされ、（HTTP リクエストとして）認証リクエストをAdobe Primetime Authentication エンドポイントに送信します。</li><li>Primetime 認証エンドポイントは、要求を MVPD 認証エンドポイントにリダイレクトします。</li><li>MVPD は、HBA フラグを含む SAML 応答の形式で認証決定を送信する必要があります。hba_status (true/false)</li><li>MVPD ユーザープロファイルエンドポイントへの呼び出しが送信され、 [ユーザメタデータの hba_status キー](/help/authentication/user-metadata-feature.md#obtaining).</li></ol> |
+| 約 3 秒間表示される画面です。 MVPD アカウントを使用して自動的にサインインしていることをユーザに知らせるインタースティシャルページを表示できます。 | <ol><li>AccessEnabler は、プログラマー側にインストールされ、（HTTP リクエストとして）認証リクエストをAdobe Primetime Authentication エンドポイントに送信します。</li><li>Primetime 認証エンドポイントは、要求を MVPD 認証エンドポイントにリダイレクトします。</li><li>MVPD は、SAML 応答の形で認証の決定を送信する必要があります。この決定には、HBA フラグ hba_status (true/false) が含まれます。</li><li>MVPD ユーザープロファイルエンドポイントへの呼び出しが送信され、 [ユーザメタデータの hba_status キー](/help/authentication/user-metadata-feature.md#obtaining).</li></ol> |
 | ユーザーが認証され、権利が付与された TV Everywhere コンテンツを閲覧できるようになりました。 | 認証トークンは、プログラマーのサイトを正常に参照できるユーザーに渡されます。 |
 
 
@@ -124,7 +123,7 @@ SAML 認証プロトコルの HBA 認証フローの説明
 
 **質問：** SAML および OAuth2 プロトコルを使用したホームベースの認証を分離する理由を教えてください。
 
-**回答：** HBA のフローは、2 つのプロトコルで異なります。 OAuth2 MVPDs の場合、HBA は Primetime TVE ダッシュボードでオン/オフを切り替えることができますが、プログラマの観点からは、HBA が SAML MVPD に対して有効になっていることを保証するアクションは必要ありません。
+**回答：** HBA のフローは、2 つのプロトコルによって異なります。 OAuth2 MVPDs の場合、HBA は Primetime TVE ダッシュボードでオン/オフを切り替えることができますが、プログラマの観点からは、HBA が SAML MVPD に対して有効になっていることを保証するアクションは必要ありません。
 
 
 
@@ -142,7 +141,7 @@ SAML 認証プロトコルの HBA 認証フローの説明
 
 
 
-**質問：** HBA をサポートするプロバイダは、HBA の TTL 期間を短くし、通常の認証を行いますか。
+**質問：** HBA をサポートするプロバイダは、HBA の TTL 期間を短くし、通常の認証に使用しますか。
 
 **回答：** TTL 設定は設定可能です。 HBA 認証トークンの TTL を短く設定して、誤処理を防ぐことをお勧めします。
 
@@ -151,13 +150,10 @@ SAML 認証プロトコルの HBA 認証フローの説明
 
 * [HBA (Instant Access) Recommendations](http://www.ctamtve.com/instantaccess){target=_blank} - CTAM 別
 * [プログラマーアプリケーションでの HBA の実装例](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/HBA_Flow_Sample.pdf?dc=201604222139-1346){target=_blank} -Adobe別
-   <!--* [Home Based Authentication User Experience Guidelines for TV Everywhere](http://oatc.us/Standards/DownloadRecommendedPractices.aspx){target=_blank} - by OATC-->
+  <!--* [Home Based Authentication User Experience Guidelines for TV Everywhere](http://oatc.us/Standards/DownloadRecommendedPractices.aspx){target=_blank} - by OATC-->
 * [ホームベースの認証の使用例と要件](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/Defining%20TVE%20Home-Based%20Authentication%20(HBA)%20%20Use%20Cases%20and%20Requirements%20Recommended%20Practice%20Version%201_0%20FINAL%20DRAFT%20FOR%20BOARD%20APPROVAL.pdf){target=_blank} OATC によって
-* [ホームベース認証の解説図](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf?dc=201604260953-2640){target=_blank} -Adobe別
+* [ホームベースの認証の解説図](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf?dc=201604260953-2640){target=_blank} -Adobe別
 * [OAuth 2.0 プロトコルを使用した認証](/help/authentication/authn-oauth2-protocol.md)
 * [SAML MVPD を使用した認証](/help/authentication/authn-usecase.md)
 * [Primetime TVE ダッシュボードユーザーガイド](/help/authentication/tve-dashboard-user-guide.md)
 * [hba_status ユーザのメタデータ](/help/authentication/user-metadata-feature.md#obtaining)
-
-
-

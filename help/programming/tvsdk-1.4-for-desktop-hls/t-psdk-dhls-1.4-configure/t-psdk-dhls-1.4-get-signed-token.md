@@ -1,43 +1,42 @@
 ---
-description: FlashランタイムTVSDKは、署名付きトークンを必要とします。このトークンを使用して、アプリケーションが存在するドメインでTVSDK APIを呼び出す権限があることを検証します。
-title: 署名付きトークンの読み込み
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: FlashRuntime TVSDK では、署名付きトークンが必要です。このトークンを使用して、アプリケーションが存在するドメイン上で TVSDK API を呼び出す権限があることを検証できます。
+title: 署名付きトークンを読み込む
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
+# 署名付きトークンを読み込む {#load-your-signed-token}
 
-# 署名付きトークン{#load-your-signed-token}を読み込みます
+FlashRuntime TVSDK では、署名付きトークンが必要です。このトークンを使用して、アプリケーションが存在するドメイン上で TVSDK API を呼び出す権限があることを検証できます。
 
-FlashランタイムTVSDKは、署名付きトークンを必要とします。このトークンを使用して、アプリケーションが存在するドメインでTVSDK APIを呼び出す権限があることを検証します。
+1. 各ドメインのAdobe担当者から署名付きトークンを取得します（各ドメインは、特定のドメインまたはワイルドカードドメインになります）。
 
-1. 各ドメイン（各ドメインが特定のドメインまたはワイルドカードドメインの場合がある）に関する署名付きトークンをAdobeの担当者から取得します。
-
-       トークンを取得するには、Adobeに、アプリケーションが保存または読み込まれるドメインか、できればドメインをSHA256ハッシュとして提供します。その代わりに、Adobeから各ドメインに対して署名付きトークンが提供されます。 これらのトークンは、次のいずれかの形式を取ります。
+       トークンを取得するには、Adobeに、アプリケーションが保存または読み込まれるドメインか、できればドメインを SHA256 ハッシュとして指定します。 その代わり、Adobeは各ドメインに対して署名付きトークンを提供します。 これらのトークンは、次のいずれかの形式を取ります。
    
-   * 単一のドメインまたはワイルドカードドメインのトークンとして機能する[!DNL .xml]ファイル。
+   * An [!DNL .xml] 単一のドメインまたはワイルドカードドメインのトークンとして機能するファイル。
 
-      >[!NOTE]
-      >
-      >ワイルドカードドメインのトークンは、そのドメインとそのすべてのサブドメインをカバーします。 例えば、ドメイン[!DNL mycompany.com]のワイルドカードトークンは、[!DNL vids.mycompany.com]と[!DNL private.vids.mycompany.com]もカバーします。[!DNL vids.mycompany.com]のワイルドカードトークンは、[!DNL private.vids.mycompany.com]もカバーします。 *ワイルドカードドメイントークンは、特定のFlash Playerバージョンに対してのみサポートされます。*
+     >[!NOTE]
+     >
+     >ワイルドカードドメインのトークンは、そのドメインとそのすべてのサブドメインをカバーします。 例えば、ドメインのワイルドカードトークン [!DNL mycompany.com] また、カバーする [!DNL vids.mycompany.com] および [!DNL private.vids.mycompany.com]；のワイルドカードトークン [!DNL vids.mycompany.com] また、カバーする [!DNL private.vids.mycompany.com]. *ワイルドカードドメイントークンは、特定のバージョンのFlash Playerでのみサポートされます。*
 
-   * 複数のドメイン（ワイルドカードを含まない）（単一ドメインまたはワイルドカードを含む）のトークン情報を含む[!DNL .swf]ファイル。アプリケーションは動的に読み込むことができます。
+   * A [!DNL .swf] 複数のドメイン（ワイルドカードを含まない）（単一またはワイルドカード）のトークン情報を含むファイル。アプリケーションは動的に読み込むことができます。
 
-1. アプリケーションと同じ場所またはドメインにトークンファイルを保存します。
+1. トークンファイルは、アプリケーションと同じ場所またはドメインに保存します。
 
-   デフォルトでは、TVSDKはこの場所でトークンを探します。 別の方法として、HTMLファイルの`flash_vars`にトークンの名前と場所を指定することもできます。
-1. トークンファイルが単一のXMLファイルの場合：
-   1. `utils.AuthorizedFeaturesHelper.loadFrom`を使用して、指定したURL（トークンファイル）に保存されているデータをダウンロードし、`authorizedFeatures`情報を抽出します。
+   デフォルトでは、 TVSDK はこの場所でトークンを探します。 または、でトークンの名前と場所を指定できます。 `flash_vars` をHTMLファイルに追加します。
+1. トークンファイルが単一の XML ファイルの場合：
+   1. 用途 `utils.AuthorizedFeaturesHelper.loadFrom` ：指定した URL（トークンファイル）に保存されたデータをダウンロードし、 `authorizedFeatures` 情報を送信します。
 
-      この手順は異なる場合があります。 例えば、アプリケーションを起動する前に認証を実行したり、コンテンツ管理システム(CMS)から直接トークンを受け取ったりする場合があります。
+      この手順は異なる場合があります。 例えば、アプリケーションを起動する前に認証を実行したり、コンテンツ管理システム (CMS) から直接トークンを受け取ったりすることができます。
 
-   1. TVSDKは、読み込みが成功した場合は`COMPLETED`イベントをディスパッチし、それ以外の場合は`FAILED`イベントをディスパッチします。 どちらかのイベントを検出したら、適切な対応を行います。
+   1. TVSDK が `COMPLETED` イベント（読み込みが成功した場合）、または `FAILED` イベントを設定しません。 いずれかのイベントを検出したら、適切なアクションを実行します。
 
-      アプリケーションが必要な`authorizedFeatures`オブジェクトを`MediaPlayerContext`の形式でTVSDKに提供するには、この処理が成功する必要があります。
-   次の例は、単一トークンの[!DNL .xml]ファイルを使用する方法を示しています。
+      アプリケーションが必要なを提供するには、これを成功させる必要があります `authorizedFeatures` オブジェクトを TVSDK に `MediaPlayerContext`.
+
+   次の例では、単一のトークンを使用する方法を示します [!DNL .xml] ファイル。
 
    ```
    private function loadDirectTokenURL():void { 
@@ -52,21 +51,21 @@ FlashランタイムTVSDKは、署名付きトークンを必要とします。�
     }
    ```
 
-1. トークンが[!DNL .swf]ファイルの場合：
-   1. `Loader`クラスを定義して、[!DNL .swf]ファイルを動的に読み込みます。
-   1. `LoaderContext`を設定して、現在のアプリケーションドメインで読み込みを指定します。これにより、TVSDKは[!DNL .swf]ファイル内で正しいトークンを選択できます。 `LoaderContext`を指定しない場合、`Loader.load`のデフォルトの動作では、現在のドメインの子ドメインにある.swfを読み込みます。
-   1. COMPLETEイベントをリッスンします。このイベントは、読み込みが成功した場合にTVSDKがディスパッチします。
+1. トークンが [!DNL .swf] ファイル：
+   1. を定義 `Loader` 動的に読み込むクラス [!DNL .swf] ファイル。
+   1. を設定します。 `LoaderContext` ：現在のアプリケーションドメインに読み込みを指定する場合。これにより、 TVSDK は、 [!DNL .swf] ファイル。 次の場合 `LoaderContext` が指定されていない場合、 `Loader.load` は、現在のドメインの子ドメインに.swf を読み込みます。
+   1. COMPLETE イベントをリッスンします。このイベントは、読み込みが成功した場合に TVSDK がディスパッチします。
 
-      ERRORイベントもリッスンし、適切な処理を行います。
-   1. 読み込みが成功した場合は、`AuthorizedFeaturesHelper`を使用して、PCKS-7エンコードされたセキュリティデータを含む`ByteArray`を取得します。
+      また、ERROR イベントをリッスンし、適切なアクションを実行します。
+   1. 読み込みが成功した場合は、 `AuthorizedFeaturesHelper` 手に入れる `ByteArray` PCKS-7 でエンコードされたセキュリティデータを含む
 
-      このデータは、AVE V11 APIを通じて使用され、Flashランタイムプレイヤーから認証確認を取得します。 バイト配列にコンテンツがない場合は、代わりに単一ドメインのトークンファイルを探す手順を使用します。
-   1. `AuthorizedFeatureHelper.loadFeatureFromData`を使用して、必要なデータをバイト配列から取得します。
-   1. [!DNL .swf]ファイルをアンロードします。
+      このデータは、AVE V11 API を通じて、FlashRuntime Player から認証確認を取得するために使用されます。 バイト配列にコンテンツがない場合は、代わりに、単一ドメイントークンファイルを探す手順を使用します。
+   1. 用途 `AuthorizedFeatureHelper.loadFeatureFromData` 必要なデータをバイト配列から取得します。
+   1. をアンロードします。 [!DNL .swf] ファイル。
 
-   次の例は、複数トークンの[!DNL .swf]ファイルの使用方法を示しています。
+   次の例は、複数トークンの使用方法を示しています [!DNL .swf] ファイル。
 
-   **複数トークンの例1:**
+   **複数トークンの例 1:**
 
    ```
    private function onApplicationComplete(event:FlexEvent):void { 
@@ -110,7 +109,7 @@ FlashランタイムTVSDKは、署名付きトークンを必要とします。�
    } 
    ```
 
-   **複数トークンの例2:**
+   **複数トークンの例 2:**
 
    ```
    private function tokenSwfLoadedHandler(e:Event):void { 
@@ -156,4 +155,3 @@ FlashランタイムTVSDKは、署名付きトークンを必要とします。�
        authorizedFeatureHelper.loadFrom(tokenUrl); 
    }
    ```
-

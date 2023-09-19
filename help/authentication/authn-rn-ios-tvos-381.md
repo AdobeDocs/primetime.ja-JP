@@ -1,7 +1,7 @@
 ---
 title: 認証に関するiOS/tvOS 3.8.1 のリリースノート
 description: 認証に関するiOS/tvOS 3.8.1 のリリースノート
-source-git-commit: 6a32450d99b84835d820b54679a73ffe5dc61636
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
@@ -20,13 +20,13 @@ ht-degree: 0%
 
 Adobe Primetime認証：iOS/tvOS 3.8.1
 
-リリース日：26/05/2023
+リリース日： 26/05/2023
 
 
 
 ## リリースの概要 {#overview-ios-tvos-sdk-381}
 
-ストレージ管理ソリューションの内部アーキテクチャの改善を加えました。
+ストレージ管理ソリューションの内部的なアーキテクチャの改善を加えました。
 
 ## リリースパッケージ {#rel=pkg-iostvos381}
 

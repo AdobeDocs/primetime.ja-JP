@@ -1,29 +1,27 @@
 ---
-description: ビデオのDRMメタデータがメディアストリームとは別になっている場合は、再生を開始する前に認証を実行します。
-title: 再生前のDRM認証
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: ビデオの DRM メタデータがメディアストリームとは別の場合は、再生を開始する前に認証を実行します。
+title: 再生前の DRM 認証
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# 再生前の DRM 認証 {#drm-authentication-before-playback}
 
-# 再生前のDRM認証{#drm-authentication-before-playback}
+ビデオの DRM メタデータがメディアストリームとは別の場合は、再生を開始する前に認証を実行します。
 
-ビデオのDRMメタデータがメディアストリームとは別になっている場合は、再生を開始する前に認証を実行します。
+ビデオアセットには、関連付けられた DRM メタデータファイルを含めることができます。 例：
 
-ビデオアセットには、DRMメタデータファイルを関連付けることができます。 例：
+* &quot;url&quot;: &quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
+* &quot;drmMetadata&quot;: &quot;ht<span></span>tps://www.domain.com/asset.metadata&quot;
 
-* &quot;url&quot;:&quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
-* &quot;drmMetadata&quot;:&quot;ht<span></span>tps://www.domain.com/asset.metadata&quot;
+その場合は、 `DRMHelper` DRM メタデータファイルのコンテンツをダウンロードし、解析して、DRM 認証が必要かどうかを確認するためのメソッド。
 
-この場合は、`DRMHelper`メソッドを使用してDRMメタデータファイルのコンテンツをダウンロードし、解析して、DRM認証が必要かどうかを確認します。
+1. 用途 `loadDRMMetadata` メタデータ URL コンテンツを読み込み、にダウンロードしたバイトを解析するには、以下を実行します。 `DRMMetadata`.
 
-1. `loadDRMMetadata`を使用してメタデータURLコンテンツを読み込み、`DRMMetadata`にダウンロードしたバイトを解析します。
-
-   他のネットワーク操作と同様に、このメソッドは非同期で、独自のスレッドを作成します。
+   他のネットワーク操作と同様に、このメソッドは非同期的で、独自のスレッドを作成します。
 
    ```java
    public static void loadDRMMetadata( 
@@ -38,8 +36,8 @@ ht-degree: 1%
    DRMHelper.loadDRMMetadata(drmManager, metadataURL, new DRMLoadMetadataListener());
    ```
 
-1. この操作は非同期的なので、ユーザーにそのことを知らせることをお勧めします。 そうしないと、再生が開始されない理由がわかります。 例えば、DRMメタデータをダウンロードして解析している間は、スピナーホイールを表示します。
-1. コールバックを`DRMLoadMetadataListener`に実装します。 `loadDRMMetadata`は、これらのイベントハンドラーを呼び出します(これらのイベントをディスパッチします)。
+1. 操作は非同期なので、ユーザーにそれを知らせることをお勧めします。 そうしないと、再生が開始されない理由に疑問が生じます。 例えば、DRM メタデータをダウンロードして解析する際に、スピナーホイールを表示します。
+1. にコールバックを実装します。 `DRMLoadMetadataListener`. The `loadDRMMetadata` は、これらのイベントハンドラーを呼び出します（これらのイベントをディスパッチします）。
 
    ```java
    public interface  
@@ -58,11 +56,11 @@ ht-degree: 1%
    }
    ```
 
-   * `onLoadMetadataUrlStart` メタデータURLの読み込みが開始されたことを検出します。
-   * `onLoadMetadataUrlComplete` メタデータURLの読み込みが完了したことを検出します。
+   * `onLoadMetadataUrlStart` は、メタデータ URL の読み込みが開始された際にを検出します。
+   * `onLoadMetadataUrlComplete` は、メタデータ URL の読み込みが完了したことを検出します。
    * `onLoadMetadataUrlError` メタデータの読み込みに失敗したことを示します。
 
-1. 読み込みが完了したら、`DRMMetadata`オブジェクトを調べ、DRM認証が必要かどうかを確認します。
+1. 読み込みが完了したら、 `DRMMetadata` オブジェクトを使用して、DRM 認証が必要かどうかを確認します。
 
    ```java
    public static boolean <b>isAuthNeeded</b>(DRMMetadata drmMetadata);
@@ -106,7 +104,7 @@ ht-degree: 1%
         final DRMAuthenticationListener authenticationListener);
    ```
 
-   この例では、わかりやすくするために、ユーザーの名前とパスワードを明示的にコード化しています。
+   この例では、簡単にするために、ユーザーの名前とパスワードを明示的にコード化しています。
 
    ```java
    DRMHelper.performDrmAuthentication(drmManager, drmMetadata, DRM_USERNAME, DRM_PASSWORD,  
@@ -132,7 +130,7 @@ ht-degree: 1%
    }); 
    ```
 
-1. また、これはネットワーク通信を意味するので、非同期的な操作でもあります。 イベントリスナーを使用して、認証状態を確認します。
+1. これはネットワーク通信を意味するので、非同期操作でもあります。 イベントリスナーを使用して認証状態を確認します。
 
    ```java
    public interface DRMAuthenticationListener { 
@@ -166,8 +164,7 @@ ht-degree: 1%
    } 
    ```
 
-1. 認証に成功した場合、開始の再生。
-1. 認証に成功しなかった場合は、開始に通知し、認証の再生は行いません。
+1. 認証に成功した場合は、再生を開始します。
+1. 認証に成功しなかった場合は、ユーザーに通知し、再生を開始しません。
 
-アプリケーションは、認証エラーを処理する必要があります。 再生前に認証に失敗すると、TVSDKはエラー状態になります。 つまり、状態がERRORに変更され、DRMライブラリからエラーコードを含むエラーが生成され、再生が停止します。 アプリケーションで問題を解決し、プレイヤーをリセットして、リソースを再読み込みする必要があります。
-
+アプリケーションで認証エラーが発生した場合は処理する必要があります。 再生前に認証に失敗すると、 TVSDK はエラー状態になります。 つまり、状態が ERROR に変わり、DRM ライブラリからエラーコードを含むエラーが生成され、再生が停止します。 アプリケーションで問題を解決し、プレーヤーをリセットして、リソースを再読み込みする必要があります。

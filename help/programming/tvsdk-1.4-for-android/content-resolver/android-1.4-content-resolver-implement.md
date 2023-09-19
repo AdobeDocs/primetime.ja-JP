@@ -1,22 +1,20 @@
 ---
 description: デフォルトのリゾルバーに基づいて、独自のコンテンツリゾルバーを実装できます。
 title: カスタムコンテンツリゾルバーの実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '241'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
-# カスタムコンテンツリゾルバーの実装{#implement-a-custom-content-resolver}
+# カスタムコンテンツリゾルバーの実装 {#implement-a-custom-content-resolver}
 
 デフォルトのリゾルバーに基づいて、独自のコンテンツリゾルバーを実装できます。
 
-TVSDKは、新しいオポチュニティを検出すると、登録されているコンテンツリゾルバーを繰り返し処理し、そのオポチュニティを解決できるコンテンツリゾルバーを探します。 trueを最初に返したコンテンツは、オポチュニティの解決に選択されます。 オポチュニティを解決できるコンテンツリゾルバーがない場合、そのオポチュニティはスキップされます。 通常、コンテンツ解決プロセスは非同期的なので、コンテンツリゾルバーはプロセスが完了したことを通知する必要があります。
+TVSDK は、新しいオポチュニティを検出すると、登録されたコンテンツリゾルバーを繰り返し処理して、そのオポチュニティを解決できるコンテンツリゾルバーを探します。 オポチュニティの解決のために、最初に true を返したものが選択されます。 可能なコンテンツリゾルバーがない場合は、そのオポチュニティはスキップされます。 通常、コンテンツ解決プロセスは非同期なので、コンテンツリゾルバーはプロセスが完了したことを通知する役割を果たします。
 
-1. カスタム`AdvertisingFactory`インスタンスを作成し、`createContentResolver`をオーバーライドします。
+1. カスタムの作成 `AdvertisingFactory` インスタンスとオーバーライド `createContentResolver`.
 
    例：
 
@@ -43,7 +41,7 @@ TVSDKは、新しいオポチュニティを検出すると、登録されてい
    }
    ```
 
-1. 広告クライアントファクトリを`MediaPlayer`に登録します。
+1. 広告クライアントファクトリをに登録します。 `MediaPlayer`.
 
    例：
 
@@ -53,9 +51,9 @@ TVSDKは、新しいオポチュニティを検出すると、登録されてい
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. 次のように、`AdvertisingMetadata`オブジェクトをTVSDKに渡します。
-   1. `AdvertisingMetadata`オブジェクトと`MetadataNode`オブジェクトを作成します。
-   1. `AdvertisingMetadata`オブジェクトを`MetadataNode`に保存します。
+1. パス： `AdvertisingMetadata` オブジェクトを TVSDK に次のように追加します。
+   1. の作成 `AdvertisingMetadata` オブジェクトと `MetadataNode` オブジェクト。
+   1. を保存します。 `AdvertisingMetadata` ～に対して `MetadataNode`.
 
    ```java
    MetadataNode result = new MetadataNode(); 
@@ -63,7 +61,7 @@ TVSDKは、新しいオポチュニティを検出すると、登録されてい
                   advertisingMetadata);
    ```
 
-1. `ContentResolver`クラスを拡張するカスタム広告リゾルバークラスを作成します。
+1. を拡張するカスタム広告リゾルバークラスの作成 `ContentResolver` クラス。
    1. カスタム広告リゾルバーで、次の保護された関数を上書きします。
 
       ```java
@@ -71,13 +69,13 @@ TVSDKは、新しいオポチュニティを検出すると、登録されてい
                         PlacementOpportunity placementOpportunity)
       ```
 
-      メタデータには`AdvertisingMetada`が含まれています。 これは、次の`TimelineOperation`ベクトル生成に使用します。
+      メタデータには `AdvertisingMetada`. 次の場合に使用します。 `TimelineOperation` ベクトル生成。
 
-   1. 配置オポチュニティごとに、`Vector<TimelineOperation>`を作成します。
+   1. 配置オポチュニティごとに、 `Vector<TimelineOperation>`.
 
-      ベクトルは空にできますが、nullは不可です。
+      ベクトルは空にすることができますが、null はできません。
 
-      次のサンプル`TimelineOperation`は`AdBreakPlacement`の構造を提供します。
+      このサンプル `TimelineOperation` ～の構造を提供する `AdBreakPlacement`:
 
       ```java
       AdBreakPlacement(AdBreak.createAdBreak( 
@@ -92,8 +90,8 @@ TVSDKは、新しいオポチュニティを検出すると、登録されてい
 
    1. 広告が解決されたら、次のいずれかの関数を呼び出します。
 
-      * 広告の解決に成功した場合：`notifyResolveComplete(Vector<TimelineOperation> proposals)`
-      * 広告の解決に失敗した場合：`notifyResolveError(Error error)`
+      * 広告の解決が成功した場合： `notifyResolveComplete(Vector<TimelineOperation> proposals)`
+      * 広告の解決に失敗した場合： `notifyResolveError(Error error)`
 
       例えば、失敗した場合は次のようになります。
 
@@ -103,10 +101,9 @@ TVSDKは、新しいオポチュニティを検出すると、登録されてい
       error.setMetadata(metadata);
       ```
 
-
 <!--<a id="example_4F0D7692A92E480A835D6FDBEDBE75E7"></a>-->
 
-このカスタム広告リゾルバーのサンプルは、広告サーバーにHTTPリクエストを行い、JSONレスポンスを受け取ります。
+このサンプルのカスタム広告リゾルバーは、広告サーバーに対して HTTP リクエストを実行し、JSON 応答を受け取ります。
 
 ```java
 public class CustomAdResolver extends ContentResolver { 
@@ -125,7 +122,7 @@ public class CustomAdResolver extends ContentResolver {
 }
 ```
 
-ライブストリームに対するJSON広告サーバーの応答の例：
+ライブストリームに対する JSON 広告サーバーのレスポンスのサンプル：
 
 ```
 {     
@@ -162,7 +159,7 @@ public class CustomAdResolver extends ContentResolver {
 } 
 ```
 
-JSON広告サーバーが返すVOD用のレスポンスの例：
+VOD に対する JSON 広告サーバーの応答の例：
 
 ```
 {     
@@ -223,4 +220,3 @@ JSON広告サーバーが返すVOD用のレスポンスの例：
     } 
 } 
 ```
-

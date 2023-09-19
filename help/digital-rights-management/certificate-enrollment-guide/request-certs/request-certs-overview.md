@@ -1,20 +1,18 @@
 ---
-title: 要求証明書の概要
-description: 要求証明書の概要
+title: 証明書の要求の概要
+description: 証明書の要求の概要
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# 概要 {#request-certificates-overview}
 
-# 概要{#request-certificates-overview}
-
-Adobe PrimetimeDRM実稼動SDKを使用するには、次の手順を繰り返して各証明書（License Server、Packager、トランスポート）をリクエストします。 評価SDKと体験版SDKは、1つの証明書を使用します。
+Adobe Primetime DRM Production SDK を使用するには、次の手順を繰り返して、各証明書（ライセンスサーバー、パッケージャー、トランスポート）をリクエストします。 評価 SDK および体験版 SDK は、1 つの証明書を使用します。
 
 >[!NOTE]
 >
->このドキュメントの例ではOpenSSLを使用しています。 他のユーティリティも使用できます。 以下の例は、参照用にのみ使用してください。 キーペアの生成、およびハードウェアセキュリティモジュール(HSM)へのキーと証明書の格納について詳しくは、HSMのドキュメントを参照してください。
+>このドキュメントで示す例では、OpenSSL を使用しています。 他のユーティリティも使用できます。 以下の例は参照用にのみ使用してください。 キーペアの生成、およびハードウェアセキュリティモジュール (HSM) へのキーと証明書の保存については、HSM のドキュメントを参照してください。

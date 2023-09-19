@@ -2,29 +2,27 @@
 title: コンテンツのパッケージ化
 description: コンテンツのパッケージ化
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
-
 # コンテンツのパッケージ化{#packaging-content}
 
-リモートキー配信用にコンテンツをパッケージ化する場合は、リモートキー配信が必要であることを指定するポリシーを使用します。 キーサーバーURLは、HLSコンテンツのM3U8（マニフェストファイル）に含まれている必要があります。 Primetime DRMキーサーバーのURLの形式は次のとおりです。
+リモートキー配信用にコンテンツをパッケージ化する場合は、リモートキー配信が必要であることを指定するポリシーを使用します。 HLS コンテンツの M3U8（マニフェストファイル）にキーサーバー URL を含める必要があります。 Primetime DRM キーサーバーの URL の形式は次のとおりです。
 
 ```
 https://key-server-host:port/faxsks/tenant-name/key
 ```
 
-例えば、ポート443でリッスンしているキーサーバーのホスト名[!DNL mykeyserver.com]と、`tenant1`という名前のテナントの場合、M3U8で指定するキーサーバーのURLは次のようになります。
+例：キーサーバーのホスト名 [!DNL mykeyserver.com] ポート 443 でリッスンし、次の名前を持つテナント `tenant1`M3U8 で指定する主要なサーバ URL は次のとおりです。
 
 ```
 https://mykeyserver.com:443/faxsks/tenant1/key
 ```
 
-iOSとXbox 360の両方のクライアントに同じURLを使用できます。 また、サーバーがクライアントタイプごとに個別のテナントを使用して設定されている場合は、異なるURLを使用できます。
+iOSと Xbox 360 の両方のクライアントに同じ URL を使用できます。 また、サーバーがクライアントタイプごとに別々のテナントで設定されている場合は、異なる URL を使用できます。
 
-ライセンスサーバのURLが正しく設定された実行中のライセンスサーバを指している限り、キーサーバを必要としないクライアントでも同じコンテンツを再生できます。
+ライセンスサーバー URL が正しく設定された実行中のライセンスサーバーを指している限り、キーサーバーを必要としないクライアントでも、同じコンテンツが再生される場合があります。

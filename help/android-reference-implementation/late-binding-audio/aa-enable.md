@@ -1,36 +1,33 @@
 ---
-description: 代替オーディオ機能マネージャーを作成して、遅延バインディングまたは代替オーディオストリームをプレーヤーに統合できます。
+description: 代替オーディオ機能マネージャーを作成することで、遅延バインディングまたは代替オーディオストリームをプレーヤーに統合できます。
 title: 遅延バインディングオーディオの統合
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 0%
 
 ---
 
+# 遅延バインディングオーディオの統合 {#integrate-late-binding-audio}
 
-# 遅延バインディングオーディオを統合{#integrate-late-binding-audio}
+代替オーディオ機能マネージャーを作成することで、遅延バインディングまたは代替オーディオストリームをプレーヤーに統合できます。
 
-代替オーディオ機能マネージャーを作成して、遅延バインディングまたは代替オーディオストリームをプレーヤーに統合できます。
+* 代替オーディオマネージャを作成するには：
 
-* 代替オーディオマネージャーを作成するには：
+  ```java
+  AAManager aaManager = new AAManagerOn(); 
+  ```
 
-   ```java
-   AAManager aaManager = new AAManagerOn(); 
-   ```
+* ManagerFactory を使用して代替オーディオを有効にするには、次のコード行が `PlayerFragment.java` ファイル：
 
-* ManagerFactoryを使用して代替オーディオを有効にするには、次のコード行が`PlayerFragment.java`ファイル内にあることを確認します。
+  ```java
+  aaManager = ManagerFactory.getAAManager( 
+  <b>true</b>,config, mediaPlayer);
+  ```
 
-   ```java
-   aaManager = ManagerFactory.getAAManager( 
-   <b>true</b>,config, mediaPlayer);
-   ```
+  代替オーディオを無効にするには：
 
-   代替オーディオを無効にするには：
-
-   ```java
-   aaManager = ManagerFactory.getAAManager( 
-   <b>false</b>,config, mediaPlayer);
-   ```
-
+  ```java
+  aaManager = ManagerFactory.getAAManager( 
+  <b>false</b>,config, mediaPlayer);
+  ```

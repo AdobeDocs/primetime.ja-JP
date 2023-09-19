@@ -1,25 +1,23 @@
 ---
-title: SWF Hash Calculator
-description: SWF Hash Calculator
+title: SWFハッシュ計算ツール
+description: SWFハッシュ計算ツール
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
+# SWFハッシュ計算ツール{#swf-hash-calculator}
 
-# SWF Hash Calculator{#swf-hash-calculator}
-
-SWF Hash Calculatorユーティリティは、ファイル内のSWFアプリケーションのダイジェストを計算しました。 ハッシャーを実行するには、次のコマンドを実行します。
+SWFHash Calculator ユーティリティは、ファイル内のSWFアプリケーションのダイジェストを計算しました。 ハッシャーを実行するには、次のコマンドを実行します。
 
 ```
 Hasher.bat filename.swf
 ```
 
-または次のコマンドを実行します。
+または次のコマンドを使用します。
 
 ```
 java -jar libs/flashaccess-hasher.jar filename.swf
@@ -31,4 +29,4 @@ java -jar libs/flashaccess-hasher.jar filename.swf
 SWF Hash: hash-of-swf
 ```
 
-この値は、[!DNL flashaccess-tenant.xml]でSWFダイジェストを指定するために使用できます。
+この値は、でSWFダイジェストを指定するために使用できます [!DNL flashaccess-tenant.xml].

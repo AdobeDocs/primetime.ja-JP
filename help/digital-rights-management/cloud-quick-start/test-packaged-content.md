@@ -2,19 +2,17 @@
 title: パッケージ化されたコンテンツのテスト
 description: パッケージ化されたコンテンツのテスト
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
+# パッケージ化されたコンテンツのテスト {#test-the-packaged-content}
 
-# パッケージ化されたコンテンツをテスト{#test-the-packaged-content}
+(Flash Playerを介して ) 公開されているAdobe Primetime Desktop Player を使用して、パッケージ化処理が成功したことを検証する必要があります。 このプレーヤーは HDS コンテンツのみをサポートできます。 HLS コンテンツをテストするには、Primetime ブラウザー TVSDK 対応のプレーヤーが必要です。
 
-(Flash Player経由で)一般公開されているAdobe Primetimeデスクトッププレイヤーを使用して、パッケージ化処理が成功したことを検証する必要があります。 このプレイヤーは、HDSコンテンツのみをサポートできます。 HLSコンテンツをテストするには、Primetime Browser TVSDK対応のプレイヤーが必要です。
-
-1. コンテンツをWebサーバー上でホストします。
-1. https://drmtest2.adobe.com:8080/AccessPlayer/player.htmlでPrimetime DRM(旧称「Adobeアクセス」)プレイヤーを起動します。
-1. HDSマニフェスト([!DNL .f4m])へのURLをプレイヤーのナビゲーションフィールドに貼り付け、**[!UICONTROL Play]**&#x200B;ボタンをクリックします。
+1. Web サーバー上でコンテンツをホストします。
+1. https://drmtest2.adobe.com:8080/AccessPlayer/player.htmlで Primetime DRM( 旧称：Adobeアクセス ) プレーヤーを起動します。
+1. URL を HDS マニフェスト ( [!DNL .f4m]) をプレーヤーのナビゲーションフィールドに移動し、 **[!UICONTROL Play]** 」ボタンをクリックします。

@@ -2,25 +2,23 @@
 title: 参照実装でのカスタム開始時間の設定
 description: 参照実装でのカスタム開始時間の設定
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
+# 参照実装でのカスタム開始時間の設定 {#set-a-custom-start-time-in-the-reference-implementation}
 
-# 参照実装にカスタム開始時間を設定{#set-a-custom-start-time-in-the-reference-implementation}
+設定インターフェイスの DVR コントロールパネルを使用して、リファレンス実装での開始位置を有効にし、編集できます。 これらのパラメーターを編集すると、SharedPreferences の設定が更新され、プレーヤーが更新されます。
 
-設定インターフェイスのDVRコントロールパネルを使用して、参照実装での開始位置を有効にしたり編集したりできます。 これらのパラメーターを編集すると、SharedPreferencesの設定が更新され、プレイヤーが更新されます。
-
-1. Primetime設定ダイアログを開きます。
-1. **[!UICONTROL DVR controls]**&#x200B;を選択します。
+1. Primetime 設定ダイアログを開きます。
+1. 選択 **[!UICONTROL DVR controls]**.
 
    <!--<a id="fig_5C7A4E8F0390404F97E667364DB8B0A6"></a>-->
 
    ![](assets/dvr-configuration.jpg)
 
-1. **ストリームに入る際にDVRウィンドウでカスタム位置を選択する** 場合は、カスタム開始時間 **[!UICONTROL ON]** 制御を行う必要があります。
-1. **カスタム開始時刻の選択**&#x200B;にカスタム開始時刻を設定します。
+1. **カスタム開始時間コントロール** は、 **[!UICONTROL ON]** ストリームに入る際に、DVR ウィンドウでカスタム位置を選択する場合。
+1. カスタムの開始時間を **カスタムの開始時間を選択**.

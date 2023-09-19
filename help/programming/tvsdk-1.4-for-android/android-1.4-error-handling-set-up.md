@@ -1,26 +1,24 @@
 ---
-description: エラーを処理する場所を1か所設定します。
+description: エラーを処理する場所を 1 つ設定します。
 title: エラー処理の設定
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '88'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
 # エラー処理の設定{#set-up-error-handling}
 
-エラーを処理する場所を1か所設定します。
+エラーを処理する場所を 1 つ設定します。
 
-1. `MediaPlayerEvent.STATUS_CHANGED`のイベントコールバック関数を実装します。
+1. のイベントコールバック関数を実装します。 `MediaPlayerEvent.STATUS_CHANGED`.
 
-   TVSDKは、`MediaPlayerStatusChangeEvent`オブジェクトなどのイベント情報を渡します。
-1. コールバックで、返された状態が`MediaPlayerState.ERROR`の場合、すべてのエラーを処理するロジックを指定します。
-1. エラーの処理後、`MediaPlayer`オブジェクトをリセットするか、新しいメディアリソースを読み込みます。
+   TVSDK がイベント情報 ( `MediaPlayerStatusChangeEvent` オブジェクト。
+1. コールバックで、返される状態が `MediaPlayerState.ERROR`、すべてのエラーを処理するロジックを指定します。
+1. エラーが処理されたら、 `MediaPlayer` オブジェクトまたは新しいメディアリソースを読み込みます。
 
-   `MediaPlayer`オブジェクトがerror状態の場合、`MediaPlayer.reset`メソッドを使用してリセットするまで、その状態が維持されます。
+   次の場合に `MediaPlayer` オブジェクトはエラー状態にあり、を使用してリセットするまで、その状態のままです。 `MediaPlayer.reset` メソッド。
 
 <!--<a id="example_49FF225E92EA494AA06B2E5F26101F4C"></a>-->
 
@@ -37,4 +35,3 @@ mediaPlayer.addEventListener(
     } 
 });
 ```
-

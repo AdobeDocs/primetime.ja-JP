@@ -1,8 +1,7 @@
 ---
 title: アカウント IQ の概要
 description: アカウント IQ は、MVPD やプログラマーが収益や事業運営に対するリスクを把握し、秘密鍵証明書の不正の影響を軽減するために最も効果的な対策を決定するのに役立ちます。
-exl-id: c0d85fc8-b5ab-4284-802e-82f52eff401f
-source-git-commit: 4475faca828510153a7ec3e505704ee8d8b044d0
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -33,7 +32,7 @@ Adobe Primetimeのアカウント IQ を使用すると、ビデオストリー�
 * [使用パターン](/help/AccountIQ/usage-patterns.md)
 * [運用](/help/AccountIQ/operations.md)
 
-各セクションのグラフとレポートについて詳しく説明します。
+次に、各セクションのグラフとレポートについて詳しく説明します。
 
 >[!MORELIKETHIS]
 >
@@ -44,7 +43,6 @@ Adobe Primetimeのアカウント IQ を使用すると、ビデオストリー�
 >* [使用パターン](/help/AccountIQ/usage-patterns.md)
 >* [製品用語集](/help/AccountIQ/product-concepts.md)
 >* [アカウント IQ に関するホワイトペーパー](https://www.adobe.com/content/dam/dx/us/en/products/primetime/resources/primetime-account-iq-whitepaper.pdf)
-
 
 <!-- Credential sharing is rampant and prevalent among subscribers in the video streaming industry. To add to it, understanding, identifying, and acting on password sharing is a complex process. There is complexity involved in understanding the subscriber usage behavior and developing a holistic view of viewer activity—for example, distinguishing sharing among members within the same household and outside. Due to this challenge, streaming service providers have inhibitions in acting against password sharing.
 

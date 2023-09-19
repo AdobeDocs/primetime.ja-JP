@@ -1,25 +1,22 @@
 ---
-title: Javaを使用したパスワードの準備
-description: Javaを使用したパスワードの準備
+title: Java を使用してパスワードを準備する
+description: Java を使用してパスワードを準備する
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '22'
 ht-degree: 0%
 
 ---
 
+# Java を使用してパスワードを準備する{#prepare-passwords-using-java}
 
-# Java{#prepare-passwords-using-java}を使用してパスワードを準備する
+を実行します。 `ScrambleUtil.class` Java の場合：
 
-Javaで`ScrambleUtil.class`を実行：
-
-1. `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`に移動
-1. コマンドラインで次のように入力します。
+1. に移動します。 `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
+1. コマンドラインで、次のように入力します。
 
    ```
    java -classpath [DRM SDK DVD]/SDK/adobe-flashaccess-sdk.jar;  
        com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
    ```
-

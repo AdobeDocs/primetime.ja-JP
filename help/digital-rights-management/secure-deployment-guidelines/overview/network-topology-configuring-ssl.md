@@ -1,17 +1,15 @@
 ---
-description: SSL(Secure Sockets Layer)は、FlashメディアRights Managementサーバー1.xクライアントのサポートが必要な場合にのみ必要です。
-title: SSLの設定
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Secure Sockets Layer(SSL) は、FlashMediaRights Managementサーバー 1.x クライアントのサポートが必要な場合にのみ必要です。
+title: SSL の設定
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
 
 ---
 
+# SSL の設定 {#configuring-ssl}
 
-# SSLの設定{#configuring-ssl}
+Secure Sockets Layer(SSL) は、FlashMediaRights Managementサーバー 1.x クライアントのサポートが必要な場合にのみ必要です。
 
-SSL(Secure Sockets Layer)は、FlashメディアRights Managementサーバー1.xクライアントのサポートが必要な場合にのみ必要です。
-
-Adobe PrimetimeDRMキーサーバーには、クライアント認証を伴うSSLが必要です。 詳しくは、[Adobe PrimetimeDRMキーサーバーの使用](../../using-the-drm-key-server/requirements.md)を参照してください。
+Adobe Primetime DRM キーサーバーを使用するには、クライアント認証を使用する SSL が必要です。 詳しくは、 [Adobe Primetime DRM キーサーバーの使用](../../using-the-drm-key-server/requirements.md).

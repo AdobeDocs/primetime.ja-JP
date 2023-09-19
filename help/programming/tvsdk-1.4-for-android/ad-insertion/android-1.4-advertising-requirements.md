@@ -1,23 +1,20 @@
 ---
-description: Adobe Primetimeのad decisioningインターフェイスを使用して、VODおよびライブ/リニアコンテンツに広告を挿入できます。
-title: 広告の要件
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Adobe Primetime Ad Decisioning インターフェイスを使用して、VOD およびライブ/リニアコンテンツに広告を挿入できます。
+title: 広告要件
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-
 # 広告要件{#advertising-requirements}
 
-Adobe Primetimeのad decisioningインターフェイスを使用して、VODおよびライブ/リニアコンテンツに広告を挿入できます。
+Adobe Primetime Ad Decisioning インターフェイスを使用して、VOD およびライブ/リニアコンテンツに広告を挿入できます。
 
-Primetime ad decisioningはTVSDKと連携して、広告オポチュニティを識別し、広告を解決し、解決された広告をビデオストリームに挿入します。
+Primetime ad decisioning は TVSDK と連携して、広告オポチュニティの識別、広告の解決、ビデオストリームへの解決済み広告の挿入をおこないます。
 
-ビデオコンテンツに広告を組み込むには、広告とメインのビデオコンテンツが以下の要件を満たしていることを確認します。
+ビデオコンテンツに広告を組み込むには、広告とメインのビデオコンテンツが次の要件を満たしていることを確認します。
 
-* 広告コンテンツのHLSバージョンをメインコンテンツのHLSバージョンより高くすることはできません。
-* 広告は、メインコンテンツが多重化されているかどうかに関係なく、多重化する必要はありません（制限はありません）。
-
+* 広告コンテンツの HLS バージョンをメインコンテンツの HLS バージョンより高くすることはできません。
+* 広告は、メインコンテンツが多重化されているかどうかに関係なく、多重化する必要はありません（制限なし）。

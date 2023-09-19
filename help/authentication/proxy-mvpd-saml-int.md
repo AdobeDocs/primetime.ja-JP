@@ -1,13 +1,12 @@
 ---
 title: プロキシ MVPD SAML 統合
 description: プロキシ MVPD SAML 統合
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 1%
 
 ---
-
 
 # プロキシ MVPD SAML 統合
 
@@ -33,7 +32,7 @@ ht-degree: 1%
 
 ## SAML 統合フロー {#saml-int-flows}
 
-MVPD 加入者がプログラマのサイトまたはアプリケーションを訪問すると、Adobe Primetime認証は、そのプログラマに対して有効化された MVPD のリストを持つサイトまたはアプリケーションからの API 呼び出しに応答します。  統合は、直接またはプロキシ化できます。プログラマとの間に違いはありません。 これにより、プログラマーは、任意の方法でアクティブな MVPD のリストを表示することができます。 サブスクライバーは MVPD を選択し、Adobe Primetime認証により、サブスクライバーは MVPD の特定の ID プロバイダーにリダイレクトされます。
+MVPD 加入者がプログラマのサイトまたはアプリケーションを訪問すると、Adobe Primetime認証は、そのプログラマに対して有効化された MVPD のリストを持つサイトまたはアプリケーションからの API 呼び出しに応答します。  統合は直接またはプロキシ化が可能で、プログラマーに対する区別はありません。 これにより、プログラマーは、任意の方法でアクティブな MVPD のリストを表示することができます。 サブスクライバーは MVPD を選択し、Adobe Primetime認証により、サブスクライバーは MVPD の特定の ID プロバイダーにリダイレクトされます。
 
 統合 MVPD プロキシの場合、Adobe Primetime認証と MVPD プロキシの間で統合が行われます。 Adobe Primetime認証は、ユーザ認証要求を MVPD プロキシに送信し、MVPD プロキシがリダイレクトを処理します。 MVPD プロキシがユーザー認証リクエストのリダイレクト先を知るために、Adobe Primetime認証は SAML 認証リクエストで MVPD 識別子を送信します。  この識別子は、上述のように、プロキシ Web サービスを介してプロキシプロバイダーによって指定された MVPD ID です。
 

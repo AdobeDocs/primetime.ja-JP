@@ -1,36 +1,31 @@
 ---
-description: TVSDK設定ファイル(AdobeTVSDKConfig.json)を使用して、VAST/VMAP応答で広告クリエイティブを選択するための優先順位を更新できます。 また、この設定ファイルを使用して、広告クリエイティブのソースURL変換ルールを定義することもできます。
-keywords: クリエイティブ選択ルール；AdobeTVSDKConfig；広告クリエイティブプロパティ；変換ルール
-title: 広告クリエイティブ選択ルールの更新
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK 設定ファイル (AdobeTVSDKConfig.json) を使用して、VAST/VMAP 応答の広告クリエイティブ選択の優先度を更新できます。 また、この設定ファイルを使用して、広告クリエイティブのソース URL 変換ルールを定義することもできます。
+keywords: クリエイティブ選択ルール；AdobeTVSDKConfig;Ad Creative 優先度；変換ルール
+title: 広告クリエイティブの選択ルールを更新
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
+# 概要 {#update-ad-creative-selection-rules-overview}
 
-# 概要{#update-ad-creative-selection-rules-overview}
+TVSDK 設定ファイル (AdobeTVSDKConfig.json) を使用して、VAST/VMAP 応答の広告クリエイティブ選択の優先度を更新できます。 また、この設定ファイルを使用して、広告クリエイティブのソース URL 変換ルールを定義することもできます。
 
-TVSDK設定ファイル(AdobeTVSDKConfig.json)を使用して、VAST/VMAP応答で広告クリエイティブを選択するための優先順位を更新できます。 また、この設定ファイルを使用して、広告クリエイティブのソースURL変換ルールを定義することもできます。
-
-ビデオプレーヤーが広告サーバーにリクエストを行う場合、VAST/VMAPの応答には通常複数の広告クリエイティブ（`MediaFile`要素）が含まれ、それぞれが異なるコンテナコーデックのバージョンへのURLを提供します。 VAST/VMAP応答の広告クリエイティブは、それぞれ広告に対して異なるビットレートを提供する場合があります。 これらの広告クリエイティブに対して独自の優先順位と変換ルールを指定する場合は、[!DNL AdobeTVSDKConfig.json]設定ファイルで指定できます。
+ビデオプレーヤーが広告サーバーにリクエストをおこなうと、VAST/VMAP の応答には通常、複数の広告クリエイティブ ( `MediaFile` 要素 ) を含み、それぞれが異なるコンテナコーデックバージョンへの URL を提供します。 場合によっては、VAST/VMAP 応答の広告クリエイティブがそれぞれ、広告に対して異なるビットレートを提供します。 これらの広告クリエイティブに独自の優先度と変換ルールを指定する場合は、 [!DNL AdobeTVSDKConfig.json] 設定ファイル。
 
 >[!IMPORTANT]
 >
->* TVSDK設定ファイルの名前は変更しないでください。 名前は[!DNL AdobeTVSDKConfig.json]のままにする必要があります。
+>* TVSDK 設定ファイルの名前は変更しないでください。 名前は残る必要があります [!DNL AdobeTVSDKConfig.json].
 >* このファイルは、バンドルにアクセス可能な任意の場所に配置できます。
-
 >
 
-
-
-[!DNL AdobeTVSDKConfig.json]では、次の2種類のルールを指定できます。*優先度*&#x200B;ルールと&#x200B;*標準化*&#x200B;ルール。
+では、2 種類のルールを指定できます [!DNL AdobeTVSDKConfig.json]: *優先度* ルールと *Normalize* ルール。
 
 **[!UICONTROL Disabling Pre-Roll]**
 
-プリロールを無効にするには、デフォルトのオポチュニティジェネレーターを変更して、プリロール呼び出しを行わないようにする必要があります。 デフォルトでは、TVSDKは次のオポチュニティジェネレーターを使用します。
+プリロールを無効にするには、デフォルトのオポチュニティジェネレーターを変更して、プリロール呼び出しをおこなわないようにする必要があります。 デフォルトでは、 TVSDK は以下のオポチュニティジェネレーターを使用します。
 
 ```
 /** 
@@ -44,7 +39,7 @@ override protected function doRetrieveGenerators(item:MediaPlayerItem):Vector.<O
 } 
 ```
 
-ライブストリームのプリロールを無効にするには、SpliceOutOpportunityGeneratorのみを含めるように変更する必要があります。
+ライブストリームでのプリロールを無効にするには、SpliceOutOpportunityGenerator のみを含めるように変更します。
 
 ```
 /** 

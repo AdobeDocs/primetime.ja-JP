@@ -1,27 +1,25 @@
 ---
-title: Tomcatのインストール
-description: Tomcatのインストール
+title: Tomcat のインストール
+description: Tomcat のインストール
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
 
 ---
 
+# Tomcat のインストール {#install-tomcat}
 
-# Tomcat {#install-tomcat}のインストール
-
-両方のサーバにTomcatをインストールする必要があります。
-1. インストールDVDの [!DNL \Third Party\Tomcat\6.0.18\] ディレクトリからTomcatをインストールします。
+両方のサーバーに Tomcat をインストールする必要があります。
+1. から Tomcat をインストールします。 [!DNL \Third Party\Tomcat\6.0.18\] インストール DVD のディレクトリ。
 
    >[!NOTE]
    >
-   >パスにスペースがない場所にTomcatがインストールされていることを確認します。 `C:\Program Files\Tomcat`と入力できますが、`C:\Tomcat\`は入力できません。
+   >パスにスペースが含まれていない場所に Tomcat がインストールされていることを確認します。 次の項目を入力できます。 `C:\Program Files\Tomcat`ではなく、 `C:\Tomcat\`.
 
-1. Tomcatを開始するには、`TomcatInstallDir>\bin\catalina.bat run`と入力します。
-1. インストールを確認するには、`https://<Hostname>:8080/`と入力してTomcatランディングページに移動します。
-1. `crossdomain.xml`ファイルを作成し、`<TomcatInstallDir>\webapps\ROOT\`ディレクトリに配置します。
+1. Tomcat を起動するには、次のように入力します。 `TomcatInstallDir>\bin\catalina.bat run`.
+1. インストールを検証するには、次を入力して Tomcat のランディングページに移動します。 `https://<Hostname>:8080/`.
+1. の作成 `crossdomain.xml` ファイルを開き、 `<TomcatInstallDir>\webapps\ROOT\` ディレクトリ。
 
-   `https://drmtest2.adobe.com/crossdomain.xml`ディレクトリからファイルをコピーすることもできます。
+   また、 `https://drmtest2.adobe.com/crossdomain.xml` ディレクトリ。

@@ -1,27 +1,25 @@
 ---
-title: 参照実装ライセンスサーバーが正しく実行されているかどうかの確認
-description: 参照実装ライセンスサーバーが正しく実行されているかどうかの確認
+title: 参照実装ライセンスサーバーが正しく動作しているかどうかの確認
+description: 参照実装ライセンスサーバーが正しく動作しているかどうかの確認
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
+# 参照実装ライセンスサーバーが正しく動作しているかどうかの確認 {#determining-if-reference-implementation-license-server-is-running-properly}
 
-# リファレンス実装ライセンスサーバーが正しく実行されているかどうかを確認しています{#determining-if-reference-implementation-license-server-is-running-properly}
+サーバーが正しく起動したかどうかを判断する方法はいくつかあります。 の表示 [!DNL catalina.log] ライセンスサーバは独自のログファイルにログを記録するので、ログでは不十分な場合があります。 以下の手順に従って、参照実装が正しく開始されていることを確認します。
 
-サーバーが正しく起動したかどうかを判断する方法はいくつかあります。 [!DNL catalina.log]ログを表示するだけでは不十分な場合があります。ライセンスサーバーは独自のログファイルにログを記録します。 次の手順に従って、リファレンスの実装が正しく起動していることを確認します。
+* 以下を確認します。 [!DNL AdobeFlashAccess.log] ファイル。 リファレンス実装がログ情報を書き込む場所です。 このログファイルの場所は、 [!DNL log4j.xml] ファイルに保存し、任意の場所を指すように変更できます。 デフォルトでは、ログファイルは、catalina を実行した作業ディレクトリに出力されます。
 
-* [!DNL AdobeFlashAccess.log]ファイルを確認します。 これは、リファレンスの実装によるログ情報の書き込み先です。 このログファイルの場所は[!DNL log4j.xml]ファイルで示され、任意の場所を指すように変更できます。 デフォルトでは、カタリナを実行した作業ディレクトリにログファイルが出力されます。
+* 次の URL に移動します。 `https:///flashaccess/license/v4<your server:server port>`. 「License Server is setup correctly」というテキストが表示されます。
 
-* 次のURLに移動します。`https:///flashaccess/license/v4<your server:server port>`. 「License Server is setup correctly」というテキストが表示されます。
+サーバーが正しく動作しているかどうかをテストする別の方法は、テストコンテンツの一部をパッケージ化し、サンプルビデオプレーヤーを設定して再生することです。 このプロセスについて、以下の手順で説明します。
 
-サーバーが正しく動作しているかどうかをテストする別の方法は、テストコンテンツの一部をパッケージ化し、サンプルビデオプレーヤーを設定して再生することです。 次の手順で、このプロセスを説明します。
-
-1. [!DNL \Reference Implementation\Command Line Tools]フォルダーに移動します。 コマンドラインツールのインストールについては、[コマンドラインツールのインストール](../aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md#installing-the-command-line-tools)を参照してください。
+1. 次に移動： [!DNL \Reference Implementation\Command Line Tools] フォルダー。 コマンドラインツールのインストールについては、 [コマンドラインツールのインストール](../aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md#installing-the-command-line-tools).
 
 1. 次のコマンドを使用して、単純な匿名ポリシーを作成します。
 
@@ -29,9 +27,9 @@ ht-degree: 0%
        java -jar libs\AdobePolicyManager.jar new policy_test.pol -x
    ```
 
-   Policy Managerを使用したポリシーの作成について詳しくは、「[コマンドラインの使用](../aaxs-reference-implementations/command-line-tools/policy-manager/command-line-usage.md)」を参照してください。
+   Policy Manager を使用してポリシーを作成する方法の詳細については、「 [コマンドラインの使用](../aaxs-reference-implementations/command-line-tools/policy-manager/command-line-usage.md).
 
-1. [!DNL flashaccesstools.properties]ファイルの`encrypt.license.serverurl`プロパティをライセンスサーバーのURLに設定します（例：`https:// localhost:8080/`）。 [!DNL flashaccesstools.properties]ファイルは[!DNL \Reference Implementation\Command Line Tools]フォルダーの下にあります。
+1. を設定します。 `encrypt.license.serverurl` プロパティを [!DNL flashaccesstools.properties] ファイルをライセンスサーバーの URL に追加します ( 例： `https:// localhost:8080/`) をクリックします。 The [!DNL flashaccesstools.properties] ファイルは、 [!DNL \Reference Implementation\Command Line Tools] フォルダー。
 
 1. 次のコマンドを使用して、コンテンツをパッケージ化します。
 
@@ -46,13 +44,13 @@ ht-degree: 0%
    </i class="+ topic>
    ```
 
-1. 生成された2つのファイルをTomcat [!DNL webapps\ROOT\Content]フォルダにコピーします。
-1. `Reference Implementation\Sample Video Players\Desktop\Flash Player\Release`に移動し、Tomcat `webapps\ROOT\SVP\`フォルダに内容をコピーします。
-1. Flash Player10.1以降をインストールします。
-1. Webブラウザーを開き、次のURLに移動します。
+1. 生成された 2 つのファイルを Tomcat にコピーします。 [!DNL webapps\ROOT\Content] フォルダー。
+1. に移動します。 `Reference Implementation\Sample Video Players\Desktop\Flash Player\Release` をクリックし、Tomcat にコンテンツをコピーします。 `webapps\ROOT\SVP\` フォルダー。
+1. Flash Player10.1 以降をインストールします。
+1. Web ブラウザーを開き、次の URL に移動します。
 
    `https:// localhost:8080/SVP/player.html`
-1. 次のURLに移動し、「再生」ボタンをクリックします。
+1. 次の URL に移動し、再生ボタンをクリックします。
 
    `https:// localhost:8080/Content/<your_encrypted_FLV>`
-1. ビデオの再生に失敗した場合は、エラーコードがサンプルビデオプレーヤーのログペインまたは`AdobeFlashAccess.log`ファイルに書き込まれているかどうかを確認します。 `AdobeFlashAccess.log`ログファイルの場所はlog4j.xmlファイルで示され、任意の場所を指すように変更できます。 デフォルトでは、カタリナを実行した作業ディレクトリにログファイルが書き込まれます。
+1. ビデオの再生に失敗した場合は、サンプルビデオプレーヤーのログパネルまたは `AdobeFlashAccess.log` ファイル。 の場所 `AdobeFlashAccess.log` ログファイルは、log4j.xml ファイルで示され、任意の場所を指すように変更できます。 デフォルトでは、ログファイルは catalina を実行した作業ディレクトリに書き込まれます。

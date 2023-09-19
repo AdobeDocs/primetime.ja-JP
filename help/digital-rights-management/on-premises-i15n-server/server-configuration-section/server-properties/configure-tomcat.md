@@ -1,21 +1,19 @@
 ---
-title: Tomcatの設定
-description: Tomcatの設定
+title: Tomcat の設定
+description: Tomcat の設定
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
+# Tomcat の設定{#configure-tomcat}
 
-# Tomcatを設定{#configure-tomcat}
+個別化サーバーで、Tomcat の [!DNL conf/server.xml] ファイルに追加の情報を記録します。 この情報は、レポート目的で使用できます。
 
-個別化サーバーで、Tomcatの[!DNL conf/server.xml]ファイルを変更し、アクセスログに追加情報を含めます。 この情報は、レポートの目的に使用できます。
-
-1. [!DNL server.xml]内の`AccessLogValve`の設定を探し、次に示すようにパターンを変更します。
+1. の設定を見つけます。 `AccessLogValve` in [!DNL server.xml] 次に示すように、パターンを変更します。
 
    ```
    <Valve className="org.apache.catalina.valves.AccessLogValve" 
@@ -24,13 +22,12 @@ ht-degree: 0%
    %{request-id}r" resolveHosts="false"/>
    ```
 
-   `%{x-forwarded-for}i` は、 `x-forwarded-for` ヘッダーの値を記録します。Apacheリバースプロキシを使用してTomcatサーバーに要求を転送する場合、このヘッダーには元のクライアントのIPアドレスが含まれますが、`%h`はApacheサーバーのIPアドレスを記録します。 `%{request-id}r` は、個別化アプリケーションログに含まれるリクエストIDに対応するリクエスト識別子を記録します。
+   `%{x-forwarded-for}i` は、 `x-forwarded-for` ヘッダー。 Apache のリバースプロキシを使用して要求を Tomcat サーバーに転送する場合、このヘッダーには元のクライアントの IP アドレスが含まれますが、 `%h` は Apache サーバーの IP アドレスを記録します。 `%{request-id}r` は、個別化アプリケーションログに含まれるリクエスト ID に対応するリクエスト識別子を記録します。
 
-1. [!DNL conf/server.xml]を編集し、`unpackwars`プロパティをfalseに設定します。
+1. 編集 [!DNL conf/server.xml] をクリックし、 `unpackwars` プロパティを false に設定します。
 
-   個別化サーバーとキー生成サーバーの両方で、[!DNL conf/server.xml]を編集し、`unpackwars`プロパティを`false`に設定することをお勧めします。 そうしないと、WARを更新する際に、パック解除されたWARフォルダも削除する必要がある場合があります。
+   個別化サーバーと鍵生成サーバーの両方で、 [!DNL conf/server.xml] をクリックし、 `unpackwars` プロパティを `false`. WAR を更新する場合は、パック化されていない WAR フォルダも削除する必要がある場合があります。
 
 >[!NOTE]
 >
->今後のDRMクライアントでは、Tomcatで使用可能なCORS(接触チャネル間のリソース共有)フィルターを有効にし、設定する必要があります。 現在、この要件を持つDRMクライアントはありません。
-
+>今後の DRM クライアントでは、Tomcat で使用可能な CORS（クロスオリジンリソース共有）フィルターを有効にして設定する必要があります。 現在、この要件を満たす DRM クライアントはありません。

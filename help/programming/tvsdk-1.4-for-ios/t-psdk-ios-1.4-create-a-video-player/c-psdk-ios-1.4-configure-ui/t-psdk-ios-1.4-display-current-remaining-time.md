@@ -1,20 +1,18 @@
 ---
 description: 再生中のコンテンツの現在時間と残り時間を表示できます。
-title: 現在時間と残り時間の表示
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: 現在の時間と残り時間を表示
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%
 
 ---
 
-
-# 現在時間と残り時間を表示{#display-the-current-time-and-remaining-time}
+# 現在の時間と残り時間を表示 {#display-the-current-time-and-remaining-time}
 
 再生中のコンテンツの現在時間と残り時間を表示できます。
 
-1. アクティブコンテンツの現在時間と残り時間を表示する表示を実装するには、次のサンプルコードを使用します。
+1. アクティブコンテンツの現在時間と残り時間を表示するディスプレイを実装するには、次のサンプルコードを使用します。
 
    ```
    // 1. Register for the PTMediaPlayerTimeChangeNotification 
@@ -67,7 +65,7 @@ ht-degree: 0%
    } 
    ```
 
-1. 広告の進行状況と残りの時間を示す表示を実装するには、以下のサンプルコードを使用します。
+1. 広告の進行状況と残り時間を示す表示を実装するには、以下のサンプルコードを使用します。
 
    ```
    double adBreakDurationLeft; 
@@ -102,4 +100,3 @@ ht-degree: 0%
    ```
 
 <!--<a id="example_D2FC658F27FC42A0B3E1AEC99B36788B"></a>-->
-

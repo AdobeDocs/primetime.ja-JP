@@ -1,13 +1,12 @@
 ---
 title: MVPD コンテンツメタデータ交換
 description: MVPD コンテンツメタデータ交換
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
 
 ---
-
 
 # MVPD コンテンツメタデータ交換
 

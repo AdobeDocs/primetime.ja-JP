@@ -1,37 +1,34 @@
 ---
-description: デフォルト設定を使用する場合は、課金を有効にしたり設定したりする必要はありません。 Adobe有効化担当者から別の設定パラメーターを取得した場合は、メディアプレイヤーを初期化する前に、BillingMetricsConfigurationクラスを使用してこれらのパラメーターを設定します。
+description: デフォルトの設定を使用する場合、課金を有効にしたり設定したりするために必要な操作は他にありません。 Adobeイネーブルメント担当者から異なる設定パラメーターを取得した場合は、 BillingMetricsConfiguration クラスを使用して、メディアプレーヤーを初期化する前にこれらのパラメーターを設定します。
 title: 請求指標の設定
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
 
 ---
 
-
 # 請求指標の設定{#configure-billing-metrics}
 
-デフォルト設定を使用する場合は、課金を有効にしたり設定したりする必要はありません。 Adobe有効化担当者から別の設定パラメーターを取得した場合は、メディアプレイヤーを初期化する前に、BillingMetricsConfigurationクラスを使用してこれらのパラメーターを設定します。
+デフォルトの設定を使用する場合、課金を有効にしたり設定したりするために必要な操作は他にありません。 Adobeイネーブルメント担当者から異なる設定パラメーターを取得した場合は、 BillingMetricsConfiguration クラスを使用して、メディアプレーヤーを初期化する前にこれらのパラメーターを設定します。
 
-ほとんどのお客様は、デフォルトの設定を使用する必要があります。
+ほとんどのお客様は、デフォルト設定を使用する必要があります。
 
 >[!IMPORTANT]
 >
->設定した設定は、メディアプレイヤーの使用期間中有効です。 メディアプレイヤーを初期化した後は、設定を変更できません。
+>設定した設定は、メディアプレーヤーの存続期間中も有効です。 メディアプレーヤーを初期化した後は、設定を変更できません。
 
-請求指標を設定するには：
+請求指標を設定するには、次の手順に従います。
 
 * 次のコードサンプルを入力します。
 
-   ```js
-   var config = new AdobePSDK.MediaPlayerItemConfig(); 
-   config.billingMetricsConfiguration.isEnabled = true; 
-   config.billingMetricsConfiguration.proVODBillableDurationMinutes = 60; 
-   config.billingMetricsConfiguration.stdVODBillableDurationMinutes = 30; 
-   config.billingMetricsConfiguration.liveBillableDurationMinutes = 15; 
-   _player.replaceCurrentResource(_resource, config);
-   ```
+  ```js
+  var config = new AdobePSDK.MediaPlayerItemConfig(); 
+  config.billingMetricsConfiguration.isEnabled = true; 
+  config.billingMetricsConfiguration.proVODBillableDurationMinutes = 60; 
+  config.billingMetricsConfiguration.stdVODBillableDurationMinutes = 30; 
+  config.billingMetricsConfiguration.liveBillableDurationMinutes = 15; 
+  _player.replaceCurrentResource(_resource, config);
+  ```
 
-   `_player`は`AdobePSDK.MediaPlayer`のインスタンス、`_resource`は`AdobePSDK.MediaResource`のインスタンスです。
-
+  場所 `_player` は、 `AdobePSDK.MediaPlayer` および `_resource` は、 `AdobePSDK.MediaResource`.

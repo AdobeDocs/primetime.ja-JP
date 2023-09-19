@@ -1,22 +1,20 @@
 ---
-description: デフォルトでは、再生を開始すると、VODメディア開始は0(MediaPlayer.LIVE_POINT)になります。 デフォルトの動作を上書きできます。
-title: 特定の時間にストリームを開始
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: デフォルトでは、再生を開始すると、VOD メディアは 0(MediaPlayer.LIVE_POINT) から開始されます。 デフォルトの動作を上書きできます。
+title: 特定の時間にストリームを入力
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# 特定の時間にストリームを入力 {#enter-a-stream-at-a-specific-time}
 
-# 特定の時刻にストリームを入力{#enter-a-stream-at-a-specific-time}
+デフォルトでは、再生を開始すると、VOD メディアは 0(MediaPlayer.LIVE_POINT) から開始されます。 デフォルトの動作を上書きできます。
 
-デフォルトでは、再生を開始すると、VODメディア開始は0(MediaPlayer.LIVE_POINT)になります。 デフォルトの動作を上書きできます。
+1. 位置をに渡す `MediaPlayer.prepareToPlay`.
 
-1. `MediaPlayer.prepareToPlay`に位置を渡します。
-
-   TVSDKは、指定された位置をアセットの開始点と見なします。 シーク操作は必要ありません。 位置がシーク可能な範囲内にない場合、TVSDKはデフォルトの位置を使用します。
+   TVSDK は、指定された位置をアセットの開始点と見なします。 シーク操作は必要ありません。 位置がシーク可能な範囲内にない場合、 TVSDK はデフォルトの位置を使用します。
 
    例：
 
@@ -35,4 +33,3 @@ ht-degree: 2%
        } 
    } 
    ```
-

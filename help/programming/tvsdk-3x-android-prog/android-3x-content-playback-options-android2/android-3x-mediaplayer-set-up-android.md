@@ -1,30 +1,28 @@
 ---
-description: TVSDKは、他のPrimetimeコンポーネントと統合できる高度なビデオプレイヤーアプリケーション（Primetimeプレイヤー）を作成するためのツールを提供します。 また、ビデオ再生の品質を最大限に高めるために設計された多数の機能も提供されます。
-title: メディアプレイヤーの設定
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK には、他の Primetime コンポーネントと統合できる高度なビデオプレーヤーアプリケーション（Primetime プレーヤー）を作成するためのツールが用意されています。 また、ビデオの再生品質を最大限に高めるために設計された多数の機能も提供します。
+title: メディアプレーヤーのセットアップ
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
+# メディアプレーヤーのセットアップ {#set-up-the-media-player}
 
-# メディアプレイヤーのセットアップ{#set-up-the-media-player}
-
-TVSDKは、他のPrimetimeコンポーネントと統合できる高度なビデオプレイヤーアプリケーション（Primetimeプレイヤー）を作成するためのツールを提供します。 また、ビデオ再生の品質を最大限に高めるために設計された多数の機能も提供されます。
+TVSDK には、他の Primetime コンポーネントと統合できる高度なビデオプレーヤーアプリケーション（Primetime プレーヤー）を作成するためのツールが用意されています。 また、ビデオの再生品質を最大限に高めるために設計された多数の機能も提供します。
 
 <!--<a id="section_1FE83A68DE624F20B52C0959851F5699"></a>-->
 
-`MediaPlayer`をインスタンス化し、その表示をフレームレイアウトに配置します。
+のインスタンス化 `MediaPlayer` そのビューをフレームレイアウトに配置します。
 
-1. `MediaPlayer`をインスタンス化し、`android.content.Context`オブジェクトをコンストラクタに渡します。
+1. インスタンス化 `MediaPlayer`，を渡す `android.content.Context` オブジェクトを次のコンストラクタに渡します。
 
    ```java
    MediaPlayer mediaPlayer = new MediaPlayer(context);
    ```
 
-1. `mediaPlayer`の`ViewGroup`を保持するフレームレイアウト(`android.widget.FrameLayout`)を提供します。
+1. フレームレイアウトを指定します ( `android.widget.FrameLayout`) を保持する `ViewGroup` / `mediaPlayer`:
 
    ```java
    FrameLayout playerFrame = (FrameLayout) _viewGroup.findViewById(R.id.playerFrame);
@@ -32,7 +30,7 @@ TVSDKは、他のPrimetimeコンポーネントと統合できる高度なビデ
 
    >[!NOTE]
    >
-   >以下は、`_viewGroup`を作成するためのコードスニペットです。
+   >次に、作成するコードスニペットを示します。 `_viewGroup`.
 
    ```
    @Override 
@@ -44,7 +42,7 @@ TVSDKは、他のPrimetimeコンポーネントと統合できる高度なビデ
     }
    ```
 
-1. フレームレイアウト内に`mediaPlayer`の表示を配置します。
+1. ビューを配置する `mediaPlayer` フレームレイアウト内：
 
    ```java
    playerFrame.addView(mediaPlayer.getView());
@@ -52,4 +50,4 @@ TVSDKは、他のPrimetimeコンポーネントと統合できる高度なビデ
 
    >[!NOTE]
    >
-   >これで`MediaPlayer`インスタンス(`mediaPlayer`)が使用可能になり、ビデオコンテンツがデバイスの画面に表示されるように適切に設定されました。
+   >The `MediaPlayer` インスタンス ( `mediaPlayer`) が使用可能になり、ビデオコンテンツをデバイス画面に表示するように適切に設定されました。

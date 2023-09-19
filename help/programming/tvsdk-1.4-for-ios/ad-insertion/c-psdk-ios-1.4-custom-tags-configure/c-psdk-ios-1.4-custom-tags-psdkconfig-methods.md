@@ -1,26 +1,24 @@
 ---
-description: PTSDKConfigクラスを使用して、TVSDK内でグローバルにカスタムタグ名を設定できます。
-title: タグのConfigクラスメソッド
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: PTSDKConfig クラスを使用して、 TVSDK 内でグローバルにカスタムタグ名を設定できます。
+title: タグの Config クラスメソッド
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
 
 ---
 
+# タグの Config クラスメソッド{#config-class-methods-for-tags}
 
-# tags{#config-class-methods-for-tags}のConfigクラスメソッド
+PTSDKConfig クラスを使用して、 TVSDK 内でグローバルにカスタムタグ名を設定できます。
 
-PTSDKConfigクラスを使用して、TVSDK内でグローバルにカスタムタグ名を設定できます。
+TVSDK は、ストリーム固有の設定を指定しないメディアストリームに対して、グローバル設定を自動的に適用します。
 
-TVSDKは、ストリーム固有の設定を指定していないメディアストリームに対して、グローバル設定を自動的に適用します。
+`PTSDKConfig` は、カスタムタグを管理する次のメソッドを公開しています。
 
-`PTSDKConfig` カスタムタグを管理するには、次のメソッドを公開します。
-
-| **特定のカスタムタグのサブスクライブ** |
+| **特定のカスタムタグを購読する** |
 |---|
-| `subscribedTags` | サブスクライブされたタグの現在のリストを取得します。 |
+| `subscribedTags` | サブスクライブ済みタグの現在のリストを取得します。 |
 | `setSubscribedTags` | アプリケーションに公開されるサブスクライブ済みタグのリストを設定します。 |
 | **デフォルトのオポチュニティディテクターで使用される広告タグのカスタマイズ** |
 | `adTags` | 広告タグの現在のリストを取得します。 |
@@ -28,9 +26,8 @@ TVSDKは、ストリーム固有の設定を指定していないメディアス
 
 次の点に注意してください。
 
-* setterメソッドでは、タグパラメーターにnull値を含めることはできません。
-* カスタムタグ名にはプレフィックス#を含める必要があります。
+* setter メソッドでは、タグパラメーターに null 値を含めることはできません。
+* カスタムタグ名には#プレフィックスを含める必要があります。
 
-   例えば、#EXT-X-ASSETは正しいカスタムタグ名ですが、EXT-X-ASSETは正しくありません。
+  例えば、#EXT-X-ASSETは正しいカスタムタグ名ですが、EXT-X-ASSET は正しくありません。
 * メディアストリームの読み込み後は、設定を変更できません。
-

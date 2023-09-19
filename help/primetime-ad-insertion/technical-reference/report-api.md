@@ -1,8 +1,7 @@
 ---
 title: レポート API
-description: 監査レポート API
-exl-id: 50eb4869-3765-4591-8c41-794b29d50044
-source-git-commit: 628544e38616715e83e0274ba26cf93302ce0e61
+description: Auditudeレポート API
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1042'
 ht-degree: 1%
@@ -15,7 +14,7 @@ ht-degree: 1%
 
 API はバックグラウンドで動作し、顧客や管理者がバックエンドインフラストラクチャとの通信を容易にします。
 
-詳しくは、 [!DNL Primetime Ad Insertion] API（を参照） [トリガーされたユーザーインターフェイスのAd InsertionAPI エンドポイント](https://adconfigservice-va6.cloud.adobe.io/swagger-ui/index.html#/).
+を参照するには、以下を実行します。 [!DNL Primetime Ad Insertion] API（を参照） [トリガーされたユーザーインターフェイスのAd InsertionAPI エンドポイント](https://adconfigservice-va6.cloud.adobe.io/swagger-ui/index.html#/).
 
 ## API エンドポイント {#report-api-endpoint}
 
@@ -34,13 +33,13 @@ API はバックグラウンドで動作し、顧客や管理者がバックエ�
 |----------|-----------------------------------------------------------------------------------------------|----------------|----------------|---------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | endDate | レポートデータの終了日 | 日付 | Y | なし | UTC-8 の昨日より新しくない | ######## |
 | フィルター | 1 つ以上の列のフィルター | 文字列 | N | なし | ad_config_id 、 zone_id | ad_config_id=990,900;state=active |
-|  |  |  |  |  | リクエストで metaData が「true」に設定されている場合は、名前でフィルタリングすることもできます。 |  |
-|  |  |  |  |  |  | 複数のフィルターキーはセミコロンで区切られます。 |
-|  |  |  |  |  |  | フィルターキーの値のリストを指定するには、コンマ区切り値を使用します |
-| groupBy | オンタイム（年\|月\|日）または ad_config_id でグループ化します。 Adconfig は AdRule と同義語です。 | 文字列 | N | なし | y \| m \| d , ad_config_id | m, ad_config_id |
-|  |  |  |  |  |  |  |
-|  |  |  |  |  |  | groupBy の場合は、時間に y または m または d のいずれかを指定します |
-|  |  |  |  |  |  |  |
+|          |                                                                                               |                |                |                     | リクエストで metaData が「true」に設定されている場合は、名前でフィルタリングすることもできます。 |                                                                         |
+|          |                                                                                               |                |                |                     |                                                                                    | 複数のフィルターキーはセミコロンで区切られます。 |
+|          |                                                                                               |                |                |                     |                                                                                    | フィルターキーの値のリストを指定するには、コンマ区切り値を使用します |
+| groupBy | オンタイム（年\|月\|日）または ad_config_id でグループ化します。 Adconfig は AdRule と同義語です。 | 文字列 | N | なし | y \| m \| d , ad_config_id | m 、 ad_config_id |
+|          |                                                                                               |                |                |                     |                                                                                    |                                                                         |
+|          |                                                                                               |                |                |                     |                                                                                    | groupBy の場合は、時間に y または m または d のいずれかを指定します。 |
+|          |                                                                                               |                |                |                     |                                                                                    |                                                                         |
 
 
 
@@ -49,14 +48,15 @@ API はバックグラウンドで動作し、顧客や管理者がバックエ�
 | 名前 | 値のタイプ | 必須 | 値の例 | 有意性 |
 |-----------------------|----------------|---------------|-------------------------------------|------------------------------------|
 | 確定 | 文字列 | Y | CSV のテキスト/csv | API から期待される応答のタイプ |
-|  |  |  | application/json または&#39;*/*&#39; （JSON の場合） |  |
+|                       |                |               | application/json または&#39;*/*&#39; （JSON の場合） |                                    |
 | 認証トークン | 文字列 | Y | xyz | 認証トークン |
 | x-api-key | 文字列 | Y | xyz | API キー |
 | x-gw-ims-org-id | 文字列 | Y | xyz12345 | アカウントの IMS 組織 ID |
 
 * Adobe.io の JWT 認証ヘルプページで説明されている手順に従って、認証トークン（アクセストークンとも呼ばれます）を生成できます。
-   >[!NOTE]
-   >認証トークンの有効期限は 24 時間なので、繰り返しスクリプトを使用してレポート API を使用する場合は、有効期限の前またはトークンが有効でないことに関する OAuth エラーが発生した際に、必ず認証トークンを生成してください。
+  >>
+  [!NOTE]
+  >認証トークンの有効期限は 24 時間なので、繰り返しスクリプトを使用してレポート API を使用する場合は、有効期限の前またはトークンが有効でないことに関する OAuth エラーが発生した際に、必ず認証トークンを生成してください。
 
 * リクエストヘッダーに正しい値を設定し、認証トークン（JWT 認証を使用）を生成するには、アカウントの以下の設定を知っておく必要があります。 これらの値を取得するには、Primetime サポートチームにお問い合わせください。
 テクニカルアカウント ID
@@ -130,18 +130,18 @@ curl --location --request GET 'https://dai-sandbox1-primetime.adobe.io/report?st
 
 | 呼び出し/使用例 | 期待される結果 |
 |---|---|
-| 開始日と終了日のGETを含むレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2021-01-01 header :Accept = application/json または */* | このアカウントに属するすべての広告を含む、次のパラメーターを持つ JSON |
-| GroupBy = d \| m \| yGETのレポートを取得： [API_ENDPOINT]//report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=d \| m \| y ヘッダー：Accept = application/json または */* | 次のパラメーターを持つ JSON で、このアカウントの日付（mm-dd-yyyy \| mm-yyyy \| yyyy 形式）に属するすべての広告が含まれる |
-| GroupBy = ad_config_idGETでレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=ad_config_id header :Accept = application/json または */* | このアカウントに属するすべての広告を含む、次のパラメーターを持つ JSON。ad_config_id total_impressions |
-| GroupBy = d \| m \| y および ad_config_idGETを使用してレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=d,ad_config_id ヘッダー：Accept = application/json または */* | 次のパラメーターを持つ JSON で、このアカウント ad_config_id の日付（mm-dd-yyyy \| mm-yyyy \| yyyy 形式）に属するすべての広告を含む |
-| metaData=true および groupBy=d \| m \| yGETを含むレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;metaData=true&amp;groupBy=ad_config_id header :Accept = application/json または */* | このアカウントに属するすべての広告を含む、次のパラメーターを持つ JSON。ad_config_id name total_impressions |
-| groupBy=d \| m \| y および ad_config_idGETを含むレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;metaData=true&amp;groupBy=d \| m \| y,ad_config_id ヘッダー：Accept = application/json または */* | 次のパラメーターを持つ JSON で、このアカウントに属するすべての広告が ad_config_id 名 total_impressions dates （mm-dd-yyyy \| mm-yyyy \| yyyy 形式） |
+| 開始日と終了日のGETを含むレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2021-01-01 header : Accept = application/json。 または */* | このアカウントに属するすべての広告を含む、次のパラメーターを持つ JSON |
+| GroupBy = d \| m \| yGETのレポートを取得： [API_ENDPOINT]//report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=d \| m \| y ヘッダー： Accept = application/json。 または */* | 次のパラメーターを持つ JSON で、このアカウントの日付（mm-dd-yyyy \| mm-yyyy \| yyyy 形式）に属するすべての広告が含まれる |
+| GroupBy = ad_config_idGETでレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=ad_config_id header : Accept = application/json または */* | このアカウントに属するすべての広告を含む、次のパラメーターを持つ JSON。ad_config_id total_impressions |
+| GroupBy = d \| m \| y および ad_config_idGETを使用してレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=d,ad_config_id header : Accept = application/json または */* | 次のパラメーターを持つ JSON で、このアカウント ad_config_id の日付（mm-dd-yyyy \| mm-yyyy \| yyyy 形式）に属するすべての広告を含む |
+| metaData=true および groupBy=d \| m \| yGETを含むレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;metaData=true&amp;groupBy=ad_config_id header : Accept = application/json または */* | このアカウントに属するすべての広告を含む、次のパラメーターを持つ JSON。ad_config_id name total_impressions |
+| groupBy=d \| m \| y および ad_config_idGETを含むレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;metaData=true&amp;groupBy=d \| m \| y,ad_config_id header : Accept = application/json または */* | 次のパラメーターを持つ JSON で、このアカウントに属するすべての広告が ad_config_id 名 total_impressions dates （mm-dd-yyyy \| mm-yyyy \| yyyy 形式） |
 | レポートを取得して、指定した日付範囲 (unpaged = true) のすべての行を取得します。 [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-31&amp;groupBy=d&amp;unpaged=true | 返された JSON 配列内の 31 個のエントリ |
 | 有効なページクエリパラメーターGETを含むレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-31&amp;page=0&amp;size=5&amp;groupBy=d | 返された配列内の 5 個のエントリ |
-| CSV 形式のGETを使用してレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10 header :承認= text/csv | CSV 文字列が、ヘッダー：と共に返されます。total_impressions |
-| csv 形式のレポートを取得し、groupBy = d \| m \| yGET: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;groupBy=d\|m\|y ヘッダー：承認= text/csv | CSV 文字列が、ヘッダー：と共に返されます。total_impressions 日付（mm-dd-yyyy \| mm-yyyy \| yyyy 形式） |
-| csv 形式でレポートを取得し、metadata = trueGET: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true header :承認= text/csv | CSV 文字列が、ヘッダー：と共に返されます。total_impressions |
-| csv 形式、metadata = true、groupBy = d \| m \| yGETでレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true&amp;groupBy=d\|m\|y ヘッダー：承認= text/csv | CSV 文字列が、ヘッダー：と共に返されます。total_impressions 日付（mm-dd-yyyy \| mm-yyyy \| yyyy 形式） |
+| CSV 形式のGETを使用してレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10 header : Accept = text/csv | CSV 文字列が返され、ヘッダー： total_impressions |
+| csv 形式のレポートを取得し、groupBy = d \| m \| yGET: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;groupBy=d\|m\|y ヘッダー： Accept = text/csv | CSV 文字列が返され、ヘッダー： total_impressions dates （mm-dd-yyyy \| mm-yyyy \| yyyy 形式） |
+| csv 形式でレポートを取得し、metadata = trueGET: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true header : Accept = text/csv | CSV 文字列が返され、ヘッダー： total_impressions |
+| csv 形式、metadata = true、groupBy = d \| m \| yGETでレポートを取得： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true&amp;groupBy=d\|m\|y ヘッダー： Accept = text/csv | CSV 文字列が返され、ヘッダー： total_impressions dates （mm-dd-yyyy \| mm-yyyy \| yyyy 形式） |
 
 
 ## レポート API スロットルポリシー {#report-api-throttling-policy}

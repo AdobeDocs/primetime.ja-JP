@@ -1,32 +1,30 @@
 ---
-description: TVSDKの機能は、設定によって動作し、MediaPlayerを介して実装されます。
-title: 設定情報をMediaPlayerに渡して機能マネージャを作成する
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK 機能は設定によって駆動され、MediaPlayer を通じて実装されます。
+title: 設定情報を MediaPlayer に渡して機能マネージャーを作成する
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
+# 設定情報を MediaPlayer に渡して機能マネージャーを作成する {#creating-feature-managers-by-passing-configuration-information-to-the-mediaplayer}
 
-# 設定情報をMediaPlayer {#creating-feature-managers-by-passing-configuration-information-to-the-mediaplayer}に渡して機能マネージャを作成する
+TVSDK 機能は設定によって駆動され、MediaPlayer を通じて実装されます。
 
-TVSDKの機能は、設定によって動作し、MediaPlayerを介して実装されます。
+* 設定は、ABR コントロールの初期ビットレートやデフォルトのクローズドキャプション表示など、機能固有の設定のリストです。
 
-* 設定は、ABRコントロールの初期ビットレートやデフォルトのクローズドキャプションの表示など、機能に対する特定の設定のリストです。
+  機能マネージャは、機能の動作を決定するために、設定を取得する必要があります。
 
-   機能マネージャは、機能の動作を決定するために、設定を取得する必要があります。
+  Primetime リファレンス実装では、設定は共有の環境設定に保存されますが、環境に応じてどのような方法でも設定を保存できます。
 
-   Primetimeリファレンスの実装では、設定は共有の環境設定に保存されますが、環境にとって意味のある方法で設定を保存することができます。
+* `MediaPlayer` は、ビデオリソースを格納する TVSDK メディアプレーヤーオブジェクトです。
 
-* `MediaPlayer` は、ビデオリソースを含むTVSDKのメディアプレイヤーオブジェクトです。
+  機能マネージャーは、 TVSDK イベントリスナーをこのプレーヤーオブジェクトに登録し、再生セッションからデータを取得し、 TVSDK 機能を再生セッションにトリガーします。
 
-   機能マネージャーは、TVSDKイベントリスナーをこのプレイヤーオブジェクトに登録し、再生セッションからデータを取得し、トリガーTVSDK機能を再生セッションに追加します。
+各機能には、対応する設定インターフェイスがあります。 例： `CCManager` uses `ICCConfig` 設定を取得します。 `ICCConfig` には、クローズドキャプションに関連する設定情報のみを取得するメソッドが含まれています。
 
-各機能には、対応する設定インターフェイスがあります。 例えば、`CCManager`は`ICCConfig`を使用して設定を取得します。 `ICCConfig` には、クローズドキャプションに関連する設定情報のみを取得するメソッドが含まれます。
-
-次の例は、`MediaPlayer`からクローズドキャプションの表示、フォントスタイル、フォントエッジに関する情報を受け取るように設定された[!DNL ICCConfig.java]ファイルを示しています。
+次の例は、 [!DNL ICCConfig.java] クローズドキャプションの表示、フォントスタイル、フォントエッジに関する情報を `MediaPlayer`:
 
 ```java
 // Constructor of CCManager 
@@ -64,11 +62,11 @@ TVSDKの機能は、設定によって動作し、MediaPlayerを介して実装�
 }
 ```
 
-TVSDK機能を使用するアプリケーションは、設定プロバイダーと`MediaPlayer`オブジェクトを持つ機能マネージャーを作成できます。 例：
+TVSDK 機能を使用するアプリケーションは、設定プロバイダーと `MediaPlayer` オブジェクト。 例：
 
 ```java
 // This application needs to use the advertising workflow feature 
 AdsManager adsManager = new AdsManagerOn();
 ```
 
-機能マネージャ設定APIドキュメント：[Javadoc](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/package-summary.html)
+機能マネージャー設定 API ドキュメント： [Javadoc](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/package-summary.html)

@@ -1,13 +1,12 @@
 ---
 title: 動的クライアントの登録
 description: 動的クライアントの登録
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
 
 ---
-
 
 # 動的クライアントの登録 {#dynamic-client-registration}
 
@@ -26,7 +25,7 @@ ht-degree: 0%
 現在、Adobe Pass Authentication がアプリケーションを識別して登録する方法は 2 つあります。
 
 * ブラウザーベースのクライアントは、許可されたドメインリストを介して登録されます。
-* iOSや Android アプリケーションなどのネイティブアプリケーションクライアントは、署名された要求者メカニズムを通じて登録されます
+* iOSや Android アプリケーションなどのネイティブアプリケーションクライアントは、署名された要求者メカニズムを通じて登録されます。
 
 Chrome のカスタムタブと Safari View Controller の新しいフローに対処するため、Adobe Passは新しいアプリケーションを登録するための新しいクライアント登録メカニズムを提案しています。 このメカニズムにより、アプリケーションをより安全かつ詳細に制御でき、すべてのプラットフォームでアプリケーションを登録するために使用できます。
 

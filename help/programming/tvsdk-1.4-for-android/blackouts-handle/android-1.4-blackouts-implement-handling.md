@@ -1,20 +1,18 @@
 ---
-description: TVSDKは、ブラックアウト期間を処理するためのAPIとサンプルコードを提供します。
+description: TVSDK には、ブラックアウト期間を処理するための API とサンプルコードが用意されています。
 title: ブラックアウト処理の実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
+# ブラックアウト処理の実装{#implement-blackout-handling}
 
-# ブラックアウト処理{#implement-blackout-handling}の実装
+TVSDK には、ブラックアウト期間を処理するための API とサンプルコードが用意されています。
 
-TVSDKは、ブラックアウト期間を処理するためのAPIとサンプルコードを提供します。
-
-ブラックアウト処理（ブラックアウト中の代替コンテンツの提供を含む）を実装するには：
+ブラックアウト時の代替コンテンツの提供を含むブラックアウト処理を実装するには：
 
 1. ライブストリームマニフェスト内のブラックアウトタグを検出するようにアプリを設定します。
 
@@ -27,7 +25,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. フォアグラウンドストリームとバックグラウンドストリームに、時間指定メタデータイベント用のイベントリスナーを作成します。
+1. フォアグラウンドストリームとバックグラウンドストリームで、時間指定メタデータイベントのイベントリスナーを作成します。
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -75,7 +73,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }; 
    ```
 
-1. `MediaPlayer`時間が実行されたときに`TimedMetadata`オブジェクトを処理します。
+1. 処理 `TimedMetadata` オブジェクト： `MediaPlayer` 時間が実行されます。
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -98,7 +96,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    };
    ```
 
-1. ブラックアウト期間の開始時と終了時にコンテンツを切り替える方法を作成します。
+1. ブラックアウト期間の開始および終了時にコンテンツを切り替えるメソッドを作成します。
 
    ```java
    private void handleTimedMetadataList(long currentTime) { 
@@ -150,7 +148,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
    }
    ```
 
-1. ブラックアウト範囲が再生ストリームのDVRに含まれる場合は、シーク不可能範囲を更新します。
+1. ブラックアウトの範囲が再生ストリームの DVR に含まれる場合は、シーク不可能な範囲を更新します。
 
    ```java
    // prepare and update blackout nonSeekable ranges 
@@ -183,7 +181,7 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
 
    >[!NOTE]
    >
-   >現在、複数のビットレートライブストリームでは、可変ビットレート(ABR)プロファイルが同期しない場合があります。 これにより、サブスクライブされた同じタグに対する重複`timedMetadata`オブジェクトが発生します。 シーク不可能な範囲の誤った計算を避けるには、次の例のように、計算の後に、シーク不可能な範囲が重なっていないかどうかを確認することを強くお勧めします。
+   >現在、複数のビットレートライブストリームでは、可変ビットレート (ABR) プロファイルが同期しなくなる場合があります。 これにより、重複が発生します `timedMetadata` 同じサブスクライブ済みタグのオブジェクト。 シーク不可能な範囲の誤った計算を避けるために、次の例のように、計算後に、シーク不可能な範囲が重なっていないかどうかを確認することを強くお勧めします。
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
@@ -209,4 +207,3 @@ TVSDKは、ブラックアウト期間を処理するためのAPIとサンプル
        nonSeekableRanges.removeAll(rangesToRemove); 
    }
    ```
-

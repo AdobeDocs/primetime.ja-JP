@@ -1,16 +1,14 @@
 ---
-title: 保護されたストリーミング用のAdobe PrimetimeDRMサーバ
-description: 保護されたストリーミング用のAdobe PrimetimeDRMサーバ
+title: 保護されたストリーミング用のAdobe Primetime DRM サーバ
+description: 保護されたストリーミング用のAdobe Primetime DRM サーバ
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
 
 ---
 
+# 保護されたストリーミング用のAdobe Primetime DRM サーバ{#adobe-primetime-drm-server-for-protected-streaming}
 
-# 保護されたストリーミング用のAdobe PrimetimeDRMサーバ{#adobe-primetime-drm-server-for-protected-streaming}
-
-AdobeHTTP Dynamic Streamingなど、Primetime DRMでコンテンツが保護されているストリーミングの使用例では、ソフトウェアにPrimetime DRM Server for Protected Streamingも含まれます。 このソリューションは、Tomcatなどのサーブレットコンテナに容易に導入でき、最大のコンテンツ配信ニーズを満たす高いレベルの拡張性とパフォーマンスを実現できます。
+AdobeのHTTP Dynamic Streamingなど、コンテンツが Primetime DRM で保護されているストリーミングの使用例では、このソフトウェアに Primetime DRM Server for Protected Streaming も含まれます。 このソリューションは、Tomcat などのサーブレットコンテナに簡単にデプロイでき、最大のコンテンツ配布ニーズを満たす高いレベルの拡張性とパフォーマンスを実現できます。

@@ -1,18 +1,16 @@
 ---
-description: TVSDKは、複数の初期PlacementInformationを設定できます。
-title: 複数の初期PlacementInformation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK は、複数の初期 PlacementInformation を設定できます。
+title: 複数の初期 PlacementInformation
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '20'
 ht-degree: 0%
 
 ---
 
+# 複数の初期 PlacementInformation{#multiple-initial-placementinformations}
 
-# 複数の初期PlacementInformations{#multiple-initial-placementinformations}
-
-TVSDKは、複数の初期PlacementInformationを設定できます。
+TVSDK は、複数の初期 PlacementInformation を設定できます。
 
 ```java
 ArrayList<PlacementInformation> placementInformations = new ArrayList<PlacementInformation>(); 
@@ -48,4 +46,3 @@ else if (customRangeHelper.hasRanges() == CustomRangeHelper.REPLACE_RANGE) {
 } 
 return  placementInformations;
 ```
-

@@ -2,20 +2,18 @@
 title: ライセンスサーバーのプロパティファイル
 description: ライセンスサーバーのプロパティファイル
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
+# ライセンスサーバーのプロパティファイル {#license-server-properties-file}
 
-# ライセンスサーバーのプロパティファイル{#license-server-properties-file}
+以下を使用します。 [!DNL flashaccess-refimpl.properties] ファイルを使用して、参照実装の License Server コンポーネントを設定します。 少なくとも、トランスポート秘密鍵証明書とライセンスサーバー秘密鍵証明書に関連するプロパティを設定してください。 秘密鍵証明書ファイルの場所は、 `config.resourcesDirectory` プロパティ。 このファイルには、コンテンツのパッケージ化に関連するプロパティも含まれています。これらのプロパティは、FlashMediaRights ManagementServer 1.x のメタデータ変換にのみ使用されます。 このプロパティファイルの値を変更した場合、変更を有効にするには、ライセンスサーバーを再起動する必要があります。
 
-[!DNL flashaccess-refimpl.properties]ファイルを使用して、参照実装のLicense Serverコンポーネントを設定します。 少なくとも、Transport CredentialとLicense Serverの秘密鍵証明書に関連するプロパティを設定する必要があります。 秘密鍵証明書ファイルの場所は、`config.resourcesDirectory`プロパティで指定されたディレクトリを基準に指定する必要があります。 このファイルには、コンテンツのパッケージ化に関連するいくつかのプロパティも含まれています。これらのプロパティは、FlashMediaRights ManagementServer 1.xのメタデータ変換にのみ使用されます。 このプロパティファイルの値のいずれかを変更した場合、変更を有効にするには、ライセンスサーバーを再起動する必要があります。
-
-Adobeアクセスでリモートキー配信のライセンスをiOSクライアントに対して生成できるようにするには、[!DNL flashaccess-refimpl.properties]にキーサーバー証明書を指定する必要があります。
+AdobeアクセスでiOSクライアントへのリモートキー配信のライセンスの生成をサポートするには、キーサーバー証明書を [!DNL flashaccess-refimpl.properties].
 
 Adobeアクセスに次のプロパティが追加されました。
 
@@ -29,12 +27,11 @@ Adobeアクセスに次のプロパティが追加されました。
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> HandlerConfiguration.KeyServerCertificate</span> </td> 
-   <td colname="2" class="- topic/entry "> Adobeが発行するキーサーバーのライセンスサーバー証明書。 この証明書は、メタデータがキーサーバーが必要であることを示している場合に、iOSデバイスのライセンスを生成するために使用されます。 </td> 
+   <td colname="2" class="- topic/entry "> キーサーバーのライセンスサーバー証明書 (Adobe発行 )。 この証明書は、メタデータがキーサーバーが必要であることを示している場合に、iOSデバイスのライセンスを生成するために使用されます。 </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> RefImpl.HSM.HandlerConfiguration.\ KeyServerCertificate.Alias</span> </td> 
-   <td colname="2" class="- topic/entry ">HSMに保存されているキーサーバーのAdobe発行ライセンスサーバー証明書のエイリアス。 HSMが有効な場合は、<span class="codeph"> HandlerConfiguration.KeyServerCertificate</span>の代わりに、このプロパティを使用します。 </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> RefImpl.HSM.HandlerConfiguration.\KeyServerCertificate.Alias</span> </td> 
+   <td colname="2" class="- topic/entry ">HSM に保存されるキーサーバーのAdobe発行ライセンスサーバー証明書のエイリアス。 HSM が有効な場合は、 <span class="codeph"> HandlerConfiguration.KeyServerCertificate</span>. </td> 
   </tr> 
  </tbody> 
 </table>
-

@@ -1,33 +1,31 @@
 ---
-description: ABR制御値はABRControlParametersでのみ設定できますが、新しい値をいつでも作成できます。
-title: ABRControlParametersを使用した可変ビットレートの設定
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: ABR 制御値は ABRControlParameters でのみ設定できますが、新しい値をいつでも作成できます。
+title: ABRControlParameters を使用したアダプティブビットレートの設定
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
+# ABRControlParameters を使用したアダプティブビットレートの設定{#configure-adaptive-bit-rates-using-abrcontrolparameters}
 
-# ABRControlParameters{#configure-adaptive-bit-rates-using-abrcontrolparameters}を使用して可変ビットレートを設定
+ABR 制御値は ABRControlParameters でのみ設定できますが、新しい値をいつでも作成できます。
 
-ABR制御値はABRControlParametersでのみ設定できますが、新しい値をいつでも作成できます。
+次の条件が適用されます。 `ABRControlParameters`:
 
-`ABRControlParameters`には次の条件が適用されます。
-
-* 構築時に、すべてのパラメーターに値を指定する必要があります。
+* 構築時にすべてのパラメータの値を指定する必要があります。
 * 構築後に個々の値を変更することはできません。
-* 指定したパラメーターが許容範囲外の場合は、`ArgumentError`がスローされます。
+* 指定したパラメーターが許容範囲外の場合、 `ArgumentError` がスローされます。
 
-1. 初期、最小および最大ビットレートを決定します。
-1. ABRポリシーの決定：
+1. 初期、最小、最大のビットレートを決定します。
+1. ABR ポリシーを決定します。
 
    * `ABR_CONSERVATIVE`
    * `ABR_MODERATE`
    * `ABR_AGGRESSIVE`
 
-1. ABRパラメーターの値を`ABRControlParameters`コンストラクターに設定し、それらをメディアプレイヤーに割り当てます。
+1. ABR パラメーター値を `ABRControlParameters` コンストラクターに割り当てて、Media Player に割り当てます。
 
    ```java
    public ABRControlParameters(int initialBitRate, 
@@ -39,4 +37,3 @@ ABR制御値はABRControlParametersでのみ設定できますが、新しい値
      int maxTrickPlayBandwidthUsage, 
      int maxPlayoutRate);
    ```
-

@@ -1,27 +1,25 @@
 ---
-description: 以下は、クローズドキャプショントラックの選択方法の例です。
+description: ユーザーがクローズドキャプショントラックを選択する方法の例を以下に示します。
 title: ユーザーがトラックを変更できるようにする
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
 
 ---
 
+# ユーザーがトラックを変更できるようにする{#allow-the-user-to-change-the-track}
 
-# ユーザーがトラック{#allow-the-user-to-change-the-track}を変更できるようにします
+ユーザーがクローズドキャプショントラックを選択する方法の例を以下に示します。
 
-以下は、クローズドキャプショントラックの選択方法の例です。
-
-1. 使用可能なクローズドキャプショントラックを表示するには、`MediaPlayerItem.closedCaptionsTracks`プロパティを使用します。
+1. 使用可能なクローズドキャプショントラックを表示するには、 `MediaPlayerItem.closedCaptionsTracks` プロパティ。
 
    ```js
    var tracks = item.closedCaptionsTracks;
    ```
 
-1. 現在のクローズドキャプショントラックを設定するには、`MediaPlayerItem.selectClosedCaptionsTrack`メソッドを使用します。
-1. メディアプレイヤーアイテムを準備したら、` MediaPlayer.  currentItem `メソッドを使用して、メディアプレイヤーからアイテムを取得します。
+1. 現在のクローズドキャプショントラックを設定するには、 `MediaPlayerItem.selectClosedCaptionsTrack` メソッド。
+1. メディアプレーヤーアイテムの準備が完了したら、 ` MediaPlayer.  currentItem ` メソッド。
 
    ```js
    // Select the cc track with index k. 
@@ -32,4 +30,3 @@ ht-degree: 0%
        item.selectClosedCaptionsTrack(tracks[k]); 
    }
    ```
-

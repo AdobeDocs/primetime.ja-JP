@@ -1,26 +1,24 @@
 ---
-title: コマンドラインツールのインストール
-description: コマンドラインツールのインストール
+title: コマンドラインツールをインストールする
+description: コマンドラインツールをインストールする
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
+# コマンドラインツールをインストールする {#install-the-command-line-tools}
 
-# コマンドラインツール{#install-the-command-line-tools}をインストールします。
+1. の内容をコピーします。 [DRM SDK DVD]\Reference Implementation\Command Line Tools\ディレクトリをシステム上の作業ディレクトリに移動します。
 
-1. [DRM SDK DVD]\Reference Implementation\Command Line Tools\ディレクトリの内容を、システム上の作業ディレクトリにコピーします。
+   [!DNL .../Command Line Tools/] 内容：
 
-   [!DNL .../Command Line Tools/] コンテンツ：
+   * [!DNL flashaccesstools.properties]  — コマンドラインツールのデフォルトの設定ファイル。
+   * [!DNL libs/]  — コマンドラインツールの JAR ファイルを含みます
+   * [!DNL samples/] - Ant ビルドスクリプト ( [!DNL build-samples.xml]) および Java ソースファイル。
 
-   * [!DNL flashaccesstools.properties]  — コマンドラインツールのデフォルト設定ファイル。
-   * [!DNL libs/]  — コマンドラインツールのJARファイルが含まれます
-   * [!DNL samples/] - Antビルドスクリプト(  [!DNL build-samples.xml])とJavaソースファイルが含まれます。
-
-      >[!NOTE]
-      >
-      >Javaソースファイルは、Primetime DRM SDK APIの使用方法を示しています。 サンプルを作成して実行するには、[!DNL samples/]の[!DNL build-samples.xml] Antスクリプトを実行します。
+     >[!NOTE]
+     >
+     >Java ソースファイルを使用した Primetime DRM SDK API の使用方法を示します。 サンプルをビルドして実行するには、 [!DNL build-samples.xml] の Ant スクリプト [!DNL samples/].

@@ -1,16 +1,14 @@
 ---
-title: Packagerのプロパティファイル
-description: Packagerのプロパティファイル
+title: Packager プロパティファイル
+description: Packager プロパティファイル
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
+# Packager プロパティファイル {#packager-properties-file}
 
-# Packagerのプロパティファイル{#packager-properties-file}
-
-[!DNL flashaccess-refimpl-packager.properties]ファイルを使用して、参照実装のWatched Folder Packagerコンポーネントを設定します。 少なくとも、ライセンスサーバーのURL、ライセンスサーバー証明書、Packagerの資格情報、およびキー保護オプションを設定してください。 このファイルには、各監視フォルダー(packager.watchfolder.source)の場所も含まれています。 `n`)をクリックします。このプロパティファイルの値に対して行った変更は、次回監視フォルダーパッケージャーを実行したときに有効になります（サーバーの再起動は不要です）。 ただし、パッケージャーで設定エラーが発生した場合は、監視フォルダーパッケージャーのスレッドが終了し、サーバーを再起動してパッケージャーのスレッドを再起動する必要があります。
+以下を使用します。 [!DNL flashaccess-refimpl-packager.properties] ファイルを参照実装の監視フォルダーパッケージャコンポーネントを設定します。 少なくとも、ライセンスサーバーの URL、ライセンスサーバーの証明書、パッケージャの資格情報、および鍵の保護オプションを必ず設定してください。 このファイルには、各監視フォルダー (packager.watchfolder.source) の場所も含まれています。 `n`). このプロパティファイルの値に加えた変更は、次回監視フォルダーパッケージャが実行されたときに有効になります（サーバーを再起動する必要はありません）。 ただし、パッケージャーに設定エラーが発生した場合は、監視フォルダーパッケージャーのスレッドが終了し、パッケージャーのスレッドを再起動するには、サーバーを再起動する必要があります。

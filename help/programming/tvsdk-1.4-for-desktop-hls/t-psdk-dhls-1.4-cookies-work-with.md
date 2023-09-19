@@ -1,29 +1,27 @@
 ---
-description: TVSDKを使用して、セッション管理、ゲートアクセスなどのために、cookieヘッダーに任意のデータを送信できます。
-title: cookieの使用
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK を使用して、セッション管理やゲートアクセスなどのために、Cookie ヘッダーに任意のデータを送信できます。
+title: cookie の操作
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
 
 ---
 
+# cookie の操作{#work-with-cookies}
 
-# cookieを使用する{#work-with-cookies}
+TVSDK を使用して、セッション管理やゲートアクセスなどのために、Cookie ヘッダーに任意のデータを送信できます。
 
-TVSDKを使用して、セッション管理、ゲートアクセスなどのために、cookieヘッダーに任意のデータを送信できます。
+キーサーバーにリクエストを送信する際の、ある種の認証の例を次に示します。
 
-次に、キーサーバーに要求を行う場合の認証の種類の例を示します。
+1. 顧客がブラウザーで Web サイトにログインすると、その顧客のログインに、コンテンツの表示が許可されていることが示されます。
+1. アプリケーションは、ライセンスサーバーが期待する内容に基づいて認証トークンを生成します。 その値を TVSDK に渡します。
+1. TVSDK は、この値を Cookie ヘッダーに設定します。
+1. TVSDK がキーサーバーにリクエストを送信して、コンテンツを復号化するキーを取得すると、そのリクエストの Cookie ヘッダーに認証値が含まれるので、キーサーバーはリクエストが有効であることを認識します。
 
-1. 顧客がブラウザーでWebサイトにログインし、ログインにコンテンツの表示が許可されていることが示されます。
-1. アプリケーションは、ライセンスサーバーが予期する内容に基づいて認証トークンを生成します。 その値をTVSDKに渡します。
-1. TVSDKは、その値をcookieヘッダーに設定します。
-1. TVSDKがキーサーバーにリクエストを送信し、コンテンツの復号化キーを取得すると、そのリクエストのCookieヘッダーに認証値が含まれるので、キーサーバーはリクエストが有効であることを認識します。
+Cookie を使用するには：
 
-Cookieを使用するには：
-
-1. Cookieを設定するには、`NetworkConfiguration`の`cookieHeaders`プロパティを使用します。 `cookieHeaders`プロパティはMetadataオブジェクトです。このオブジェクトにキーと値のペアを追加して、Cookieのヘッダーに含めることができます。
+1. 以下を使用します。 `cookieHeaders` プロパティ： `NetworkConfiguration` を使用して cookie を設定します。 The `cookieHeaders` プロパティは Metadata オブジェクトです。このオブジェクトにキーと値のペアを追加して、Cookie のヘッダーに含めることができます。
 
    例：
 
@@ -35,9 +33,9 @@ Cookieを使用するには：
    networkConfiguration.cookieHeaders = metadata;
    ```
 
-   デフォルトでは、cookieヘッダーはキーリクエストでのみ送信されます。 Cookieヘッダーをすべてのリクエストと共に送信するには、`NetworkConfiguration`プロパティ`useCookieHeadersForAllRequests`をtrueに設定します。
+   デフォルトでは、cookie ヘッダーはキーリクエストでのみ送信されます。 すべてのリクエストで Cookie ヘッダーを送信するには、 `NetworkConfiguration` プロパティ `useCookieHeadersForAllRequests` を true に設定します。
 
-1. `NetworkConfiguration`が確実に機能するように、メタデータとして設定します。
+1. 次の手順を実行します。 `NetworkConfiguration` は機能し、メタデータとして設定します。
 
    ```
    var networkConfiguration:NetworkConfiguration = new NetworkConfiguration(); 
@@ -47,11 +45,10 @@ Cookieを使用するには：
                                 networkConfiguration);
    ```
 
-1. `MediaResource`を作成する際に前の手順のメタデータを指定します。
+1. 前の手順で作成したメタデータを指定します。 `MediaResource`.
 
-   例えば、`createFromURL`メソッドを使用する場合は、次の情報を入力します。
+   例えば、 `createFromURL` メソッドで、次の情報を入力します。
 
    ```
    var resource:MediaResource = MediaResource.createFromURL(url, resourceMetadata);
    ```
-

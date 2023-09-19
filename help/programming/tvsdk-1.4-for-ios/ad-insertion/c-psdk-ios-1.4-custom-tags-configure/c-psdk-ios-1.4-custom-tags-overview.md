@@ -1,19 +1,17 @@
 ---
-title: カスタマイズされたVODアセットの例
-description: カスタマイズされたVODアセットの例
+title: カスタマイズされた VOD アセットの例
+description: カスタマイズされた VOD アセットの例
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
 
 ---
 
+# カスタマイズされた VOD アセットの例{#example-of-a-customized-vod-asset}
 
-# カスタマイズされたVODアセットの例{#example-of-a-customized-vod-asset}
-
-カスタマイズされたVODアセットの例を次に示します。
+カスタマイズされた VOD アセットの例を次に示します。
 
 ```
 #EXTM3U
@@ -41,8 +39,7 @@ seg5.ts
 #EXT-X-ENDLIST
 ```
 
-アプリケーションで次のシナリオを設定できます。
+アプリケーションでは、次のシナリオを設定できます。
 
-* `#EXT-X-ASSET`タグまたはサブスクライブした他のカスタムタグ名のセットがファイルに存在する場合の通知。
-* `#EXT-X-AD`タグまたは他のカスタムタグ名がストリーム内で見つかった場合に広告を挿入します。
-
+* 通知： `#EXT-X-ASSET` タグ、または購読したその他のカスタムタグ名のセットがファイルに存在します。
+* 広告を挿入する `#EXT-X-AD` タグ、またはその他のカスタムタグ名がストリーム内に見つかります。

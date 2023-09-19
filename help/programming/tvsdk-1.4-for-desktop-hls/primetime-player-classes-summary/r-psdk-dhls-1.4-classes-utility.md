@@ -1,20 +1,18 @@
 ---
-description: 様々なタイプの情報を処理する方法を提供するクラスです。
+description: これらのクラスは、様々な種類の情報を処理する方法を提供します。
 title: ユーティリティクラス
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
+# ユーティリティクラス {#utility-classes}
 
-# ユーティリティクラス{#utility-classes}
+これらのクラスは、様々な種類の情報を処理する方法を提供します。
 
-様々なタイプの情報を処理する方法を提供するクラスです。
-
-パッケージ：com.adobe.mediacore.utils
+パッケージ： com.adobe.mediacore.utils
 
 <!-- 
 
@@ -25,8 +23,7 @@ Comment Type: draft
 
 | クラス名 | 説明 |
 |---|---|
-| [AuthorizedFeaturesHelper](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/AuthorizedFeaturesHelper.html) | 外部に保存されたトークンを使用してauthorizedFeaturesセットを読み込み、取得するために使用されるヘルパークラスです。 |
-| [DateUtils](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/DateUtils.html) | 日付を処理するメソッド。 |
+| [AuthorizedFeaturesHelper](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/AuthorizedFeaturesHelper.html) | 外部に保存されたトークンを使用して authorizedFeatures セットの読み込みと取得に使用されるヘルパークラス。 |
+| [DateUtils](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/DateUtils.html) | 日付を処理する方法です。 |
 | [NumberUtils](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/NumberUtils.html) | 数値に関連するヘルパーメソッド。 |
 | [TimeRange](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/utils/TimeRange.html) | 時間範囲を作成および解釈するメソッド。 |
-

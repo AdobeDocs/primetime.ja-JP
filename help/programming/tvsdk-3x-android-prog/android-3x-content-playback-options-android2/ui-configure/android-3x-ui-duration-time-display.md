@@ -1,8 +1,7 @@
 ---
 description: TVSDK を使用して、メディア内でのプレーヤーの位置に関する情報を取得し、シークバーに表示することができます。
 title: ビデオの長さ、現在時間および残り時間を表示
-exl-id: 68501c81-346a-4c3e-aa20-a98b8b1c6b17
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -16,29 +15,29 @@ TVSDK を使用して、メディア内でのプレーヤーの位置に関す�
 1. プレーヤーが少なくとも PREPARED 状態になるのを待ちます。
 1. を使用して、現在の再生ヘッド時間を取得します。 `MediaPlayer.getCurrentTime` メソッド。
 
-   仮想タイムライン上の現在の再生ヘッドの位置をミリ秒単位で返します。 時間は、メインストリームにスプライスされる複数の広告や広告の時間など、代替コンテンツの複数のインスタンスを含む可能性がある、解決されたストリームを基準に計算されます。 ライブ/リニアストリームの場合、返される時間は常に再生ウィンドウの範囲にあります。
+   これは、仮想タイムライン上の現在の再生ヘッドの位置をミリ秒単位で返します。 時間は、メインストリームにスプライスされる複数の広告や広告の時間など、代替コンテンツの複数のインスタンスを含む可能性がある、解決されたストリームを基準に計算されます。 ライブ/リニアストリームの場合、返される時間は常に再生ウィンドウの範囲にあります。
 
    ```java
    long getCurrentTime() throws MediaPlayerException;
    ```
 
 1. ストリームの再生範囲を取得し、時間を決定します。
-   1. 以下を使用： `MediaPlayer.getPlaybackRange` メソッドを使用して仮想タイムラインの時間範囲を取得します。
+   1. 以下を使用します。 `MediaPlayer.getPlaybackRange` メソッドを使用して、仮想タイムラインの時間範囲を取得します。
 
       ```java
       TimeRange getPlaybackRange() throws MediaPlayerException;
       ```
 
-   1. 以下を使用： `MediaPlayer.getPlaybackRange` メソッドを使用して仮想タイムラインの時間範囲を取得します。
+   1. 以下を使用します。 `MediaPlayer.getPlaybackRange` メソッドを使用して、仮想タイムラインの時間範囲を取得します。
 
       * VOD の場合、範囲は常に 0 で始まり、終了値は、メインコンテンツの時間と、ストリーム（広告）内の追加コンテンツの時間の合計に等しくなります。
       * リニア/ライブアセットの場合、範囲は再生ウィンドウの範囲を表します。 この範囲は再生中に変更されます。
 
-         TVSDK が `ITEM_Updated` メディアアイテムが更新され、再生範囲を含むその属性が更新されたことを示すコールバック。
+        TVSDK が `ITEM_Updated` メディアアイテムが更新され、再生範囲を含むその属性が更新されたことを示すコールバック。
 
-1. で使用可能なメソッドを使用します。 `MediaPlayer` そして `SeekBar` Android SDK のクラスを使用して、シークバーパラメーターを設定します。
+1. で使用可能なメソッドを使用します。 `MediaPlayer` また、 `SeekBar` Android SDK のクラスを使用して、シークバーパラメーターを設定します。
 
-   例えば、次に、シークバーと 2 つの `TextView` 要素。
+   例えば、次に、シークバーと 2 つのレイアウトを含むレイアウトを示します `TextView` 要素。
 
    ```xml
    <LinearLayout 
@@ -76,7 +75,7 @@ TVSDK を使用して、メディア内でのプレーヤーの位置に関す�
 
    ![](assets/seek-bar.jpg){width="477.000pt"}
 
-   次の例では、 `Clock.java` ヘルパークラス。 `ReferencePlayer`をタイマーとして使用します。 このクラスはイベントリスナーを設定し、トリガーを `onTick` イベントを 1 秒ごと、または指定可能な別のタイムアウト値。
+   次の例では、 `Clock.java` ヘルパークラス（で使用可能） `ReferencePlayer`をタイマーとして使用します。 このクラスはイベントリスナーを設定し、トリガーを `onTick` イベントを 1 秒ごと、または指定可能な別のタイムアウト値。
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
@@ -89,7 +88,7 @@ TVSDK を使用して、メディア内でのプレーヤーの位置に関す�
    playbackClock.addClockEventListener(playbackClockEventListener);
    ```
 
-   この例では、時計のたびに、メディアプレーヤーの現在の位置を取得し、シークバーを更新します。 これは、2 つの `TextView` 現在の時間と再生範囲の終了位置を数値で示す要素
+   この例では、時計のたびに、メディアプレーヤーの現在の位置を取得し、シークバーを更新します。 これは、2 つの `TextView` 現在の時間と再生範囲の終了位置を数値で示すエレメント。
 
    ```java
    @Override 

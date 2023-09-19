@@ -1,8 +1,7 @@
 ---
 title: 複数の MVPD のアカウント共有レポートを表示
 description: 複数の MVPD の共有レポートを表示する方法。
-exl-id: c616e6e1-373c-471d-a2dc-c484b7cd5cf5
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%
@@ -19,15 +18,15 @@ ht-degree: 0%
 
 複数の MVPD の購読者のアカウント共有統計を表示するには：
 
-1. 目的のセグメントを [セグメントの定義と期間の選択方法](/help/AccountIQ/howto-select-segment-timeframe.md) 評価のために [セグメントと期間パネル](/help/AccountIQ/segments-timeframe.md).
+1. 次の手順に従って、目的のセグメントを定義します。 [セグメントを定義して期間を選択する方法](/help/AccountIQ/howto-select-segment-timeframe.md) 評価のために [セグメントと期間パネル](/help/AccountIQ/segments-timeframe.md).
 
 1. 左側のナビゲーションから目的のレポートページを選択します。
 
 * [ダッシュボード](/help/AccountIQ/dashboard.md) （ダッシュボードには、様々なレポートページから選択したグラフが表示されます）。
 
-   ![](assets/mult-mvpds-dashboard.png)
+  ![](assets/mult-mvpds-dashboard.png)
 
-   *図：複数の MVPD のダッシュボードレポート*
+  *図：複数の MVPD のダッシュボードレポート*
 
 * [一般的な使用方法](/help/AccountIQ/general-usage-reports.md)
 

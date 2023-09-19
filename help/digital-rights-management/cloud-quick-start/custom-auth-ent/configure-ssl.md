@@ -1,21 +1,19 @@
 ---
-title: BEESサーバーでのSSLの設定
-description: BEESサーバーでのSSLの設定
+title: BEES サーバーでの SSL の設定
+description: BEES サーバーでの SSL の設定
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
 
 ---
 
+# BEES サーバーでの SSL の設定 {#configure-ssl-on-your-bees-server}
 
-# BEESサーバーでSSLを設定{#configure-ssl-on-your-bees-server}
+1. このソフトウェアを提供したAdobeの連絡先に、サーバーの SSL 証明書を提供します。
 
-1. このソフトウェアを提供したAdobeの担当者に、サーバーSSL証明書を提供してください。
-
-   証明書は、信頼できる証明書としてPrimetime Cloud DRM Trust Storeに追加されます。
-1. SSL接続のクライアント認証を有効にするには（このバージョンでは無効）:
-   1. ク追加ライアント認証に使用するTrust Storeへの`[!DNL clouddrm-transport.cer]`証明書と`[!DNL AdobeFlashAccessIntermediateCA.cer]`証明書。
-   1. SSL設定でクライアント認証を有効にします。
+   証明書は、信頼された証明書として Primetime Cloud DRM トラストストアに追加されます。
+1. SSL 接続のクライアント認証を有効にするには（このバージョンでは無効）:
+   1. 次を追加： `[!DNL clouddrm-transport.cer]` および `[!DNL AdobeFlashAccessIntermediateCA.cer]` クライアント認証に使用される Trust Store への証明書。
+   1. SSL 設定でクライアント認証を有効にします。

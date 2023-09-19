@@ -1,13 +1,12 @@
 ---
 title: トラブルシューティング
 description: レポートパネルを表示または読み込めない場合 または、レポートをエクスポートできない場合は、 製品でよく発生する問題の解決方法を説明します。
-source-git-commit: 4c6ae182059586275adbc89987444dd762dcb158
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
 
 ---
-
 
 # Account IQ の問題のトラブルシューティング {#troubleshoot}
 
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 * ページまたは個々のパネルの読み込みに時間がかかりすぎる場合は、ページを更新してみてください。 現在のバージョンでは、MVPD やプログラマの選択に応じて、ページの読み込みに最大 1 分かかる場合があります。
 
-   ![](assets/troubleshoot.png)
+  ![](assets/troubleshoot.png)
 
 * 更新してもデータやグラフが表示されない場合は、アカウント IQ からログアウトし、再度ログインします。
 

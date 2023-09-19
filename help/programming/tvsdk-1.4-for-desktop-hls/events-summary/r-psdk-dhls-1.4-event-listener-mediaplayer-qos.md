@@ -1,20 +1,18 @@
 ---
-description: TVSDKは、QoS(QoS)イベントをディスパッチして、バッファリングやシークなど、QoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
-title: QoSイベント
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK は、サービス品質 (QoS) イベントをディスパッチして、バッファリングやシークなどの QoS 統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
+title: QoS イベント
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
 
 ---
 
+# QoS イベント{#qos-events}
 
-# QoSイベント{#qos-events}
+TVSDK は、サービス品質 (QoS) イベントをディスパッチして、バッファリングやシークなどの QoS 統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
 
-TVSDKは、QoS(QoS)イベントをディスパッチして、バッファリングやシークなど、QoS統計の計算に影響を与える可能性のあるイベントについてアプリケーションに通知します。
-
-すべてのQoS関連イベントに関して通知を受けるには、次のイベントの`MediaPlayer`オブジェクトにイベントリスナーを登録します。
+すべての QoS 関連イベントに関する通知を受け取るには、イベントリスナーを `MediaPlayer` オブジェクトを次のイベントに設定します。
 
 | イベント | 意味 |
 |---|---|
@@ -22,5 +20,4 @@ TVSDKは、QoS(QoS)イベントをディスパッチして、バッファリン�
 | BufferEvent.[BUFFERING_BEGIN](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/BufferEvent.html#BUFFERING_BEGIN) | バッファリングが開始されました。 |
 | SeekEvent.[SEEK_COMPLETED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_END) | シークが完了しました。 |
 | SeekEvent.[SEEK_BEGIN](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_BEGIN) | シークを開始しています。 |
-| SeekEvent.[SEEK_POSITION_ADJUSTED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_POSITION_ADJUSTED) | TVSDKは、現在の広告ポリシーの結果、シーク位置を変更しました。 |
-
+| SeekEvent.[SEEK_POSITION_ADJUSTED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_POSITION_ADJUSTED) | TVSDK は、現在の広告ポリシーの結果、シーク位置を変更しました。 |

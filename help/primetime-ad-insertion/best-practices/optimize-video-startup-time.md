@@ -1,25 +1,23 @@
 ---
-title: ビデオの開始アップ時間の最適化
-description: ビデオの開始アップ時間の最適化
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+title: ビデオの開始時間の最適化
+description: ビデオの開始時間の最適化
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%
 
 ---
 
+# ビデオの開始時間の最適化の概要 {#optimize-video-start-up-times}
 
-# ビデオの開始アップ時間の最適化の概要{#optimize-video-start-up-times}
+PrimetimeAd Insertionは、キャッシュやルート/プロトコルの最適化のルールなど、ビデオの起動時間を最適化するいくつかの機能を提供します。 PrimetimeAd Insertionを使用する際に、ビデオの起動時間を短縮するための推奨事項を次に示します。
 
-PrimetimeAd Insertionには、キャッシュやルート/プロトコルの最適化のルールなど、ビデオ開始のアップタイムを最適化する機能がいくつか用意されています。 PrimetimeAd Insertionを使用する場合に、ビデオの開始を高速化するためのその他の推奨事項を次に示します。
+* コンテンツ配信ネットワーク (CDN) からすべての広告とコンテンツを提供する
 
-* コンテンツ配信ネットワーク(CDN)からすべての広告とコンテンツを提供
+* Primetime と CDN との間での TLS のハンドシェイクを減らすか削除しますAd Insertion。 詳しくは、 [ルートとプロトコルの最適化](optimize-routes-protocols.md).
 
-* PrimetimeAd InsertionとCDN間のTLSハンドシェイクを減らすか、削除します。 詳しくは、[ルートとプロトコルの最適化](optimize-routes-protocols.md)を参照してください。
+* 同じ CDN から広告フラグメントとコンテンツフラグメントを提供する
 
-* 同じCDNから広告とコンテンツフラグメントを提供する
+* ライブ/VOD コンテンツおよびマニフェスト用の cache-control ヘッダーを挿入します
 
-* ライブ/VODコンテンツおよびマニフェスト用のキャッシュ制御ヘッダーの挿入
-
-* 応答が遅い広告プロバイダーまたは広告クリエイティブを減らすか、削除します。
+* 応答が遅い広告プロバイダーや広告クリエイティブを減らす、または削除する

@@ -1,39 +1,37 @@
 ---
-description: DRMワークフローでは、コンテンツのパッケージ化、コンテンツのライセンスの提供、および保護されたコンテンツの独自のビデオアプリケーションからの再生が行われます。 ワークフローは、各DRMソリューションに対して一般的に似ていますが、詳細にはいくつかの違いがあります。
-title: FairPlay用のMulti-DRMワークフロー
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: DRM ワークフローには、コンテンツのパッケージ化、コンテンツのライセンス提供、独自のビデオアプリケーションからの保護されたコンテンツの再生が含まれます。 一般的に、ワークフローは各 DRM ソリューションで似ていますが、詳細にはいくつか違いがあります。
+title: FairPlay の Multi-DRM ワークフロー
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
 
 ---
 
+# FairPlay の Multi-DRM ワークフロー {#multi-drm-workflow-for-fairplay}
 
-# FairPlay用のMulti-DRMワークフロー{#multi-drm-workflow-for-fairplay}
+DRM ワークフローには、コンテンツのパッケージ化、コンテンツのライセンス提供、独自のビデオアプリケーションからの保護されたコンテンツの再生が含まれます。 一般的に、ワークフローは各 DRM ソリューションで似ていますが、詳細にはいくつか違いがあります。
 
-DRMワークフローでは、コンテンツのパッケージ化、コンテンツのライセンスの提供、および保護されたコンテンツの独自のビデオアプリケーションからの再生が行われます。 ワークフローは、各DRMソリューションに対して一般的に似ていますが、詳細にはいくつかの違いがあります。
+この Multi-DRM ワークフローでは、Apple FairPlay で保護された HLS コンテンツの設定、パッケージ化、ライセンス、再生をおこないます。 このワークフローには、オフラインでの再生とライセンスのローテーションを実装するためのオプションの手順も含まれています。
 
-このMulti-DRMワークフローでは、Apple FairPlayで保護されたHLSコンテンツのセットアップ、パッケージ化、ライセンス、再生を行います。 このワークフローには、オフライン再生とライセンスのローテーションを実装するためのオプションの手順も含まれています。
+## FairPlay 向け ExpressPlay サービスの有効化 {#enable-expressplay-service-for-fairplay}
 
-## FairPlay向けExpressPlayサービスを有効にする{#enable-expressplay-service-for-fairplay}
+Appleの FairPlay DRM ソリューションを ExpressPlay DRM サービスで使用する場合は、いくつかの設定が必要です。 これには、Appleから資格情報を取得し、ExpressPlay にアップロードする必要があります。
 
-AppleのFairPlay DRMソリューションをExpressPlay DRMサービスで使用する場合は、ある程度の設定が必要です。 これには、Appleから秘密鍵証明書を取得し、ExpressPlayにアップロードする必要があります。
-
-FairPlayコンテンツ保護用にExpressPlayサービスを有効にするには、次の手順に従います。
+FairPlay コンテンツ保護のために ExpressPlay サービスを有効にするには、次の手順に従います。
 
 1. Appleから資格情報を取得します。
 
-   これらの資格情報は、各サービスプロバイダーに対して一意にプロビジョニングされます。 次のフォームに記入して、リクエストを行う必要があります。[https://developer.apple.com/contact/fps/](https://developer.apple.com/contact/fps/).
+   これらの資格情報は、各サービスプロバイダーに一意にプロビジョニングされます。 次のフォームに入力して、リクエストする必要があります。 [https://developer.apple.com/contact/fps/](https://developer.apple.com/contact/fps/).
 
    >[!NOTE]
    >
-   >「プライマリロール」に&#x200B;**[!UICONTROL Content Provider]**&#x200B;を選択します。
+   >選択 **[!UICONTROL Content Provider]** プライマリの役割。
 
-   リクエストが承認されると、Appleから&#x200B;*FairPlay Streaming Deployment Package*&#x200B;が送信されます。
+   リクエストが承認されると、Appleから *FairPlay ストリーミングデプロイメントパッケージ*.
 1. 証明書署名要求を生成します。
 
-   [!DNL openssl]を使用して、公開鍵と秘密鍵のペアと、証明書署名要求(CSR)を生成できます。
+   以下を使用できます。 [!DNL openssl] 公開鍵と秘密鍵のペア、および証明書署名済み要求 (CSR) を生成する。
 
    1. キーペアを生成します。
 
@@ -41,7 +39,7 @@ FairPlayコンテンツ保護用にExpressPlayサービスを有効にするに�
       openssl genrsa -aes256 -out privatekey.pem 1024 
       ```
 
-   1. CSRを生成します。
+   1. CSR を生成します。
 
       ```
       openssl req -new -sha1 -key privatekey.pem -out certreq.csr  
@@ -50,62 +48,62 @@ FairPlayコンテンツ保護用にExpressPlayサービスを有効にするに�
 
       >[!NOTE]
       >
-      >この手順は&#x200B;*FairPlay Streaming Deployment Package*&#x200B;に記載されていますが、参考のためにここに記載します。 プロセスのこの部分で問題が発生した場合は、（展開パッケージ内の）*FairPlayCertificateCreation.pdf*&#x200B;の説明を確認してください。
+      >この手順は、 *FairPlay ストリーミングデプロイメントパッケージ*&#x200B;に含めることはできますが、便宜上、ここに含めることができます。 プロセスのこの部分で問題が発生した場合は、 *FairPlayCertificateCreation.pdf* （デプロイメントパッケージ内）。
 
-1. Apple Developer PortalでCSRをアップロードします。
-   1. 開発チームのチームエージェントは[!DNL developer.apple.com/account]にログインする必要があります。
-   1. **[!UICONTROL Certificates, Identifiers & Profiles]**&#x200B;をクリックし、ページの左上にある&#x200B;**[!UICONTROL iOS, tvOS, watchOS]**&#x200B;ドロップダウンを選択してから、ページの左にある&#x200B;**[!UICONTROL Certificates->Production]**&#x200B;をクリックします。
-   1. ページ右上の&#x200B;**[!UICONTROL +]**&#x200B;ボタンをクリックして、新しい証明書を要求します。 **[!UICONTROL Production]**&#x200B;の下の&#x200B;**[!UICONTROL FairPlay Streaming Certificate]**&#x200B;オプションを選択します。
+1. Apple開発者ポータルから CSR をアップロードします。
+   1. 開発チームのチームエージェントは、 [!DNL developer.apple.com/account].
+   1. クリック： **[!UICONTROL Certificates, Identifiers & Profiles]**&#x200B;を選択し、 **[!UICONTROL iOS, tvOS, watchOS]** ページの左上にあるドロップダウンから、 **[!UICONTROL Certificates->Production]** をクリックします。
+   1. 次をクリック： **[!UICONTROL +]** ボタンをクリックして、新しい証明書を要求します。 を選択します。 **[!UICONTROL FairPlay Streaming Certificate]** 下のオプション **[!UICONTROL Production]**.
 
-      *iOS追加証明書*&#x200B;ダイアログが開きます。
-   1. *追加 iOS証明書*&#x200B;に、手順2.bで生成したCSRファイルをアップロードし、**[!UICONTROL Generate]**&#x200B;をクリックします。
+      The *iOS証明書を追加* ダイアログが開きます。
+   1. Adobe Analytics の *iOS証明書を追加*、手順 2.b で生成した CSR ファイルをアップロードし、「 **[!UICONTROL Generate]**.
 
-      アプリケーション秘密鍵キー(ASK)が同じダイアログに表示されます。
-   1. ASKを書き留め、安全な場所に保存します。
-   1. ASKのキーを入力して証明書の生成を完了し、**[!UICONTROL Continue]**&#x200B;をクリックします。
-   1. ASKを保存したことを確認したら、**[!UICONTROL Generate]**&#x200B;をクリックして続行します。
+      同じダイアログにアプリケーション秘密鍵 (ASK) が表示されます。
+   1. ASK を書き留め、安全な場所に保存します。
+   1. ASK のキーで証明書の生成を完了し、「 **[!UICONTROL Continue]**.
+   1. ASK を保存したことを確認したら、 **[!UICONTROL Generate]** をクリックして続行します。
 
       >[!NOTE]
       >
-      >ASKのコピーを保存し、安全に保存することが重要です。 *ASKに問題が発生した場合、FairPlay Streamingでコンテンツを保護できなくなります。* チームに割り当てられるASKは1つだけです。値は再度提供されなくなり、後で取得することはできません。
+      >ASK のコピーを保存し、安全に保存することが重要です。 *ASK に問題が生じた場合、FairPlay Streaming でコンテンツを保護できなくなります。* ASK は 1 つだけチームに割り当てられます。 この値は再度指定されず、後で取得することはできません。
 
-   1. FPS証明書をダウンロードします。
+   1. FPS 証明書をダウンロードします。
 
-      （手順2.aの）秘密鍵と公開鍵（この手順でダウンロードしたFPS証明書）のバックアップコピーを必ず安全な場所に保存してください。
-1. FairPlayの資格情報を使用して、ExpressPlayアカウントを設定します。
-   1. 手順3.hでダウンロードした証明書名を考えてみましょう。は[!DNL fairplay.cer]です。
-   1. Apple Keychain Accessユーティリティで[!DNL fairplay.cer]ファイルを開きます。
-   1. 右上の検索フィールドに「`fairplay`」と入力して、多数の証明書をフィルターします。
-   1. 会社のFairPlay証明書を識別します。
+      （手順 2.a.の）秘密鍵と公開鍵（この手順でダウンロードした FPS 証明書）のバックアップコピーを安全な場所に保存してください。
+1. FairPlay の資格情報を使用して ExpressPlay アカウントを設定します。
+   1. 手順 3.h でダウンロードした証明書の名前が [!DNL fairplay.cer].
+   1. を開きます。 [!DNL fairplay.cer] ファイルに、Apple Keychain Access ユーティリティを追加します。
+   1. 「 」と入力して、多数の証明書をフィルターします。 `fairplay`」と入力します。
+   1. 会社の FairPlay 証明書を特定します。
 
-      会社名は、Appleが発行した証明書と関連付ける必要があります。
+      会社名は、Appleが発行した証明書に関連付ける必要があります。
    1. 展開矢印を選択して証明書を展開し、秘密鍵を右クリックします。
-   1. **[!UICONTROL Export "Your Company Name"]**&#x200B;を選択し、[!DNL .p12]ファイルを保存します。
+   1. 選択 **[!UICONTROL Export "Your Company Name"]** をクリックし、 [!DNL .p12] ファイル。
 
-      このファイルを保護するためのパスワードを割り当てるように求められます。 このパスワードは資格情報パッケージと共に送信する必要があるので、書き留めておいてください。
-   1. [www.expressplay.com](https://www.expressplay.com)でアカウントにログインします。
-   1. 左上の&#x200B;**[!UICONTROL DRM SERVICES]**&#x200B;をクリックし、「**[!UICONTROL FairPlay]**」タブを選択します。
-   1. FairPlayの資格情報をExpressPlayアカウントにアップロードします。
+      このファイルを保護するためのパスワードを割り当てるように求められます。 このパスワードは資格情報パッケージと共に送信する必要があるので、メモしておいてください。
+   1. 次の日にアカウントにログイン [www.expressplay.com](https://www.expressplay.com).
+   1. クリック **[!UICONTROL DRM SERVICES]** 左上で、 **[!UICONTROL FairPlay]** タブをクリックします。
+   1. FairPlay の資格情報を ExpressPlay アカウントにアップロードします。
 
-      1. ASKの値を含むテキストファイルを作成します(例：`1234567890abcdef1234567890abcdef`)に置き換え、アップロードするファイルを選択します。
-      1. 手順4.fのPKCS12ファイルを選択します。をアップロード用に追加します。
-      1. 手順4.fのPKCS12ファイルのパスワードを入力します。
+      1. ASK の値を含むテキストファイルを作成します (32 文字にする必要があります。例： `1234567890abcdef1234567890abcdef`) をクリックし、アップロードするファイルを選択します。
+      1. 手順 4.f の PKCS12 ファイルをアップロード用に選択します。
+      1. 手順 4.f の PKCS12 ファイルのパスワードを入力します。
       1. 「アップロード」ボタンをクリックします。
 
-これで、FairPlay向けExpressPlayサービスを使用して、[!DNL fairplay.cer]証明書と共に、FairPlayコンテンツ保護を備えたiOSアプリまたはHTML5ページを作成できます。
+FairPlay コンテンツ保護機能を備えたiOSアプリケーションやHTML5 ページを、 [!DNL fairplay.cer] FairPlay 用の ExpressPlay サービスを使用する証明書。
 
 <!--<a id="fig_sjr_2pn_sv"></a>-->
 
 ![](assets/multi_drm_expressplay_drm_services_web.png)
 
-### FairPlay用にコンテンツをパッケージ化する{#package-your-content-for-fairplay}
+### FairPlay 用にコンテンツをパッケージ化 {#package-your-content-for-fairplay}
 
-コンテンツをパッケージ化するには、AdobeのOffline Packagerを使用するか、ExpressPlayのBento4パッケージャーなどの他のツールを使用します。
+コンテンツをパッケージ化するには、Adobeオフラインパッケージャまたは ExpressPlay の Bento4 パッケージャなどの他のツールを使用できます。
 
-パッケージャーは、再生するビデオを準備（元のファイルをフラグメント化してマニフェストに含めるなど）し、選択したDRMソリューション（この場合FairPlay）でビデオを保護します。
+パッケージャーは、再生するビデオを準備し（例えば、元のファイルをフラグメント化してマニフェストに含める）、選択した DRM ソリューション（この場合は FairPlay）でビデオを保護します。
 
-* [FairPlay DRM用のAdobeオフラインパッケージャー](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=21)
-* [ExpressPlayパッケージャー — Bento4 for HLS](https://www.bento4.com/developers/hls/)
+* [FairPlay DRM 用のAdobeオフラインパッケージャ](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=21)
+* [ExpressPlay パッケージャー — Bento4 for HLS](https://www.bento4.com/developers/hls/)
 
 <!--<a id="fig_jbn_fw5_xw"></a>-->
 
@@ -113,7 +111,7 @@ FairPlayコンテンツ保護用にExpressPlayサービスを有効にするに�
 
 1. コンテンツをパッケージ化します。
 
-   AdobeOffline Packagerを使用したパッケージ化の例を次に示します。 Packagerは設定ファイル（例：[!DNL fairplay.xml]）を使用し、次のようになります。
+   以下に、Offline Packager を使用したAdobeの例を示します。 Packager は設定ファイル ( [!DNL fairplay.xml]) は次のようになります。
 
    ```
    <config>
@@ -131,18 +129,18 @@ FairPlayコンテンツ保護用にExpressPlayサービスを有効にするに�
    </config>
    ```
 
-   * `in_path`  — このエントリは、パッケージ化を行うローカルコンピューター上のソースビデオの場所を指します。
-   * `out_type`  — このエントリは、パッケージ化された出力のタイプを示します。この場合は、FairPlay向けHLSです。
-   * `out_path`  — 出力を送信するローカルマシン上の場所。
-   * `drm_sys`  — パッケージ化の対象とするDRMソリューション。この場合は`FAIRPLAY`です。
-   * `frag_dur`  — フラグメントの時間（秒単位）
-   * `target_dur` - HLS出力のターゲット時間。
-   * `key_file_path`  — コンテンツ暗号化キー(CEK)の役割を果たすパッケージ化を行ったコンピューター上のライセンスファイルの場所です。Base-64エンコードされた16バイトの16進文字列です。
-   * `iv_file_path`  — これは、パッケージ化を行うコンピューター上のIVファイルの場所です。
-   * `key_url` - `EXT-X-KEY` ファイルの [!DNL .m3u8] タグのURIパラメータ。
+   * `in_path`  — このエントリは、ローカルパッケージングマシン上のソースビデオの場所を指します。
+   * `out_type`  — このエントリは、パッケージ化された出力のタイプを示します。この場合は、FairPlay 用の HLS です。
+   * `out_path`  — 出力先のローカルマシン上の場所。
+   * `drm_sys`  — パッケージ化する DRM ソリューション。 これは `FAIRPLAY` この場合、
+   * `frag_dur`  — フラグメントの時間（秒）。
+   * `target_dur` - HLS 出力のターゲット期間。
+   * `key_file_path`  — これは、コンテンツ暗号化キー (CEK) として機能する、パッケージ化マシン上のライセンスファイルの場所です。 Base-64 でエンコードされた 16 バイトの 16 進文字列です。
+   * `iv_file_path`  — パッケージ化したコンピューター上の IV ファイルの場所です。
+   * `key_url`  — の URI パラメーター `EXT-X-KEY` タグ [!DNL .m3u8] ファイル。
    * `content_id`  — デフォルト値。
 
-   [Packagerドキュメント](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)に記載されているように、「ベストプラクティスとして、出力の生成に使用する一般的なオプションを含む設定ファイルを作成します。 次に、コマンドライン引数として特定のオプションを指定して、出力を作成します。」
+   次に示すように、 [Packager のドキュメント](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)「ベストプラクティスとして、出力の生成に使用する共通オプションを含む設定ファイルを作成します。 次に、特定のオプションをコマンドライン引数として指定して出力を作成します。」
 
    ```
    java -jar OfflinePackager.jar -in_path sample.mp4 -out_type hls 
@@ -150,97 +148,97 @@ FairPlayコンテンツ保護用にExpressPlayサービスを有効にするに�
    -key_url "user_provided_value"
    ```
 
-   生成されたM3U8ファイルには、次のような`EXT-X-KEY`属性があります。
+   生成された M3U8 ファイルには `EXT-X-KEY` 属性は次のように表示されます。
 
    ```
    #EXT-X-KEY:METHOD=SAMPLE-AES,URI="user_provided_value",​
    KEYFORMAT="com.apple.streamingkeydelivery",KEYFORMATVERSIONS="1" 
    ```
 
-### FairPlay {#setting-policies-for-fairplay}のポリシーの設定
+### FairPlay 用のポリシーの設定 {#setting-policies-for-fairplay}
 
-エンタイトルメントサーバーを使用して、FairPlayで保護されたコンテンツのポリシーを設定できます。 独自のエンタイトルメントサーバーを設定することも、Adobeが提供するサンプルのエンタイトルメントサーバーを使用することもできます。
+FairPlay で保護されたコンテンツのポリシーは、エンタイトルメントサーバーを使用して設定できます。 独自の設定をおこなうことも、Adobeが提供するサンプルのエンタイトルメントサーバーを使用することもできます。
 
-Adobeには、*時間ベースの*&#x200B;および&#x200B;*デバイスバインディング*&#x200B;のエンタイトルメントを行う方法を示す、ExpressPlayエンタイトルメントサーバー(SEES)のサンプルが用意されています。 このエンタイトルメントサーバーのサンプルは、ExpressPlayサービスに基づいて構築されています。
+Adobeには、実行方法を示す ExpressPlay エンタイトルメントサーバー (SEES) のサンプルが用意されています。 *時間ベース* および *device-binding* 使用権限 このサンプルのエンタイトルメントサーバーは、ExpressPlay サービス上に構築されています。
 
-[参照サーバー：ExpressPlay権利付与サーバーのサンプル(SEE)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
+[参照サーバー： ExpressPlay 使用権限サーバーの例 (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
 
-* [リファレンスサービス：時間ベースの権利付与](../../multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
-* [リファレンスサービス：デバイスバインディングのエンタイトルメント](../../multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
+* [参照サービス：時間ベースの使用権限](../../multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
+* [参照サービス：デバイスバインディングの使用権限](../../multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
 
-## FairPlay {#licensing-and-playback-for-fairplay}のライセンスと再生
+## FairPlay のライセンスと再生 {#licensing-and-playback-for-fairplay}
 
-FairPlayで保護されたコンテンツのライセンスと再生には、ビデオマニフェストファイル(skd:)で使用されているスキームとExpressPlayトークンリクエスト(https:)で使用されているスキームとの間で、URLスキームを入れ替える必要があります。
+FairPlay で保護されたコンテンツのライセンスと再生には、ビデオマニフェストファイルで使用されるスキーム (skd:) と ExpressPlay トークンリクエストで使用されるスキーム (https:) との間で、URL スキームの入れ替えが必要です。
 
-iOS TVSDKクライアントからのライセンスおよび再生を実装する手順は、次のとおりです。[TVSDKアプリケーションでApple FairPlayを有効にする](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)。 オプションで、FairPlay用にオフライン再生とライセンスローテーションを実装することもできます。
+iOS TVSDK クライアントからのライセンスと再生を実装する手順を以下に示します。 [TVSDK アプリケーションでのApple FairPlay の有効化](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md). また、FairPlay のオフライン再生とライセンスのローテーションもオプションで実装できます。
 
-## FairPlayでHLSオフライン{#section_047A05D1E3B64883858BC601CFC8F759}
+## FairPlay での HLS オフライン {#section_047A05D1E3B64883858BC601CFC8F759}
 
-プレーヤーがWeb上（飛行機など）から切り離されているので、ライセンスを取得できない場合に、FairPlayで保護されたコンテンツをユーザーが再生できるようにしたい場合があります。
+FairPlay で保護されたコンテンツを、Web 上（飛行機上など）から離れているためにライセンスを取得できない場合に、ユーザーが FairPlay で保護されたコンテンツを再生できるようにしたい場合があります。
 
-このタスクを開始する前に、Appleドキュメント&#x200B;**「Offline Playback with FairPlay Streaming and HTTP Live Streaming」**&#x200B;をダウンロードしてお読みください。 Transport Stream(TS)セグメントをダウンロードしてローカルマシンに保存する方法を学ぶには、このガイドを読んでください。
+このタスクを開始する前に、 Appleドキュメントをダウンロードしてお読みください **&quot;FairPlay ストリーミングと HTTP ライブストリーミングを使用したオフライン再生&quot;**. このガイドを読んで、Transport Stream(TS) セグメントをダウンロードし、ローカルマシンに保存する方法を学びます。
 
-次のワークフローで、FairPlay用にオフライン再生を実装します。
+次のワークフローで、FairPlay 用のオフライン再生を実装します。
 
-1. HLS TSセグメントをダウンロードします。
-1. FairPlayサーバーから永続的なレンタルライセンスを要求します（**&quot;FairPlay Persistent Rental Policy&quot;**&#x200B;を参照）。
-1. `persistentContentKey`を保存します。
-1. FairPlayコンテンツをオフラインで再生します。
+1. HLS TS セグメントをダウンロードします。
+1. FairPlay サーバーからの永続的なレンタルライセンスのリクエスト ( **&quot;FairPlay の永続的なレンタルポリシー&quot;**) をクリックします。
+1. を保存します。 `persistentContentKey`.
+1. FairPlay コンテンツをオフラインで再生します。
 
 >[!NOTE]
 >
->クライアント上のFairPlay Streamingは、持続的なコンテンツキーの有効期限が切れた場合、復号を開始しません。 ただし、再生中にコンテンツキーの有効期限が切れても、ユーザーエクスペリエンスは引き続き有効です。
+>永続化されたコンテンツキーの有効期限が切れた場合、クライアント上の FairPlay ストリーミングは復号化を開始しません。 ただし、再生中にコンテンツキーの有効期限が切れた場合、ユーザーエクスペリエンスは継続されます。
 >
->詳しくは、[HTTPライブストリーミング](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3)のドキュメントの使用を参照してください。
+>詳しくは、 [HTTP ライブストリーミングの操作](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3) ドキュメントを参照してください。
 
-### FairPlayライセンスローテーション{#section_D32AA08C61474B4F876AC2A5F18CB879}
+### FairPlay ライセンスのローテーション {#section_D32AA08C61474B4F876AC2A5F18CB879}
 
-ライセンスのローテーションは、長い間再生されるコンテンツのライセンスのハッキングを防ぐためのスキームです。
+ライセンスのローテーションは、長時間再生されるコンテンツのライセンスハッキングを防ぐスキームです。
 
-M3U8マニフェストでは、各キータグは次のキータグまで、またはファイルの最後まで、次のTSセグメントに適用されます。
+M3U8 マニフェストでは、各キータグは次のキータグまで、またはファイルの最後まで、次の TS セグメントに適用されます。
 
-ライセンスローテーションを追加するには、次の手順を実行します。
+ライセンスのローテーションを追加するには、次の手順を実行します。
 
-* ライセンスのローテーション時間中に新しいFairPlayキータグを挿入します。
+* ライセンスのローテーション時に新しい FairPlay キータグを挿入します。
 
-   任意の数のキータグを追加できます。
+  任意の数のキータグを追加できます。
 
-   リニアコンテンツの場合は、M3U8ウィンドウで最新のキータグを維持してください。 再生するTSセグメントが2つ（約20秒）ある場合、iOSは次のM3U8をリクエストします。 新しいM3U8に新しいキータグが含まれる場合は、すべてのキーリクエストが即座に実行されます。 以前の既存のキーは、再度要求されません。 iOSは、再生が開始する前に、すべての主要な要求が完了するのを待ちます。
+  線形コンテンツの場合は、M3U8 ウィンドウで最新のキータグを維持してください。 iOSは、約 2 つの TS セグメントが再生される（約 20 秒）ときに、次の M3U8 をリクエストします。 新しい M3U8 に新しいキータグが含まれている場合、すべてのキーリクエストが直ちに実行されます。 以前の既存のキーは、再度リクエストされません。 iOSは、すべてのキーリクエストが完了するのを待ってから、再生が開始されます。
 
-   ライセンスローテーションを含むVODコンテンツの場合、すべての主要なリクエストは再生の開始時に発生します。
+  ライセンスのローテーションを含む VOD コンテンツの場合、すべてのキーリクエストは再生の開始時に発生します。
 
-   以下は、キーが回転するM3U8の例です。
+  次に、キーの回転を伴う M3U8 の例を示します。
 
-   ```
-   #EXTM3U
-   #EXT-X-TARGETDURATION:10
-   #EXT-X-VERSION:5
-   #EXT-X-MEDIA-SEQUENCE:0
-   #EXT-X-PLAYLIST-TYPE:VOD
-   #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://one?cek=1dc2cc71d913f4f74eca0c4632
-   212b25&iv=e21f0f72b6363ff6143737cb1e9ca8d7",KEYFORMAT="com.apple.streaming
-   keydelivery",KEYFORMATVERSIONS="1"
-   #EXTINF:10,
-   fileSequence0.ts
-   #EXTINF:10,
-   fileSequence1.ts
-   #EXTINF:10,
-   fileSequence2.ts
-   #EXTINF:10,
-   fileSequence3.ts
-   #EXTINF:10,
-   fileSequence4.ts
-   #EXTINF:10,
-   fileSequence5.ts
-   #EXTINF:10,
-   fileSequence6.ts
-   #EXTINF:10,
-   fileSequence7.ts
-   #EXTINF:10,
-   #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://two?cek=f6efc698b96cf8f4fa46d5237d
-   337c77&iv=18401077091784bcda8079acf978dc95",KEYFORMAT="com.apple.streaming
-   keydelivery",KEYFORMATVERSIONS="1"
-   #EXTINF:10,
-   fileSequence8.ts
-   #EXTINF:10,
-   ```
+  ```
+  #EXTM3U
+  #EXT-X-TARGETDURATION:10
+  #EXT-X-VERSION:5
+  #EXT-X-MEDIA-SEQUENCE:0
+  #EXT-X-PLAYLIST-TYPE:VOD
+  #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://one?cek=1dc2cc71d913f4f74eca0c4632
+  212b25&iv=e21f0f72b6363ff6143737cb1e9ca8d7",KEYFORMAT="com.apple.streaming
+  keydelivery",KEYFORMATVERSIONS="1"
+  #EXTINF:10,
+  fileSequence0.ts
+  #EXTINF:10,
+  fileSequence1.ts
+  #EXTINF:10,
+  fileSequence2.ts
+  #EXTINF:10,
+  fileSequence3.ts
+  #EXTINF:10,
+  fileSequence4.ts
+  #EXTINF:10,
+  fileSequence5.ts
+  #EXTINF:10,
+  fileSequence6.ts
+  #EXTINF:10,
+  fileSequence7.ts
+  #EXTINF:10,
+  #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://two?cek=f6efc698b96cf8f4fa46d5237d
+  337c77&iv=18401077091784bcda8079acf978dc95",KEYFORMAT="com.apple.streaming
+  keydelivery",KEYFORMATVERSIONS="1"
+  #EXTINF:10,
+  fileSequence8.ts
+  #EXTINF:10,
+  ```

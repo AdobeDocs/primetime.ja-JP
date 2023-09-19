@@ -1,20 +1,18 @@
 ---
-title: 直接広告の時間のJSONオブジェクト
-description: タイプ値がダイレクト広告ブレークの場合のJSONオブジェクトの詳細
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: 直接広告ブレークの JSON オブジェクト
+description: タイプ値がダイレクト広告ブレークの場合に、JSON オブジェクトの詳細を説明します
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
 
 ---
 
+# 直接広告ブレークの JSON オブジェクト{#json-object-for-direct-ad-breaks}
 
-# ダイレクト広告ブレークのJSONオブジェクト{#json-object-for-direct-ad-breaks}
+次のコードブロックは、タイプ値が直接広告ブレークの場合の詳細 JSON オブジェクトを定義します。
 
-次のコードブロックは、タイプ値が直接広告ブレークの場合のdetails JSONオブジェクトを定義します。
-
-`IFeedItemAdapter:getStreamMetadata()`から返される`MetadataNode`には、`com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY`型のキーと、下の詳細JSONオブジェクト値の文字列表現の値を持つエントリが含まれます。
+The `MetadataNode` 返送者： `IFeedItemAdapter:getStreamMetadata()` タイプのキーを持つエントリが含まれます `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` および以下の詳細 JSON オブジェクト値の文字列表現の値。
 
 ```
 “metadata”: { 
@@ -50,12 +48,12 @@ ht-degree: 0%
 
 | プロパティ | 説明 |
 |---|---|
-| `tag` | `com.adobe.mediacore.timeline.advertising.AdBreak`内のタグフィールドにマップする文字列。 |
-| `time` | 広告の時間の開始時間を示し、`com.adobe.mediacore.timeline.advertising.AdBreak`の時間フィールドにマップします。 値0はプリロール広告を示します。 |
-| `replace` | 広告の時間の置き換え時間を示し、`com.adobe.mediacore.timeline.advertising.AdBreak`の`replaceDuration`フィールドにマップします。 |
-| `ad-list` | 特定の広告の時間中に再生される広告のリストは、`com.adobe.mediacore.timeline.advertising.AdBreak`の`List<Ad>`フィールドにマッピングされます。 |
+| `tag` | のタグフィールドにマッピングする文字列 `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `time` | 広告ブレークの開始時間を示し、の時間フィールドにマッピングされます。 `com.adobe.mediacore.timeline.advertising.AdBreak`. 値 0 はプリロール広告を示します。 |
+| `replace` | 広告ブレークの置き換え時間を示し、 `replaceDuration` ～に入る `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `ad-list` | 特定の広告ブレーク中に再生される広告のリストは、 `List<Ad>` ～に入る `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 
-次のコードブロックは、広告 —リスト配列のJSONオブジェクトを定義します。
+次のコードブロックは、ads-list 配列の JSON オブジェクトを定義します。
 
 ```
 "ad-list": [ 
@@ -74,7 +72,6 @@ ht-degree: 0%
 
 | プロパティ | 説明 |
 |---|---|
-| `url` | 広告コンテンツへのURLは、`com.adobe.mediacore.timeline.advertising.Ad`のurlフィールドにマップされます。 |
-| `duration` | 広告の長さは、`com.adobe.mediacore.timeline.advertising.Ad`の継続時間フィールドにマップされます。 |
+| `url` | 広告コンテンツの URL は、の url フィールドにマッピングされます。 `com.adobe.mediacore.timeline.advertising.Ad`. |
+| `duration` | 広告の期間は、 `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `tag` | 説明文字列。 |
-

@@ -2,24 +2,22 @@
 title: パスワードスクランブラ
 description: パスワードスクランブラ
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
 
 ---
 
+# パスワードスクランブラ {#password-scrambler}
 
-# パスワードスクランブラ{#password-scrambler}
-
-Password Scramblerユーティリティは、パスワードを暗号化して、保護ストリーミング設定ファイル用のAdobe Access Serverで使用できるようにします。 スクランブラを実行するには、次のコマンドを実行します。
+Password Scrambler ユーティリティは、保護されたストリーミング設定ファイル用のAdobe Access Serverで使用できるように、パスワードを暗号化します。 スクランブラを実行するには、次のコマンドを実行します。
 
 ```
 Scrambler.bat password 
 ```
 
-または次のコマンドを実行します。
+または次のコマンドを使用します。
 
 ```
 java -jar libs/flashaccess-scrambler.jar password  
@@ -31,9 +29,8 @@ java -jar libs/flashaccess-scrambler.jar password
 Encrypted password: scrambled-password 
 ```
 
-flashaccess-global.xmlおよびflashaccess-tenant.xmlで指定されているすべてのパスワードは、暗号化する必要があります。
+flashaccess-global.xml および flashaccess-tenant.xml で指定するすべてのパスワードは、暗号化する必要があります。
 
 >[!NOTE]
 >
->保護ストリーミング用Adobe Access ServerのPassword Scramblerユーティリティは、リファレンス実装ライセンスサーバに付属のスクランブラと交換できません。
-
+>Adobe Access Server for Protected Streaming の Password Scrambler ユーティリティは、Reference Implementation License Server に付属するスクランブラと交換できません。

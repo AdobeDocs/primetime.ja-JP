@@ -1,13 +1,12 @@
 ---
 title: プライバシーリクエストの作成方法
 description: プライバシーリクエストの作成方法
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
 
 ---
-
 
 # プライバシーリクエストの作成方法 {#howto-make-privacy-request}
 
@@ -52,7 +51,7 @@ Primetime 認証は、アクセス要求と削除要求をサポートします�
 
 **リクエストのサンプル**
 
-データアクセスリクエストを送信する Primetime 認証 ID を持つ JSON をアップロードする必要があります。 整形式の JSON がどのように表示されるかを確認するには、次のサンプルを参照してください。
+データアクセスリクエストを送信する Primetime 認証識別子が設定された JSON をアップロードする必要があります。 整形式の JSON がどのように表示されるかを確認するには、次のサンプルを参照してください。
 
 ```JSON
 {
@@ -221,8 +220,8 @@ Primetime 認証は、アクセス要求と削除要求をサポートします�
 
 お客様がプライバシーリクエストをAdobeに送信する方法は 2 つあります。
 
-* **手動**  — 使用 [Privacy Serviceユーザーインターフェイス](#privacy-service-ui)
-* **自動**  — 使用 [Privacy ServiceAPI ](#privacy-service-api)
+* **手動**  — を使用 [Privacy Serviceユーザーインターフェイス](#privacy-service-ui)
+* **自動的に**  — を使用 [Privacy ServiceAPI](#privacy-service-api)
 
 ### Privacy ServiceUI を使用 {#privacy-service-ui}
 
@@ -232,9 +231,9 @@ UI では、各製品の GDPR 要求の詳細を含む独自の IMSOrgID と JSO
 
 ### Privacy ServiceAPI を使用 {#privacy-service-api}
 
-Adobe Experience Platform Privacy Serviceは、非公開データに対するアクセス/削除要求と販売のオプトアウト要求を一元化して共通の手順を提供します。
+Adobe Experience Platform Privacy Serviceは、非公開データに対するアクセス/削除リクエストと販売のオプトアウトリクエストを一元化して共通の手順を提供します。
 
-この **Privacy ServiceAPI ドキュメント** では、顧客がAdobeAPI と統合する方法について詳しくAdobeしています。
+The **Privacy ServiceAPI ドキュメント** では、顧客がAdobeAPI と統合する方法について詳しくAdobeしています。
 
 **Postman（無料のサードパーティ製ソフトウェア）で API 呼び出しを視覚化します。**
 
@@ -253,7 +252,7 @@ Adobe Experience Platform Privacy Serviceは、非公開データに対するア
 **必須ヘッダー：**
 
 * すべての呼び出しにヘッダーが必要です `Authorization`, `x-gw-ims-org-id`、および `x-api-key`. これらの値の取得方法の詳細については、 **認証チュートリアル**.
-* リクエスト本文にペイロードを持つすべてのリクエスト (POST、PUT、PATCH呼び出しなど ) には、ヘッダーが含まれている必要があります `Content-Type` 値を `application/json`.
+* リクエスト本文にペイロードを持つすべてのリクエスト (POST、PUT、PATCH呼び出しなど ) には、ヘッダーが含まれている必要があります `Content-Type` 値を持つ `application/json`.
 
 <!--
 

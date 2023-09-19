@@ -1,20 +1,18 @@
 ---
-title: DRMポリシーの更新
-description: DRMポリシーの更新
+title: DRM ポリシーの更新
+description: DRM ポリシーの更新
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
 
 ---
 
+# DRM ポリシーの更新 {#updating-drm-policies}
 
-# DRMポリシー{#updating-drm-policies}を更新しています
+コンテンツをパッケージ化した後に DRM ポリシーが更新された場合は、更新された DRM ポリシーをライセンスサーバーに提供して、ライセンスの発行時に更新されたバージョンを使用できるようにします。 ライセンスサーバーが DRM ポリシーを保存するためのデータベースにアクセスできる場合、更新された DRM ポリシーをデータベースから取得し、を呼び出すことができます `LicenseRequestMessage.setSelectedPolicy()` を使用して、DRM ポリシーの新しいバージョンを指定します。
 
-コンテンツをパッケージ化した後にDRMポリシーを更新する場合は、更新したDRMポリシーをライセンスサーバーに提供して、更新したバージョンをライセンスの発行時に使用できるようにします。 ライセンスサーバーがDRMポリシーを保存するデータベースにアクセスできる場合、更新されたDRMポリシーをデータベースから取得し、`LicenseRequestMessage.setSelectedPolicy()`を呼び出してDRMポリシーの新しいバージョンを提供できます。
+中央のデータベースに依存しないライセンスサーバーの場合、SDK は DRM ポリシー更新リストをサポートします。 DRM ポリシー更新リストは、更新または取り消された DRM ポリシーのリストを含むファイルです。 DRM ポリシーが更新されたら、新しい DRM ポリシー更新リストを生成し、定期的にすべてのライセンスサーバーにリストをプッシュします。 を設定して、リストを SDK に渡します。 `HandlerConfiguration.setPolicyUpdateList()`. 更新リストが指定されている場合、SDK は、コンテンツメタデータを解析する際に、このリストを調べます。 `ContentInfo.getUpdatedPolicies()` メタデータで指定されている更新済みバージョンの DRM ポリシーが含まれます。
 
-中央データベースに依存しないライセンスサーバーの場合、SDKはDRMポリシーの更新リストをサポートします。 DRMポリシーの更新リストは、更新または失効したDRMポリシーのリストを含むファイルです。 DRMポリシーが更新されたら、新しいDRMポリシー更新リストを生成し、定期的にすべてのライセンスサーバーにリストをプッシュします。 `HandlerConfiguration.setPolicyUpdateList()`を設定して、リストをSDKに渡します。 更新リストが指定されている場合、SDKは、コンテンツのメタデータを解析する際に、このリストを問い合わせます。 `ContentInfo.getUpdatedPolicies()` メタデータで指定された更新されたDRMポリシーのバージョンが含まれます。
-
-[DRMポリシーの操作](../../../protecting-content/working-policies-overview/working-with-policies.md)および[DRMポリシーの更新リスト](../../../protecting-content/working-policies-overview/policy-update-lists/working-with-policy-update-lists.md)を参照してください。
+詳しくは、 [DRM ポリシーの操作](../../../protecting-content/working-policies-overview/working-with-policies.md) および [DRM ポリシーの更新リスト](../../../protecting-content/working-policies-overview/policy-update-lists/working-with-policy-update-lists.md)

@@ -1,18 +1,16 @@
 ---
-title: DRMStatusEventクラスの使用の概要
-description: DRMStatusEventクラスの使用の概要
+title: DRMStatusEvent クラスの使用：概要
+description: DRMStatusEvent クラスの使用：概要
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
 
 ---
 
+# DRMStatusEvent クラスの使用：概要 {#using-the-drmstatusevent-class-overview}
 
-# DRMStatusEventクラスの概要{#using-the-drmstatusevent-class-overview}の使用
+A `DRMStatusEvent` オブジェクトは、Primetime DRM で保護されたコンテンツの再生が正常に開始した場合にディスパッチされます。 （成功とは、ライセンスが検証され、ユーザーがコンテンツの表示を認証され、承認されていることを意味します）。
 
-Primetime DRMで保護されたコンテンツの再生が正常に開始されると、`DRMStatusEvent`オブジェクトがディスパッチされます。 (成功は、ライセンスが検証され、ユーザーが認証され、コンテンツの表示が許可されることを意味します)。
-
-`DRMStatusEvent`オブジェクトには、ライセンスをオフラインで使用できるか、ライセンスの有効期限が切れた場合にコンテンツを表示できなくなるかなど、ライセンスに関する情報が含まれます。
+The `DRMStatusEvent` オブジェクトには、ライセンスをオフラインで使用できるか、ライセンスの有効期限が切れてコンテンツを表示できなくなった場合など、ライセンスに関する情報が含まれます。

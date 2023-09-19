@@ -1,18 +1,16 @@
 ---
-title: ライセンス要求エラー処理
-description: ライセンス要求エラー処理
+title: ライセンスリクエストのエラー処理
+description: ライセンスリクエストのエラー処理
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
+# ライセンスリクエストのエラー処理 {#license-request-error-handling}
 
-# {#license-request-error-handling}の処理中にライセンス要求エラーが発生しました
+リクエストの解析中にエラーが発生した場合、 `HandlerParsingException` が発生します。 この例外には、クライアントに返されるエラー情報が含まれます。 エラー情報を取得する必要がある場合は、を呼び出す必要があります。 `HandlerParsingException.getErrorData()`. DRM ポリシーの要件が満たされていないためにライセンスの生成中にエラーが発生した場合、 `PolicyEvaluationException` が発生します。 この例外には、 `ErrorData` をクライアントに返します。
 
-要求の解析中にエラーが発生した場合は、`HandlerParsingException`が発生します。 この例外には、クライアントに返されるエラー情報が含まれます。 エラー情報を取得する必要がある場合は、`HandlerParsingException.getErrorData()`を呼び出す必要があります。 DRMポリシーの要件が満たされていないためにライセンスの生成中にエラーが発生した場合は、`PolicyEvaluationException`が発生します。 この例外には、クライアントに返す`ErrorData`も含まれます。
-
-ライセンス生成中のDRMポリシーの評価方法について詳しくは、`LicenseRequestMessage.generateLicense()`のAPIドキュメントを参照してください。
+詳しくは、 API ドキュメントを参照してください。 `LicenseRequestMessage.generateLicense()` を参照してください。

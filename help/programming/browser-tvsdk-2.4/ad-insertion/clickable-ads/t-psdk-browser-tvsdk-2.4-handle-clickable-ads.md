@@ -1,31 +1,29 @@
 ---
-description: MediaPlayerは、クリック可能な広告の再生中に広告関連のイベントをディスパッチするnotifyClick()関数を提供します。 これらのイベントは、クリックスルー機能を提供するためにアプリで使用できる広告および広告の時間の情報を提供します。
+description: MediaPlayer は、クリック可能な広告の再生中に広告関連のイベントをディスパッチする notifyClick() 関数を提供します。 これらのイベントは、アプリがクリックスルー機能を提供するために使用できる広告および広告ブレーク情報を提供します。
 title: クリック可能な広告の処理
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
+# クリック可能な広告の処理 {#handle-clickable-ads}
 
-# クリック可能な広告の処理{#handle-clickable-ads}
+MediaPlayer は、クリック可能な広告の再生中に広告関連のイベントをディスパッチする notifyClick() 関数を提供します。 これらのイベントは、アプリがクリックスルー機能を提供するために使用できる広告および広告ブレーク情報を提供します。
 
-MediaPlayerは、クリック可能な広告の再生中に広告関連のイベントをディスパッチするnotifyClick()関数を提供します。 これらのイベントは、クリックスルー機能を提供するためにアプリで使用できる広告および広告の時間の情報を提供します。
-
-MediaPlayerは、クリック可能な広告の再生時に次のイベントを実行します。
+MediaPlayer は、クリック可能な広告が再生されると、次のイベントを発生させます。
 
 * `AdobePSDK.PSDKEventType.AD_STARTED`
 * `AdobePSDK.PSDKEventType.AD_CLICKED`
 * `AdobePSDK.PSDKEventType.AD_COMPLETED`
 
-`AdClickedEvent`には、クリックスルー関数の処理に必要な情報が含まれています。
+The `AdClickedEvent` には、クリックスルー関数の処理に必要な情報が含まれています。
 
-1. ユーザーがクリック可能な広告をクリックできるように、プレイヤーにコントロールを提供します。
+1. ユーザーがクリック可能な広告をクリックできるように、プレーヤーにコントロールを指定します。
 
-   これは、ユーザーのクリックを取り込むためのボタンやその他の要素にすることができます。
-1. ユーザー追加の広告クリックイベントのイベントリスナー。
+   これには、ユーザーのクリックをキャプチャするためのボタンやその他の要素を使用できます。
+1. ユーザーの広告クリックイベント用のイベントリスナーを追加します。
 
    例：
 
@@ -34,9 +32,9 @@ MediaPlayerは、クリック可能な広告の再生時に次のイベントを
    <i>your_click_control_id</i>]).addEventListener("click", onAdClick);
    ```
 
-1. ユーザー追加のclickイベントのハンドラー。
+1. ユーザーの click イベントにハンドラーを追加します。
 
-   このハンドラーは、MediaPlayerに`AdClicked`イベントを起動するように促す必要があります。
+   このハンドラーは、MediaPlayer に対して、 `AdClicked` イベント。
 
    ```
    onAdClick = function (event) { 
@@ -50,7 +48,7 @@ MediaPlayerは、クリック可能な広告の再生時に次のイベントを
    } 
    ```
 
-1. MediaPlayer広告の開始、広告がクリックされた追加、広告が完了した通知用のイベントリスナー。
+1. MediaPlayer 広告開始、広告クリックおよび広告完了の通知用のイベントリスナーを追加します。
 
    ```
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted); 
@@ -60,9 +58,9 @@ MediaPlayerは、クリック可能な広告の再生時に次のイベントを
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_CLICKED, onAdClickedEvent);
    ```
 
-1. 追加イベントハンドラー。
+1. イベントハンドラーを追加します。
 a.広告開始イベントを処理します。
-これは、ユーザーのUIの設定など、何でもできます。
+これにより、ユーザーの UI の設定など、何らかの操作が可能になります。
 
    ```
    onAdStarted = function (event) { 
@@ -77,8 +75,8 @@ a.広告開始イベントを処理します。
    }
    ```
 
-   b.広告がクリックされたイベントを処理します。
-この例では、イベントから広告情報を取得し、次の情報を使用して新しいブラウザーウィンドウを開きます。
+   b.広告のクリックイベントを処理します。
+この例では、イベントから広告情報を取得し、その情報を使用して新しいブラウザーウィンドウを開きます。
 
    ```
    onAdClickedEvent = function (event) { 

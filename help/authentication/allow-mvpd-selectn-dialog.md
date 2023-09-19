@@ -1,13 +1,12 @@
 ---
 title: 選択ダイアログで MVPD を許可
 description: 選択ダイアログで MVPD を許可
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
-
 
 # 選択ダイアログで MVPD を許可 {#allow-mvpds-selection-dialog}
 
@@ -21,7 +20,7 @@ ht-degree: 0%
 
 ## 解決策 {#solution}
 
-内 `displayProviderDialog()` コールバックを使用すると、Adobe Primetime認証は、選択したプログラマー（リクエスト元 ID）と統合されたすべての MVPD を返します。 しかし、プログラマは MVPDs の戻り配列にフィルタを適用し、両方のリストにあるものだけを表示することができます。
+Adobe Analytics の `displayProviderDialog()` コールバックを使用すると、Adobe Primetime認証は、選択したプログラマー（リクエスト元 ID）と統合されたすべての MVPD を返します。 しかし、プログラマは MVPDs の戻り配列にフィルタを適用し、両方のリストにあるものだけを表示することができます。
 
 ## 例 {#example}
 

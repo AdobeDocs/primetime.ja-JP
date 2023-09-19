@@ -1,36 +1,34 @@
 ---
-description: AdobeOffline Packagerは、暗号化されていないmp4コンテンツを入力として受け取ります。
-title: AdobeのOffline Packagerでコンテンツをパッケージ化する
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Adobeオフライン Packager は、暗号化されていない mp4 コンテンツを入力として取得します。
+title: Adobeオフラインパッケージャでコンテンツをパッケージ化
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
+# Adobeオフラインパッケージャでコンテンツをパッケージ化{#package-your-content-with-adobe-offline-packager}
 
-# AdobeのOffline Packager{#package-your-content-with-adobe-offline-packager}でコンテンツをパッケージ化する
+Adobeオフライン Packager は、暗号化されていない mp4 コンテンツを入力として取得します。
 
-AdobeOffline Packagerは、暗号化されていないmp4コンテンツを入力として受け取ります。
+**Adobeオフラインパッケージャを呼び出し中**
 
-**Adobeオフラインパッケージャーの呼び出し**
-
-一般的なadobe offline packagerの呼び出しは、次のようになります。
+一般的な adobe offline packager の呼び出しは、次のようになります。
 
     java -jar OfflinePackager.jar -conf_path Content_PR_WV.xml -in_path &quot;Jaigo.mp4&quot;
     -out_path &quot;Jaigo_DASH&quot;
     -key_file_path &quot;Jaigo_DASH/_info/key.B64.random&quot;
-    -widevine_key_id c595f214d84dcecf31a8ebf1b7ddda5
+    -widevine_key_id c595f214d84dc7ecf31a8ebf1b7ddda5
     -widevine_provider intertrust
-    -playready_LA_URLhttp://pr.test.expressplay.com/playready/RightsManager.asmx
-    
-    
-    -playready_keyid c595f214d84dc7ecf31a ebf1dda5ddd-c595f14d84dc7ecf31a8ebf1b7dda5
+    -playready_LA_URL
+    http://pr.test.expressplay.com/playready/RightsManager.asmx
+    -playready_keyid c595f214d84dc7ecf31a8ebf1b7ddda5
+    -content_id c595f214d84dc7ecf31a8ebf1b7ddda5
 
-この場合、オフラインパッケージャーは、Widevineコンテンツ保護とPlayReadyコンテンツ保護の初期化データの両方を出力DASHコンテンツに追加します。 `-key_file_path`の値は、base64エンコードされたキーに対する値です。 `-playready_LA_URL`の値は、PlayReadyライセンス取得のためのものです。
+この場合、オフラインパッケージャは Widevine コンテンツ保護と PlayReady コンテンツ保護初期化データの両方を出力 DASH コンテンツに追加します。 の値 `-key_file_path` は、base64 でエンコードされたキーの場合に使用されます。 の値 `-playready_LA_URL` は、PlayReady ライセンス獲得用のものです。
 
-conf_path引数は、次の値を含む設定ファイルを指します。
+conf_path 引数は、次の内容を含む設定ファイルを指します。
 
     &lt;config>
     &lt;frag_dur>4&lt;/frag_dur>
@@ -38,4 +36,4 @@ conf_path引数は、次の値を含む設定ファイルを指します。
     &lt;encrypt_audio>false&lt;/encrypt_audio>
     &lt;/config>
 
-一部のAndroidデバイス(主にAmazonFire TV)は、オーディオの復号化をサポートしないので、オーディオの暗号化はオプションです。
+特定の Android デバイス ( 主にAmazon Fire TV ) は、オーディオの復号化をサポートしていないので、オーディオの暗号化はオプションです。

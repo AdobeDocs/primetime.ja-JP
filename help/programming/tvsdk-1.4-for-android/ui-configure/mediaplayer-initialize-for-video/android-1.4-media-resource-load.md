@@ -1,46 +1,42 @@
 ---
-description: MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む方法の1つです。
-title: メディアリソースをMediaPlayerに読み込む
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaResource を直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースの読み込み方法の 1 つです。
+title: MediaPlayer でのメディアリソースの読み込み
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
+# MediaPlayer でのメディアリソースの読み込み {#load-a-media-resource-in-the-mediaplayer}
 
-# メディアリソースをMediaPlayer {#load-a-media-resource-in-the-mediaplayer}に読み込む
+MediaResource を直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースの読み込み方法の 1 つです。
 
-MediaResourceを直接インスタンス化し、再生するビデオコンテンツを読み込むことで、リソースを読み込みます。 これは、メディアリソースを読み込む方法の1つです。
+1. MediaPlayer の再生可能な項目に、再生する新しいリソースを設定します。
 
-1. 再生する新しいリソースをMediaPlayerの再生可能な項目に設定します。
+   を呼び出して、既存の MediaPlayer の現在再生可能な項目を置き換えます。 `MediaPlayer.replaceCurrentItem` そして既存の `MediaResource` インスタンス。
 
-   `MediaPlayer.replaceCurrentItem`を呼び出し、既存の`MediaResource`インスタンスを渡すことで、既存のMediaPlayerの現在再生可能なアイテムを置き換えます。
-
-1. `MediaPlayer.PlaybackEventListener`インターフェイスの実装を`MediaPlayer`インスタンスに登録します。
+1. の実装の登録 `MediaPlayer.PlaybackEventListener` とのインターフェイス `MediaPlayer` インスタンス。
 
    * `onPrepared`
-   * `onStateChanged`に値を入力し、INITIALIZEDとERRORを確認します。
+   * `onStateChanged`をクリックし、INITIALIZED と ERROR を確認します。
 
-1. メディアプレイヤーの状態がINITIALIZEDに変わった場合は、`MediaPlayer.prepareToPlay`を呼び出すことができます
+1. メディアプレーヤーの状態が INITIALIZED に変わったら、を呼び出すことができます。 `MediaPlayer.prepareToPlay`
 
-   INITIALIZED状態は、メディアが正常に読み込まれたことを示します。 `prepareToPlay`開始を呼び出すと、広告解決と配置プロセスが発生します（存在する場合）。
+   INITIALIZED 状態は、メディアが正常に読み込まれたことを示します。 呼び出し `prepareToPlay` 広告の解決および配置プロセスを開始します（存在する場合）。
 
-1. TVSDKが`onPrepared`コールバックを呼び出すと、メディアストリームの読み込みが成功し、再生の準備が整います。
+1. TVSDK が `onPrepared` コールバックの場合、メディアストリームは正常に読み込まれ、再生の準備が整います。
 
-   メディアストリームが読み込まれると、`MediaPlayerItem`が作成されます。
+   メディアストリームが読み込まれると、 `MediaPlayerItem` が作成されました。
 
->エラーが発生した場合、`MediaPlayer`はERRORステータスに切り替わります。 また、`PlaybackEventListener.onStateChanged`コールバックを呼び出すことで、アプリケーションに通知します。
+>エラーが発生した場合、 `MediaPlayer` ERROR ステータスに切り替えます。 また、 `PlaybackEventListener.onStateChanged`コールバック。
 >
->これは、次のいくつかのパラメーターを渡します。
->* `MediaPlayer.PlayerState.ERROR`の値を持つタイプ`MediaPlayer.PlayerState`の`state`パラメータ。
-   >
-   >
-* エラーイベントに関する診断情報を含む、タイプ`MediaPlayerNotification`の`notification`パラメーター。
+>これには、次の複数のパラメーターが渡されます。
+>* A `state` 型のパラメーター `MediaPlayer.PlayerState` ～の価値を持つ `MediaPlayer.PlayerState.ERROR`.
+>
+>* A `notification` 型のパラメーター `MediaPlayerNotification` エラーイベントに関する診断情報が含まれている。
 
-
-以下のサンプルコードは、メディアリソースの読み込みプロセスを簡単に示しています。
+以下に、メディアリソースの読み込みプロセスを簡略化したサンプルコードを示します。
 
 ```java
 // mediaResource is a properly configured MediaResource instance 

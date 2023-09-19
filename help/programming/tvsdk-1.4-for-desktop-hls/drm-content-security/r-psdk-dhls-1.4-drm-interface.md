@@ -1,44 +1,42 @@
 ---
-description: Primetime digital rights management(DRM)システムのクライアント側の主要要素はDRMマネージャーです。
-title: Primetime DRMインターフェイスの概要
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Primetime デジタル著作権管理 (DRM) システムの主なクライアント側要素は DRM マネージャーです。
+title: Primetime DRM インターフェイスの概要
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
+# Primetime DRM インターフェイスの概要{#primetime-drm-interface-overview}
 
-# Primetime DRMインターフェイスの概要{#primetime-drm-interface-overview}
-
-Primetime digital rights management(DRM)システムのクライアント側の主要要素はDRMマネージャーです。
+Primetime デジタル著作権管理 (DRM) システムの主なクライアント側要素は DRM マネージャーです。
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-Primetime DRMは、TVSDKアプリケーションにコンテンツ保護を実装するためのスケーラブルで効率的なワークフローを提供します。 各デジタルメディアファイルのライセンスを作成することで、ビデオコンテンツの権限を保護し、管理します。
+Primetime DRM は、TVSDK アプリケーションにコンテンツ保護を実装するためのスケーラブルで効率的なワークフローを提供します。 各デジタルメディアファイルのライセンスを作成することで、ビデオコンテンツに対する権限を保護および管理できます。
 
-TVSDKは、カスタムDRMワークフローとしてPrimetime DRM統合をサポートしています。 つまり、Flash`DRMManager`を使用してストリームを再生する前に、アプリケーションでDRM認証ワークフローを実装する必要があります。 これを有効にするために、`MediaPlayer`から認証用のDRMマネージャーが提供されます。
+TVSDK は、カスタム DRM ワークフローとして Primetime DRM 統合をサポートしています。 つまり、Flash `DRMManager`. これを有効にするには、 `MediaPlayer` は、認証用の DRM マネージャーを提供します。
 
-以下は、DRMを操作するための最も重要なAPI要素です。
+DRM を操作するための最も重要な API 要素は次のとおりです。
 
-* DRMサブシステムを実装するDRMマネージャーオブジェクトへのメディアプレイヤー内の参照：
+* DRM サブシステムを実装する DRM マネージャーオブジェクトへのメディアプレーヤー内の参照。
 
-   ```
-   public function get drmManager():DRMManager 
-   ```
+  ```
+  public function get drmManager():DRMManager 
+  ```
 
 <!--<a id="section_4204CE2731A44F67A3664AEDE8CCCA47"></a>-->
 
-関連するその他のAPIエレメント：
+関連するその他の API エレメント：
 
 * [flash.net.drm.DRMManager](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMManager.html)
 * [flash.net.drm.DRMContentData](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMContentData.html)
 * [flash.net.drm.DRMVoucher](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMVoucher.html)
 * [flash.net.drm.AuthenticationMethod](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/AuthenticationMethod.html)
-* [flash.イベント.DRMStatusEvent](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/DRMStatusEvent.html)
-* [flash.イベント.DRMErrorEvent](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/DRMErrorEvent.html)
+* [flash.events.DRMStatusEvent](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/DRMStatusEvent.html)
+* [flash.events.DRMErrorEvent](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/DRMErrorEvent.html)
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-DRMについて詳しくは、Adobe PrimetimeDRMドキュメントを参照してください。
+DRM について詳しくは、 Adobe Primetime DRM のドキュメントを参照してください。

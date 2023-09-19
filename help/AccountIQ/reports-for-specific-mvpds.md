@@ -1,8 +1,7 @@
 ---
 title: 特定の MVPD に対してアカウント IQ 指標を使用する方法
 description: アカウント IQ レポートの使用方法と理解方法。
-exl-id: ada9a80a-b31b-4bdc-838c-dcd94a0a6c59
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 特定の MVPD のアカウント共有レポートを表示します <!--and programmer--> {#report-sp-mvpd}
 
-アカウント IQ アプリケーションに [プログラマ](/help/AccountIQ/product-concepts.md#programmer-def)その後、特定の [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) 購読者。
+アカウント IQ アプリケーションに [プログラマー](/help/AccountIQ/product-concepts.md#programmer-def)その後、特定のののチャネルでの共有に関するレポートを表示できます [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) 購読者。
 
 Account IQ でレポートを表示するには、プログラマーとしてアプリケーションに正常にログインした後に、次の手順を実行します。
 
@@ -29,17 +28,17 @@ Account IQ でレポートを表示するには、プログラマーとしてア
 
 * [一般的な使用方法](/help/AccountIQ/general-usage-reports.md)
 
-   ![](assets/specific-mvpd-gen-usage.png)
+  ![](assets/specific-mvpd-gen-usage.png)
 * [共有アカウント](/help/AccountIQ/shared-acc-reports.md)
 
-   ![](assets/specific-mvpd-shared-acc.png)
+  ![](assets/specific-mvpd-shared-acc.png)
 * [使用パターン](/help/AccountIQ/usage-patterns.md)
 
-   ![](assets/specific-mvpd-usage-pattern.png)
+  ![](assets/specific-mvpd-usage-pattern.png)
 
 * [ダッシュボード](/help/AccountIQ/dashboard.md) （ダッシュボードには、様々なレポートページから選択したグラフが表示されます）。
 
-   ![](assets/specific-mvpd-dashboard.png)
+  ![](assets/specific-mvpd-dashboard.png)
 
 これらの各ページは、選択したセグメントのアクティビティを反映します。
 

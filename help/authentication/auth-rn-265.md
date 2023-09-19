@@ -1,7 +1,7 @@
 ---
 title: Adobe Primetime authentication 2.65 リリースノート
 description: Adobe Primetime authentication 2.65 リリースノート
-source-git-commit: aa8169da1308e5372128a93b6a2e5a3a6db5cfef
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%

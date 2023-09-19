@@ -1,18 +1,16 @@
 ---
-title: クライアント統合
-description: クライアント統合
+title: クライアントの統合
+description: クライアントの統合
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%
 
 ---
 
+# クライアントの統合{#client-integration}
 
-# クライアント統合{#client-integration}
+Adobeがホストするグローバル個別化サーバーとは異なり、クライアントをオンプレミスの個別化サーバーに対して個別化するには、以前に作成した On Premises DRM メタデータをクライアントが利用する必要があります。 個別化されていないクライアントがライセンスの取得を実行したり、特別なメタデータを使用して DRM を初期化したりすると、クライアントはカスタムの個別化サーバー URL に接続します。
 
-Adobeがホストするグローバル個別化サーバーとは異なり、オンプレミスの個別化サーバーに対してクライアントを個別化させるには、以前に作成したオンプレミスDRMメタデータをクライアントで利用する必要があります。 個別化されていないクライアントがライセンスの取得を実行するか、特別なメタデータを使用してDRMを初期化すると、クライアントはカスタムの個別化サーバーURLに接続します。
-
-サンプルコードスニペットは[!DNL client_sample]フォルダーに含まれています。
+サンプルコードスニペットは、 [!DNL client_sample] フォルダー。

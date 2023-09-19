@@ -1,63 +1,61 @@
 ---
-description: TVSDKは、スライディングウィンドウプレイリストのストリームである特定の位置（時間）のシーク、ビデオオンデマンド(VOD)およびライブストリームをサポートしています。
-title: シークスクラブバーに現在の再生位置を表示
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK は、ストリームがスライドウィンドウプレイリストである特定の位置（時間）へのシークをサポートしています ( ビデオオンデマンド (VOD) およびライブストリーム )。
+title: シークスクラブバーを現在の再生位置で表示
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
 
 ---
 
+# シークスクラブバーを現在の再生位置で表示 {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-# シークスクラブバーに現在の再生位置{#display-a-seek-scrub-bar-with-the-current-playback-position}を表示
-
-TVSDKは、スライディングウィンドウプレイリストのストリームである特定の位置（時間）のシーク、ビデオオンデマンド(VOD)およびライブストリームをサポートしています。
+TVSDK は、ストリームがスライドウィンドウプレイリストである特定の位置（時間）へのシークをサポートしています ( ビデオオンデマンド (VOD) およびライブストリーム )。
 
 >[!TIP]
 >
->ライブストリームでのシークは、DVRでのみ可能です。
+>ライブストリームでのシークは、DVR でのみ許可されます。
 
-1. シーク用のコールバックを設定します。
+1. シークのコールバックを設定します。
 
-       シークは非同期的なので、TVSDKは以下のシーク関連イベントをディスパッチします。
+       シークは非同期なので、 TVSDK は以下のシーク関連イベントをディスパッチします。
    
-   * `MediaPlayerEvent.SEEK_BEGIN`、seek開始ーの場所。
-   * `MediaPlayerEvent.SEEK_END`に設定されている場合、シークが成功したとき。
-   * `MediaPlayerEvent.OPERATION_FAILED`に設定され、シークに失敗した場合。
+   * `MediaPlayerEvent.SEEK_BEGIN`（シークが開始する場所）
+   * `MediaPlayerEvent.SEEK_END`（シークが成功した場合）。
+   * `MediaPlayerEvent.OPERATION_FAILED`（シークが失敗した場合）
 
-1. プレイヤーがシーク可能なステータスになるのを待ちます。
+1. プレーヤーがシークの有効なステータスになるのを待ちます。
 
-   有効なステータスは、PREPARED、COMPLETE、PAUSEDおよびPLAYINGです。
-1. ネイティブの`SeekBar`を使用して`OnSeekBarChangeListener`を設定します。これはユーザーがスクラブしているタイミングを決定します。
-1. 要求されたシーク位置（ミリ秒）を`MediaPlayer.seek`メソッドに渡します。
+   有効なステータスは、PREPARED、COMPLETE、PAUSED および PLAYING です。
+1. ネイティブのを使用 `SeekBar` 設定する `OnSeekBarChangeListener`：ユーザーがスクラブするタイミングを指定します。
+1. 要求されたシーク位置（ミリ秒）を `MediaPlayer.seek` メソッド。
 
    ```java
    void seek(long position) throws MediaPlayerException;
    ```
 
-   アセットのシーク可能な時間内でのみシークできます。 ビデオオンデマンドの場合、0 ～アセットの長さ。
+   アセットのシーク可能な期間内にのみシークできます。 ビデオオンデマンドの場合は、0 ～アセットの期間です。
 
    >[!TIP]
    >
-   >このステップでは、再生ヘッドをストリーム内の新しい位置に移動しますが、計算された最後の位置は、指定されたシーク位置と異なる場合があります。
+   >このステップは、再生ヘッドをストリーム内の新しい位置に移動させますが、最終的に計算された位置は、指定されたシーク位置とは異なる場合があります。
 
-1. `MediaPlayerEvent.OPERATION_FAILED`をリッスンし、適切な処置を取ります。
+1. 次をリッスン： `MediaPlayerEvent.OPERATION_FAILED` 適切な行動を取る。
 
-   このイベントは、適切な警告を渡します。 続行方法はアプリケーションによって決まります。シークを再試行するか、前の位置から再生を続行するかなどのオプションがあります。
+   このイベントは、適切な警告を渡します。 続行方法はアプリケーションによって決まります。オプションには、シークを再試行するか、前の位置から再生を続行するかが含まれます。
 
-1. TVSDKが`MediaPlayerEvent.SEEK_END`コールバックを呼び出すまで待ちます。
-1. コールバックの位置パラメーターを使用して、最後に調整された再生位置を取得します。
+1. TVSDK が `MediaPlayerEvent.SEEK_END` コールバック。
+1. コールバックの position パラメーターを使用して、最後に調整された再生位置を取得します。
 
-   シーク後の実際の開始位置が、要求された位置と異なる場合があるので、これは重要です。 シークや他の位置変更が広告の時間の途中で終了したり、広告の時間をスキップしたりすると、再生動作を含むルールが影響を受ける場合があります。
+   シーク後の実際の開始位置は、リクエストされた位置と異なる場合があるので、これは重要です。 シークやその他の再配置が広告の途中で終了したり、広告の時間をスキップしたりすると、再生動作を含むルールが適用される場合があります。
 
-1. シークスクラブバーを表示する場合は、位置情報を使用します。
+1. シークスクラブバーを表示する際には、位置情報を使用します。
 
 <!--<a id="example_EEB73818260C43C8B5AE12BA68548AB7"></a>-->
 
 **シークの例**
 
-この例では、ユーザーはシークバーを使用して目的の位置にシークします。
+この例では、ユーザーはシークバーをスクラブして、目的の位置を探します。
 
 ```java
 //Use the native SeekBar to set an OnSeekBarChangeListener to 
@@ -92,4 +90,3 @@ seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
     } 
 }; 
 ```
-

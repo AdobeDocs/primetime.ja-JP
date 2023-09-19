@@ -2,54 +2,52 @@
 title: サーバープロパティファイルのパスワードの準備
 description: サーバープロパティファイルのパスワードの準備
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
+# サーバープロパティファイルのパスワードの準備 {#preparing-passwords-for-the-server-properties-files}
 
-# サーバープロパティファイル{#preparing-passwords-for-the-server-properties-files}のパスワードの準備
+秘密鍵証明書のパスワードのセキュリティを確保するために、パスワードを [!DNL flashaccess-refimpl.properties] または [!DNL flashaccess-refimpl-packager.properties] ファイル。
 
-秘密鍵証明書のパスワードをセキュリティで保護するために、[!DNL flashaccess-refimpl.properties]または[!DNL flashaccess-refimpl-packager.properties]ファイルに入力する前にパスワードを暗号化するツールが提供されます。
+提供されている ANT スクリプトを使用してツールを実行するには、次の手順に従います。
 
-提供されたANTスクリプトを使用してツールを実行するには：
+* に移動します。 *`<Reference Implementation Server Path>`* [!DNL \refimpl]
 
-* *`<Reference Implementation Server Path>`* [!DNL \refimpl]に移動
+* 次を確認します。 `sdkdir` プロパティ： [!DNL build-refimpl.xml] は、AdobeAccess SDK を含むディレクトリを指します。
+* ANT を使用して次のコマンドを実行します。
 
-* [!DNL build-refimpl.xml]の`sdkdir`プロパティが、AdobeアクセスSDKを含むディレクトリを指していることを確認します
-* ANTを使用して次のコマンドを実行します。
+  ```
+      ant -f build-refimpl.xml
+  ```
 
-   ```
-       ant -f build-refimpl.xml
-   ```
+* プロンプトが表示されたら、資格情報のパスワードを入力します。
 
-* プロンプトが表示されたら、秘密鍵証明書のパスワードを入力します
+Java を使用してツールを実行するには：
 
-Javaを使用してツールを実行するには：
-
-* *`<Reference Implementation Server Path>`*\ [!DNL scrambler]に移動
+* に移動します。 *`<Reference Implementation Server Path>`*\ [!DNL scrambler]
 
 * コマンドプロンプトで、次のコマンドを入力します。
 
-* Windowsの場合：
+* Windows の場合：
 
-   ```
-   java -classpath path_to_adobe-flashaccess-sdk.jar;.  
-   com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
-   ```
+  ```
+  java -classpath path_to_adobe-flashaccess-sdk.jar;.  
+  com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
+  ```
 
-* Linuxの場合：
+* Linux の場合：
 
-   ```
-       java -classpath path_to_adobe-flashaccess-sdk.jar;.  
-       com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
-   ```
+  ```
+      java -classpath path_to_adobe-flashaccess-sdk.jar;.  
+      com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
+  ```
 
-このユーティリティは、暗号化されたパスワードを出力します。このパスワードを.propertiesファイルにコピーする必要があります。
+ユーティリティは暗号化されたパスワードを出力します。このパスワードは.properties ファイルにコピーする必要があります。
 
 >[!NOTE]
 >
->リファレンス実装と共に提供されるパスワードスクランブリングユーティリティを使用してエンコードされたパスワードは、保護ストリーミング用Adobe Access Serverでは機能しません。
+>参照実装で提供されるパスワードスクランブリングユーティリティを使用してエンコードされたパスワードは、Adobe Access Server for Protected Streaming では機能しません。

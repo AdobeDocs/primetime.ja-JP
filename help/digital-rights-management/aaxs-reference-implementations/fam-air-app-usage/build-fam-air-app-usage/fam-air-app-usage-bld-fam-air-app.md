@@ -2,31 +2,29 @@
 title: Flash AccessマネージャーAIRアプリケーションの構築
 description: Flash AccessマネージャーAIRアプリケーションの構築
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
+# Flash AccessマネージャーAIRアプリケーションの構築 {#building-the-flash-access-manager-air-application}
 
-# Flash AccessマネージャーAIRアプリケーションの構築{#building-the-flash-access-manager-air-application}
+ソースコードからFlash AccessManager AIRファイルを構築するには、FlexとAIR SDK がコンピューターにインストールされている必要があります。 アプリケーションをパッケージ化して実行する前に、MXMLコードををを使用してSWFファイルにコンパイルする必要があります。 [!DNL amxmlc] コンパイラ。 The [!DNL amxmlc] コンパイラは、 [!DNL bin] Flex 4 以降の SDK のディレクトリ。 必要に応じて、 Flex SDK bin ディレクトリを含むようにパス環境変数を設定し、コマンドラインでユーティリティを簡単に実行できるようにします。
 
-ソースコードからFlash AccessマネージャーのAIRファイルを作成するには、マシンにFlexおよびAIR SDKがインストールされている必要があります。 アプリケーションをパッケージ化して実行する前に、MXMLコードを[!DNL amxmlc]コンパイラーを使用してSWFファイルにコンパイルする必要があります。 [!DNL amxmlc]コンパイラーは、Flex4以降のSDKの[!DNL bin]ディレクトリにあります。 必要に応じて、パス環境ー変数を設定して、FlexSDKのbinディレクトリを含めると、コマンドラインで簡単にユーティリティを実行できます。
+次の手順を実行して、Flash AccessマネージャーのAIRファイルを作成します。
 
-Flash AccessマネージャーのAIRファイルを作成するには、次の手順を実行します。
-
-1. コマンドシェルまたはターミナルを開き、Flash AccessマネージャーAIRアプリケーションのプロジェクトフォルダー（参照実装ディレクトリの[!DNL UI Tools\Flash Access Manager]）に移動します。
+1. コマンドシェルまたはターミナルを開き、Flash AccessManager AIRアプリケーションのプロジェクトフォルダーに移動します ( [!DNL UI Tools\Flash Access Manager] を参照してください )。
 1. 次のコマンドを入力します。
 
    ```
    amxmlc src\FlashAccessmanager.mxml
    ```
 
-   [!DNL amxmlc]を実行すると、[!DNL FlashAccessManager.swf]が生成されます。この中には、アプリケーションのコンパイル済みコードが含まれています。
+   実行中 [!DNL amxmlc] 生成する [!DNL FlashAccessManager.swf]：アプリケーションのコンパイル済みコードを含みます。
 
-Adobe AIRSDKには、AIRアプリケーションをパッケージ化して証明書を生成するAIR Developer Tool(ADT)ユーティリティが含まれています。 AIRアプリケーションは、デジタル署名する必要があります。適切に署名されていない、またはまったく署名されていないアプリケーションをインストールすると、ユーザーに警告が表示されます。 コマンドラインを使用して証明書を生成するには、AIRアプリケーションと同じフォルダーにあるコンソールウィンドウを開き、次のように入力します。
+Adobe AIR SDK には、AIRアプリケーションをパッケージ化して証明書を生成するAIR Developer Tool(ADT) ユーティリティが含まれています。 AIRアプリケーションはデジタル署名を受ける必要があります。正しく署名されていない、またはまったく署名されていないアプリケーションをインストールすると、警告が表示されます。 コマンドラインを使用して証明書を生成するには、AIRアプリケーションと同じフォルダー内のコンソールウィンドウを開き、次のように入力します。
 
 ```
 adt -certificate -cn SelfSigned 1024-RSA testCert.pfx  
@@ -35,14 +33,14 @@ adt -certificate -cn SelfSigned 1024-RSA testCert.pfx
 </i class="+ topic>
 ```
 
-*some_password*&#x200B;は任意のパスワードに置き換えてください。 数秒後、ADTは証明書の生成プロセスを完了し、新しい[!DNL testCert.pfx]ファイルをアプリケーションディレクトリに配置する必要があります。
+代用 *some_password* 選択したパスワードを使用します。 数秒後に、ADT が証明書の生成プロセスを完了し、新しい [!DNL testCert.pfx] ファイルを作成します。
 
-次に、ADTを使用し、次のコマンドを使用して、アプリケーションを[!DNL .air]ファイルにパッケージ化します。
+次に、ADT を使用して、アプリケーションを [!DNL .air] ファイルを作成するには、次のコマンドを使用します。
 
 ```
 adt -package -storetype pkcs12 -keystore testCert.pfx FlashAccessManager.air src\FlashAccessManager-app.xml . -C src assets
 ```
 
-このコマンドは、[!DNL testCert.pfx]のキーファイルを使用して、アプリケーションをパッケージ化するようADTに指示します。 上の行では、アプリケーション全体を[!DNL FlashAccessManager.air]という名前のファイルにパッケージ化し、[!DNL FlashAccessManager-app.xml]と[!DNL FlashAccessManager.swf]のファイルとアセットディレクトリの画像を含めるようにADTを設定します。
+このコマンドは、ADT に対し、 [!DNL testCert.pfx]. 上記の行で、アプリケーション全体をという名前のファイルにパッケージ化するように ADT を設定します。 [!DNL FlashAccessManager.air]、およびを使用してファイルをインクルードします。 [!DNL FlashAccessManager-app.xml] および [!DNL FlashAccessManager.swf] および画像を assets ディレクトリから取得します。
 
-この処理の一環として、新しい証明書ファイルに設定したパスワードの入力を求められます。 入力し、しばらく待ってください。[!DNL FlashAccessManager.air]ファイルがプロジェクトファイルと同じディレクトリに表示されます。
+この処理の一環として、新しい証明書ファイルに設定したパスワードを求めるメッセージが表示されます。 入力し、しばらく待ってから、 [!DNL FlashAccessManager.air] ファイルは、プロジェクトファイルと同じディレクトリに存在する必要があります。

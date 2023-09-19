@@ -1,30 +1,28 @@
 ---
-description: TVSDKとAdobe Analyticsを統合することで、ビデオの使用を追跡できます。
-title: TVSDKとAdobe Analyticsの統合
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK とAdobe Analyticsを統合することで、ビデオの使用を追跡できます。
+title: TVSDK とAdobe Analyticsの統合
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
+# TVSDK とAdobe Analyticsの統合 {#integrating-tvsdk-with-adobe-analytics}
 
-# TVSDKとAdobe Analytics{#integrating-tvsdk-with-adobe-analytics}の統合
+TVSDK とAdobe Analyticsを統合することで、ビデオの使用を追跡できます。
 
-TVSDKとAdobe Analyticsを統合することで、ビデオの使用を追跡できます。
+TVSDK のビデオトラッキングでは、 **Adobe Analytics Video Essentials** サービス：ビデオ視聴、ビデオ完了、広告インプレッション、ビデオ滞在時間など、ビデオエンゲージメント指標を提供します。 このサービスの詳細については、Adobe担当者にお問い合わせください。
 
-TVSDKのビデオトラッキングでは、**Adobe AnalyticsVideo Essentials**&#x200B;サービスを使用して、ビデオ表示、ビデオ完了、広告インプレッション、ビデオ滞在時間などのビデオエンゲージメント指標を提供します。 このサービスの詳細については、Adobeの担当者にお問い合わせください。
+以下の手順は、プレーヤーでビデオトラッキングを有効にする手順の概要を示しています。
 
-以下の手順は、プレイヤーでビデオトラッキングをアクティブにする手順をまとめたものです。
-
-1. 以下のビデオトラッキングコンポーネントを初期化または設定します。
+1. 次のビデオトラッキングコンポーネントを初期化または設定します。
 
    >[!TIP]
    >
-   >Androidでは、これらのコンポーネントはTVSDKの一部です。
+   >Android では、これらのコンポーネントは TVSDK に含まれています。
 
-   * JSON設定ファイル
+   * JSON 設定ファイル
    * ビデオ分析メタデータオブジェクト
    * グローバルメタデータオブジェクト
 

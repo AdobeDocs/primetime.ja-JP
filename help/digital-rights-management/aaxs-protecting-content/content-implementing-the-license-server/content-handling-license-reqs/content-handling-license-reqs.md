@@ -1,15 +1,12 @@
 ---
-title: ライセンス要求の処理
-description: ライセンス要求の処理
+title: ライセンスリクエストの処理
+description: ライセンスリクエストの処理
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '9'
 ht-degree: 0%
 
 ---
 
-
-# ライセンス要求{#handling-license-requests}の処理
-
+# ライセンスリクエストの処理{#handling-license-requests}

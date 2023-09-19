@@ -1,18 +1,16 @@
 ---
-description: OpportunityGeneratorインターフェイスを拡張して、独自のオポチュニティジェネレーターを実装できます。
+description: OpportunityGenerator インターフェイスを拡張して、独自のオポチュニティジェネレーターを実装できます。
 title: カスタムオポチュニティジェネレーターの実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '78'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
-
 # カスタムオポチュニティジェネレーターの実装{#implement-a-custom-opportunity-generator}
 
-OpportunityGeneratorインターフェイスを拡張して、独自のオポチュニティジェネレーターを実装できます。
+OpportunityGenerator インターフェイスを拡張して、独自のオポチュニティジェネレーターを実装できます。
 
 1. カスタムオポチュニティジェネレーターを作成します。
 
@@ -44,7 +42,7 @@ OpportunityGeneratorインターフェイスを拡張して、独自のオポチ
    }; 
    ```
 
-1. カスタムオポチュニティジェネレーターを使用する、カスタムコンテンツファクトリを作成します。
+1. カスタムオポチュニティジェネレーターを使用するカスタムコンテンツファクトリを作成します。
 
    例：
 
@@ -66,9 +64,9 @@ OpportunityGeneratorインターフェイスを拡張して、独自のオポチ
    }; 
    ```
 
-1. 再生するメディアストリーム用のカスタムコンテンツファクトリを登録します。
+1. 再生するメディアストリームのカスタムコンテンツファクトリを登録します。
 
-   UI Frameworkプレーヤーでは、次のようにカスタムコンテンツファクトリを指定できます。
+   UI Framework Player では、次のようにカスタムコンテンツファクトリを指定できます。
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
@@ -83,4 +81,3 @@ OpportunityGeneratorインターフェイスを拡張して、独自のオポチ
      } 
    }); 
    ```
-

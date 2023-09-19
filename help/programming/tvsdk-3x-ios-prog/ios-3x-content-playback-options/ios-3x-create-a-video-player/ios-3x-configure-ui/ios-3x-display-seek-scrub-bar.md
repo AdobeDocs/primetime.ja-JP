@@ -1,20 +1,18 @@
 ---
 description: 再生中のコンテンツの現在時間と残り時間を表示できます。
 title: シークスクラブバーに現在の再生時間の位置を表示
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
-
-# シークスクラブバーに現在の再生時間の位置{#display-a-seek-scrub-bar-with-the-current-playback-time-position}を表示
+# シークスクラブバーに現在の再生時間の位置を表示 {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
 
 再生中のコンテンツの現在時間と残り時間を表示できます。
 
-スクラブバーを実装するには、次のサンプルコードを使用します。
+スクラブバーを実装するには、以下のサンプルコードを使用します。
 
 ```
 // 1. Register for the PTMediaPlayerTimeChangeNotification 

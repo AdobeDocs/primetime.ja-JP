@@ -1,23 +1,21 @@
 ---
-description: Primetime ad insertionは、内部目的や、ストリームおよび広告サーバーの操作を容易にする目的でcookieを使用します。
+description: Primetime 広告の挿入では、内部的な目的と、ストリームおよび広告サーバーの操作を容易にする目的で cookie を使用します。
 title: Cookie
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
-
 # Cookie {#cookies}
 
-Primetime Adの挿入では、内部目的や、ストリームおよび広告サーバーの操作を容易にする目的でCookieが使用されます。  cookieは使用をお勧めし、クライアントプレーヤーで有効にすることをお勧めします。
+Primetime 広告の挿入では、内部的な目的と、ストリームおよび広告サーバーの操作を容易にする目的で cookie を使用します。  Cookie は使用することをお勧めします。クライアントプレーヤーで有効にすることをお勧めします。
 
-## cookieのリスト
+## Cookie のリスト
 
-Primetime広告の挿入は、次のCookieを維持します。
+Primetime Ad の挿入では、次の Cookie が維持されます。
 
-* `ssaiPub` は、 `m3u8` ファイルを取得するためにcookie認証が必要なストリームからコンテンツのURLを取得するのに役立ちます。
-* `ssai3` は、それらを必要とする広告サーバーのセッションcookieを保持します。
-* `AWSELB` セッション関連の情報を `ssaiSession` 保持します。
+* `ssaiPub` は、 `m3u8` ファイル。
+* `ssai3` は、これらを必要とする広告サーバーのセッション cookie を保持します。
+* `AWSELB` および `ssaiSession` セッション関連の情報を保持します。

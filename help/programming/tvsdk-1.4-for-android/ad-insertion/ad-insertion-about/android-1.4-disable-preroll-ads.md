@@ -1,19 +1,17 @@
 ---
-title: プリロール広告の無効化
-description: プリロール広告の無効化
+title: プリロール広告を無効にする
+description: プリロール広告を無効にする
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%
 
 ---
 
+# プリロール広告を無効にする{#disable-pre-roll-ads}
 
-# プリロール広告の無効化{#disable-pre-roll-ads}
-
-プリロールを無効にするには、デフォルトのオポチュニティジェネレーターを変更して、プリロール呼び出しを行わないようにします。 デフォルトのオポチュニティジェネレーターは次のとおりです。
+プリロールを無効にするには、デフォルトのオポチュニティジェネレーターを変更して、プリロール呼び出しをおこなわないようにします。 デフォルトのオポチュニティジェネレーターは次のとおりです。
 
 ```
 @inheritDoc 
@@ -26,7 +24,7 @@ return result;
 }
 ```
 
-ライブストリームのプリロールを無効にするには、上記を変更してSpliceOutOpportunityGeneratorのみを含めます。
+ライブストリームでのプリロールを無効にするには、上記を変更して SpliceOutOpportunityGenerator のみを含めます。
 
 ```
 @inheritDoc 
@@ -39,4 +37,3 @@ result.push(new SpliceOutOpportunityGenerator());
 return result; 
 }
 ```
-

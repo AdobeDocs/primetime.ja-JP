@@ -1,15 +1,13 @@
 ---
 title: 概要
-description: TVSDK Primetime Reference Androidプロジェクトは、Eclipseとの互換性を維持するために、大幅な設定やIDEの変更を行わないで設定されます。
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK Primetime Reference Android プロジェクトは、大きな設定や IDE の変更を行わずに、Eclipse と互換性を持つように設定されます。
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
 
 ---
 
+# 概要 {#overview}
 
-# 概要{#overview}
-
-TVSDK Primetime Reference Androidプロジェクトは、Eclipseとの互換性を維持するために、大幅な設定やIDEの変更を行わないで設定されます。 Primetime Referenceプロジェクトをセットアップするには、まずEclipseを設定する手順に従ってから、プロジェクトを構築する手順に従います。
+TVSDK Primetime Reference Android プロジェクトは、大きな設定や IDE の変更を行わずに、Eclipse と互換性を持つように設定されます。 Primetime Reference プロジェクトを設定するには、まず手順に従って Eclipse を設定し、次に手順に従ってプロジェクトを構築します。

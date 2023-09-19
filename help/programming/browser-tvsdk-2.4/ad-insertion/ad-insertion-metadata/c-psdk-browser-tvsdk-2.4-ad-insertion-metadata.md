@@ -1,37 +1,35 @@
 ---
-description: 広告リゾルバーが機能するようにするには、Adobe Primetimead decisioningなどの広告プロバイダーがプロバイダーへの接続を有効にするために設定値を必要とします。
+description: 広告リゾルバーを機能させるには、Adobe Primetime Ad Decisioning などの広告プロバイダーが、プロバイダーへの接続を有効にするために設定値を必要とします。
 title: 広告挿入メタデータ
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
+# 概要 {#ad-insertion-metadata-overview}
 
-# 概要{#ad-insertion-metadata-overview}
+広告リゾルバーを機能させるには、Adobe Primetime Ad Decisioning などの広告プロバイダーが、プロバイダーへの接続を有効にするために設定値を必要とします。
 
-広告リゾルバーが機能するようにするには、Adobe Primetimead decisioningなどの広告プロバイダーがプロバイダーへの接続を有効にするために設定値を必要とします。
+ブラウザー TVSDK には、 Adobe Primetime ad decisioning ライブラリが含まれています。 コンテンツにAdobe Primetime Ad Decisioning サーバーからの広告を含めるには、アプリケーションが以下の必要な AudienceSettings 情報を提供する必要があります。
 
-ブラウザーTVSDKには、Adobe PrimetimeAd Decisioningライブラリが含まれています。 コンテンツにAdobe Primetimead decisioningサーバーからの広告を含めるには、アプリケーションが以下の必要なAudidetuceSettings情報を提供する必要があります。
+* `mediaID`：再生するビデオの一意の識別子です。
 
-* `mediaID`は、再生されるビデオの一意の識別子です。
+  公開者は、ビデオコンテンツと広告情報をAdobe Primetime Ad Decisioning サーバーに送信する際に、mediaID を割り当てます。 この ID は、Adobe Primetime Ad Decisioning がビデオに関連する広告情報をサーバーから取得するために使用します。
 
-   発行者は、ビデオコンテンツと広告情報をAdobe Primetimead decisioningサーバーに送信する際にmediaIDを割り当てます。 このIDは、Adobe Primetimead decisioningがサーバーからビデオに関連する広告情報を取得するために使用します。
-
-* （オプション）`defaultMediaId`。以下の条件が満たされた場合に提供される広告を指定します。
+* （オプション） `defaultMediaId`：以下の条件を満たした場合に提供される広告を指定します。
 
    * 広告サーバーへのリクエストが無効か、コンテンツが正しく設定されていません。
-   * Adobe Primetimead decisioningでデータの伝播に遅延が発生している。
-   * Adobe Primetimead decisioningのバックエンドプロセスの1つが正常に機能しないか、使用できません。
+   * Adobe Primetime ad decisioning で、データの伝播に遅延が発生しています。
+   * Adobe Primetime Ad Decisioning のバックエンドプロセスの 1 つが正常に機能しないか、使用できません。
 
-   >[!TIP]
-   >
-   >Adobeは`defaultMediaId`の使用を推奨します。
+  >[!TIP]
+  >
+  >Adobeは、 `defaultMediaId`.
 
-* `zoneID`は、Adobeによって割り当てられ、会社またはWebサイトを特定します。
+* お使いの `zoneID`:Adobeによって割り当てられ、会社または Web サイトを識別します。
 * 割り当てられた広告サーバーのドメイン。
 * その他のターゲティングパラメーター。
 
-   広告プロバイダーのニーズおよびニーズに応じて、これらのパラメーターを含めることができます。
+  広告プロバイダーのニーズやニーズに応じて、これらのパラメーターを含めることができます。

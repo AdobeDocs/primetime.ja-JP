@@ -1,19 +1,17 @@
 ---
-title: Adobe Mediumサーバーを使用
-description: Adobe Mediumサーバーを使用
+title: 使用Adobe Media Server
+description: 使用Adobe Media Server
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '66'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
+# 使用Adobe Media Server {#use-adobe-media-server}
 
-# Adobe Mediumサーバーを使用{#use-adobe-media-server}
-
-一部のお客様は、既にAdobe Mediumサーバーを使用しており、そのコンテンツ配信モデルを維持したいと考えている場合があります。 この場合、必要なPrimetime Cloud DRM固有のデータは、このキットに含まれる設定ファイルのいずれかから収集して、AMSのJIT(Just In Time)XML設定に入力できます。
+一部のお客様は、既にAdobe Media Serverを使用しており、そのコンテンツ配信モデルを維持したいと考えている場合があります。 その場合は、必要な Primetime Cloud DRM 固有のデータを、このキットに含まれるいずれかの設定ファイルから取得して、AMS の JIT(Just In Time)XML 設定に入力できます。
 
 例：
 
@@ -43,4 +41,3 @@ ht-degree: 3%
   </HDS>
 </Application>
 ```
-

@@ -1,43 +1,41 @@
 ---
-description: イベントハンドラーを使用すると、Browser TVSDKがイベントに応答できます。
+description: イベントハンドラーを使用すると、Browser TVSDK はイベントに応答できます。
 title: イベントリスナーとコールバックの実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '170'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # イベントリスナーとコールバックの実装{#implement-event-listeners-and-callbacks}
 
-イベントハンドラーを使用すると、Browser TVSDKがイベントに応答できます。
+イベントハンドラーを使用すると、Browser TVSDK はイベントに応答できます。
 
-イベントが発生すると、Browser TVSDKのイベントメカニズムは、登録されたイベントハンドラーを呼び出し、イベント情報をハンドラーに渡します。
+イベントが発生すると、Browser TVSDK のイベントメカニズムが登録されたイベントハンドラーを呼び出し、イベント情報をハンドラーに渡します。
 
-アプリケーションで、アプリケーションに影響を与えるBrowser TVSDKイベント用のイベントリスナーを実装する必要があります。
+アプリケーションは、アプリケーションに影響を与える Browser TVSDK イベント用のイベントリスナーを実装する必要があります。
 
-1. アプリケーションがリッスンする必要があるイベントを決定します。
+1. アプリケーションがリッスンする必要のあるイベントを決定します。
 
-   * **必須イベント**:すべての再生イベントをリッスンします。
+   * **必須イベント**：すべての再生イベントをリッスンします。
 
-      >[!IMPORTANT]
-      >
-      >再生イベント`STATUS_CHANGED`は、エラーを含むプレイヤーの状態を提供します。 状態によっては、プレイヤーの次のステップに影響を与える可能性があります。
+     >[!IMPORTANT]
+     >
+     >再生イベント `STATUS_CHANGED` は、エラーを含むプレーヤーの状態を示します。 どの状態も、プレーヤーの次のステップに影響を与える可能性があります。
 
-   * **その他のイベント**:アプリケーションに応じて、オプションです。
+   * **その他のイベント**：アプリケーションに応じて、オプションです。
 
-      例えば、再生に広告を組み込む場合は、すべての`AdBreakPlaybackEvent`および`AdPlaybackEvent`イベントをリッスンします。
+     例えば、再生に広告を組み込む場合は、 `AdBreakPlaybackEvent` および `AdPlaybackEvent` イベント。
 
-1. 各イベントにイベントリスナーを実装します。
+1. 各イベントのイベントリスナーを実装します。
 
-   ブラウザーTVSDKは、イベントリスナーコールバックにパラメーター値を返します。 これらの値は、リスナーで使用して適切なアクションを実行できるイベントに関する関連情報を提供します。
+   ブラウザー TVSDK は、イベントリスナーコールバックにパラメーター値を返します。 これらの値は、適切なアクションを実行するためにリスナーで使用できるイベントに関する関連情報を提供します。
 
    例：
 
-   * イベントタイプ:`AdobePSDK.PSDKEventType.STATUS_CHANGED`
-   * イベントプロパティ：`MediaPlayerStatus.<event>`は次のように使用されます。
+   * イベントタイプ： `AdobePSDK.PSDKEventType.STATUS_CHANGED`
+   * イベントプロパティ： `MediaPlayerStatus.<event>` 次のように使用されます。
 
 ```js
 player.addEventListener( 
@@ -52,7 +50,7 @@ onStatusChange = function (event) {
             break;
 ```
 
-1. `MediaPlayer.addEventListener`を使用して、`MediaPlayer`オブジェクトにコールバックリスナーを登録します。
+1. コールバックリスナーを `MediaPlayer` 使用してオブジェクトを `MediaPlayer.addEventListener`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  

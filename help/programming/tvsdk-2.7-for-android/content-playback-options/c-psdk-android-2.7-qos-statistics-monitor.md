@@ -1,46 +1,44 @@
 ---
-description: サービス品質(QoS)は、ビデオエンジンの動作状況に関する詳細な表示を提供します。 TVSDKは、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
-title: サービス品質統計
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: サービス品質 (QoS) は、ビデオエンジンのパフォーマンスに関する詳細な表示を提供します。 TVSDK は、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
+title: サービス品質の統計
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%
 
 ---
 
+# サービス品質の統計 {#quality-of-service-statistics}
 
-# サービス品質統計{#quality-of-service-statistics}
+サービス品質 (QoS) は、ビデオエンジンのパフォーマンスに関する詳細な表示を提供します。 TVSDK は、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
 
-サービス品質(QoS)は、ビデオエンジンの動作状況に関する詳細な表示を提供します。 TVSDKは、再生、バッファリング、デバイスに関する詳細な統計情報を提供します。
-
-TVSDKは、以下のダウンロードされたリソースに関する情報も提供します。
+TVSDK は、以下のダウンロードされたリソースに関する情報も提供します。
 
 * プレイリスト/マニフェストファイル
 * ファイルフラグメント
-* ファイルの追跡情報
+* ファイルのトラッキング情報
 
-## 読み込み情報{#section_4439D91E8EDC45588EF1D7BE25697350}を使用してフラグメントレベルで追跡
+## 読み込み情報を使用してフラグメントレベルで追跡 {#section_4439D91E8EDC45588EF1D7BE25697350}
 
-フラグメントやトラックなど、ダウンロードされたリソースに関するQoS(Quality Of Service)情報を`LoadInformation`クラスから読み取ることができます。
+フラグメントやトラックなど、ダウンロードされたリソースに関する Quality of Service(QoS) 情報を、 `LoadInformation` クラス。
 
-1. `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE`イベントリスナーを実装し、登録します。
-1. `event.getLoadInformation()`を呼び出して、コールバックに渡される`event`パラメーターから関連するデータを読み取ります。
+1. を実装して登録します。 `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` イベントリスナー。
+1. 通話 `event.getLoadInformation()` 関連するデータを `event` コールバックに渡されるパラメーター。
 
    >[!NOTE]
    >
-   >`LoadInformation`について詳しくは、[Android向け](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html) APIドキュメント2.7(Java)を参照してください。
+   >詳しくは、 `LoadInformation`を参照してください。 [Android 版 2.7(Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html) API ドキュメント。
 
-## 再生、バッファリング、デバイスに関するQOS統計を読み取ります{#section_D21722600F324E67A9F06234D338B243}
+## 再生、バッファリング、デバイスに関する QOS 統計の読み取り {#section_D21722600F324E67A9F06234D338B243}
 
-`QOSProvider`クラスから再生、バッファリング、デバイスの統計を読み取ることができます。
+再生、バッファリング、デバイスの統計は、 `QOSProvider` クラス。
 
-`QOSProvider`クラスは、バッファリング、ビットレート、フレームレート、時間データなど、様々な統計情報を提供します。 製造元、モデル、オペレーティングシステム、SDKバージョン、製造元のデバイスID、画面のサイズ/密度など、デバイスに関する情報も提供します。
+The `QOSProvider` クラスは、バッファリング、ビットレート、フレームレート、時間データなどに関する情報を含む様々な統計を提供します。 また、製造元、モデル、オペレーティングシステム、SDK バージョン、製造元のデバイス ID、画面サイズ/密度など、デバイスに関する情報も提供されます。
 
-1. メディアプレイヤーをインスタンス化します。
-1. `QOSProvider`オブジェクトを作成し、メディアプレイヤーに接続します。
+1. メディアプレーヤーをインスタンス化します。
+1. の作成 `QOSProvider` オブジェクトを探し、メディアプレーヤーに接続します。
 
-   `QOSProvider`コンストラクタは、デバイス固有の情報を取得できるように、プレイヤーコンテキストを取得します。
+   The `QOSProvider` コンストラクターは、デバイス固有の情報を取得できるように、プレーヤーコンテキストを取得します。
 
    ```java
    // Create Media Player. 
@@ -50,7 +48,7 @@ TVSDKは、以下のダウンロードされたリソースに関する情報も
 
 1. （オプション）再生統計を読み取ります。
 
-   再生統計を読み取る方法の1つは、タイマーを設定して、`QOSProvider`から新しいQoS値を定期的に取り込むことです。
+   再生統計を読み取る 1 つの方法は、タイマーを使用することです。タイマーは、 `QOSProvider`.
 
    例：
 
@@ -103,4 +101,3 @@ TVSDKは、以下のダウンロードされたリソースに関する情報も
      deviceInfo.getWidthPixels() + "x" + deviceInfo.getHeightPixels() +  
      " (" + orientation + ")"); 
    ```
-

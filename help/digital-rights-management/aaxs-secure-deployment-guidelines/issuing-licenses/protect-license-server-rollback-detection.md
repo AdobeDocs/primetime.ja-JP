@@ -1,18 +1,16 @@
 ---
-title: ロールバックの検出
-description: ロールバックの検出
+title: ロールバック検出
+description: ロールバック検出
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
 
 ---
 
+# ロールバック検出 {#rollback-detection}
 
-# ロールバックの検出{#rollback-detection}
+Adobe・アクセスの実装で、クライアントに状態の維持を要求するビジネス・ルール（再生ウィンドウの間隔など）を使用する場合、Adobeでは、ロールバック・カウンタを追跡し、AIRまたはSWFの許可リストを使用することを強くお勧めします。
 
-Adobeアクセスの実装で、クライアントが状態の維持を必要とするビジネスルール（再生時間間隔など）を使用する場合、Adobeでは、ロールバックカウンターを追跡し、AIRまたはSWFでリストを許可することを推奨します。
-
-rollbackカウンタは、クライアントからの要求の大部分で、サーバに送信されます。 Adobeアクセスの実装にロールバックカウンタが必要ない場合は、無視できます。 それ以外の場合は、`MachineToken.getMachineId().getUniqueId()`を使用して取得したランダムマシンIDと現在のカウンタ値をAdobeに格納することを推奨します。 ロールバックカウンターの増分と追跡について詳しくは、『*AdobeアクセスAPIリファレンス*』の「ClientState」と『*コンテンツ保護用のAdobeアクセスSDKの使用*』の「*ロールバック検出*」を参照してください。
+ロールバックカウンターは、クライアントからのほとんどの要求でサーバーに送信されます。 Adobe・アクセスの実装にロールバック・カウンタが必要ない場合は、そのカウンタを無視できます。 それ以外の場合、Adobeは、を使用して取得したランダムマシン ID をサーバーに保存することをお勧めします。 `MachineToken.getMachineId().getUniqueId()` — とデータベース内の現在のカウンタ値。 ロールバックカウンターの増分と追跡について詳しくは、 *Adobeアクセス API リファレンス* および *ロールバック検出* in *コンテンツの保護にAdobeアクセス SDK を使用する*.

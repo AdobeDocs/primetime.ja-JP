@@ -1,18 +1,16 @@
 ---
 description: ビデオ分析マネージャーの作成
 title: ビデオ分析マネージャーの作成
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
+# ビデオ分析マネージャーの作成 {#create-the-video-analytics-manager}
 
-# ビデオ分析マネージャーの作成{#create-the-video-analytics-manager}
-
-新しいマネージャークラス(`VAManager`)がAndroidリファレンスの実装に追加されました。 `VAManager` クラスのインスタンスを作成し、破棄するだけで `VideoHeartbeat` す。参照実装は、新しい`MediaPlayer`が作成されると`VAManager`インスタンスを作成し、`MediaPlayer`が破棄されるとそのインスタンスを破棄します。 これは`PlayerFragment.java`に実装されています。
+新しいマネージャクラス ( `VAManager`) が Android リファレンス実装に追加されました。 `VAManager` 単にのインスタンスを作成し、破棄する `VideoHeartbeat` クラス。 参照実装によって `VAManager` 新しい `MediaPlayer` が作成され、そのインスタンスが破棄されたときに、 `MediaPlayer` が破壊されました。 これは、で実装されます。 `PlayerFragment.java`.
 
 ## 新しいビデオ分析マネージャーを作成するには
 
@@ -21,9 +19,8 @@ VAManager vaManager = ManagerFactory.getVAManager(true, config, mediaPlayer);
 vaManager.createVAProvider(getActivity().getApplicationContext()); 
 ```
 
-config変数は、`IVAConfig`の具体的な実装で、ランタイム`VideoHeartbeat`の設定が含まれています。
+config 変数は、 `IVAConfig` とにはランタイムが含まれます。 `VideoHeartbeat` 設定。
 
 >[!NOTE]
 >
->AndroidアプリケーションがAdobe Analyticsアカウントで設定されていない場合、`VAManager`のインスタンスが作成され、有効になっていても、ビデオトラッキングデータは生成されません。
-
+>Android アプリケーションにAdobe Analyticsアカウントが設定されていない場合、ビデオトラッキングデータは生成されません ( `VAManager` が作成され、有効になっている。

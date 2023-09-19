@@ -1,22 +1,20 @@
 ---
-description: AdobeTVSDKConfig.jsonでは、特定のゾーンのルールと同様に、デフォルトのルールを指定できます。
+description: AdobeTVSDKConfig.json では、デフォルトのルールと特定のゾーンのルールを指定できます。
 title: クリエイティブ選択ルールの例
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%
 
 ---
 
-
 # クリエイティブ選択ルールの例{#sample-creative-selection-rules}
 
-`AdobeTVSDKConfig.json`では、既定の規則と特定のゾーンの規則を指定できます。
+Adobe Analytics の `AdobeTVSDKConfig.json` 特定のゾーンに対しては、デフォルトのルールとルールを指定できます。
 
-## デフォルトのルールの例{#section_xy4_3fx_hz}
+## デフォルトルールの例 {#section_xy4_3fx_hz}
 
-次の例は、デフォルトのルールのみを定義する`AdobeTVSDKConfig.json`ファイルの例です。
+次に例を示します。 `AdobeTVSDKConfig.json` デフォルトのルールのみを定義するファイル：
 
 ```
 {
@@ -64,9 +62,9 @@ ht-degree: 0%
 }
 ```
 
-## 追加のゾーン規則{#section_ocv_3fx_hz}を含むデフォルトの規則の例
+## 追加のゾーン・ルールを含むデフォルト・ルールの例 {#section_ocv_3fx_hz}
 
-次の例は、デフォルトの規則を定義する[!DNL AdobeTVSDKConfig.json]ファイルの例で、特定のゾーンIDに対する追加の規則（この場合は、ゾーン&#x200B;**&quot;1234&quot;**）を示しています。
+次に例を示します。 [!DNL AdobeTVSDKConfig.json] 既定の規則を定義するファイルと、特定のゾーン ID（この場合はゾーン）の追加の規則 **&quot;1234&quot;**):
 
 ```
 {
@@ -135,4 +133,3 @@ ht-degree: 0%
     }
 }
 ```
-

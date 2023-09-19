@@ -1,34 +1,32 @@
 ---
-description: MediaPlayerオブジェクトには、メディアプレイヤーの動作と機能がカプセル化されています。
-title: MediaPlayerの設定
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaPlayer オブジェクトは、メディアプレーヤーの動作と機能をカプセル化します。
+title: MediaPlayer のセットアップ
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
 
 ---
 
+# MediaPlayer のセットアップ{#set-up-the-mediaplayer}
 
-# MediaPlayerの設定{#set-up-the-mediaplayer}
+MediaPlayer オブジェクトは、メディアプレーヤーの動作と機能をカプセル化します。
 
-MediaPlayerオブジェクトには、メディアプレイヤーの動作と機能がカプセル化されています。
-
-1. 次を使用して`MediaPlayer`をインスタンス化します。
+1. のインスタンス化 `MediaPlayer` 次の方法を使用します。
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. `MediaPlayerView`インスタンスを作成します。
+1. の作成 `MediaPlayerView` インスタンス：
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   `container`は、`HTMLMediaElement`を含むターゲット`div`です。
+   場所 `container` はターゲットです `div` 要素を `HTMLMediaElement`.
 
-   例えば、HTMLページの場合：
+   例えば、HTMLページでは、
 
    ```
    <div id="videoDiv"> 
@@ -40,7 +38,7 @@ MediaPlayerオブジェクトには、メディアプレイヤーの動作と機
    </div>
    ```
 
-   呼び出し：
+   通話：
 
    ```js
    var view = new  
@@ -50,15 +48,15 @@ MediaPlayerオブジェクトには、メディアプレイヤーの動作と機
          document.getElementById("videoDiv"));  
    ```
 
-1. `MediaPlayerView`インスタンスを`MediaPlayer`インスタンスに接続します。
+1. 添付する `MediaPlayerView` インスタンスを `MediaPlayer` インスタンス：
 
    ```js
    player.view = view;
    ```
 
-1. カスタムコントロール`div`要素をMediaPlayerインスタンスにアタッチします。
+1. カスタムコントロールのアタッチ `div` 要素を MediaPlayer インスタンスに追加します。
 
-   例えば、HTMLの場合：
+   例えば、HTML:
 
    ```
    <div id="videoDiv"> 
@@ -68,7 +66,7 @@ MediaPlayerオブジェクトには、メディアプレイヤーの動作と機
    </div>
    ```
 
-   呼び出し：
+   通話：
 
    ```js
    if (typeof player.getView() !== 'undefined') { 
@@ -77,4 +75,4 @@ MediaPlayerオブジェクトには、メディアプレイヤーの動作と機
    }
    ```
 
-これで`MediaPlayer`インスタンスが使用可能になり、ビデオコンテンツがデバイス画面に表示されるように適切に設定されます。
+The `MediaPlayer` これで、インスタンスが使用可能になり、ビデオコンテンツをデバイス画面に表示するように適切に設定されました。

@@ -1,22 +1,20 @@
 ---
-description: 以下の新しいAPIを使用して、DRMコールバックを定義できます。
-title: DRMコールバックの実装
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 次の新しい API を使用して DRM コールバックを定義できます。
+title: DRM コールバックの実装
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
+# DRM コールバックの実装{#implementing-drm-callbacks}
 
-# DRMコールバックの実装{#implementing-drm-callbacks}
-
-以下の新しいAPIを使用して、DRMコールバックを定義できます。
+次の新しい API を使用して DRM コールバックを定義できます。
 
 <!--<a id="section_1090BFDB2C1D4EA4AAC9F9A6EC9DCD51"></a>-->
 
-コンテンツIDを解析し、`setParseContentIdCallback` APIを使用して`drmManager`に設定するコールバック関数（例：`parseContentIdCallback`）を定義できます。
+コールバック関数 ( 例えば、 `parseContentIdCallback`) を更新して、コンテンツ ID を解析し、 `drmManager` を使用して、 `setParseContentIdCallback` API.
 
 ```js
 var arrayToString = function (array) { 
@@ -39,7 +37,7 @@ drmManager.setParseContentIdCallback(parseContentIdCallback);
 
 <!--<a id="section_1E082B428EA74D9CA11C052158A83947"></a>-->
 
-テキスト証明書の応答を処理するコールバック関数（例：`onCertificateResponseCallback`）を定義し、`setCertificateResponseCallback` APIを使用してこの関数を`drmManager`に設定できます。 `setCertificateResponseCallback`を設定して、デフォルトの動作を上書きできます。 例えば、`ArrayBuffer`以外の`certificateResponseType`がある場合、このコールバックを使用して、証明書の応答を`ArrayBuffer`型に変換できます。
+コールバック関数 ( 例えば、 `onCertificateResponseCallback`) をクリックして、テキスト証明書の応答を処理し、関数をに設定します。 `drmManager` を使用して、 `setCertificateResponseCallback` API. 次の設定が可能です。 `setCertificateResponseCallback` をクリックして、デフォルトの動作を上書きします。 例えば、 `certificateResponseType` 以外の `ArrayBuffer`の場合、このコールバックを使用して、証明書の応答を `ArrayBuffer` タイプ。
 
 ```js
 var base64DecodeUint8Array = function (input) { 
@@ -66,7 +64,7 @@ drmManager.setCertificateResponseCallback(onCertificateResponseCallback);
 
 <!--<a id="section_4DCC1B3ABCED484EB5340A558C9A770A"></a>-->
 
-ライセンスメッセージとライセンス応答を解析し、`drmManager.acquireLicense`への呼び出しでそれらを渡すコールバック関数を定義できます。 `onLicenseResponseCallback` は、 `acquireLicense` APIの新しいパラメーターです。
+コールバック関数を定義して、ライセンスメッセージとライセンス応答を解析し、を呼び出して渡すことができます。 `drmManager.acquireLicense`. `onLicenseResponseCallback` は、 `acquireLicense` API.
 
 ```js
 var base64EncodeUint8Array = function (input) { 
@@ -121,7 +119,7 @@ var base64EncodeUint8Array = function (input) {
 drmManager.acquireLicense(drmMetadata, null, acquireLicenseListener, onLicenseMessageCallback, onLicenseResponseCallback);
 ```
 
-保護データでは、新しい&#x200B;**[!UICONTROL certificateResponseType]**&#x200B;フィールドを使用して、証明書応答の種類を設定します。 保護データの例を次に示します。
+保護データで、新しい **[!UICONTROL certificateResponseType]** フィールドは、証明書の応答タイプを設定するために使用されます。 保護データの例を次に示します。
 
 ```js
 { 
@@ -137,4 +135,4 @@ drmManager.acquireLicense(drmMetadata, null, acquireLicenseListener, onLicenseMe
 }
 ```
 
-`certificateResponseType`フィールドの使用は任意です。 使用しない場合、値は`ArrayBuffer`と見なされます。
+の使用 `certificateResponseType` フィールドはオプションです。 使用しない場合、値は `ArrayBuffer`.

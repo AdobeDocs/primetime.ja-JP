@@ -1,29 +1,27 @@
 ---
-description: flashaccess-global.xml設定ファイルには、ライセンスサーバーのすべてのテナントに適用される設定が含まれています。
+description: flashaccess-global.xml 設定ファイルには、ライセンスサーバーのすべてのテナントに適用される設定が含まれています。
 title: グローバル設定ファイル
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
 
+# グローバル設定ファイル{#global-configuration-file}
 
-# グローバル構成ファイル{#global-configuration-file}
+flashaccess-global.xml 設定ファイルには、ライセンスサーバーのすべてのテナントに適用される設定が含まれています。
 
-flashaccess-global.xml設定ファイルには、ライセンスサーバーのすべてのテナントに適用される設定が含まれています。
+設定ファイルは、 [!DNL LicenseServer.ConfigRoot] ディレクトリ。
 
-設定ファイルは[!DNL LicenseServer.ConfigRoot]ディレクトリに配置する必要があります。
+詳しくは、 [!DNL configs] ディレクトリを参照してください。
 
-グローバル設定ファイルの例については、[!DNL configs]ディレクトリを参照してください。
+グローバル設定ファイルには、次の内容が含まれます。
 
-グローバル設定ファイルには、次のものが含まれます。
+* Caching — メモリ内の設定ファイルのキャッシュを制御します。
 
-* 「キャッシュ」 — メモリ内の設定ファイルのキャッシュを制御します。
+  詳しくは、 *設定ファイルの更新* を参照してください。
+* 「ログ」 — ログ・レベルと、ログ・ファイルのロールの頻度を指定します。
+* 「HSM パスワード」 — サーバーの資格情報を保存するために HSM が使用されている場合にのみ必要です。
 
-   キャッシュ設定について詳しくは、*設定ファイルの更新*&#x200B;を参照してください。
-* 「ログ」 — ログ・レベルと、ログ・ファイルをロールする頻度を指定します。
-* 「HSMパスワード」 — サーバー秘密鍵証明書の保存にHSMが使用される場合にのみ必要です。
-
-詳しくは、Primetime DRM `<DVD>`\Protected Streaming用のAdobe PrimetimeDRMサーバー\configsにあるグローバル設定ファイルの例のコメントを参照してください。
+Primetime DRM にあるグローバル設定ファイルの例のコメントを参照してください。 `<DVD>`\Adobe Primetime Protected Streaming 用の DRM サーバ\configs を参照してください。

@@ -1,41 +1,39 @@
 ---
-description: バナー広告を表示するには、バナーインスタンスを作成し、ブラウザーTVSDKが広告関連のイベントをリッスンできるようにする必要があります。
-title: バナー広告を表示する
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: バナー広告を表示するには、バナーインスタンスを作成し、Browser TVSDK が広告関連のイベントをリッスンできるようにする必要があります。
+title: バナー広告の表示
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
+# バナー広告の表示 {#display-banner-ads}
 
-# バナー広告を表示{#display-banner-ads}
+バナー広告を表示するには、バナーインスタンスを作成し、Browser TVSDK が広告関連のイベントをリッスンできるようにする必要があります。
 
-バナー広告を表示するには、バナーインスタンスを作成し、ブラウザーTVSDKが広告関連のイベントをリッスンできるようにする必要があります。
+ブラウザー TVSDK は、 `AdobePSDK.PSDKEventType.AD_STARTED` イベント。
 
-ブラウザーTVSDKは、`AdobePSDK.PSDKEventType.AD_STARTED`イベントを介してリニア広告に関連付けられたコンパニオンバナー広告のリストを提供します。
-
-マニフェストでは、次の方法でコンパニオンバナー広告を指定できます。
+マニフェストは、次の方法でコンパニオンバナー広告を指定できます。
 
 * HTMLスニペット
-* iFrameページのURL
-* 静的な画像またはAdobeFlashのSWFファイルのURL
+* iFrame ページの URL
+* 静的画像またはAdobeFlashSWFファイルの URL
 
-各コンパニオン広告に対して、Browser TVSDKは、アプリケーションで使用できるタイプを示します。
+各コンパニオン広告に対して、Browser TVSDK は、アプリケーションで使用可能なタイプを示します。
 
-次追加の処理を行うイベント`AdobePSDK.PSDKEventType.AD_STARTED`のリスナーです。
+イベントのリスナーを追加します。 `AdobePSDK.PSDKEventType.AD_STARTED` これは次の処理を行います。
 1. バナーインスタンス内の既存の広告をクリアします。
-1. `Ad.getCompanionAssets`からコンパニオン広告のリストを取得します。
-1. コンパニオン広告のリストが空でない場合、バナーインスタンスのリストを繰り返し処理します。
+1. 次のコンパニオン広告のリストを取得します： `Ad.getCompanionAssets`.
+1. コンパニオン広告のリストが空でない場合は、バナーインスタンスのリストを繰り返し処理します。
 
-   各バナーインスタンス(`AdBannerAsset`)には、幅、高さ、リソースタイプ（html、iframeまたは静的）などの情報、およびコンパニオンバナーの表示に必要なデータが含まれます。
-1. ビデオ広告にコンパニオン広告が登録されていない場合、コンパニオンアセットのリストには、そのビデオ広告に関するデータは含まれません。
-1. ページ上の関数にバナー情報を送信し、その関数にバナーを適切な場所に表示します。
+   各バナーインスタンス ( `AdBannerAsset`) には、幅、高さ、リソースタイプ（html、iframe、静的）などの情報や、コンパニオンバナーの表示に必要なデータが含まれます。
+1. ビデオ広告にコンパニオン広告が登録されていない場合、コンパニオンアセットのリストには、そのビデオ広告のデータは含まれません。
+1. バナー情報をページ上の関数に送信し、その関数がバナーを適切な場所に表示します。
 
-   通常は`div`で、関数は`div ID`を使用してバナーを表示します。 例：
+   これは通常、 `div`を検索し、関数で `div ID` バナーを表示します。 例：
 
-   追加イベントリスナー：
+   イベントリスナーを追加します。
 
    ```js
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
@@ -61,7 +59,7 @@ ht-degree: 0%
    }
    ```
 
-   表示を処理するJavaScriptの例：
+   表示を処理する JavaScript の例：
 
    ```js
    function displayCompanion (resourceType, width, height, data) { 
@@ -75,4 +73,3 @@ ht-degree: 0%
        } 
    }
    ```
-

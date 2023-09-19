@@ -1,35 +1,33 @@
 ---
-description: ブラウザーTVSDKは、FairPlay、PlayReady、Widevineなど、様々なDRMソリューションで保護されたコンテンツを再生するために使用できるDRMインターフェイスを提供します。
-title: DRMインターフェイスの概要
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: ブラウザー TVSDK は、FairPlay、PlayReady、Widevine など、様々な DRM ソリューションで保護されたコンテンツを再生するための DRM インターフェイスを提供します。
+title: DRM インターフェイスの概要
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
+# DRM インターフェイスの概要{#drm-interface-overview}
 
-# DRMインターフェイスの概要{#drm-interface-overview}
-
-ブラウザーTVSDKは、FairPlay、PlayReady、Widevineなど、様々なDRMソリューションで保護されたコンテンツを再生するために使用できるDRMインターフェイスを提供します。
+ブラウザー TVSDK は、FairPlay、PlayReady、Widevine など、様々な DRM ソリューションで保護されたコンテンツを再生するための DRM インターフェイスを提供します。
 
 <!--<a id="section_59994F2059B245E996E0776214804A0A"></a>-->
 
 >[!IMPORTANT]
 >
->DRMサポートは、Microsoft PlayReady（Windows 8.1およびEdgeのInternet Explorer）およびWidevine（Google Chromeの）DRMシステムで保護されたMPEG-Dashストリームで利用できます。 Safari上のFairPlayで保護されたHLSストリームに対してDRMサポートを使用できます。
+>DRM は、Microsoft PlayReady（Windows 8.1 および Edge の Internet Explorer）および Widevine(Google Chrome の )DRM システムで保護された MPEG-Dash ストリームで使用できます。 Safari 上の HLS ストリームで FairPlay で保護されている DRM のサポートが利用できます。
 
-DRMワークフローの主なインターフェイスは`DRMManager`です。 `DRMManager`インスタンスへの参照は、MediaPlayerインスタンスを通じて取得できます。
+DRM ワークフローの主なインターフェイスは、 `DRMManager`. への参照 `DRMManager` インスタンスは、 MediaPlayer インスタンスを通じて取得できます。
 
 * `var mediaPlayer = new AdobePSDK.MediaPlayer();`
 * `var drmManager = mediaPlayer.drmManager;`
 
 <!--<a id="section_B7E8AD9A4D4F4BD9BA2A67ABC135D6F9"></a>-->
 
-DRM保護されたコンテンツを再生するための高レベルのワークフローを次に示します。
+DRM で保護されたコンテンツを再生するための大まかなワークフローを次に示します。
 
-1. ブラウザーTVSDKが保護ストリームのライセンス取得プロセスで使用するDRMシステム固有のデータを添付するには、`mediaPlayer.replaceCurrentResource`を呼び出す前に次の呼び出しを行います。
+1. 保護されたストリームのライセンス取得プロセスでブラウザー TVSDK が使用する DRM システム固有のデータを添付するには、呼び出す前に次の呼び出しをおこないます `mediaPlayer.replaceCurrentResource`:
 
    ```js
    var protectionData = { 
@@ -47,7 +45,7 @@ DRM保護されたコンテンツを再生するための高レベルのワー�
    drmManager.setProtectionData(protectionData);
    ```
 
-1. 同じコンテンツが異なるブラウザーの異なるDRMシステムで動作すると予想される場合、複数のDRMシステムに対して保護データを指定できます。
+1. 異なるブラウザーで異なる DRM システムで同じコンテンツが動作すると想定される場合、複数の DRM システムに対して保護データを指定できます。
 
    ```js
    var protectionData = { 
@@ -92,22 +90,22 @@ DRM保護されたコンテンツを再生するための高レベルのワー�
    drmManager.setProtectionData(protectionData);
    ```
 
-1. 保護データが設定されていない場合、必要な情報（ライセンスURLなど）は、DRMシステムのPSSHボックスから取得されます（該当する場合）。
+1. 保護データが設定されていない場合、必要な情報（ライセンス URL など）は、DRM システム用の PSSH ボックスから取得されます（該当する場合）。
 
    >[!TIP]
    >
-   >保護データを指定すると、「PSSH」ボックスで指定されたライセンスURLよりも優先されます。
+   >保護データを指定すると、PSSH ボックスで指定されたライセンス URL よりも優先されます。
 
-1. デフォルトでは、DRMライセンスのセッションタイプは一時的です。つまり、セッションを閉じた後にライセンスは保存されません。
+1. デフォルトでは、DRM ライセンスのセッションタイプは一時的です。つまり、セッションが閉じられた後でライセンスが保存されないことを意味します。
 
-   `DRMManager`のAPIを使用して、セッションの種類を指定できます。  下位互換性を確保するため、セッションタイプには`temporary`、`persistent-license`、`persistent-usage-record`、`persistent`があります。
+   API を使用して、セッションのタイプを `DRMManager`.  下位互換性のために、セッションタイプには以下が含まれます。 `temporary`, `persistent-license`, `persistent-usage-record`、および `persistent`.
 
    ```js
    var drmManager = mediaPlayer.drmManager; 
     drmManager.setEMESessionType(“<YOUR_SESSION_TYPE>”); 
    ```
 
-1. 使用する`sessionType`が`persistent-license`または`persistent`の場合、`DRMManager.returnLicense`を呼び出すことでDRMライセンスを返すことができます。
+1. 次の場合に `sessionType` 使用済み `persistent-license` または `persistent`を呼び出すと、DRM ライセンスを返すことができます `DRMManager.returnLicense`.
 
    ```js
    var onLicenseReturnFunc = function () { 
@@ -126,4 +124,3 @@ DRM保護されたコンテンツを再生するための高レベルのワー�
        drmManager.returnLicense(null, null, null, false, returnLicenseListener, drmLicense.session); 
    }
    ```
-

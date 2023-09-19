@@ -1,38 +1,36 @@
 ---
-description: TVSDKは、通常予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づくアクションを期待された順序で実装できます。
+description: TVSDK は、一般に予想されるシーケンスでイベント/通知をディスパッチします。 プレーヤーでは、予想されるシーケンス内のイベントに基づいてアクションを実装できます。
 title: 再生イベントの順序
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
 
-
 # 再生イベントの順序{#order-of-playback-events}
 
-TVSDKは、通常予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づくアクションを期待された順序で実装できます。
+TVSDK は、一般に予想されるシーケンスでイベント/通知をディスパッチします。 プレーヤーでは、予想されるシーケンス内のイベントに基づいてアクションを実装できます。
 
 <!--<a id="section_6E34A6C7936245D88DEB3315DA64598B"></a>-->
 
 次の例は、再生イベントを含む一部のイベントの順序を示しています。
 
-* `MediaPlayer.replaceCurrentResource`を介してメディアリソースを正常に読み込むと、次の順序でイベントされます。
+* を介してメディアリソースを正常に読み込んだ場合 `MediaPlayer.replaceCurrentResource`の場合、イベントの順序は次のとおりです。
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` ステータス  `MediaPlayerStatus.INITIALIZING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` ステータス別 `MediaPlayerStatus.INITIALIZING`
 
    * `MediaPlayerItemEvent.ITEM_CREATED`
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` ステータス  `MediaPlayerStatus.INITIALIZED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` ステータス別 `MediaPlayerStatus.INITIALIZED`
 
-* `MediaPlayer.prepareToPlay`を介して再生を準備する場合、イベントの順序は次のとおりです。
+* を使用して再生を準備する場合 `MediaPlayer.prepareToPlay`の場合、イベントの順序は次のとおりです。
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` ステータス  `MediaPlayerStatus.PREPARING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` ステータス別 `MediaPlayerStatus.PREPARING`
 
    * `TimelineEvent.TIMELINE_UPDATED` 広告が挿入された場合
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` ステータス  `MediaPlayerStatus.PREPARED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` ステータス別 `MediaPlayerStatus.PREPARED`
 
-* ライブ/リニアストリームの場合、再生中、再生時間が進み、追加のオポチュニティが解決されると、次の順序でイベントが発生します。
+* ライブ/リニアストリームの場合、再生中に、再生ウィンドウが進み、追加のオポチュニティが解決されると、イベントの順序は次のようになります。
 
    * `MediaPlayerItemEvent.ITEM_UPDATED`
    * `TimelineEvent.TIMELINE_UPDATED` 広告が挿入された場合
@@ -68,4 +66,3 @@ public function onTimeChanged(event:TimeChangeEvent):void {
     ... 
 }
 ```
-

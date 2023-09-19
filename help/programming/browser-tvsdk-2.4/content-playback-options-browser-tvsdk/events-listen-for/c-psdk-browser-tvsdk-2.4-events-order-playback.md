@@ -1,33 +1,31 @@
 ---
-description: ブラウザーTVSDKは、通常予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づくアクションを期待された順序で実装できます。
+description: ブラウザー TVSDK は、一般に予想されるシーケンスでイベント/通知をディスパッチします。 プレーヤーでは、予想されるシーケンス内のイベントに基づいてアクションを実装できます。
 title: 再生イベントの順序
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
-
 # 再生イベントの順序{#order-of-playback-events}
 
-ブラウザーTVSDKは、通常予想されるシーケンスでイベント/通知をディスパッチします。 プレイヤーは、イベントに基づくアクションを期待された順序で実装できます。
+ブラウザー TVSDK は、一般に予想されるシーケンスでイベント/通知をディスパッチします。 プレーヤーでは、予想されるシーケンス内のイベントに基づいてアクションを実装できます。
 
 <!--<a id="section_D247A5873A854A079EFA6AC2E80AB894"></a>-->
 
 次の例は、再生イベントを含む一部のイベントの順序を示しています。
 
-* `replaceCurrentResource`を介してメディアリソースを正常に読み込むと、次の順序でイベントされます。
+* を介してメディアリソースを正常に読み込んだ場合 `replaceCurrentResource`の場合、イベントの順序は次のとおりです。
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` 次を使用 `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* `MediaPlayer.prepareToPlay`を介して再生を準備する場合、イベントの順序は次のとおりです。
+* を使用して再生を準備する場合 `MediaPlayer.prepareToPlay`の場合、イベントの順序は次のとおりです。
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` 次を使用 `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
@@ -100,4 +98,3 @@ onStatusChange = function (event) {
     } 
 };
 ```
-

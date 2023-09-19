@@ -1,28 +1,26 @@
 ---
-description: ブラウザーTVSDKが、プライマリ広告サーバー上にない広告をリクエストする場合、プレイヤーは、セカンダリサーバーから広告をリクエストする必要があります。 ビデオ広告配信テンプレート(VAST)は、広告サーバーとビデオプレーヤー間の通信の標準を設定します。これは、広告が要求されたときにセカンダリ広告サーバーによって送信される応答です。
-title: VAST広告
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: ブラウザー TVSDK が、プライマリ広告サーバー上にない広告をリクエストする場合、プレーヤーはセカンダリサーバーから広告をリクエストする必要があります。 Video Ad Serving Template(VAST) は、広告サーバーとビデオプレーヤー間の通信の標準を設定します。これは、広告が要求されたときにセカンダリ広告サーバーから送信される応答です。
+title: VAST 広告
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
 
 ---
 
+# VAST 広告 {#vast-ads}
 
-# VAST広告{#vast-ads}
+ブラウザー TVSDK が、プライマリ広告サーバー上にない広告をリクエストする場合、プレーヤーはセカンダリサーバーから広告をリクエストする必要があります。 Video Ad Serving Template(VAST) は、広告サーバーとビデオプレーヤー間の通信の標準を設定します。これは、広告が要求されたときにセカンダリ広告サーバーから送信される応答です。
 
-ブラウザーTVSDKが、プライマリ広告サーバー上にない広告をリクエストする場合、プレイヤーは、セカンダリサーバーから広告をリクエストする必要があります。 ビデオ広告配信テンプレート(VAST)は、広告サーバーとビデオプレーヤー間の通信の標準を設定します。これは、広告が要求されたときにセカンダリ広告サーバーによって送信される応答です。
+VAST について詳しくは、 [デジタルビデオ広告サービングテンプレート (VAST)3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
 
-VASTについて詳しくは、[デジタルビデオ広告配信テンプレート(VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf)を参照してください。
+ブラウザー TVSDK は、次の VAST 広告要素をサポートしています。
 
-ブラウザーTVSDKは、以下のVAST広告エレメントをサポートしています。
-
-## ラッパー広告とインライン広告{#section_11B8A1A8F52F4F77981C6AAC02185087}
+## ラッパーおよびインライン広告 {#section_11B8A1A8F52F4F77981C6AAC02185087}
 
 次の要素がサポートされています。
 
-* **`wrapper`** プレイヤーが広告をリクエストするためにセカンダリ広告サーバーに接続する必要がある場合、ラッパー要素はリダイレクト情報を提供します。1つのラッパー要素は、最終的にVAST広告を指す複数のラッパーを指し示すことができます。
+* **`wrapper`** プレーヤーがセカンダリ広告サーバーと通信して広告をリクエストする必要がある場合、ラッパー要素はリダイレクト情報を提供します。 1 つのラッパー要素は、最終的に VAST 広告を指す複数のラッパーを指すことができます。
 
 * **`inline`** 次の必須要素がサポートされています。
 
@@ -30,24 +28,24 @@ VASTについて詳しくは、[デジタルビデオ広告配信テンプレー
 * `AdTitle`
 * `Impression`
 
-   次のオプションの要素がサポートされています。
+  次のオプション要素がサポートされています。
 
 * `Description`
 * `Survey`
 * `Error`
 
-## クリエイティブ{#section_0121F948CB074E49A8132D202786CAA4}
+## クリエイティブ {#section_0121F948CB074E49A8132D202786CAA4}
 
-この要素はVAST広告の一部であり、リニア広告、ノンリニア広告、またはコンパニオン広告をサポートできる`creative`要素を含むファイルです。 `creative`要素では、`id`、`sequence`、`adId`の各要素がサポートされています。
+この要素は、VAST 広告の一部であり、 `creative` リニア広告、非リニア広告またはコンパニオン広告をサポートできる要素です。 Adobe Analytics の `creative` 要素、 `id`, `sequence`、および `adId` 要素がサポートされています。
 
-広告タイプについて詳しくは、次を参照してください。
+広告タイプの詳細を以下に示します。
 
-* **リニア** 広告以下の要素がサポートされています。
+* **リニア広告** 次の要素がサポートされています。
 
-   * `TrackingEvent`に含まれます。この `Tracking` 要素は、
+   * `TrackingEvent`（を含む） `Tracking` 要素を選択します。
       * `Duration`
       * `AdParameters`
-      * `VideoClicks`に含まれる値は次のとおりです。
+      * `VideoClicks`（以下を含む）
 
       * `ClickThrough`
       * `ClickTracking`
@@ -57,17 +55,17 @@ VASTについて詳しくは、[デジタルビデオ広告配信テンプレー
 
       * `MediaFile`
 
-         >[!TIP]
-         >
-         >この要素では、`id`、`bitrate`、`delivery`、`width`、`height`、`scalable`、`maintainAspectRatio`、`apiFramework`、`type`の各属性がサポートされています。
+        >[!TIP]
+        >
+        >この要素では、 `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`、および `type` 属性がサポートされています。
 
-* **非リニア** 広告：次の要素がサポートされます。
+* **非リニア広告** 次の要素がサポートされています。
 
    * `Non-linear`
 
-      >[!TIP]
-      >
-      >この要素では、`id`、`width`、`height`、`apiFramework`、`expandedWidth`、`expandedHeight`、`scalable`、`maintainAspectRatio`、`minSuggestedDuration`の各属性がサポートされています。
+     >[!TIP]
+     >
+     >この要素では、 `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`、および `minSuggestedDuration` 属性がサポートされています。
 
       * `StaticResource`
       * `IFrameResource`
@@ -75,23 +73,23 @@ VASTについて詳しくは、[デジタルビデオ広告配信テンプレー
       * `NonLinearClickThrough`
       * `AdParameters`
 
-* **コンパニオン** 広告以下の要素がサポートされています。
+* **コンパニオン広告** 次の要素がサポートされています。
 
    * `Companion`
 
-      >[!TIP]
-      >
-      >この要素では、`id`、`width`、`height`、`apiFramework`、`expandedWidth`、`expandedHeight`の各属性がサポートされています。
+     >[!TIP]
+     >
+     >この要素では、 `id`, `width`, `height`, `apiFramework`, `expandedWidth`、および `expandedHeight` 属性がサポートされています。
 
       * `StaticResource`
       * `IFrameResource`
       * `HTMLResource`
       * `TrackingEvents`
 
-## 拡張子{#section_17401C75F419453BAE83637EEB6E1E60}
+## 拡張機能 {#section_17401C75F419453BAE83637EEB6E1E60}
 
 >[!TIP]
 >
->Auditude固有の拡張のみがサポートされます。
+>Auditude固有の拡張機能のみがサポートされます。
 
 * `Extension`

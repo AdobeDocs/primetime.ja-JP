@@ -1,46 +1,46 @@
 ---
-title: プログラマーの指標と選択した MVPD をセグメント内にエクスポート
-description: プログラマーの指標と選択した MVPD をセグメント内にエクスポート
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: プログラマーの指標と選択した MVPD をセグメント内にエクスポートする
+description: プログラマーの指標と選択した MVPD をセグメント内にエクスポートする
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
-# プログラマーの指標と選択した MVPD をセグメント内にエクスポート {#export-metric}
+# プログラマーの指標と選択した MVPD をセグメント内にエクスポートする {#export-metric}
 
 アカウント IQ のダッシュボードに、選択したセグメント内の購読者アカウントの資格情報共有の統計の表とグラフが表示されます。 共有パターンとスコアの表示に加えて、選択したセグメントの MVPD およびチャネルの購読者のアカウント使用状況指標と共有スコアを、これらのテーブルから書き出すこともできます。
 
 特定のプログラマーおよびセグメントで選択された MVPD の指標をエクスポートするには、認証済みのプログラマーユーザーとしてログインした後に、次の手順を実行します。
 
-1. 目的のセグメントを [セグメントの定義と期間の選択方法](/help/AccountIQ/howto-select-segment-timeframe.md) 評価のために [セグメントと期間](/help/AccountIQ/segments-timeframe.md) パネル。
+1. 次の手順に従って、目的のセグメントを定義します。 [セグメントを定義して期間を選択する方法](/help/AccountIQ/howto-select-segment-timeframe.md) 評価のために [セグメントと期間](/help/AccountIQ/segments-timeframe.md) パネル。
 
-1. 次のパネルのいずれかに移動します。
+1. 次のパネルの 1 つに移動します。
 
    * 選択した MVPD に対する業界全体の共有スコア。
-      ![](assets/ind-sharpanel-export-option.png)
+     ![](assets/ind-sharpanel-export-option.png)
 
    * チャネルおよび MVPD 別のスコアの共有
 
-      ![](assets/sharscorepanel-export-option.png)
+     ![](assets/sharscorepanel-export-option.png)
 
    * 共有の確率レベル別のアカウント数と使用状況
 
-      ![](assets/usage-panel-export-option.png)
+     ![](assets/usage-panel-export-option.png)
 
-1. 選択 **書き出し** オプションは、パネルの右上隅に表示されます。
+1. 選択 **書き出し** オプションは、パネルの右上隅にあります。
 
 データは CSV 形式で書き出され、ファイルがデバイス上にローカルにダウンロードされます。 目的の CSV ビューアおよびエディターを使用して、書き出されたレポートを開くことができます。
 
 * 選択した MVPD の業界レベルの共有スコア
 
-   ![](assets/export-ind-sharing-score.png)
+  ![](assets/export-ind-sharing-score.png)
 
 * セグメント内のチャネルおよび MVPD によるスコアの共有
 
-   ![](assets/export-risk-index-by-mvpdchannels.png)
+  ![](assets/export-risk-index-by-mvpdchannels.png)
 
 * 共有の確率レベル別のアカウント数と使用状況
 
-   ![](assets/export-acc-usage.png)
+  ![](assets/export-acc-usage.png)

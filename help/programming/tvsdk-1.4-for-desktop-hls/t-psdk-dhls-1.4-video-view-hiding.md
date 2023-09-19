@@ -1,31 +1,29 @@
 ---
-description: MediaPlayer表示を使用してビデオを再生した後、TVSDKメソッドを使用するか、手動で非表示にして再び表示することができます。
-title: ビデオ表示の非表示
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaPlayer ビューを使用してビデオを再生した後は、 TVSDK メソッドを使用するか、手動で非表示にして再度表示することができます。
+title: ビデオビューを非表示にする
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '156'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# ビデオビューを非表示にする{#hide-a-video-view}
 
-# ビデオ表示を非表示{#hide-a-video-view}
+MediaPlayer ビューを使用してビデオを再生した後は、 TVSDK メソッドを使用するか、手動で非表示にして再度表示することができます。
 
-MediaPlayer表示を使用してビデオを再生した後、TVSDKメソッドを使用するか、手動で非表示にして再び表示することができます。
-
-ビデオをディスプレイからクリアまたは移動する前に、一時停止する必要があります。
-* オプション1:`MediaPlayer.clearVideo`でビデオフレームをクリアし、後でフレームを置き換え&#x200B;ます。
+ビデオを一時停止してから、ディスプレイからクリアまたは移動する必要があります。
+* オプション 1：でビデオフレームをクリアします。 `MediaPlayer.clearVideo`後でフ&#x200B;レームを置き換えます。
    * 非表示にするビデオを一時停止します。
-   * `MediaPlayer.clearVideo`を呼び出して、表示されているビデオフレームを削除します。
-   * `MediaPlayer`を再生できるようにリセットするには、`replaceCurrentResource`または`replaceCurrentItem`を呼び出します。
-* オプション2:`MediaPlayer`表示を画面外に移動し、置き換えることなく後で元に戻します。
+   * を呼び出して、表示されているビデオフレームを削除します。 `MediaPlayer.clearVideo`.
+   * をリセットするには、以下を実行します。 `MediaPlayer` 再び再生できるように、を呼び出します。 `replaceCurrentResource` または `replaceCurrentItem`.
+* オプション 2: `MediaPlayer` 画面を表示し、置き換える必要なく後で戻します。
    * 非表示にするビデオを一時停止します。
-   * 表示をステージ外に移動します。 例：
+   * ビューをステージ外に移動します。 例：
 
-      ```
-      view.x = -300; 
-      view.y = -300;
-      ```
+     ```
+     view.x = -300; 
+     view.y = -300;
+     ```
 
-   * ビデオを再び表示するには、表示をステージに戻します。
+   * ビデオを再度表示するには、ビューをステージに戻します。

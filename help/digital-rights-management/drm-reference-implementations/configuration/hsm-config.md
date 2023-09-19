@@ -1,31 +1,28 @@
 ---
-description: HSMをサポートするSun PKCS#11プロバイダーを使用して、参照の実装を設定できます。 HSMの使用は必須ではありませんが、使用することをお勧めします。
-title: HSMの設定
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: HSM をサポートする Sun PKCS#11 プロバイダを使用して、参照実装を設定できます。 HSM は必須ではありませんが、使用することをお勧めします。
+title: HSM 設定
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
 
 ---
 
+# HSM 設定{#hsm-configuration}
 
-# HSM設定{#hsm-configuration}
+HSM をサポートする Sun PKCS#11 プロバイダを使用して、参照実装を設定できます。 HSM は必須ではありませんが、使用することをお勧めします。
 
-HSMをサポートするSun PKCS#11プロバイダーを使用して、参照の実装を設定できます。 HSMの使用は必須ではありませんが、使用することをお勧めします。
+HSM で秘密鍵証明書を使用するには、Sun PKCS#11 プロバイダの設定ファイルを作成する必要があります。 詳しくは、 [Java PCKS#11 リファレンスガイド](https://docs.oracle.com/javase/1.5.0/docs/guide/security/p11guide.html).
 
-HSMで秘密鍵証明書を使用するには、Sun PKCS#11プロバイダーの設定ファイルを作成する必要があります。 詳しくは、[Java PCKS#11リファレンスガイド](https://docs.oracle.com/javase/1.5.0/docs/guide/security/p11guide.html)を参照してください。
-
-HSMおよびSun PKCS#11の設定ファイルが設定されていることを確認するには、Java JDKと共にインストールされたkeytoolを使用して次のコマンドを入力します。
+HSM および Sun PKCS#11 の設定ファイルが設定されていることを確認するには、Java JDK と共にインストールされた keytool を使用して、次のコマンドを入力します。
 
 ```
 keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 
   -providerArg pkcs11.cfg -list
 ```
 
-リストで秘密鍵証明書を表示できる場合は、HSMを正しく設定している必要があります。
+リストに資格情報が表示される場合は、HSM を正しく設定しています。
 
 >[!NOTE]
 >
->Java 1.7以降、64ビットSun Java for Windowsでは、Adobe PrimetimeDRMがHSMデバイスと通信するために必要なPKCS#11インターフェイスをサポートしなくなりました。 HSMを使用する予定がある場合は、32ビット版のJavaを使用するか、完全なPKCS#11インターフェイスをサポートするJDKを使用してください。
-
+>Java 1.7 以降、64 ビット Sun Java for Windows は、Adobe Primetime DRM が HSM デバイスと通信するために必要な PKCS#11 インターフェイスをサポートしなくなりました。 HSM を使用する場合は、必ず 32 ビットバージョンの Java を使用するか、完全な PKCS#11 インターフェイスをサポートする JDK を使用してください。

@@ -1,36 +1,33 @@
 ---
-description: CustomRangeMetadataクラスは、VODストリームマーク、削除および置換の様々なタイプの時間範囲を識別します。 これらのカスタム時間範囲タイプごとに、広告コンテンツの削除や置換など、対応する操作を実行できます。
+description: CustomRangeMetadata クラスは、VOD ストリームマーク、削除および置換内の様々なタイプの時間範囲を識別します。 これらのカスタム時間範囲タイプごとに、広告コンテンツの削除や置き換えなど、対応する操作を実行できます。
 title: カスタム時間範囲操作
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%
 
 ---
 
+# 概要 {#custom-time-range-operations}
 
-# 概要{#custom-time-range-operations}
-
-CustomRangeMetadataクラスは、VODストリームの様々なタイプの時間範囲を識別します。マーク、削除、置換を行います。 これらのカスタム時間範囲タイプごとに、広告コンテンツの削除や置換など、対応する操作を実行できます。
+CustomRangeMetadata クラスは、VOD ストリーム内の様々なタイプの時間範囲 (mark、delete、replace) を識別します。 これらのカスタム時間範囲タイプごとに、広告コンテンツの削除や置き換えなど、対応する操作を実行できます。
 
 <!--<a id="section_1323C0BAC259424C85A6ACFB48FE77EC"></a>-->
 
-広告削除および置換の場合、TVSDKは次の&#x200B;*カスタム時間範囲操作*&#x200B;モードを使用します。
+広告の削除と置き換えに、 TVSDK は以下を使用します。 *カスタム時間範囲操作* モード：
 
-* **MARKTこの** モードは、以前のバージョンのTVSDKではカスタム広告マーカーと呼ばれていました。このモードは、既にVODストリームに配置されている広告の開始時間と終了時間をマークします。 ストリーム内にタイプ`MARK`の時間範囲マーカーがある場合、`CustomMarkerOpportunityGenerator`によって`Mode.MARK`の初期配置が生成され、`CustomRangeResolver`によって解決されます。 広告は挿入されません。
+* **トンボ** このモードは、以前のバージョンの TVSDK ではカスタム広告マーカーと呼ばれていました。 このモードは、既に VOD ストリームに配置されている広告の開始時間と終了時間をマークします。 タイプの時間範囲マーカーがある場合 `MARK` ストリーム内で、 `Mode.MARK` が次で生成された： `CustomMarkerOpportunityGenerator` およびによって解決された `CustomRangeResolver`. 広告は挿入されません。
 
-* **** DELETEFまたは `DELETE` 時間範囲の場合、タイプ `placementInformation` の初期値 `Mode.DELETE` が作成され、によって解決され `CustomRangeResolver`ます。`DeleteRangeTimelineOperation` は、タイムラインから削除する範囲を定義します。TVSDKは、Adobeビデオエンジン(AVE)API `removeByLocalTime` からこの操作を実行します。DELETE範囲とAdobe Primetimead decisioningメタデータがある場合、その範囲が最初に削除され、次に`AuditudeResolver`が一般的なAdobe Primetimead decisioningワークフローを使用して広告を解決します。
+* **DELETE** の場合 `DELETE` 時間範囲、初期 `placementInformation` のタイプ `Mode.DELETE` が次の方法で作成および解決された `CustomRangeResolver`. `DeleteRangeTimelineOperation` は、タイムラインから削除する範囲を定義します。 TVSDK は `removeByLocalTime` Adobeビデオエンジン (AVE)API からこの操作を完了します。 DELETE範囲とAdobe Primetime Ad Decisioning メタデータがある場合、その範囲が最初に削除され、 `AuditudeResolver` 一般的なAdobe Primetime ad decisioning ワークフローを使用して広告を解決します。
 
-* **** REPLACEFまたは `REPLACE` 時間範囲を指定すると、2つの初期値(1 `placementInformations` つと1つ) `Mode.DELETE` が作成され `Mode.REPLACE`ます。`CustomRangeResolver` 最初に時間範囲を削除し、次に指定した広告をタイムライン `AuditudeResolver` に `replaceDuration` 挿入します。`replaceDuration`を指定しない場合は、何を挿入するかがサーバーによって決定されます。
+* **置換** の場合 `REPLACE` 時間範囲、2 つの初期値 `placementInformations` 作成済み、1 つ `Mode.DELETE` 一つ `Mode.REPLACE`. `CustomRangeResolver` 最初に時間範囲を削除し、次に `AuditudeResolver` 指定した `replaceDuration` をタイムラインに追加します。 いいえの場合 `replaceDuration` を指定した場合、サーバーは何を挿入するかを決定します。
 
-これらのカスタム時間範囲操作をサポートするために、TVSDKは以下を提供します。
+これらのカスタム時間範囲操作をサポートするために、 TVSDK は以下を提供します。
 
 * 複数のコンテンツリゾルバー
 
-   ストリームは、広告シグナリングモードと広告メタデータに基づいて、複数のコンテンツリゾルバーを持つことができます。 広告シグナリングモードと広告メタデータの組み合わせが異なると、動作が変わります。
-* `CustomMarkerOpportunityGenerator`を使用して複数の初期オポチュニティを作成します。
-* 新しい広告シグナリングモード`CUSTOM_RANGES`。
+  ストリームは、広告シグナリングモードおよび広告メタデータに基づいて、複数のコンテンツリゾルバーを持つことができます。 広告シグナリングモードと広告メタデータの組み合わせが異なると、動作が変わります。
+* 次を使用して複数の初期商談 `CustomMarkerOpportunityGenerator`.
+* 新しい広告シグナリングモード `CUSTOM_RANGES`.
 
-   広告は、JSONファイルなどの外部ソースの時間範囲データに基づいて配置されます。
-
+  広告は、JSON ファイルなどの外部ソースの時間範囲データに基づいて配置されます。

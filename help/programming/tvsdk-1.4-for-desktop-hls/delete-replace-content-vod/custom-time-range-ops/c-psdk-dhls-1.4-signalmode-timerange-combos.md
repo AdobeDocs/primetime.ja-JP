@@ -2,29 +2,27 @@
 title: シグナリングモードと時間範囲
 description: シグナリングモードと時間範囲
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
-
-# シグナリングモードと時間範囲{#signaling-mode-and-time-range}
+# シグナリングモードと時間範囲 {#signaling-mode-and-time-range}
 
 <table> 
  <thead> 
   <tr> 
    <th class="entry"> </th> 
-   <th class="entry"> MARK </th> 
+   <th class="entry"> トンボ </th> 
    <th class="entry"> DELETE </th> 
-   <th class="entry"> REPLACE </th> 
+   <th class="entry"> 置換 </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> CustomRange OpportunityGenerator  </span> </td> 
+   <td> <span class="codeph"> CustomRange OpportunityGenerator </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -63,7 +61,7 @@ ht-degree: 0%
      &nbsp;&nbsp;&nbsp;&nbsp;range.end&nbsp;-&nbsp;range.begin,&nbsp; 
      &nbsp;&nbsp;&nbsp;&nbsp;PlacementMode.DELETE&nbsp;); 
     </code> </td> 
-   <td> 該当なし（自動CustomRangeシグナリングモード） </td> 
+   <td> 該当なし（自動 CustomRange シグナリングモード） </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> ManifestCue </span> シグナリングモード </td> 
@@ -87,7 +85,7 @@ ht-degree: 0%
      &nbsp;&nbsp;&nbsp;&nbsp;PlacementMode.DELETE 
      ); 
     </code> </td> 
-   <td> 該当なし（自動CustomRangeシグナリングモード） </td> 
+   <td> 該当なし（自動 CustomRange シグナリングモード） </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> CustomRange </span> シグナリングモード </td> 
@@ -136,14 +134,14 @@ ht-degree: 0%
  <thead> 
   <tr> 
    <th class="entry"> </th> 
-   <th class="entry"> MARK </th> 
+   <th class="entry"> トンボ </th> 
    <th class="entry"> DELETE </th> 
-   <th class="entry"> REPLACE </th> 
+   <th class="entry"> 置換 </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator  </span> </td> 
+   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -163,7 +161,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td> <span class="codeph"> SeverMap </span> シグナリングモード </td> 
-   <td> 存在しません（広告は無効です）。 </td> 
+   <td> 存在しない（広告が無効になっている）。 </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -173,11 +171,11 @@ ht-degree: 0%
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> 該当なし（自動<span class="codeph"> CustomRange </span>シグナリングモード） </td> 
+   <td> 該当なし（自動） <span class="codeph"> CustomRange </span> シグナリングモード ) </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> ManifestCue </span> シグナリングモード </td> 
-   <td> 存在しません（広告は無効です）。 </td> 
+   <td> 存在しない（広告が無効になっている）。 </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -187,13 +185,13 @@ ht-degree: 0%
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> 該当なし（自動<span class="codeph"> CustomRange </span>シグナリングモード） </td> 
+   <td> 該当なし（自動） <span class="codeph"> CustomRange </span> シグナリングモード ) </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> CustomRange </span> シグナリングモード </td> 
-   <td> 存在しません（広告は無効です）。 </td> 
+   <td> 存在しない（広告が無効になっている）。 </td> 
    <td> なし </td> 
-   <td> なし（<span class="codeph"> CustomRangeOpportunityGenerator </span>で対応） </td> 
+   <td> なし（での対応が必要です） <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
   </tr> 
  </tbody> 
 </table>

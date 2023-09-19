@@ -1,21 +1,19 @@
 ---
-description: 保護されたストリーミング用にAdobe Access Serverを実行しているサーバーをアップグレードするには、アプリケーションサーバーにデプロイされているflashaccessserver.warファイルを、最新のAdobeアクセスに含まれているファイルに置き換えます。 上記の新しい設定オプションを使用する場合は、サーバーのflashaccess-tenant.xmlを更新します。 また、jsafe.dllまたはlibjsafe.soを最新のAdobeアクセスに含まれるバージョンに更新する必要があります。
-title: 保護されたストリーミング用にAdobe Access Serverを実行する
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 保護されたストリーミング用にAdobe Access Serverを実行しているサーバーをアップグレードするには、アプリケーションサーバーにデプロイされている flashaccessserver.war ファイルを、最新のAdobeアクセスに含まれているファイルに置き換えます。 上記の新しい設定オプションを使用する場合は、サーバーの flashaccess-tenant.xml を更新します。 また、jsafe.dll または libjsafe.so を、最新のバージョンアクセスに含まれるAdobeに更新する必要があります。
+title: 保護されたストリーミング用のAdobe Access Serverの実行
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
 
 ---
 
+# 保護されたストリーミング用のAdobe Access Serverの実行{#running-the-adobe-access-server-for-protected-streaming}
 
-# 保護されたストリーミング用にAdobe Access Serverを実行する{#running-the-adobe-access-server-for-protected-streaming}
+保護されたストリーミング用にAdobe Access Serverを実行しているサーバーをアップグレードするには、アプリケーションサーバーにデプロイされている flashaccessserver.war ファイルを、最新のAdobeアクセスに含まれているファイルに置き換えます。 上記の新しい設定オプションを使用する場合は、サーバーの flashaccess-tenant.xml を更新します。 また、jsafe.dll または libjsafe.so を、最新のバージョンアクセスに含まれるAdobeに更新する必要があります。
 
-保護されたストリーミング用にAdobe Access Serverを実行しているサーバーをアップグレードするには、アプリケーションサーバーにデプロイされているflashaccessserver.warファイルを、最新のAdobeアクセスに含まれているファイルに置き換えます。 上記の新しい設定オプションを使用する場合は、サーバーのflashaccess-tenant.xmlを更新します。 また、jsafe.dllまたはlibjsafe.soを最新のAdobeアクセスに含まれるバージョンに更新する必要があります。
+Adobe Access Server for Protected Streaming を実行する前に、Adobeは、ライセンスサーバーに付属のユーティリティを使用して、設定ファイルが有効であることを確認することをお勧めします。 詳しくは、[設定バリデーター](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)&quot;.
 
-保護ストリーミング用Adobe Access Serverを実行する前に、Adobeは、ライセンスサーバに付属のユーティリティを使用して、設定ファイルが有効であることを確認することを推奨します。 詳しくは、「[構成バリデーター](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)」を参照してください。
+Tomcat とライセンスサーバーを起動するには、Tomcat の bin ディレクトリから「catalina.bat start」または「catalina.sh start」を実行します。
 
-Tomcatとライセンスサーバーを開始するには、Tomcatのbinディレクトリから「catalina.bat開始」または「catalina.sh開始」を実行します。
-
-サーバーの起動後、ブラウザーウィンドウで&#x200B;*https:// license-server-host:port/flashaccessserver/tenant-name/flashaccess/license/v1*&#x200B;を開いて、サーバーが正しく構成されていることを確認します。 テナント構成が正常に読み込まれた場合は、確認メッセージが表示されます。
+サーバーが起動したら、 *https:// license-server-host:port/flashaccessserver/tenant-name/flashaccess/license/v1* をクリックします。 テナント設定が正常に読み込まれた場合は、確認メッセージが表示されます。

@@ -1,18 +1,16 @@
 ---
-title: 再生保護
-description: 再生保護
+title: リプレイの保護
+description: リプレイの保護
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
+# リプレイの保護{#replay-protection}
 
-# リプレイ保護{#replay-protection}
+再生保護は、攻撃者がライセンスリクエストメッセージを再生するのを防ぎ、潜在的に DoS(DoS) 攻撃をクライアント (A) に対して行うのを防ぎます。 *サービス拒否* 攻撃とは、攻撃者がサービスの正当なユーザーがそのサービスを使用するのを防ぐための試みです。 例えば、ロールバックカウンターを使用した再生攻撃を使用して、DRM クライアントが状態をロールバックし、アカウントの停止を引き起こしているとライセンスサーバーを「欺く」ことができます。
 
-リプレイ保護は、攻撃者がライセンス要求メッセージを再生したり、潜在的にDoS(DoS)攻撃をクライアントに対して引き起こすのを防ぎます（A *Do-of-Service*&#x200B;攻撃は、攻撃者がサービスの正当なユーザーに対して使用を防ぐ試みです）。 例えば、ロールバックカウンターを使用した再生攻撃を使用して、DRMクライアントが状態をロールバックしていると判断して、License Serverを「騙し取り」、アカウントを停止させることができます。
-
-リプレイ保護の詳細については、`AbstractRequestMessage.getMessageId()`『AdobeアクセスAPIリファレンス&#x200B;*』を参照してください。*
+再生保護の詳細については、 `AbstractRequestMessage.getMessageId()` の *Adobeアクセス API リファレンス*.

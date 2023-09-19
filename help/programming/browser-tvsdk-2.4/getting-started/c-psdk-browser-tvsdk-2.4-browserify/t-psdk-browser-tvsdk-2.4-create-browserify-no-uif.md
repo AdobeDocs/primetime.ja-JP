@@ -1,33 +1,31 @@
 ---
-description: ブラウザーTVSDKが提供するBrowserifyライブラリファイルをアプリで使用して、Browserify互換のプレイヤーを作成します。
-title: UIフレームワークを使用しないブラウズ互換プレーヤーの作成
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Browser TVSDK が提供する Browserify ライブラリファイルをアプリ内で使用して、Browserify 互換のプレーヤーを作成します。
+title: UI-Framework を使用しない、Browserify 互換のプレーヤーの作成
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
+# UI-Framework を使用しない、Browserify 互換のプレーヤーの作成{#create-a-browserify-compatible-player-without-the-ui-framework}
 
-# UIフレームワークを使用しないブラウズ互換プレーヤーの作成{#create-a-browserify-compatible-player-without-the-ui-framework}
+Browser TVSDK が提供する Browserify ライブラリファイルをアプリ内で使用して、Browserify 互換のプレーヤーを作成します。
 
-ブラウザーTVSDKが提供するBrowserifyライブラリファイルをアプリで使用して、Browserify互換のプレイヤーを作成します。
+トピック [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md) に、基本的なビデオプレーヤーの作成時に通常含める一連のブラウザー TVSDK ライブラリを示します。 これをおこなうには、次を追加します。 `script` タグと `src` ライブラリを指す属性。
 
-トピック[](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md)には、基本ビデオプレーヤーの作成時に通常含める一連のブラウザーTVSDKライブラリがリストされます。 これを行うには、ライブラリを指す`src`属性を持つ`script`タグを追加します。
+Browserify 互換のプレーヤーを作成する場合、プロセスは少し異なります。 この場合、 `require` コマンドを使用して [!DNL AdobePSDK.module.js] ファイル（Browser TVSDK によって提供される）をアプリ内で使用する場合。 このファイルは、基本の Player ライブラリファイルを依存関係の適切な順序でまとめて、 `AdobePSDK` 名前空間を使用して、プレーヤーの機能を実装します。
 
-このプロセスは、Browserify互換のプレーヤーを作成する場合と少し異なります。 この場合は、`require`コマンドを使用して（ブラウザーTVSDKが提供する）[!DNL AdobePSDK.module.js]ファイルをアプリに含めます。 このファイルは、基本プレーヤーライブラリファイルを依存関係の適切な順序でバンドルし、プレーヤーに機能を実装するために使用する`AdobePSDK`名前空間を返します。
-
-Browser TVSDKは、リリースパッケージに次のサンプルのBrowser Filesとビルドファイルを用意しています。
+ブラウザー TVSDK は、リリースパッケージに以下のサンプルの Browserify アプリケーションとビルドファイルを提供しています。
 
 * [!DNL [...]/samples/browserify/reference/build/Gruntfile.js]
 * [!DNL [...]/samples/browserify/reference/build/package.json]
 * [!DNL [...]/samples/browserify/reference/examples/sample.html]
 * [!DNL [...]/samples/browserify/reference/examples/sample.js]
 
-ブラウズ互換のビデオプレーヤーを作成するには：
+Browserify 互換のビデオプレーヤーを作成するには：
 
-1. `AdobePSDK`名前空間を返すブラウザ互換ライブラリファイルを要求する：
+1. を返す Browserify 互換ライブラリファイルが必要です。 `AdobePSDK` 名前空間：
 
    ```
    var AdobePSDK = require('./AdobePSDK.module.js'); 
@@ -37,7 +35,7 @@ Browser TVSDKは、リリースパッケージに次のサンプルのBrowser Fi
    […]
    ```
 
-1. [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md)の説明に従って、プレイヤーを作成します。
+1. プレーヤーを作成します。詳しくは、 [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md).
 
-   このタスクの手順1は、アプリファイル内の個々の基本プレーヤーライブラリのソースとなる、基本的なプレーヤーの手順の手順を置き換えます。
-Browserifyを使用してアプリファイルをバンドルできるようになりました。
+   このタスクの手順 1 では、アプリファイル内の個々の基本プレーヤーライブラリをソースする基本的なプレーヤー手順の手順を置き換えます。
+これで、Browserify を使用してアプリファイルをバンドルできます。

@@ -1,24 +1,22 @@
 ---
-description: TVSDKは、PTMediaPlayerMediaSelectionOptionsAvailableNotification通知を使用して、プレイヤークライアントに内部AVAssetのavailableMediaCharacteristicsWithMediaSelectionOptionsの可用性を知らせます。
-title: サブタイトルを表示する
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK は、 PTMediaPlayerMediaSelectionOptionsAvailableNotification 通知を使用して、内部 AVAsset の availableMediaCharacteristicsWithMediaSelectionOptions が使用可能であることをプレーヤークライアントに通知します。
+title: サブタイトルを公開
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
 
 ---
 
+# サブタイトルを公開 {#expose-subtitles}
 
-# サブタイトル{#expose-subtitles}を公開する
+TVSDK は、 PTMediaPlayerMediaSelectionOptionsAvailableNotification 通知を使用して、内部 AVAsset の availableMediaCharacteristicsWithMediaSelectionOptions が使用可能であることをプレーヤークライアントに通知します。
 
-TVSDKは、PTMediaPlayerMediaSelectionOptionsAvailableNotification通知を使用して、プレイヤークライアントに内部AVAssetのavailableMediaCharacteristicsWithMediaSelectionOptionsの可用性を知らせます。
-
-`PTMediaPlayerItem`プロパティの`subtitlesOptions`を通じて、使用可能なサブタイトルにアクセスできます。
+使用可能なサブタイトルには、 `PTMediaPlayerItem` プロパティの `subtitlesOptions`.
 
 サブタイトルを公開するには：
 
-1. クライアントを`PTMediaPlayerMediaSelectionOptionsAvailableNotification`通知のリスナーとして登録します。
+1. クライアントをのリスナーとして登録します。 `PTMediaPlayerMediaSelectionOptionsAvailableNotification` 通知。
 
    ```
    [[NSNotificationCenter defaultCenter]  
@@ -26,8 +24,8 @@ TVSDKは、PTMediaPlayerMediaSelectionOptionsAvailableNotification通知を使�
      name:PTMediaPlayerMediaSelectionOptionsAvailableNotification object:self.player];
    ```
 
-   クライアントがこの通知を受け取ると、サブタイトルは`PTMediaPlayerItem`に準備されます。
-1. 次の例のような`onMediaPlayerItemMediaSelectionOptionsAvailable`メソッドを実装します。
+   クライアントがこの通知を受け取ると、サブタイトルは `PTMediaPlayerItem`.
+1. の実装 `onMediaPlayerItemMediaSelectionOptionsAvailable` 次の例のようなメソッドを使用します。
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -36,4 +34,4 @@ TVSDKは、PTMediaPlayerMediaSelectionOptionsAvailableNotification通知を使�
    }
    ```
 
-   代替オーディオトラックについて詳しくは、[代替オーディオ](../alternate-audio/c-psdk-ios-1.4-alternate-audio.md)を参照してください。
+   代替オーディオトラックについて詳しくは、  [代替オーディオ](../alternate-audio/c-psdk-ios-1.4-alternate-audio.md).

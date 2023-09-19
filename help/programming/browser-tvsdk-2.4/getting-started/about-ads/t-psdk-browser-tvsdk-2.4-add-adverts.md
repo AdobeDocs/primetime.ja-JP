@@ -1,17 +1,15 @@
 ---
-title: 追加広告
-description: 追加広告
+title: 広告の追加
+description: 広告の追加
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
 
 ---
 
-
-# 追加広告{#add-advertising}
+# 広告の追加 {#add-advertising}
 
 1. 広告メタデータを定義します。
 
@@ -22,14 +20,14 @@ ht-degree: 0%
      auditudeSettings.zoneId = "123869";
    ```
 
-1. 広告メ追加タデータを`MediaResource`に送信します。
+1. 広告メタデータを `MediaResource`.
 
    ```js
    var mediaResource =  
      new AdobePSDK.MediaResource(resourceUrl, resourceType, auditudeSettings, false);
    ```
 
-1. 設定追加をconfigに追加し、`SpliceOut`パーサーファクトリを追加します。
+1. 設定を設定に追加し、 `SpliceOut` パーサーファクトリ。
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
@@ -37,8 +35,8 @@ ht-degree: 0%
    config.advertisingFactory = new ExtCueOutContentFactory(auditudeSettings);
    ```
 
-1. ライブラリ追加セクションの`ExtCueOutContentFactory`。
-1. ライブラリセクションから`ExtCueOutContentFactory.js`をダウンロードし、作業フォルダーに配置します。
+1. 次を追加： `ExtCueOutContentFactory` を「ライブラリ」セクションに追加します。
+1. をダウンロードします。 `ExtCueOutContentFactory.js` 「ライブラリ」セクションから、作業フォルダーに配置します。
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 

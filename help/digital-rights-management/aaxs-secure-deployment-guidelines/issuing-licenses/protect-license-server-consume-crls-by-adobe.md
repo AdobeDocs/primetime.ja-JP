@@ -1,18 +1,16 @@
 ---
-title: Adobeが発行したCRLを使用
-description: Adobeが発行したCRLを使用
+title: Adobeで公開された CRL を使用
+description: Adobeで公開された CRL を使用
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%
 
 ---
 
+# Adobeで公開された CRL を使用{#consume-crls-published-by-adobe}
 
-# Adobe{#consume-crls-published-by-adobe}が発行したCRLを使用
+SDK は、Adobeが公開した CRL を定期的にダウンロードします。 これらのファイルへのアクセスをブロックしたり、これらの CRL の適用を防いだりしないでください。
 
-SDKは、Adobeが発行したCRLを定期的にダウンロードします。 これらのファイルへのアクセスをブロックしたり、これらのCRLの強制を防いだりしないでください。
-
-SDKには、AdobeCRLを取得する際にエラーを無視する設定オプションがあります。 このオプションは、開発環境でのみ使用できます。 実稼働環境では、ライセンスサーバーがAdobeからCRLを取得できる必要があります。 有効なCRLを取得できない場合は、エラーです。
+SDK には、エラー CRL の取得時にエラーを無視するAdobeオプションがあります。 このオプションは、開発環境でのみ使用できます。 実稼動環境では、ライセンスサーバーがAdobeから CRL を取得できる必要があります。 有効な CRL を取得できなかった場合は、エラーです。

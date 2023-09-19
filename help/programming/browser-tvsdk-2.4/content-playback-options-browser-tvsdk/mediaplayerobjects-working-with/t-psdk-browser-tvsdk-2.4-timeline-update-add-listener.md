@@ -1,20 +1,18 @@
 ---
-description: タイムライン更新に関する通知を受け取るには、適切なイベントリスナーを登録します。
-title: TimelineUpdatedEvent追加のリスナー
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: タイムラインの更新に関する通知を受け取るには、適切なイベントリスナーを登録します。
+title: TimelineUpdatedEvent のリスナーを追加
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
+# TimelineUpdatedEvent のリスナーを追加{#add-listeners-for-timelineupdatedevent}
 
-# TimelineUpdatedEvent追加{#add-listeners-for-timelineupdatedevent}のリスナー
+タイムラインの更新に関する通知を受け取るには、適切なイベントリスナーを登録します。
 
-タイムライン更新に関する通知を受け取るには、適切なイベントリスナーを登録します。
-
-タイムラインが更新されるたびに、`MediaPlayer`は`AdobePSDK.PSDKEventType.TIMELINE_UPDATED`型で`AdobePSDK.TimelineEvent`をディスパッチします。
+タイムラインが更新されるたびに、 `MediaPlayer` ディスパッチ `AdobePSDK.TimelineEvent` タイプ `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
 1. 適切なリスナーを実装します。
 
    ```js
@@ -39,4 +37,3 @@ ht-degree: 0%
    player.addEventListener(AdobePSDK.PSDKEventType.TIMELINE_UPDATED,  
        onTimelineUpdatedEvent);
    ```
-

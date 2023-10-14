@@ -6,14 +6,14 @@ user-guide-description: リリース固有の情報、システム要件、制�
 source-git-commit: a29715b0ef833f795760094fd0eb9161462dabb7
 workflow-type: tm+mt
 source-wordcount: '116'
-ht-degree: 0%
+ht-degree: 17%
 
 ---
 
 
 # Primetime リリースノート {#release-notes}
 
-+ [リリースノート：概要](home.md)
++ [リリースノート 概要](home.md)
 + PrimetimeAd Insertion {#ptai}
    + [PTAI 22.9.2 リリースノート](ptai-22x-release-notes.md)
    + [PTAI 21.11.1リリースノート](ptai-21x-release-notes.md)
@@ -29,7 +29,7 @@ ht-degree: 0%
    + [Android 向け TVSDK 1.4 リリースノート](tvsdk-1-4-android.md)
 + ブラウザー TVSDK {#browser-tvsdk}
    + [ブラウザー TVSDK 2.4 リリースノート](tvsdk-24-browser.md)
-+ Desktop HLS 用 TVSDK {#tvsdk-desktop-hls}
++ Desktop HLS 向け TVSDK {#tvsdk-desktop-hls}
    + [TVSDK 1.4 for Desktop HLS リリースノート](tvsdk-1-4-desktop-hls.md)
 + Primetime Offline Packager {#offline-packager}
    + [Primetime Offline Packager バージョン 2 リリース](offline-packager-2x-release-note.md)

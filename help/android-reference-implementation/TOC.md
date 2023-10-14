@@ -2,11 +2,11 @@
 product: primetime
 audience: end-user
 user-guide-title: Primetime リファレンス実装のヘルプ
-user-guide-description: TVSDK を理解し、機能マネージャーを変更して、個人用プレーヤーをカスタマイズします。
+user-guide-description: TVSDK を理解し、機能マネージャーを変更して、個人用プレイヤーをカスタマイズします。
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '246'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 

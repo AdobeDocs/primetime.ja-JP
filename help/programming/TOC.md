@@ -1,11 +1,11 @@
 ---
 audience: end-user
 user-guide-title: Primetime プログラミングのヘルプ
-user-guide-description: Android デバイスでは Java、iOSデバイスでは Objective-C を使用したアプリケーションやビデオプレーヤーの開発を学ぶことができます。
+user-guide-description: Android デバイスでは Java、iOS デバイスでは Objective-C を使用したアプリケーションやビデオプレイヤーの開発を学習できます。
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '4342'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -90,17 +90,17 @@ ht-degree: 0%
          + [壊れた VMAP に対するクライアントエラー処理](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-broken-vmap-error.md)
          + [HTTPS を介したセキュアな広告読み込み](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-secure-ad-loading.md)
          + [広告を含むデフォルトのカスタマイズされた再生動作](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-3x-playback-post.md)
-      + 広告の再生のカスタマイズ {#customize-playback}
+      + 広告の再生をカスタマイズする {#customize-playback}
          + [概要](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-customize.md)
          + [広告再生用の API 要素](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-ad-custom-elements.md)
          + [デフォルトの再生動作を使用](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-use-default.md)
-         + [広告の時間を一定期間スキップ](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-skip-breaks.md)
+         + [一定期間広告の時間をスキップ](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-skip-breaks.md)
          + [ビデオの位置を保存し、後で再開します](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-save-position.md)
          + [部分的な広告ブレーク挿入](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-partial-ad-break-insertion.md)
       + ジャストインタイムの広告解決 {#just-in-time}
          + [概要](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/c-lazy-ad-resolving.md)
          + [遅延広告解決を有効にする](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/t-enable-lazy-ad-resolving.md)
-         + [2.7.x の遅延広告解決から 3.x の遅延広告解決へのアップグレード（API/ワークフローの変更）](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/t-upgrade-to-3x.md)
+         + [2.7.x の遅延広告解決から 3.x の遅延広告解決へのアップグレード（API/Workflow の変更）](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/t-upgrade-to-3x.md)
       + 広告挿入メタデータ {#ad-insertion-metadata}
          + [概要](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md)
          + [広告挿入メタデータの設定](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata-set-up.md)
@@ -126,7 +126,7 @@ ht-degree: 0%
          + [時間指定メタデータクラス](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-timedmetadata-class.md)
          + [カスタムタグを購読](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-subscribe.md)
          + [時間指定メタデータ通知のリスナーを追加する](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-receive-notifications.md)
-         + [ディスパッチされた時間指定メタデータオブジェクトを保存します](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-timed-metadata-store.md)
+         + [ディスパッチされる時間指定メタデータオブジェクトを保存します](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-timed-metadata-store.md)
       + VPAID 2.0 広告のサポート {#vpaid-ad-support}
          + [概要](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-vpaid-ads.md)
          + [VPAID 2.0 統合の実装](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-include-vpaid-support.md)
@@ -153,9 +153,9 @@ ht-degree: 0%
          + [時間範囲を広告で置き換える](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/delete-replace-content-vod/ad-delete-replace-use-cases/android-3x-replace-ranges-with-aud-ad-android.md)
          + [範囲を削除](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/delete-replace-content-vod/ad-delete-replace-use-cases/android-3x-delete-ranges-with-aud-ad-android.md)
          + [広告の削除と置換の例](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/delete-replace-content-vod/android-3x-ad-delete-replace-examples.md)
-         + [広告の削除と置換のエラー処理](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/delete-replace-content-vod/ad-delete-replace-error-handling/android-3x-ad-delete-replace-error-handling.md)
+         + [広告の削除と置き換えのエラー処理](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/delete-replace-content-vod/ad-delete-replace-error-handling/android-3x-ad-delete-replace-error-handling.md)
          + [時間範囲エラーの例](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/delete-replace-content-vod/ad-delete-replace-error-handling/android-3x-timerange-error-examples-dhls.md)
-      + 広告クリエイティブ選択ルールを更新 {#update-ad}
+      + 広告クリエイティブの選択ルールを更新 {#update-ad}
          + [概要](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-updating-rules/android-3x-updating-rules.md)
          + [優先度ルール](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-updating-rules/android-3x-priority-rule.md)
          + [ルールの標準化](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-updating-rules/android-3x-normalize-rule.md)
@@ -174,7 +174,7 @@ ht-degree: 0%
       + [サーバー側でビデオ分析レポートを設定する](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-server-side-reporting-set-up.md)
       + [ビデオ分析レポートへのアクセス](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-reports-access.md)
    + イベントと通知 {#events-and-notifications}
-      + [プレーヤーステータス、アクティビティ、エラーおよびログの通知とイベント](tvsdk-3x-android-prog/android-3x-events-notifications/android-3x-notification-system.md)
+      + [プレーヤーステータス、アクティビティ、エラーおよびログに関する通知とイベント](tvsdk-3x-android-prog/android-3x-events-notifications/android-3x-notification-system.md)
       + [通知コード](tvsdk-3x-android-prog/android-3x-events-notifications/notification-codes/android-3x-notification-codes.md)
       + [PSDK エラーコード](tvsdk-3x-android-prog/android-3x-events-notifications/notification-codes/android-3x-error-codes.md)
       + [NATIVE_ERROR 通知の詳細](tvsdk-3x-android-prog/android-3x-events-notifications/notification-codes/android-3x-native-error-summary.md)
@@ -206,10 +206,10 @@ ht-degree: 0%
    + 広告 {#advertising}
       + [広告要件](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-advertising-requirements.md)
       + [広告タイムアウト](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-timeout.md)
-      + [部分的な広告ブレーク挿入](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-partialad-break-insertion.md)
+      + [部分的な広告ブレークの挿入](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-partialad-break-insertion.md)
       + [広告の挿入](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-insertion-about.md)
       + [広告を含むデフォルトのカスタマイズされた再生動作](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-playback-post1.2.md)
-      + [広告の再生のカスタマイズ](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-playback-customize.md)
+      + [広告の再生をカスタマイズする](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-playback-customize.md)
       + [ジャストインタイムの広告解決](tvsdk-3x-ios-prog/ios-3x-advertising/c-ios-lazy-ad-resolving.md)
    + Primetime 広告サーバーメタデータ {#ad-server-metadata}
       + [Primetime 広告サーバーメタデータの設定](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)
@@ -229,20 +229,20 @@ ht-degree: 0%
       + [時間指定メタデータクラス](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-timedmetadata-class.md)
       + [カスタムタグを購読](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md)
       + [時間指定メタデータ通知のリスナーを追加する](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-receive-notifications.md)
-      + [ディスパッチされた時間指定メタデータオブジェクトを保存します](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md)
+      + [ディスパッチされる時間指定メタデータオブジェクトを保存します](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md)
       + [時間指定メタデータを使用](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-use.md)
-   + 広告クリエイティブ選択ルールを更新 {#update-rules}
+   + 広告クリエイティブの選択ルールを更新 {#update-rules}
       + [概要](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-updating-rules/ios-3x-updating-rules.md)
       + [優先度ルール](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-updating-rules/ios-3x-priority-rule.md)
       + [ルールの標準化](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-updating-rules/ios-3x-normalize-rule.md)
       + [クリエイティブ選択ルールの例](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-updating-rules/ios-3x-sample-rule-files.md)
       + [クリエイティブ選択ルールを適用](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-updating-rules/ios-3x-how-tvsdk-applies-csr.md)
-   + [トークン化セグメントストリーム](tvsdk-3x-ios-prog/ios-3x-tokenized-segment-streams.md)
+   + [トークン化されたセグメントストリーム](tvsdk-3x-ios-prog/ios-3x-tokenized-segment-streams.md)
    + オポチュニティディテクターとコンテンツリゾルバーのカスタマイズ {#customize-content-resolvers}
       + [オポチュニティジェネレーターとコンテンツリゾルバー](tvsdk-3x-ios-prog/ios-3x-content-resolver/ios-3x-content-resolver-about.md)
       + [カスタムオポチュニティ/コンテンツリゾルバーの実装](tvsdk-3x-ios-prog/ios-3x-content-resolver/ios-3x-content-resolver-implement-ios.md)
    + VOD ストリーム内の広告の削除と置換 {#delete-replace-content-vod}
-      + [広告削除および置換 API の変更](tvsdk-3x-ios-prog/ios-3x-delete-replace-content-vod/ios-3x-ad-deletion-replacement-api-changes-ios.md)
+      + [広告の削除と置き換え API の変更](tvsdk-3x-ios-prog/ios-3x-delete-replace-content-vod/ios-3x-ad-deletion-replacement-api-changes-ios.md)
       + [広告の削除と置換のユースケース](tvsdk-3x-ios-prog/ios-3x-delete-replace-content-vod/ios-3x-ad-delete-replace-use-cases/ios-3x-mark-ranges-ios.md)
    + ライブストリーム内のブラックアウトの処理 {#handle-blackouts-in-live-streams}
       + [ブラックアウトの処理](tvsdk-3x-ios-prog/ios-3x-blackouts-handle-ios/c-ios-blackouts-handle-ios.md)
@@ -287,7 +287,7 @@ ht-degree: 0%
       + [ERROR 通知コード](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-notifications-errors.md)
       + [警告通知コード](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-notification-warnings.md)
       + [INFO 通知コード](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-notification-info.md)
-      + [売上高最適化コード](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-revenue-optimization.md)
+      + [収益の最適化コード](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-revenue-optimization.md)
 + Android 向け TVSDK 2.7 {#tvsdk-2-7-for-android}
    + 製品の概要、オーディエンス、およびこのガイド {#overview}
       + [製品の概要、オーディエンス、およびこのガイドの概要](tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-prod-audience-guide.md)
@@ -364,11 +364,11 @@ ht-degree: 0%
          + [壊れた VMAP に対するクライアントエラー処理](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-broken-vmap-error.md)
          + [HTTPS を介したセキュアな広告読み込み](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-secure-ad-loading.md)
          + [広告を含むデフォルトのカスタマイズされた再生動作](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-playback-post1.2.md)
-      + 広告の再生のカスタマイズ {#customize-playback}
+      + 広告の再生をカスタマイズする {#customize-playback}
          + [概要](tvsdk-2.7-for-android/ad-insertion/playback-customize/c-psdk-android-2.7-playback-customize.md)
          + [広告再生用の API 要素](tvsdk-2.7-for-android/ad-insertion/playback-customize/c-psdk-android-2.7-playback-ad-custom-elements.md)
          + [デフォルトの再生動作を使用](tvsdk-2.7-for-android/ad-insertion/playback-customize/t-psdk-android-2.7-playback-use-default.md)
-         + [広告の時間を一定期間スキップ](tvsdk-2.7-for-android/ad-insertion/playback-customize/t-psdk-android-2.7-playback-skip-breaks.md)
+         + [一定期間広告の時間をスキップ](tvsdk-2.7-for-android/ad-insertion/playback-customize/t-psdk-android-2.7-playback-skip-breaks.md)
          + [ビデオの位置を保存し、後で再開します](tvsdk-2.7-for-android/ad-insertion/playback-customize/t-psdk-android-2.7-playback-save-position.md)
          + [部分的な広告ブレーク挿入](tvsdk-2.7-for-android/ad-insertion/playback-customize/c-psdk-android-2.7-partial-ad-break-insertion.md)
       + 遅延広告解決 {#lazy-ad-resolving}
@@ -399,7 +399,7 @@ ht-degree: 0%
          + [時間指定メタデータクラス](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/r-psdk-android-2.7-custom-tags-timedmetadata-class.md)
          + [カスタムタグを購読](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-subscribe.md)
          + [時間指定メタデータ通知のリスナーを追加する](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-receive-notifications.md)
-         + [ディスパッチされた時間指定メタデータオブジェクトを保存します](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-timed-metadata-store.md)
+         + [ディスパッチされる時間指定メタデータオブジェクトを保存します](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-timed-metadata-store.md)
       + VPAID 2.0 広告のサポート {#vpaid-ad-support}
          + [概要](tvsdk-2.7-for-android/ad-insertion/vpaid-2.0-ads/c-psdk-android-2.7-vpaid-2.0-ads.md)
          + [VPAID 2.0 統合の実装](tvsdk-2.7-for-android/ad-insertion/vpaid-2.0-ads/t-psdk-android-2.7-include-vpaid20-support.md)
@@ -426,10 +426,10 @@ ht-degree: 0%
             + [時間範囲を広告で置き換える](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-android-2.7-replace-ranges-with-aud-ad-android.md)
             + [範囲を削除](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-android-2.7-delete-ranges-with-aud-ad-android.md)
          + [広告の削除と置換の例](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-ad-delete-replace-examples.md)
-         + 広告の削除と置換のエラー処理 {#ad-deletion-and-replacement}
+         + 広告の削除と置き換えのエラー処理 {#ad-deletion-and-replacement}
             + [概要](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/ad-delete-replace-error-handling/c-psdk-android-2.7-ad-delete-replace-error-handling.md)
             + [時間範囲エラーの例](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/ad-delete-replace-error-handling/c-psdk-android-2.7-timerange-error-examples-dhls.md)
-      + 広告クリエイティブ選択ルールを更新 {#update-ad-rules}
+      + 広告クリエイティブの選択ルールを更新 {#update-ad-rules}
          + [概要](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-updating-rules/c-psdk-android-2.7-updating-rules.md)
          + [優先度ルール](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-updating-rules/r-psdk-android-2.7-priority-rule.md)
          + [ルールの標準化](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-updating-rules/r-psdk-android-2.7-normalize-rule.md)
@@ -449,7 +449,7 @@ ht-degree: 0%
       + [サーバー側でビデオ分析レポートを設定する](tvsdk-2.7-for-android/va-integration-overview/t-psdk-android-2.7-va-server-side-reporting-set-up.md)
       + [ビデオ分析レポートへのアクセス](tvsdk-2.7-for-android/va-integration-overview/t-psdk-android-2.7-va-reports-access.md)
    + イベントと通知 {#event-notifications}
-      + [プレーヤーステータス、アクティビティ、エラーおよびログの通知とイベント](tvsdk-2.7-for-android/events-and-notifications/c-psdk-android-2.7-notification-system.md)
+      + [プレーヤーステータス、アクティビティ、エラーおよびログに関する通知とイベント](tvsdk-2.7-for-android/events-and-notifications/c-psdk-android-2.7-notification-system.md)
       + 通知コード {#notification-codes}
          + [概要](tvsdk-2.7-for-android/events-and-notifications/notification-codes/c-psdk-android-2.7-notification-codes.md)
          + [NATIVE_ERROR 通知の詳細](tvsdk-2.7-for-android/events-and-notifications/notification-codes/c-psdk-android-2.7-native-error-summary.md)
@@ -488,7 +488,7 @@ ht-degree: 0%
       + [スクリーンキャプチャを有効にする](tvsdk-1.4-for-android/ui-configure/android-1.4-enable-screen-capture.md)
       + 特定のビデオに対してメディアプレーヤーを初期化する {#initialize}
          + [メディアリソースの作成](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-create.md)
-         + [MediaPlayer へのメディアリソースの読み込み](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md)
+         + [MediaPlayer でのメディアリソースの読み込み](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md)
          + [MediaPlayerItemLoader を使用したメディアリソースの読み込み](tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md)
       + サービス品質の統計 {#qos-statistics}
          + [読み込み情報を使用してフラグメントレベルで追跡](tvsdk-1.4-for-android/qos-statistics-monitor/android-1.4-qos-fragment-tracking.md)
@@ -517,12 +517,12 @@ ht-degree: 0%
          + [HTTPS を介したセキュアな広告読み込み](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-secure-ad-loading.md)
          + [プリロール広告を無効にする](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-disable-preroll-ads.md)
       + [広告を含むデフォルトのカスタマイズされた再生動作](tvsdk-1.4-for-android/ad-insertion/android-1.4-playback-post1.2.md)
-      + 広告の再生のカスタマイズ {#customize-playback}
+      + 広告の再生をカスタマイズする {#customize-playback}
          + [概要](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-customize.md)
          + [広告再生用の API 要素](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-ad-custom-elements.md)
          + [デフォルトの再生動作を使用](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-use-default.md)
          + [カスタマイズされた再生の設定](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-set-up-playback-customize.md)
-         + [広告の時間を一定期間スキップ](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-skip-breaks.md)
+         + [一定期間広告の時間をスキップ](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-skip-breaks.md)
          + [ビデオの位置を保存し、後で再開します](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-save-position.md)
          + [部分的な広告ブレーク挿入](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-partial-adbreak-insertion.md)
       + 広告挿入メタデータ {#ad-insertion-metadata}
@@ -546,7 +546,7 @@ ht-degree: 0%
          + [時間指定メタデータクラス](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-timedmetadata.md)
          + [カスタムタグを購読](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-subscribe.md)
          + [時間指定メタデータ通知のリスナーを追加する](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-receive-notifications.md)
-         + [ディスパッチされた時間指定メタデータオブジェクトを保存します](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md)
+         + [ディスパッチされる時間指定メタデータオブジェクトを保存します](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md)
          + [時間指定メタデータを使用](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-timed-metadata-use.md)
       + カスタム広告マーカーの追加 {#ad-markers}
          + [概要](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-ad-markers-add-custom.md)
@@ -575,8 +575,8 @@ ht-degree: 0%
             + [範囲をマーク](tvsdk-1.4-for-android/delete-replace-content-vod/ad-delete-replace-use-cases/android-1.4-mark-ranges.md)
             + [時間範囲を広告で置き換える](tvsdk-1.4-for-android/delete-replace-content-vod/ad-delete-replace-use-cases/android-1.4-replace-ranges-with-aud.md)
             + [範囲を削除](tvsdk-1.4-for-android/delete-replace-content-vod/ad-delete-replace-use-cases/android-1.4-delete-ranges-with-aud-ad.md)
-         + [広告の削除と置換のエラー処理](tvsdk-1.4-for-android/delete-replace-content-vod/ad-delete-replace-error-handling/android-1.4-ad-delete-replace-error-handling.md)
-         + [広告削除および置換 API の変更](tvsdk-1.4-for-android/delete-replace-content-vod/android-1.4-ad-deletion-replacement.md)
+         + [広告の削除と置き換えのエラー処理](tvsdk-1.4-for-android/delete-replace-content-vod/ad-delete-replace-error-handling/android-1.4-ad-delete-replace-error-handling.md)
+         + [広告の削除と置き換え API の変更](tvsdk-1.4-for-android/delete-replace-content-vod/android-1.4-ad-deletion-replacement.md)
       + ライブストリーム内のブラックアウトの処理 {#handle-blackouts}
          + [ブラックアウト API 要素](tvsdk-1.4-for-android/blackouts-handle/android-1.4-blackout-apis.md)
          + [ブラックアウト処理の実装](tvsdk-1.4-for-android/blackouts-handle/android-1.4-blackouts-implement-handling.md)
@@ -638,8 +638,8 @@ ht-degree: 0%
          + [警告通知コード](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/android-1.4-notification-warnings.md)
          + [INFO 通知コード](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/android-1.4-notification-info.md)
          + [NATIVE_ERROR 通知の詳細](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md)
-         + [NATIVE_ERROR:ビデオ再生値](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-notifications-video-playback.md)
-         + [NATIVE_ERROR:暗号値](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-notifications-crypto-errors.md)
+         + [NATIVE_ERROR：ビデオ再生値](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-notifications-video-playback.md)
+         + [NATIVE_ERROR：暗号値](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-notifications-crypto-errors.md)
 + iOS向け TVSDK 1.4 {#tvsdk-1-4-for-ios}
    + はじめに {#introduction}
       + [概要](tvsdk-1.4-for-ios/c-psdk-ios-1.4-overview/c-psdk-ios-1.4-overview.md)
@@ -662,10 +662,10 @@ ht-degree: 0%
    + [即時オン](tvsdk-1.4-for-ios/c-psdk-ios-1.4-instant-on-ios.md)
    + 広告 {#advertising}
       + [広告要件](tvsdk-1.4-for-ios/ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)
-      + [部分的な広告ブレーク挿入](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-partialad-break-insertion.md)
+      + [部分的な広告ブレークの挿入](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-partialad-break-insertion.md)
       + [広告の挿入](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-insertion-about.md)
       + [広告を含むデフォルトのカスタマイズされた再生動作](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-playback-post1.2.md)
-      + [広告の再生のカスタマイズ](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-playback-customize.md)
+      + [広告の再生をカスタマイズする](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-playback-customize.md)
    + Primetime 広告サーバーメタデータ {#ad-server-metadata}
       + [概要](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-primetime-ad-serving-metadata/c-psdk-ios-1.4-primetime-ad-serving-metadata.md)
       + [広告シグナリングモード](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-primetime-ad-serving-metadata/r-psdk-ios-1.4-ad-signaling-mode.md)
@@ -683,20 +683,20 @@ ht-degree: 0%
       + [時間指定メタデータクラス](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/r-psdk-ios-1.4-custom-tags-timedmetadata-class.md)
       + [カスタムタグを購読](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-subscribe.md)
       + [時間指定メタデータ通知のリスナーを追加する](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-receive-notifications.md)
-      + [ディスパッチされた時間指定メタデータオブジェクトを保存します](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md)
+      + [ディスパッチされる時間指定メタデータオブジェクトを保存します](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md)
       + [時間指定メタデータを使用](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-use.md)
-   + 広告クリエイティブ選択ルールを更新 {#update-rules}
+   + 広告クリエイティブの選択ルールを更新 {#update-rules}
       + [概要](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-updating-rules/c-psdk-ios-1.4-updating-rules.md)
       + [優先度ルール](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-updating-rules/r-psdk-ios-1.4-priority-rule.md)
       + [ルールの標準化](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-updating-rules/r-psdk-ios-1.4-normalize-rule.md)
       + [クリエイティブ選択ルールの例](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-updating-rules/r-psdk-ios-1.4-sample-rule-files.md)
       + [クリエイティブ選択ルールを適用](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-updating-rules/c-psdk-ios-1.4-how-tvsdk-applies-csr.md)
-   + [トークン化セグメントストリーム](tvsdk-1.4-for-ios/c-psdk-ios-1.4-tokenized-segment-streams.md)
+   + [トークン化されたセグメントストリーム](tvsdk-1.4-for-ios/c-psdk-ios-1.4-tokenized-segment-streams.md)
    + オポチュニティディテクターとコンテンツリゾルバーのカスタマイズ {#customize-opportunity-content}
       + [オポチュニティジェネレーターとコンテンツリゾルバー](tvsdk-1.4-for-ios/c-psdk-ios-1.4-content-resolver/c-psdk-ios-1.4-content-resolver-about.md)
       + [カスタムオポチュニティ/コンテンツリゾルバーの実装](tvsdk-1.4-for-ios/c-psdk-ios-1.4-content-resolver/t-psdk-ios-1.4-content-resolver-implement-ios.md)
    + VOD ストリーム内の広告の削除と置換 {#delete-replace-content-vod}
-      + [広告削除および置換 API の変更](tvsdk-1.4-for-ios/c-psdk-ios-1.4-delete-replace-content-vod/c-psdk-ios-1.4-delete-replace-content-vod.md)
+      + [広告の削除と置き換え API の変更](tvsdk-1.4-for-ios/c-psdk-ios-1.4-delete-replace-content-vod/c-psdk-ios-1.4-delete-replace-content-vod.md)
       + [広告の削除と置換のユースケース](tvsdk-1.4-for-ios/c-psdk-ios-1.4-delete-replace-content-vod/c-psdk-ios-1.4-ad-delete-replace-use-cases/t-psdk-ios-1.4-mark-ranges-ios.md)
    + ライブストリーム内のブラックアウトの処理 {#blackouts}
       + [ブラックアウトの処理](tvsdk-1.4-for-ios/c-psdk-ios-1.4-blackouts-handle-ios/c-psdk-ios-1.4-blackouts-handle-ios.md)
@@ -722,7 +722,7 @@ ht-degree: 0%
       + [Primetime DRM インターフェイスの概要](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/r-psdk-ios-1.4-drm-interface.md)
       + [TVSDK アプリケーションでのApple FairPlay](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)
       + [iOSアプリケーションの許可リスト](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-allowlist-your-ios-application.md)
-   + [プレーヤーのステータス、アクティビティ、エラーおよびログに関する通知 ](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
+   + [プレーヤーのステータス、アクティビティ、エラーおよびログに関する通知](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
    + [カスタマイズされたログ](tvsdk-1.4-for-ios/c-psdk-ios-1.4-customized-logging/c-psdk-ios-1.4-customized-logging.md)
    + [フェイルオーバー](tvsdk-1.4-for-ios/c-psdk-ios-1.4-understanding-failover.md)
    + [請求指標](tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md)
@@ -784,7 +784,7 @@ ht-degree: 0%
          + [ビデオビューの位置とサイズの制御](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-control-video-view.md)
       + 特定のビデオに対してメディアプレーヤーを初期化する {#initialize-media-player}
          + [メディアリソースの作成](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-create.md)
-         + [MediaPlayer へのメディアリソースの読み込み](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md)
+         + [MediaPlayer でのメディアリソースの読み込み](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md)
          + [MediaPlayerItemLoader を使用したメディアリソースの読み込み](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load-using-mediaplayeritemloader.md)
    + [サービス品質の統計](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-qos/qos-statistics-monitor/c-psdk-dhls-1.4-qos-statistics-monitor.md)
    + [cookie の操作](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-cookies-work-with.md)
@@ -811,12 +811,12 @@ ht-degree: 0%
          + [クライアント広告トラッキング](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-about/c-psdk-dhls-1.4-ad-tracking-client.md)
       + [遅延広告読み込みを有効にする](tvsdk-1.4-for-desktop-hls/ad-insertion/t-psdk-dhls-1.4-ad-delay-enable.md)
       + [広告を含むデフォルトのカスタマイズされた再生動作](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-playback-post1.2.md)
-      + 広告の再生のカスタマイズ {#customize-playback-with-ads}
+      + 広告の再生をカスタマイズする {#customize-playback-with-ads}
          + [概要](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/c-psdk-dhls-1.4-playback-customize.md)
          + [広告再生用の API 要素](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/c-psdk-dhls-1.4-playback-ad-custom-elements.md)
          + [デフォルトの再生動作を使用](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/t-psdk-dhls-1.4-playback-use-default.md)
          + [カスタマイズされた再生の設定](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/t-psdk-dhls-1.4-playback-customize.md)
-         + [広告の時間を一定期間スキップ](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/t-psdk-dhls-1.4-playback-skip-breaks.md)
+         + [一定期間広告の時間をスキップ](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/t-psdk-dhls-1.4-playback-skip-breaks.md)
          + [ビデオの位置を保存し、後で再開します](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/t-psdk-dhls-1.4-playback-save-position.md)
       + [広告挿入メタデータ](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-metadata/c-psdk-dhls-1.4-ad-insertion-metadata.md)
       + [コンパニオンバナー広告](tvsdk-1.4-for-desktop-hls/ad-insertion/companion-banner-ads/c-psdk-dhls-1.4-companion-banner-ads.md)
@@ -864,8 +864,8 @@ ht-degree: 0%
          + [時間範囲をAdobe Primetime Ad Decisioning 広告で置き換える](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-replace-ranges-with-aud-ad.md)
          + [Primetime Ad Decisioning 広告の範囲を削除](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-delete-ranges-with-aud-ad.md)
          + [特別な使用例](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-special-use-cases.md)
-      + [広告の削除と置換のエラー処理](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-error-handling/c-psdk-dhls-1.4-ad-delete-replace-error-handling.md)
-      + [広告削除および置換 API の変更](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/c-psdk-dhls-1.4-ad-deletion-replacement-api-changes.md)
+      + [広告の削除と置き換えのエラー処理](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-error-handling/c-psdk-dhls-1.4-ad-delete-replace-error-handling.md)
+      + [広告の削除と置き換え API の変更](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/c-psdk-dhls-1.4-ad-deletion-replacement-api-changes.md)
    + ライブストリームのブラックアウト {#blackouts}
       + [ライブストリーム内のブラックアウトの処理](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-blackouts/blackouts-handle/c-psdk-dhls-1.4-blackouts-handle.md)
       + [ブラックアウト API 要素](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-blackouts/blackouts-handle/c-psdk-dhls-1.4-blackout-apis.md)
@@ -939,8 +939,8 @@ ht-degree: 0%
       + [INFO 通知コード](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notification-info.md)
    + NATIVE_ERROR 通知 {#native-error-notification}
       + [NATIVE_ERROR 通知の詳細](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md)
-      + [NATIVE_ERROR:ビデオ再生値](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-video-playback-errors.md)
-      + [NATIVE_ERROR:暗号値](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-crypto-errors.md)
+      + [NATIVE_ERROR：ビデオ再生値](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-video-playback-errors.md)
+      + [NATIVE_ERROR：暗号値](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-crypto-errors.md)
 + Browser-TVSDK-2.4 {#browser-tvsdk-2-4}
    + はじめに {#introduction}
       + [製品の概要とオーディエンス](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/c-psdk-browser-tvsdk-2.4-overview-prod-audience-guide.md)
@@ -958,7 +958,7 @@ ht-degree: 0%
       + 基本プレーヤー {#basic-player}
          + [概要](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/c-psdk-browser-tvsdk-2.4-create-a-basic-player.md)
          + [TVSDK を使用した基本プレーヤーの作成](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md)
-         + [UI フレームワークを使用した基本プレーヤーの作成](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-uif.md)
+         + [UI フレームワークを使用した基本的なプレーヤーの作成](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-uif.md)
       + Browserify 互換のプレーヤー {#browserify-compatible-browser}
          + [概要](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-browserify/c-psdk-browser-tvsdk-2.4-browserify.md)
          + [UI-Framework を使用しない、Browserify 互換のプレーヤーの作成](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-browserify/t-psdk-browser-tvsdk-2.4-create-browserify-no-uif.md)
@@ -982,7 +982,7 @@ ht-degree: 0%
       + 特定のビデオに対してメディアプレーヤーを初期化する {#initialize-specific-video}
          + [メディアリソースの作成](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-create.md)
          + [クロスオリジンリソース共有](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-cors-cred-support.md)
-         + [MediaPlayer へのメディアリソースの読み込み](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-load.md)
+         + [MediaPlayer でのメディアリソースの読み込み](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-load.md)
       + [Browser TVSDK 用のGoogleキャストアプリ](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/r-psdk-browser-tvsdk-2.4-chromecast.md)
       + [拡張機能のないストリーム](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-extensionless-streams.md)
       + [バッファリング](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-buffering-configuration.md)
@@ -1029,7 +1029,7 @@ ht-degree: 0%
             + [例：キャプションの書式設定](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/r-psdk-browser-tvsdk-2.4-closed-caption-formatting-samples.md)
       + [メディア再生](browser-tvsdk-2.4/drm-content-security/android-dhls-failover-for-playback/c-psdk-browser-tvsdk-2.4-failover-media-playback.md)
       + [ID3 タグ](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/t-psdk-browser-tvsdk-2.4-id3-metadata-retrieve.md)
-      + [iOSで自動再生](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-autoplay-ios.md)
+      + [iOSでの自動再生](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-autoplay-ios.md)
    + 広告 {#advertising}
       + [広告要件](browser-tvsdk-2.4/ad-insertion/r-psdk-browser-tvsdk-2.4-advertising-requirements.md)
       + [VAST 広告](browser-tvsdk-2.4/ad-insertion/c-psdk-browser-tvsdk-2.4-vast-ads.md)

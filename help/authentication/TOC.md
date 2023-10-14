@@ -2,17 +2,17 @@
 product: adobe primetime
 audience: end-user
 feature: Authentication
-user-guide-title: Primetime 認証
-user-guide-description: Primetime Authentication は、TV Everywhere の使用権限付与ソリューションで、リソースへのアクセスを要求するユーザーにそのリソースへの権限が付与されているかどうかを判断するためのモジュラーフレームワークを提供します。
+user-guide-title: Primetime Authentication
+user-guide-description: Primetime Authentication は、TV Everywhere の使用権限管理ソリューションです。リソースへのアクセスをリクエストするユーザーにそのリソースへの権限が付与されているかどうかを判断するためのモジュール型フレームワークを提供します。
 source-git-commit: a294b5628ec7184491cf8b67a60fd6cf9410c431
 workflow-type: tm+mt
 source-wordcount: '750'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
 
-# Primetime 認証のヘルプ {#authentication}
+# Primetime Authentication ヘルプ {#authentication}
 
 + [Primetime 認証の概要](home.md)
 + Primetime 認証の概念 {#authentication-concepts}

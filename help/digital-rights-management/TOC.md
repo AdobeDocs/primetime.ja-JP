@@ -1,17 +1,17 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: PrimetimeDigital Rights Managementヘルプ
-user-guide-description: Digital Rights Management(DRM) の様々なユーザーシナリオについての詳細を学ぶのに役立ちます。
+user-guide-title: Primetime Digital Rights Management ヘルプ
+user-guide-description: Digital Rights Management（DRM）の様々なユーザーシナリオについての詳細を学ぶために役立ちます。
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '2215'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# Digital Rights Managementヘルプ {#drm}
+# Digital Rights Management ヘルプ {#drm}
 
 + [DRM の概要](home.md)
 + 証明書登録ガイド {#certificate-enrollment-guide}
@@ -56,7 +56,7 @@ ht-degree: 0%
    + [Tomcat のインストール](quick-start/install-tomcat.md)
    + [保護されたストリーミング用のサーバーのセットアップとデプロイ](quick-start/setup-deploy-drm-server-ps.md)
    + [暗号化されたコンテンツのパッケージ化](quick-start/package-content.md)
-   + [Flash Playerと再生のテストコンテンツをインストール](quick-start/install-fp-playback-test.md)
+   + [Flash Playerと再生のテストコンテンツをインストールする](quick-start/install-fp-playback-test.md)
    + [ローカルにパッケージ化されたビデオの再生](quick-start/playback-locally-pkgd-video.md)
    + [次の手順](quick-start/next-steps.md)
 + Adobe Primetime Cloud DRM クイックスタートガイド {#cloud-drm-quickstart}
@@ -65,14 +65,14 @@ ht-degree: 0%
    + [前提条件](cloud-quick-start/prerequisites.md)
    + パッケージオプション {#packaging-options}
       + [付属の Primetime Offline Packager を使用](cloud-quick-start/packaging-options/use-offline-packager.md)
-      + [サードパーティ製エンコーダーの使用](cloud-quick-start/packaging-options/use-third-party-encoder.md)
-      + [Adobe Mediumサーバを使用](cloud-quick-start/packaging-options/use-adobe-media-server.md)
+      + [サードパーティ製のエンコーダーを使用する](cloud-quick-start/packaging-options/use-third-party-encoder.md)
+      + [使用Adobe Media Server](cloud-quick-start/packaging-options/use-adobe-media-server.md)
    + [パッケージ化されたコンテンツのテスト](cloud-quick-start/test-packaged-content.md)
    + [エラーのトリエージング](cloud-quick-start/triaging-errors/client-error-triaging.md)
    + カスタム認証/権限付与 {#custom-auth-ent}
       + [カスタム認証/権限付与（オプション）](cloud-quick-start/custom-auth-ent/custom-overview.md)
       + [蜂の概要](cloud-quick-start/custom-auth-ent/overview.md)
-      + [ハチのワークフロー](cloud-quick-start/custom-auth-ent/workflow-summary/policy-workflow.md)
+      + [BEES ワークフロー](cloud-quick-start/custom-auth-ent/workflow-summary/policy-workflow.md)
       + [BEES エラーコード](cloud-quick-start/custom-auth-ent/error-codes.md)
       + [BEES リファレンス実装の構築](cloud-quick-start/custom-auth-ent/build-ref-impl.md)
       + [BEES リファレンス実装のデプロイ](cloud-quick-start/custom-auth-ent/deploy-ref-impl.md)
@@ -127,9 +127,9 @@ ht-degree: 0%
       + [Primetime Packager/Cloud DRM/TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/plp-1.md)
       + [ExpressPlay Packager / Cloud DRM / TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/package-and-play.md)
    + 機能トピック {#feature-topics}
-      + [参照サーバ：ExpressPlay エンタイトルメントサーバーの例 (SEES)](multi-drm-workflows/feature-topics/sees-reference-server.md)
-      + [参照サービス：時間に基づく権利付与](multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
-      + [参照サービス：デバイスバインディング権限](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
+      + [参照サーバー： ExpressPlay 使用権限サーバーの例 (SEES)](multi-drm-workflows/feature-topics/sees-reference-server.md)
+      + [参照サービス：時間ベースの使用権限](multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
+      + [参照サービス：デバイスバインディングの使用権限](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
       + [パブリック API を確認](multi-drm-workflows/feature-topics/sees-reference-server-public-api.md)
    + ExpressPlay ライセンストークンリクエスト/レスポンスのリファレンス {#license-token-req-resp-ref}
       + [概要](multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md)
@@ -241,7 +241,7 @@ ht-degree: 0%
       + [認証リクエストの処理](protecting-content/implementing-the-license-server/handling-authentication-reqs.md)
       + ライセンス要求の処理 {#handling-license-reqs}
          + [概要](protecting-content/implementing-the-license-server/handling-license-reqs/license-handling-classes.md)
-         + [ライセンスリクエストエラー処理](protecting-content/implementing-the-license-server/handling-license-reqs/license-request-errors.md)
+         + [ライセンスリクエストのエラー処理](protecting-content/implementing-the-license-server/handling-license-reqs/license-request-errors.md)
          + [ライセンスの生成](protecting-content/implementing-the-license-server/handling-license-reqs/generating-licenses.md)
          + [ドメインバインドライセンスの発行](protecting-content/implementing-the-license-server/handling-license-reqs/domian-bound-licenses.md)
          + [iOSクライアントに対するリモートキー配信のライセンスの発行 (Adobe Primetimeが必要 )](protecting-content/implementing-the-license-server/handling-license-reqs/issuing-licenses-remote-ios.md)
@@ -255,16 +255,16 @@ ht-degree: 0%
       + [FMRMS の互換性を処理](protecting-content/implementing-the-license-server/handling-fmrms-compatibility.md)
       + [証明書発行の証明書が期限切れになったときのAdobeの更新の処理](protecting-content/implementing-the-license-server/handling-cert-updates.md)
       + [パフォーマンスの調整](protecting-content/implementing-the-license-server/performance-tuning.md)
-   + クライアント資格情報の失効 {#revoking-client-creds}
+   + クライアントの資格情報を失効 {#revoking-client-creds}
       + [概要](protecting-content/revoking-client-creds/revoking-creds-overview.md)
       + [DRM クライアントとランタイムの資格情報の取り消し](protecting-content/revoking-client-creds/revoking-drm-client-and-runtime-creds.md)
-      + [マシンの資格情報の取り消し](protecting-content/revoking-client-creds/revoking-machine-creds.md)
+      + [コンピューターの資格情報の取り消し](protecting-content/revoking-client-creds/revoking-machine-creds.md)
    + [ビデオプレーヤーの作成](protecting-content/creating-video-players.md)
 + 解像度ベースの出力保護 5.3.1 {#resolution-based-output-protection}
    + [RBOP の概要](RBOP/about-rbop.md)
    + [RBOP の概念](RBOP/output-protection-concepts.md)
    + [RBOP クライアントのサポート](RBOP/client-support.md)
-   + [サンプル RBOP 設定](RBOP/sample-output-protection-config.md)
+   + [RBOP 設定のサンプル](RBOP/sample-output-protection-config.md)
    + [RBOP 文法](RBOP/output-protection-grammar.md)
    + [RBOP の FAQ](RBOP/output-protection-faq.md)
 + Adobe Primetime DRM 参照実装 5.3.1 {#drm-reference-implementation-5-3-1}
@@ -273,7 +273,7 @@ ht-degree: 0%
    + コマンドラインツール {#command-line-tools}
       + [概要](drm-reference-implementations/command-line-tools/command-line-tools-overview.md)
       + [コマンドラインツールの要件](drm-reference-implementations/command-line-tools/requirements.md)
-      + [コマンドラインツールのインストール](drm-reference-implementations/command-line-tools/install-command-line-tools.md)
+      + [コマンドラインツールをインストールする](drm-reference-implementations/command-line-tools/install-command-line-tools.md)
    + コマンドラインツールの設定と実行 {#configure-and-run}
       + [概要](drm-reference-implementations/command-line-tools/configure-command-line-tools/configure-command-line-tools.md)
       + [コマンドラインツールの設定ファイルについて](drm-reference-implementations/command-line-tools/configure-command-line-tools/config-file.md)
@@ -301,7 +301,7 @@ ht-degree: 0%
       + [クロスドメインポリシーファイル](drm-reference-implementations/configuration/hsm-config-crossdomain-policy-file.md)
    + [ライセンスサーバーのデプロイ](drm-reference-implementations/deploy-a-license-server.md)
    + [トラブルシューティング](drm-reference-implementations/server-and-wfp-troubleshooting.md)
-   + [ライセンスサーバーが正しく起動したかどうかを確認します](drm-reference-implementations/server-determining-ref-started.md)
+   + [ライセンスサーバーが正しく起動したかどうかを確認します。](drm-reference-implementations/server-determining-ref-started.md)
    + [参照実装ライセンスサーバーが正しく実行されているかどうかの判断](drm-reference-implementations/server-determining-ref-running.md)
    + 使用モデルの実装 {#implement-usage-models}
       + [使用モデルの実装の概要](drm-reference-implementations/impl-usage-models/impl-usage-models-overview.md)
@@ -329,7 +329,7 @@ ht-degree: 0%
    + [オフライン再生用のライセンスのプリロード](tvsdk-drm-workflow/preloading-licenses/preloading-licenses.md)
    + [DRMStatusEvent クラスの使用](tvsdk-drm-workflow/using-drmstatusevent/using-drmstatusevent.md)
    + DRMAuthenticateEvent クラスの使用{#using-drmauthenticateevent}
-      + [DRMAuthenticateEvent ハンドラーの作成](tvsdk-drm-workflow/using-drmauthenticateevent/create-drmauthnevent-handler.md)
+      + [DRMAuthenticateEvent ハンドラーを作成する](tvsdk-drm-workflow/using-drmauthenticateevent/create-drmauthnevent-handler.md)
       + [認証 UI の作成](tvsdk-drm-workflow/using-drmauthenticateevent/create-an-authn-ui.md)
    + [DRMErrorEvent クラスの使用](tvsdk-drm-workflow/using-drmerrorevent.md)
    + [DRMManager クラスの使用](tvsdk-drm-workflow/using-drmmanager/using-drmmanager-overview.md)
@@ -398,7 +398,7 @@ ht-degree: 0%
       + [Adobeが公開した CRL の使用](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-crls-by-adobe.md)
       + [CRL を生成して、Adobeが発行したものを補完](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-gen-crls-to-supplement-adobe.md)
       + [ロールバック検出](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection.md)
-      + [ライセンス発行時のコンピュータ数](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
+      + [ライセンス発行時のコンピューター数](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
       + [リプレイの保護](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-replay-detection.md)
       + [信頼できるコンテンツパッケージ許可リストの管理](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-allowlist.md)
       + [認証トークンのタイムアウト](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-timeout-for-authn-tokens.md)
@@ -504,11 +504,11 @@ ht-degree: 0%
    + クライアント資格情報の取り消し {#revoking-client-credentials}
       + [クライアント資格情報の取り消し](aaxs-protecting-content/content-revoking-client-creds/content-revoking-client-creds-overview.md)
       + [DRM クライアントとランタイムの資格情報の取り消し](aaxs-protecting-content/content-revoking-client-creds/content-revoking-drm-client-and-runtime-creds.md)
-      + [マシンの資格情報の取り消し](aaxs-protecting-content/content-revoking-client-creds/content-revoking-machine-creds.md)
+      + [コンピューターの資格情報の取り消し](aaxs-protecting-content/content-revoking-client-creds/content-revoking-machine-creds.md)
    + [ビデオプレーヤーの作成](aaxs-protecting-content/content-creating-video-players.md)
 + Adobeアクセス参照実装 {#reference-implementation}
    + [概要 — リファレンス実装の使用](aaxs-reference-implementations/overview.md)
-   + [コンテンツのパッケージ化と失効リストの作成を行うコマンドラインツール ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
+   + [コンテンツのパッケージ化と失効リストの作成を行うコマンドラインツール](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
    + Policy Manager {#policy-manager}
       + [Policy Manager の使用](aaxs-reference-implementations/command-line-tools/policy-manager/using-aaxs-policy-manager.md)
       + [設定ファイルのプロパティ](aaxs-reference-implementations/command-line-tools/policy-manager/config-file-properties.md)
@@ -528,14 +528,14 @@ ht-degree: 0%
    + AIR Publisher ID ユーティリティ {#air-publisher-id-utility}
       + [AIR Publisher ID ユーティリティの概要](aaxs-reference-implementations/command-line-tools/air-publisher-id-utility/air-publisher-id-utility-overview.md)
       + [コマンドラインの使用](aaxs-reference-implementations/command-line-tools/air-publisher-id-utility/air-publisher-command-line-usage.md)
-   + ライセンスジェネレータ {#license-generator}
+   + ライセンスジェネレーター {#license-generator}
       + [ライセンスジェネレーターの概要](aaxs-reference-implementations/command-line-tools/license-generator/license-generator-overview.md)
       + [設定ファイルのプロパティ](aaxs-reference-implementations/command-line-tools/license-generator/license-generator-config-file-props.md)
       + [コマンドラインの使用](aaxs-reference-implementations/command-line-tools/license-generator/license-generator-command-line-usage.md)
    + ライセンス埋め込み機能 {#license-embedder}
       + [ライセンス埋め込み機能の概要](aaxs-reference-implementations/command-line-tools/license-embedder/license-embedder-overview.md)
       + [コマンドラインの使用](aaxs-reference-implementations/command-line-tools/license-embedder/license-embedder-command-line-usage.md)
-   + ライセンスサーバーと監視フォルダーパッケージャ{#license-server-and-wfp}
+   + ライセンスサーバーと監視フォルダーパッケージャー{#license-server-and-wfp}
       + [ライセンスサーバーと監視フォルダーパッケージャの概要](aaxs-reference-implementations/license-server-and-wfp/license-server-wfp-overview.md)
       + [要件](aaxs-reference-implementations/license-server-and-wfp/license-server-and-wfp-reqs.md)
       + [ライセンスサーバーの構築](aaxs-reference-implementations/license-server-and-wfp/building-the-license-server.md)
@@ -557,7 +557,7 @@ ht-degree: 0%
       + [ダウンロードして所有](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-download-to-own.md)
       + [レンタル/ビデオオンデマンド](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-rental-vod.md)
       + [購読](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-subscription.md)
-      + [広告が出資した](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-ad-funded.md)
+      + [広告が資金を提供する](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-ad-funded.md)
    + ドメイン登録の実装 {#domain-registration}
       + [ドメイン登録の実装の概要](aaxs-reference-implementations/impl-domain-registration/impl-domain-registration.md)
       + [ID ベースのドメイン](aaxs-reference-implementations/impl-domain-registration/impl-domain-registration-id-based-domains.md)

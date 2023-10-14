@@ -1,16 +1,16 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: PrimetimeAd Insertionヘルプ
+user-guide-title: Primetime Ad Insertion のヘルプ
 source-git-commit: 2b8aa2d4d20dac0f6f8467043dd2e55a88e9e9f1
 workflow-type: tm+mt
 source-wordcount: '176'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
 
-# PrimetimeAd Insertionヘルプ {#ad-insertion}
+# Primetime Ad Insertion のヘルプ {#ad-insertion}
 
 + [Adobe PrimetimeAd Insertion](home.md)
 + PrimetimeAd Insertionのお知らせ{#announcements}
@@ -35,10 +35,10 @@ ht-degree: 0%
    + [広告エクスペリエンスの最適化](advanced-features/optimize-ad-experiences.md)
    + [コンテンツバンパーを追加](advanced-features/add-content-bumpers.md)
    + [コンテキストレポートとターゲティング](advanced-features/contextual-reporting-and-targeting.md)
-+ パフォーマンス：監視、デバッグ、およびレポート{#performance}
++ パフォーマンス：監視、デバッグおよびレポート{#performance}
    + [概要](performance-monitoring-debugging-reporting/performance-overview.md)
    + 監視とデバッグ{#monitor-debug}
-      + [パフォーマンス監視](performance-monitoring-debugging-reporting/performance-monitoring.md)
+      + [パフォーマンスの監視](performance-monitoring-debugging-reporting/performance-monitoring.md)
       + [トラブルシューティングとデバッグ](performance-monitoring-debugging-reporting/troubleshoot-and-debug.md)
    + [レポートと請求](performance-monitoring-debugging-reporting/reporting-and-billing.md)
 + 高度なテレメトリ{#advanced-telemetry}
@@ -54,7 +54,7 @@ ht-degree: 0%
       + [パフォーマンスの分析](best-practices/analyze-performance.md)
       + [キャッシュ](best-practices/caching.md)
       + [ルートとプロトコルの最適化](best-practices/optimize-routes-protocols.md)
-      + [広告解像度制約の適用](best-practices/apply-ad-resolution-constraints.md)
+      + [広告解像度の制約の適用](best-practices/apply-ad-resolution-constraints.md)
    + [サポートされる CDN](technical-reference/supported-cdns.md)
    + [マニフェストの書き直し](technical-reference/manifest-rewriting.md)
    + [詳細ログ](performance-monitoring-debugging-reporting/verbose-logging.md)
